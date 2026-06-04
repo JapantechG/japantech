@@ -1,385 +1,235 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Tech</title>
 
-<title>Japan Tech - Mechanical | VBA | Excel | Japanese</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#f4f4f4;
-}
-
-/* Header */
-
-header{
-    background:#1f2937;
-    color:white;
-    padding:15px 30px;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:bold;
-}
-
-nav{
-    margin-top:10px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-right:20px;
-}
-
-nav a:hover{
-    text-decoration:underline;
-}
-
-/* Hero */
-
-.hero{
-    background:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.hero h1{
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    color:#666;
-    font-size:18px;
-}
-
-/* Search */
-
-.search-box{
-    margin-top:30px;
-}
-
-.search-box input{
-    width:500px;
-    max-width:90%;
-    padding:12px;
-    font-size:16px;
-}
-
-.search-box button{
-    padding:12px 20px;
-    cursor:pointer;
-}
-
-/* Section */
-
-.section{
-    padding:40px 30px;
-}
-
-.section-title{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-/* Cards */
-
-.card-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.card{
-    background:white;
-    width:300px;
-    border-radius:10px;
-    padding:20px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#666;
-    margin-bottom:15px;
-}
-
-.card a{
-    text-decoration:none;
-    color:#0066cc;
-}
-
-/* Footer */
-
-footer{
-    background:#1f2937;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:32px;
-    }
-
-    .card{
-        width:100%;
-    }
-
-}
-
-</style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
+    <!-- HEADER -->
 
-<div class="logo">
-Japan Tech
-</div>
+    <header>
 
-<nav>
-<a href="#">Home</a>
-<a href="mechanical/index.html">Mechanical</a>
-<a href="vba/index.html">VBA & Excel</a>
-<a href="japanese/index.html">Japanese</a>
-<a href="blog/index.html">Blog</a>
-</nav>
+        <div class="logo">
+            Japan Tech
+        </div>
 
-</header>
+        <nav>
 
-<section class="hero">
+            <ul class="menu">
 
-<h1>Japan Tech - TUAN LOVE YEN</h1>
+                <li>
+                    <a href="#">Home</a>
+                </li>
 
-<p>
-Mechanical Engineering | VBA | Excel | Japanese | Life in Japan
-</p>
+                <!-- Mechanical -->
 
-<div class="search-box">
-<input type="text" placeholder="Tìm kiếm bài viết...">
-<button>Tìm kiếm</button>
-</div>
+                <li class="dropdown">
 
-</section>
+                    <a href="#">Mechanical</a>
 
-<!-- Mechanical -->
+                    <div class="mega-menu">
 
-<section class="section">
+                        <div class="column">
 
-<div class="section-title">
-Mechanical Engineering
-</div>
+                            <h3>CNC</h3>
 
-<div class="card-container">
+                            <a href="#">Fanuc</a>
+                            <a href="#">Macro B</a>
+                            <a href="#">PMC</a>
+                            <a href="#">FOCAS</a>
 
-<div class="card">
-<h3>Fanuc CNC</h3>
-<p>
-Lập trình CNC, Macro B và vận hành máy.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                        </div>
 
-<div class="card">
-<h3>FOCAS API</h3>
-<p>
-Kết nối CNC với C# và VBA.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                        <div class="column">
 
-<div class="card">
-<h3>CAD / Drawing</h3>
-<p>
-Bản vẽ JIS, dung sai và thiết kế cơ khí.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                            <h3>Design</h3>
 
-</div>
+                            <a href="#">CAD</a>
+                            <a href="#">Drawing</a>
+                            <a href="#">Tolerance</a>
+                            <a href="#">JIS</a>
 
-</section>
+                        </div>
 
-<!-- VBA -->
+                        <div class="column">
 
-<section class="section">
+                            <h3>Manufacturing</h3>
 
-<div class="section-title">
-VBA & Excel
-</div>
+                            <a href="#">Grinding</a>
+                            <a href="#">Heat Treatment</a>
+                            <a href="#">Inspection</a>
 
-<div class="card-container">
+                        </div>
 
-<div class="card">
-<h3>Excel VBA</h3>
-<p>
-Tự động hóa công việc kỹ thuật.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                    </div>
 
-<div class="card">
-<h3>UserForm</h3>
-<p>
-Thiết kế giao diện nhập liệu.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                </li>
 
-<div class="card">
-<h3>Dashboard</h3>
-<p>
-Biểu đồ và báo cáo kỹ thuật.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                <!-- VBA -->
 
-</div>
+                <li class="dropdown">
 
-</section>
+                    <a href="#">VBA & Excel</a>
 
-<!-- Japanese -->
+                    <div class="mega-menu">
 
-<section class="section">
+                        <div class="column">
 
-<div class="section-title">
-Japanese For Engineers
-</div>
+                            <h3>VBA</h3>
 
-<div class="card-container">
+                            <a href="#">UserForm</a>
+                            <a href="#">CSV</a>
+                            <a href="#">Automation</a>
+                            <a href="#">File System</a>
 
-<div class="card">
-<h3>Technical Vocabulary</h3>
-<p>
-Từ vựng cơ khí và nhà máy.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                        </div>
 
-<div class="card">
-<h3>Email Samples</h3>
-<p>
-Mẫu email công việc thực tế.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                        <div class="column">
 
-<div class="card">
-<h3>Meeting Conversation</h3>
-<p>
-Hội thoại kỹ sư thường gặp.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                            <h3>Excel</h3>
 
-</div>
+                            <a href="#">Formula</a>
+                            <a href="#">Dashboard</a>
+                            <a href="#">Pivot</a>
+                            <a href="#">Power Query</a>
 
-</section>
+                        </div>
 
-<!-- Blog -->
+                    </div>
 
-<section class="section">
+                </li>
 
-<div class="section-title">
-Life & Work In Japan
-</div>
+                <!-- Japanese -->
 
-<div class="card-container">
+                <li class="dropdown">
 
-<div class="card">
-<h3>Working in Japan</h3>
-<p>
-Kinh nghiệm làm việc tại công ty Nhật.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                    <a href="#">Japanese</a>
 
-<div class="card">
-<h3>Japanese Learning</h3>
-<p>
-Học tiếng Nhật hiệu quả.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                    <div class="mega-menu">
 
-<div class="card">
-<h3>Career Growth</h3>
-<p>
-Phát triển nghề nghiệp kỹ sư.
-</p>
-<a href="#">Xem thêm</a>
-</div>
+                        <div class="column">
 
-</div>
+                            <h3>Vocabulary</h3>
 
-</section>
+                            <a href="#">Mechanical</a>
+                            <a href="#">Factory</a>
+                            <a href="#">Drawing</a>
 
-<!-- Latest -->
+                        </div>
 
-<section class="section">
+                        <div class="column">
 
-<div class="section-title">
-Latest Articles
-</div>
+                            <h3>Communication</h3>
 
-<div class="card-container">
+                            <a href="#">Email</a>
+                            <a href="#">Meeting</a>
+                            <a href="#">Phone</a>
 
-<div class="card">
-<h3>Fanuc Macro B IF GOTO</h3>
-<p>
-Hướng dẫn điều kiện IF trong Macro B.
-</p>
-</div>
+                        </div>
 
-<div class="card">
-<h3>FOCAS Read Variable</h3>
-<p>
-Đọc biến CNC bằng C#.
-</p>
-</div>
+                    </div>
 
-<div class="card">
-<h3>公差 và はめあい</h3>
-<p>
-Phân biệt thuật ngữ kỹ thuật tiếng Nhật.
-</p>
-</div>
+                </li>
 
-</div>
+                <!-- Blog -->
 
-</section>
+                <li class="dropdown">
 
-<footer>
+                    <a href="#">Blog</a>
 
-<p>
-© 2026 Japan Tech
-</p>
+                    <div class="mega-menu">
 
-<p>
-Mechanical • VBA • Excel • Japanese • Blog
-</p>
+                        <div class="column">
 
-</footer>
+                            <h3>Life in Japan</h3>
+
+                            <a href="#">Working Style</a>
+                            <a href="#">Japanese Study</a>
+                            <a href="#">Career</a>
+
+                        </div>
+
+                        <div class="column">
+
+                            <h3>Personal</h3>
+
+                            <a href="#">Productivity</a>
+                            <a href="#">Finance</a>
+                            <a href="#">Learning</a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <a href="#">Downloads</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Japan Tech</h1>
+
+        <p>
+            Mechanical Engineering | VBA | Excel | Japanese | Life in Japan
+        </p>
+
+        <input type="text" placeholder="Search articles...">
+
+    </section>
+
+    <!-- CONTENT -->
+
+    <main>
+
+        <section>
+
+            <h2>Latest Articles</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Fanuc Macro B</h3>
+                    <p>Programming examples and applications.</p>
+                </div>
+
+                <div class="card">
+                    <h3>FOCAS API</h3>
+                    <p>Connect CNC with C# and VBA.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Technical Japanese</h3>
+                    <p>Vocabulary used in factories.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        © 2026 Japan Tech
+
+    </footer>
 
 </body>
+
 </html>
