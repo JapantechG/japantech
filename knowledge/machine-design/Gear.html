@@ -1,0 +1,3960 @@
+<!--
+====================================================
+JapanTech
+
+Category : Machine Design
+Article  : Gear
+Version  : 1.0
+Author   : Tuấn Lê
+
+====================================================
+-->
+
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+Gear là gì? | JapanTech
+
+</title>
+
+<meta
+name="description"
+content="Tổng hợp kiến thức về Gear trong thiết kế máy">
+
+<link
+rel="stylesheet"
+href="../../css/reset.css">
+
+<link
+rel="stylesheet"
+href="../../css/style.css">
+
+<link
+rel="stylesheet"
+href="../../css/article.css">
+
+<link
+rel="stylesheet"
+href="../../css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<a
+class="logo"
+href="../../index.html">
+
+JapanTech
+
+</a>
+
+<nav>
+
+<ul class="menu">
+
+<li>
+
+<a href="../../index.html">
+
+Home
+
+</a>
+
+</li>
+
+<li>
+
+<a
+class="active"
+href="../../knowledge.html">
+
+Knowledge
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Japanese
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Career
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Tools
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+About
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<input
+
+class="search-box"
+
+placeholder="Search...">
+
+<button
+
+class="menu-button">
+
+☰
+
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="page">
+
+<div class="container">
+
+<nav class="breadcrumb">
+
+<a href="../../index.html">
+
+Home
+
+</a>
+
+<span>></span>
+
+<a href="../../knowledge.html">
+
+Knowledge
+
+</a>
+
+<span>></span>
+
+<a href="../machine-design/index.html">
+
+Machine Design
+
+</a>
+
+<span>></span>
+
+Gear
+
+</nav>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="wrapper">
+
+<aside class="sidebar">
+
+<div class="sidebar">
+
+<div class="sidebar-title">
+
+Machine Design
+
+</div>
+
+<ul>
+<li><a href="index.html"> Overview</a></li>
+<li><a href="bearing.html">Bearing</a></li>
+
+<li>
+
+<a
+class="active"
+href="gear.html">
+
+Gear
+
+</a>
+
+</li>
+
+<li>
+
+<a href="shaft.html">
+
+Shaft
+
+</a>
+
+</li>
+
+<li>
+
+<a href="bolt.html">
+
+Bolt
+
+</a>
+
+</li>
+
+<li>
+
+<a href="spring.html">
+
+Spring
+
+</a>
+
+</li>
+
+<li>
+
+<a href="coupling.html">
+
+Coupling
+
+</a>
+
+</li>
+
+<li>
+
+<a href="chain.html">
+
+Chain Drive 
+
+</a>
+
+</li>
+
+<li>
+
+<a href="belt.html">
+
+Timing Belt
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</aside>
+
+<main class="main">
+<article>
+<div class="toc">
+
+<div class="toc-title">
+
+Table of Contents
+
+</div>
+
+<ul>
+
+<li><a href="#overview">1. Overview</a></li>
+
+<li><a href="#structure">2. Structure</a></li>
+
+<li><a href="#classification">3. Classification</a></li>
+
+<li><a href="#selection">4. Selection Guide</a></li>
+
+<li><a href="#design">5. Gear Design</a></li>
+
+<li><a href="#application">6. Application</a></li>
+
+<li><a href="#standard">7. Standard</a></li>
+
+<li><a href="#reference">8. Reference</a></li>
+
+</ul>
+
+</div>
+
+<article class="article">
+
+<header class="article-header">
+
+<h1>
+
+Gear là gì?
+
+</h1>
+
+<p class="article-description">
+
+Tổng hợp kiến thức từ cơ bản đến nâng cao về Gear dùng trong thiết kế máy, bao gồm cấu tạo, nguyên lý truyền động, tính toán thiết kế và lựa chọn bánh răng.
+
+</p>
+
+<div class="meta">
+
+<span>
+
+📅
+
+2026-07-19
+
+</span>
+
+<span>
+
+📁
+
+Machine Design
+
+</span>
+
+<span>
+
+⏱
+
+20 phút đọc
+
+</span>
+
+<span>
+
+📘
+
+Version 1.0
+
+</span>
+
+</div>
+
+</header>
+
+<figure class="article-cover">
+
+<img
+
+src="../../assets/img/gear/banner.jpg"
+
+alt="Gear">
+
+<figcaption>
+
+Gear Overview
+
+</figcaption>
+
+</figure>
+
+<section id="overview">
+
+<h2>
+
+1. Overview
+
+</h2>
+
+<p>
+
+Gear (Bánh răng) là cơ cấu truyền động cơ khí sử dụng sự ăn khớp giữa các răng để truyền mô-men xoắn và chuyển động quay giữa hai hoặc nhiều trục.
+
+</p>
+
+<p>
+
+So với truyền động bằng đai hoặc xích, bánh răng có ưu điểm truyền động chính xác, hiệu suất cao và không xảy ra hiện tượng trượt, vì vậy được sử dụng rộng rãi trong máy công cụ, robot công nghiệp, hộp giảm tốc, ô tô, thiết bị tự động hóa và các hệ thống truyền động chính xác.
+
+</p>
+
+<p>
+
+Việc lựa chọn đúng loại Gear ảnh hưởng trực tiếp đến tuổi thọ, độ ồn, hiệu suất và độ tin cậy của toàn bộ máy.
+
+</p>
+
+</section>
+
+<section id="structure">
+
+<h2>
+
+2. Structure
+
+</h2>
+
+<p>
+
+Một bánh răng tiêu chuẩn gồm nhiều thành phần hình học khác nhau. Mỗi thông số đều ảnh hưởng đến khả năng truyền tải, độ bền và khả năng gia công.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No.</th>
+
+<th>Tên</th>
+
+<th>Chức năng</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1</td>
+
+<td>Tooth</td>
+
+<td>Truyền lực giữa hai bánh răng.</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Pitch Circle</td>
+
+<td>Đường tròn làm việc lý thuyết.</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Addendum</td>
+
+<td>Phần đỉnh răng.</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Dedendum</td>
+
+<td>Phần chân răng.</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Root Circle</td>
+
+<td>Đường kính chân răng.</td>
+
+</tr>
+
+<tr>
+
+<td>6</td>
+
+<td>Face Width</td>
+
+<td>Chiều rộng làm việc của bánh răng.</td>
+
+</tr>
+
+<tr>
+
+<td>7</td>
+
+<td>Hub</td>
+
+<td>Lắp với trục.</td>
+
+</tr>
+
+<tr>
+
+<td>8</td>
+
+<td>Keyway</td>
+
+<td>Truyền mô-men từ trục sang Gear.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/gear/structure.png"
+
+alt="Gear Structure">
+
+<figcaption>
+
+Cấu tạo cơ bản của Spur Gear
+
+</figcaption>
+
+</figure>
+
+</section>
+<section id="classification">
+
+<h2>
+
+3. Classification
+
+</h2>
+
+<p>
+
+Tùy theo vị trí trục, hướng truyền lực và yêu cầu vận hành, Gear được chia thành nhiều loại khác nhau. Mỗi loại có ưu điểm và phạm vi sử dụng riêng.
+
+</p>
+
+<div class="related-grid">
+
+<div class="card">
+
+<h3>
+
+Spur Gear
+
+</h3>
+
+<p>
+
+Răng thẳng, chế tạo đơn giản, hiệu suất cao, thích hợp cho hai trục song song.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Helical Gear
+
+</h3>
+
+<p>
+
+Răng nghiêng, truyền động êm hơn Spur Gear, chịu tải lớn hơn nhưng sinh lực dọc trục.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Double Helical Gear
+
+</h3>
+
+<p>
+
+Hai dãy răng nghiêng đối xứng giúp triệt tiêu lực dọc trục.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Bevel Gear
+
+</h3>
+
+<p>
+
+Truyền động giữa hai trục cắt nhau, thường là góc 90°.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Worm Gear
+
+</h3>
+
+<p>
+
+Tỷ số truyền lớn, vận hành êm, thường dùng cho cơ cấu giảm tốc.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Internal Gear
+
+</h3>
+
+<p>
+
+Răng nằm phía trong, thường dùng trong hộp số hành tinh.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Rack and Pinion
+
+</h3>
+
+<p>
+
+Biến chuyển động quay thành chuyển động tịnh tiến.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Planetary Gear
+
+</h3>
+
+<p>
+
+Kết cấu nhỏ gọn, mật độ truyền mô-men lớn, thường dùng cho Servo Reducer.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+So sánh các loại Gear
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Loại
+
+</th>
+
+<th>
+
+Độ ồn
+
+</th>
+
+<th>
+
+Khả năng tải
+
+</th>
+
+<th>
+
+Hiệu suất
+
+</th>
+
+<th>
+
+Ứng dụng
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Spur
+
+</td>
+
+<td>
+
+★★★
+
+</td>
+
+<td>
+
+★★★
+
+</td>
+
+<td>
+
+98~99%
+
+</td>
+
+<td>
+
+Máy tiêu chuẩn
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Helical
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+<td>
+
+97~99%
+
+</td>
+
+<td>
+
+Servo, Robot
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Bevel
+
+</td>
+
+<td>
+
+★★★★
+
+</td>
+
+<td>
+
+★★★★
+
+</td>
+
+<td>
+
+96~98%
+
+</td>
+
+<td>
+
+Đổi hướng truyền động
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Worm
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+<td>
+
+★★★★
+
+</td>
+
+<td>
+
+50~95%
+
+</td>
+
+<td>
+
+Reducer
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Planetary
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+<td>
+
+97%
+
+</td>
+
+<td>
+
+Precision Gearbox
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section id="selection">
+
+<h2>
+
+4. Selection Guide
+
+</h2>
+
+<p>
+
+Việc lựa chọn Gear không chỉ dựa trên tỷ số truyền mà còn phải xét đến tải trọng, tốc độ, độ chính xác, tuổi thọ và điều kiện làm việc.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Điều kiện
+
+</th>
+
+<th>
+
+Khuyến nghị
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Tốc độ cao
+
+</td>
+
+<td>
+
+Helical Gear
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Tải trọng lớn
+
+</td>
+
+<td>
+
+Helical hoặc Double Helical
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Đổi hướng 90°
+
+</td>
+
+<td>
+
+Bevel Gear
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Tỷ số truyền lớn
+
+</td>
+
+<td>
+
+Worm Gear
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Độ chính xác cao
+
+</td>
+
+<td>
+
+Ground Helical Gear
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Robot Servo
+
+</td>
+
+<td>
+
+Planetary Gear
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Chi phí thấp
+
+</td>
+
+<td>
+
+Spur Gear
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+
+Khi thiết kế, kỹ sư nên xác định trước các thông số sau:
+
+</p>
+
+<ul>
+
+<li>
+
+Công suất truyền (Power)
+
+</li>
+
+<li>
+
+Tốc độ quay đầu vào và đầu ra
+
+</li>
+
+<li>
+
+Gear Ratio
+
+</li>
+
+<li>
+
+Mô-men xoắn lớn nhất
+
+</li>
+
+<li>
+
+Không gian lắp đặt
+
+</li>
+
+<li>
+
+Độ chính xác yêu cầu
+
+</li>
+
+<li>
+
+Độ ồn cho phép
+
+</li>
+
+<li>
+
+Tuổi thọ mong muốn
+
+</li>
+
+<li>
+
+Khả năng bôi trơn
+
+</li>
+
+<li>
+
+Chi phí chế tạo
+
+</li>
+
+</ul>
+
+<div class="note">
+
+<strong>
+
+Điểm cần nhớ
+
+</strong>
+
+<ul>
+
+<li>
+
+Không chọn Gear chỉ theo đường kính ngoài.
+
+</li>
+
+<li>
+
+Module phải đồng nhất giữa hai bánh răng ăn khớp.
+
+</li>
+
+<li>
+
+Áp dụng cùng Pressure Angle.
+
+</li>
+
+<li>
+
+Kiểm tra tỷ số truyền trước khi tính toán độ bền.
+
+</li>
+
+<li>
+
+Ưu tiên Gear Grinding đối với cơ cấu tốc độ cao.
+
+</li>
+
+</ul>
+
+</div>
+<section id="design">
+
+<h2>
+
+5. Gear Parameters
+
+</h2>
+
+<p>
+
+Để thiết kế một bộ truyền bánh răng, kỹ sư cần xác định chính xác các thông số hình học cơ bản. Những thông số này quyết định khả năng truyền tải, độ bền và khả năng chế tạo của Gear.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Thông số
+
+</th>
+
+<th>
+
+Ký hiệu
+
+</th>
+
+<th>
+
+Đơn vị
+
+</th>
+
+<th>
+
+Ý nghĩa
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Module
+
+</td>
+
+<td>
+
+m
+
+</td>
+
+<td>
+
+mm
+
+</td>
+
+<td>
+
+Kích thước cơ bản của răng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Number of Teeth
+
+</td>
+
+<td>
+
+z
+
+</td>
+
+<td>
+
+-
+
+</td>
+
+<td>
+
+Số răng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Pressure Angle
+
+</td>
+
+<td>
+
+α
+
+</td>
+
+<td>
+
+°
+
+</td>
+
+<td>
+
+Thông thường 20°
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Pitch Diameter
+
+</td>
+
+<td>
+
+d
+
+</td>
+
+<td>
+
+mm
+
+</td>
+
+<td>
+
+Đường kính vòng chia
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Outside Diameter
+
+</td>
+
+<td>
+
+da
+
+</td>
+
+<td>
+
+mm
+
+</td>
+
+<td>
+
+Đường kính đỉnh răng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Root Diameter
+
+</td>
+
+<td>
+
+df
+
+</td>
+
+<td>
+
+mm
+
+</td>
+
+<td>
+
+Đường kính chân răng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Face Width
+
+</td>
+
+<td>
+
+b
+
+</td>
+
+<td>
+
+mm
+
+</td>
+
+<td>
+
+Chiều rộng bánh răng
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+
+Trong thiết kế tiêu chuẩn JIS và ISO, Module và Pressure Angle là hai thông số phải đồng nhất giữa hai bánh răng ăn khớp.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Các công thức hình học cơ bản
+
+</h2>
+
+<pre><code>
+
+Pitch Diameter
+
+d = m × z
+
+Outside Diameter
+
+da = m × (z + 2)
+
+Root Diameter
+
+df = d - 2.5m
+
+Center Distance
+
+a = (d1 + d2) / 2
+
+Gear Ratio
+
+i = z2 / z1
+
+</code></pre>
+
+<p>
+
+Các công thức trên áp dụng cho Spur Gear tiêu chuẩn với Pressure Angle 20°.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Module tiêu chuẩn
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Series
+
+</th>
+
+<th>
+
+Module (mm)
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Fine
+
+</td>
+
+<td>
+
+0.3
+
+0.5
+
+0.8
+
+1
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+General
+
+</td>
+
+<td>
+
+1.25
+
+1.5
+
+2
+
+2.5
+
+3
+
+4
+
+5
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Heavy Duty
+
+</td>
+
+<td>
+
+6
+
+8
+
+10
+
+12
+
+16
+
+20
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Pressure Angle
+
+</h2>
+
+<p>
+
+Hiện nay hầu hết các hệ thống truyền động sử dụng Pressure Angle 20°. Một số thiết kế cũ có thể sử dụng 14.5° hoặc 25°.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Pressure Angle
+
+</th>
+
+<th>
+
+Đặc điểm
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+14.5°
+
+</td>
+
+<td>
+
+Tiêu chuẩn cũ, ít sử dụng.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+20°
+
+</td>
+
+<td>
+
+Tiêu chuẩn hiện nay.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+25°
+
+</td>
+
+<td>
+
+Độ bền chân răng cao hơn.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Gear Ratio
+
+</h2>
+
+<p>
+
+Gear Ratio quyết định mối quan hệ giữa tốc độ và mô-men xoắn của hai bánh răng.
+
+</p>
+
+<pre><code>
+
+i = z2 / z1
+
+n2 = n1 / i
+
+T2 = T1 × i
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Ký hiệu
+
+</th>
+
+<th>
+
+Ý nghĩa
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+z
+
+</td>
+
+<td>
+
+Số răng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+n
+
+</td>
+
+<td>
+
+Tốc độ quay
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+T
+
+</td>
+
+<td>
+
+Mô-men xoắn
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+i
+
+</td>
+
+<td>
+
+Tỷ số truyền
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Pitch Line Velocity
+
+</h2>
+
+<p>
+
+Tốc độ vòng chia ảnh hưởng trực tiếp đến độ ồn, bôi trơn và phương pháp gia công.
+
+</p>
+
+<pre><code>
+
+V = π × d × n / 60000
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+V (m/s)
+
+</th>
+
+<th>
+
+Đánh giá
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+&lt; 5
+
+</td>
+
+<td>
+
+Thấp
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+5 ~ 15
+
+</td>
+
+<td>
+
+Trung bình
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+15 ~ 30
+
+</td>
+
+<td>
+
+Cao
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+&gt; 30
+
+</td>
+
+<td>
+
+Gear Grinding khuyến nghị
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Tangential Force
+
+</h2>
+
+<p>
+
+Lực tiếp tuyến là lực truyền mô-men chính giữa hai bánh răng.
+
+</p>
+
+<pre><code>
+
+Ft = 2T / d
+
+</code></pre>
+
+<p>
+
+Trong đó:
+
+</p>
+
+<ul>
+
+<li>
+
+Ft : Tangential Force (N)
+
+</li>
+
+<li>
+
+T : Torque (N·mm)
+
+</li>
+
+<li>
+
+d : Pitch Diameter (mm)
+
+</li>
+
+</ul>
+
+<div class="note">
+
+<strong>
+
+Điểm cần nhớ
+
+</strong>
+
+<ul>
+
+<li>
+
+Module càng lớn thì khả năng chịu tải càng cao.
+
+</li>
+
+<li>
+
+Không nên chọn số răng quá nhỏ để tránh hiện tượng Under Cut.
+
+</li>
+
+<li>
+
+Helical Gear chịu tải tốt hơn Spur Gear.
+
+</li>
+
+<li>
+
+Face Width thường chọn từ 8m đến 16m tùy ứng dụng.
+
+</li>
+
+</ul>
+
+</div>
+
+</section>
+<section id="material">
+
+<h2>
+
+6. Material & Heat Treatment
+
+</h2>
+
+<p>
+
+Việc lựa chọn vật liệu quyết định trực tiếp đến khả năng chịu tải, tuổi thọ mỏi và chi phí chế tạo của Gear. Trong thiết kế máy hiện đại, vật liệu thường được lựa chọn dựa trên tải trọng, tốc độ quay, yêu cầu về độ cứng bề mặt và phương pháp gia công.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Material</th>
+
+<th>Độ cứng</th>
+
+<th>Ứng dụng</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>S45C</td>
+
+<td>HB180~230</td>
+
+<td>Gear tải nhẹ</td>
+
+</tr>
+
+<tr>
+
+<td>SCM415</td>
+
+<td>Carburizing</td>
+
+<td>Reducer, Servo</td>
+
+</tr>
+
+<tr>
+
+<td>SCM420</td>
+
+<td>HRC58~62</td>
+
+<td>Transmission</td>
+
+</tr>
+
+<tr>
+
+<td>SCM440</td>
+
+<td>HRC30~40</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+<tr>
+
+<td>SNCM420</td>
+
+<td>Carburizing</td>
+
+<td>Precision Gear</td>
+
+</tr>
+
+<tr>
+
+<td>SUS420J2</td>
+
+<td>HRC48~54</td>
+
+<td>Chống gỉ</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Heat Treatment
+
+</h2>
+
+<p>
+
+Sau khi gia công răng, bánh răng thường được xử lý nhiệt nhằm tăng độ cứng bề mặt và nâng cao tuổi thọ làm việc.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Process</th>
+
+<th>Đặc điểm</th>
+
+<th>Độ cứng</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Quenching</td>
+
+<td>Tôi toàn phần</td>
+
+<td>HRC45~55</td>
+
+</tr>
+
+<tr>
+
+<td>Carburizing</td>
+
+<td>Thấm cacbon</td>
+
+<td>HRC58~62</td>
+
+</tr>
+
+<tr>
+
+<td>Nitriding</td>
+
+<td>Thấm nitơ</td>
+
+<td>HV900~1100</td>
+
+</tr>
+
+<tr>
+
+<td>Induction Hardening</td>
+
+<td>Tôi cao tần</td>
+
+<td>HRC50~60</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+SCM420 + Carburizing + Gear Grinding là lựa chọn rất phổ biến trong các hộp giảm tốc Servo nhờ khả năng chịu mỏi cao và độ chính xác tốt.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Gear Strength
+
+</h2>
+
+<p>
+
+Trong quá trình thiết kế cần kiểm tra đồng thời độ bền uốn tại chân răng và độ bền tiếp xúc trên bề mặt răng.
+
+</p>
+
+<ul>
+
+<li>Bending Strength</li>
+
+<li>Contact Strength</li>
+
+<li>Scuffing</li>
+
+<li>Pitting</li>
+
+<li>Wear</li>
+
+<li>Tooth Breakage</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>
+
+Lewis Equation
+
+</h2>
+
+<p>
+
+Lewis Equation là công thức cơ bản dùng để kiểm tra ứng suất uốn của chân răng.
+
+</p>
+
+<pre><code>
+
+σ = Ft / (b × m × Y)
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Ký hiệu</th>
+
+<th>Ý nghĩa</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>σ</td>
+
+<td>Ứng suất uốn</td>
+
+</tr>
+
+<tr>
+
+<td>Ft</td>
+
+<td>Lực tiếp tuyến</td>
+
+</tr>
+
+<tr>
+
+<td>b</td>
+
+<td>Face Width</td>
+
+</tr>
+
+<tr>
+
+<td>m</td>
+
+<td>Module</td>
+
+</tr>
+
+<tr>
+
+<td>Y</td>
+
+<td>Lewis Form Factor</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+International Standards
+
+</h2>
+
+<p>
+
+Trong các dự án công nghiệp, việc tính toán Gear thường dựa trên các tiêu chuẩn quốc tế thay vì chỉ sử dụng công thức Lewis.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Standard</th>
+
+<th>Mục đích</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>ISO 6336</td>
+
+<td>Tính toán độ bền Gear</td>
+
+</tr>
+
+<tr>
+
+<td>AGMA 2001</td>
+
+<td>Gear Rating</td>
+
+</tr>
+
+<tr>
+
+<td>JIS B1701</td>
+
+<td>Thông số Gear</td>
+
+</tr>
+
+<tr>
+
+<td>DIN 3960</td>
+
+<td>Gear Geometry</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Lubrication
+
+</h2>
+
+<p>
+
+Bôi trơn đúng cách giúp giảm ma sát, giảm nhiệt độ làm việc và kéo dài tuổi thọ của Gear.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Phương pháp</th>
+
+<th>Ứng dụng</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Grease</td>
+
+<td>Tốc độ thấp</td>
+
+</tr>
+
+<tr>
+
+<td>Oil Bath</td>
+
+<td>Reducer</td>
+
+</tr>
+
+<tr>
+
+<td>Forced Oil</td>
+
+<td>Tốc độ cao</td>
+
+</tr>
+
+<tr>
+
+<td>Oil Mist</td>
+
+<td>Precision Machine</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>
+
+Warning
+
+</strong>
+
+<p>
+
+Thiếu dầu bôi trơn hoặc lựa chọn sai độ nhớt là nguyên nhân phổ biến gây mòn răng, pitting và cháy bề mặt Gear.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Design Example
+
+</h2>
+
+<p>
+
+Yêu cầu thiết kế:
+
+</p>
+
+<ul>
+
+<li>Công suất: 5 kW</li>
+
+<li>Tốc độ đầu vào: 1450 rpm</li>
+
+<li>Tỷ số truyền: 3</li>
+
+<li>Pressure Angle: 20°</li>
+
+<li>Module: 2 mm</li>
+
+</ul>
+
+<p>
+
+Quy trình thiết kế:
+
+</p>
+
+<ol>
+
+<li>Xác định mô-men xoắn đầu vào.</li>
+
+<li>Chọn số răng bánh dẫn.</li>
+
+<li>Tính số răng bánh bị dẫn.</li>
+
+<li>Tính Pitch Diameter.</li>
+
+<li>Tính Center Distance.</li>
+
+<li>Tính Tangential Force.</li>
+
+<li>Kiểm tra Lewis Equation.</li>
+
+<li>Kiểm tra Contact Stress.</li>
+
+<li>Lựa chọn vật liệu.</li>
+
+<li>Xác định phương pháp Heat Treatment.</li>
+
+</ol>
+
+<div class="success">
+
+<strong>
+
+Design Checklist
+
+</strong>
+
+<ul>
+
+<li>✓ Gear Ratio đúng yêu cầu.</li>
+
+<li>✓ Module tiêu chuẩn.</li>
+
+<li>✓ Pressure Angle đồng nhất.</li>
+
+<li>✓ Face Width đủ chịu tải.</li>
+
+<li>✓ Đã kiểm tra Bending Stress.</li>
+
+<li>✓ Đã kiểm tra Contact Stress.</li>
+
+<li>✓ Có phương án bôi trơn.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="application">
+
+<h2>
+
+7. Common Gear Failure
+
+</h2>
+
+<p>
+
+Trong thực tế, phần lớn các hư hỏng của Gear không xuất phát từ việc tính toán sai mà do lựa chọn vật liệu, bôi trơn hoặc lắp ráp không phù hợp.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Failure
+
+</th>
+
+<th>
+
+Nguyên nhân
+
+</th>
+
+<th>
+
+Giải pháp
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Pitting
+
+</td>
+
+<td>
+
+Ứng suất tiếp xúc lặp lại
+
+</td>
+
+<td>
+
+Tăng độ cứng, cải thiện bôi trơn
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Scuffing
+
+</td>
+
+<td>
+
+Thiếu dầu
+
+</td>
+
+<td>
+
+Dùng dầu có độ nhớt phù hợp
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Tooth Breakage
+
+</td>
+
+<td>
+
+Quá tải
+
+</td>
+
+<td>
+
+Tăng Module hoặc Face Width
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Wear
+
+</td>
+
+<td>
+
+Bụi bẩn hoặc thiếu dầu
+
+</td>
+
+<td>
+
+Lọc dầu và bảo dưỡng định kỳ
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Plastic Deformation
+
+</td>
+
+<td>
+
+Ứng suất vượt giới hạn
+
+</td>
+
+<td>
+
+Tăng độ cứng vật liệu
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Corrosion
+
+</td>
+
+<td>
+
+Môi trường ẩm
+
+</td>
+
+<td>
+
+Dùng SUS hoặc phủ bề mặt
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+src="../../assets/img/gear/failure.jpg"
+alt="Gear Failure">
+
+<figcaption>
+
+Một số dạng hư hỏng thường gặp của Gear
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>
+
+Failure Analysis
+
+</h2>
+
+<p>
+
+Khi Gear hỏng cần đánh giá đồng thời hình dạng vết hỏng, vị trí xuất hiện và điều kiện vận hành trước khi đưa ra kết luận.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Hiện tượng
+
+</th>
+
+<th>
+
+Kiểm tra
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Ồn tăng bất thường
+
+</td>
+
+<td>
+
+Backlash, sai số lắp ráp
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Nhiệt độ cao
+
+</td>
+
+<td>
+
+Lubrication
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Rung mạnh
+
+</td>
+
+<td>
+
+Runout, Balance
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Mòn một phía
+
+</td>
+
+<td>
+
+Alignment
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Gãy chân răng
+
+</td>
+
+<td>
+
+Bending Stress
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Gear Manufacturing Process
+
+</h2>
+
+<p>
+
+Quá trình chế tạo Gear phụ thuộc vào độ chính xác yêu cầu và số lượng sản xuất.
+
+</p>
+
+<ol>
+
+<li>Chuẩn bị phôi</li>
+
+<li>Turning</li>
+
+<li>Hobbing hoặc Shaping</li>
+
+<li>Heat Treatment</li>
+
+<li>Gear Grinding (nếu cần)</li>
+
+<li>Deburring</li>
+
+<li>Inspection</li>
+
+<li>Assembly</li>
+
+</ol>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Process
+
+</th>
+
+<th>
+
+Độ chính xác
+
+</th>
+
+<th>
+
+Chi phí
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Hobbing
+
+</td>
+
+<td>
+
+★★★☆☆
+
+</td>
+
+<td>
+
+Thấp
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Shaping
+
+</td>
+
+<td>
+
+★★★☆☆
+
+</td>
+
+<td>
+
+Trung bình
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Gear Grinding
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+<td>
+
+Cao
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Skiving
+
+</td>
+
+<td>
+
+★★★★☆
+
+</td>
+
+<td>
+
+Trung bình
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Gear Accuracy
+
+</h2>
+
+<p>
+
+Độ chính xác của Gear được quy định theo các tiêu chuẩn JIS, DIN hoặc ISO.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Grade
+
+</th>
+
+<th>
+
+Ứng dụng
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+ISO 10~12
+
+</td>
+
+<td>
+
+Máy thông thường
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+ISO 8~9
+
+</td>
+
+<td>
+
+Reducer
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+ISO 6~7
+
+</td>
+
+<td>
+
+Servo Gearbox
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+ISO 4~5
+
+</td>
+
+<td>
+
+Precision Machine
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Inspection Items
+
+</h2>
+
+<ul>
+
+<li>Module</li>
+
+<li>Number of Teeth</li>
+
+<li>Runout</li>
+
+<li>Pitch Error</li>
+
+<li>Tooth Profile Error</li>
+
+<li>Lead Error</li>
+
+<li>Surface Roughness</li>
+
+<li>Hardness</li>
+
+<li>Backlash</li>
+
+<li>Contact Pattern</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>
+
+Common Design Mistakes
+
+</h2>
+
+<div class="warning">
+
+<ul>
+
+<li>Chọn Module quá nhỏ.</li>
+
+<li>Bỏ qua tải va đập.</li>
+
+<li>Không kiểm tra Contact Stress.</li>
+
+<li>Face Width quá hẹp.</li>
+
+<li>Không xét lực dọc trục của Helical Gear.</li>
+
+<li>Không tính đến sai số chế tạo.</li>
+
+<li>Bôi trơn không phù hợp.</li>
+
+<li>Không kiểm tra Under Cut khi số răng nhỏ.</li>
+
+<li>Dùng sai Pressure Angle.</li>
+
+<li>Không kiểm tra tuổi thọ mỏi.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+FAQ
+
+</h2>
+
+<div class="faq">
+
+<h3>
+
+Spur Gear hay Helical Gear tốt hơn?
+
+</h3>
+
+<p>
+
+Helical Gear vận hành êm và chịu tải cao hơn nhưng giá thành và yêu cầu chế tạo cũng cao hơn.
+
+</p>
+
+</div>
+
+<div class="faq">
+
+<h3>
+
+Có nên luôn chọn Gear Grinding?
+
+</h3>
+
+<p>
+
+Không. Chỉ nên dùng khi cần độ chính xác cao, tốc độ lớn hoặc yêu cầu tiếng ồn thấp.
+
+</p>
+
+</div>
+
+<div class="faq">
+
+<h3>
+
+Module càng lớn có phải càng tốt?
+
+</h3>
+
+<p>
+
+Không. Module lớn giúp tăng khả năng chịu tải nhưng làm tăng kích thước, khối lượng và chi phí chế tạo.
+
+</p>
+
+</div>
+
+<div class="faq">
+
+<h3>
+
+Tại sao Helical Gear sinh lực dọc trục?
+
+</h3>
+
+<p>
+
+Do hướng răng nghiêng tạo thành thành phần lực theo phương trục. Cần bố trí ổ bi phù hợp để chịu lực này.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="standard">
+
+<h2>
+
+8. Related Standards
+
+</h2>
+
+<p>
+
+Khi thiết kế Gear cho thiết bị công nghiệp, nên tham khảo các tiêu chuẩn quốc tế để đảm bảo khả năng thay thế, độ bền và chất lượng chế tạo.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Standard
+
+</th>
+
+<th>
+
+Description
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+ISO 6336
+
+</td>
+
+<td>
+
+Calculation of load capacity of spur and helical gears.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+ISO 1328
+
+</td>
+
+<td>
+
+Accuracy classification.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+JIS B1701
+
+</td>
+
+<td>
+
+Gear terminology and dimensions.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+JIS B1702
+
+</td>
+
+<td>
+
+Gear accuracy.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+DIN 3961
+
+</td>
+
+<td>
+
+Gear tolerances.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+AGMA 2001
+
+</td>
+
+<td>
+
+Fundamental rating factors.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+AGMA 2101
+
+</td>
+
+<td>
+
+Gear strength calculation.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Design Checklist
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Chọn đúng loại Gear.</li>
+
+<li>✓ Module đúng tiêu chuẩn.</li>
+
+<li>✓ Pressure Angle thống nhất.</li>
+
+<li>✓ Kiểm tra Gear Ratio.</li>
+
+<li>✓ Kiểm tra Bending Stress.</li>
+
+<li>✓ Kiểm tra Contact Stress.</li>
+
+<li>✓ Kiểm tra Shaft Load.</li>
+
+<li>✓ Kiểm tra Bearing Load.</li>
+
+<li>✓ Chọn vật liệu phù hợp.</li>
+
+<li>✓ Chọn Heat Treatment.</li>
+
+<li>✓ Chọn phương pháp bôi trơn.</li>
+
+<li>✓ Kiểm tra Backlash.</li>
+
+<li>✓ Kiểm tra Gear Accuracy.</li>
+
+<li>✓ Hoàn thành bản vẽ chế tạo.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Downloads
+
+</h2>
+
+<div class="download-grid">
+
+<div class="download-card">
+
+<h3>
+
+PDF
+
+</h3>
+
+<p>
+
+Gear Design Handbook
+
+</p>
+
+<a href="../../assets/download/gear/gear-design-handbook.pdf">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+Excel
+
+</h3>
+
+<p>
+
+Gear Calculation Sheet
+
+</p>
+
+<a href="../../assets/download/gear/gear-calculation.xlsx">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+CAD
+
+</h3>
+
+<p>
+
+Gear Drawing Example
+
+</p>
+
+<a href="../../assets/download/gear/gear-example.zip">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Recommended Video
+
+</h2>
+
+<div class="video-wrapper">
+
+<iframe
+
+width="100%"
+
+height="500"
+
+src="https://www.youtube.com/embed/xxxxxxxx"
+
+title="Gear Design"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section id="reference">
+
+<h2>
+
+References
+
+</h2>
+
+<ol>
+
+<li>ISO 6336 - Calculation of Load Capacity.</li>
+
+<li>ISO 1328 - Cylindrical Gears Accuracy.</li>
+
+<li>AGMA 2001-D04.</li>
+
+<li>JIS B1701.</li>
+
+<li>JIS B1702.</li>
+
+<li>DIN 3960 / DIN 3961.</li>
+
+<li>Dudley's Handbook of Practical Gear Design.</li>
+
+<li>Shigley's Mechanical Engineering Design.</li>
+
+<li>Machinery's Handbook.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+Related Articles
+
+</h2>
+
+<div class="related-grid">
+
+<a class="card" href="bearing.html">
+
+<h3>
+
+Bearing Selection Guide
+
+</h3>
+
+<p>
+
+Cách lựa chọn ổ bi trong thiết kế máy.
+
+</p>
+
+</a>
+
+<a class="card" href="shaft.html">
+
+<h3>
+
+Shaft Design
+
+</h3>
+
+<p>
+
+Thiết kế và tính toán trục.
+
+</p>
+
+</a>
+
+<a class="card" href="coupling.html">
+
+<h3>
+
+Coupling Guide
+
+</h3>
+
+<p>
+
+Các loại khớp nối và ứng dụng.
+
+</p>
+
+</a>
+
+<a class="card" href="belt.html">
+
+<h3>
+
+Timing Belt
+
+</h3>
+
+<p>
+
+Truyền động bằng đai đồng bộ.
+
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Article Information
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>
+
+Category
+
+</th>
+
+<td>
+
+Machine Design
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Difficulty
+
+</th>
+
+<td>
+
+Intermediate
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Last Updated
+
+</th>
+
+<td>
+
+2026-07-19
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Version
+
+</th>
+
+<td>
+
+1.0
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Author
+
+</th>
+
+<td>
+
+Tuấn Lê
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div class="author-box">
+
+<img
+
+src="../../assets/img/author/avatar.png"
+
+alt="Author">
+
+<div>
+
+<h3>
+
+Tuấn Lê
+
+</h3>
+
+<p>
+
+Mechanical Design Engineer
+
+</p>
+
+<p>
+
+JapanTech là dự án chia sẻ kiến thức về thiết kế máy, CAD, lập trình VB.NET, VBA và kinh nghiệm làm việc tại Nhật Bản dành cho kỹ sư.
+
+</p>
+
+</div>
+
+</div>
+
+</article>
+
+</main>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+JapanTech
+
+</h3>
+
+<p>
+
+Engineering Knowledge Platform
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Knowledge
+
+</h3>
+
+<ul>
+
+<li><a href="../machine-design/index.html">Machine Design</a></li>
+
+<li><a href="../material/index.html">Material</a></li>
+
+<li><a href="../cad/index.html">CAD</a></li>
+
+<li><a href="../grinding/index.html">Grinding</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Resources
+
+</h3>
+
+<ul>
+
+<li><a href="../../resources.html">Standards</a></li>
+
+<li><a href="../../tools.html">Engineering Tools</a></li>
+
+<li><a href="../../roadmap.html">Learning Roadmap</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+Email: contact@japantech.jp
+
+</p>
+
+<p>
+
+GitHub Pages
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 JapanTech. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="../../js/main.js"></script>
+
+<script src="../../js/article.js"></script>
+
+</body>
+
+</html>

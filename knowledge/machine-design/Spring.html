@@ -1,0 +1,2836 @@
+<!--
+====================================================
+JapanTech
+
+Category : Machine Design
+Article  : Spring
+Version  : 1.0
+Author   : Tuấn Lê
+====================================================
+-->
+
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+Spring là gì? | JapanTech
+
+</title>
+
+<meta
+name="description"
+content="Kiến thức đầy đủ về Spring trong thiết kế máy">
+
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/article.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<a class="logo" href="../../index.html">
+
+JapanTech
+
+</a>
+
+<nav>
+
+<ul class="menu">
+
+<li><a href="../../index.html">Home</a></li>
+<li><a class="active" href="../../knowledge.html">Knowledge</a></li>
+<li><a href="#">Japanese</a></li>
+<li><a href="#">Career</a></li>
+<li><a href="#">Tools</a></li>
+<li><a href="#">About</a></li>
+
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<input
+class="search-box"
+placeholder="Search...">
+
+<button class="menu-button">
+
+☰
+
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="page">
+
+<div class="container">
+
+<nav class="breadcrumb">
+
+<a href="../../index.html">
+
+Home
+
+</a>
+
+<span>></span>
+
+<a href="../../knowledge.html">
+
+Knowledge
+
+</a>
+
+<span>></span>
+
+<a href="../machine-design/index.html">
+
+Machine Design
+
+</a>
+
+<span>></span>
+
+Spring
+
+</nav>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="wrapper">
+
+<aside>
+
+<div class="sidebar">
+
+<div class="sidebar-title">
+
+Machine Design
+
+</div>
+
+<ul>
+<li><a href="index.html"> Overview</a></li>
+<li><a href="bearing.html">Bearing</a></li>
+
+<li><a href="gear.html">Gear</a></li>
+
+<li><a href="shaft.html">Shaft</a></li>
+
+<li><a href="bolt.html">Bolt</a></li>
+
+<li><a class="active" href="spring.html">Spring</a></li>
+
+<li><a href="coupling.html">Coupling</a></li>
+
+<li><a href="chain.html">Chain Drive </a></li>
+
+<li><a href="belt.html">Timing Belt</a></li>
+
+</ul>
+
+</div>
+
+</aside>
+
+<main class="main">
+
+<div class="toc">
+
+<div class="toc-title">
+
+Table of Contents
+
+</div>
+
+<ul>
+
+<li><a href="#overview">1. Overview</a></li>
+
+<li><a href="#classification">2. Spring Classification</a></li>
+
+<li><a href="#material">3. Spring Material</a></li>
+
+<li><a href="#parameter">4. Spring Parameters</a></li>
+
+<li><a href="#design">5. Spring Design</a></li>
+
+<li><a href="#failure">6. Failure Analysis</a></li>
+
+<li><a href="#reference">7. Reference</a></li>
+
+</ul>
+
+</div>
+
+<article class="article">
+
+<header class="article-header">
+
+<h1>
+
+Spring là gì?
+
+</h1>
+
+<p class="article-description">
+
+Hướng dẫn đầy đủ về Spring trong thiết kế máy: phân loại, vật liệu, công thức tính toán, lựa chọn độ cứng, tuổi thọ mỏi và các lưu ý khi thiết kế.
+
+</p>
+
+<div class="meta">
+
+<span>📅 2026-07-19</span>
+
+<span>📁 Machine Design</span>
+
+<span>⏱ 35 phút đọc</span>
+
+<span>📘 Version 1.0</span>
+
+</div>
+
+</header>
+
+<figure class="article-cover">
+
+<img
+
+src="../../assets/img/spring/banner.jpg"
+
+alt="Spring">
+
+<figcaption>
+
+Mechanical Compression Spring
+
+</figcaption>
+
+</figure>
+
+<section id="overview">
+
+<h2>
+
+1. Overview
+
+</h2>
+
+<p>
+
+Spring (Lò xo) là chi tiết cơ khí có khả năng tích trữ và giải phóng năng lượng đàn hồi khi chịu tải. Trong thiết kế máy, Spring được sử dụng để tạo lực, hấp thụ va đập, giảm rung, hồi vị cơ cấu và duy trì áp lực giữa các chi tiết.
+
+</p>
+
+<p>
+
+Tùy theo mục đích sử dụng, Spring có nhiều dạng khác nhau như Compression Spring, Extension Spring, Torsion Spring, Disc Spring và Constant Force Spring. Mỗi loại có đặc tính tải trọng và ứng dụng riêng.
+
+</p>
+
+<p>
+
+Một thiết kế Spring tốt cần đảm bảo đủ lực làm việc, hành trình phù hợp, tuổi thọ mỏi cao và tránh hiện tượng mất ổn định (Buckling) hoặc chạm vòng (Coil Bind).
+
+</p>
+
+</section>
+
+<section id="classification">
+
+<h2>
+
+2. Spring Classification
+
+</h2>
+
+<p>
+
+Spring được phân loại theo dạng biến dạng và mục đích sử dụng.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Type</th>
+
+<th>Description</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Compression Spring</td>
+
+<td>Chịu nén</td>
+
+<td>Máy tự động, Jig, Fixture</td>
+
+</tr>
+
+<tr>
+
+<td>Extension Spring</td>
+
+<td>Chịu kéo</td>
+
+<td>Cửa, cơ cấu hồi vị</td>
+
+</tr>
+
+<tr>
+
+<td>Torsion Spring</td>
+
+<td>Chịu xoắn</td>
+
+<td>Bản lề, kẹp</td>
+
+</tr>
+
+<tr>
+
+<td>Disc Spring</td>
+
+<td>Lò xo đĩa</td>
+
+<td>Bulông tải lớn</td>
+
+</tr>
+
+<tr>
+
+<td>Wave Spring</td>
+
+<td>Lò xo sóng</td>
+
+<td>Ổ bi, không gian hẹp</td>
+
+</tr>
+
+<tr>
+
+<td>Constant Force Spring</td>
+
+<td>Lực gần như không đổi</td>
+
+<td>Cuộn cáp, thiết bị tự động</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/spring/types.png"
+
+alt="Spring Types">
+
+<figcaption>
+
+Các loại Spring thông dụng
+
+</figcaption>
+
+</figure>
+
+</section>
+<section id="material">
+
+<h2>
+
+3. Spring Material
+
+</h2>
+
+<p>
+
+Vật liệu quyết định trực tiếp đến khả năng chịu tải, tuổi thọ mỏi, giới hạn đàn hồi và khả năng làm việc trong các môi trường khác nhau. Việc lựa chọn vật liệu phù hợp quan trọng không kém việc tính toán kích thước của Spring.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Material</th>
+
+<th>Characteristics</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>SWP-A / SWP-B</td>
+
+<td>Piano Wire, độ bền rất cao</td>
+
+<td>Compression Spring</td>
+
+</tr>
+
+<tr>
+
+<td>SWOSC-V</td>
+
+<td>Chrome Silicon Steel</td>
+
+<td>Heavy Duty Spring</td>
+
+</tr>
+
+<tr>
+
+<td>SWO</td>
+
+<td>Oil Tempered Wire</td>
+
+<td>Industrial Machine</td>
+
+</tr>
+
+<tr>
+
+<td>SUS304-WPB</td>
+
+<td>Chống ăn mòn</td>
+
+<td>Food Machine</td>
+
+</tr>
+
+<tr>
+
+<td>SUS316</td>
+
+<td>Chống ăn mòn biển</td>
+
+<td>Marine Equipment</td>
+
+</tr>
+
+<tr>
+
+<td>SUP9</td>
+
+<td>Spring Steel</td>
+
+<td>Leaf Spring</td>
+
+</tr>
+
+<tr>
+
+<td>SUP10</td>
+
+<td>Spring Steel cường độ cao</td>
+
+<td>Heavy Machine</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Material Comparison
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Property
+
+</th>
+
+<th>
+
+Piano Wire
+
+</th>
+
+<th>
+
+Oil Tempered
+
+</th>
+
+<th>
+
+SUS304
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Fatigue Strength
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+<td>
+
+★★★★☆
+
+</td>
+
+<td>
+
+★★★☆☆
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Corrosion Resistance
+
+</td>
+
+<td>
+
+★☆☆☆☆
+
+</td>
+
+<td>
+
+★★☆☆☆
+
+</td>
+
+<td>
+
+★★★★★
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Heat Resistance
+
+</td>
+
+<td>
+
+★★★☆☆
+
+</td>
+
+<td>
+
+★★★★☆
+
+</td>
+
+<td>
+
+★★★★☆
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Cost
+
+</td>
+
+<td>
+
+Low
+
+</td>
+
+<td>
+
+Medium
+
+</td>
+
+<td>
+
+High
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Heat Treatment
+
+</h2>
+
+<p>
+
+Sau khi tạo hình, nhiều loại Spring cần được xử lý nhiệt nhằm khử ứng suất dư, ổn định kích thước và tăng tuổi thọ mỏi.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Process
+
+</th>
+
+<th>
+
+Purpose
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Stress Relief
+
+</td>
+
+<td>
+
+Giảm ứng suất sau khi quấn
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Tempering
+
+</td>
+
+<td>
+
+Ổn định tổ chức vật liệu
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Quenching & Tempering
+
+</td>
+
+<td>
+
+Tăng độ bền
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Shot Peening
+
+</h2>
+
+<p>
+
+Shot Peening là quá trình bắn hạt thép nhỏ lên bề mặt Spring nhằm tạo ứng suất nén dư. Điều này giúp hạn chế sự hình thành vết nứt mỏi và tăng đáng kể tuổi thọ làm việc.
+
+</p>
+
+<div class="success">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Đối với Spring chịu tải chu kỳ lớn, Shot Peening có thể tăng tuổi thọ mỏi từ 30% đến hơn 100%, tùy điều kiện làm việc và vật liệu.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="parameter">
+
+<h2>
+
+4. Spring Parameters
+
+</h2>
+
+<p>
+
+Để tính toán Spring cần xác định đầy đủ các thông số hình học và điều kiện làm việc.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Parameter
+
+</th>
+
+<th>
+
+Symbol
+
+</th>
+
+<th>
+
+Description
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Wire Diameter
+
+</td>
+
+<td>
+
+d
+
+</td>
+
+<td>
+
+Đường kính dây
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Mean Diameter
+
+</td>
+
+<td>
+
+D
+
+</td>
+
+<td>
+
+Đường kính trung bình
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Outer Diameter
+
+</td>
+
+<td>
+
+Do
+
+</td>
+
+<td>
+
+Đường kính ngoài
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Inner Diameter
+
+</td>
+
+<td>
+
+Di
+
+</td>
+
+<td>
+
+Đường kính trong
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Free Length
+
+</td>
+
+<td>
+
+Lo
+
+</td>
+
+<td>
+
+Chiều dài tự do
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Solid Length
+
+</td>
+
+<td>
+
+Ls
+
+</td>
+
+<td>
+
+Chiều dài khi chạm vòng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Active Coils
+
+</td>
+
+<td>
+
+Na
+
+</td>
+
+<td>
+
+Số vòng làm việc
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Total Coils
+
+</td>
+
+<td>
+
+Nt
+
+</td>
+
+<td>
+
+Tổng số vòng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Spring Index
+
+</td>
+
+<td>
+
+C
+
+</td>
+
+<td>
+
+D / d
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Recommended Spring Index
+
+</h2>
+
+<p>
+
+Spring Index (C = D/d) ảnh hưởng đến khả năng chế tạo, phân bố ứng suất và tuổi thọ của Spring.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Spring Index
+
+</th>
+
+<th>
+
+Evaluation
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+&lt; 4
+
+</td>
+
+<td>
+
+Khó chế tạo, ứng suất cao
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+4 ~ 6
+
+</td>
+
+<td>
+
+Có thể chế tạo
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+6 ~ 10
+
+</td>
+
+<td>
+
+Khuyến nghị
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+10 ~ 14
+
+</td>
+
+<td>
+
+Tốt cho đa số ứng dụng
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+&gt; 14
+
+</td>
+
+<td>
+
+Dễ mất ổn định
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="note">
+
+<strong>
+
+Điểm cần nhớ
+
+</strong>
+
+<ul>
+
+<li>Nên chọn Spring Index từ 6 đến 10 đối với đa số Compression Spring.</li>
+
+<li>Spring Index quá nhỏ làm tăng ứng suất và khó quấn.</li>
+
+<li>Spring Index quá lớn làm giảm độ ổn định của lò xo.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section id="design">
+
+<h2>
+
+5. Spring Design
+
+</h2>
+
+<p>
+
+Thiết kế Compression Spring cần đảm bảo đồng thời lực đàn hồi, ứng suất làm việc, hành trình nén, tuổi thọ mỏi và khả năng chế tạo. Một thiết kế tốt không chỉ đạt lực yêu cầu mà còn tránh hiện tượng Coil Bind và Buckling.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Hooke's Law
+
+</h2>
+
+<p>
+
+Trong vùng đàn hồi, lực của Spring tỷ lệ thuận với độ biến dạng.
+
+</p>
+
+<pre><code>
+
+F = k × x
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>F</td>
+
+<td>Spring Force</td>
+
+<td>N</td>
+
+</tr>
+
+<tr>
+
+<td>k</td>
+
+<td>Spring Constant</td>
+
+<td>N/mm</td>
+
+</tr>
+
+<tr>
+
+<td>x</td>
+
+<td>Deflection</td>
+
+<td>mm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Spring Constant
+
+</h2>
+
+<p>
+
+Độ cứng của Compression Spring được xác định theo công thức:
+
+</p>
+
+<pre><code>
+
+k = (G × d⁴)
+
+    ───────────
+
+    (8 × D³ × Na)
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>G</td>
+
+<td>Shear Modulus</td>
+
+</tr>
+
+<tr>
+
+<td>d</td>
+
+<td>Wire Diameter</td>
+
+</tr>
+
+<tr>
+
+<td>D</td>
+
+<td>Mean Coil Diameter</td>
+
+</tr>
+
+<tr>
+
+<td>Na</td>
+
+<td>Active Coils</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Đường kính dây (d) ảnh hưởng theo lũy thừa bậc bốn (d⁴), vì vậy chỉ cần tăng nhẹ đường kính dây cũng làm độ cứng của Spring tăng lên đáng kể.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Shear Stress
+
+</h2>
+
+<p>
+
+Compression Spring chủ yếu chịu ứng suất cắt.
+
+</p>
+
+<pre><code>
+
+τ = (8FD)
+
+    ───────
+
+      πd³
+
+</code></pre>
+
+<p>
+
+Trong thực tế cần nhân thêm hệ số hiệu chỉnh Wahl để tính đến ảnh hưởng của độ cong dây.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Wahl Correction Factor
+
+</h2>
+
+<p>
+
+Hệ số Wahl được sử dụng để hiệu chỉnh ứng suất cắt tại mặt trong của vòng lò xo.
+
+</p>
+
+<pre><code>
+
+Kw =
+
+(4C−1)
+
+──────
+
+(4C−4)
+
++
+
+0.615
+
+────
+
+ C
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>C</td>
+
+<td>Spring Index (D/d)</td>
+
+</tr>
+
+<tr>
+
+<td>Kw</td>
+
+<td>Wahl Factor</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+
+Ứng suất thực tế:
+
+</p>
+
+<pre><code>
+
+τmax = Kw × τ
+
+</code></pre>
+
+</section>
+
+<section>
+
+<h2>
+
+Spring Deflection
+
+</h2>
+
+<p>
+
+Độ biến dạng của Spring được xác định theo:
+
+</p>
+
+<pre><code>
+
+δ = F / k
+
+</code></pre>
+
+<p>
+
+Hoặc:
+
+</p>
+
+<pre><code>
+
+δ =
+
+8FD³Na
+
+────────
+
+ Gd⁴
+
+</code></pre>
+
+</section>
+
+<section>
+
+<h2>
+
+Stored Energy
+
+</h2>
+
+<p>
+
+Spring có khả năng tích trữ năng lượng đàn hồi.
+
+</p>
+
+<pre><code>
+
+U =
+
+1
+
+──
+
+2
+
+kx²
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Parameter</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>U</td>
+
+<td>Elastic Energy</td>
+
+</tr>
+
+<tr>
+
+<td>k</td>
+
+<td>Spring Constant</td>
+
+</tr>
+
+<tr>
+
+<td>x</td>
+
+<td>Deflection</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Design Example
+
+</h2>
+
+<p>
+
+Yêu cầu thiết kế:
+
+</p>
+
+<ul>
+
+<li>Maximum Load = 150 N</li>
+
+<li>Working Stroke = 15 mm</li>
+
+<li>Compression Spring</li>
+
+<li>Material: SWP-B</li>
+
+</ul>
+
+<p>
+
+Bước 1:
+
+</p>
+
+<pre><code>
+
+k =
+
+150 / 15
+
+=
+
+10 N/mm
+
+</code></pre>
+
+<p>
+
+Bước 2:
+
+</p>
+
+<p>
+
+Chọn sơ bộ:
+
+</p>
+
+<ul>
+
+<li>d = 2.5 mm</li>
+
+<li>D = 20 mm</li>
+
+<li>Na = 8</li>
+
+</ul>
+
+<p>
+
+Bước 3:
+
+</p>
+
+<p>
+
+Tính lại k theo công thức và điều chỉnh kích thước cho đến khi đạt giá trị yêu cầu.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Design Checklist
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Chọn đúng vật liệu Spring.</li>
+
+<li>✓ Xác định đúng tải trọng lớn nhất.</li>
+
+<li>✓ Tính Spring Constant.</li>
+
+<li>✓ Kiểm tra Shear Stress.</li>
+
+<li>✓ Áp dụng Wahl Factor.</li>
+
+<li>✓ Kiểm tra Deflection.</li>
+
+<li>✓ Kiểm tra Coil Bind.</li>
+
+<li>✓ Kiểm tra Buckling.</li>
+
+<li>✓ Kiểm tra Fatigue Life.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section id="design">
+
+<h2>
+
+5. Spring Design
+
+</h2>
+
+<p>
+
+Thiết kế Compression Spring cần đảm bảo đồng thời lực đàn hồi, ứng suất làm việc, hành trình nén, tuổi thọ mỏi và khả năng chế tạo. Một thiết kế tốt không chỉ đạt lực yêu cầu mà còn tránh hiện tượng Coil Bind và Buckling.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Hooke's Law
+
+</h2>
+
+<p>
+
+Trong vùng đàn hồi, lực của Spring tỷ lệ thuận với độ biến dạng.
+
+</p>
+
+<pre><code>
+
+F = k × x
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>F</td>
+
+<td>Spring Force</td>
+
+<td>N</td>
+
+</tr>
+
+<tr>
+
+<td>k</td>
+
+<td>Spring Constant</td>
+
+<td>N/mm</td>
+
+</tr>
+
+<tr>
+
+<td>x</td>
+
+<td>Deflection</td>
+
+<td>mm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Spring Constant
+
+</h2>
+
+<p>
+
+Độ cứng của Compression Spring được xác định theo công thức:
+
+</p>
+
+<pre><code>
+
+k = (G × d⁴)
+
+    ───────────
+
+    (8 × D³ × Na)
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>G</td>
+
+<td>Shear Modulus</td>
+
+</tr>
+
+<tr>
+
+<td>d</td>
+
+<td>Wire Diameter</td>
+
+</tr>
+
+<tr>
+
+<td>D</td>
+
+<td>Mean Coil Diameter</td>
+
+</tr>
+
+<tr>
+
+<td>Na</td>
+
+<td>Active Coils</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Đường kính dây (d) ảnh hưởng theo lũy thừa bậc bốn (d⁴), vì vậy chỉ cần tăng nhẹ đường kính dây cũng làm độ cứng của Spring tăng lên đáng kể.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Shear Stress
+
+</h2>
+
+<p>
+
+Compression Spring chủ yếu chịu ứng suất cắt.
+
+</p>
+
+<pre><code>
+
+τ = (8FD)
+
+    ───────
+
+      πd³
+
+</code></pre>
+
+<p>
+
+Trong thực tế cần nhân thêm hệ số hiệu chỉnh Wahl để tính đến ảnh hưởng của độ cong dây.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Wahl Correction Factor
+
+</h2>
+
+<p>
+
+Hệ số Wahl được sử dụng để hiệu chỉnh ứng suất cắt tại mặt trong của vòng lò xo.
+
+</p>
+
+<pre><code>
+
+Kw =
+
+(4C−1)
+
+──────
+
+(4C−4)
+
++
+
+0.615
+
+────
+
+ C
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>C</td>
+
+<td>Spring Index (D/d)</td>
+
+</tr>
+
+<tr>
+
+<td>Kw</td>
+
+<td>Wahl Factor</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+
+Ứng suất thực tế:
+
+</p>
+
+<pre><code>
+
+τmax = Kw × τ
+
+</code></pre>
+
+</section>
+
+<section>
+
+<h2>
+
+Spring Deflection
+
+</h2>
+
+<p>
+
+Độ biến dạng của Spring được xác định theo:
+
+</p>
+
+<pre><code>
+
+δ = F / k
+
+</code></pre>
+
+<p>
+
+Hoặc:
+
+</p>
+
+<pre><code>
+
+δ =
+
+8FD³Na
+
+────────
+
+ Gd⁴
+
+</code></pre>
+
+</section>
+
+<section>
+
+<h2>
+
+Stored Energy
+
+</h2>
+
+<p>
+
+Spring có khả năng tích trữ năng lượng đàn hồi.
+
+</p>
+
+<pre><code>
+
+U =
+
+1
+
+──
+
+2
+
+kx²
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Parameter</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>U</td>
+
+<td>Elastic Energy</td>
+
+</tr>
+
+<tr>
+
+<td>k</td>
+
+<td>Spring Constant</td>
+
+</tr>
+
+<tr>
+
+<td>x</td>
+
+<td>Deflection</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Design Example
+
+</h2>
+
+<p>
+
+Yêu cầu thiết kế:
+
+</p>
+
+<ul>
+
+<li>Maximum Load = 150 N</li>
+
+<li>Working Stroke = 15 mm</li>
+
+<li>Compression Spring</li>
+
+<li>Material: SWP-B</li>
+
+</ul>
+
+<p>
+
+Bước 1:
+
+</p>
+
+<pre><code>
+
+k =
+
+150 / 15
+
+=
+
+10 N/mm
+
+</code></pre>
+
+<p>
+
+Bước 2:
+
+</p>
+
+<p>
+
+Chọn sơ bộ:
+
+</p>
+
+<ul>
+
+<li>d = 2.5 mm</li>
+
+<li>D = 20 mm</li>
+
+<li>Na = 8</li>
+
+</ul>
+
+<p>
+
+Bước 3:
+
+</p>
+
+<p>
+
+Tính lại k theo công thức và điều chỉnh kích thước cho đến khi đạt giá trị yêu cầu.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>
+
+Design Checklist
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Chọn đúng vật liệu Spring.</li>
+
+<li>✓ Xác định đúng tải trọng lớn nhất.</li>
+
+<li>✓ Tính Spring Constant.</li>
+
+<li>✓ Kiểm tra Shear Stress.</li>
+
+<li>✓ Áp dụng Wahl Factor.</li>
+
+<li>✓ Kiểm tra Deflection.</li>
+
+<li>✓ Kiểm tra Coil Bind.</li>
+
+<li>✓ Kiểm tra Buckling.</li>
+
+<li>✓ Kiểm tra Fatigue Life.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section id="reference">
+
+<h2>
+
+7. Related Standards
+
+</h2>
+
+<p>
+
+Các tiêu chuẩn dưới đây thường được sử dụng khi thiết kế, sản xuất và kiểm tra Spring trong công nghiệp.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Standard
+
+</th>
+
+<th>
+
+Description
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+JIS B2704
+
+</td>
+
+<td>
+
+Coil Springs
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+JIS B2707
+
+</td>
+
+<td>
+
+Compression Springs
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+ISO 2162
+
+</td>
+
+<td>
+
+Technical Product Documentation for Springs
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+EN 13906-1
+
+</td>
+
+<td>
+
+Cylindrical Helical Compression Springs
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+EN 13906-2
+
+</td>
+
+<td>
+
+Extension Springs
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+EN 13906-3
+
+</td>
+
+<td>
+
+Torsion Springs
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Downloads
+
+</h2>
+
+<div class="download-grid">
+
+<div class="download-card">
+
+<h3>
+
+PDF
+
+</h3>
+
+<p>
+
+Spring Design Handbook
+
+</p>
+
+<a href="../../assets/download/spring/spring-design.pdf">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+Excel
+
+</h3>
+
+<p>
+
+Compression Spring Calculator
+
+</p>
+
+<a href="../../assets/download/spring/spring-calculator.xlsx">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+CAD
+
+</h3>
+
+<p>
+
+Standard Spring Library
+
+</p>
+
+<a href="../../assets/download/spring/spring-library.zip">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Recommended Video
+
+</h2>
+
+<div class="video-wrapper">
+
+<iframe
+
+width="100%"
+
+height="500"
+
+src="https://www.youtube.com/embed/xxxxxxxx"
+
+title="Spring Design"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+References
+
+</h2>
+
+<ol>
+
+<li>Mechanical Springs - Wahl.</li>
+
+<li>Spring Design Manual - Associated Spring.</li>
+
+<li>Shigley's Mechanical Engineering Design.</li>
+
+<li>Machinery's Handbook.</li>
+
+<li>JIS B2704 Coil Springs.</li>
+
+<li>ISO 2162 Technical Product Documentation for Springs.</li>
+
+<li>EN 13906 Helical Spring Design Standard.</li>
+
+<li>SMI - Spring Manufacturers Institute Handbook.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+Related Articles
+
+</h2>
+
+<div class="related-grid">
+
+<a class="card" href="shaft.html">
+
+<h3>
+
+Shaft Design
+
+</h3>
+
+<p>
+
+Thiết kế trục máy và kiểm tra độ bền.
+
+</p>
+
+</a>
+
+<a class="card" href="bearing.html">
+
+<h3>
+
+Bearing Selection
+
+</h3>
+
+<p>
+
+Lựa chọn ổ lăn theo tải trọng và tuổi thọ.
+
+</p>
+
+</a>
+
+<a class="card" href="bolt.html">
+
+<h3>
+
+Bolt Design
+
+</h3>
+
+<p>
+
+Tính toán lực siết và thiết kế mối ghép Bulông.
+
+</p>
+
+</a>
+
+<a class="card" href="gear.html">
+
+<h3>
+
+Gear Design
+
+</h3>
+
+<p>
+
+Thiết kế bộ truyền bánh răng.
+
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Article Information
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>
+
+Category
+
+</th>
+
+<td>
+
+Machine Design
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Difficulty
+
+</th>
+
+<td>
+
+Intermediate
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Estimated Reading Time
+
+</th>
+
+<td>
+
+35 Minutes
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Last Updated
+
+</th>
+
+<td>
+
+2026-07-19
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Version
+
+</th>
+
+<td>
+
+1.0
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Author
+
+</th>
+
+<td>
+
+Tuấn Lê
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div class="author-box">
+
+<img
+
+src="../../assets/img/author/avatar.png"
+
+alt="Author">
+
+<div>
+
+<h3>
+
+Tuấn Lê
+
+</h3>
+
+<p>
+
+Mechanical Design Engineer
+
+</p>
+
+<p>
+
+JapanTech được xây dựng nhằm chia sẻ kiến thức thực tế về thiết kế máy, tiêu chuẩn JIS/ISO, CAD, VB.NET và kinh nghiệm làm việc tại Nhật Bản cho kỹ sư cơ khí.
+
+</p>
+
+</div>
+
+</div>
+
+</article>
+
+</main>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+JapanTech
+
+</h3>
+
+<p>
+
+Engineering Knowledge Platform
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Knowledge
+
+</h3>
+
+<ul>
+
+<li><a href="../machine-design/index.html">Machine Design</a></li>
+
+<li><a href="../material/index.html">Material</a></li>
+
+<li><a href="../cad/index.html">CAD</a></li>
+
+<li><a href="../grinding/index.html">Grinding</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Resources
+
+</h3>
+
+<ul>
+
+<li><a href="../../resources.html">Engineering Standards</a></li>
+
+<li><a href="../../tools.html">Engineering Tools</a></li>
+
+<li><a href="../../roadmap.html">Learning Roadmap</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+Email: contact@japantech.jp
+
+</p>
+
+<p>
+
+GitHub Pages
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 JapanTech. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="../../js/main.js"></script>
+
+<script src="../../js/article.js"></script>
+
+</body>
+
+</html>

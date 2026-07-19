@@ -1,0 +1,3228 @@
+<!--
+====================================================
+JapanTech
+
+Category : Machine Design
+Article  : Timing Belt Drive
+Version  : 1.0
+Author   : Tuấn Lê
+====================================================
+-->
+
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+Timing Belt Drive là gì? | JapanTech
+
+</title>
+
+<meta
+name="description"
+content="Hướng dẫn đầy đủ về Timing Belt Drive: cấu tạo, nguyên lý, phân loại, lựa chọn và tính toán">
+
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/article.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<a class="logo" href="../../index.html">
+
+JapanTech
+
+</a>
+
+<nav>
+
+<ul class="menu">
+
+<li><a href="../../index.html">Home</a></li>
+<li><a class="active" href="../../knowledge.html">Knowledge</a></li>
+<li><a href="#">Japanese</a></li>
+<li><a href="#">Career</a></li>
+<li><a href="#">Tools</a></li>
+<li><a href="#">About</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<div class="page">
+
+<div class="container">
+
+<nav class="breadcrumb">
+
+<a href="../../index.html">Home</a>
+
+<span>></span>
+
+<a href="../../knowledge.html">Knowledge</a>
+
+<span>></span>
+
+<a href="../machine-design/index.html">
+
+Machine Design
+
+</a>
+
+<span>></span>
+
+Timing Belt Drive
+
+</nav>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="wrapper">
+
+<aside>
+
+<div class="sidebar">
+
+<div class="sidebar-title">
+
+Machine Design
+
+</div>
+
+<ul>
+
+<li><a href="index.html"> Overview</a></li>
+
+<li><a href="bearing.html">Bearing</a></li>
+
+<li><a href="gear.html">Gear</a></li>
+
+<li><a href="shaft.html">Shaft</a></li>
+
+<li><a href="bolt.html">Bolt</a></li>
+
+<li><a href="spring.html">Spring</a></li>
+
+<li><a href="coupling.html">Coupling</a></li>
+<li><a href="chain.html">Chain Drive</a></li>
+<li><a class="active" href="timing-belt.html">Timing Belt</a></li>
+
+</ul>
+
+</div>
+
+</aside>
+
+<main class="main">
+
+<div class="toc">
+
+<div class="toc-title">
+
+Table of Contents
+
+</div>
+
+<ul>
+
+<li><a href="#overview">1. Overview</a></li>
+<li><a href="#principle">2. Working Principle</a></li>
+<li><a href="#advantages">3. Advantages & Disadvantages</a></li>
+<li><a href="#classification">4. Belt Classification</a></li>
+<li><a href="#structure">5. Belt Structure</a></li>
+
+</ul>
+
+</div>
+
+<article class="article">
+
+<header class="article-header">
+
+<h1>
+
+Timing Belt Drive
+
+</h1>
+
+<p class="article-description">
+
+Hướng dẫn đầy đủ về bộ truyền đai răng (Timing Belt Drive): cấu tạo, nguyên lý hoạt động, phân loại, tiêu chuẩn, tính toán và lựa chọn trong thiết kế máy.
+
+</p>
+
+<div class="meta">
+
+<span>📅 2026-07-19</span>
+
+<span>📁 Machine Design</span>
+
+<span>⏱ 45 phút đọc</span>
+
+<span>📘 Version 1.0</span>
+
+</div>
+
+</header>
+
+<figure class="article-cover">
+
+<img
+
+src="../../assets/img/timing-belt/banner.jpg"
+
+alt="Timing Belt Drive">
+
+<figcaption>
+
+Timing Belt Drive Overview
+
+</figcaption>
+
+</figure>
+
+<section id="overview">
+
+<h2>
+
+1. Overview
+
+</h2>
+
+<p>
+
+Timing Belt Drive là hệ truyền động sử dụng đai răng (Timing Belt) kết hợp với Pulley có răng tương ứng để truyền chuyển động và mô-men xoắn giữa hai trục. Khác với V-Belt, Timing Belt truyền lực bằng sự ăn khớp giữa răng đai và răng Pulley nên gần như không xảy ra hiện tượng trượt.
+
+</p>
+
+<p>
+
+Nhờ khả năng truyền động đồng bộ, vận hành êm, không cần bôi trơn và bảo trì đơn giản, Timing Belt được sử dụng rộng rãi trong máy CNC, Robot, máy đóng gói, máy in, thiết bị tự động hóa và hệ thống Servo.
+
+</p>
+
+<div class="note">
+
+<strong>
+
+Ưu điểm nổi bật
+
+</strong>
+
+<ul>
+
+<li>✓ Không trượt khi làm việc đúng điều kiện.</li>
+
+<li>✓ Truyền động đồng bộ.</li>
+
+<li>✓ Không cần bôi trơn.</li>
+
+<li>✓ Tiếng ồn thấp.</li>
+
+<li>✓ Hiệu suất truyền động cao (95–98%).</li>
+
+<li>✓ Phù hợp cho tốc độ cao.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="principle">
+
+<h2>
+
+2. Working Principle
+
+</h2>
+
+<p>
+
+Khi Pulley chủ động quay, các răng trên Pulley ăn khớp với răng của Timing Belt và kéo dây đai chuyển động. Belt tiếp tục truyền chuyển động đến Pulley bị động, đảm bảo hai trục quay đồng bộ theo tỷ số truyền đã thiết kế.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/timing-belt/principle.png"
+
+alt="Working Principle">
+
+<figcaption>
+
+Nguyên lý hoạt động của Timing Belt Drive
+
+</figcaption>
+
+</figure>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Timing Belt đặc biệt phù hợp cho các ứng dụng yêu cầu đồng bộ vị trí như Robot, XY Stage và hệ thống Servo vì không có hiện tượng trượt như đai chữ V.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="advantages">
+
+<h2>
+
+3. Advantages & Disadvantages
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Advantages</th>
+
+<th>Disadvantages</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Không trượt</td>
+
+<td>Giá thành cao hơn V-Belt</td>
+
+</tr>
+
+<tr>
+
+<td>Không cần bôi trơn</td>
+
+<td>Yêu cầu Pulley chính xác</td>
+
+</tr>
+
+<tr>
+
+<td>Độ chính xác vị trí cao</td>
+
+<td>Không chịu va đập tốt bằng Chain</td>
+
+</tr>
+
+<tr>
+
+<td>Ít bảo trì</td>
+
+<td>Giới hạn nhiệt độ làm việc</td>
+
+</tr>
+
+<tr>
+
+<td>Tiếng ồn thấp</td>
+
+<td>Không phù hợp tải cực lớn</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section id="classification">
+
+<h2>
+
+4. Timing Belt Classification
+
+</h2>
+
+<p>
+
+Timing Belt được phân loại theo hình dạng răng, bước răng (Pitch) và tiêu chuẩn của nhà sản xuất.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Type</th>
+
+<th>Tooth Profile</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>MXL / XL / L</td>
+
+<td>Trapezoidal</td>
+
+<td>Small Machines</td>
+
+</tr>
+
+<tr>
+
+<td>H / XH / XXH</td>
+
+<td>Trapezoidal</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+<tr>
+
+<td>HTD</td>
+
+<td>Curvilinear</td>
+
+<td>General Power Transmission</td>
+
+</tr>
+
+<tr>
+
+<td>GT2 / GT3</td>
+
+<td>Modified Curvilinear</td>
+
+<td>Servo Systems</td>
+
+</tr>
+
+<tr>
+
+<td>AT</td>
+
+<td>High Torque</td>
+
+<td>Precision Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>T Series</td>
+
+<td>Metric Trapezoidal</td>
+
+<td>European Machines</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section id="structure">
+
+<h2>
+
+5. Belt Structure
+
+</h2>
+
+<p>
+
+Timing Belt hiện đại thường gồm nhiều lớp vật liệu nhằm đảm bảo khả năng chịu kéo, chống mài mòn và duy trì độ chính xác truyền động.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Component</th>
+
+<th>Function</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tooth</td>
+
+<td>Ăn khớp với Pulley</td>
+
+</tr>
+
+<tr>
+
+<td>Tension Member</td>
+
+<td>Chịu lực kéo chính</td>
+
+</tr>
+
+<tr>
+
+<td>Backing</td>
+
+<td>Bảo vệ mặt sau Belt</td>
+
+</tr>
+
+<tr>
+
+<td>Fabric Cover</td>
+
+<td>Giảm mài mòn răng</td>
+
+</tr>
+
+<tr>
+
+<td>Rubber / PU Body</td>
+
+<td>Tạo hình Belt</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/timing-belt/structure.png"
+
+alt="Timing Belt Structure">
+
+<figcaption>
+
+Cấu tạo của Timing Belt
+
+</figcaption>
+
+</figure>
+
+<div class="success">
+
+<strong>
+
+Ghi nhớ
+
+</strong>
+
+<ul>
+
+<li>Pitch là thông số quan trọng nhất khi chọn Belt.</li>
+
+<li>Pulley và Belt phải cùng loại Pitch.</li>
+
+<li>GT và HTD không thể lắp lẫn.</li>
+
+<li>Vật liệu dây chịu kéo quyết định độ giãn của Belt.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2>
+
+6. Belt Materials
+
+</h2>
+
+<p>
+
+Hiệu suất và tuổi thọ của Timing Belt phụ thuộc rất lớn vào vật liệu chế tạo. Belt hiện đại thường sử dụng cao su tổng hợp hoặc Polyurethane kết hợp với các sợi chịu kéo có độ bền cao.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Component</th>
+
+<th>Common Material</th>
+
+<th>Characteristics</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Belt Body</td>
+
+<td>Neoprene Rubber</td>
+
+<td>General Purpose</td>
+
+</tr>
+
+<tr>
+
+<td>Belt Body</td>
+
+<td>Polyurethane (PU)</td>
+
+<td>High Wear Resistance</td>
+
+</tr>
+
+<tr>
+
+<td>Tension Member</td>
+
+<td>Fiberglass</td>
+
+<td>Low Elongation</td>
+
+</tr>
+
+<tr>
+
+<td>Tension Member</td>
+
+<td>Steel Cord</td>
+
+<td>High Tensile Strength</td>
+
+</tr>
+
+<tr>
+
+<td>Tension Member</td>
+
+<td>Aramid (Kevlar)</td>
+
+<td>Impact Resistance</td>
+
+</tr>
+
+<tr>
+
+<td>Tooth Fabric</td>
+
+<td>Nylon</td>
+
+<td>Reduce Tooth Wear</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Servo và Robot thường sử dụng Belt PU kết hợp lõi thép hoặc Fiberglass để giảm độ giãn và tăng độ chính xác vị trí.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+7. Belt Pitch
+
+</h2>
+
+<p>
+
+Pitch là khoảng cách giữa hai răng liên tiếp của Timing Belt và là thông số quan trọng nhất khi lựa chọn Belt và Pulley.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Pitch</th>
+
+<th>Typical Series</th>
+
+<th>Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>2 mm</td>
+
+<td>GT2-2M</td>
+
+<td>3D Printer</td>
+
+</tr>
+
+<tr>
+
+<td>3 mm</td>
+
+<td>GT2-3M</td>
+
+<td>Small Automation</td>
+
+</tr>
+
+<tr>
+
+<td>5 mm</td>
+
+<td>HTD-5M / GT3-5M</td>
+
+<td>General Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>8 mm</td>
+
+<td>HTD-8M</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+<tr>
+
+<td>14 mm</td>
+
+<td>HTD-14M</td>
+
+<td>Large Power Transmission</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>
+
+Warning
+
+</strong>
+
+<p>
+
+Không được kết hợp Belt và Pulley khác Pitch hoặc khác biên dạng răng (ví dụ GT3 với HTD), vì sẽ gây mòn nhanh và giảm khả năng truyền lực.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+8. Pulley Structure
+
+</h2>
+
+<p>
+
+Timing Pulley là chi tiết ăn khớp trực tiếp với Belt. Độ chính xác gia công của Pulley ảnh hưởng lớn đến độ ồn, tuổi thọ và độ chính xác truyền động.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Component</th>
+
+<th>Function</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Teeth</td>
+
+<td>Engage with Belt</td>
+
+</tr>
+
+<tr>
+
+<td>Hub</td>
+
+<td>Mount on Shaft</td>
+
+</tr>
+
+<tr>
+
+<td>Bore</td>
+
+<td>Shaft Hole</td>
+
+</tr>
+
+<tr>
+
+<td>Keyway / Clamp</td>
+
+<td>Transmit Torque</td>
+
+</tr>
+
+<tr>
+
+<td>Flange</td>
+
+<td>Prevent Belt Tracking Off</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/timing-belt/pulley-structure.png"
+
+alt="Timing Pulley Structure">
+
+<figcaption>
+
+Cấu tạo cơ bản của Timing Pulley
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>
+
+9. Number of Teeth
+
+</h2>
+
+<p>
+
+Số răng của Pulley quyết định tỷ số truyền, đường kính vòng chia và góc ôm của Belt.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Number of Teeth</th>
+
+<th>Recommendation</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>&lt; 18</td>
+
+<td>Chỉ dùng cho tải nhỏ</td>
+
+</tr>
+
+<tr>
+
+<td>20–24</td>
+
+<td>Khuyến nghị cho Servo</td>
+
+</tr>
+
+<tr>
+
+<td>24–36</td>
+
+<td>General Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>&gt; 40</td>
+
+<td>High Torque / Smooth Motion</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Đối với Servo Motor, Pulley 20 hoặc 24 răng là lựa chọn rất phổ biến vì cân bằng tốt giữa mô-men, kích thước và khả năng tăng tốc.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+10. Pitch Diameter
+
+</h2>
+
+<p>
+
+Đường kính vòng chia (Pitch Diameter) được sử dụng để tính tốc độ Belt và tỷ số truyền.
+
+</p>
+
+<pre><code>
+
+D = (P × Z) / π
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>D</td>
+
+<td>Pitch Diameter</td>
+
+<td>mm</td>
+
+</tr>
+
+<tr>
+
+<td>P</td>
+
+<td>Belt Pitch</td>
+
+<td>mm</td>
+
+</tr>
+
+<tr>
+
+<td>Z</td>
+
+<td>Number of Teeth</td>
+
+<td>-</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+11. Transmission Ratio
+
+</h2>
+
+<p>
+
+Tỷ số truyền của Timing Belt Drive phụ thuộc vào số răng của hai Pulley.
+
+</p>
+
+<pre><code>
+
+i = Z₂ / Z₁
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Z₁</td>
+
+<td>Driving Pulley Teeth</td>
+
+</tr>
+
+<tr>
+
+<td>Z₂</td>
+
+<td>Driven Pulley Teeth</td>
+
+</tr>
+
+<tr>
+
+<td>i</td>
+
+<td>Transmission Ratio</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+12. Belt Speed
+
+</h2>
+
+<p>
+
+Tốc độ tuyến tính của Belt được tính theo đường kính vòng chia và tốc độ quay của Pulley chủ động.
+
+</p>
+
+<pre><code>
+
+v = π × D × n / 60000
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>v</td>
+
+<td>m/s</td>
+
+</tr>
+
+<tr>
+
+<td>D</td>
+
+<td>mm</td>
+
+</tr>
+
+<tr>
+
+<td>n</td>
+
+<td>rpm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="note">
+
+<p>
+
+Tốc độ làm việc khuyến nghị phụ thuộc vào loại Belt và nhà sản xuất. Với nhiều dòng HTD hoặc GT hiện đại, tốc độ có thể đạt trên 30 m/s nếu thiết kế và bôi trơn ổ lăn phù hợp.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+13. Center Distance
+
+</h2>
+
+<p>
+
+Khoảng cách tâm giữa hai Pulley ảnh hưởng đến góc ôm, chiều dài Belt và khả năng truyền tải.
+
+</p>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Đảm bảo góc ôm Pulley nhỏ ≥ 120°.</li>
+
+<li>✓ Tránh khoảng cách quá ngắn gây giảm số răng ăn khớp.</li>
+
+<li>✓ Tránh khoảng cách quá dài làm Belt rung và võng.</li>
+
+<li>✓ Thiết kế cơ cấu tăng đai nếu cần điều chỉnh lực căng.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+14. Belt Length
+
+</h2>
+
+<p>
+
+Chiều dài Belt được xác định theo khoảng cách tâm và đường kính vòng chia của hai Pulley. Trong thực tế, sau khi tính toán sơ bộ cần chọn chiều dài Belt tiêu chuẩn gần nhất theo catalogue.
+
+</p>
+
+<pre><code>
+
+L = 2C
+  + (π / 2)(D₁ + D₂)
+  + (D₂ − D₁)² / (4C)
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>L</td>
+
+<td>Pitch Length</td>
+
+</tr>
+
+<tr>
+
+<td>C</td>
+
+<td>Center Distance</td>
+
+</tr>
+
+<tr>
+
+<td>D₁</td>
+
+<td>Driver Pitch Diameter</td>
+
+</tr>
+
+<tr>
+
+<td>D₂</td>
+
+<td>Driven Pitch Diameter</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Selection Tip
+
+</strong>
+
+<p>
+
+Luôn chọn Belt theo mã tiêu chuẩn của nhà sản xuất (ví dụ: 5M-400-15), sau đó điều chỉnh khoảng cách tâm để đạt lực căng ban đầu theo khuyến nghị.
+
+</p>
+
+</div>
+
+</section>
+<section>
+
+<h2>
+
+15. Belt Tension
+
+</h2>
+
+<p>
+
+Lực căng ban đầu (Initial Belt Tension) là một trong những yếu tố quan trọng nhất ảnh hưởng đến khả năng truyền mô-men, tuổi thọ Belt và tải trọng tác dụng lên Bearing.
+
+</p>
+
+<p>
+
+Nếu lực căng quá nhỏ, Belt có thể nhảy răng (Tooth Jumping). Ngược lại, nếu lực căng quá lớn sẽ làm tăng tải lên Bearing, Pulley và trục.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/timing-belt/belt-tension.png"
+
+alt="Belt Tension">
+
+<figcaption>
+
+Lực căng trên nhánh căng và nhánh chùng của Timing Belt
+
+</figcaption>
+
+</figure>
+
+<div class="warning">
+
+<strong>
+
+Warning
+
+</strong>
+
+<p>
+
+Không căng Belt theo cảm tính. Luôn sử dụng lực căng khuyến nghị của nhà sản xuất hoặc dụng cụ đo Belt Tension để đảm bảo độ chính xác.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+16. Belt Pull Force
+
+</h2>
+
+<p>
+
+Lực kéo trên Belt được xác định từ công suất truyền và tốc độ Belt. Đây là thông số cơ bản để kiểm tra khả năng chịu tải của Belt.
+
+</p>
+
+<pre><code>
+
+Ft = 1000 × P / v
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ft</td>
+
+<td>Tangential Belt Force</td>
+
+<td>N</td>
+
+</tr>
+
+<tr>
+
+<td>P</td>
+
+<td>Power</td>
+
+<td>kW</td>
+
+</tr>
+
+<tr>
+
+<td>v</td>
+
+<td>Belt Speed</td>
+
+<td>m/s</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Sau khi tính lực kéo, cần đối chiếu với tải trọng cho phép trong catalogue của nhà sản xuất và áp dụng Service Factor phù hợp với điều kiện làm việc.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+17. Power Transmission Capacity
+
+</h2>
+
+<p>
+
+Khả năng truyền công suất của Timing Belt không chỉ phụ thuộc vào chiều rộng Belt mà còn chịu ảnh hưởng bởi nhiều yếu tố khác.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Factor</th>
+
+<th>Influence</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Belt Width</td>
+
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Pulley Teeth</td>
+
+<td>★★★★☆</td>
+
+</tr>
+
+<tr>
+
+<td>Belt Speed</td>
+
+<td>★★★★☆</td>
+
+</tr>
+
+<tr>
+
+<td>Wrap Angle</td>
+
+<td>★★★★☆</td>
+
+</tr>
+
+<tr>
+
+<td>Service Factor</td>
+
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Working Temperature</td>
+
+<td>★★★☆☆</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+18. Wrap Angle
+
+</h2>
+
+<p>
+
+Góc ôm (Wrap Angle) là góc tiếp xúc giữa Belt và Pulley. Góc ôm càng lớn thì số lượng răng ăn khớp càng nhiều, giúp tăng khả năng truyền tải.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/timing-belt/wrap-angle.png"
+
+alt="Wrap Angle">
+
+<figcaption>
+
+Wrap Angle trên Pulley chủ động
+
+</figcaption>
+
+</figure>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Khuyến nghị góc ôm ≥ 120°.</li>
+
+<li>✓ Góc ôm nhỏ làm giảm số răng ăn khớp.</li>
+
+<li>✓ Có thể dùng Idler Pulley để tăng góc ôm.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+19. Tooth Engagement
+
+</h2>
+
+<p>
+
+Để tránh hiện tượng nhảy răng, cần đảm bảo đủ số răng của Belt cùng ăn khớp với Pulley.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Condition</th>
+
+<th>Recommendation</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Minimum Teeth in Mesh</td>
+
+<td>≥ 6</td>
+
+</tr>
+
+<tr>
+
+<td>Recommended</td>
+
+<td>≥ 8</td>
+
+</tr>
+
+<tr>
+
+<td>High Torque</td>
+
+<td>≥ 10</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="note">
+
+<p>
+
+Số răng ăn khớp càng nhiều thì tải trọng trên mỗi răng càng nhỏ, giúp tăng tuổi thọ của Belt và Pulley.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+20. Idler Pulley
+
+</h2>
+
+<p>
+
+Idler Pulley được sử dụng để điều chỉnh lực căng Belt hoặc tăng góc ôm trên Pulley chủ động.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Type</th>
+
+<th>Purpose</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Fixed Idler</td>
+
+<td>Manual Adjustment</td>
+
+</tr>
+
+<tr>
+
+<td>Spring Idler</td>
+
+<td>Automatic Tension</td>
+
+</tr>
+
+<tr>
+
+<td>Eccentric Idler</td>
+
+<td>Compact Design</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Ưu tiên đặt Idler ở mặt sau (Back Side) của Belt khi điều kiện thiết kế cho phép để giảm mài mòn răng Belt.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+21. Belt Tracking
+
+</h2>
+
+<p>
+
+Belt Tracking là khả năng Belt chạy đúng vị trí trên Pulley mà không bị lệch sang hai bên.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Problem</th>
+
+<th>Main Cause</th>
+
+<th>Solution</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Belt Walk</td>
+
+<td>Misalignment</td>
+
+<td>Realign Pulleys</td>
+
+</tr>
+
+<tr>
+
+<td>Edge Wear</td>
+
+<td>Improper Tracking</td>
+
+<td>Adjust Installation</td>
+
+</tr>
+
+<tr>
+
+<td>Belt Climb</td>
+
+<td>Damaged Flange</td>
+
+<td>Replace Pulley</td>
+
+</tr>
+
+<tr>
+
+<td>Noise</td>
+
+<td>Poor Alignment</td>
+
+<td>Check Shaft Parallelism</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+22. Belt Selection Procedure
+
+</h2>
+
+<p>
+
+Quy trình lựa chọn Timing Belt thông thường gồm các bước sau:
+
+</p>
+
+<ol>
+
+<li>Xác định công suất và tốc độ Motor.</li>
+
+<li>Tính tỷ số truyền.</li>
+
+<li>Chọn loại Belt (GT, HTD, AT...).</li>
+
+<li>Chọn Pitch phù hợp.</li>
+
+<li>Chọn số răng Pulley.</li>
+
+<li>Tính Pitch Diameter.</li>
+
+<li>Tính chiều dài Belt.</li>
+
+<li>Kiểm tra số răng ăn khớp.</li>
+
+<li>Kiểm tra tải trọng cho phép.</li>
+
+<li>Xác định lực căng ban đầu.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+23. Design Example
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>Motor</th>
+
+<td>750 W Servo</td>
+
+</tr>
+
+<tr>
+
+<th>Speed</th>
+
+<td>3000 rpm</td>
+
+</tr>
+
+<tr>
+
+<th>Belt Type</th>
+
+<td>GT3-5M</td>
+
+</tr>
+
+<tr>
+
+<th>Driver Pulley</th>
+
+<td>24 Teeth</td>
+
+</tr>
+
+<tr>
+
+<th>Driven Pulley</th>
+
+<td>48 Teeth</td>
+
+</tr>
+
+<tr>
+
+<th>Transmission Ratio</th>
+
+<td>2 : 1</td>
+
+</tr>
+
+<tr>
+
+<th>Center Distance</th>
+
+<td>320 mm</td>
+
+</tr>
+
+<tr>
+
+<th>Belt Width</th>
+
+<td>15 mm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="success">
+
+<strong>
+
+Selection Summary
+
+</strong>
+
+<ul>
+
+<li>✓ Chọn Belt đúng Pitch và Tooth Profile.</li>
+
+<li>✓ Kiểm tra số răng ăn khớp.</li>
+
+<li>✓ Chọn chiều rộng Belt theo công suất.</li>
+
+<li>✓ Kiểm tra tải trọng cho phép trong catalogue.</li>
+
+<li>✓ Điều chỉnh lực căng theo khuyến nghị của nhà sản xuất.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2>
+
+24. Belt Wear
+
+</h2>
+
+<p>
+
+Trong quá trình làm việc, Timing Belt chịu đồng thời tải kéo, tải uốn và tải tiếp xúc giữa răng Belt với Pulley. Các cơ chế này làm Belt mòn dần theo thời gian và giảm khả năng truyền động.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/timing-belt/belt-wear.png"
+
+alt="Timing Belt Wear">
+
+<figcaption>
+
+Các vị trí thường xảy ra mài mòn trên Timing Belt
+
+</figcaption>
+
+</figure>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Wear Location</th>
+
+<th>Main Cause</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tooth Surface</td>
+
+<td>Normal Contact Wear</td>
+
+</tr>
+
+<tr>
+
+<td>Tooth Root</td>
+
+<td>High Bending Stress</td>
+
+</tr>
+
+<tr>
+
+<td>Belt Edge</td>
+
+<td>Poor Tracking</td>
+
+</tr>
+
+<tr>
+
+<td>Back Surface</td>
+
+<td>Idler Contact</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+25. Tooth Wear & Tooth Jumping
+
+</h2>
+
+<p>
+
+Răng Belt bị mòn hoặc nhảy răng (Tooth Jumping) thường xảy ra khi tải trọng vượt quá khả năng truyền tải hoặc lực căng ban đầu không đủ.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Problem</th>
+
+<th>Possible Cause</th>
+
+<th>Solution</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tooth Wear</td>
+
+<td>High Load</td>
+
+<td>Increase Belt Width</td>
+
+</tr>
+
+<tr>
+
+<td>Tooth Jumping</td>
+
+<td>Low Belt Tension</td>
+
+<td>Adjust Tension</td>
+
+</tr>
+
+<tr>
+
+<td>Tooth Breakage</td>
+
+<td>Shock Load</td>
+
+<td>Select Larger Belt</td>
+
+</tr>
+
+<tr>
+
+<td>Uneven Wear</td>
+
+<td>Pulley Misalignment</td>
+
+<td>Realign System</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>
+
+Warning
+
+</strong>
+
+<p>
+
+Nếu Belt đã nhảy răng nhiều lần, cần kiểm tra cả Belt và Pulley. Răng Pulley bị mòn có thể khiến hiện tượng tiếp tục lặp lại dù đã thay Belt mới.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+26. Belt Elongation
+
+</h2>
+
+<p>
+
+Timing Belt có độ giãn nhỏ hơn nhiều so với V-Belt, tuy nhiên sau thời gian dài làm việc vẫn có thể xuất hiện sự thay đổi chiều dài do lão hóa vật liệu và biến dạng của lớp chịu kéo.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Cause</th>
+
+<th>Effect</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Material Aging</td>
+
+<td>Increase Belt Length</td>
+
+</tr>
+
+<tr>
+
+<td>Overload</td>
+
+<td>Permanent Deformation</td>
+
+</tr>
+
+<tr>
+
+<td>High Temperature</td>
+
+<td>Reduced Belt Life</td>
+
+</tr>
+
+<tr>
+
+<td>Chemical Exposure</td>
+
+<td>Rubber Deterioration</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Đối với các hệ thống Servo yêu cầu độ chính xác cao, nên kiểm tra lực căng Belt định kỳ và thay Belt theo chu kỳ bảo trì thay vì chờ đến khi hỏng.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+27. Belt Tracking Failure
+
+</h2>
+
+<p>
+
+Belt Tracking Failure là hiện tượng Belt chạy lệch khỏi vị trí thiết kế, gây mòn cạnh Belt hoặc va chạm với Flange của Pulley.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/timing-belt/tracking-failure.png"
+
+alt="Tracking Failure">
+
+<figcaption>
+
+Ví dụ Belt bị lệch khi vận hành
+
+</figcaption>
+
+</figure>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symptom</th>
+
+<th>Main Cause</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Edge Wear</td>
+
+<td>Pulley Misalignment</td>
+
+</tr>
+
+<tr>
+
+<td>Side Noise</td>
+
+<td>Flange Contact</td>
+
+</tr>
+
+<tr>
+
+<td>Belt Walking</td>
+
+<td>Improper Installation</td>
+
+</tr>
+
+<tr>
+
+<td>Belt Climbing</td>
+
+<td>Damaged Pulley</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+28. Pulley Wear
+
+</h2>
+
+<p>
+
+Pulley thường có tuổi thọ cao hơn Belt. Tuy nhiên, nếu vận hành với Belt bị mòn hoặc lắp sai, răng Pulley cũng sẽ bị mài mòn theo thời gian.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Failure</th>
+
+<th>Possible Cause</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tooth Wear</td>
+
+<td>Worn Belt</td>
+
+</tr>
+
+<tr>
+
+<td>Groove Damage</td>
+
+<td>Foreign Particles</td>
+
+</tr>
+
+<tr>
+
+<td>Flange Damage</td>
+
+<td>Belt Misalignment</td>
+
+</tr>
+
+<tr>
+
+<td>Corrosion</td>
+
+<td>Poor Environment</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+29. Installation Procedure
+
+</h2>
+
+<p>
+
+Lắp đặt đúng kỹ thuật giúp Belt đạt tuổi thọ tối đa và đảm bảo khả năng truyền động ổn định.
+
+</p>
+
+<ol>
+
+<li>Kiểm tra đúng loại Belt và Pulley.</li>
+
+<li>Kiểm tra đường kính và lỗ lắp Pulley.</li>
+
+<li>Căn chỉnh hai Pulley đồng phẳng.</li>
+
+<li>Lắp Belt mà không dùng lực cạy.</li>
+
+<li>Điều chỉnh lực căng ban đầu.</li>
+
+<li>Quay thử bằng tay trước khi khởi động.</li>
+
+<li>Kiểm tra lại lực căng sau thời gian chạy rà.</li>
+
+</ol>
+
+<div class="note">
+
+<p>
+
+Không dùng tua vít hoặc thanh cạy để ép Belt vào Pulley vì có thể làm hỏng sợi chịu kéo bên trong Belt.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+30. Maintenance Checklist
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Kiểm tra lực căng Belt định kỳ.</li>
+
+<li>✓ Kiểm tra mòn răng Belt.</li>
+
+<li>✓ Kiểm tra mòn Pulley.</li>
+
+<li>✓ Kiểm tra Belt Tracking.</li>
+
+<li>✓ Kiểm tra tiếng ồn bất thường.</li>
+
+<li>✓ Kiểm tra rung động.</li>
+
+<li>✓ Vệ sinh bụi bẩn trên Belt và Pulley.</li>
+
+<li>✓ Thay Belt theo chu kỳ của nhà sản xuất.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+31. Common Design Mistakes
+
+</h2>
+
+<div class="warning">
+
+<ul>
+
+<li>✗ Chọn sai Pitch hoặc Tooth Profile.</li>
+
+<li>✗ Sử dụng Pulley quá ít răng.</li>
+
+<li>✗ Không kiểm tra số răng ăn khớp.</li>
+
+<li>✗ Lực căng Belt quá lớn hoặc quá nhỏ.</li>
+
+<li>✗ Bố trí khoảng cách tâm không hợp lý.</li>
+
+<li>✗ Không kiểm tra Belt Speed.</li>
+
+<li>✗ Không xét Service Factor.</li>
+
+<li>✗ Trộn Belt và Pulley của hai hệ tiêu chuẩn khác nhau.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+32. Design Recommendations
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Chọn Pulley có tối thiểu 20 răng cho Servo.</li>
+
+<li>✓ Đảm bảo góc ôm lớn hơn 120°.</li>
+
+<li>✓ Chọn chiều rộng Belt theo công suất và tải.</li>
+
+<li>✓ Kiểm tra tải trọng cho phép theo catalogue.</li>
+
+<li>✓ Điều chỉnh lực căng đúng giá trị khuyến nghị.</li>
+
+<li>✓ Kiểm tra đồng tâm và song song của hai trục.</li>
+
+<li>✓ Không uốn Belt dưới bán kính nhỏ hơn quy định.</li>
+
+<li>✓ Thay đồng thời Belt và Pulley khi phát hiện mòn nghiêm trọng.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section id="selection-guide">
+
+<h2>
+
+33. Timing Belt Selection Quick Guide
+
+</h2>
+
+<p>
+
+Bảng dưới đây giúp lựa chọn nhanh loại Timing Belt theo từng ứng dụng. Sau khi lựa chọn sơ bộ, cần kiểm tra lại công suất truyền, tốc độ, lực kéo, số răng ăn khớp và Service Factor theo catalogue của nhà sản xuất.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Application</th>
+
+<th>Recommended Belt</th>
+
+<th>Main Feature</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>3D Printer</td>
+
+<td>GT2-2M</td>
+
+<td>High Position Accuracy</td>
+
+</tr>
+
+<tr>
+
+<td>Small Automation</td>
+
+<td>GT3-3M</td>
+
+<td>Compact & Quiet</td>
+
+</tr>
+
+<tr>
+
+<td>Servo System</td>
+
+<td>GT3-5M</td>
+
+<td>Low Backlash</td>
+
+</tr>
+
+<tr>
+
+<td>Packaging Machine</td>
+
+<td>HTD-5M / 8M</td>
+
+<td>High Speed</td>
+
+</tr>
+
+<tr>
+
+<td>CNC Machine</td>
+
+<td>AT5 / AT10</td>
+
+<td>High Precision</td>
+
+</tr>
+
+<tr>
+
+<td>Heavy Duty Machine</td>
+
+<td>HTD-14M</td>
+
+<td>High Torque Capacity</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+34. Related Standards
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Standard</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>ISO 5294</td>
+
+<td>Synchronous Belt Drives - Vocabulary</td>
+
+</tr>
+
+<tr>
+
+<td>ISO 13050</td>
+
+<td>Timing Belt Drive Terminology</td>
+
+</tr>
+
+<tr>
+
+<td>JIS B 1856</td>
+
+<td>Synchronous Belts</td>
+
+</tr>
+
+<tr>
+
+<td>DIN 7721</td>
+
+<td>Timing Belt Profiles</td>
+
+</tr>
+
+<tr>
+
+<td>RMA IP-27</td>
+
+<td>Timing Belt Design Guide</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+35. Downloads
+
+</h2>
+
+<div class="download-grid">
+
+<div class="download-card">
+
+<h3>
+
+PDF
+
+</h3>
+
+<p>
+
+Timing Belt Design Handbook
+
+</p>
+
+<a href="../../assets/download/timing-belt/design-handbook.pdf">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+Catalogue
+
+</h3>
+
+<p>
+
+Gates PowerGrip Catalogue
+
+</p>
+
+<a href="../../assets/download/timing-belt/gates-catalog.pdf">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+Excel
+
+</h3>
+
+<p>
+
+Timing Belt Calculator
+
+</p>
+
+<a href="../../assets/download/timing-belt/timing-belt-calculator.xlsx">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+CAD Library
+
+</h3>
+
+<p>
+
+Timing Pulley Library
+
+</p>
+
+<a href="../../assets/download/timing-belt/pulley-library.zip">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+36. Recommended Manufacturers
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Manufacturer</th>
+
+<th>Main Products</th>
+
+<th>Remarks</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Gates</td>
+
+<td>PowerGrip GT Series</td>
+
+<td>World Standard</td>
+
+</tr>
+
+<tr>
+
+<td>Mitsuboshi</td>
+
+<td>Synchronous Belts</td>
+
+<td>Widely Used in Japan</td>
+
+</tr>
+
+<tr>
+
+<td>Bando</td>
+
+<td>Power Transmission Belt</td>
+
+<td>Industrial Applications</td>
+
+</tr>
+
+<tr>
+
+<td>ContiTech</td>
+
+<td>Synchroforce</td>
+
+<td>High Performance</td>
+
+</tr>
+
+<tr>
+
+<td>Optibelt</td>
+
+<td>Omega Series</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+37. Recommended Video
+
+</h2>
+
+<div class="video-wrapper">
+
+<iframe
+
+width="100%"
+
+height="500"
+
+src="https://www.youtube.com/embed/xxxxxxxx"
+
+title="Timing Belt Drive"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+38. References
+
+</h2>
+
+<ol>
+
+<li>Gates PowerGrip Design Manual.</li>
+
+<li>Mitsuboshi Belt Technical Catalogue.</li>
+
+<li>Bando Power Transmission Handbook.</li>
+
+<li>ContiTech Timing Belt Manual.</li>
+
+<li>Optibelt Engineering Guide.</li>
+
+<li>ISO 5294 – Synchronous Belt Drives.</li>
+
+<li>JIS B 1856 – Timing Belts.</li>
+
+<li>Machinery's Handbook.</li>
+
+<li>Shigley's Mechanical Engineering Design.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+39. Related Articles
+
+</h2>
+
+<div class="related-grid">
+
+<a class="card" href="belt.html">
+
+<h3>
+
+V-Belt Drive
+
+</h3>
+
+<p>
+
+Thiết kế bộ truyền đai chữ V.
+
+</p>
+
+</a>
+
+<a class="card" href="chain.html">
+
+<h3>
+
+Chain Drive
+
+</h3>
+
+<p>
+
+Thiết kế bộ truyền xích.
+
+</p>
+
+</a>
+
+<a class="card" href="gear.html">
+
+<h3>
+
+Gear Design
+
+</h3>
+
+<p>
+
+Thiết kế bộ truyền bánh răng.
+
+</p>
+
+</a>
+
+<a class="card" href="shaft.html">
+
+<h3>
+
+Shaft Design
+
+</h3>
+
+<p>
+
+Thiết kế trục máy.
+
+</p>
+
+</a>
+
+<a class="card" href="coupling.html">
+
+<h3>
+
+Coupling Design
+
+</h3>
+
+<p>
+
+Lựa chọn khớp nối trục.
+
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+40. Article Information
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>Category</th>
+
+<td>Machine Design</td>
+
+</tr>
+
+<tr>
+
+<th>Difficulty</th>
+
+<td>Intermediate</td>
+
+</tr>
+
+<tr>
+
+<th>Estimated Reading Time</th>
+
+<td>45 Minutes</td>
+
+</tr>
+
+<tr>
+
+<th>Last Updated</th>
+
+<td>2026-07-19</td>
+
+</tr>
+
+<tr>
+
+<th>Version</th>
+
+<td>1.0</td>
+
+</tr>
+
+<tr>
+
+<th>Author</th>
+
+<td>Tuấn Lê</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div class="author-box">
+
+<img
+src="../../assets/img/author/avatar.png"
+alt="Author">
+
+<div>
+
+<h3>
+
+Tuấn Lê
+
+</h3>
+
+<p>
+
+Mechanical Design Engineer
+
+</p>
+
+<p>
+
+JapanTech là nền tảng chia sẻ kiến thức về thiết kế máy, tiêu chuẩn JIS/ISO, CAD, CAE và kinh nghiệm kỹ thuật tại Nhật Bản. Mục tiêu là xây dựng một nguồn tài liệu thực hành giúp kỹ sư có thể áp dụng trực tiếp vào công việc thiết kế và phát triển sản phẩm.
+
+</p>
+
+</div>
+
+</div>
+
+</article>
+
+</main>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+JapanTech
+
+</h3>
+
+<p>
+
+Engineering Knowledge Platform
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Knowledge
+
+</h3>
+
+<ul>
+
+<li><a href="../machine-design/index.html">Machine Design</a></li>
+<li><a href="../material/index.html">Material</a></li>
+<li><a href="../cad/index.html">CAD</a></li>
+<li><a href="../grinding/index.html">Grinding</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Resources
+
+</h3>
+
+<ul>
+
+<li><a href="../../resources.html">Engineering Standards</a></li>
+<li><a href="../../tools.html">Engineering Tools</a></li>
+<li><a href="../../roadmap.html">Learning Roadmap</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+Email: contact@japantech.jp
+
+</p>
+
+<p>
+
+GitHub Pages
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 JapanTech. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="../../js/main.js"></script>
+<script src="../../js/article.js"></script>
+
+</body>
+
+</html>

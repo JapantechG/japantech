@@ -1,0 +1,2906 @@
+<!--
+====================================================
+JapanTech
+
+Category : Machine Design
+Article  : Coupling
+Version  : 1.0
+Author   : Tuấn Lê
+====================================================
+-->
+
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+Coupling là gì? | JapanTech
+
+</title>
+
+<meta
+name="description"
+content="Hướng dẫn đầy đủ về Coupling trong thiết kế máy">
+
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/article.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<a class="logo" href="../../index.html">
+
+JapanTech
+
+</a>
+
+<nav>
+
+<ul class="menu">
+
+<li><a href="../../index.html">Home</a></li>
+<li><a class="active" href="../../knowledge.html">Knowledge</a></li>
+<li><a href="#">Japanese</a></li>
+<li><a href="#">Career</a></li>
+<li><a href="#">Tools</a></li>
+<li><a href="#">About</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<div class="page">
+
+<div class="container">
+
+<nav class="breadcrumb">
+
+<a href="../../index.html">Home</a>
+
+<span>></span>
+
+<a href="../../knowledge.html">Knowledge</a>
+
+<span>></span>
+
+<a href="../machine-design/index.html">
+
+Machine Design
+
+</a>
+
+<span>></span>
+
+Coupling
+
+</nav>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="wrapper">
+
+<aside>
+
+<div class="sidebar">
+
+<div class="sidebar-title">
+
+Machine Design
+
+</div>
+
+<ul>
+<li><a href="index.html"> Overview</a></li>
+<li><a href="bearing.html">Bearing</a></li>
+
+<li><a href="gear.html">Gear</a></li>
+
+<li><a href="shaft.html">Shaft</a></li>
+
+<li><a href="bolt.html">Bolt</a></li>
+
+<li><a href="spring.html">Spring</a></li>
+
+<li><a class="active" href="coupling.html">Coupling</a></li>
+<li><a href="chain.html">Chain Drive </a></li>
+
+<li><a href="belt.html">Timing Belt</a></li>
+
+</ul>
+
+</div>
+
+</aside>
+
+<main class="main">
+
+<div class="toc">
+
+<div class="toc-title">
+
+Table of Contents
+
+</div>
+
+<ul>
+
+<li><a href="#overview">1. Overview</a></li>
+
+<li><a href="#classification">2. Coupling Classification</a></li>
+
+<li><a href="#structure">3. Structure</a></li>
+
+<li><a href="#selection">4. Selection</a></li>
+
+<li><a href="#failure">5. Failure</a></li>
+
+<li><a href="#reference">6. Reference</a></li>
+
+</ul>
+
+</div>
+
+<article class="article">
+
+<header class="article-header">
+
+<h1>
+
+Coupling là gì?
+
+</h1>
+
+<p class="article-description">
+
+Hướng dẫn đầy đủ về Coupling: cấu tạo, phân loại, lựa chọn, tính toán mô-men xoắn, độ lệch tâm, lắp ráp và các lỗi thiết kế thường gặp.
+
+</p>
+
+<div class="meta">
+
+<span>📅 2026-07-19</span>
+
+<span>📁 Machine Design</span>
+
+<span>⏱ 40 phút đọc</span>
+
+<span>📘 Version 1.0</span>
+
+</div>
+
+</header>
+
+<figure class="article-cover">
+
+<img
+
+src="../../assets/img/coupling/banner.jpg"
+
+alt="Coupling">
+
+<figcaption>
+
+Mechanical Coupling Overview
+
+</figcaption>
+
+</figure>
+
+<section id="overview">
+
+<h2>
+
+1. Overview
+
+</h2>
+
+<p>
+
+Coupling là chi tiết cơ khí dùng để nối hai trục nhằm truyền mô-men xoắn từ trục dẫn động sang trục bị dẫn. Ngoài chức năng truyền công suất, Coupling còn có khả năng bù sai lệch tâm, giảm rung động, hấp thụ va đập và bảo vệ hệ thống truyền động.
+
+</p>
+
+<p>
+
+Trong hầu hết các máy công nghiệp, Coupling được lắp giữa Motor và Gearbox hoặc giữa Gearbox và cơ cấu chấp hành. Việc lựa chọn đúng loại Coupling giúp tăng tuổi thọ của Bearing, Shaft và Motor, đồng thời giảm rung và tiếng ồn trong quá trình vận hành.
+
+</p>
+
+<div class="note">
+
+<strong>
+
+Điểm cần nhớ
+
+</strong>
+
+<ul>
+
+<li>Truyền Torque.</li>
+
+<li>Bù sai lệch tâm.</li>
+
+<li>Giảm rung động.</li>
+
+<li>Giảm tải va đập.</li>
+
+<li>Bảo vệ hệ thống truyền động.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="classification">
+
+<h2>
+
+2. Coupling Classification
+
+</h2>
+
+<p>
+
+Coupling có nhiều loại khác nhau, mỗi loại phù hợp với từng điều kiện tải trọng và độ lệch tâm.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Type</th>
+
+<th>Torsional Rigidity</th>
+
+<th>Misalignment</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Rigid Coupling</td>
+
+<td>★★★★★</td>
+
+<td>Không</td>
+
+<td>Precision Machine</td>
+
+</tr>
+
+<tr>
+
+<td>Jaw Coupling</td>
+
+<td>★★★★☆</td>
+
+<td>Tốt</td>
+
+<td>Servo Motor</td>
+
+</tr>
+
+<tr>
+
+<td>Oldham Coupling</td>
+
+<td>★★★☆☆</td>
+
+<td>Rất tốt</td>
+
+<td>Ball Screw</td>
+
+</tr>
+
+<tr>
+
+<td>Disc Coupling</td>
+
+<td>★★★★★</td>
+
+<td>Tốt</td>
+
+<td>High Speed</td>
+
+</tr>
+
+<tr>
+
+<td>Gear Coupling</td>
+
+<td>★★★★★</td>
+
+<td>Tốt</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+<tr>
+
+<td>Chain Coupling</td>
+
+<td>★★★★☆</td>
+
+<td>Trung bình</td>
+
+<td>Conveyor</td>
+
+</tr>
+
+<tr>
+
+<td>Grid Coupling</td>
+
+<td>★★★☆☆</td>
+
+<td>Tốt</td>
+
+<td>Shock Load</td>
+
+</tr>
+
+<tr>
+
+<td>Fluid Coupling</td>
+
+<td>★★☆☆☆</td>
+
+<td>Không yêu cầu</td>
+
+<td>Large Conveyor</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/types.png"
+
+alt="Coupling Types">
+
+<figcaption>
+
+Các loại Coupling phổ biến
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section id="structure">
+
+<h2>
+
+3. Basic Structure
+
+</h2>
+
+<p>
+
+Mặc dù có nhiều kiểu khác nhau, hầu hết Coupling đều gồm các thành phần cơ bản sau:
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Component</th>
+
+<th>Function</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Hub</td>
+
+<td>Lắp với Shaft</td>
+
+</tr>
+
+<tr>
+
+<td>Transmission Element</td>
+
+<td>Truyền mô-men xoắn</td>
+
+</tr>
+
+<tr>
+
+<td>Key / Clamp</td>
+
+<td>Cố định với Shaft</td>
+
+</tr>
+
+<tr>
+
+<td>Fastener</td>
+
+<td>Liên kết các bộ phận</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/structure.png"
+
+alt="Coupling Structure">
+
+<figcaption>
+
+Cấu tạo cơ bản của Coupling
+
+</figcaption>
+
+</figure>
+
+</section>
+<section id="selection">
+
+<h2>
+
+4. Coupling Material
+
+</h2>
+
+<p>
+
+Vật liệu của Coupling ảnh hưởng trực tiếp đến khả năng truyền mô-men xoắn, độ cứng xoắn, tuổi thọ mỏi và khả năng chống ăn mòn. Việc lựa chọn vật liệu cần cân nhắc giữa tải trọng, tốc độ quay và môi trường làm việc.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Material</th>
+
+<th>Characteristics</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>S45C</td>
+
+<td>Độ bền tốt, dễ gia công</td>
+
+<td>General Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>SCM440</td>
+
+<td>Độ bền cao, nhiệt luyện tốt</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+<tr>
+
+<td>Aluminum Alloy</td>
+
+<td>Khối lượng nhẹ</td>
+
+<td>Servo System</td>
+
+</tr>
+
+<tr>
+
+<td>Stainless Steel</td>
+
+<td>Chống ăn mòn</td>
+
+<td>Food Machine</td>
+
+</tr>
+
+<tr>
+
+<td>Engineering Plastic</td>
+
+<td>Giảm rung, cách điện</td>
+
+<td>Encoder Coupling</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Đối với Servo Motor hoặc Ball Screw, Coupling nhôm thường được ưu tiên nhờ mô-men quán tính nhỏ, giúp cải thiện khả năng tăng tốc và giảm tải cho động cơ.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Torque Calculation
+
+</h2>
+
+<p>
+
+Thông số quan trọng nhất khi lựa chọn Coupling là mô-men xoắn truyền qua trục.
+
+</p>
+
+<pre><code>
+
+T = 9550 × P / n
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>T</td>
+
+<td>Torque</td>
+
+<td>N·m</td>
+
+</tr>
+
+<tr>
+
+<td>P</td>
+
+<td>Motor Power</td>
+
+<td>kW</td>
+
+</tr>
+
+<tr>
+
+<td>n</td>
+
+<td>Rotational Speed</td>
+
+<td>rpm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="note">
+
+<p>
+
+Ví dụ: Motor 2.2 kW quay 1.450 rpm sẽ tạo mô-men khoảng 14.5 N·m.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Service Factor
+
+</h2>
+
+<p>
+
+Trong thực tế, Coupling không được chọn chỉ theo Torque danh nghĩa mà cần nhân với hệ số làm việc (Service Factor) để xét đến va đập, khởi động và điều kiện vận hành.
+
+</p>
+
+<pre><code>
+
+Required Torque
+
+=
+
+Rated Torque × Service Factor
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Application</th>
+
+<th>Service Factor</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Uniform Load</td>
+
+<td>1.0 ~ 1.3</td>
+
+</tr>
+
+<tr>
+
+<td>Light Shock</td>
+
+<td>1.3 ~ 1.5</td>
+
+</tr>
+
+<tr>
+
+<td>Medium Shock</td>
+
+<td>1.5 ~ 2.0</td>
+
+</tr>
+
+<tr>
+
+<td>Heavy Shock</td>
+
+<td>2.0 ~ 3.0</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Misalignment
+
+</h2>
+
+<p>
+
+Một ưu điểm quan trọng của Flexible Coupling là khả năng bù sai lệch giữa hai trục. Tuy nhiên, mỗi loại Coupling chỉ cho phép một giới hạn sai lệch nhất định.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Misalignment</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Parallel</td>
+
+<td>Hai trục song song nhưng lệch tâm.</td>
+
+</tr>
+
+<tr>
+
+<td>Angular</td>
+
+<td>Hai trục tạo thành một góc.</td>
+
+</tr>
+
+<tr>
+
+<td>Axial</td>
+
+<td>Dịch chuyển theo phương trục.</td>
+
+</tr>
+
+<tr>
+
+<td>Combined</td>
+
+<td>Kết hợp nhiều dạng lệch.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/misalignment.png"
+
+alt="Coupling Misalignment">
+
+<figcaption>
+
+Các dạng sai lệch tâm của Coupling
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>
+
+Typical Allowable Misalignment
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Coupling Type</th>
+
+<th>Parallel</th>
+
+<th>Angular</th>
+
+<th>Axial</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Jaw</td>
+
+<td>0.2 mm</td>
+
+<td>1°</td>
+
+<td>±1 mm</td>
+
+</tr>
+
+<tr>
+
+<td>Oldham</td>
+
+<td>0.5 mm</td>
+
+<td>0.5°</td>
+
+<td>±1 mm</td>
+
+</tr>
+
+<tr>
+
+<td>Disc</td>
+
+<td>0.25 mm</td>
+
+<td>1°</td>
+
+<td>±2 mm</td>
+
+</tr>
+
+<tr>
+
+<td>Gear</td>
+
+<td>0.3 mm</td>
+
+<td>1.5°</td>
+
+<td>±3 mm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>
+
+Warning
+
+</strong>
+
+<p>
+
+Không nên thiết kế hệ thống làm việc sát giới hạn sai lệch cho phép. Giá trị trong catalogue thường là giới hạn tối đa, không phải điều kiện vận hành lâu dài.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Coupling Selection Procedure
+
+</h2>
+
+<p>
+
+Một quy trình lựa chọn Coupling điển hình gồm các bước sau:
+
+</p>
+
+<ol>
+
+<li>Xác định công suất Motor.</li>
+
+<li>Tính Torque danh nghĩa.</li>
+
+<li>Áp dụng Service Factor.</li>
+
+<li>Xác định đường kính Shaft.</li>
+
+<li>Kiểm tra tốc độ quay tối đa.</li>
+
+<li>Đánh giá sai lệch tâm.</li>
+
+<li>Chọn loại Coupling phù hợp.</li>
+
+<li>Kiểm tra kích thước lắp đặt.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+Selection Example
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>Motor Power</th>
+
+<td>3.7 kW</td>
+
+</tr>
+
+<tr>
+
+<th>Speed</th>
+
+<td>1500 rpm</td>
+
+</tr>
+
+<tr>
+
+<th>Calculated Torque</th>
+
+<td>23.6 N·m</td>
+
+</tr>
+
+<tr>
+
+<th>Service Factor</th>
+
+<td>1.5</td>
+
+</tr>
+
+<tr>
+
+<th>Required Torque</th>
+
+<td>35.4 N·m</td>
+
+</tr>
+
+<tr>
+
+<th>Recommended Type</th>
+
+<td>Jaw Coupling</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="success">
+
+<strong>
+
+Selection Summary
+
+</strong>
+
+<ul>
+
+<li>✓ Chọn Torque định mức lớn hơn Torque yêu cầu.</li>
+
+<li>✓ Kiểm tra đường kính lỗ phù hợp với Shaft.</li>
+
+<li>✓ Kiểm tra tốc độ quay cho phép.</li>
+
+<li>✓ Kiểm tra khả năng bù sai lệch tâm.</li>
+
+<li>✓ Đối với Servo, ưu tiên Coupling có Backlash thấp.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2>
+
+Rigid Coupling vs Flexible Coupling
+
+</h2>
+
+<p>
+
+Coupling được chia thành hai nhóm chính: <strong>Rigid Coupling</strong> và <strong>Flexible Coupling</strong>. Việc lựa chọn phụ thuộc vào độ đồng tâm của trục, tải trọng, tốc độ quay và yêu cầu giảm rung.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Item</th>
+
+<th>Rigid Coupling</th>
+
+<th>Flexible Coupling</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Misalignment Compensation</td>
+
+<td>Không</td>
+
+<td>Có</td>
+
+</tr>
+
+<tr>
+
+<td>Torsional Rigidity</td>
+
+<td>★★★★★</td>
+
+<td>★★★～★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Vibration Absorption</td>
+
+<td>Không</td>
+
+<td>Tốt</td>
+
+</tr>
+
+<tr>
+
+<td>Shock Load</td>
+
+<td>Kém</td>
+
+<td>Tốt</td>
+
+</tr>
+
+<tr>
+
+<td>Maintenance</td>
+
+<td>Ít</td>
+
+<td>Tùy loại</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Trong máy công nghiệp hiện đại, Flexible Coupling được sử dụng phổ biến hơn vì luôn tồn tại sai lệch nhỏ giữa Motor và thiết bị dẫn động sau khi lắp ráp.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Jaw Coupling
+
+</h2>
+
+<p>
+
+Jaw Coupling sử dụng hai Hub và một Elastomer Spider để truyền mô-men xoắn. Đây là loại Coupling phổ biến nhất trong các hệ thống Servo Motor và máy tự động.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/jaw-coupling.png"
+
+alt="Jaw Coupling">
+
+<figcaption>
+
+Jaw Coupling
+
+</figcaption>
+
+</figure>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Advantages</th>
+
+<th>Disadvantages</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Giảm rung tốt</td>
+
+<td>Spider bị lão hóa theo thời gian</td>
+
+</tr>
+
+<tr>
+
+<td>Giá thành thấp</td>
+
+<td>Không phù hợp tải rất lớn</td>
+
+</tr>
+
+<tr>
+
+<td>Dễ thay Spider</td>
+
+<td>Độ cứng xoắn thấp hơn Disc</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Oldham Coupling
+
+</h2>
+
+<p>
+
+Oldham Coupling gồm hai Hub và một đĩa trung gian (Center Disc). Loại này có khả năng bù sai lệch song song rất tốt nên thường dùng cho Ball Screw và Encoder.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/oldham.png"
+
+alt="Oldham Coupling">
+
+<figcaption>
+
+Oldham Coupling
+
+</figcaption>
+
+</figure>
+
+<div class="note">
+
+<ul>
+
+<li>✓ Bù Parallel Misalignment rất tốt.</li>
+
+<li>✓ Backlash nhỏ.</li>
+
+<li>✓ Thường dùng trong máy CNC.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Disc Coupling
+
+</h2>
+
+<p>
+
+Disc Coupling truyền mô-men bằng các lá thép đàn hồi (Disc Pack). Đây là loại Coupling có độ cứng xoắn rất cao và gần như không có Backlash.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Characteristics</th>
+
+<th>Evaluation</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Torsional Rigidity</td>
+
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Backlash</td>
+
+<td>Zero</td>
+
+</tr>
+
+<tr>
+
+<td>Speed Capability</td>
+
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Maintenance</td>
+
+<td>Low</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<p>
+
+Disc Coupling thường được lựa chọn cho Servo Motor tốc độ cao, Machine Tool và Robot công nghiệp.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Gear Coupling
+
+</h2>
+
+<p>
+
+Gear Coupling sử dụng hai Hub có răng ngoài ăn khớp với Sleeve có răng trong. Nhờ diện tích tiếp xúc lớn, loại này truyền được mô-men rất cao.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Advantages</th>
+
+<th>Disadvantages</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Torque rất lớn</td>
+
+<td>Cần bôi trơn định kỳ</td>
+
+</tr>
+
+<tr>
+
+<td>Tuổi thọ cao</td>
+
+<td>Khối lượng lớn</td>
+
+</tr>
+
+<tr>
+
+<td>Chịu tải va đập</td>
+
+<td>Giá thành cao</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Chain Coupling
+
+</h2>
+
+<p>
+
+Chain Coupling truyền lực bằng xích đôi bao quanh hai bánh xích đặc biệt. Loại này có kết cấu đơn giản, dễ bảo trì và thường được sử dụng cho băng tải hoặc máy công suất trung bình.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/chain.png"
+
+alt="Chain Coupling">
+
+<figcaption>
+
+Chain Coupling
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>
+
+Grid Coupling
+
+</h2>
+
+<p>
+
+Grid Coupling sử dụng lò xo thép dạng lưới để hấp thụ va đập và dao động xoắn. Đây là lựa chọn phổ biến cho các hệ thống có tải thay đổi liên tục.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Suitable For</th>
+
+<th>Examples</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Shock Load</td>
+
+<td>Crusher</td>
+
+</tr>
+
+<tr>
+
+<td>Impact Load</td>
+
+<td>Mining Equipment</td>
+
+</tr>
+
+<tr>
+
+<td>Heavy Conveyor</td>
+
+<td>Steel Plant</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Fluid Coupling
+
+</h2>
+
+<p>
+
+Fluid Coupling truyền công suất thông qua dầu thủy lực thay vì tiếp xúc cơ khí trực tiếp. Nhờ đó, hệ thống khởi động êm hơn và giảm tải va đập.
+
+</p>
+
+<div class="warning">
+
+<strong>
+
+Note
+
+</strong>
+
+<p>
+
+Fluid Coupling luôn tồn tại độ trượt (Slip), vì vậy không thích hợp cho các ứng dụng yêu cầu đồng bộ vị trí chính xác như Servo hoặc Ball Screw.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Comparison of Common Couplings
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Type</th>
+
+<th>Torque</th>
+
+<th>Misalignment</th>
+
+<th>Backlash</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Rigid</td>
+
+<td>★★★★★</td>
+
+<td>★☆☆☆☆</td>
+
+<td>Zero</td>
+
+<td>Precision Fixture</td>
+
+</tr>
+
+<tr>
+
+<td>Jaw</td>
+
+<td>★★★★☆</td>
+
+<td>★★★★☆</td>
+
+<td>Low</td>
+
+<td>Servo</td>
+
+</tr>
+
+<tr>
+
+<td>Oldham</td>
+
+<td>★★★☆☆</td>
+
+<td>★★★★★</td>
+
+<td>Low</td>
+
+<td>Ball Screw</td>
+
+</tr>
+
+<tr>
+
+<td>Disc</td>
+
+<td>★★★★★</td>
+
+<td>★★★★☆</td>
+
+<td>Zero</td>
+
+<td>CNC Spindle</td>
+
+</tr>
+
+<tr>
+
+<td>Gear</td>
+
+<td>★★★★★</td>
+
+<td>★★★☆☆</td>
+
+<td>Low</td>
+
+<td>Rolling Mill</td>
+
+</tr>
+
+<tr>
+
+<td>Chain</td>
+
+<td>★★★★☆</td>
+
+<td>★★☆☆☆</td>
+
+<td>Medium</td>
+
+<td>Conveyor</td>
+
+</tr>
+
+<tr>
+
+<td>Grid</td>
+
+<td>★★★★★</td>
+
+<td>★★★★☆</td>
+
+<td>Medium</td>
+
+<td>Crusher</td>
+
+</tr>
+
+<tr>
+
+<td>Fluid</td>
+
+<td>★★★★☆</td>
+
+<td>★★★★★</td>
+
+<td>Slip</td>
+
+<td>Large Fan</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+<section id="failure">
+
+<h2>
+
+5. Coupling Failure Analysis
+
+</h2>
+
+<p>
+
+Hầu hết Coupling không hỏng do vượt quá mô-men danh nghĩa mà do sai lệch tâm quá lớn, lắp đặt không đúng, tải va đập hoặc bảo trì không phù hợp. Phân tích đúng nguyên nhân giúp tăng tuổi thọ cho Coupling, Bearing và Shaft.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Failure Mode</th>
+
+<th>Main Cause</th>
+
+<th>Recommended Solution</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Elastomer Wear</td>
+
+<td>Overload / High Temperature</td>
+
+<td>Replace Spider</td>
+
+</tr>
+
+<tr>
+
+<td>Disc Fatigue</td>
+
+<td>Repeated Misalignment</td>
+
+<td>Improve Alignment</td>
+
+</tr>
+
+<tr>
+
+<td>Gear Tooth Wear</td>
+
+<td>Poor Lubrication</td>
+
+<td>Lubricate Regularly</td>
+
+</tr>
+
+<tr>
+
+<td>Key Failure</td>
+
+<td>Oversized Torque</td>
+
+<td>Recalculate Shaft & Key</td>
+
+</tr>
+
+<tr>
+
+<td>Hub Crack</td>
+
+<td>Stress Concentration</td>
+
+<td>Improve Design Radius</td>
+
+</tr>
+
+<tr>
+
+<td>Bolt Loosening</td>
+
+<td>Vibration</td>
+
+<td>Use Thread Locker</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Misalignment Failure
+
+</h2>
+
+<p>
+
+Sai lệch tâm là nguyên nhân phổ biến nhất làm giảm tuổi thọ Coupling. Khi vượt quá giới hạn cho phép, lực phản ứng sẽ tăng nhanh và truyền trực tiếp sang Bearing.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/misalignment-failure.png"
+
+alt="Misalignment Failure">
+
+<figcaption>
+
+Ảnh hưởng của sai lệch tâm đến Coupling và Bearing
+
+</figcaption>
+
+</figure>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Misalignment</th>
+
+<th>Possible Effect</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Parallel</td>
+
+<td>Increase Bearing Load</td>
+
+</tr>
+
+<tr>
+
+<td>Angular</td>
+
+<td>Increase Vibration</td>
+
+</tr>
+
+<tr>
+
+<td>Axial</td>
+
+<td>Increase Disc Stress</td>
+
+</tr>
+
+<tr>
+
+<td>Combined</td>
+
+<td>Rapid Fatigue Failure</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>
+
+Warning
+
+</strong>
+
+<p>
+
+Ngay cả khi Coupling cho phép bù sai lệch, vẫn nên căn chỉnh trục chính xác nhất có thể. Khả năng bù sai lệch chỉ nhằm hấp thụ sai số nhỏ sau lắp ráp và biến dạng nhiệt, không phải để thay thế việc căn chỉnh.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Elastomer Spider Wear
+
+</h2>
+
+<p>
+
+Đối với Jaw Coupling, Spider là chi tiết hao mòn chính. Sau thời gian làm việc, vật liệu đàn hồi sẽ cứng lại hoặc nứt do nhiệt, dầu và tải chu kỳ.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symptom</th>
+
+<th>Cause</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Crack</td>
+
+<td>Aging</td>
+
+</tr>
+
+<tr>
+
+<td>Hardening</td>
+
+<td>High Temperature</td>
+
+</tr>
+
+<tr>
+
+<td>Tearing</td>
+
+<td>Overload</td>
+
+</tr>
+
+<tr>
+
+<td>Wear</td>
+
+<td>Misalignment</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Maintenance Tip
+
+</strong>
+
+<p>
+
+Spider là chi tiết tiêu hao. Nên kiểm tra định kỳ và thay mới khi xuất hiện vết nứt hoặc mất tính đàn hồi để tránh ảnh hưởng đến các chi tiết khác.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Disc Fatigue
+
+</h2>
+
+<p>
+
+Disc Coupling sử dụng các lá thép đàn hồi để truyền mô-men. Nếu làm việc với sai lệch tâm lớn hoặc tải dao động liên tục, các lá thép có thể bị nứt mỏi.
+
+</p>
+
+<figure>
+
+<img
+
+src="../../assets/img/coupling/disc-fatigue.jpg"
+
+alt="Disc Fatigue">
+
+<figcaption>
+
+Ví dụ nứt mỏi trên Disc Pack
+
+</figcaption>
+
+</figure>
+
+<div class="note">
+
+<ul>
+
+<li>Không vượt quá giới hạn Misalignment.</li>
+
+<li>Kiểm tra Bulông định kỳ.</li>
+
+<li>Không tái sử dụng Disc đã biến dạng.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Gear Coupling Lubrication
+
+</h2>
+
+<p>
+
+Gear Coupling yêu cầu bôi trơn định kỳ để giảm mài mòn giữa các răng. Thiếu dầu mỡ sẽ làm tăng nhiệt độ và gây mòn nhanh.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Lubrication Method</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Grease</td>
+
+<td>General Purpose</td>
+
+</tr>
+
+<tr>
+
+<td>Oil Bath</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+<tr>
+
+<td>Forced Oil</td>
+
+<td>High Speed</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Shaft Alignment Procedure
+
+</h2>
+
+<p>
+
+Độ đồng tâm của hai trục ảnh hưởng trực tiếp đến tuổi thọ Coupling và Bearing. Quy trình căn chỉnh thường gồm các bước sau:
+
+</p>
+
+<ol>
+
+<li>Lắp tạm Motor và thiết bị dẫn động.</li>
+
+<li>Đo Parallel Misalignment.</li>
+
+<li>Đo Angular Misalignment.</li>
+
+<li>Điều chỉnh bằng Shim hoặc chân đế.</li>
+
+<li>Kiểm tra lại sau khi siết Bulông.</li>
+
+<li>Kiểm tra lần cuối khi máy đạt nhiệt độ làm việc.</li>
+
+</ol>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Đối với máy công suất lớn hoặc tốc độ cao, nên sử dụng Laser Shaft Alignment để đạt độ chính xác cao và rút ngắn thời gian căn chỉnh.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Maintenance Checklist
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Kiểm tra Bulông siết định kỳ.</li>
+
+<li>✓ Kiểm tra sai lệch tâm sau khi bảo dưỡng.</li>
+
+<li>✓ Thay Spider khi có dấu hiệu lão hóa.</li>
+
+<li>✓ Bổ sung dầu mỡ cho Gear Coupling.</li>
+
+<li>✓ Kiểm tra tiếng ồn và rung động bất thường.</li>
+
+<li>✓ Theo dõi nhiệt độ vận hành.</li>
+
+<li>✓ Kiểm tra mòn Key và Keyway.</li>
+
+<li>✓ Thay Coupling nếu phát hiện nứt hoặc biến dạng.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Common Design Mistakes
+
+</h2>
+
+<div class="warning">
+
+<ul>
+
+<li>✗ Chọn Coupling chỉ theo đường kính Shaft mà không kiểm tra Torque.</li>
+
+<li>✗ Không áp dụng Service Factor.</li>
+
+<li>✗ Để Misalignment vượt giới hạn.</li>
+
+<li>✗ Chọn Coupling quá cứng cho hệ thống có tải va đập.</li>
+
+<li>✗ Không kiểm tra tốc độ quay tối đa.</li>
+
+<li>✗ Không tính mô-men quán tính khi dùng Servo Motor.</li>
+
+<li>✗ Không bảo trì Gear Coupling định kỳ.</li>
+
+<li>✗ Không kiểm tra Backlash đối với hệ thống yêu cầu độ chính xác cao.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Design Recommendations
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Chọn Torque định mức lớn hơn Torque tính toán.</li>
+
+<li>✓ Luôn tính thêm Service Factor.</li>
+
+<li>✓ Căn chỉnh trục trước khi vận hành.</li>
+
+<li>✓ Chọn Coupling có Backlash thấp cho Servo.</li>
+
+<li>✓ Ưu tiên Coupling nhẹ để giảm mô-men quán tính.</li>
+
+<li>✓ Kiểm tra định kỳ các chi tiết đàn hồi và Bulông.</li>
+
+<li>✓ Tuân thủ giới hạn Misalignment của nhà sản xuất.</li>
+
+<li>✓ Chọn đúng phương pháp bôi trơn cho Gear Coupling.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section id="reference">
+
+<h2>
+
+6. Coupling Selection Quick Guide
+
+</h2>
+
+<p>
+
+Bảng dưới đây giúp lựa chọn nhanh loại Coupling phù hợp theo yêu cầu ứng dụng. Sau khi xác định loại Coupling, cần tiếp tục kiểm tra Torque, tốc độ quay, đường kính trục, sai lệch tâm và điều kiện môi trường.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Requirement</th>
+
+<th>Recommended Coupling</th>
+
+<th>Main Reason</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>High Precision Servo</td>
+
+<td>Disc Coupling</td>
+
+<td>Zero Backlash, High Rigidity</td>
+
+</tr>
+
+<tr>
+
+<td>General Servo</td>
+
+<td>Jaw Coupling</td>
+
+<td>Good Vibration Damping</td>
+
+</tr>
+
+<tr>
+
+<td>Large Parallel Misalignment</td>
+
+<td>Oldham Coupling</td>
+
+<td>Excellent Parallel Compensation</td>
+
+</tr>
+
+<tr>
+
+<td>Heavy Torque</td>
+
+<td>Gear Coupling</td>
+
+<td>High Torque Capacity</td>
+
+</tr>
+
+<tr>
+
+<td>Impact Load</td>
+
+<td>Grid Coupling</td>
+
+<td>Shock Absorption</td>
+
+</tr>
+
+<tr>
+
+<td>Simple Conveyor</td>
+
+<td>Chain Coupling</td>
+
+<td>Easy Maintenance</td>
+
+</tr>
+
+<tr>
+
+<td>Soft Start</td>
+
+<td>Fluid Coupling</td>
+
+<td>Reduce Starting Shock</td>
+
+</tr>
+
+<tr>
+
+<td>Perfect Alignment</td>
+
+<td>Rigid Coupling</td>
+
+<td>Maximum Torsional Rigidity</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Related Standards
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Standard</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>JIS B1452</td>
+
+<td>Flexible Shaft Couplings</td>
+
+</tr>
+
+<tr>
+
+<td>ISO 14691</td>
+
+<td>Flexible Couplings for General Purpose Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>DIN 740</td>
+
+<td>Shaft Couplings</td>
+
+</tr>
+
+<tr>
+
+<td>AGMA 9002</td>
+
+<td>Gear Coupling Inspection</td>
+
+</tr>
+
+<tr>
+
+<td>AGMA 9008</td>
+
+<td>Flexible Coupling Selection Guide</td>
+
+</tr>
+
+<tr>
+
+<td>IEC 60034</td>
+
+<td>Motor Shaft Dimensions</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Downloads
+
+</h2>
+
+<div class="download-grid">
+
+<div class="download-card">
+
+<h3>
+
+PDF
+
+</h3>
+
+<p>
+
+Coupling Design Handbook
+
+</p>
+
+<a href="../../assets/download/coupling/coupling-design.pdf">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+Excel
+
+</h3>
+
+<p>
+
+Torque Calculator
+
+</p>
+
+<a href="../../assets/download/coupling/coupling-torque.xlsx">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+CAD
+
+</h3>
+
+<p>
+
+Standard Coupling Library
+
+</p>
+
+<a href="../../assets/download/coupling/coupling-library.zip">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Recommended Video
+
+</h2>
+
+<div class="video-wrapper">
+
+<iframe
+
+width="100%"
+
+height="500"
+
+src="https://www.youtube.com/embed/xxxxxxxx"
+
+title="Coupling Design"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+References
+
+</h2>
+
+<ol>
+
+<li>Lovejoy Coupling Engineering Handbook.</li>
+
+<li>KTR Coupling Technical Guide.</li>
+
+<li>R+W Coupling Catalogue.</li>
+
+<li>NBK Coupling Selection Guide.</li>
+
+<li>ISO 14691 - Flexible Couplings.</li>
+
+<li>DIN 740 - Shaft Couplings.</li>
+
+<li>AGMA Flexible Coupling Standards.</li>
+
+<li>Shigley's Mechanical Engineering Design.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+Related Articles
+
+</h2>
+
+<div class="related-grid">
+
+<a class="card" href="shaft.html">
+
+<h3>
+
+Shaft Design
+
+</h3>
+
+<p>
+
+Thiết kế trục máy và tính toán độ bền.
+
+</p>
+
+</a>
+
+<a class="card" href="bearing.html">
+
+<h3>
+
+Bearing Selection
+
+</h3>
+
+<p>
+
+Lựa chọn ổ lăn và tính toán tuổi thọ.
+
+</p>
+
+</a>
+
+<a class="card" href="gear.html">
+
+<h3>
+
+Gear Design
+
+</h3>
+
+<p>
+
+Thiết kế bộ truyền bánh răng.
+
+</p>
+
+</a>
+
+<a class="card" href="belt.html">
+
+<h3>
+
+Timing Belt Drive
+
+</h3>
+
+<p>
+
+Thiết kế truyền động bằng đai răng.
+
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Article Information
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>
+
+Category
+
+</th>
+
+<td>
+
+Machine Design
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Difficulty
+
+</th>
+
+<td>
+
+Intermediate
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Estimated Reading Time
+
+</th>
+
+<td>
+
+40 Minutes
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Last Updated
+
+</th>
+
+<td>
+
+2026-07-19
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Version
+
+</th>
+
+<td>
+
+1.0
+
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+
+Author
+
+</th>
+
+<td>
+
+Tuấn Lê
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div class="author-box">
+
+<img
+
+src="../../assets/img/author/avatar.png"
+
+alt="Author">
+
+<div>
+
+<h3>
+
+Tuấn Lê
+
+</h3>
+
+<p>
+
+Mechanical Design Engineer
+
+</p>
+
+<p>
+
+JapanTech được xây dựng nhằm chia sẻ kiến thức thực tế về thiết kế máy, tiêu chuẩn JIS/ISO, CAD, VB.NET và kinh nghiệm làm việc tại Nhật Bản. Mỗi bài viết được biên soạn theo hướng dễ tra cứu, có ví dụ thực tế và có thể áp dụng trực tiếp vào công việc thiết kế.
+
+</p>
+
+</div>
+
+</div>
+
+</article>
+
+</main>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+JapanTech</h3>
+
+<p>
+
+Engineering Knowledge Platform
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Knowledge
+
+</h3>
+
+<ul>
+
+<li><a href="../machine-design/index.html">Machine Design</a></li>
+
+<li><a href="../material/index.html">Material</a></li>
+
+<li><a href="../cad/index.html">CAD</a></li>
+
+<li><a href="../grinding/index.html">Grinding</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Resources
+
+</h3>
+
+<ul>
+
+<li><a href="../../resources.html">Engineering Standards</a></li>
+
+<li><a href="../../tools.html">Engineering Tools</a></li>
+
+<li><a href="../../roadmap.html">Learning Roadmap</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+Email: contact@japantech.jp
+
+</p>
+
+<p>
+
+GitHub Pages
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 JapanTech. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="../../js/main.js"></script>
+<script src="../../js/article.js"></script>
+
+</body>
+
+</html>

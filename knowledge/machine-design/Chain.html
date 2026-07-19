@@ -1,0 +1,3022 @@
+<!--
+====================================================
+JapanTech
+
+Category : Machine Design
+Article  : Chain Drive
+Version  : 1.0
+Author   : Tuấn Lê
+====================================================
+-->
+
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+Chain Drive là gì? | JapanTech
+
+</title>
+
+<meta name="description"
+content="Hướng dẫn đầy đủ về truyền động xích (Chain Drive): cấu tạo, nguyên lý, phân loại, tính toán và lựa chọn">
+
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/article.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<a class="logo" href="../../index.html">
+
+JapanTech
+
+</a>
+
+<nav>
+
+<ul class="menu">
+
+<li><a href="../../index.html">Home</a></li>
+<li><a class="active" href="../../knowledge.html">Knowledge</a></li>
+<li><a href="#">Japanese</a></li>
+<li><a href="#">Career</a></li>
+<li><a href="#">Tools</a></li>
+<li><a href="#">About</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<div class="page">
+
+<div class="container">
+
+<nav class="breadcrumb">
+
+<a href="../../index.html">Home</a>
+
+<span>></span>
+
+<a href="../../knowledge.html">Knowledge</a>
+
+<span>></span>
+
+<a href="../machine-design/index.html">
+
+Machine Design
+
+</a>
+
+<span>></span>
+
+Chain Drive
+
+</nav>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="wrapper">
+
+<aside>
+
+<div class="sidebar">
+
+<div class="sidebar-title">
+
+Machine Design
+
+</div>
+
+<ul>
+
+<li><a href="index.html"> Overview</a></li>
+
+<li><a href="bearing.html">Bearing</a></li>
+
+<li><a href="gear.html">Gear</a></li>
+
+<li><a href="shaft.html">Shaft</a></li>
+
+<li><a href="bolt.html">Bolt</a></li>
+
+<li><a href="spring.html">Spring</a></li>
+
+<li><a href="coupling.html">Coupling</a></li>
+<li><a class="active" href="chain.html">Chain Drive</a></li>
+<li><a href="belt.html">Timing Belt</a></li>
+
+</ul>
+
+</div>
+
+</aside>
+
+<main class="main">
+
+<div class="toc">
+
+<div class="toc-title">
+
+Table of Contents
+
+</div>
+
+<ul>
+
+<li><a href="#overview">1. Overview</a></li>
+<li><a href="#principle">2. Working Principle</a></li>
+<li><a href="#classification">3. Chain Classification</a></li>
+<li><a href="#structure">4. Structure</a></li>
+<li><a href="#reference">5. References</a></li>
+
+</ul>
+
+</div>
+
+<article class="article">
+
+<header class="article-header">
+
+<h1>
+
+Chain Drive (Truyền động xích)
+
+</h1>
+
+<p class="article-description">
+
+Tổng quan về truyền động xích: cấu tạo, nguyên lý hoạt động, phân loại, tiêu chuẩn JIS/ISO, tính toán và hướng dẫn lựa chọn trong thiết kế máy.
+
+</p>
+
+<div class="meta">
+
+<span>📅 2026-07-19</span>
+
+<span>📁 Machine Design</span>
+
+<span>⏱ 45 phút đọc</span>
+
+<span>📘 Version 1.0</span>
+
+</div>
+
+</header>
+
+<figure class="article-cover">
+
+<img
+src="../../assets/img/chain/banner.jpg"
+alt="Chain Drive">
+
+<figcaption>
+
+Industrial Roller Chain Drive
+
+</figcaption>
+
+</figure>
+
+<section id="overview">
+
+<h2>
+
+1. Overview
+
+</h2>
+
+<p>
+
+Chain Drive là cơ cấu truyền động cơ khí sử dụng xích và đĩa xích (Sprocket) để truyền mô-men xoắn giữa hai hoặc nhiều trục. Khác với truyền động đai, truyền động xích truyền lực bằng sự ăn khớp giữa mắt xích và răng đĩa nên hầu như không xảy ra hiện tượng trượt.
+
+</p>
+
+<p>
+
+Nhờ hiệu suất truyền động cao, khả năng truyền công suất lớn và làm việc ổn định trong môi trường khắc nghiệt, Chain Drive được sử dụng rộng rãi trong băng tải, xe máy, máy nông nghiệp, dây chuyền sản xuất và các hệ thống truyền động công nghiệp.
+
+</p>
+
+<div class="note">
+
+<strong>Ưu điểm nổi bật</strong>
+
+<ul>
+
+<li>✓ Không bị trượt như Belt Drive.</li>
+
+<li>✓ Hiệu suất truyền động cao (95–98%).</li>
+
+<li>✓ Truyền được công suất lớn.</li>
+
+<li>✓ Làm việc tốt trong môi trường bụi, dầu và nhiệt độ cao.</li>
+
+<li>✓ Khoảng cách giữa hai trục lớn hơn Gear Drive.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="principle">
+
+<h2>
+
+2. Working Principle
+
+</h2>
+
+<p>
+
+Động cơ quay đĩa xích chủ động (Driving Sprocket). Các răng của đĩa xích ăn khớp với mắt xích và kéo toàn bộ dây xích chuyển động. Dây xích tiếp tục truyền chuyển động đến đĩa xích bị động (Driven Sprocket), tạo ra mô-men xoắn trên trục ra.
+
+</p>
+
+<figure>
+
+<img
+src="../../assets/img/chain/principle.png"
+alt="Working Principle">
+
+<figcaption>
+
+Nguyên lý truyền động của Chain Drive
+
+</figcaption>
+
+</figure>
+
+<div class="tip">
+
+<strong>Engineering Tip</strong>
+
+<p>
+
+Do không có hiện tượng trượt nên tỷ số truyền của Chain Drive ổn định hơn Belt Drive. Điều này đặc biệt quan trọng đối với các hệ thống yêu cầu đồng bộ tốc độ.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="classification">
+
+<h2>
+
+3. Chain Classification
+
+</h2>
+
+<p>
+
+Có nhiều loại xích được phát triển cho các mục đích sử dụng khác nhau. Việc lựa chọn đúng loại xích giúp tăng tuổi thọ và giảm chi phí bảo trì.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Chain Type</th>
+
+<th>Characteristics</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Roller Chain</td>
+
+<td>Phổ biến nhất, truyền công suất</td>
+
+<td>Industrial Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>Silent Chain</td>
+
+<td>Ít ồn, tốc độ cao</td>
+
+<td>Automotive Engine</td>
+
+</tr>
+
+<tr>
+
+<td>Leaf Chain</td>
+
+<td>Chịu kéo lớn</td>
+
+<td>Forklift</td>
+
+</tr>
+
+<tr>
+
+<td>Conveyor Chain</td>
+
+<td>Vận chuyển sản phẩm</td>
+
+<td>Conveyor System</td>
+
+</tr>
+
+<tr>
+
+<td>Double Pitch Chain</td>
+
+<td>Bước xích lớn</td>
+
+<td>Light Conveyor</td>
+
+</tr>
+
+<tr>
+
+<td>Engineering Steel Chain</td>
+
+<td>Tải trọng rất lớn</td>
+
+<td>Mining & Steel Plant</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section id="structure">
+
+<h2>
+
+4. Basic Structure
+
+</h2>
+
+<p>
+
+Một mắt xích con lăn (Roller Chain) tiêu chuẩn bao gồm các thành phần sau:
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Component</th>
+
+<th>Function</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Outer Plate</td>
+
+<td>Liên kết mắt xích</td>
+
+</tr>
+
+<tr>
+
+<td>Inner Plate</td>
+
+<td>Chịu tải kéo</td>
+
+</tr>
+
+<tr>
+
+<td>Pin</td>
+
+<td>Khớp quay giữa các mắt xích</td>
+
+</tr>
+
+<tr>
+
+<td>Bushing</td>
+
+<td>Giảm ma sát</td>
+
+</tr>
+
+<tr>
+
+<td>Roller</td>
+
+<td>Ăn khớp với răng Sprocket</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+src="../../assets/img/chain/structure.png"
+alt="Chain Structure">
+
+<figcaption>
+
+Cấu tạo của Roller Chain
+
+</figcaption>
+
+</figure>
+
+<div class="success">
+
+<strong>Ghi nhớ</strong>
+
+<ul>
+
+<li>Pin và Bushing là hai chi tiết chịu mài mòn nhiều nhất.</li>
+<li>Roller giúp giảm ma sát giữa xích và Sprocket.</li>
+<li>Pitch là thông số quan trọng nhất khi chọn xích.</li>
+<li>Chain và Sprocket phải cùng tiêu chuẩn (JIS/ISO/ANSI).</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2>
+
+5. Chain Materials
+
+</h2>
+
+<p>
+
+Vật liệu chế tạo xích quyết định khả năng chịu tải, tuổi thọ mỏi và khả năng chống mài mòn. Hầu hết Roller Chain công nghiệp được chế tạo từ thép hợp kim và trải qua quá trình nhiệt luyện để tăng độ cứng bề mặt.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Material</th>
+
+<th>Characteristics</th>
+
+<th>Typical Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Carbon Steel</td>
+
+<td>Giá thành thấp</td>
+
+<td>General Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>Alloy Steel</td>
+
+<td>Độ bền và tuổi thọ cao</td>
+
+<td>Heavy Duty</td>
+
+</tr>
+
+<tr>
+
+<td>Stainless Steel</td>
+
+<td>Chống ăn mòn</td>
+
+<td>Food & Pharmaceutical</td>
+
+</tr>
+
+<tr>
+
+<td>Nickel Plated Steel</td>
+
+<td>Chống gỉ nhẹ</td>
+
+<td>Packaging Machine</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Engineering Tip</strong>
+
+<p>
+
+Pin, Bushing và Roller thường được thấm cacbon (Carburizing) hoặc tôi cảm ứng (Induction Hardening) để tăng khả năng chống mài mòn.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+6. Chain Dimensions
+
+</h2>
+
+<p>
+
+Việc lựa chọn xích chủ yếu dựa trên các kích thước tiêu chuẩn. Trong đó <strong>Pitch (P)</strong> là thông số quan trọng nhất.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Dimension</th>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Pitch</td>
+
+<td>P</td>
+
+<td>Khoảng cách giữa hai chốt liên tiếp</td>
+
+</tr>
+
+<tr>
+
+<td>Roller Diameter</td>
+
+<td>d₁</td>
+
+<td>Đường kính con lăn</td>
+
+</tr>
+
+<tr>
+
+<td>Inner Width</td>
+
+<td>b₁</td>
+
+<td>Khoảng cách giữa hai má xích</td>
+
+</tr>
+
+<tr>
+
+<td>Pin Diameter</td>
+
+<td>d₂</td>
+
+<td>Đường kính chốt</td>
+
+</tr>
+
+<tr>
+
+<td>Plate Height</td>
+
+<td>h₂</td>
+
+<td>Chiều cao má xích</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+src="../../assets/img/chain/dimension.png"
+alt="Chain Dimension">
+
+<figcaption>
+
+Các kích thước cơ bản của Roller Chain
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>
+
+7. Chain Number
+
+</h2>
+
+<p>
+
+Roller Chain thường được ký hiệu theo tiêu chuẩn ANSI hoặc ISO/JIS. Mỗi mã xích tương ứng với một bước xích (Pitch) và khả năng chịu tải nhất định.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ANSI No.</th>
+
+<th>Pitch</th>
+
+<th>Typical Use</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#35</td>
+
+<td>9.525 mm</td>
+
+<td>Light Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>#40</td>
+
+<td>12.70 mm</td>
+
+<td>General Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>#50</td>
+
+<td>15.875 mm</td>
+
+<td>Industrial Equipment</td>
+
+</tr>
+
+<tr>
+
+<td>#60</td>
+
+<td>19.05 mm</td>
+
+<td>Heavy Machinery</td>
+
+</tr>
+
+<tr>
+
+<td>#80</td>
+
+<td>25.40 mm</td>
+
+<td>Large Conveyor</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+8. Chain Standards
+
+</h2>
+
+<p>
+
+Các nhà sản xuất trên thế giới sử dụng nhiều hệ tiêu chuẩn khác nhau. Khi thay thế xích hoặc Sprocket cần đảm bảo cùng hệ tiêu chuẩn.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Standard</th>
+
+<th>Region</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>ANSI B29.1</td>
+
+<td>USA</td>
+
+<td>American Roller Chain</td>
+
+</tr>
+
+<tr>
+
+<td>ISO 606</td>
+
+<td>International</td>
+
+<td>Roller Chain Dimensions</td>
+
+</tr>
+
+<tr>
+
+<td>JIS B1801</td>
+
+<td>Japan</td>
+
+<td>Japanese Roller Chain</td>
+
+</tr>
+
+<tr>
+
+<td>DIN 8187</td>
+
+<td>Germany</td>
+
+<td>European Standard</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>Note</strong>
+
+<p>
+
+Mặc dù nhiều kích thước tương đương nhau, không nên lắp lẫn Chain và Sprocket thuộc các tiêu chuẩn khác nhau nếu chưa xác nhận khả năng tương thích.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+9. Sprocket
+
+</h2>
+
+<p>
+
+Sprocket là bánh răng chuyên dụng ăn khớp với Chain. Tuổi thọ của bộ truyền phụ thuộc lớn vào chất lượng gia công răng và độ đồng tâm của Sprocket.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Component</th>
+
+<th>Function</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Hub</td>
+
+<td>Lắp với Shaft</td>
+
+</tr>
+
+<tr>
+
+<td>Teeth</td>
+
+<td>Ăn khớp với Roller</td>
+
+</tr>
+
+<tr>
+
+<td>Keyway</td>
+
+<td>Truyền Torque</td>
+
+</tr>
+
+<tr>
+
+<td>Bore</td>
+
+<td>Lỗ lắp trục</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+10. Number of Teeth
+
+</h2>
+
+<p>
+
+Số răng của Sprocket ảnh hưởng đến độ êm, tuổi thọ và hiệu suất truyền động.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Number of Teeth</th>
+
+<th>Recommendation</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>&lt; 17</td>
+
+<td>Không khuyến nghị</td>
+
+</tr>
+
+<tr>
+
+<td>17–21</td>
+
+<td>Có thể sử dụng</td>
+
+</tr>
+
+<tr>
+
+<td>21–25</td>
+
+<td>Tối ưu cho đa số ứng dụng</td>
+
+</tr>
+
+<tr>
+
+<td>&gt; 30</td>
+
+<td>Chuyển động rất êm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Engineering Tip</strong>
+
+<p>
+
+Trong nhiều ứng dụng công nghiệp, Sprocket chủ động thường được chọn từ 19 đến 25 răng để cân bằng giữa kích thước, tuổi thọ và độ êm khi vận hành.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+11. Transmission Ratio
+
+</h2>
+
+<p>
+
+Tỷ số truyền của bộ truyền xích được xác định theo số răng của hai Sprocket.
+
+</p>
+
+<pre><code>
+
+i = Z₂ / Z₁
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Z₁</td>
+
+<td>Driving Sprocket Teeth</td>
+
+</tr>
+
+<tr>
+
+<td>Z₂</td>
+
+<td>Driven Sprocket Teeth</td>
+
+</tr>
+
+<tr>
+
+<td>i</td>
+
+<td>Transmission Ratio</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+12. Chain Speed
+
+</h2>
+
+<p>
+
+Tốc độ của dây xích được tính theo đường kính vòng chia của Sprocket và tốc độ quay.
+
+</p>
+
+<pre><code>
+
+v = π × d × n / 60
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>v</td>
+
+<td>m/s</td>
+
+</tr>
+
+<tr>
+
+<td>d</td>
+
+<td>m</td>
+
+</tr>
+
+<tr>
+
+<td>n</td>
+
+<td>rpm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="note">
+
+<p>
+
+Đối với Roller Chain thông thường, tốc độ làm việc thường nằm trong khoảng <strong>0.5–15 m/s</strong>. Các loại xích và điều kiện bôi trơn đặc biệt có thể cho phép tốc độ cao hơn theo khuyến nghị của nhà sản xuất.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+13. Center Distance
+
+</h2>
+
+<p>
+
+Khoảng cách tâm giữa hai Sprocket cần đủ lớn để đảm bảo góc ôm và khả năng làm việc ổn định.
+
+</p>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Khuyến nghị khoảng cách tâm từ 30P đến 50P (P là Pitch).</li>
+
+<li>✓ Tránh khoảng cách quá ngắn làm giảm góc ôm.</li>
+
+<li>✓ Tránh khoảng cách quá dài gây võng xích và tăng dao động.</li>
+
+<li>✓ Bố trí cơ cấu tăng xích (Chain Tensioner) khi cần điều chỉnh độ chùng.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2>
+
+14. Pitch Diameter
+
+</h2>
+
+<p>
+
+Đường kính vòng chia (Pitch Diameter) là kích thước quan trọng dùng để tính tốc độ xích, khoảng cách tâm và lực truyền.
+
+</p>
+
+<pre><code>
+
+D = P / sin(180° / Z)
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>D</td>
+
+<td>Pitch Diameter</td>
+
+<td>mm</td>
+
+</tr>
+
+<tr>
+
+<td>P</td>
+
+<td>Chain Pitch</td>
+
+<td>mm</td>
+
+</tr>
+
+<tr>
+
+<td>Z</td>
+
+<td>Number of Teeth</td>
+
+<td>-</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="note">
+
+<p>
+
+Đường kính Pitch khác với đường kính ngoài của Sprocket và được sử dụng trong hầu hết các công thức tính toán truyền động xích.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+15. Chain Pull Force
+
+</h2>
+
+<p>
+
+Lực kéo trên dây xích là thông số quan trọng để kiểm tra khả năng chịu tải của xích và lựa chọn đúng kích cỡ.
+
+</p>
+
+<pre><code>
+
+Ft = 1000 × P / v
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+<th>Unit</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ft</td>
+
+<td>Chain Pull Force</td>
+
+<td>N</td>
+
+</tr>
+
+<tr>
+
+<td>P</td>
+
+<td>Power</td>
+
+<td>kW</td>
+
+</tr>
+
+<tr>
+
+<td>v</td>
+
+<td>Chain Speed</td>
+
+<td>m/s</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Sau khi tính lực kéo, nên chọn xích có tải trọng làm việc cho phép (Allowable Working Load) lớn hơn giá trị tính toán và áp dụng hệ số an toàn phù hợp.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+16. Chain Length Calculation
+
+</h2>
+
+<p>
+
+Chiều dài dây xích được xác định theo số mắt xích (Number of Links). Công thức gần đúng được sử dụng phổ biến trong thiết kế sơ bộ.
+
+</p>
+
+<pre><code>
+
+L = 2C/P + (Z₁ + Z₂)/2
+    + ((Z₂ − Z₁)² × P) / (4π²C)
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>L</td>
+
+<td>Number of Chain Pitches</td>
+
+</tr>
+
+<tr>
+
+<td>C</td>
+
+<td>Center Distance</td>
+
+</tr>
+
+<tr>
+
+<td>Z₁</td>
+
+<td>Driving Sprocket Teeth</td>
+
+</tr>
+
+<tr>
+
+<td>Z₂</td>
+
+<td>Driven Sprocket Teeth</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>
+
+Note
+
+</strong>
+
+<p>
+
+Sau khi tính toán, số mắt xích thường được làm tròn về số chẵn để phù hợp với cấu tạo tiêu chuẩn của Roller Chain.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+17. Power Capacity
+
+</h2>
+
+<p>
+
+Khả năng truyền công suất của Roller Chain phụ thuộc vào nhiều yếu tố:
+
+</p>
+
+<ul>
+
+<li>Chain Pitch</li>
+
+<li>Chain Speed</li>
+
+<li>Number of Teeth</li>
+
+<li>Lubrication</li>
+
+<li>Service Factor</li>
+
+<li>Shock Load</li>
+
+<li>Working Environment</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Condition</th>
+
+<th>Recommendation</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Continuous Operation</td>
+
+<td>Service Factor 1.2–1.4</td>
+
+</tr>
+
+<tr>
+
+<td>Light Shock</td>
+
+<td>1.4–1.6</td>
+
+</tr>
+
+<tr>
+
+<td>Heavy Shock</td>
+
+<td>1.8–2.5</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+18. Lubrication Methods
+
+</h2>
+
+<p>
+
+Bôi trơn đúng cách giúp giảm mài mòn giữa Pin và Bushing, đồng thời kéo dài đáng kể tuổi thọ của dây xích.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Method</th>
+
+<th>Speed Range</th>
+
+<th>Application</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Manual Lubrication</td>
+
+<td>Low</td>
+
+<td>Small Machines</td>
+
+</tr>
+
+<tr>
+
+<td>Oil Bath</td>
+
+<td>Medium</td>
+
+<td>Industrial Drives</td>
+
+</tr>
+
+<tr>
+
+<td>Oil Stream</td>
+
+<td>High</td>
+
+<td>High-Speed Chain</td>
+
+</tr>
+
+<tr>
+
+<td>Forced Circulation</td>
+
+<td>Very High</td>
+
+<td>Heavy Duty Systems</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+
+src="../../assets/img/chain/lubrication.png"
+
+alt="Chain Lubrication">
+
+<figcaption>
+
+Các phương pháp bôi trơn Chain Drive
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>
+
+19. Chain Tension
+
+</h2>
+
+<p>
+
+Dây xích không nên được căng hoàn toàn. Một lượng độ chùng nhỏ giúp bù sai số lắp ráp và giãn dài do mài mòn.
+
+</p>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Độ võng thường khoảng 2–3% khoảng cách tâm.</li>
+
+<li>✓ Kiểm tra sau khi chạy rà.</li>
+
+<li>✓ Điều chỉnh định kỳ khi Chain bị giãn.</li>
+
+<li>✓ Không để Chain quá căng vì sẽ làm tăng tải lên Bearing.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+20. Chain Tensioner & Idler
+
+</h2>
+
+<p>
+
+Khi khoảng cách tâm lớn hoặc không thể điều chỉnh vị trí trục, có thể sử dụng Chain Tensioner hoặc Idler Sprocket để duy trì lực căng thích hợp.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Device</th>
+
+<th>Purpose</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Fixed Idler</td>
+
+<td>Điều chỉnh độ chùng</td>
+
+</tr>
+
+<tr>
+
+<td>Spring Tensioner</td>
+
+<td>Tự động bù giãn dài</td>
+
+</tr>
+
+<tr>
+
+<td>Hydraulic Tensioner</td>
+
+<td>Tải trọng lớn</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Nên bố trí Idler trên nhánh chùng (Slack Side) của xích để giảm tải và tăng tuổi thọ cho toàn bộ hệ truyền động.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+21. Chain Selection Procedure
+
+</h2>
+
+<p>
+
+Quy trình lựa chọn Chain Drive thường gồm các bước sau:
+
+</p>
+
+<ol>
+
+<li>Xác định công suất và tốc độ động cơ.</li>
+
+<li>Tính tỷ số truyền.</li>
+
+<li>Chọn số răng Sprocket.</li>
+
+<li>Chọn Pitch của Chain.</li>
+
+<li>Tính Pitch Diameter.</li>
+
+<li>Tính lực kéo và kiểm tra tải cho phép.</li>
+
+<li>Xác định khoảng cách tâm.</li>
+
+<li>Tính chiều dài xích.</li>
+
+<li>Kiểm tra tốc độ xích.</li>
+
+<li>Lựa chọn phương pháp bôi trơn.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+22. Design Example
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>Motor Power</th>
+
+<td>2.2 kW</td>
+
+</tr>
+
+<tr>
+
+<th>Speed</th>
+
+<td>1450 rpm</td>
+
+</tr>
+
+<tr>
+
+<th>Chain</th>
+
+<td>ANSI #40</td>
+
+</tr>
+
+<tr>
+
+<th>Driving Sprocket</th>
+
+<td>20 Teeth</td>
+
+</tr>
+
+<tr>
+
+<th>Driven Sprocket</th>
+
+<td>40 Teeth</td>
+
+</tr>
+
+<tr>
+
+<th>Transmission Ratio</th>
+
+<td>2 : 1</td>
+
+</tr>
+
+<tr>
+
+<th>Center Distance</th>
+
+<td>500 mm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="success">
+
+<strong>
+
+Selection Summary
+
+</strong>
+
+<ul>
+
+<li>✓ Chọn Pitch theo công suất.</li>
+
+<li>✓ Kiểm tra lực kéo.</li>
+
+<li>✓ Chọn đúng tiêu chuẩn Chain và Sprocket.</li>
+
+<li>✓ Kiểm tra tốc độ làm việc.</li>
+
+<li>✓ Thiết kế hệ thống bôi trơn phù hợp.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2>
+
+23. Chain Wear
+
+</h2>
+
+<p>
+
+Trong quá trình làm việc, sự mài mòn xảy ra chủ yếu tại bề mặt tiếp xúc giữa Pin và Bushing. Khi khe hở tăng lên, bước xích (Pitch) tăng dần, dẫn đến hiện tượng giãn xích và ăn khớp kém với Sprocket.
+
+</p>
+
+<figure>
+
+<img
+src="../../assets/img/chain/chain-wear.png"
+alt="Chain Wear">
+
+<figcaption>
+
+Vị trí mài mòn chính của Roller Chain
+
+</figcaption>
+
+</figure>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Wear Location</th>
+
+<th>Main Cause</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Pin</td>
+
+<td>Sliding Friction</td>
+
+</tr>
+
+<tr>
+
+<td>Bushing</td>
+
+<td>Poor Lubrication</td>
+
+</tr>
+
+<tr>
+
+<td>Roller</td>
+
+<td>Impact with Sprocket</td>
+
+</tr>
+
+<tr>
+
+<td>Side Plate</td>
+
+<td>Misalignment</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+24. Chain Elongation
+
+</h2>
+
+<p>
+
+Hiện tượng "Chain Stretch" trong thực tế chủ yếu là do mài mòn của Pin và Bushing, không phải do vật liệu xích bị kéo giãn đàn hồi.
+
+</p>
+
+<pre><code>
+
+Elongation (%) =
+(Current Length − Original Length)
+÷ Original Length × 100
+
+</code></pre>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Elongation</th>
+
+<th>Recommendation</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>&lt; 1%</td>
+
+<td>Normal Operation</td>
+
+</tr>
+
+<tr>
+
+<td>1–2%</td>
+
+<td>Monitor Condition</td>
+
+</tr>
+
+<tr>
+
+<td>&gt; 2%</td>
+
+<td>Replace Chain</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="warning">
+
+<strong>
+
+Warning
+
+</strong>
+
+<p>
+
+Không nên thay riêng Chain hoặc riêng Sprocket khi đã mòn nhiều. Thông thường nên thay đồng thời cả hai để đảm bảo khả năng ăn khớp và kéo dài tuổi thọ.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+25. Sprocket Wear
+
+</h2>
+
+<p>
+
+Khi Chain bị giãn, tải trọng không còn phân bố đều trên các răng Sprocket, dẫn đến mài mòn nhanh và thay đổi hình dạng răng.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symptom</th>
+
+<th>Possible Cause</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Hook-shaped Teeth</td>
+
+<td>Normal Wear</td>
+
+</tr>
+
+<tr>
+
+<td>Uneven Wear</td>
+
+<td>Misalignment</td>
+
+</tr>
+
+<tr>
+
+<td>Broken Tooth</td>
+
+<td>Shock Load</td>
+
+</tr>
+
+<tr>
+
+<td>Rust</td>
+
+<td>Poor Environment</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+<img
+src="../../assets/img/chain/sprocket-wear.png"
+alt="Sprocket Wear">
+
+<figcaption>
+
+Ví dụ mài mòn răng Sprocket
+
+</figcaption>
+
+</figure>
+
+</section>
+
+<section>
+
+<h2>
+
+26. Lubrication Failure
+
+</h2>
+
+<p>
+
+Thiếu bôi trơn là nguyên nhân phổ biến nhất làm giảm tuổi thọ Chain Drive. Khi lớp dầu không đủ, ma sát giữa Pin và Bushing tăng mạnh, làm nhiệt độ tăng và mài mòn diễn ra nhanh hơn.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Condition</th>
+
+<th>Result</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Insufficient Lubrication</td>
+
+<td>Rapid Wear</td>
+
+</tr>
+
+<tr>
+
+<td>Wrong Oil</td>
+
+<td>Poor Penetration</td>
+
+</tr>
+
+<tr>
+
+<td>Dirty Oil</td>
+
+<td>Abrasive Wear</td>
+
+</tr>
+
+<tr>
+
+<td>No Lubrication</td>
+
+<td>Early Failure</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>
+
+Engineering Tip
+
+</strong>
+
+<p>
+
+Dầu bôi trơn cần thấm vào khe hở giữa Pin và Bushing. Việc chỉ bôi dầu lên bề mặt ngoài của Roller thường không mang lại hiệu quả đáng kể.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+27. Chain Vibration & Noise
+
+</h2>
+
+<p>
+
+Rung động và tiếng ồn có thể xuất hiện do tốc độ xích cao, sai lệch tâm, độ chùng không phù hợp hoặc Sprocket bị mòn.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Problem</th>
+
+<th>Possible Cause</th>
+
+<th>Solution</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Noise</td>
+
+<td>Worn Chain</td>
+
+<td>Replace Chain</td>
+
+</tr>
+
+<tr>
+
+<td>Vibration</td>
+
+<td>Loose Chain</td>
+
+<td>Adjust Tension</td>
+
+</tr>
+
+<tr>
+
+<td>Impact</td>
+
+<td>Damaged Teeth</td>
+
+<td>Replace Sprocket</td>
+
+</tr>
+
+<tr>
+
+<td>Jumping</td>
+
+<td>Chain Elongation</td>
+
+<td>Replace Chain</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+28. Installation Procedure
+
+</h2>
+
+<p>
+
+Quá trình lắp đặt đúng kỹ thuật giúp giảm mài mòn và kéo dài tuổi thọ của bộ truyền.
+
+</p>
+
+<ol>
+
+<li>Kiểm tra tiêu chuẩn của Chain và Sprocket.</li>
+
+<li>Kiểm tra độ đồng tâm của hai trục.</li>
+
+<li>Lắp Sprocket đúng vị trí và siết đúng mô-men.</li>
+
+<li>Lắp Chain và khóa mắt nối (Connecting Link).</li>
+
+<li>Điều chỉnh độ chùng theo khuyến nghị.</li>
+
+<li>Bôi trơn trước khi vận hành.</li>
+
+<li>Chạy thử và kiểm tra lại sau thời gian chạy rà.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+29. Maintenance Checklist
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Kiểm tra độ giãn xích định kỳ.</li>
+
+<li>✓ Kiểm tra mài mòn của Sprocket.</li>
+
+<li>✓ Kiểm tra và bổ sung dầu bôi trơn.</li>
+
+<li>✓ Kiểm tra độ chùng của xích.</li>
+
+<li>✓ Làm sạch bụi bẩn và dị vật.</li>
+
+<li>✓ Kiểm tra khóa mắt nối.</li>
+
+<li>✓ Kiểm tra tiếng ồn và rung động bất thường.</li>
+
+<li>✓ Thay Chain và Sprocket khi vượt giới hạn mài mòn.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+30. Common Design Mistakes
+
+</h2>
+
+<div class="warning">
+
+<ul>
+
+<li>✗ Chọn Pitch quá nhỏ cho tải trọng lớn.</li>
+
+<li>✗ Sử dụng Sprocket quá ít răng.</li>
+
+<li>✗ Không kiểm tra lực kéo của xích.</li>
+
+<li>✗ Khoảng cách tâm quá ngắn hoặc quá dài.</li>
+
+<li>✗ Không bố trí cơ cấu tăng xích khi cần thiết.</li>
+
+<li>✗ Không bôi trơn định kỳ.</li>
+
+<li>✗ Lắp Chain và Sprocket khác tiêu chuẩn.</li>
+
+<li>✗ Chỉ thay Chain hoặc chỉ thay Sprocket khi cả hai đã mòn.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+31. Design Recommendations
+
+</h2>
+
+<div class="success">
+
+<ul>
+
+<li>✓ Chọn số răng Sprocket chủ động từ 19–25 để vận hành êm.</li>
+
+<li>✓ Áp dụng Service Factor khi chọn xích.</li>
+
+<li>✓ Kiểm tra tải trọng làm việc và tuổi thọ theo catalogue.</li>
+
+<li>✓ Bôi trơn đúng phương pháp và đúng chu kỳ.</li>
+
+<li>✓ Duy trì độ chùng thích hợp để giảm tải cho Bearing.</li>
+
+<li>✓ Ưu tiên Chain và Sprocket cùng nhà sản xuất hoặc cùng tiêu chuẩn.</li>
+
+<li>✓ Thay đồng thời Chain và Sprocket khi mòn quá giới hạn.</li>
+
+<li>✓ Kiểm tra độ đồng tâm của hai trục trước khi vận hành.</li>
+
+</ul>
+
+</div>
+
+</section>
+<section id="reference">
+
+<h2>
+
+32. Chain Selection Quick Guide
+
+</h2>
+
+<p>
+
+Bảng dưới đây giúp lựa chọn nhanh loại xích phù hợp theo điều kiện làm việc. Sau khi chọn sơ bộ, cần kiểm tra lại theo công suất, lực kéo, tốc độ xích và điều kiện bôi trơn trong catalogue của nhà sản xuất.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Application</th>
+
+<th>Recommended Chain</th>
+
+<th>Main Reason</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>General Power Transmission</td>
+
+<td>Roller Chain</td>
+
+<td>High Efficiency & Widely Available</td>
+
+</tr>
+
+<tr>
+
+<td>High-Speed Drive</td>
+
+<td>Silent Chain</td>
+
+<td>Low Noise</td>
+
+</tr>
+
+<tr>
+
+<td>Forklift Mast</td>
+
+<td>Leaf Chain</td>
+
+<td>High Tensile Strength</td>
+
+</tr>
+
+<tr>
+
+<td>Conveyor System</td>
+
+<td>Conveyor Chain</td>
+
+<td>Stable Material Transport</td>
+
+</tr>
+
+<tr>
+
+<td>Long Center Distance</td>
+
+<td>Double Pitch Chain</td>
+
+<td>Lower Weight & Cost</td>
+
+</tr>
+
+<tr>
+
+<td>Mining / Steel Plant</td>
+
+<td>Engineering Steel Chain</td>
+
+<td>Heavy Duty Service</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+33. Related Standards
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Standard</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>ISO 606</td>
+
+<td>Roller Chains, Attachments and Sprockets</td>
+
+</tr>
+
+<tr>
+
+<td>ANSI B29.1</td>
+
+<td>Precision Power Transmission Roller Chains</td>
+
+</tr>
+
+<tr>
+
+<td>JIS B1801</td>
+
+<td>Roller Chains</td>
+
+</tr>
+
+<tr>
+
+<td>DIN 8187</td>
+
+<td>European Roller Chain Standard</td>
+
+</tr>
+
+<tr>
+
+<td>DIN 8188</td>
+
+<td>British Standard Roller Chain</td>
+
+</tr>
+
+<tr>
+
+<td>ISO 10823</td>
+
+<td>Selection of Roller Chain Drives</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+34. Downloads
+
+</h2>
+
+<div class="download-grid">
+
+<div class="download-card">
+
+<h3>
+
+PDF
+
+</h3>
+
+<p>
+
+Chain Drive Design Handbook
+
+</p>
+
+<a href="../../assets/download/chain/chain-design.pdf">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+Excel
+
+</h3>
+
+<p>
+
+Chain Drive Calculator
+
+</p>
+
+<a href="../../assets/download/chain/chain-calculator.xlsx">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card">
+
+<h3>
+
+CAD
+
+</h3>
+
+<p>
+
+Standard Sprocket Library
+
+</p>
+
+<a href="../../assets/download/chain/sprocket-library.zip">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+35. Recommended Video
+
+</h2>
+
+<div class="video-wrapper">
+
+<iframe
+
+width="100%"
+
+height="500"
+
+src="https://www.youtube.com/embed/xxxxxxxx"
+
+title="Chain Drive Design"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+36. References
+
+</h2>
+
+<ol>
+
+<li>Tsubaki Chain Engineering Handbook.</li>
+
+<li>Renold Transmission Chain Catalogue.</li>
+
+<li>DID Roller Chain Technical Guide.</li>
+
+<li>SKF Power Transmission Handbook.</li>
+
+<li>ISO 606 - Roller Chains.</li>
+
+<li>ISO 10823 - Selection of Roller Chain Drives.</li>
+
+<li>ANSI B29.1 - Precision Roller Chains.</li>
+
+<li>Shigley's Mechanical Engineering Design.</li>
+
+<li>Machinery's Handbook.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>
+
+37. Related Articles
+
+</h2>
+
+<div class="related-grid">
+
+<a class="card" href="shaft.html">
+
+<h3>
+
+Shaft Design
+
+</h3>
+
+<p>
+
+Thiết kế trục máy và tính toán độ bền.
+
+</p>
+
+</a>
+
+<a class="card" href="bearing.html">
+
+<h3>
+
+Bearing Selection
+
+</h3>
+
+<p>
+
+Lựa chọn ổ lăn và tính toán tuổi thọ.
+
+</p>
+
+</a>
+
+<a class="card" href="gear.html">
+
+<h3>
+
+Gear Design
+
+</h3>
+
+<p>
+
+Thiết kế bộ truyền bánh răng.
+
+</p>
+
+</a>
+
+<a class="card" href="coupling.html">
+
+<h3>
+
+Coupling Design
+
+</h3>
+
+<p>
+
+Lựa chọn khớp nối trục và tính toán mô-men xoắn.
+
+</p>
+
+</a>
+
+<a class="card" href="belt.html">
+
+<h3>
+
+Belt Drive
+
+</h3>
+
+<p>
+
+Thiết kế bộ truyền đai và lựa chọn Pulley.
+
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+38. Article Information
+
+</h2>
+
+<table>
+
+<tbody>
+
+<tr>
+
+<th>Category</th>
+
+<td>Machine Design</td>
+
+</tr>
+
+<tr>
+
+<th>Difficulty</th>
+
+<td>Intermediate</td>
+
+</tr>
+
+<tr>
+
+<th>Estimated Reading Time</th>
+
+<td>45 Minutes</td>
+
+</tr>
+
+<tr>
+
+<th>Last Updated</th>
+
+<td>2026-07-19</td>
+
+</tr>
+
+<tr>
+
+<th>Version</th>
+
+<td>1.0</td>
+
+</tr>
+
+<tr>
+
+<th>Author</th>
+
+<td>Tuấn Lê</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div class="author-box">
+
+<img
+
+src="../../assets/img/author/avatar.png"
+
+alt="Author">
+
+<div>
+
+<h3>
+
+Tuấn Lê
+
+</h3>
+
+<p>
+
+Mechanical Design Engineer
+
+</p>
+
+<p>
+
+JapanTech được xây dựng nhằm chia sẻ kiến thức thực tế về thiết kế máy, tiêu chuẩn JIS/ISO, CAD, VB.NET và kinh nghiệm làm việc tại Nhật Bản. Nội dung được biên soạn theo hướng thực hành, giúp kỹ sư có thể áp dụng trực tiếp trong thiết kế và lựa chọn bộ truyền động.
+
+</p>
+
+</div>
+
+</div>
+
+</article>
+
+</main>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+JapanTech
+
+</h3>
+
+<p>
+
+Engineering Knowledge Platform
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+
+Knowledge
+
+</h3>
+
+<ul>
+
+<li><a href="../machine-design/index.html">Machine Design</a></li>
+<li><a href="../material/index.html">Material</a></li>
+<li><a href="../cad/index.html">CAD</a></li>
+<li><a href="../grinding/index.html">Grinding</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Resources
+
+</h3>
+
+<ul>
+
+<li><a href="../../resources.html">Engineering Standards</a></li>
+<li><a href="../../tools.html">Engineering Tools</a></li>
+<li><a href="../../roadmap.html">Learning Roadmap</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+Email: contact@japantech.jp
+
+</p>
+
+<p>
+
+GitHub Pages
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 JapanTech. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="../../js/main.js"></script>
+<script src="../../js/article.js"></script>
+
+</body>
+
+</html>
