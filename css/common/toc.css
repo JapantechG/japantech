@@ -1,0 +1,197 @@
+/* ===========================================================
+   TABLE OF CONTENTS
+=========================================================== */
+
+.article-toc{
+
+    position:sticky;
+
+    top:90px;
+
+    align-self:start;
+
+    width:100%;
+
+    padding:20px;
+
+    background:#ffffff;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+
+}
+
+/* ===========================================================
+   TITLE
+=========================================================== */
+
+.article-toc h3{
+
+    margin:0 0 18px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+/* ===========================================================
+   LIST
+=========================================================== */
+
+.article-toc ul{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.article-toc li{
+
+    margin:6px 0;
+
+}
+
+/* ===========================================================
+   LINK
+=========================================================== */
+
+.article-toc a{
+
+    display:block;
+
+    padding:8px 12px;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    transition:.2s;
+
+}
+
+.article-toc a:hover{
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+}
+
+/* ===========================================================
+   ACTIVE LINK
+=========================================================== */
+
+.article-toc a.active{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+/* ===========================================================
+   SUB LIST
+=========================================================== */
+
+.article-toc ul ul{
+
+    margin-left:14px;
+
+    margin-top:4px;
+
+    border-left:2px solid var(--border);
+
+    padding-left:10px;
+
+}
+
+.article-toc ul ul a{
+
+    font-size:13px;
+
+}
+
+/* ===========================================================
+   SCROLL BAR
+=========================================================== */
+
+.article-toc{
+
+    max-height:calc(100vh - 120px);
+
+    overflow:auto;
+
+}
+
+.article-toc::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.article-toc::-webkit-scrollbar-thumb{
+
+    background:#c8c8c8;
+
+    border-radius:10px;
+
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width:992px){
+
+    .article-toc{
+
+        position:static;
+
+        margin-top:40px;
+
+        max-height:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .article-toc{
+
+        padding:16px;
+
+    }
+
+    .article-toc h3{
+
+        font-size:16px;
+
+    }
+
+    .article-toc a{
+
+        padding:10px;
+
+        font-size:14px;
+
+    }
+
+}

@@ -1,0 +1,165 @@
+/* ===========================================================
+   CALLOUT - COMMON
+=========================================================== */
+
+.callout{
+
+    position:relative;
+
+    margin:24px 0;
+
+    padding:18px 20px;
+
+    border-left:5px solid;
+
+    border-radius:8px;
+
+    line-height:1.8;
+
+}
+
+.callout-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+.callout p:last-child{
+
+    margin-bottom:0;
+
+}
+
+.callout ul,
+
+.callout ol{
+
+    margin:12px 0 0 20px;
+
+}
+
+
+/* ===========================================================
+   TIP
+=========================================================== */
+
+.callout-tip{
+
+    background:#eefaf2;
+
+    border-color:#22c55e;
+
+}
+
+.callout-tip .callout-title{
+
+    color:#15803d;
+
+}
+
+
+/* ===========================================================
+   INFO
+=========================================================== */
+
+.callout-info{
+
+    background:#eef6ff;
+
+    border-color:#2563eb;
+
+}
+
+.callout-info .callout-title{
+
+    color:#1d4ed8;
+
+}
+
+
+/* ===========================================================
+   NOTE
+=========================================================== */
+
+.callout-note{
+
+    background:#fafafa;
+
+    border-color:#6b7280;
+
+}
+
+.callout-note .callout-title{
+
+    color:#374151;
+
+}
+
+
+/* ===========================================================
+   WARNING
+=========================================================== */
+
+.callout-warning{
+
+    background:#fff8e6;
+
+    border-color:#f59e0b;
+
+}
+
+.callout-warning .callout-title{
+
+    color:#b45309;
+
+}
+
+
+/* ===========================================================
+   DANGER
+=========================================================== */
+
+.callout-danger{
+
+    background:#fff0f0;
+
+    border-color:#dc2626;
+
+}
+
+.callout-danger .callout-title{
+
+    color:#b91c1c;
+
+}
+
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width:768px){
+
+    .callout{
+
+        padding:16px;
+
+    }
+
+    .callout-title{
+
+        font-size:15px;
+
+    }
+
+}

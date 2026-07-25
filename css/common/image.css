@@ -1,0 +1,173 @@
+/* ===========================================================
+   ARTICLE IMAGE
+=========================================================== */
+
+.article-content figure{
+
+    margin:40px 0;
+
+}
+
+.article-content figure img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    background:#ffffff;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+
+}
+
+
+/* ===========================================================
+   FIGURE CAPTION
+=========================================================== */
+
+.article-content figcaption{
+
+    margin-top:12px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:var(--text-light);
+
+    line-height:1.6;
+
+}
+
+
+/* ===========================================================
+   IMAGE ALIGN
+=========================================================== */
+
+.img-left{
+
+    float:left;
+
+    margin:8px 24px 16px 0;
+
+    max-width:45%;
+
+}
+
+.img-right{
+
+    float:right;
+
+    margin:8px 0 16px 24px;
+
+    max-width:45%;
+
+}
+
+.img-center{
+
+    display:block;
+
+    margin:0 auto;
+
+}
+
+
+/* ===========================================================
+   IMAGE SIZE
+=========================================================== */
+
+.img-small{
+
+    max-width:320px;
+
+}
+
+.img-medium{
+
+    max-width:640px;
+
+}
+
+.img-large{
+
+    max-width:960px;
+
+}
+
+.img-full{
+
+    width:100%;
+
+}
+
+
+/* ===========================================================
+   IMAGE GRID
+=========================================================== */
+
+.image-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:20px;
+
+    margin:40px 0;
+
+}
+
+.image-grid figure{
+
+    margin:0;
+
+}
+
+
+/* ===========================================================
+   CLEAR FLOAT
+=========================================================== */
+
+.article-content::after{
+
+    content:"";
+
+    display:block;
+
+    clear:both;
+
+}
+
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width:768px){
+
+    .img-left,
+
+    .img-right{
+
+        float:none;
+
+        max-width:100%;
+
+        margin:0 0 24px;
+
+    }
+
+    .article-content figure{
+
+        margin:28px 0;
+
+    }
+
+}

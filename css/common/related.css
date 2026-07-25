@@ -1,0 +1,73 @@
+/*
+==========================================================
+RELATED ARTICLES
+==========================================================
+*/
+
+.related{
+
+    margin-top:64px;
+
+}
+
+.related h2{
+
+    margin-bottom:24px;
+
+}
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+}
+
+.related-card{
+
+    display:block;
+
+    padding:20px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:.25s;
+
+}
+
+.related-card:hover{
+
+    border-color:#2563eb;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.related-card h3{
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.related-card p{
+
+    color:#6b7280;
+
+    line-height:1.7;
+
+}
