@@ -1,0 +1,515 @@
+/* ==========================================================
+   ABOUT PAGE
+   ========================================================== */
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+
+.hero {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+
+    color: #ffffff;
+
+}
+
+.hero-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.hero-subtitle {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 6px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.12);
+
+    font-size: .9rem;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+.hero h1 {
+
+    margin-bottom: 25px;
+
+    font-size: clamp(2rem,5vw,3.5rem);
+
+    line-height: 1.2;
+
+}
+
+.hero p {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    opacity: .92;
+
+}
+
+/* ==========================================================
+   Section
+   ========================================================== */
+
+.section {
+
+    padding: 80px 20px;
+
+}
+
+.section--gray {
+
+    background: #f7f8fb;
+
+}
+
+.section--primary {
+
+    background: #0f172a;
+
+    color: white;
+
+}
+
+.section--accent {
+
+    background: linear-gradient(135deg,#eff6ff,#ffffff);
+
+}
+
+.section-title {
+
+    max-width: 760px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+}
+
+.section-subtitle {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 2.2rem;
+
+}
+
+.section-title p {
+
+    color: #666;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================================
+   Paragraph
+   ========================================================== */
+
+.content-block {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.content-block p {
+
+    margin-bottom: 20px;
+
+    line-height: 1.9;
+
+    text-align: justify;
+
+}
+
+/* ==========================================================
+   Card Grid
+   ========================================================== */
+
+.about-grid {
+
+    display: grid;
+
+    gap: 30px;
+
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+
+}
+
+.about-card {
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+
+    transition: .25s;
+
+}
+
+.about-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.15);
+
+}
+
+.about-card h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 1.25rem;
+
+}
+
+.about-card p {
+
+    line-height: 1.8;
+
+    color: #555;
+
+}
+
+/* ==========================================================
+   Icon
+   ========================================================== */
+
+.about-icon {
+
+    margin-bottom: 18px;
+
+    font-size: 2.4rem;
+
+}
+
+/* ==========================================================
+   Roadmap
+   ========================================================== */
+
+.roadmap {
+
+    display: grid;
+
+    gap: 30px;
+
+}
+
+.roadmap-card {
+
+    padding: 30px;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+
+}
+
+.roadmap-number {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 6px 14px;
+
+    border-radius: 30px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: .9rem;
+
+}
+
+.roadmap-card h3 {
+
+    margin-bottom: 18px;
+
+}
+
+.roadmap-card ul {
+
+    margin-left: 20px;
+
+}
+
+.roadmap-card li {
+
+    margin-bottom: 10px;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================================
+   FAQ
+   ========================================================== */
+
+.faq {
+
+    max-width: 950px;
+
+    margin: auto;
+
+}
+
+.faq-item {
+
+    margin-bottom: 25px;
+
+    padding: 28px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+
+}
+
+.faq-item h3 {
+
+    margin-bottom: 14px;
+
+    color: #2563eb;
+
+}
+
+.faq-item p {
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================================
+   Quote
+   ========================================================== */
+
+.about-quote {
+
+    margin: 40px 0;
+
+    padding: 35px;
+
+    border-left: 5px solid #2563eb;
+
+    background: #f4f8ff;
+
+    font-size: 1.35rem;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+}
+
+/* ==========================================================
+   Contact
+   ========================================================== */
+
+.about-contact {
+
+    display: grid;
+
+    gap: 30px;
+
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+}
+
+.contact-item {
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 5px 16px rgba(0,0,0,.08);
+
+}
+
+.contact-item h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.contact-item p {
+
+    margin-bottom: 20px;
+
+    line-height: 1.8;
+
+}
+
+.contact-item a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+.contact-item a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* ==========================================================
+   Closing
+   ========================================================== */
+
+.about-closing {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+.about-closing blockquote {
+
+    margin-bottom: 30px;
+
+    font-size: clamp(1.5rem,3vw,2rem);
+
+    font-style: italic;
+
+    color: #2563eb;
+
+}
+
+.about-closing p {
+
+    margin-bottom: 20px;
+
+    line-height: 1.9;
+
+}
+
+/* ==========================================================
+   Button
+   ========================================================== */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .25s;
+
+}
+
+.button:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width:768px){
+
+    .hero{
+
+        padding:70px 20px;
+
+    }
+
+    .section{
+
+        padding:60px 20px;
+
+    }
+
+    .section-title{
+
+        margin-bottom:40px;
+
+    }
+
+    .about-card{
+
+        padding:24px;
+
+    }
+
+    .roadmap-card{
+
+        padding:24px;
+
+    }
+
+}

@@ -1,0 +1,192 @@
+.category-hero{
+
+    padding:80px 0;
+
+    background:#f8fafc;
+
+    text-align:center;
+
+}
+
+.category-hero__tag{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#e8f1ff;
+
+    color:#0066cc;
+
+    font-weight:600;
+
+}
+
+.category-hero__title{
+
+    font-size:48px;
+
+    margin-bottom:24px;
+
+}
+
+.category-hero__description{
+
+    max-width:850px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+.category-content{
+
+    padding:80px 0;
+
+}
+/* ==========================================================
+   Category Search
+========================================================== */
+
+.category-search{
+
+    padding:40px 0;
+
+}
+
+.category-search__wrapper{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.category-search__wrapper input{
+
+    flex:1;
+
+    height:52px;
+
+    padding:0 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+}
+
+.category-search__wrapper button{
+
+    width:140px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#0066cc;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================================
+   Pagination
+========================================================== */
+
+.pagination{
+
+    padding:70px 0;
+
+}
+
+.pagination__nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.pagination__button,
+.pagination__number{
+
+    min-width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0 18px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    background:#ffffff;
+
+    transition:.2s;
+
+}
+
+.pagination__button:hover,
+.pagination__number:hover{
+
+    border-color:#0066cc;
+
+    color:#0066cc;
+
+}
+
+.pagination__number--active{
+
+    background:#0066cc;
+
+    border-color:#0066cc;
+
+    color:#ffffff;
+
+}
+
+.pagination__button--disabled{
+
+    opacity:.45;
+
+    pointer-events:none;
+
+}
+
+.pagination__ellipsis{
+
+    padding:0 6px;
+
+    color:#888;
+
+}
