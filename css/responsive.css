@@ -1,0 +1,300 @@
+/* ==========================================================
+   RESPONSIVE
+   JapanTech Website
+========================================================== */
+
+/* ==========================================================
+   Large Desktop
+========================================================== */
+
+@media (max-width:1400px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+}
+
+/* ==========================================================
+   Laptop
+========================================================== */
+
+@media (max-width:1200px){
+
+    /* ---------- Header ---------- */
+
+    .header-nav{
+
+        gap:20px;
+
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero-title{
+
+        font-size:42px;
+
+    }
+
+    .hero-description{
+
+        font-size:17px;
+
+    }
+
+    /* ---------- About ---------- */
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+}
+
+/* ==========================================================
+   Tablet
+========================================================== */
+
+@media (max-width:992px){
+
+    /* ---------- Header ---------- */
+
+   .header__nav{
+
+    display:none;
+
+}
+
+.header__menu-button{
+
+    display:flex;
+
+}
+
+    /* ---------- Hero ---------- */
+
+    .hero{
+
+        padding:80px 0;
+
+    }
+
+    .hero-title{
+
+        font-size:36px;
+
+    }
+
+    /* ---------- Search ---------- */
+
+    .search-form{
+
+        flex-direction:column;
+
+    }
+
+    .search-form button{
+
+        width:100%;
+
+        height:54px;
+
+    }
+
+    /* ---------- Categories ---------- */
+
+    .category-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    /* ---------- Latest ---------- */
+
+    .article-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ---------- Learning Path ---------- */
+
+    .learning-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    /* ---------- Statistics ---------- */
+
+    .statistics-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width:768px){
+
+    .home-section{
+
+        padding:60px 0;
+
+    }
+
+    .section-title{
+
+        font-size:30px;
+
+    }
+
+    .section-description{
+
+        font-size:16px;
+
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero{
+
+        padding:60px 0;
+
+    }
+
+    .hero-title{
+
+        font-size:32px;
+
+    }
+
+    .hero-description{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+    }
+
+    /* ---------- Categories ---------- */
+
+    .category-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ---------- Learning ---------- */
+
+    .learning-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* ---------- Statistics ---------- */
+
+    .statistics-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================================
+   Small Mobile
+========================================================== */
+
+@media (max-width:576px){
+
+    .hero-title{
+
+        font-size:28px;
+
+    }
+
+    .section-title{
+
+        font-size:26px;
+
+    }
+
+    .category-card{
+
+        padding:24px;
+
+    }
+
+    .learning-card{
+
+        padding:24px;
+
+    }
+
+    .highlight-card{
+
+        padding:24px;
+
+    }
+
+    .stat-card{
+
+        padding:30px 20px;
+
+    }
+
+}
+
+/* ==========================================================
+   Footer
+========================================================== */
+
+@media (max-width:992px){
+
+    .footer__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .footer__grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .footer__top{
+
+        padding:50px 0;
+
+    }
+
+}
