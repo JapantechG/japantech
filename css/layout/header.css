@@ -1,0 +1,147 @@
+/* ==========================================================
+   Header
+========================================================== */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:#ffffff;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.header__wrapper{
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.header__logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-decoration:none;
+
+}
+
+.header__logo-main{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#0066cc;
+
+}
+
+.header__logo-sub{
+
+    font-size:12px;
+
+    color:#888;
+
+}
+
+.header__nav{
+
+    margin-left:auto;
+
+}
+
+.header__menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+.header__menu a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    font-weight:500;
+
+    transition:.2s;
+
+}
+
+.header__menu a:hover{
+
+    color:#0066cc;
+
+}
+
+.header__menu a.is-active{
+
+    color:#0066cc;
+
+    font-weight:600;
+
+}
+
+.header__actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-left:30px;
+
+}
+
+.header__theme,
+
+.header__menu-button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#f4f4f4;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.header__theme:hover,
+
+.header__menu-button:hover{
+
+    background:#e8e8e8;
+
+}
+
+.header__menu-button{
+
+    display:none;
+
+}
