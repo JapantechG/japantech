@@ -1,68 +1,86 @@
+/* ==========================================
+   Back To Top
+========================================== */
+
 .back-to-top{
 
     position:fixed;
 
-    right:32px;
+    right:24px;
 
-    bottom:32px;
+    bottom:24px;
 
-    width:52px;
+    width:56px;
 
-    height:52px;
+    height:56px;
 
     border:none;
 
     border-radius:50%;
 
+    background:#2563eb;
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     cursor:pointer;
 
-    font-size:22px;
+    z-index:999999;
 
-    opacity:0;
-
-    visibility:hidden;
-
-    transform:translateY(20px);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 
     transition:all .25s ease;
-
-    background:var(--primary);
-
-    color:#fff;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-
-    z-index:999;
-
-}
-
-.back-to-top.show{
-
-    opacity:1;
-
-    visibility:visible;
-
-    transform:translateY(0);
 
 }
 
 .back-to-top:hover{
 
-    transform:translateY(-3px);
+    background:#1d4ed8;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.30);
 
 }
 
-@media(max-width:768px){
+.back-to-top:active{
+
+    transform:scale(.95);
+
+}
+
+.back-to-top__icon{
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    line-height:1;
+
+}
+
+@media (max-width:768px){
 
     .back-to-top{
 
-        width:46px;
+        width:48px;
 
-        height:46px;
+        height:48px;
 
-        right:20px;
+        right:16px;
 
-        bottom:20px;
+        bottom:16px;
+
+    }
+
+    .back-to-top__icon{
+
+        font-size:22px;
 
     }
 
