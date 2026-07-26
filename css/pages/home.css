@@ -653,3 +653,311 @@
     color:#666;
 
 }
+
+/* ==========================================================
+   Featured Articles
+========================================================== */
+
+.home-featured{
+
+    padding:80px 0;
+
+    background:#f8fafc;
+
+}
+
+.home-featured .article-grid{
+
+    margin-top:50px;
+
+}
+
+
+/* ==========================================================
+   Newsletter
+========================================================== */
+
+.home-newsletter{
+
+    padding:90px 0;
+
+    background:linear-gradient(180deg,#eef5ff 0%,#ffffff 100%);
+
+}
+
+.newsletter-box{
+
+    max-width:760px;
+
+    margin:auto;
+
+    padding:60px;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    border:1px solid #e6e6e6;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.newsletter-box h2{
+
+    font-size:38px;
+
+    margin-bottom:18px;
+
+}
+
+.newsletter-box p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.newsletter-form{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+}
+
+.newsletter-form input{
+
+    flex:1;
+
+    max-width:420px;
+
+    height:56px;
+
+    padding:0 20px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.newsletter-form input:focus{
+
+    outline:none;
+
+    border-color:#0066cc;
+
+}
+
+.newsletter-form button{
+
+    border:none;
+
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.home-cta{
+
+    padding:90px 0;
+
+    background:linear-gradient(180deg,#eef6ff,#ffffff);
+
+    text-align:center;
+
+}
+
+.cta-box{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+.cta-box h2{
+
+    font-size:38px;
+
+    color:#18324d;
+
+    margin-bottom:22px;
+
+}
+
+.cta-box p{
+
+    font-size:18px;
+
+    color:#64748b;
+
+    line-height:1.9;
+
+}
+
+.cta-buttons{
+
+    margin-top:36px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* Button */
+
+.cta-buttons .btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:180px;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    border:2px solid transparent;
+
+}
+
+.cta-buttons .btn--primary{
+
+    background:#2b7fff;
+
+    color:#fff;
+
+    border-color:#2b7fff;
+
+}
+
+.cta-buttons .btn--primary:hover{
+
+    background:#1b6ee6;
+
+    border-color:#1b6ee6;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 24px rgba(43,127,255,.25);
+
+}
+
+.cta-buttons .btn--secondary{
+
+    background:#ffffff;
+
+    color:#2b7fff;
+
+    border-color:#2b7fff;
+
+}
+
+.cta-buttons .btn--secondary:hover{
+
+    background:#eef6ff;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(43,127,255,.12);
+
+}
+
+
+
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:768px){
+
+    .newsletter-box{
+
+        padding:35px 25px;
+
+    }
+
+    .newsletter-box h2{
+
+        font-size:30px;
+
+    }
+
+    .newsletter-form{
+
+        flex-direction:column;
+
+    }
+
+    .newsletter-form input{
+
+        max-width:100%;
+
+    }
+
+    .newsletter-form button{
+
+        width:100%;
+
+        height:56px;
+
+    }
+
+     .cta-box h2{
+
+        font-size:30px;
+
+    }
+
+    .cta-box p{
+
+        font-size:16px;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .cta-buttons .btn{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+}
