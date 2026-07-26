@@ -1,12 +1,14 @@
 class BackToTop {
 
-    constructor(buttonId = "backToTop") {
+    constructor() {
 
-        this.button = document.getElementById(buttonId);
+        this.button = document.getElementById("backToTop");
 
         if (!this.button) return;
 
-        this.scrollThreshold = 300;
+        this.showOffset = 400;
+
+        this.ticking = false;
 
         this.init();
 
@@ -14,44 +16,51 @@ class BackToTop {
 
     init() {
 
-        window.addEventListener(
-            "scroll",
-            () => this.toggle()
-        );
+        this.handleScroll();
 
-        this.button.addEventListener(
-            "click",
-            () => this.scrollTop()
-        );
+        window.addEventListener("scroll", () => {
 
-        this.toggle();
+            if (!this.ticking) {
+
+                window.requestAnimationFrame(() => {
+
+                    this.handleScroll();
+
+                    this.ticking = false;
+
+                });
+
+                this.ticking = true;
+
+            }
+
+        });
+
+        this.button.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
 
     }
 
-    toggle() {
+    handleScroll() {
 
-        if (window.scrollY > this.scrollThreshold) {
+        if (window.scrollY > this.showOffset) {
 
             this.button.classList.add("show");
 
-        }
-        else {
+        } else {
 
             this.button.classList.remove("show");
 
         }
-
-    }
-
-    scrollTop() {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
 
     }
 
