@@ -3,350 +3,600 @@
         "id": 1,
         "word": "衰える",
         "reading": "おとろえる",
-        "answer": "Suy yếu",
-        "choices": ["Suy yếu", "Vượt qua", "Bổ sung", "Trì hoãn"]
+        "meaning": "Suy yếu, suy giảm"
     },
     {
         "id": 2,
         "word": "残酷",
         "reading": "ざんこく",
-        "answer": "Tàn khốc",
-        "choices": ["Tàn khốc", "Phức tạp", "Nghiêm túc", "Đáng tiếc"]
+        "meaning": "Tàn khốc, tàn nhẫn"
     },
     {
         "id": 3,
         "word": "促す",
         "reading": "うながす",
-        "answer": "Thúc giục",
-        "choices": ["Thúc giục", "Từ chối", "Quan sát", "Che giấu"]
+        "meaning": "Thúc giục, thúc đẩy"
     },
     {
         "id": 4,
         "word": "覆す",
         "reading": "くつがえす",
-        "answer": "Lật ngược",
-        "choices": ["Lật ngược", "Bảo vệ", "Phân chia", "Duy trì"]
+        "meaning": "Lật ngược, đảo ngược"
     },
     {
         "id": 5,
         "word": "著しい",
         "reading": "いちじるしい",
-        "answer": "Đáng kể",
-        "choices": ["Đáng kể", "Bình thường", "Mơ hồ", "Yên tĩnh"]
+        "meaning": "Đáng kể, rõ rệt"
     },
     {
         "id": 6,
         "word": "免れる",
         "reading": "まぬがれる",
-        "answer": "Thoát khỏi",
-        "choices": ["Thoát khỏi", "Chấp nhận", "Tiến hành", "Đối mặt"]
+        "meaning": "Thoát khỏi, tránh khỏi"
     },
     {
         "id": 7,
         "word": "妨げる",
         "reading": "さまたげる",
-        "answer": "Cản trở",
-        "choices": ["Cản trở", "Khuyến khích", "Thay đổi", "Xác nhận"]
+        "meaning": "Cản trở, gây trở ngại"
     },
     {
         "id": 8,
         "word": "乏しい",
         "reading": "とぼしい",
-        "answer": "Thiếu thốn",
-        "choices": ["Thiếu thốn", "Phong phú", "Ổn định", "Chính xác"]
+        "meaning": "Thiếu thốn, ít ỏi"
     },
     {
         "id": 9,
         "word": "滞る",
         "reading": "とどこおる",
-        "answer": "Đình trệ",
-        "choices": ["Đình trệ", "Phát triển", "Lan rộng", "Hoàn thành"]
+        "meaning": "Đình trệ, chậm trễ"
     },
     {
         "id": 10,
         "word": "阻む",
         "reading": "はばむ",
-        "answer": "Ngăn cản",
-        "choices": ["Ngăn cản", "Thừa nhận", "Bù đắp", "Dự đoán"]
+        "meaning": "Ngăn cản, cản trở"
     },
     {
         "id": 11,
         "word": "廃れる",
         "reading": "すたれる",
-        "answer": "Trở nên lỗi thời",
-        "choices": ["Trở nên lỗi thời", "Trở nên phổ biến", "Được phục hồi", "Được mở rộng"]
+        "meaning": "Mai một, lỗi thời"
     },
     {
         "id": 12,
         "word": "携わる",
         "reading": "たずさわる",
-        "answer": "Tham gia vào",
-        "choices": ["Tham gia vào", "Từ bỏ", "Phản đối", "Tránh né"]
+        "meaning": "Tham gia, liên quan đến"
     },
     {
         "id": 13,
         "word": "培う",
         "reading": "つちかう",
-        "answer": "Bồi dưỡng",
-        "choices": ["Bồi dưỡng", "Phá hủy", "Cắt giảm", "Thay thế"]
+        "meaning": "Bồi dưỡng, vun đắp"
     },
     {
         "id": 14,
         "word": "伴う",
         "reading": "ともなう",
-        "answer": "Đi kèm",
-        "choices": ["Đi kèm", "Tách rời", "Ngăn chặn", "Kết thúc"]
+        "meaning": "Đi kèm, kéo theo"
     },
     {
         "id": 15,
         "word": "損なう",
         "reading": "そこなう",
-        "answer": "Làm tổn hại",
-        "choices": ["Làm tổn hại", "Cải thiện", "Duy trì", "Khôi phục"]
+        "meaning": "Làm tổn hại, làm hỏng"
     },
     {
         "id": 16,
         "word": "遂げる",
         "reading": "とげる",
-        "answer": "Hoàn thành",
-        "choices": ["Hoàn thành", "Trì hoãn", "Từ bỏ", "Che giấu"]
+        "meaning": "Hoàn thành, đạt được"
     },
     {
         "id": 17,
         "word": "施す",
         "reading": "ほどこす",
-        "answer": "Thực hiện",
-        "choices": ["Thực hiện", "Hủy bỏ", "Quan sát", "Từ chối"]
+        "meaning": "Thực hiện, thi hành"
     },
     {
         "id": 18,
         "word": "強いる",
         "reading": "しいる",
-        "answer": "Ép buộc",
-        "choices": ["Ép buộc", "Khuyến khích", "Cho phép", "Bảo vệ"]
+        "meaning": "Ép buộc, cưỡng ép"
     },
     {
         "id": 19,
         "word": "慕う",
         "reading": "したう",
-        "answer": "Ngưỡng mộ",
-        "choices": ["Ngưỡng mộ", "Căm ghét", "Nghi ngờ", "Phớt lờ"]
+        "meaning": "Ngưỡng mộ, kính mến"
     },
     {
         "id": 20,
         "word": "嘆く",
         "reading": "なげく",
-        "answer": "Than thở",
-        "choices": ["Than thở", "Vui mừng", "Thuyết phục", "Đồng ý"]
+        "meaning": "Than thở, than phiền"
     },
     {
         "id": 21,
-        "word": "懸念",
-        "reading": "けねん",
-        "answer": "Lo ngại",
-        "choices": ["Lo ngại", "Kỳ vọng", "Kết luận", "Thành tựu"]
+        "word": "募る",
+        "reading": "つのる",
+        "meaning": "Ngày càng tăng, tuyển mộ"
     },
     {
         "id": 22,
-        "word": "兆し",
-        "reading": "きざし",
-        "answer": "Dấu hiệu",
-        "choices": ["Dấu hiệu", "Nguyên nhân", "Kết quả", "Bằng chứng"]
+        "word": "滅びる",
+        "reading": "ほろびる",
+        "meaning": "Diệt vong, suy vong"
     },
     {
         "id": 23,
-        "word": "趣旨",
-        "reading": "しゅし",
-        "answer": "Mục đích chính",
-        "choices": ["Mục đích chính", "Kết quả cuối", "Ngoại lệ", "Thủ tục"]
+        "word": "和らぐ",
+        "reading": "やわらぐ",
+        "meaning": "Dịu đi, giảm bớt"
     },
     {
         "id": 24,
-        "word": "概略",
-        "reading": "がいりゃく",
-        "answer": "Khái quát",
-        "choices": ["Khái quát", "Chi tiết", "Giả thuyết", "Ngoại lệ"]
+        "word": "見落とす",
+        "reading": "みおとす",
+        "meaning": "Bỏ sót, không nhận ra"
     },
     {
         "id": 25,
-        "word": "経緯",
-        "reading": "けいい",
-        "answer": "Quá trình diễn biến",
-        "choices": ["Quá trình diễn biến", "Kết quả cuối cùng", "Phương pháp", "Mục tiêu"]
+        "word": "見逃す",
+        "reading": "みのがす",
+        "meaning": "Bỏ lỡ, bỏ qua"
     },
     {
         "id": 26,
-        "word": "見解",
-        "reading": "けんかい",
-        "answer": "Quan điểm",
-        "choices": ["Quan điểm", "Mệnh lệnh", "Tin đồn", "Thói quen"]
+        "word": "打ち明ける",
+        "reading": "うちあける",
+        "meaning": "Thổ lộ, tâm sự"
     },
     {
         "id": 27,
-        "word": "措置",
-        "reading": "そち",
-        "answer": "Biện pháp xử lý",
-        "choices": ["Biện pháp xử lý", "Nguyên nhân", "Hiện tượng", "Khái niệm"]
+        "word": "打ち切る",
+        "reading": "うちきる",
+        "meaning": "Chấm dứt giữa chừng"
     },
     {
         "id": 28,
-        "word": "配慮",
-        "reading": "はいりょ",
-        "answer": "Sự cân nhắc",
-        "choices": ["Sự cân nhắc", "Sự phản đối", "Sự cạnh tranh", "Sự từ chối"]
+        "word": "踏まえる",
+        "reading": "ふまえる",
+        "meaning": "Dựa trên, xét đến"
     },
     {
         "id": 29,
-        "word": "余地",
-        "reading": "よち",
-        "answer": "Dư địa",
-        "choices": ["Dư địa", "Giới hạn", "Nghĩa vụ", "Tiêu chuẩn"]
+        "word": "取り締まる",
+        "reading": "とりしまる",
+        "meaning": "Kiểm soát, trấn áp"
     },
     {
         "id": 30,
-        "word": "手掛かり",
-        "reading": "てがかり",
-        "answer": "Manh mối",
-        "choices": ["Manh mối", "Trở ngại", "Thành quả", "Quy định"]
+        "word": "取り巻く",
+        "reading": "とりまく",
+        "meaning": "Bao quanh, vây quanh"
     },
     {
         "id": 31,
-        "word": "膨大",
-        "reading": "ぼうだい",
-        "answer": "Khổng lồ",
-        "choices": ["Khổng lồ", "Nhỏ bé", "Mơ hồ", "Đồng đều"]
+        "word": "食い違う",
+        "reading": "くいちがう",
+        "meaning": "Không khớp, bất đồng"
     },
     {
         "id": 32,
-        "word": "莫大",
-        "reading": "ばくだい",
-        "answer": "Cực kỳ lớn",
-        "choices": ["Cực kỳ lớn", "Không đáng kể", "Tạm thời", "Hợp lý"]
+        "word": "差し支える",
+        "reading": "さしつかえる",
+        "meaning": "Gây trở ngại, ảnh hưởng"
     },
     {
         "id": 33,
-        "word": "緻密",
-        "reading": "ちみつ",
-        "answer": "Tỉ mỉ",
-        "choices": ["Tỉ mỉ", "Cẩu thả", "Đơn giản", "Mơ hồ"]
+        "word": "差し控える",
+        "reading": "さしひかえる",
+        "meaning": "Kiềm chế, hạn chế"
     },
     {
         "id": 34,
-        "word": "露骨",
-        "reading": "ろこつ",
-        "answer": "Lộ liễu",
-        "choices": ["Lộ liễu", "Kín đáo", "Mơ hồ", "Lịch sự"]
+        "word": "引き起こす",
+        "reading": "ひきおこす",
+        "meaning": "Gây ra, dẫn đến"
     },
     {
         "id": 35,
-        "word": "漠然",
-        "reading": "ばくぜん",
-        "answer": "Mơ hồ",
-        "choices": ["Mơ hồ", "Rõ ràng", "Chính xác", "Cụ thể"]
+        "word": "引き受ける",
+        "reading": "ひきうける",
+        "meaning": "Đảm nhận, nhận trách nhiệm"
     },
     {
         "id": 36,
-        "word": "顕著",
-        "reading": "けんちょ",
-        "answer": "Rõ rệt",
-        "choices": ["Rõ rệt", "Mơ hồ", "Tạm thời", "Bình thường"]
+        "word": "脅かす",
+        "reading": "おびやかす",
+        "meaning": "Đe dọa, uy hiếp"
     },
     {
         "id": 37,
-        "word": "巧妙",
-        "reading": "こうみょう",
-        "answer": "Khéo léo",
-        "choices": ["Khéo léo", "Vụng về", "Đơn giản", "Thô bạo"]
+        "word": "紛らわしい",
+        "reading": "まぎらわしい",
+        "meaning": "Dễ gây nhầm lẫn"
     },
     {
         "id": 38,
-        "word": "簡潔",
-        "reading": "かんけつ",
-        "answer": "Ngắn gọn",
-        "choices": ["Ngắn gọn", "Dài dòng", "Mơ hồ", "Phức tạp"]
+        "word": "紛れる",
+        "reading": "まぎれる",
+        "meaning": "Lẫn vào, bị lẫn"
     },
     {
         "id": 39,
-        "word": "迅速",
-        "reading": "じんそく",
-        "answer": "Nhanh chóng",
-        "choices": ["Nhanh chóng", "Chậm chạp", "Thận trọng", "Bất ngờ"]
+        "word": "漂う",
+        "reading": "ただよう",
+        "meaning": "Trôi nổi, phảng phất"
     },
     {
         "id": 40,
-        "word": "厳密",
-        "reading": "げんみつ",
-        "answer": "Nghiêm ngặt",
-        "choices": ["Nghiêm ngặt", "Linh hoạt", "Mơ hồ", "Đơn giản"]
+        "word": "潤う",
+        "reading": "うるおう",
+        "meaning": "Được làm giàu, trở nên sung túc"
     },
     {
         "id": 41,
-        "word": "あえて",
-        "reading": "あえて",
-        "answer": "Dám, cố tình",
-        "choices": ["Dám, cố tình", "Vô tình", "Ngay lập tức", "Dần dần"]
+        "word": "懸念",
+        "reading": "けねん",
+        "meaning": "Lo ngại, quan ngại"
     },
     {
         "id": 42,
-        "word": "あらかじめ",
-        "reading": "あらかじめ",
-        "answer": "Trước",
-        "choices": ["Trước", "Đột nhiên", "Cuối cùng", "Tạm thời"]
+        "word": "兆し",
+        "reading": "きざし",
+        "meaning": "Dấu hiệu, điềm báo"
     },
     {
         "id": 43,
-        "word": "おおむね",
-        "reading": "おおむね",
-        "answer": "Nhìn chung",
-        "choices": ["Nhìn chung", "Hoàn toàn", "Hiếm khi", "Đột nhiên"]
+        "word": "趣旨",
+        "reading": "しゅし",
+        "meaning": "Ý chính, mục đích"
     },
     {
         "id": 44,
-        "word": "かろうじて",
-        "reading": "かろうじて",
-        "answer": "Vừa đủ, suýt soát",
-        "choices": ["Vừa đủ, suýt soát", "Dễ dàng", "Hoàn toàn", "Chắc chắn"]
+        "word": "概略",
+        "reading": "がいりゃく",
+        "meaning": "Khái quát, sơ lược"
     },
     {
         "id": 45,
-        "word": "ことごとく",
-        "reading": "ことごとく",
-        "answer": "Toàn bộ",
-        "choices": ["Toàn bộ", "Một phần", "Thỉnh thoảng", "Gần như không"]
+        "word": "経緯",
+        "reading": "けいい",
+        "meaning": "Quá trình, diễn biến"
     },
     {
         "id": 46,
-        "word": "さほど",
-        "reading": "さほど",
-        "answer": "Không đến mức",
-        "choices": ["Không đến mức", "Rất nhiều", "Hoàn toàn", "Chắc chắn"]
+        "word": "見解",
+        "reading": "けんかい",
+        "meaning": "Quan điểm, cách nhìn"
     },
     {
         "id": 47,
-        "word": "ひいては",
-        "reading": "ひいては",
-        "answer": "Xa hơn nữa",
-        "choices": ["Xa hơn nữa", "Ngược lại", "Tạm thời", "Bất chợt"]
+        "word": "措置",
+        "reading": "そち",
+        "meaning": "Biện pháp, cách xử lý"
     },
     {
         "id": 48,
-        "word": "もっぱら",
-        "reading": "もっぱら",
-        "answer": "Chủ yếu",
-        "choices": ["Chủ yếu", "Hiếm khi", "Ngẫu nhiên", "Tạm thời"]
+        "word": "配慮",
+        "reading": "はいりょ",
+        "meaning": "Cân nhắc, quan tâm"
     },
     {
         "id": 49,
-        "word": "一概に",
-        "reading": "いちがいに",
-        "answer": "Một cách chung chung",
-        "choices": ["Một cách chung chung", "Một cách chính xác", "Một cách bí mật", "Một cách tạm thời"]
+        "word": "余地",
+        "reading": "よち",
+        "meaning": "Dư địa, chỗ để xem xét"
     },
     {
         "id": 50,
+        "word": "手掛かり",
+        "reading": "てがかり",
+        "meaning": "Manh mối, đầu mối"
+    },
+    {
+        "id": 51,
+        "word": "根拠",
+        "reading": "こんきょ",
+        "meaning": "Căn cứ, cơ sở"
+    },
+    {
+        "id": 52,
+        "word": "主旨",
+        "reading": "しゅし",
+        "meaning": "Ý chính, nội dung chính"
+    },
+    {
+        "id": 53,
+        "word": "実態",
+        "reading": "じったい",
+        "meaning": "Thực trạng, tình hình thực tế"
+    },
+    {
+        "id": 54,
+        "word": "実情",
+        "reading": "じつじょう",
+        "meaning": "Tình hình thực tế"
+    },
+    {
+        "id": 55,
+        "word": "動向",
+        "reading": "どうこう",
+        "meaning": "Xu hướng, động thái"
+    },
+    {
+        "id": 56,
+        "word": "意向",
+        "reading": "いこう",
+        "meaning": "Ý định, ý hướng"
+    },
+    {
+        "id": 57,
+        "word": "見込み",
+        "reading": "みこみ",
+        "meaning": "Triển vọng, khả năng dự kiến"
+    },
+    {
+        "id": 58,
+        "word": "見通し",
+        "reading": "みとおし",
+        "meaning": "Triển vọng, dự báo"
+    },
+    {
+        "id": 59,
+        "word": "名残",
+        "reading": "なごり",
+        "meaning": "Dấu tích, sự lưu luyến"
+    },
+    {
+        "id": 60,
+        "word": "面影",
+        "reading": "おもかげ",
+        "meaning": "Hình bóng, dấu vết xưa"
+    },
+    {
+        "id": 61,
+        "word": "膨大",
+        "reading": "ぼうだい",
+        "meaning": "Khổng lồ, rất lớn"
+    },
+    {
+        "id": 62,
+        "word": "莫大",
+        "reading": "ばくだい",
+        "meaning": "Cực kỳ lớn, khổng lồ"
+    },
+    {
+        "id": 63,
+        "word": "緻密",
+        "reading": "ちみつ",
+        "meaning": "Tỉ mỉ, chặt chẽ"
+    },
+    {
+        "id": 64,
+        "word": "露骨",
+        "reading": "ろこつ",
+        "meaning": "Lộ liễu, trắng trợn"
+    },
+    {
+        "id": 65,
+        "word": "漠然",
+        "reading": "ばくぜん",
+        "meaning": "Mơ hồ, không rõ ràng"
+    },
+    {
+        "id": 66,
+        "word": "顕著",
+        "reading": "けんちょ",
+        "meaning": "Rõ rệt, nổi bật"
+    },
+    {
+        "id": 67,
+        "word": "巧妙",
+        "reading": "こうみょう",
+        "meaning": "Khéo léo, tinh vi"
+    },
+    {
+        "id": 68,
+        "word": "簡潔",
+        "reading": "かんけつ",
+        "meaning": "Ngắn gọn, súc tích"
+    },
+    {
+        "id": 69,
+        "word": "迅速",
+        "reading": "じんそく",
+        "meaning": "Nhanh chóng, mau lẹ"
+    },
+    {
+        "id": 70,
+        "word": "厳密",
+        "reading": "げんみつ",
+        "meaning": "Nghiêm ngặt, chính xác"
+    },
+    {
+        "id": 71,
+        "word": "露呈",
+        "reading": "ろてい",
+        "meaning": "Bị phơi bày, lộ ra"
+    },
+    {
+        "id": 72,
+        "word": "円滑",
+        "reading": "えんかつ",
+        "meaning": "Trôi chảy, thuận lợi"
+    },
+    {
+        "id": 73,
+        "word": "露骨",
+        "reading": "ろこつ",
+        "meaning": "Thẳng thừng, lộ liễu"
+    },
+    {
+        "id": 74,
+        "word": "切実",
+        "reading": "せつじつ",
+        "meaning": "Cấp thiết, tha thiết"
+    },
+    {
+        "id": 75,
+        "word": "忠実",
+        "reading": "ちゅうじつ",
+        "meaning": "Trung thành, trung thực với"
+    },
+    {
+        "id": 76,
+        "word": "露わ",
+        "reading": "あらわ",
+        "meaning": "Lộ rõ, công khai"
+    },
+    {
+        "id": 77,
+        "word": "顧みる",
+        "reading": "かえりみる",
+        "meaning": "Nhìn lại, xét đến"
+    },
+    {
+        "id": 78,
+        "word": "省みる",
+        "reading": "かえりみる",
+        "meaning": "Tự nhìn lại, tự kiểm điểm"
+    },
+    {
+        "id": 79,
+        "word": "試みる",
+        "reading": "こころみる",
+        "meaning": "Thử, thử nghiệm"
+    },
+    {
+        "id": 80,
+        "word": "企てる",
+        "reading": "くわだてる",
+        "meaning": "Lên kế hoạch, mưu tính"
+    },
+    {
+        "id": 81,
+        "word": "あえて",
+        "reading": "あえて",
+        "meaning": "Cố tình, dám làm"
+    },
+    {
+        "id": 82,
+        "word": "あらかじめ",
+        "reading": "あらかじめ",
+        "meaning": "Trước, từ trước"
+    },
+    {
+        "id": 83,
+        "word": "おおむね",
+        "reading": "おおむね",
+        "meaning": "Nhìn chung, đại thể"
+    },
+    {
+        "id": 84,
+        "word": "かろうじて",
+        "reading": "かろうじて",
+        "meaning": "Vừa đủ, suýt soát"
+    },
+    {
+        "id": 85,
+        "word": "ことごとく",
+        "reading": "ことごとく",
+        "meaning": "Tất cả, toàn bộ"
+    },
+    {
+        "id": 86,
+        "word": "さほど",
+        "reading": "さほど",
+        "meaning": "Không đến mức, không quá"
+    },
+    {
+        "id": 87,
+        "word": "ひいては",
+        "reading": "ひいては",
+        "meaning": "Xa hơn nữa, kéo theo"
+    },
+    {
+        "id": 88,
+        "word": "もっぱら",
+        "reading": "もっぱら",
+        "meaning": "Chủ yếu, chuyên"
+    },
+    {
+        "id": 89,
+        "word": "一概に",
+        "reading": "いちがいに",
+        "meaning": "Một cách chung chung"
+    },
+    {
+        "id": 90,
         "word": "即座に",
         "reading": "そくざに",
-        "answer": "Ngay lập tức",
-        "choices": ["Ngay lập tức", "Dần dần", "Thỉnh thoảng", "Cuối cùng"]
+        "meaning": "Ngay lập tức, tức thì"
+    },
+    {
+        "id": 91,
+        "word": "一向に",
+        "reading": "いっこうに",
+        "meaning": "Hoàn toàn không, mãi không"
+    },
+    {
+        "id": 92,
+        "word": "一挙に",
+        "reading": "いっきょに",
+        "meaning": "Một mạch, cùng một lúc"
+    },
+    {
+        "id": 93,
+        "word": "極めて",
+        "reading": "きわめて",
+        "meaning": "Cực kỳ, vô cùng"
+    },
+    {
+        "id": 94,
+        "word": "ひたすら",
+        "reading": "ひたすら",
+        "meaning": "Chỉ một mực, hết lòng"
+    },
+    {
+        "id": 95,
+        "word": "むしろ",
+        "reading": "むしろ",
+        "meaning": "Đúng hơn là, thà rằng"
+    },
+    {
+        "id": 96,
+        "word": "まして",
+        "reading": "まして",
+        "meaning": "Huống chi, càng hơn nữa"
+    },
+    {
+        "id": 97,
+        "word": "何しろ",
+        "reading": "なにしろ",
+        "meaning": "Dù sao thì, bởi vì quả thực"
+    },
+    {
+        "id": 98,
+        "word": "到底",
+        "reading": "とうてい",
+        "meaning": "Hoàn toàn không thể"
+    },
+    {
+        "id": 99,
+        "word": "やたらに",
+        "reading": "やたらに",
+        "meaning": "Bừa bãi, quá mức"
+    },
+    {
+        "id": 100,
+        "word": "ろくに",
+        "reading": "ろくに",
+        "meaning": "Không tử tế, không đầy đủ"
     }
 ]
