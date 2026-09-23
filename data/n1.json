@@ -4,95 +4,349 @@
         "word": "衰える",
         "reading": "おとろえる",
         "answer": "Suy yếu",
-        "choices": [
-            "Suy yếu",
-            "Vượt qua",
-            "Bổ sung",
-            "Trì hoãn"
-        ]
+        "choices": ["Suy yếu", "Vượt qua", "Bổ sung", "Trì hoãn"]
     },
     {
         "id": 2,
         "word": "残酷",
         "reading": "ざんこく",
         "answer": "Tàn khốc",
-        "choices": [
-            "Tàn khốc",
-            "Phức tạp",
-            "Nghiêm túc",
-            "Đáng tiếc"
-        ]
+        "choices": ["Tàn khốc", "Phức tạp", "Nghiêm túc", "Đáng tiếc"]
     },
     {
         "id": 3,
         "word": "促す",
         "reading": "うながす",
         "answer": "Thúc giục",
-        "choices": [
-            "Thúc giục",
-            "Từ chối",
-            "Quan sát",
-            "Che giấu"
-        ]
+        "choices": ["Thúc giục", "Từ chối", "Quan sát", "Che giấu"]
     },
     {
         "id": 4,
         "word": "覆す",
         "reading": "くつがえす",
         "answer": "Lật ngược",
-        "choices": [
-            "Lật ngược",
-            "Bảo vệ",
-            "Phân chia",
-            "Duy trì"
-        ]
+        "choices": ["Lật ngược", "Bảo vệ", "Phân chia", "Duy trì"]
     },
     {
         "id": 5,
         "word": "著しい",
         "reading": "いちじるしい",
         "answer": "Đáng kể",
-        "choices": [
-            "Đáng kể",
-            "Bình thường",
-            "Mơ hồ",
-            "Yên tĩnh"
-        ]
+        "choices": ["Đáng kể", "Bình thường", "Mơ hồ", "Yên tĩnh"]
     },
     {
         "id": 6,
         "word": "免れる",
         "reading": "まぬがれる",
         "answer": "Thoát khỏi",
-        "choices": [
-            "Thoát khỏi",
-            "Chấp nhận",
-            "Tiến hành",
-            "Đối mặt"
-        ]
+        "choices": ["Thoát khỏi", "Chấp nhận", "Tiến hành", "Đối mặt"]
     },
     {
         "id": 7,
         "word": "妨げる",
         "reading": "さまたげる",
         "answer": "Cản trở",
-        "choices": [
-            "Cản trở",
-            "Khuyến khích",
-            "Thay đổi",
-            "Xác nhận"
-        ]
+        "choices": ["Cản trở", "Khuyến khích", "Thay đổi", "Xác nhận"]
     },
     {
         "id": 8,
         "word": "乏しい",
         "reading": "とぼしい",
         "answer": "Thiếu thốn",
-        "choices": [
-            "Thiếu thốn",
-            "Phong phú",
-            "Ổn định",
-            "Chính xác"
-        ]
+        "choices": ["Thiếu thốn", "Phong phú", "Ổn định", "Chính xác"]
+    },
+    {
+        "id": 9,
+        "word": "滞る",
+        "reading": "とどこおる",
+        "answer": "Đình trệ",
+        "choices": ["Đình trệ", "Phát triển", "Lan rộng", "Hoàn thành"]
+    },
+    {
+        "id": 10,
+        "word": "阻む",
+        "reading": "はばむ",
+        "answer": "Ngăn cản",
+        "choices": ["Ngăn cản", "Thừa nhận", "Bù đắp", "Dự đoán"]
+    },
+    {
+        "id": 11,
+        "word": "廃れる",
+        "reading": "すたれる",
+        "answer": "Trở nên lỗi thời",
+        "choices": ["Trở nên lỗi thời", "Trở nên phổ biến", "Được phục hồi", "Được mở rộng"]
+    },
+    {
+        "id": 12,
+        "word": "携わる",
+        "reading": "たずさわる",
+        "answer": "Tham gia vào",
+        "choices": ["Tham gia vào", "Từ bỏ", "Phản đối", "Tránh né"]
+    },
+    {
+        "id": 13,
+        "word": "培う",
+        "reading": "つちかう",
+        "answer": "Bồi dưỡng",
+        "choices": ["Bồi dưỡng", "Phá hủy", "Cắt giảm", "Thay thế"]
+    },
+    {
+        "id": 14,
+        "word": "伴う",
+        "reading": "ともなう",
+        "answer": "Đi kèm",
+        "choices": ["Đi kèm", "Tách rời", "Ngăn chặn", "Kết thúc"]
+    },
+    {
+        "id": 15,
+        "word": "損なう",
+        "reading": "そこなう",
+        "answer": "Làm tổn hại",
+        "choices": ["Làm tổn hại", "Cải thiện", "Duy trì", "Khôi phục"]
+    },
+    {
+        "id": 16,
+        "word": "遂げる",
+        "reading": "とげる",
+        "answer": "Hoàn thành",
+        "choices": ["Hoàn thành", "Trì hoãn", "Từ bỏ", "Che giấu"]
+    },
+    {
+        "id": 17,
+        "word": "施す",
+        "reading": "ほどこす",
+        "answer": "Thực hiện",
+        "choices": ["Thực hiện", "Hủy bỏ", "Quan sát", "Từ chối"]
+    },
+    {
+        "id": 18,
+        "word": "強いる",
+        "reading": "しいる",
+        "answer": "Ép buộc",
+        "choices": ["Ép buộc", "Khuyến khích", "Cho phép", "Bảo vệ"]
+    },
+    {
+        "id": 19,
+        "word": "慕う",
+        "reading": "したう",
+        "answer": "Ngưỡng mộ",
+        "choices": ["Ngưỡng mộ", "Căm ghét", "Nghi ngờ", "Phớt lờ"]
+    },
+    {
+        "id": 20,
+        "word": "嘆く",
+        "reading": "なげく",
+        "answer": "Than thở",
+        "choices": ["Than thở", "Vui mừng", "Thuyết phục", "Đồng ý"]
+    },
+    {
+        "id": 21,
+        "word": "懸念",
+        "reading": "けねん",
+        "answer": "Lo ngại",
+        "choices": ["Lo ngại", "Kỳ vọng", "Kết luận", "Thành tựu"]
+    },
+    {
+        "id": 22,
+        "word": "兆し",
+        "reading": "きざし",
+        "answer": "Dấu hiệu",
+        "choices": ["Dấu hiệu", "Nguyên nhân", "Kết quả", "Bằng chứng"]
+    },
+    {
+        "id": 23,
+        "word": "趣旨",
+        "reading": "しゅし",
+        "answer": "Mục đích chính",
+        "choices": ["Mục đích chính", "Kết quả cuối", "Ngoại lệ", "Thủ tục"]
+    },
+    {
+        "id": 24,
+        "word": "概略",
+        "reading": "がいりゃく",
+        "answer": "Khái quát",
+        "choices": ["Khái quát", "Chi tiết", "Giả thuyết", "Ngoại lệ"]
+    },
+    {
+        "id": 25,
+        "word": "経緯",
+        "reading": "けいい",
+        "answer": "Quá trình diễn biến",
+        "choices": ["Quá trình diễn biến", "Kết quả cuối cùng", "Phương pháp", "Mục tiêu"]
+    },
+    {
+        "id": 26,
+        "word": "見解",
+        "reading": "けんかい",
+        "answer": "Quan điểm",
+        "choices": ["Quan điểm", "Mệnh lệnh", "Tin đồn", "Thói quen"]
+    },
+    {
+        "id": 27,
+        "word": "措置",
+        "reading": "そち",
+        "answer": "Biện pháp xử lý",
+        "choices": ["Biện pháp xử lý", "Nguyên nhân", "Hiện tượng", "Khái niệm"]
+    },
+    {
+        "id": 28,
+        "word": "配慮",
+        "reading": "はいりょ",
+        "answer": "Sự cân nhắc",
+        "choices": ["Sự cân nhắc", "Sự phản đối", "Sự cạnh tranh", "Sự từ chối"]
+    },
+    {
+        "id": 29,
+        "word": "余地",
+        "reading": "よち",
+        "answer": "Dư địa",
+        "choices": ["Dư địa", "Giới hạn", "Nghĩa vụ", "Tiêu chuẩn"]
+    },
+    {
+        "id": 30,
+        "word": "手掛かり",
+        "reading": "てがかり",
+        "answer": "Manh mối",
+        "choices": ["Manh mối", "Trở ngại", "Thành quả", "Quy định"]
+    },
+    {
+        "id": 31,
+        "word": "膨大",
+        "reading": "ぼうだい",
+        "answer": "Khổng lồ",
+        "choices": ["Khổng lồ", "Nhỏ bé", "Mơ hồ", "Đồng đều"]
+    },
+    {
+        "id": 32,
+        "word": "莫大",
+        "reading": "ばくだい",
+        "answer": "Cực kỳ lớn",
+        "choices": ["Cực kỳ lớn", "Không đáng kể", "Tạm thời", "Hợp lý"]
+    },
+    {
+        "id": 33,
+        "word": "緻密",
+        "reading": "ちみつ",
+        "answer": "Tỉ mỉ",
+        "choices": ["Tỉ mỉ", "Cẩu thả", "Đơn giản", "Mơ hồ"]
+    },
+    {
+        "id": 34,
+        "word": "露骨",
+        "reading": "ろこつ",
+        "answer": "Lộ liễu",
+        "choices": ["Lộ liễu", "Kín đáo", "Mơ hồ", "Lịch sự"]
+    },
+    {
+        "id": 35,
+        "word": "漠然",
+        "reading": "ばくぜん",
+        "answer": "Mơ hồ",
+        "choices": ["Mơ hồ", "Rõ ràng", "Chính xác", "Cụ thể"]
+    },
+    {
+        "id": 36,
+        "word": "顕著",
+        "reading": "けんちょ",
+        "answer": "Rõ rệt",
+        "choices": ["Rõ rệt", "Mơ hồ", "Tạm thời", "Bình thường"]
+    },
+    {
+        "id": 37,
+        "word": "巧妙",
+        "reading": "こうみょう",
+        "answer": "Khéo léo",
+        "choices": ["Khéo léo", "Vụng về", "Đơn giản", "Thô bạo"]
+    },
+    {
+        "id": 38,
+        "word": "簡潔",
+        "reading": "かんけつ",
+        "answer": "Ngắn gọn",
+        "choices": ["Ngắn gọn", "Dài dòng", "Mơ hồ", "Phức tạp"]
+    },
+    {
+        "id": 39,
+        "word": "迅速",
+        "reading": "じんそく",
+        "answer": "Nhanh chóng",
+        "choices": ["Nhanh chóng", "Chậm chạp", "Thận trọng", "Bất ngờ"]
+    },
+    {
+        "id": 40,
+        "word": "厳密",
+        "reading": "げんみつ",
+        "answer": "Nghiêm ngặt",
+        "choices": ["Nghiêm ngặt", "Linh hoạt", "Mơ hồ", "Đơn giản"]
+    },
+    {
+        "id": 41,
+        "word": "あえて",
+        "reading": "あえて",
+        "answer": "Dám, cố tình",
+        "choices": ["Dám, cố tình", "Vô tình", "Ngay lập tức", "Dần dần"]
+    },
+    {
+        "id": 42,
+        "word": "あらかじめ",
+        "reading": "あらかじめ",
+        "answer": "Trước",
+        "choices": ["Trước", "Đột nhiên", "Cuối cùng", "Tạm thời"]
+    },
+    {
+        "id": 43,
+        "word": "おおむね",
+        "reading": "おおむね",
+        "answer": "Nhìn chung",
+        "choices": ["Nhìn chung", "Hoàn toàn", "Hiếm khi", "Đột nhiên"]
+    },
+    {
+        "id": 44,
+        "word": "かろうじて",
+        "reading": "かろうじて",
+        "answer": "Vừa đủ, suýt soát",
+        "choices": ["Vừa đủ, suýt soát", "Dễ dàng", "Hoàn toàn", "Chắc chắn"]
+    },
+    {
+        "id": 45,
+        "word": "ことごとく",
+        "reading": "ことごとく",
+        "answer": "Toàn bộ",
+        "choices": ["Toàn bộ", "Một phần", "Thỉnh thoảng", "Gần như không"]
+    },
+    {
+        "id": 46,
+        "word": "さほど",
+        "reading": "さほど",
+        "answer": "Không đến mức",
+        "choices": ["Không đến mức", "Rất nhiều", "Hoàn toàn", "Chắc chắn"]
+    },
+    {
+        "id": 47,
+        "word": "ひいては",
+        "reading": "ひいては",
+        "answer": "Xa hơn nữa",
+        "choices": ["Xa hơn nữa", "Ngược lại", "Tạm thời", "Bất chợt"]
+    },
+    {
+        "id": 48,
+        "word": "もっぱら",
+        "reading": "もっぱら",
+        "answer": "Chủ yếu",
+        "choices": ["Chủ yếu", "Hiếm khi", "Ngẫu nhiên", "Tạm thời"]
+    },
+    {
+        "id": 49,
+        "word": "一概に",
+        "reading": "いちがいに",
+        "answer": "Một cách chung chung",
+        "choices": ["Một cách chung chung", "Một cách chính xác", "Một cách bí mật", "Một cách tạm thời"]
+    },
+    {
+        "id": 50,
+        "word": "即座に",
+        "reading": "そくざに",
+        "answer": "Ngay lập tức",
+        "choices": ["Ngay lập tức", "Dần dần", "Thỉnh thoảng", "Cuối cùng"]
     }
 ]
