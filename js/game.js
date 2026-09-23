@@ -2,7 +2,23 @@
    BATLINGO
    SOLO ENDLESS MODE
 
-   PC / Tablet / Mobile
+   Database format:
+   {
+       "id": 1,
+       "word": "衰える",
+       "reading": "おとろえる",
+       "meaning": "Suy yếu"
+   }
+
+   Chức năng:
+   - Endless mode
+   - 3 mạng
+   - Random câu hỏi
+   - Random 3 đáp án sai từ database
+   - Timer giảm dần theo độ khó
+   - Đúng / Sai đều hiện reading
+   - Đúng / Sai đều đọc tiếng Nhật
+   - High Score lưu bằng localStorage
    ============================================================= */
 
 
@@ -66,8 +82,17 @@ const retryButton =
    DATABASE
    ============================================================= */
 
+/*
+    Toàn bộ từ vựng được load từ:
+
+    data/n1.json
+*/
 let questions = [];
 
+
+/*
+    Câu hỏi hiện tại.
+*/
 let currentQuestion = null;
 
 
@@ -75,32 +100,49 @@ let currentQuestion = null;
    GAME STATE
    ============================================================= */
 
+// Số mạng ban đầu
 let lives = 3;
 
+
+// Điểm hiện tại
 let score = 0;
 
+
+// Số câu đã xuất hiện
 let questionCount = 0;
 
+
+// Combo hiện tại
 let combo = 0;
 
+
+// Combo lớn nhất trong trận
 let maxCombo = 0;
 
+
+// Timer ID
 let timer = null;
 
+
+// Thời gian còn lại
 let timeLeft = 0;
 
+
+// Thời gian tối đa của câu hiện tại
 let questionTime = 10;
 
+
 /*
-    answered dùng để ngăn:
-    - double click
-    - timer hết cùng lúc người dùng click
+    Ngăn người chơi click nhiều lần.
+
+    false = có thể trả lời
+    true  = câu đã được xử lý
 */
 let answered = false;
 
 
 /* =============================================================
-   LOAD JSON DATABASE
+   LOAD DATABASE
    ============================================================= */
 
 async function loadQuestions() {
@@ -111,6 +153,9 @@ async function loadQuestions() {
             await fetch("data/n1.json");
 
 
+        /*
+            Kiểm tra HTTP response.
+        */
         if (!response.ok) {
 
             throw new Error(
@@ -119,21 +164,43 @@ async function loadQuestions() {
         }
 
 
+        /*
+            Chuyển JSON thành Array JavaScript.
+        */
         questions =
             await response.json();
 
 
+        /*
+            Cần ít nhất 4 từ:
+
+            1 đáp án đúng
+            3 đáp án sai
+        */
+        if (questions.length < 4) {
+
+            throw new Error(
+                "Database must contain at least 4 words."
+            );
+        }
+
+
         console.log(
-            `Loaded ${questions.length} questions`
+            `Loaded ${questions.length} N1 words`
         );
 
 
+        /*
+            Load xong database
+            → bắt đầu game.
+        */
         startGame();
 
     }
     catch (error) {
 
         console.error(error);
+
 
         questionElement.textContent =
             "DATABASE ERROR";
@@ -148,17 +215,20 @@ async function loadQuestions() {
 function startGame() {
 
     /*
-        Hủy speech cũ.
+        Dừng timer cũ.
+    */
+    clearInterval(timer);
 
-        Quan trọng khi người chơi Retry
-        trong lúc trình duyệt còn đang đọc.
+
+    /*
+        Dừng giọng đọc cũ nếu đang đọc.
     */
     stopSpeech();
 
 
-    clearInterval(timer);
-
-
+    /*
+        Reset Game State.
+    */
     lives = 3;
 
     score = 0;
@@ -169,18 +239,38 @@ function startGame() {
 
     maxCombo = 0;
 
+    answered = false;
 
+
+    /*
+        Hiện Game Screen.
+    */
     gameScreen.style.display =
         "block";
 
+
+    /*
+        Ẩn Game Over Screen.
+    */
     gameOverScreen.style.display =
         "none";
 
 
+    /*
+        Load High Score.
+    */
     loadBestScore();
 
+
+    /*
+        Update UI.
+    */
     updateHUD();
 
+
+    /*
+        Bắt đầu câu đầu tiên.
+    */
     nextQuestion();
 }
 
@@ -191,23 +281,36 @@ function startGame() {
 
 function nextQuestion() {
 
-    if (questions.length === 0)
+    /*
+        Kiểm tra database.
+    */
+    if (questions.length < 4) {
+
         return;
-
-
-    answered = false;
-
-
-    questionCount++;
+    }
 
 
     /*
-        Random hoàn toàn.
+        Câu mới có thể trả lời.
+    */
+    answered = false;
 
-        Câu vừa xuất hiện vẫn có khả năng
-        xuất hiện lại.
 
-        Đây là thiết kế Endless Mode.
+    /*
+        Tăng số câu.
+    */
+    questionCount++;
+
+
+    /* ---------------------------------------------------------
+       RANDOM QUESTION
+       --------------------------------------------------------- */
+
+    /*
+        Random một từ trong toàn database.
+
+        Câu hỏi CÓ THỂ lặp lại.
+        Đây là thiết kế của Endless Mode.
     */
     const randomIndex =
         Math.floor(
@@ -219,44 +322,68 @@ function nextQuestion() {
         questions[randomIndex];
 
 
-    /* -----------------------------------------
-       Question
-       ----------------------------------------- */
+    /* ---------------------------------------------------------
+       DISPLAY QUESTION
+       --------------------------------------------------------- */
 
     questionNumberElement.textContent =
         `QUESTION ${questionCount}`;
 
 
+    /*
+        Chỉ hiện Kanji / từ vựng.
+
+        Ví dụ:
+        衰える
+    */
     questionElement.textContent =
         currentQuestion.word;
 
 
     /*
-        Reading được ẩn khi câu mới xuất hiện.
+        Chuẩn bị reading.
 
-        Người chơi phải tự biết cách đọc trước.
+        Ví dụ:
+        おとろえる
+
+        Nhưng chưa cho người chơi nhìn thấy.
     */
     readingElement.textContent =
         currentQuestion.reading;
 
 
-    readingElement.classList.remove("show");
+    /*
+        Ẩn hiragana trước khi trả lời.
+    */
+    readingElement.classList.remove(
+        "show"
+    );
 
 
-    /* -----------------------------------------
-       Answer
-       ----------------------------------------- */
+    /* ---------------------------------------------------------
+       GENERATE ANSWERS
+       --------------------------------------------------------- */
 
+    /*
+        Tạo:
+
+        1 đáp án đúng
+        +
+        3 đáp án sai random từ database.
+    */
     const choices =
-        [...currentQuestion.choices];
+        generateChoices(currentQuestion);
 
 
-    shuffleArray(choices);
-
-
+    /*
+        Xóa button câu trước.
+    */
     answersElement.innerHTML = "";
 
 
+    /*
+        Tạo 4 button.
+    */
     choices.forEach(choice => {
 
         const button =
@@ -271,69 +398,217 @@ function nextQuestion() {
             choice;
 
 
+        /*
+            Khi click:
+
+            gửi:
+            - nghĩa đã chọn
+            - chính button đó
+
+            vào selectAnswer().
+        */
         button.addEventListener(
             "click",
-            () => selectAnswer(choice, button)
+            () =>
+                selectAnswer(
+                    choice,
+                    button
+                )
         );
 
 
-        answersElement.appendChild(button);
+        answersElement.appendChild(
+            button
+        );
     });
 
 
-    /* -----------------------------------------
-       Timer
-       ----------------------------------------- */
+    /* ---------------------------------------------------------
+       TIMER
+       --------------------------------------------------------- */
 
+    /*
+        Lấy thời gian dựa vào
+        số câu hiện tại.
+    */
     questionTime =
-        getQuestionTime(questionCount);
+        getQuestionTime(
+            questionCount
+        );
 
 
+    /*
+        Reset thời gian.
+    */
     timeLeft =
         questionTime;
 
 
+    /*
+        Bắt đầu countdown.
+    */
     startTimer();
 
+
+    /*
+        Update UI.
+    */
     updateHUD();
 }
 
 
 /* =============================================================
-   DIFFICULTY
+   GENERATE RANDOM CHOICES
+   ============================================================= */
+
+function generateChoices(question) {
+
+    /*
+        Nghĩa đúng.
+    */
+    const correctAnswer =
+        question.meaning;
+
+
+    /*
+        Lấy nghĩa của tất cả từ khác.
+
+        Ví dụ câu hiện tại:
+
+        衰える
+        Suy yếu
+
+        thì "Suy yếu" sẽ không nằm
+        trong danh sách đáp án sai.
+    */
+    let wrongAnswers =
+        questions
+
+            .filter(item => {
+
+                /*
+                    Không lấy chính câu hiện tại.
+                */
+                return (
+                    item.id !== question.id
+                    &&
+                    item.meaning !== correctAnswer
+                );
+            })
+
+            .map(item =>
+                item.meaning
+            );
+
+
+    /*
+        Xóa các meaning bị trùng.
+
+        Ví dụ database có 2 từ
+        cùng meaning "Cản trở"
+
+        thì chỉ giữ 1.
+    */
+    wrongAnswers =
+        [...new Set(wrongAnswers)];
+
+
+    /*
+        Random toàn bộ đáp án sai.
+    */
+    shuffleArray(
+        wrongAnswers
+    );
+
+
+    /*
+        Chỉ lấy 3 đáp án sai.
+    */
+    const randomWrongAnswers =
+        wrongAnswers.slice(0, 3);
+
+
+    /*
+        Ghép:
+
+        1 đúng
+        +
+        3 sai
+    */
+    const choices = [
+
+        correctAnswer,
+
+        ...randomWrongAnswers
+    ];
+
+
+    /*
+        Random vị trí đáp án đúng.
+    */
+    shuffleArray(
+        choices
+    );
+
+
+    return choices;
+}
+
+
+/* =============================================================
+   DIFFICULTY SYSTEM
    ============================================================= */
 
 function getQuestionTime(questionNumber) {
 
     /*
-        Càng lên cao càng ít thời gian.
+        Càng lên cao
+        thời gian càng ngắn.
 
-        1  - 10  = 10s
-        11 - 20  = 8s
-        21 - 30  = 6s
-        31 - 50  = 5s
-        51 - 75  = 4s
-        76 - 100 = 3s
-        101+     = 2.5s
+        Q1  - Q10   = 10s
+        Q11 - Q20   = 8s
+        Q21 - Q30   = 6s
+        Q31 - Q50   = 5s
+        Q51 - Q75   = 4s
+        Q76 - Q100  = 3s
+        Q101+       = 2.5s
     */
 
-    if (questionNumber <= 10)
+
+    if (questionNumber <= 10) {
+
         return 10;
+    }
 
-    if (questionNumber <= 20)
+
+    if (questionNumber <= 20) {
+
         return 8;
+    }
 
-    if (questionNumber <= 30)
+
+    if (questionNumber <= 30) {
+
         return 6;
+    }
 
-    if (questionNumber <= 50)
+
+    if (questionNumber <= 50) {
+
         return 5;
+    }
 
-    if (questionNumber <= 75)
+
+    if (questionNumber <= 75) {
+
         return 4;
+    }
 
-    if (questionNumber <= 100)
+
+    if (questionNumber <= 100) {
+
         return 3;
+    }
 
 
     return 2.5;
@@ -346,49 +621,85 @@ function getQuestionTime(questionNumber) {
 
 function startTimer() {
 
+    /*
+        Đảm bảo không còn timer cũ.
+    */
     clearInterval(timer);
 
 
+    /*
+        Hiện thời gian ngay lập tức.
+    */
     updateTimerDisplay();
 
 
-    timer = setInterval(() => {
+    /*
+        Update mỗi 100ms.
 
-        timeLeft -= 0.1;
+        100ms = 0.1 giây.
+    */
+    timer =
+        setInterval(() => {
+
+            timeLeft -= 0.1;
 
 
-        if (timeLeft < 0)
-            timeLeft = 0;
+            /*
+                Không cho âm.
+            */
+            if (timeLeft < 0) {
+
+                timeLeft = 0;
+            }
 
 
-        updateTimerDisplay();
+            updateTimerDisplay();
 
 
-        if (timeLeft <= 0) {
+            /*
+                Hết giờ.
+            */
+            if (timeLeft <= 0) {
 
-            clearInterval(timer);
+                clearInterval(timer);
 
-            handleTimeout();
-        }
 
-    }, 100);
+                handleTimeout();
+            }
+
+        }, 100);
 }
 
 
 /* =============================================================
-   TIMER DISPLAY
+   UPDATE TIMER UI
    ============================================================= */
 
 function updateTimerDisplay() {
 
+    /*
+        Ví dụ:
+        9.8
+        9.7
+        9.6
+    */
     timerTextElement.textContent =
         timeLeft.toFixed(1);
 
 
+    /*
+        Tính % timer còn lại.
+    */
     const percentage =
-        (timeLeft / questionTime) * 100;
+        (
+            timeLeft /
+            questionTime
+        ) * 100;
 
 
+    /*
+        Update thanh timer.
+    */
     timerBarElement.style.width =
         percentage + "%";
 }
@@ -404,59 +715,354 @@ function selectAnswer(
 ) {
 
     /*
-        Không cho click lần thứ hai.
+        Nếu câu đã xử lý
+        → không làm gì.
+
+        Tránh double click / double tap.
     */
-    if (answered)
+    if (answered) {
+
         return;
+    }
 
 
+    /*
+        Đánh dấu câu đã trả lời.
+    */
     answered = true;
 
 
+    /*
+        Dừng timer ngay khi chọn.
+    */
     clearInterval(timer);
 
 
     /*
-        Khóa toàn bộ button ngay lập tức.
-
-        Quan trọng cho cả mouse và touchscreen.
+        Khóa toàn bộ 4 đáp án.
     */
     disableAnswerButtons();
 
 
+    /*
+        QUAN TRỌNG:
+
+        Dù trả lời ĐÚNG hay SAI
+        đều hiện hiragana.
+    */
+    showReading();
+
+
+    /* ---------------------------------------------------------
+       CORRECT
+       --------------------------------------------------------- */
+
     if (
         selectedAnswer ===
-        currentQuestion.answer
+        currentQuestion.meaning
     ) {
 
+        /*
+            Button đúng → màu xanh.
+        */
         selectedButton.classList.add(
             "correct"
         );
 
 
-        correctAnswer();
+        /*
+            Xử lý điểm/combo.
+        */
+        handleCorrectAnswer();
+
+
+        /*
+            Đọc reading.
+
+            Ví dụ:
+            おとろえる
+
+            Đọc xong mới sang câu mới.
+        */
+        speakJapanese(
+            currentQuestion.reading,
+            () => {
+
+                nextQuestion();
+            }
+        );
     }
+
+
+    /* ---------------------------------------------------------
+       WRONG
+       --------------------------------------------------------- */
+
     else {
 
+        /*
+            Button người chơi chọn
+            → màu đỏ.
+        */
         selectedButton.classList.add(
             "wrong"
         );
 
 
         /*
-            Khi sai:
-            hiện đáp án đúng bằng màu xanh.
+            Hiện đáp án đúng
+            → màu xanh.
         */
         showCorrectAnswer();
 
 
-        wrongAnswer();
+        /*
+            Xử lý mất mạng/combo.
+        */
+        handleWrongAnswer();
+
+
+        /*
+            Dù SAI vẫn đọc từ.
+
+            Đây là phần mới theo yêu cầu.
+
+            Ví dụ:
+
+            衰える
+            おとろえる 🔊
+        */
+        speakJapanese(
+            currentQuestion.reading,
+            () => {
+
+                /*
+                    Sau khi đọc xong
+                    mới kiểm tra mạng.
+                */
+                checkLife();
+            }
+        );
     }
 }
 
 
 /* =============================================================
-   DISABLE BUTTON
+   CORRECT ANSWER
+   ============================================================= */
+
+function handleCorrectAnswer() {
+
+    /*
+        Tăng combo.
+    */
+    combo++;
+
+
+    /*
+        Update Max Combo.
+    */
+    if (combo > maxCombo) {
+
+        maxCombo = combo;
+    }
+
+
+    /* ---------------------------------------------------------
+       CALCULATE SCORE
+       --------------------------------------------------------- */
+
+    /*
+        Base Score = 100
+
+        Bonus dựa trên
+        thời gian còn lại.
+
+        Ví dụ còn 7.3 giây:
+
+        100 + 73
+        =
+        173
+    */
+    let earnedScore =
+        100 +
+        Math.floor(
+            timeLeft * 10
+        );
+
+
+    /*
+        Combo >= 5
+
+        x1.2
+    */
+    if (
+        combo >= 5 &&
+        combo < 10
+    ) {
+
+        earnedScore *= 1.2;
+    }
+
+
+    /*
+        Combo >= 10
+
+        x1.5
+    */
+    if (combo >= 10) {
+
+        earnedScore *= 1.5;
+    }
+
+
+    /*
+        Làm tròn.
+    */
+    earnedScore =
+        Math.floor(
+            earnedScore
+        );
+
+
+    /*
+        Cộng vào Score.
+    */
+    score +=
+        earnedScore;
+
+
+    /*
+        Update UI.
+    */
+    updateHUD();
+}
+
+
+/* =============================================================
+   WRONG ANSWER
+   ============================================================= */
+
+function handleWrongAnswer() {
+
+    /*
+        Mất 1 mạng.
+    */
+    lives--;
+
+
+    /*
+        Sai → Combo về 0.
+    */
+    combo = 0;
+
+
+    /*
+        Update UI ngay.
+    */
+    updateHUD();
+}
+
+
+/* =============================================================
+   TIME OUT
+   ============================================================= */
+
+function handleTimeout() {
+
+    /*
+        Nếu đã xử lý câu
+        thì bỏ qua.
+    */
+    if (answered) {
+
+        return;
+    }
+
+
+    answered = true;
+
+
+    /*
+        Hết giờ = mất mạng.
+    */
+    lives--;
+
+
+    /*
+        Reset combo.
+    */
+    combo = 0;
+
+
+    /*
+        Khóa button.
+    */
+    disableAnswerButtons();
+
+
+    /*
+        Hiện đáp án đúng.
+    */
+    showCorrectAnswer();
+
+
+    /*
+        Hết giờ cũng hiện Hiragana.
+    */
+    showReading();
+
+
+    /*
+        Update HUD.
+    */
+    updateHUD();
+
+
+    /*
+        Hết giờ cũng đọc từ.
+
+        Nhờ vậy người học vẫn được:
+
+        Kanji
+        ↓
+        Hiragana
+        ↓
+        Pronunciation
+    */
+    speakJapanese(
+        currentQuestion.reading,
+        () => {
+
+            checkLife();
+        }
+    );
+}
+
+
+/* =============================================================
+   SHOW READING
+   ============================================================= */
+
+function showReading() {
+
+    /*
+        reading đã được gán từ lúc
+        nextQuestion():
+
+        readingElement.textContent =
+            currentQuestion.reading
+
+        Bây giờ chỉ cần hiện nó.
+    */
+    readingElement.classList.add(
+        "show"
+    );
+}
+
+
+/* =============================================================
+   DISABLE ANSWER BUTTONS
    ============================================================= */
 
 function disableAnswerButtons() {
@@ -488,9 +1094,13 @@ function showCorrectAnswer() {
 
     buttons.forEach(button => {
 
+        /*
+            Tìm button có nội dung
+            giống meaning đúng.
+        */
         if (
             button.textContent ===
-            currentQuestion.answer
+            currentQuestion.meaning
         ) {
 
             button.classList.add(
@@ -503,200 +1113,55 @@ function showCorrectAnswer() {
 
 
 /* =============================================================
-   CORRECT ANSWER
+   JAPANESE TEXT TO SPEECH
    ============================================================= */
 
-function correctAnswer() {
-
-    combo++;
-
-
-    if (combo > maxCombo) {
-
-        maxCombo = combo;
-    }
-
-
-    /* ---------------------------------------------------------
-       SCORE
-       --------------------------------------------------------- */
-
-    let earnedScore =
-        100 +
-        Math.floor(timeLeft * 10);
-
-
-    /*
-        Combo bonus.
-    */
-    if (combo >= 10) {
-
-        earnedScore *= 1.5;
-    }
-    else if (combo >= 5) {
-
-        earnedScore *= 1.2;
-    }
-
-
-    earnedScore =
-        Math.floor(earnedScore);
-
-
-    score += earnedScore;
-
-
-    updateHUD();
-
-
-    /* ---------------------------------------------------------
-       READING
-       --------------------------------------------------------- */
-
-    /*
-        Sau khi trả lời đúng:
-
-        衰える
-
-        ↓
-
-        おとろえる
-
-        đồng thời máy đọc:
-        "おとろえる"
-    */
-    readingElement.classList.add("show");
-
-
-    /*
-        Đọc reading.
-
-        Sau khi đọc xong
-        callback sẽ gọi nextQuestion().
-    */
-    speakJapanese(
-        currentQuestion.reading,
-        () => {
-
-            nextQuestion();
-        }
-    );
-}
-
-
-/* =============================================================
-   WRONG ANSWER
-   ============================================================= */
-
-function wrongAnswer() {
-
-    lives--;
-
-    combo = 0;
-
-
-    updateHUD();
-
-
-    /*
-        Khi sai cũng cho người chơi
-        nhìn đáp án đúng một chút.
-
-        Hiện tại KHÔNG đọc âm thanh.
-    */
-    setTimeout(() => {
-
-        checkLife();
-
-    }, 700);
-}
-
-
-/* =============================================================
-   TIME OUT
-   ============================================================= */
-
-function handleTimeout() {
-
-    if (answered)
-        return;
-
-
-    answered = true;
-
-
-    lives--;
-
-    combo = 0;
-
-
-    disableAnswerButtons();
-
-    showCorrectAnswer();
-
-    updateHUD();
-
-
-    setTimeout(() => {
-
-        checkLife();
-
-    }, 700);
-}
-
-
-/* =============================================================
-   TEXT TO SPEECH - JAPANESE
-   ============================================================= */
-
-/*
-    Đọc trường "reading" trong JSON.
-
-    Ví dụ:
-
-    word:
-        衰える
-
-    reading:
-        おとろえる
-
-    Máy sẽ đọc:
-        おとろえる
-*/
 function speakJapanese(
     reading,
     onFinished
 ) {
 
     /*
-        Kiểm tra trình duyệt có hỗ trợ
-        Web Speech API hay không.
+        Nếu browser không hỗ trợ
+        Speech Synthesis.
+
+        Game vẫn phải tiếp tục.
     */
     if (
         !("speechSynthesis" in window)
     ) {
 
-        /*
-            Nếu không hỗ trợ speech,
-            vẫn tiếp tục game bình thường.
-        */
         setTimeout(
             onFinished,
-            500
+            700
         );
+
 
         return;
     }
 
 
     /*
-        Hủy âm thanh cũ nếu còn.
+        Dừng speech cũ.
     */
     window.speechSynthesis.cancel();
 
 
     /*
-        Tạo câu cần đọc.
+        Tạo Speech Object.
+
+        Ta đọc "reading"
+        thay vì "word".
+
+        Ví dụ:
+
+        word:
+        衰える
+
+        reading:
+        おとろえる
+
+        → đọc おとろえる
     */
     const speech =
         new SpeechSynthesisUtterance(
@@ -714,50 +1179,61 @@ function speakJapanese(
     /*
         Tốc độ đọc.
 
-        1.0 = tốc độ bình thường.
-
-        0.9 hơi chậm một chút,
-        phù hợp game học từ vựng.
+        0.9 = hơi chậm
+        để phù hợp học từ.
     */
     speech.rate =
         0.9;
 
 
     /*
-        Pitch bình thường.
+        Cao độ bình thường.
     */
     speech.pitch =
         1.0;
 
 
     /*
-        Volume:
-        0 → 1
+        Âm lượng tối đa.
     */
     speech.volume =
         1.0;
 
 
-    /*
-        Cố tìm Japanese Voice
-        trong thiết bị.
+    /* ---------------------------------------------------------
+       FIND JAPANESE VOICE
+       --------------------------------------------------------- */
 
-        PC, Android, iPhone có thể
-        sử dụng voice khác nhau.
-    */
     const voices =
-        window.speechSynthesis.getVoices();
+        window.speechSynthesis
+            .getVoices();
 
 
+    /*
+        Tìm voice:
+
+        ja-JP
+        ja_JP
+        ja...
+
+        tùy Windows / Android / iOS.
+    */
     const japaneseVoice =
-        voices.find(
-            voice =>
+        voices.find(voice => {
+
+            return (
+                voice.lang &&
                 voice.lang
                     .toLowerCase()
                     .startsWith("ja")
-        );
+            );
+        });
 
 
+    /*
+        Nếu máy có Japanese Voice
+        → dùng voice đó.
+    */
     if (japaneseVoice) {
 
         speech.voice =
@@ -765,32 +1241,41 @@ function speakJapanese(
     }
 
 
-    /*
-        Khi đọc xong
-        → sang câu tiếp theo.
-    */
+    /* ---------------------------------------------------------
+       SPEECH FINISHED
+       --------------------------------------------------------- */
+
     speech.onend = () => {
 
         /*
-            Delay rất ngắn để game
-            không chuyển quá đột ngột.
+            Giữ màn hình lại 200ms
+            sau khi đọc xong.
+
+            Người chơi có thời gian
+            nhìn Hiragana.
         */
         setTimeout(
             onFinished,
-            150
+            200
         );
     };
 
 
-    /*
-        Nếu speech bị lỗi,
-        game vẫn phải tiếp tục.
-    */
+    /* ---------------------------------------------------------
+       SPEECH ERROR
+       --------------------------------------------------------- */
+
     speech.onerror = () => {
 
+        /*
+            Speech lỗi cũng không được
+            làm game đứng.
+
+            Sau 500ms → tiếp tục.
+        */
         setTimeout(
             onFinished,
-            300
+            500
         );
     };
 
@@ -825,11 +1310,18 @@ function stopSpeech() {
 
 function checkLife() {
 
+    /*
+        Hết mạng.
+    */
     if (lives <= 0) {
 
         gameOver();
-
     }
+
+
+    /*
+        Vẫn còn mạng.
+    */
     else {
 
         nextQuestion();
@@ -843,18 +1335,41 @@ function checkLife() {
 
 function updateHUD() {
 
+    /* ---------------------------------------------------------
+       SCORE
+       --------------------------------------------------------- */
+
     scoreElement.textContent =
         score.toLocaleString();
 
+
+    /* ---------------------------------------------------------
+       COMBO
+       --------------------------------------------------------- */
 
     comboElement.textContent =
         `🔥 COMBO ${combo}`;
 
 
+    /* ---------------------------------------------------------
+       LIFE
+       --------------------------------------------------------- */
+
     let lifeText = "";
 
 
-    for (let i = 0; i < 3; i++) {
+    /*
+        Luôn có tổng cộng 3 icon.
+
+        Ví dụ lives = 2:
+
+        ❤️ ❤️ 🖤
+    */
+    for (
+        let i = 0;
+        i < 3;
+        i++
+    ) {
 
         if (i < lives) {
 
@@ -878,22 +1393,41 @@ function updateHUD() {
 
 function gameOver() {
 
+    /*
+        Dừng timer.
+    */
     clearInterval(timer);
 
+
+    /*
+        Dừng âm thanh.
+    */
     stopSpeech();
 
 
+    /*
+        Kiểm tra High Score.
+    */
     saveBestScore();
 
 
+    /*
+        Ẩn Game Screen.
+    */
     gameScreen.style.display =
         "none";
 
 
+    /*
+        Hiện Game Over.
+    */
     gameOverScreen.style.display =
         "block";
 
 
+    /*
+        Hiển thị kết quả.
+    */
     finalScoreElement.textContent =
         score.toLocaleString();
 
@@ -907,7 +1441,8 @@ function gameOver() {
 
 
     finalBestScoreElement.textContent =
-        getBestScore().toLocaleString();
+        getBestScore()
+            .toLocaleString();
 }
 
 
@@ -915,23 +1450,40 @@ function gameOver() {
    LOCAL STORAGE
    ============================================================= */
 
+/*
+    Lấy High Score.
+
+    Nếu chưa có:
+    return 0
+*/
 function getBestScore() {
 
-    return Number(
-        localStorage.getItem(
-            "batlingo_n1_bestScore"
+    return (
+        Number(
+            localStorage.getItem(
+                "batlingo_n1_bestScore"
+            )
         )
-    ) || 0;
+        ||
+        0
+    );
 }
 
 
+/*
+    Hiện High Score.
+*/
 function loadBestScore() {
 
     bestScoreElement.textContent =
-        getBestScore().toLocaleString();
+        getBestScore()
+            .toLocaleString();
 }
 
 
+/*
+    Lưu High Score nếu phá record.
+*/
 function saveBestScore() {
 
     const bestScore =
@@ -950,7 +1502,7 @@ function saveBestScore() {
 
 /* =============================================================
    SHUFFLE ARRAY
-   Fisher-Yates
+   Fisher-Yates Algorithm
    ============================================================= */
 
 function shuffleArray(array) {
@@ -963,10 +1515,15 @@ function shuffleArray(array) {
 
         const j =
             Math.floor(
-                Math.random() * (i + 1)
+                Math.random() *
+                (i + 1)
             );
 
 
+        /*
+            Swap array[i]
+            và array[j].
+        */
         [
             array[i],
             array[j]
@@ -986,7 +1543,10 @@ function shuffleArray(array) {
 
 retryButton.addEventListener(
     "click",
-    startGame
+    () => {
+
+        startGame();
+    }
 );
 
 
@@ -995,17 +1555,36 @@ retryButton.addEventListener(
    ============================================================= */
 
 /*
-    Nếu rời trang trong lúc đang đọc,
-    hủy speech.
+    Nếu người chơi đóng / reload trang
+    khi máy đang đọc tiếng Nhật
+    → dừng speech.
 */
 window.addEventListener(
     "beforeunload",
-    stopSpeech
+    () => {
+
+        stopSpeech();
+    }
 );
 
 
 /* =============================================================
-   INITIALIZE
+   INITIALIZE BATLINGO
    ============================================================= */
 
+/*
+    Thứ tự:
+
+    index.html
+        ↓
+    game.js
+        ↓
+    loadQuestions()
+        ↓
+    data/n1.json
+        ↓
+    startGame()
+        ↓
+    nextQuestion()
+*/
 loadQuestions();
