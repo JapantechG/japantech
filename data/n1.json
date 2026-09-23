@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "word": "衰える",
+        "reading": "おとろえる",
+        "answer": "Suy yếu",
+        "choices": [
+            "Suy yếu",
+            "Vượt qua",
+            "Bổ sung",
+            "Trì hoãn"
+        ]
+    },
+    {
+        "id": 2,
+        "word": "残酷",
+        "reading": "ざんこく",
+        "answer": "Tàn khốc",
+        "choices": [
+            "Tàn khốc",
+            "Phức tạp",
+            "Nghiêm túc",
+            "Đáng tiếc"
+        ]
+    },
+    {
+        "id": 3,
+        "word": "促す",
+        "reading": "うながす",
+        "answer": "Thúc giục",
+        "choices": [
+            "Thúc giục",
+            "Từ chối",
+            "Quan sát",
+            "Che giấu"
+        ]
+    },
+    {
+        "id": 4,
+        "word": "覆す",
+        "reading": "くつがえす",
+        "answer": "Lật ngược",
+        "choices": [
+            "Lật ngược",
+            "Bảo vệ",
+            "Phân chia",
+            "Duy trì"
+        ]
+    },
+    {
+        "id": 5,
+        "word": "著しい",
+        "reading": "いちじるしい",
+        "answer": "Đáng kể",
+        "choices": [
+            "Đáng kể",
+            "Bình thường",
+            "Mơ hồ",
+            "Yên tĩnh"
+        ]
+    },
+    {
+        "id": 6,
+        "word": "免れる",
+        "reading": "まぬがれる",
+        "answer": "Thoát khỏi",
+        "choices": [
+            "Thoát khỏi",
+            "Chấp nhận",
+            "Tiến hành",
+            "Đối mặt"
+        ]
+    },
+    {
+        "id": 7,
+        "word": "妨げる",
+        "reading": "さまたげる",
+        "answer": "Cản trở",
+        "choices": [
+            "Cản trở",
+            "Khuyến khích",
+            "Thay đổi",
+            "Xác nhận"
+        ]
+    },
+    {
+        "id": 8,
+        "word": "乏しい",
+        "reading": "とぼしい",
+        "answer": "Thiếu thốn",
+        "choices": [
+            "Thiếu thốn",
+            "Phong phú",
+            "Ổn định",
+            "Chính xác"
+        ]
+    }
+]

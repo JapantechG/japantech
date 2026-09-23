@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Quan trọng cho responsive trên điện thoại/tablet -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>BatLingo - Solo Battle</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <!-- =====================================================
+             GAME SCREEN
+             ===================================================== -->
+        <section id="gameScreen">
+
+            <!-- Header -->
+            <div class="game-header">
+
+                <!-- 3 mạng -->
+                <div id="life" class="life">
+                    ❤️ ❤️ ❤️
+                </div>
+
+                <!-- Score -->
+                <div class="score-box">
+
+                    <div class="score-label">
+                        SCORE
+                    </div>
+
+                    <div id="score" class="score">
+                        0
+                    </div>
+
+                    <div class="best-score">
+                        BEST:
+                        <span id="bestScore">0</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Số câu -->
+            <div id="questionNumber"
+                 class="question-number">
+                QUESTION 1
+            </div>
+
+
+            <!-- Từ tiếng Nhật -->
+            <div id="question"
+                 class="question">
+                Loading...
+            </div>
+
+
+            <!-- Reading
+                 Bình thường ẩn.
+                 Sau khi trả lời đúng sẽ hiện. -->
+            <div id="reading"
+                 class="reading">
+            </div>
+
+
+            <!-- Timer -->
+            <div class="timer-text">
+                TIME:
+                <span id="timerText">10.0</span>s
+            </div>
+
+
+            <div class="timer-background">
+
+                <div id="timerBar"
+                     class="timer-bar">
+                </div>
+
+            </div>
+
+
+            <!-- 4 đáp án -->
+            <div id="answers"
+                 class="answers">
+            </div>
+
+
+            <!-- Combo -->
+            <div id="combo"
+                 class="combo">
+                🔥 COMBO 0
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GAME OVER
+             ===================================================== -->
+        <section id="gameOverScreen"
+                 class="game-over">
+
+            <h1>GAME OVER</h1>
+
+            <div class="result-label">
+                SCORE
+            </div>
+
+            <div id="finalScore"
+                 class="final-score">
+                0
+            </div>
+
+            <div class="result-row">
+                QUESTIONS:
+                <span id="finalQuestion">0</span>
+            </div>
+
+            <div class="result-row">
+                MAX COMBO:
+                <span id="finalCombo">0</span>
+            </div>
+
+            <div class="result-row">
+                BEST SCORE:
+                <span id="finalBestScore">0</span>
+            </div>
+
+            <button id="retryButton"
+                    class="retry-button">
+                RETRY
+            </button>
+
+        </section>
+
+    </main>
+
+    <script type="module"
+            src="js/game.js">
+    </script>
+
+</body>
+
+</html>
