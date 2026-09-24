@@ -101,6 +101,156 @@ const comboElement =
         "combo"
     );
 
+const gameModeInfoElement =
+    document.getElementById(
+        "gameModeInfo"
+    );
+
+/* =============================================================
+   GAME MODE INFORMATION
+   ============================================================= */
+
+function updateGameModeInfo() {
+
+    if (
+        currentConfig.studyMode ===
+        "jlpt"
+    ) {
+
+        const level =
+            currentConfig.target
+                .toUpperCase();
+
+
+        let categoryName =
+            "";
+
+
+        switch (
+            currentConfig.category
+        ) {
+
+            case "vocabulary":
+
+                categoryName =
+                    "VOCABULARY";
+
+                break;
+
+
+            case "grammar":
+
+                categoryName =
+                    "GRAMMAR";
+
+                break;
+
+
+            case "listening":
+
+                categoryName =
+                    "LISTENING";
+
+                break;
+
+
+            case "reading":
+
+                categoryName =
+                    "READING";
+
+                break;
+
+        }
+
+
+        gameModeInfoElement.textContent =
+            `JLPT ${level} · ${categoryName}`;
+
+
+        return;
+    }
+
+
+    /*
+        Sau này xử lý TOPIC...
+    */
+
+    gameModeInfoElement.textContent =
+        "";
+}
+/*--xxxxxxx--*/       
+/* =============================================================
+   GET DATA FILE
+   ============================================================= */
+
+function getDataFile(config) {
+
+    /*
+        JLPT → TỪ VỰNG
+    */
+    if (
+        config.studyMode === "jlpt"
+        &&
+        config.category === "vocabulary"
+    ) {
+
+        const files = {
+
+            n5: "data/n5.json",
+            n4: "data/n4.json",
+            n3: "data/n3.json",
+            n2: "data/n2.json",
+            n1: "data/n1.json"
+
+        };
+
+
+        return files[
+            config.target
+        ] ?? null;
+    }
+
+    if (
+    config.studyMode === "topic"
+    &&
+    config.category === "vocabulary"
+) {
+
+    const files = {
+
+        animals:
+            "data/topics/animals.json",
+
+        food:
+            "data/topics/food.json",
+
+        colors:
+            "data/topics/colors.json"
+
+    };
+
+
+    return files[
+        config.target
+    ] ?? null;
+}
+
+    /*
+        Sau này thêm:
+
+        CHỦ ĐỀ
+        NGỮ PHÁP
+        NGHE
+        ĐỌC HIỂU
+
+        ở đây.
+    */
+
+
+    return null;
+}
+/*--xxxxxxx--*/
 
 /* =============================================================
    START GAME
@@ -110,9 +260,9 @@ export async function startGame(
     config
 ) {
 
-    currentConfig =
-        config;
+    currentConfig =config;
 
+    updateGameModeInfo();
 
     stopSpeech();
 
@@ -142,16 +292,16 @@ export async function startGame(
         data/${config.target}.json
     */
 
-    const response =
+    /*const response =
         await fetch(
             "data/n1.json"
-        );
+        );*/
+ 
 
-
-    if (!response.ok) {
+    /*if (!response.ok) {
 
         alert(
-            "Không thể load data/n1.json"
+            "Không thể load data"
         );
 
         return;
@@ -159,8 +309,54 @@ export async function startGame(
 
 
     questions =
-        await response.json();
+        await response.json();*/
+    /* =========================================================
+   LOAD DATABASE
+   ========================================================= */
 
+const dataFile =
+    getDataFile(config);
+
+
+/*
+    Mode chưa có database
+*/
+if (!dataFile) {
+
+    alert(
+        "Mode này hiện chưa có database."
+    );
+
+    gameActive = false;
+
+    return;
+}
+
+
+/*
+    Load đúng JSON đã được mapping
+*/
+const response =
+    await fetch(
+        dataFile
+    );
+
+
+if (!response.ok) {
+
+    alert(
+        `Không thể load ${dataFile}`
+    );
+
+    gameActive = false;
+
+    return;
+}
+
+
+questions =
+    await response.json();    
+/*xxxxxxxxxx*\ */
 
     if (
         questions.length < 4
@@ -972,6 +1168,14 @@ function showReading() {
     );
 }
 
+/* =============================================================
+   BEST SCORE KEY
+   ============================================================= */
+
+function getBestScoreKey() {
+
+    return `batlingo_${currentConfig.target}_bestScore`;
+}
 
 /* =============================================================
    HUD
@@ -1003,7 +1207,7 @@ function updateHUD() {
     const best =
         Number(
             localStorage.getItem(
-                "batlingo_n1_bestScore"
+                 getBestScoreKey()/*"batlingo_n1_bestScore"*/
             )
             ||
             0
