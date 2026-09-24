@@ -1,0 +1,453 @@
+[
+  {
+    "id": 1,
+    "word": "一家",
+    "reading": "いっか",
+    "meaning": "một nhà, cả nhà, cả gia đình"
+  },
+  {
+    "id": 2,
+    "word": "ありがたい",
+    "reading": "ありがたい",
+    "meaning": "biết ơn, đáng quý, đáng cảm kích"
+  },
+  {
+    "id": 3,
+    "word": "向き合う",
+    "reading": "むきあう",
+    "meaning": "đối diện, đối mặt"
+  },
+  {
+    "id": 4,
+    "word": "つくづく[と]",
+    "reading": "つくづく[と]",
+    "meaning": "sâu sắc, thấm thía"
+  },
+  {
+    "id": 5,
+    "word": "養う",
+    "reading": "やしなう",
+    "meaning": "nuôi, nuôi dưỡng"
+  },
+  {
+    "id": 6,
+    "word": "役目",
+    "reading": "やくめ",
+    "meaning": "trách nhiệm, vai trò, nhiệm vụ"
+  },
+  {
+    "id": 7,
+    "word": "甘える",
+    "reading": "あまえる",
+    "meaning": "làm nũng, nhõng nhẽo"
+  },
+  {
+    "id": 8,
+    "word": "世間知らず",
+    "reading": "せけんしらず",
+    "meaning": "khờ khạo, ngây thơ, thiếu kinh nghiệm xã hội"
+  },
+  {
+    "id": 9,
+    "word": "しつけ",
+    "reading": "しつけ",
+    "meaning": "sự dạy dỗ, giáo dục khuôn phép, nề nếp"
+  },
+  {
+    "id": 10,
+    "word": "言いつける",
+    "reading": "いいつける",
+    "meaning": "méc, mách"
+  },
+  {
+    "id": 11,
+    "word": "自立（する）",
+    "reading": "じりつ（する）",
+    "meaning": "tự lập"
+  },
+  {
+    "id": 12,
+    "word": "言い出す",
+    "reading": "いいだす",
+    "meaning": "nói ra, ngỏ ý"
+  },
+  {
+    "id": 13,
+    "word": "意思",
+    "reading": "いし",
+    "meaning": "ý định, ý muốn"
+  },
+  {
+    "id": 14,
+    "word": "尊重（する）",
+    "reading": "そんちょう（する）",
+    "meaning": "sự tôn trọng"
+  },
+  {
+    "id": 15,
+    "word": "説得（する）",
+    "reading": "せっとく（する）",
+    "meaning": "sự thuyết phục"
+  },
+  {
+    "id": 16,
+    "word": "納得（する）",
+    "reading": "なっとく（する）",
+    "meaning": "sự chấp nhận, sự đồng ý"
+  },
+  {
+    "id": 17,
+    "word": "逆らう",
+    "reading": "さからう",
+    "meaning": "chống đối, ngược lại"
+  },
+  {
+    "id": 18,
+    "word": "反省（する）",
+    "reading": "はんせい（する）",
+    "meaning": "sự phản tỉnh, suy nghĩ lại"
+  },
+  {
+    "id": 19,
+    "word": "放っておく",
+    "reading": "ほうっておく",
+    "meaning": "bỏ mặc, để yên"
+  },
+  {
+    "id": 20,
+    "word": "介護（する）",
+    "reading": "かいご（する）",
+    "meaning": "sự chăm sóc, điều dưỡng"
+  },
+  {
+    "id": 21,
+    "word": "ホームヘルパー",
+    "reading": "ホームヘルパー",
+    "meaning": "người trợ giúp, chăm sóc tại nhà"
+  },
+  {
+    "id": 22,
+    "word": "世代",
+    "reading": "せだい",
+    "meaning": "thế hệ"
+  },
+  {
+    "id": 23,
+    "word": "継ぐ",
+    "reading": "つぐ",
+    "meaning": "tiếp nối, kế thừa"
+  },
+  {
+    "id": 24,
+    "word": "妊娠（する）",
+    "reading": "にんしん（する）",
+    "meaning": "sự mang thai"
+  },
+  {
+    "id": 25,
+    "word": "出産（する）",
+    "reading": "しゅっさん（する）",
+    "meaning": "sự sinh, sinh con"
+  },
+  {
+    "id": 26,
+    "word": "産む",
+    "reading": "うむ",
+    "meaning": "sinh, đẻ"
+  },
+{
+  "id": 27,
+  "word": "友人",
+  "reading": "ゆうじん",
+  "meaning": "bạn bè, người bạn"
+},
+{
+  "id": 28,
+  "word": "仲",
+  "reading": "なか",
+  "meaning": "tình cảm, mối quan hệ"
+},
+{
+  "id": 29,
+  "word": "縁",
+  "reading": "えん",
+  "meaning": "duyên, duyên phận"
+},
+{
+  "id": 30,
+  "word": "ニックネーム",
+  "reading": "ニックネーム",
+  "meaning": "biệt danh, tên thân mật"
+},
+{
+  "id": 31,
+  "word": "大半",
+  "reading": "たいはん",
+  "meaning": "phần lớn, đại đa số"
+},
+{
+  "id": 32,
+  "word": "恵まれる",
+  "reading": "めぐまれる",
+  "meaning": "được ban cho, được may mắn có"
+},
+{
+  "id": 33,
+  "word": "頼る",
+  "reading": "たよる",
+  "meaning": "trông cậy, dựa vào, nhờ cậy"
+},
+{
+  "id": 34,
+  "word": "頼もしい",
+  "reading": "たのもしい",
+  "meaning": "đáng tin cậy, đáng trông cậy"
+},
+{
+  "id": 35,
+  "word": "見習う",
+  "reading": "みならう",
+  "meaning": "noi gương, học theo"
+},
+{
+  "id": 36,
+  "word": "打ち明ける",
+  "reading": "うちあける",
+  "meaning": "thổ lộ, bày tỏ, tâm sự"
+},
+{
+  "id": 37,
+  "word": "励ます",
+  "reading": "はげます",
+  "meaning": "động viên, khích lệ"
+},
+{
+  "id": 38,
+  "word": "あえて",
+  "reading": "あえて",
+  "meaning": "cố ý, dám, mạnh dạn"
+},
+{
+  "id": 39,
+  "word": "なぐさめる",
+  "reading": "なぐさめる",
+  "meaning": "an ủi, vỗ về"
+},
+{
+  "id": 40,
+  "word": "察する",
+  "reading": "さっする",
+  "meaning": "cảm nhận, thấu hiểu, suy đoán"
+},
+{
+  "id": 41,
+  "word": "思いやり",
+  "reading": "おもいやり",
+  "meaning": "sự quan tâm, lòng cảm thông"
+},
+{
+  "id": 42,
+  "word": "何気ない",
+  "reading": "なにげない",
+  "meaning": "bình thường, tự nhiên, không chủ đích"
+},
+{
+  "id": 43,
+  "word": "からかう",
+  "reading": "からかう",
+  "meaning": "trêu chọc, chọc ghẹo"
+},
+{
+  "id": 44,
+  "word": "幹事",
+  "reading": "かんじ",
+  "meaning": "người tổ chức, người phụ trách"
+},
+{
+  "id": 45,
+  "word": "呼び出す",
+  "reading": "よびだす",
+  "meaning": "gọi ra, triệu tập"
+},
+{
+  "id": 46,
+  "word": "盛り上がる",
+  "reading": "もりあがる",
+  "meaning": "sôi động, hào hứng, dâng lên"
+},
+{
+  "id": 47,
+  "word": "あきれる",
+  "reading": "あきれる",
+  "meaning": "chán ngán, ngỡ ngàng, kinh ngạc"
+},
+{
+  "id": 48,
+  "word": "ふざける",
+  "reading": "ふざける",
+  "meaning": "đùa giỡn, nghịch ngợm"
+},
+{
+  "id": 49,
+  "word": "久しい",
+  "reading": "ひさしい",
+  "meaning": "lâu, đã lâu"
+},
+{
+  "id": 50,
+  "word": "初対面",
+  "reading": "しょたいめん",
+  "meaning": "lần gặp mặt đầu tiên"
+},
+{
+  "id": 51,
+  "word": "自己紹介",
+  "reading": "じこしょうかい",
+  "meaning": "sự tự giới thiệu"
+},
+{
+  "id": 52,
+  "word": "おじぎ（する）",
+  "reading": "おじぎ（する）",
+  "meaning": "sự cúi chào, cúi chào"
+},
+{
+  "id": 53,
+  "word": "近所付き合い",
+  "reading": "きんじょづきあい",
+  "meaning": "mối quan hệ láng giềng"
+},
+{
+  "id": 54,
+  "word": "大家",
+  "reading": "おおや",
+  "meaning": "chủ nhà"
+},
+{
+  "id": 55,
+  "word": "飼い主",
+  "reading": "かいぬし",
+  "meaning": "chủ nuôi thú cưng"
+},
+{
+  "id": 56,
+  "word": "交わす",
+  "reading": "かわす",
+  "meaning": "trao đổi, qua lại"
+},
+{
+  "id": 57,
+  "word": "呼び止める",
+  "reading": "よびとめる",
+  "meaning": "gọi chặn lại"
+},
+{
+  "id": 58,
+  "word": "振り返る",
+  "reading": "ふりかえる",
+  "meaning": "ngoảnh lại, nhìn lại, quay lại"
+},
+{
+  "id": 59,
+  "word": "再会（する）",
+  "reading": "さいかい（する）",
+  "meaning": "sự gặp lại, tái ngộ"
+},
+{
+  "id": 60,
+  "word": "覚え",
+  "reading": "おぼえ",
+  "meaning": "trí nhớ, ký ức"
+},
+{
+  "id": 61,
+  "word": "心当たり",
+  "reading": "こころあたり",
+  "meaning": "manh mối, điều mình biết hoặc nhớ đến"
+},
+{
+  "id": 62,
+  "word": "結びつく",
+  "reading": "むすびつく",
+  "meaning": "liên kết, gắn kết"
+},
+{
+  "id": 63,
+  "word": "とっさ[に]",
+  "reading": "とっさ[に]",
+  "meaning": "ngay lập tức, trong khoảnh khắc"
+},
+{
+  "id": 64,
+  "word": "てっきり",
+  "reading": "てっきり",
+  "meaning": "cứ tưởng là, đinh ninh rằng"
+},
+{
+  "id": 65,
+  "word": "思い込む",
+  "reading": "おもいこむ",
+  "meaning": "tin chắc, cứ cho rằng"
+},
+{
+  "id": 66,
+  "word": "コミュニケーション",
+  "reading": "コミュニケーション",
+  "meaning": "giao tiếp"
+},
+{
+  "id": 67,
+  "word": "ネットワーク",
+  "reading": "ネットワーク",
+  "meaning": "mạng lưới, kết nối"
+},
+{
+  "id": 68,
+  "word": "直接",
+  "reading": "ちょくせつ",
+  "meaning": "trực tiếp"
+},
+{
+  "id": 69,
+  "word": "接する",
+  "reading": "せっする",
+  "meaning": "tiếp xúc, tiếp giáp"
+},
+{
+  "id": 70,
+  "word": "招く",
+  "reading": "まねく",
+  "meaning": "mời, kéo theo, dẫn đến"
+},
+{
+  "id": 71,
+  "word": "気配り（する）",
+  "reading": "きくばり（する）",
+  "meaning": "sự chu đáo, sự quan tâm"
+},
+{
+  "id": 72,
+  "word": "込める",
+  "reading": "こめる",
+  "meaning": "gửi gắm, dồn tình cảm vào"
+},
+{
+  "id": 73,
+  "word": "同期",
+  "reading": "どうき",
+  "meaning": "đồng nghiệp cùng khóa, cùng kỳ"
+},
+{
+  "id": 74,
+  "word": "ぐち",
+  "reading": "ぐち",
+  "meaning": "lời than vãn, lời ca thán"
+},
+{
+  "id": 75,
+  "word": "大いに",
+  "reading": "おおいに",
+  "meaning": "rất nhiều, hết sức"
+}
+  
+]
