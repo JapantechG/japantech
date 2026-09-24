@@ -440,6 +440,37 @@
     color: white;
 }
 
+/* ============================================================
+   GAME MODE INFO
+   ============================================================ */
+.game-mode-info {
+    margin-top: 25px;
+
+    color: #fbbf24;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.question-number {
+    margin-top: 7px;
+
+    color: #64748b;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
 
 /* ============================================================
    MOBILE
