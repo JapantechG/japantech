@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "word": "衰える",
+        "reading": "おとろえる",
+        "meaning": "Suy yếu, suy giảm"
+    },
+    {
+        "id": 2,
+        "word": "促す",
+        "reading": "うながす",
+        "meaning": "Thúc giục, thúc đẩy"
+    },
+    {
+        "id": 3,
+        "word": "阻む",
+        "reading": "はばむ",
+        "meaning": "Ngăn cản, cản trở"
+    },
+    {
+        "id": 4,
+        "word": "覆す",
+        "reading": "くつがえす",
+        "meaning": "Lật ngược, đảo ngược"
+    },
+    {
+        "id": 5,
+        "word": "免れる",
+        "reading": "まぬがれる",
+        "meaning": "Thoát khỏi, tránh khỏi"
+    },
+    {
+        "id": 6,
+        "word": "滞る",
+        "reading": "とどこおる",
+        "meaning": "Đình trệ, chậm trễ"
+    },
+    {
+        "id": 7,
+        "word": "携わる",
+        "reading": "たずさわる",
+        "meaning": "Tham gia, làm việc liên quan đến"
+    },
+    {
+        "id": 8,
+        "word": "賄う",
+        "reading": "まかなう",
+        "meaning": "Trang trải, cung cấp"
+    }
+]

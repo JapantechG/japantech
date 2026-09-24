@@ -1,0 +1,315 @@
+/* ============================================================
+   LOBBY
+   ============================================================ */
+
+.setup-screen {
+    position: relative;
+
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        max(70px, env(safe-area-inset-top))
+        18px
+        max(25px, env(safe-area-inset-bottom));
+
+    background-image:
+        url("../assets/images/backgrounds/lobby-bg.png");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+.setup-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(94%, 620px);
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.lobby-header {
+    position: absolute;
+
+    z-index: 5;
+
+    top:
+        max(
+            14px,
+            env(safe-area-inset-top)
+        );
+
+    left: 18px;
+    right: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mini-logo {
+    font-size: 18px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.mini-logo span,
+.game-logo span {
+    color: #f59e0b;
+}
+
+.menu-button {
+    width: 45px;
+    height: 45px;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 12px;
+
+    background:
+        rgba(15,23,42,0.9);
+
+    color: white;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.game-logo {
+    font-size:
+        clamp(40px, 9vw, 64px);
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.game-subtitle {
+    margin-top: 3px;
+    margin-bottom: 25px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+
+/* ============================================================
+   SELECTOR
+   ============================================================ */
+
+.selector-section {
+    margin-bottom: 12px;
+}
+
+.selector-label {
+    margin-bottom: 6px;
+
+    color: #64748b;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.selector {
+    height: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        55px
+        1fr
+        55px;
+
+    align-items: center;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 13px;
+
+    background:
+        rgba(17,24,39,0.92);
+
+    overflow: hidden;
+}
+
+.selector-arrow {
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: #94a3b8;
+
+    cursor: pointer;
+}
+
+.selector-arrow:hover {
+    background:
+        rgba(255,255,255,0.04);
+}
+
+.selector-viewport {
+    position: relative;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.selector-value {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size:
+        clamp(14px,4vw,18px);
+
+    font-weight: 900;
+
+    white-space: nowrap;
+}
+
+.level-value,
+.sub-mode-value {
+    color: #fbbf24;
+}
+
+
+/* ============================================================
+   SLIDE
+   ============================================================ */
+
+.slide-out-left {
+    animation:
+        slideOutLeft
+        0.22s
+        forwards;
+}
+
+.slide-in-right {
+    animation:
+        slideInRight
+        0.22s
+        forwards;
+}
+
+.slide-out-right {
+    animation:
+        slideOutRight
+        0.22s
+        forwards;
+}
+
+.slide-in-left {
+    animation:
+        slideInLeft
+        0.22s
+        forwards;
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform:
+            translateX(-100%);
+
+        opacity: 0;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform:
+            translateX(100%);
+
+        opacity: 0;
+    }
+
+    to {
+        transform:
+            translateX(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    to {
+        transform:
+            translateX(100%);
+
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform:
+            translateX(-100%);
+
+        opacity: 0;
+    }
+
+    to {
+        transform:
+            translateX(0);
+
+        opacity: 1;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .selector {
+        height: 56px;
+
+        grid-template-columns:
+            45px
+            1fr
+            45px;
+    }
+
+    .selector-section {
+        margin-bottom: 9px;
+    }
+
+    .game-subtitle {
+        margin-bottom: 18px;
+    }
+}

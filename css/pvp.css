@@ -1,0 +1,370 @@
+/* ============================================================
+   PVP
+   ============================================================ */
+
+.pvp-screen {
+    position: relative;
+
+    min-height: 100dvh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        max(70px,env(safe-area-inset-top))
+        20px
+        max(30px,env(safe-area-inset-bottom));
+
+    background-image:
+        url("../assets/images/backgrounds/room-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.pvp-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(92%,520px);
+
+    text-align: center;
+}
+
+.pvp-title {
+    color: #fbbf24;
+
+    font-size:
+        clamp(45px,11vw,70px);
+
+    font-weight: 900;
+
+    letter-spacing: 6px;
+}
+
+.pvp-subtitle {
+    margin-bottom: 45px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+}
+
+
+/* ============================================================
+   BACK
+   ============================================================ */
+
+.back-button {
+    position: absolute;
+
+    z-index: 5;
+
+    top:
+        max(15px,env(safe-area-inset-top));
+
+    left: 18px;
+
+    width: 48px;
+    height: 48px;
+
+    border:
+        1px solid #475569;
+
+    border-radius: 12px;
+
+    background:
+        rgba(15,23,42,0.9);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   CREATE / JOIN
+   ============================================================ */
+
+.create-room-button,
+.join-room-button {
+    width: 100%;
+    height: 62px;
+
+    border-radius: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.create-room-button {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fbbf24,
+            #f97316
+        );
+
+    color: #111827;
+}
+
+.join-room-button {
+    margin-top: 12px;
+
+    border:
+        1px solid #475569;
+
+    background: #1f2937;
+
+    color: white;
+}
+
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.or-divider {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 28px 0;
+
+    color: #64748b;
+
+    font-size: 9px;
+}
+
+.or-divider span {
+    height: 1px;
+
+    background: #334155;
+}
+
+
+/* ============================================================
+   ROOM CODE
+   ============================================================ */
+
+.room-code-label,
+.waiting-label {
+    margin-bottom: 7px;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.room-code-input {
+    width: 100%;
+    height: 65px;
+
+    border:
+        2px solid #334155;
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background:
+        rgba(17,24,39,0.95);
+
+    color: #fbbf24;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    letter-spacing: 10px;
+}
+
+.room-code-input:focus {
+    border-color: #f59e0b;
+}
+
+
+/* ============================================================
+   WAITING ROOM
+   ============================================================ */
+
+.waiting-room {
+    padding: 28px 20px;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 18px;
+
+    background:
+        rgba(15,23,42,0.92);
+}
+
+.current-room-code {
+    color: #fbbf24;
+
+    font-size:
+        clamp(40px,12vw,62px);
+
+    font-weight: 900;
+
+    letter-spacing: 12px;
+}
+
+.room-code-help {
+    color: #64748b;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   PLAYERS
+   ============================================================ */
+
+.players-area {
+    display: grid;
+
+    grid-template-columns:
+        1fr 60px 1fr;
+
+    align-items: center;
+
+    margin-top: 38px;
+}
+
+.player-avatar {
+    width: 75px;
+    height: 75px;
+
+    margin:
+        0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        2px solid #f59e0b;
+
+    border-radius: 50%;
+
+    background: #1f2937;
+
+    font-size: 36px;
+}
+
+.player-avatar.waiting {
+    border-color: #475569;
+
+    color: #64748b;
+}
+
+.room-player-name {
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+.player-status {
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.player-status.ready {
+    color: #22c55e;
+}
+
+.room-vs {
+    color: #ef4444;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    font-style: italic;
+}
+
+.waiting-message {
+    margin-top: 35px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    animation:
+        waitingPulse
+        1s infinite;
+}
+
+@keyframes waitingPulse {
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+
+/* ============================================================
+   LEAVE
+   ============================================================ */
+
+.leave-room-button {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 25px;
+
+    border:
+        1px solid #7f1d1d;
+
+    border-radius: 11px;
+
+    background:
+        rgba(127,29,29,0.15);
+
+    color: #f87171;
+
+    font-weight: 900;
+
+    cursor: pointer;
+}
