@@ -4,39 +4,314 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Quan trọng cho responsive trên điện thoại/tablet -->
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
-    <title>BatLingo - Solo Battle</title>
+      <!-- =====================================================
+         TITLE
+         ===================================================== -->
 
-    <!-- Icon trên tab trình duyệt PC / mobile -->
-<link rel="icon" type="image/png" href="images/favicon.png">
+    <title>BatLingo - Language Battle Arena</title>
 
-<!-- Icon khi Add to Home Screen trên iPhone/iPad -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <!-- =====================================================
+         BROWSER TAB ICON
+         ===================================================== -->
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
 
-    <link rel="stylesheet" href="css/style.css">
+       <!-- =====================================================
+         IPHONE / IPAD HOME SCREEN ICON
+         ===================================================== -->
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
+
+        <!-- =====================================================
+         MOBILE BROWSER COLOR
+         ===================================================== -->
+
+    <meta name="theme-color" content="#080d17">
+
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/pvp.css">
 </head>
 
 <body>
 
-    <main class="game-container">
+    <!-- =====================================================
+         LOBBY
+         ===================================================== -->
 
-        <!-- =====================================================
-             GAME SCREEN
-             ===================================================== -->
-        <section id="gameScreen">
+    <section id="setupScreen" class="setup-screen">
 
-            <!-- Header -->
+        <div class="screen-overlay"></div>
+
+        <header class="lobby-header">
+
+            <div class="mini-logo">
+                BAT<span>LINGO</span>
+            </div>
+
+            <button
+                id="menuButton"
+                class="menu-button"
+                type="button"
+            >
+                ☰
+            </button>
+
+        </header>
+
+
+        <div class="setup-container">
+
+            <div class="game-logo">
+                BAT<span>LINGO</span>
+            </div>
+
+            <div class="game-subtitle">
+                LANGUAGE BATTLE ARENA
+            </div>
+
+
+            <!-- BATTLE MODE -->
+
+            <div class="selector-section">
+
+                <div class="selector-label">
+                    BATTLE MODE
+                </div>
+
+                <div class="selector">
+
+                    <button
+                        id="battleModePrev"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div
+                            id="battleModeValue"
+                            class="selector-value"
+                        >
+                            SOLO BATTLE
+                        </div>
+                    </div>
+
+                    <button
+                        id="battleModeNext"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDY MODE -->
+
+            <div class="selector-section">
+
+                <div class="selector-label">
+                    STUDY MODE
+                </div>
+
+                <div class="selector">
+
+                    <button
+                        id="studyModePrev"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div
+                            id="studyModeValue"
+                            class="selector-value"
+                        >
+                            JLPT
+                        </div>
+                    </div>
+
+                    <button
+                        id="studyModeNext"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TARGET -->
+
+            <div class="selector-section">
+
+                <div
+                    id="studyTargetLabel"
+                    class="selector-label"
+                >
+                    JLPT LEVEL
+                </div>
+
+                <div class="selector">
+
+                    <button
+                        id="studyTargetPrev"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div
+                            id="studyTargetValue"
+                            class="selector-value level-value"
+                        >
+                            N1
+                        </div>
+                    </div>
+
+                    <button
+                        id="studyTargetNext"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORY -->
+
+            <div class="selector-section">
+
+                <div class="selector-label">
+                    CATEGORY
+                </div>
+
+                <div class="selector">
+
+                    <button
+                        id="categoryPrev"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div
+                            id="categoryValue"
+                            class="selector-value"
+                        >
+                            TỪ VỰNG
+                        </div>
+                    </div>
+
+                    <button
+                        id="categoryNext"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION MODE -->
+
+            <div class="selector-section">
+
+                <div class="selector-label">
+                    QUESTION MODE
+                </div>
+
+                <div class="selector">
+
+                    <button
+                        id="subModePrev"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div
+                            id="subModeValue"
+                            class="selector-value sub-mode-value"
+                        >
+                            KANJI → MEANING
+                        </div>
+                    </div>
+
+                    <button
+                        id="subModeNext"
+                        class="selector-arrow"
+                        type="button"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BATTLE -->
+
+            <button
+                id="battleButton"
+                class="battle-button"
+                type="button"
+            >
+                ⚔ BATTLE
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SOLO GAME
+         ===================================================== -->
+
+    <main
+        id="gameScreen"
+        class="game-screen hidden"
+    >
+
+        <div class="game-container">
+
             <div class="game-header">
 
-                <!-- 3 mạng -->
                 <div id="life" class="life">
                     ❤️ ❤️ ❤️
                 </div>
 
-                <!-- Score -->
                 <div class="score-box">
 
                     <div class="score-label">
@@ -57,103 +332,409 @@
             </div>
 
 
-            <!-- Số câu -->
-            <div id="questionNumber"
-                 class="question-number">
+            <div
+                id="questionNumber"
+                class="question-number"
+            >
                 QUESTION 1
             </div>
 
 
-            <!-- Từ tiếng Nhật -->
-            <div id="question"
-                 class="question">
-                Loading...
+            <div
+                id="question"
+                class="question"
+            >
+                ---
             </div>
 
 
-            <!-- Reading
-                 Bình thường ẩn.
-                 Sau khi trả lời đúng sẽ hiện. -->
-            <div id="reading"
-                 class="reading">
+            <div
+                id="reading"
+                class="reading"
+            >
+                ---
             </div>
 
 
-            <!-- Timer -->
-            <div class="timer-text">
-                TIME:
-                <span id="timerText">10.0</span>s
-            </div>
+            <!-- TIMER -->
 
+            <div class="timer-area">
 
-            <div class="timer-background">
+                <div
+                    id="timerText"
+                    class="timer-text"
+                >
+                    10.0
+                </div>
 
-                <div id="timerBar"
-                     class="timer-bar">
+                <div class="timer-track">
+                    <div
+                        id="timerBar"
+                        class="timer-bar"
+                    ></div>
                 </div>
 
             </div>
 
 
-            <!-- 4 đáp án -->
-            <div id="answers"
-                 class="answers">
-            </div>
+            <!-- ANSWERS -->
+
+            <div
+                id="answers"
+                class="answers"
+            ></div>
 
 
-            <!-- Combo -->
-            <div id="combo"
-                 class="combo">
+            <div
+                id="combo"
+                class="combo"
+            >
                 🔥 COMBO 0
             </div>
 
-        </section>
+
+            <div class="keyboard-hint">
+                PRESS 1 · 2 · 3 · 4
+            </div>
+
+        </div>
+
+    </main>
 
 
-        <!-- =====================================================
-             GAME OVER
-             ===================================================== -->
-        <section id="gameOverScreen"
-                 class="game-over">
 
-            <h1>GAME OVER</h1>
+    <!-- =====================================================
+         PVP
+         ===================================================== -->
+
+    <section
+        id="pvpScreen"
+        class="pvp-screen hidden"
+    >
+
+        <div class="screen-overlay"></div>
+
+
+        <button
+            id="pvpBackButton"
+            class="back-button"
+            type="button"
+        >
+            ←
+        </button>
+
+
+        <div class="pvp-container">
+
+            <div class="pvp-title">
+                1 VS 1
+            </div>
+
+            <div class="pvp-subtitle">
+                ONLINE BATTLE
+            </div>
+
+
+            <!-- CREATE / JOIN -->
+
+            <div id="roomSelectPanel">
+
+                <button
+                    id="createRoomButton"
+                    class="create-room-button"
+                    type="button"
+                >
+                    CREATE ROOM
+                </button>
+
+
+                <div class="or-divider">
+                    <span></span>
+                    <div>OR</div>
+                    <span></span>
+                </div>
+
+
+                <div class="room-code-label">
+                    ROOM CODE
+                </div>
+
+                <input
+                    id="roomCodeInput"
+                    class="room-code-input"
+                    type="text"
+                    maxlength="4"
+                    placeholder="A7K2"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="joinRoomButton"
+                    class="join-room-button"
+                    type="button"
+                >
+                    JOIN ROOM
+                </button>
+
+            </div>
+
+
+            <!-- WAITING ROOM -->
+
+            <div
+                id="waitingRoomPanel"
+                class="waiting-room hidden"
+            >
+
+                <div class="waiting-label">
+                    ROOM CODE
+                </div>
+
+                <div
+                    id="currentRoomCode"
+                    class="current-room-code"
+                >
+                    ----
+                </div>
+
+                <div class="room-code-help">
+                    SEND THIS CODE TO YOUR FRIEND
+                </div>
+
+
+                <div class="players-area">
+
+                    <div class="player-slot">
+
+                        <div class="player-avatar">
+                            🐵
+                        </div>
+
+                        <div class="room-player-name">
+                            YOU
+                        </div>
+
+                        <div class="player-status ready">
+                            READY
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-vs">
+                        VS
+                    </div>
+
+
+                    <div class="player-slot">
+
+                        <div class="player-avatar waiting">
+                            ?
+                        </div>
+
+                        <div
+                            id="player2Name"
+                            class="room-player-name"
+                        >
+                            WAITING...
+                        </div>
+
+                        <div
+                            id="player2Status"
+                            class="player-status"
+                        >
+                            WAITING
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="waitingMessage"
+                    class="waiting-message"
+                >
+                    WAITING FOR PLAYER...
+                </div>
+
+
+                <button
+                    id="leaveRoomButton"
+                    class="leave-room-button"
+                    type="button"
+                >
+                    LEAVE ROOM
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GAME OVER
+         ===================================================== -->
+
+    <section
+        id="gameOverScreen"
+        class="game-over-screen hidden"
+    >
+
+        <div class="game-over-card">
+
+            <div class="game-over-title">
+                GAME OVER
+            </div>
 
             <div class="result-label">
                 SCORE
             </div>
 
-            <div id="finalScore"
-                 class="final-score">
+            <div
+                id="finalScore"
+                class="final-score"
+            >
                 0
             </div>
 
+
             <div class="result-row">
-                QUESTIONS:
-                <span id="finalQuestion">0</span>
+                <span>QUESTION</span>
+                <strong id="finalQuestion">0</strong>
             </div>
 
             <div class="result-row">
-                MAX COMBO:
-                <span id="finalCombo">0</span>
+                <span>MAX COMBO</span>
+                <strong id="finalCombo">0</strong>
             </div>
 
             <div class="result-row">
-                BEST SCORE:
-                <span id="finalBestScore">0</span>
+                <span>BEST</span>
+                <strong id="finalBestScore">0</strong>
             </div>
 
-            <button id="retryButton"
-                    class="retry-button">
+
+            <button
+                id="retryButton"
+                class="battle-button"
+                type="button"
+            >
                 RETRY
             </button>
 
-        </section>
+            <button
+                id="backLobbyButton"
+                class="secondary-button"
+                type="button"
+            >
+                BACK TO LOBBY
+            </button>
 
-    </main>
+        </div>
 
-    <script type="module"
-            src="js/game.js">
-    </script>
+    </section>
+
+
+
+    <!-- =====================================================
+         SIDE MENU
+         ===================================================== -->
+
+    <div
+        id="menuOverlay"
+        class="menu-overlay"
+    ></div>
+
+
+    <aside
+        id="sideMenu"
+        class="side-menu"
+    >
+
+        <div class="side-menu-header">
+
+            <strong>MENU</strong>
+
+            <button
+                id="menuCloseButton"
+                class="menu-close"
+                type="button"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <button class="menu-item" type="button">
+            👤 PROFILE
+        </button>
+
+        <button class="menu-item" type="button">
+            🐵 PET
+        </button>
+
+        <button class="menu-item" type="button">
+            ⚙ SETTINGS
+        </button>
+
+        <button class="menu-item" type="button">
+            🔊 AUDIO
+        </button>
+
+        <button class="menu-item" type="button">
+            🌐 LANGUAGE
+        </button>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         AUDIO
+         ===================================================== -->
+
+    <audio
+        id="lobbyBgm"
+        src="assets/audio/bgm/lobby.mp3"
+        loop
+    ></audio>
+
+    <audio
+        id="clickSound"
+        src="assets/audio/sfx/click.mp3"
+    ></audio>
+
+    <audio
+        id="slideSound"
+        src="assets/audio/sfx/slide.mp3"
+    ></audio>
+
+    <audio
+        id="correctSound"
+        src="assets/audio/sfx/correct.mp3"
+    ></audio>
+
+    <audio
+        id="wrongSound"
+        src="assets/audio/sfx/wrong.mp3"
+    ></audio>
+
+    <audio
+        id="gameoverSound"
+        src="assets/audio/sfx/gameover.mp3"
+    ></audio>
+
+
+    <script
+        type="module"
+        src="js/main.js"
+    ></script>
 
 </body>
 
