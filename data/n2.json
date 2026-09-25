@@ -449,5 +449,8887 @@
   "reading": "おおいに",
   "meaning": "rất nhiều, hết sức"
 }
-  
+,
+{
+  "id": 76,
+  "word": "カップル",
+  "reading": "カップル",
+  "meaning": "cặp, cặp đôi"
+},
+{
+  "id": 77,
+  "word": "愛",
+  "reading": "あい",
+  "meaning": "tình yêu"
+},
+{
+  "id": 78,
+  "word": "同士",
+  "reading": "どうし",
+  "meaning": "giữa những người cùng nhóm, cùng nhau"
+},
+{
+  "id": 79,
+  "word": "[お]互い[に]",
+  "reading": "[お]たがい[に]",
+  "meaning": "lẫn nhau, với nhau"
+},
+{
+  "id": 80,
+  "word": "つり合う",
+  "reading": "つりあう",
+  "meaning": "cân xứng, xứng đôi"
+},
+{
+  "id": 81,
+  "word": "むしろ",
+  "reading": "むしろ",
+  "meaning": "đúng hơn là, thà... còn hơn"
+},
+{
+  "id": 82,
+  "word": "いわば",
+  "reading": "いわば",
+  "meaning": "có thể nói là, nói cách khác"
+},
+{
+  "id": 83,
+  "word": "視線",
+  "reading": "しせん",
+  "meaning": "ánh mắt, tầm nhìn"
+},
+{
+  "id": 84,
+  "word": "見つめる",
+  "reading": "みつめる",
+  "meaning": "nhìn chăm chú, nhìn chằm chằm"
+},
+{
+  "id": 85,
+  "word": "そらす",
+  "reading": "そらす",
+  "meaning": "ngoảnh đi, tránh đi, đánh lạc hướng"
+},
+{
+  "id": 86,
+  "word": "ちらっと",
+  "reading": "ちらっと",
+  "meaning": "liếc nhìn, nhìn thoáng qua"
+},
+{
+  "id": 87,
+  "word": "もしかすると",
+  "reading": "もしかすると",
+  "meaning": "biết đâu chừng, có lẽ"
+},
+{
+  "id": 88,
+  "word": "探る",
+  "reading": "さぐる",
+  "meaning": "thăm dò, dò xét, lục tìm"
+},
+{
+  "id": 89,
+  "word": "示す",
+  "reading": "しめす",
+  "meaning": "thể hiện, chỉ ra"
+},
+{
+  "id": 90,
+  "word": "口実",
+  "reading": "こうじつ",
+  "meaning": "cái cớ, lý do viện ra"
+},
+{
+  "id": 91,
+  "word": "うつむく",
+  "reading": "うつむく",
+  "meaning": "cúi xuống, cúi mặt"
+},
+{
+  "id": 92,
+  "word": "こそこそ（する）",
+  "reading": "こそこそ（する）",
+  "meaning": "lén lút, vụng trộm, thì thào"
+},
+{
+  "id": 93,
+  "word": "ささやく",
+  "reading": "ささやく",
+  "meaning": "thì thầm, nói khẽ"
+},
+{
+  "id": 94,
+  "word": "禁物",
+  "reading": "きんもつ",
+  "meaning": "điều cấm kỵ"
+},
+{
+  "id": 95,
+  "word": "許す",
+  "reading": "ゆるす",
+  "meaning": "tha thứ, cho phép"
+},
+{
+  "id": 96,
+  "word": "合コン",
+  "reading": "ごうコン",
+  "meaning": "tiệc gặp mặt làm quen"
+},
+{
+  "id": 97,
+  "word": "アプローチ（する）",
+  "reading": "アプローチ（する）",
+  "meaning": "tiếp cận, chủ động làm quen"
+},
+{
+  "id": 98,
+  "word": "運命",
+  "reading": "うんめい",
+  "meaning": "định mệnh, số phận"
+},
+{
+  "id": 99,
+  "word": "決意（する）",
+  "reading": "けつい（する）",
+  "meaning": "quyết tâm, quyết định"
+},
+{
+  "id": 100,
+  "word": "プロポーズ（する）",
+  "reading": "プロポーズ（する）",
+  "meaning": "cầu hôn, lời cầu hôn"
+},
+{
+  "id": 101,
+  "word": "誓う",
+  "reading": "ちかう",
+  "meaning": "thề, thề nguyện"
+},
+{
+  "id": 102,
+  "word": "花嫁",
+  "reading": "はなよめ",
+  "meaning": "cô dâu"
+}
+,
+{
+  "id": 103,
+  "word": "ささいな",
+  "reading": "ささいな",
+  "meaning": "nhỏ nhặt, vụn vặt"
+},
+{
+  "id": 104,
+  "word": "避ける",
+  "reading": "さける",
+  "meaning": "né tránh, lảng tránh"
+},
+{
+  "id": 105,
+  "word": "誤解（する）",
+  "reading": "ごかい（する）",
+  "meaning": "hiểu nhầm, ngộ nhận"
+},
+{
+  "id": 106,
+  "word": "勘違い（する）",
+  "reading": "かんちがい（する）",
+  "meaning": "hiểu nhầm, phán đoán nhầm"
+},
+{
+  "id": 107,
+  "word": "言い訳（する）",
+  "reading": "いいわけ（する）",
+  "meaning": "bào chữa, viện cớ"
+},
+{
+  "id": 108,
+  "word": "きっぱり[と]",
+  "reading": "きっぱり[と]",
+  "meaning": "dứt khoát"
+},
+{
+  "id": 109,
+  "word": "ばかにする",
+  "reading": "ばかにする",
+  "meaning": "coi thường, chế giễu"
+},
+{
+  "id": 110,
+  "word": "いやみ（な）",
+  "reading": "いやみ（な）",
+  "meaning": "mỉa mai, châm biếm"
+},
+{
+  "id": 111,
+  "word": "責める",
+  "reading": "せめる",
+  "meaning": "trách móc, đổ lỗi"
+},
+{
+  "id": 112,
+  "word": "けなす",
+  "reading": "けなす",
+  "meaning": "chê bai, gièm pha"
+},
+{
+  "id": 113,
+  "word": "だまる",
+  "reading": "だまる",
+  "meaning": "im lặng"
+},
+{
+  "id": 114,
+  "word": "にらむ",
+  "reading": "にらむ",
+  "meaning": "trừng mắt, lườm"
+},
+{
+  "id": 115,
+  "word": "裏切る",
+  "reading": "うらぎる",
+  "meaning": "phản bội"
+},
+{
+  "id": 116,
+  "word": "だます",
+  "reading": "だます",
+  "meaning": "lừa gạt, lừa dối"
+},
+{
+  "id": 117,
+  "word": "せい",
+  "reading": "せい",
+  "meaning": "vì, tại (nguyên nhân xấu)"
+},
+{
+  "id": 118,
+  "word": "行為",
+  "reading": "こうい",
+  "meaning": "hành vi, hành động"
+},
+{
+  "id": 119,
+  "word": "口論（する）",
+  "reading": "こうろん（する）",
+  "meaning": "cãi nhau, khẩu chiến"
+},
+{
+  "id": 120,
+  "word": "怒鳴る",
+  "reading": "どなる",
+  "meaning": "quát, hét lên"
+},
+{
+  "id": 121,
+  "word": "殴る",
+  "reading": "なぐる",
+  "meaning": "đấm, đánh"
+},
+{
+  "id": 122,
+  "word": "貸し借り（する）",
+  "reading": "かしかり（する）",
+  "meaning": "cho vay và vay mượn"
+},
+{
+  "id": 123,
+  "word": "ばらす",
+  "reading": "ばらす",
+  "meaning": "tiết lộ, tháo rời"
+},
+{
+  "id": 124,
+  "word": "気まずい",
+  "reading": "きまずい",
+  "meaning": "khó xử, ngại ngùng"
+},
+{
+  "id": 125,
+  "word": "今さら",
+  "reading": "いまさら",
+  "meaning": "giờ này mà, bây giờ mới"
+},
+{
+  "id": 126,
+  "word": "台無し",
+  "reading": "だいなし",
+  "meaning": "hỏng hết, công cốc"
+},
+{
+  "id": 127,
+  "word": "うらむ",
+  "reading": "うらむ",
+  "meaning": "oán giận, thù hận"
+},
+{
+  "id": 128,
+  "word": "追い出す",
+  "reading": "おいだす",
+  "meaning": "đuổi đi, tống ra"
+},
+{
+  "id": 129,
+  "word": "仲間外れ",
+  "reading": "なかまはずれ",
+  "meaning": "bị cô lập, bị tẩy chay, ra rìa"
+},
+{
+  "id": 130,
+  "word": "あいつ",
+  "reading": "あいつ",
+  "meaning": "thằng đó, hắn, nó"
+},
+{
+  "id": 131,
+  "word": "他人",
+  "reading": "たにん",
+  "meaning": "người dưng, người khác"
+}
+,
+{
+  "id": 132,
+  "word": "一人住まい",
+  "reading": "ひとりずまい",
+  "meaning": "việc sống một mình"
+},
+{
+  "id": 133,
+  "word": "賃貸",
+  "reading": "ちんたい",
+  "meaning": "sự cho thuê, nhà cho thuê"
+},
+{
+  "id": 134,
+  "word": "敷金",
+  "reading": "しききん",
+  "meaning": "tiền đặt cọc"
+},
+{
+  "id": 135,
+  "word": "更新（する）",
+  "reading": "こうしん（する）",
+  "meaning": "gia hạn, đổi mới, cập nhật"
+},
+{
+  "id": 136,
+  "word": "ローン",
+  "reading": "ローン",
+  "meaning": "khoản vay, tiền vay"
+},
+{
+  "id": 137,
+  "word": "決まり",
+  "reading": "きまり",
+  "meaning": "quy định, quy tắc"
+},
+{
+  "id": 138,
+  "word": "一戸建て",
+  "reading": "いっこだて",
+  "meaning": "nhà riêng, nhà biệt lập"
+},
+{
+  "id": 139,
+  "word": "マイホーム",
+  "reading": "マイホーム",
+  "meaning": "nhà riêng của mình"
+},
+{
+  "id": 140,
+  "word": "我が家",
+  "reading": "わがや",
+  "meaning": "nhà mình, gia đình mình"
+},
+{
+  "id": 141,
+  "word": "家屋",
+  "reading": "かおく",
+  "meaning": "nhà cửa, nhà ở"
+},
+{
+  "id": 142,
+  "word": "屋根",
+  "reading": "やね",
+  "meaning": "mái nhà"
+},
+{
+  "id": 143,
+  "word": "洗面所",
+  "reading": "せんめんじょ",
+  "meaning": "phòng rửa mặt, khu vực rửa mặt"
+},
+{
+  "id": 144,
+  "word": "物置",
+  "reading": "ものおき",
+  "meaning": "phòng chứa đồ, nhà kho"
+},
+{
+  "id": 145,
+  "word": "間取り",
+  "reading": "まどり",
+  "meaning": "cách bố trí phòng, sơ đồ nhà"
+},
+{
+  "id": 146,
+  "word": "空間",
+  "reading": "くうかん",
+  "meaning": "không gian"
+},
+{
+  "id": 147,
+  "word": "奥",
+  "reading": "おく",
+  "meaning": "phía trong, sâu bên trong"
+},
+{
+  "id": 148,
+  "word": "手前",
+  "reading": "てまえ",
+  "meaning": "phía gần mình, phía trước"
+},
+{
+  "id": 149,
+  "word": "南向き",
+  "reading": "みなみむき",
+  "meaning": "hướng nam"
+},
+{
+  "id": 150,
+  "word": "温もり",
+  "reading": "ぬくもり",
+  "meaning": "hơi ấm, sự ấm áp"
+},
+{
+  "id": 151,
+  "word": "頑丈な",
+  "reading": "がんじょうな",
+  "meaning": "vững chắc, chắc chắn"
+},
+{
+  "id": 152,
+  "word": "点検（する）",
+  "reading": "てんけん（する）",
+  "meaning": "kiểm tra, bảo dưỡng"
+},
+{
+  "id": 153,
+  "word": "停止（する）",
+  "reading": "ていし（する）",
+  "meaning": "dừng, ngừng hoạt động"
+},
+{
+  "id": 154,
+  "word": "物音",
+  "reading": "ものおと",
+  "meaning": "tiếng động"
+},
+{
+  "id": 155,
+  "word": "防犯",
+  "reading": "ぼうはん",
+  "meaning": "phòng chống tội phạm, an ninh"
+},
+{
+  "id": 156,
+  "word": "ぞっと（する）",
+  "reading": "ぞっと（する）",
+  "meaning": "rùng mình, rợn người"
+},
+{
+  "id": 157,
+  "word": "警備（する）",
+  "reading": "けいび（する）",
+  "meaning": "bảo vệ, canh gác"
+},
+{
+  "id": 158,
+  "word": "新築（する）",
+  "reading": "しんちく（する）",
+  "meaning": "xây mới, mới xây"
+}
+,
+{
+  "id": 159,
+  "word": "収入",
+  "reading": "しゅうにゅう",
+  "meaning": "thu nhập, khoản thu"
+},
+{
+  "id": 160,
+  "word": "ごく",
+  "reading": "ごく",
+  "meaning": "cực kỳ, vô cùng"
+},
+{
+  "id": 161,
+  "word": "せいぜい",
+  "reading": "せいぜい",
+  "meaning": "nhiều nhất là, tối đa, trong mức có thể"
+},
+{
+  "id": 162,
+  "word": "出費（する）",
+  "reading": "しゅっぴ（する）",
+  "meaning": "chi tiêu, khoản chi"
+},
+{
+  "id": 163,
+  "word": "赤字",
+  "reading": "あかじ",
+  "meaning": "thâm hụt, lỗ, số âm"
+},
+{
+  "id": 164,
+  "word": "大金",
+  "reading": "たいきん",
+  "meaning": "số tiền lớn, khoản tiền lớn"
+},
+{
+  "id": 165,
+  "word": "税金",
+  "reading": "ぜいきん",
+  "meaning": "tiền thuế"
+},
+{
+  "id": 166,
+  "word": "納める",
+  "reading": "おさめる",
+  "meaning": "nộp, đóng"
+},
+{
+  "id": 167,
+  "word": "含む",
+  "reading": "ふくむ",
+  "meaning": "bao gồm, chứa"
+},
+{
+  "id": 168,
+  "word": "公共料金",
+  "reading": "こうきょうりょうきん",
+  "meaning": "phí dịch vụ công cộng, tiền điện nước ga"
+},
+{
+  "id": 169,
+  "word": "払い込む",
+  "reading": "はらいこむ",
+  "meaning": "nộp tiền, đóng tiền"
+},
+{
+  "id": 170,
+  "word": "引き落とし",
+  "reading": "ひきおとし",
+  "meaning": "sự trích tiền tự động từ tài khoản"
+},
+{
+  "id": 171,
+  "word": "手数料",
+  "reading": "てすうりょう",
+  "meaning": "phí dịch vụ, lệ phí"
+},
+{
+  "id": 172,
+  "word": "出し入れ（する）",
+  "reading": "だしいれ（する）",
+  "meaning": "lấy ra và cho vào, rút và gửi tiền"
+},
+{
+  "id": 173,
+  "word": "高くつく",
+  "reading": "たかくつく",
+  "meaning": "tốn kém, thành ra đắt"
+},
+{
+  "id": 174,
+  "word": "残高",
+  "reading": "ざんだか",
+  "meaning": "số dư"
+},
+{
+  "id": 175,
+  "word": "せっせと",
+  "reading": "せっせと",
+  "meaning": "chăm chỉ, siêng năng"
+},
+{
+  "id": 176,
+  "word": "大まかな",
+  "reading": "おおまかな",
+  "meaning": "đại khái, sơ bộ, ước chừng"
+},
+{
+  "id": 177,
+  "word": "差し引く",
+  "reading": "さしひく",
+  "meaning": "trừ đi, khấu trừ"
+},
+{
+  "id": 178,
+  "word": "努める",
+  "reading": "つとめる",
+  "meaning": "nỗ lực, cố gắng"
+},
+{
+  "id": 179,
+  "word": "立て替える",
+  "reading": "たてかえる",
+  "meaning": "tạm ứng, trả thay trước"
+},
+{
+  "id": 180,
+  "word": "援助（する）",
+  "reading": "えんじょ（する）",
+  "meaning": "viện trợ, hỗ trợ, giúp đỡ"
+},
+{
+  "id": 181,
+  "word": "返済（する）",
+  "reading": "へんさい（する）",
+  "meaning": "hoàn trả, trả nợ"
+},
+{
+  "id": 182,
+  "word": "安定（する）",
+  "reading": "あんてい（する）",
+  "meaning": "ổn định"
+}
+,
+{
+  "id": 183,
+  "word": "好き嫌い",
+  "reading": "すききらい",
+  "meaning": "sự thích ghét, kén ăn"
+},
+{
+  "id": 184,
+  "word": "好物",
+  "reading": "こうぶつ",
+  "meaning": "món yêu thích"
+},
+{
+  "id": 185,
+  "word": "飽きる",
+  "reading": "あきる",
+  "meaning": "chán, ngán"
+},
+{
+  "id": 186,
+  "word": "物足りない",
+  "reading": "ものたりない",
+  "meaning": "chưa thỏa mãn, cảm thấy thiếu"
+},
+{
+  "id": 187,
+  "word": "ボリューム",
+  "reading": "ボリューム",
+  "meaning": "lượng, khẩu phần; âm lượng"
+},
+{
+  "id": 188,
+  "word": "一口",
+  "reading": "ひとくち",
+  "meaning": "một miếng, một ngụm"
+},
+{
+  "id": 189,
+  "word": "かじる",
+  "reading": "かじる",
+  "meaning": "cắn, gặm"
+},
+{
+  "id": 190,
+  "word": "ひとたび",
+  "reading": "ひとたび",
+  "meaning": "một khi, một lần"
+},
+{
+  "id": 191,
+  "word": "うまい",
+  "reading": "うまい",
+  "meaning": "ngon, giỏi"
+},
+{
+  "id": 192,
+  "word": "いける",
+  "reading": "いける",
+  "meaning": "khá, giỏi, dùng được"
+},
+{
+  "id": 193,
+  "word": "渋い",
+  "reading": "しぶい",
+  "meaning": "chát, đắng; trầm, già dặn"
+},
+{
+  "id": 194,
+  "word": "くどい",
+  "reading": "くどい",
+  "meaning": "ngấy, nặng vị; dài dòng, lải nhải"
+},
+{
+  "id": 195,
+  "word": "ファミレス",
+  "reading": "ファミレス",
+  "meaning": "nhà hàng gia đình"
+},
+{
+  "id": 196,
+  "word": "フルコース",
+  "reading": "フルコース",
+  "meaning": "bữa ăn đầy đủ các món"
+},
+{
+  "id": 197,
+  "word": "オーダー（する）",
+  "reading": "オーダー（する）",
+  "meaning": "gọi món, đặt hàng"
+},
+{
+  "id": 198,
+  "word": "催促（する）",
+  "reading": "さいそく（する）",
+  "meaning": "hối thúc, thúc giục"
+},
+{
+  "id": 199,
+  "word": "会計（する）",
+  "reading": "かいけい（する）",
+  "meaning": "tính tiền, thanh toán"
+},
+{
+  "id": 200,
+  "word": "バイキング",
+  "reading": "バイキング",
+  "meaning": "tiệc tự chọn, buffet"
+},
+{
+  "id": 201,
+  "word": "トレイ",
+  "reading": "トレイ",
+  "meaning": "khay, mâm"
+},
+{
+  "id": 202,
+  "word": "器",
+  "reading": "うつわ",
+  "meaning": "đồ đựng, chén bát"
+},
+{
+  "id": 203,
+  "word": "重ねる",
+  "reading": "かさねる",
+  "meaning": "chồng lên, xếp chồng; tích lũy"
+},
+{
+  "id": 204,
+  "word": "ずらり[と]",
+  "reading": "ずらり[と]",
+  "meaning": "xếp thành hàng dài, trải dài"
+},
+{
+  "id": 205,
+  "word": "主食",
+  "reading": "しゅしょく",
+  "meaning": "lương thực chính"
+},
+{
+  "id": 206,
+  "word": "生",
+  "reading": "なま",
+  "meaning": "sống, tươi, chưa qua chế biến"
+},
+{
+  "id": 207,
+  "word": "なま物",
+  "reading": "なまもの",
+  "meaning": "đồ tươi sống"
+},
+{
+  "id": 208,
+  "word": "特製",
+  "reading": "とくせい",
+  "meaning": "đặc chế, làm đặc biệt"
+},
+{
+  "id": 209,
+  "word": "粗末な",
+  "reading": "そまつな",
+  "meaning": "sơ sài, đạm bạc; bạc đãi"
+}
+,
+{
+  "id": 210,
+  "word": "購入（する）",
+  "reading": "こうにゅう（する）",
+  "meaning": "mua, sự mua"
+},
+{
+  "id": 211,
+  "word": "[お]買い得",
+  "reading": "[お]かいどく",
+  "meaning": "món hời, mua được giá hời"
+},
+{
+  "id": 212,
+  "word": "手頃な",
+  "reading": "てごろな",
+  "meaning": "vừa phải, phải chăng"
+},
+{
+  "id": 213,
+  "word": "値引き（する）",
+  "reading": "ねびき（する）",
+  "meaning": "giảm giá"
+},
+{
+  "id": 214,
+  "word": "おまけ（する）",
+  "reading": "おまけ（する）",
+  "meaning": "khuyến mãi, tặng thêm, giảm thêm"
+},
+{
+  "id": 215,
+  "word": "返品（する）",
+  "reading": "へんぴん（する）",
+  "meaning": "trả lại hàng"
+},
+{
+  "id": 216,
+  "word": "返金（する）",
+  "reading": "へんきん（する）",
+  "meaning": "hoàn tiền"
+},
+{
+  "id": 217,
+  "word": "価格",
+  "reading": "かかく",
+  "meaning": "giá cả"
+},
+{
+  "id": 218,
+  "word": "高価な",
+  "reading": "こうかな",
+  "meaning": "đắt tiền, có giá trị cao"
+},
+{
+  "id": 219,
+  "word": "金額",
+  "reading": "きんがく",
+  "meaning": "số tiền"
+},
+{
+  "id": 220,
+  "word": "価値",
+  "reading": "かち",
+  "meaning": "giá trị"
+},
+{
+  "id": 221,
+  "word": "品質",
+  "reading": "ひんしつ",
+  "meaning": "chất lượng"
+},
+{
+  "id": 222,
+  "word": "消費税",
+  "reading": "しょうひぜい",
+  "meaning": "thuế tiêu thụ"
+},
+{
+  "id": 223,
+  "word": "ネットオークション",
+  "reading": "ネットオークション",
+  "meaning": "đấu giá trên mạng"
+},
+{
+  "id": 224,
+  "word": "名物",
+  "reading": "めいぶつ",
+  "meaning": "đặc sản, sản vật nổi tiếng"
+},
+{
+  "id": 225,
+  "word": "取り寄せる",
+  "reading": "とりよせる",
+  "meaning": "đặt hàng gửi đến, đặt mua về"
+},
+{
+  "id": 226,
+  "word": "扱う",
+  "reading": "あつかう",
+  "meaning": "xử lý, sử dụng, bán, đối xử"
+},
+{
+  "id": 227,
+  "word": "買い換（替）える",
+  "reading": "かいか（か）える",
+  "meaning": "mua mới để thay thế, đổi sang cái mới"
+},
+{
+  "id": 228,
+  "word": "売り出す",
+  "reading": "うりだす",
+  "meaning": "bán ra, tung ra thị trường"
+},
+{
+  "id": 229,
+  "word": "チラシ",
+  "reading": "チラシ",
+  "meaning": "tờ rơi quảng cáo"
+},
+{
+  "id": 230,
+  "word": "切り取る",
+  "reading": "きりとる",
+  "meaning": "cắt lấy, cắt ra"
+},
+{
+  "id": 231,
+  "word": "パック（する）",
+  "reading": "パック（する）",
+  "meaning": "gói, hộp; đắp mặt nạ"
+},
+{
+  "id": 232,
+  "word": "包装（する）",
+  "reading": "ほうそう（する）",
+  "meaning": "đóng gói, bao gói"
+},
+{
+  "id": 233,
+  "word": "試食（する）",
+  "reading": "ししょく（する）",
+  "meaning": "ăn thử, nếm thử"
+},
+{
+  "id": 234,
+  "word": "試着（する）",
+  "reading": "しちゃく（する）",
+  "meaning": "mặc thử"
+},
+{
+  "id": 235,
+  "word": "わりあい[に]",
+  "reading": "わりあい[に]",
+  "meaning": "tương đối, khá"
+},
+{
+  "id": 236,
+  "word": "ダブる",
+  "reading": "ダブる",
+  "meaning": "trùng, trùng lặp"
+},
+{
+  "id": 237,
+  "word": "よす",
+  "reading": "よす",
+  "meaning": "thôi, ngừng, bỏ"
+},
+{
+  "id": 238,
+  "word": "わりと",
+  "reading": "わりと",
+  "meaning": "khá, tương đối"
+},
+{
+  "id": 239,
+  "word": "実物",
+  "reading": "じつぶつ",
+  "meaning": "vật thật, hàng thật, đồ thật"
+},
+{
+  "id": 240,
+  "word": "粒",
+  "reading": "つぶ",
+  "meaning": "hạt, viên, giọt"
+},
+{
+  "id": 241,
+  "word": "スペース",
+  "reading": "スペース",
+  "meaning": "không gian, khoảng trống, chỗ"
+}
+,
+{
+  "id": 242,
+  "word": "現在",
+  "reading": "げんざい",
+  "meaning": "hiện tại"
+},
+{
+  "id": 243,
+  "word": "過去",
+  "reading": "かこ",
+  "meaning": "quá khứ"
+},
+{
+  "id": 244,
+  "word": "年月",
+  "reading": "ねんげつ",
+  "meaning": "năm tháng, thời gian"
+},
+{
+  "id": 245,
+  "word": "月日",
+  "reading": "つきひ",
+  "meaning": "ngày tháng, thời gian"
+},
+{
+  "id": 246,
+  "word": "日時",
+  "reading": "にちじ",
+  "meaning": "ngày giờ"
+},
+{
+  "id": 247,
+  "word": "今日",
+  "reading": "こんにち",
+  "meaning": "ngày nay"
+},
+{
+  "id": 248,
+  "word": "年代",
+  "reading": "ねんだい",
+  "meaning": "những năm, niên đại, thế hệ"
+},
+{
+  "id": 249,
+  "word": "年間",
+  "reading": "ねんかん",
+  "meaning": "trong năm, hàng năm"
+},
+{
+  "id": 250,
+  "word": "年中",
+  "reading": "ねんじゅう",
+  "meaning": "suốt năm, quanh năm"
+},
+{
+  "id": 251,
+  "word": "本年",
+  "reading": "ほんねん",
+  "meaning": "năm nay (cách nói trang trọng)"
+},
+{
+  "id": 252,
+  "word": "日中",
+  "reading": "にっちゅう",
+  "meaning": "ban ngày"
+},
+{
+  "id": 253,
+  "word": "夜間",
+  "reading": "やかん",
+  "meaning": "ban đêm"
+},
+{
+  "id": 254,
+  "word": "ただ今",
+  "reading": "ただいま",
+  "meaning": "bây giờ, hiện tại; câu chào khi về đến nhà"
+},
+{
+  "id": 255,
+  "word": "先ほど",
+  "reading": "さきほど",
+  "meaning": "lúc nãy, vừa rồi"
+},
+{
+  "id": 256,
+  "word": "近々",
+  "reading": "ちかぢか",
+  "meaning": "sắp tới, nay mai"
+},
+{
+  "id": 257,
+  "word": "後日",
+  "reading": "ごじつ",
+  "meaning": "hôm khác, ngày khác, sau này"
+},
+{
+  "id": 258,
+  "word": "やがて",
+  "reading": "やがて",
+  "meaning": "chẳng mấy chốc, rồi sẽ"
+},
+{
+  "id": 259,
+  "word": "いずれ",
+  "reading": "いずれ",
+  "meaning": "rồi thì, một ngày nào đó"
+},
+{
+  "id": 260,
+  "word": "今後",
+  "reading": "こんご",
+  "meaning": "từ nay về sau, sau này"
+},
+{
+  "id": 261,
+  "word": "すでに",
+  "reading": "すでに",
+  "meaning": "đã, đã rồi"
+},
+{
+  "id": 262,
+  "word": "あらかじめ",
+  "reading": "あらかじめ",
+  "meaning": "trước, sẵn từ trước"
+},
+{
+  "id": 263,
+  "word": "従来",
+  "reading": "じゅうらい",
+  "meaning": "lâu nay, từ trước đến nay"
+},
+{
+  "id": 264,
+  "word": "あくる",
+  "reading": "あくる",
+  "meaning": "hôm sau, ngày hôm sau"
+},
+{
+  "id": 265,
+  "word": "一時",
+  "reading": "いちじ",
+  "meaning": "nhất thời, tạm thời"
+},
+{
+  "id": 266,
+  "word": "一生",
+  "reading": "いっしょう",
+  "meaning": "cả đời, suốt đời"
+},
+{
+  "id": 267,
+  "word": "永遠に",
+  "reading": "えいえんに",
+  "meaning": "vĩnh viễn, mãi mãi"
+}
+,
+{
+  "id": 268,
+  "word": "夜明け",
+  "reading": "よあけ",
+  "meaning": "rạng đông, bình minh"
+},
+{
+  "id": 269,
+  "word": "起床（する）",
+  "reading": "きしょう（する）",
+  "meaning": "thức dậy, sự thức dậy"
+},
+{
+  "id": 270,
+  "word": "もたれる",
+  "reading": "もたれる",
+  "meaning": "dựa vào, nặng bụng"
+},
+{
+  "id": 271,
+  "word": "フレッシュな",
+  "reading": "フレッシュな",
+  "meaning": "tươi mới, tươi mát"
+},
+{
+  "id": 272,
+  "word": "乳製品",
+  "reading": "にゅうせいひん",
+  "meaning": "sản phẩm từ sữa"
+},
+{
+  "id": 273,
+  "word": "洗い物",
+  "reading": "あらいもの",
+  "meaning": "đồ cần rửa, việc rửa bát"
+},
+{
+  "id": 274,
+  "word": "欠かす",
+  "reading": "かかす",
+  "meaning": "thiếu, bỏ sót, bỏ lỡ"
+},
+{
+  "id": 275,
+  "word": "配達（する）",
+  "reading": "はいたつ（する）",
+  "meaning": "giao hàng, phân phát"
+},
+{
+  "id": 276,
+  "word": "見出し",
+  "reading": "みだし",
+  "meaning": "đầu đề, tiêu đề"
+},
+{
+  "id": 277,
+  "word": "一切（〜ない）",
+  "reading": "いっさい（〜ない）",
+  "meaning": "hoàn toàn không, tuyệt đối không"
+},
+{
+  "id": 278,
+  "word": "合間",
+  "reading": "あいま",
+  "meaning": "khoảng thời gian rảnh, lúc rảnh"
+},
+{
+  "id": 279,
+  "word": "てきぱき[と]（する）",
+  "reading": "てきぱき[と]（する）",
+  "meaning": "nhanh nhẹn, mau lẹ"
+},
+{
+  "id": 280,
+  "word": "間",
+  "reading": "ま",
+  "meaning": "khoảng thời gian, khoảng trống"
+},
+{
+  "id": 281,
+  "word": "周辺",
+  "reading": "しゅうへん",
+  "meaning": "xung quanh, vùng lân cận"
+},
+{
+  "id": 282,
+  "word": "周囲",
+  "reading": "しゅうい",
+  "meaning": "xung quanh, chu vi"
+},
+{
+  "id": 283,
+  "word": "あと",
+  "reading": "あと",
+  "meaning": "nữa, còn lại, sau"
+},
+{
+  "id": 284,
+  "word": "すれ違う",
+  "reading": "すれちがう",
+  "meaning": "đi ngược chiều, lướt qua nhau"
+},
+{
+  "id": 285,
+  "word": "はう",
+  "reading": "はう",
+  "meaning": "bò, trườn"
+},
+{
+  "id": 286,
+  "word": "替える",
+  "reading": "かえる",
+  "meaning": "thay, đổi"
+},
+{
+  "id": 287,
+  "word": "整える",
+  "reading": "ととのえる",
+  "meaning": "chỉnh đốn, sắp xếp, trang bị"
+},
+{
+  "id": 288,
+  "word": "ろくに（〜ない）",
+  "reading": "ろくに（〜ない）",
+  "meaning": "không đàng hoàng, không đầy đủ"
+}
+,
+{
+  "id": 289,
+  "word": "めりはり",
+  "reading": "めりはり",
+  "meaning": "nhịp độ, sự rõ ràng, tách bạch"
+},
+{
+  "id": 290,
+  "word": "何度も",
+  "reading": "なんども",
+  "meaning": "nhiều lần"
+},
+{
+  "id": 291,
+  "word": "ほぼ",
+  "reading": "ほぼ",
+  "meaning": "hầu như, gần như"
+},
+{
+  "id": 292,
+  "word": "寄り道（する）",
+  "reading": "よりみち（する）",
+  "meaning": "ghé ngang, ghé qua"
+},
+{
+  "id": 293,
+  "word": "食物",
+  "reading": "しょくもつ",
+  "meaning": "thực phẩm, thức ăn"
+},
+{
+  "id": 294,
+  "word": "換気（する）",
+  "reading": "かんき（する）",
+  "meaning": "thông gió"
+},
+{
+  "id": 295,
+  "word": "いったん",
+  "reading": "いったん",
+  "meaning": "tạm thời, một khi đã"
+},
+{
+  "id": 296,
+  "word": "物干し",
+  "reading": "ものほし",
+  "meaning": "giàn phơi, chỗ phơi đồ"
+},
+{
+  "id": 297,
+  "word": "食卓",
+  "reading": "しょくたく",
+  "meaning": "bàn ăn"
+},
+{
+  "id": 298,
+  "word": "後回し",
+  "reading": "あとまわし",
+  "meaning": "để sau, hoãn lại"
+},
+{
+  "id": 299,
+  "word": "削る",
+  "reading": "けずる",
+  "meaning": "cắt bớt, gọt, cắt giảm"
+},
+{
+  "id": 300,
+  "word": "かなえる",
+  "reading": "かなえる",
+  "meaning": "thực hiện, biến ước mơ thành hiện thực"
+},
+{
+  "id": 301,
+  "word": "調節（する）",
+  "reading": "ちょうせつ（する）",
+  "meaning": "điều chỉnh"
+},
+{
+  "id": 302,
+  "word": "ゆったり[と]（する）",
+  "reading": "ゆったり[と]（する）",
+  "meaning": "thong thả, chậm rãi, rộng rãi"
+},
+{
+  "id": 303,
+  "word": "売り買い（する）",
+  "reading": "うりかい（する）",
+  "meaning": "mua bán"
+},
+{
+  "id": 304,
+  "word": "思い浮かべる",
+  "reading": "おもいうかべる",
+  "meaning": "nhớ lại, hồi tưởng, hình dung"
+},
+{
+  "id": 305,
+  "word": "独り言",
+  "reading": "ひとりごと",
+  "meaning": "nói một mình, lẩm bẩm"
+},
+{
+  "id": 306,
+  "word": "風呂場",
+  "reading": "ふろば",
+  "meaning": "phòng tắm"
+},
+{
+  "id": 307,
+  "word": "かぐ",
+  "reading": "かぐ",
+  "meaning": "ngửi, hít"
+},
+{
+  "id": 308,
+  "word": "寝つき",
+  "reading": "ねつき",
+  "meaning": "khả năng đi vào giấc ngủ"
+},
+{
+  "id": 309,
+  "word": "用心（する）",
+  "reading": "ようじん（する）",
+  "meaning": "cẩn thận, đề phòng"
+},
+{
+  "id": 310,
+  "word": "メッセージ",
+  "reading": "メッセージ",
+  "meaning": "thông điệp, tin nhắn"
+}
+,
+{
+  "id": 311,
+  "word": "炊事（する）",
+  "reading": "すいじ（する）",
+  "meaning": "nấu ăn, việc bếp núc"
+},
+{
+  "id": 312,
+  "word": "献立",
+  "reading": "こんだて",
+  "meaning": "thực đơn"
+},
+{
+  "id": 313,
+  "word": "リクエスト（する）",
+  "reading": "リクエスト（する）",
+  "meaning": "yêu cầu, đề nghị"
+},
+{
+  "id": 314,
+  "word": "流し",
+  "reading": "ながし",
+  "meaning": "bồn rửa"
+},
+{
+  "id": 315,
+  "word": "ちぎる",
+  "reading": "ちぎる",
+  "meaning": "xé"
+},
+{
+  "id": 316,
+  "word": "冷ます",
+  "reading": "さます",
+  "meaning": "làm nguội"
+},
+{
+  "id": 317,
+  "word": "煮える",
+  "reading": "にえる",
+  "meaning": "được nấu chín, chín nhừ"
+},
+{
+  "id": 318,
+  "word": "味付け（する）",
+  "reading": "あじつけ（する）",
+  "meaning": "nêm nếm, sự nêm nếm"
+},
+{
+  "id": 319,
+  "word": "薄める",
+  "reading": "うすめる",
+  "meaning": "làm nhạt, pha loãng"
+},
+{
+  "id": 320,
+  "word": "甘み",
+  "reading": "あまみ",
+  "meaning": "vị ngọt"
+},
+{
+  "id": 321,
+  "word": "工夫（する）",
+  "reading": "くふう（する）",
+  "meaning": "nghĩ cách, sáng tạo, khéo léo"
+},
+{
+  "id": 322,
+  "word": "添える",
+  "reading": "そえる",
+  "meaning": "thêm vào, đính kèm, bày kèm"
+},
+{
+  "id": 323,
+  "word": "挟む",
+  "reading": "はさむ",
+  "meaning": "kẹp, chèn vào"
+},
+{
+  "id": 324,
+  "word": "加減（する）",
+  "reading": "かげん（する）",
+  "meaning": "mức độ, điều chỉnh, tăng giảm"
+},
+{
+  "id": 325,
+  "word": "固まる",
+  "reading": "かたまる",
+  "meaning": "đông lại, đông cứng"
+},
+{
+  "id": 326,
+  "word": "なめる",
+  "reading": "なめる",
+  "meaning": "liếm, nếm"
+},
+{
+  "id": 327,
+  "word": "臭い",
+  "reading": "くさい",
+  "meaning": "hôi, thối"
+},
+{
+  "id": 328,
+  "word": "冷める",
+  "reading": "さめる",
+  "meaning": "nguội"
+},
+{
+  "id": 329,
+  "word": "余分な",
+  "reading": "よぶんな",
+  "meaning": "dư, thừa"
+},
+{
+  "id": 330,
+  "word": "容器",
+  "reading": "ようき",
+  "meaning": "đồ đựng, hộp đựng"
+},
+{
+  "id": 331,
+  "word": "賞味期限",
+  "reading": "しょうみきげん",
+  "meaning": "hạn sử dụng tốt nhất"
+},
+{
+  "id": 332,
+  "word": "手作り",
+  "reading": "てづくり",
+  "meaning": "tự tay làm, làm thủ công"
+},
+{
+  "id": 333,
+  "word": "もてなす",
+  "reading": "もてなす",
+  "meaning": "tiếp đãi, đón tiếp"
+}
+,
+{
+  "id": 334,
+  "word": "もれる",
+  "reading": "もれる",
+  "meaning": "rò rỉ, bị lộ"
+},
+{
+  "id": 335,
+  "word": "ごちゃごちゃ（な・する）",
+  "reading": "ごちゃごちゃ（な・する）",
+  "meaning": "lộn xộn, xáo trộn, lung tung"
+},
+{
+  "id": 336,
+  "word": "元",
+  "reading": "もと",
+  "meaning": "vốn, ban đầu, trạng thái cũ"
+},
+{
+  "id": 337,
+  "word": "自動的な",
+  "reading": "じどうてきな",
+  "meaning": "tự động"
+},
+{
+  "id": 338,
+  "word": "さっと",
+  "reading": "さっと",
+  "meaning": "nhanh chóng, thoăn thoắt"
+},
+{
+  "id": 339,
+  "word": "清掃（する）",
+  "reading": "せいそう（する）",
+  "meaning": "dọn dẹp, làm vệ sinh"
+},
+{
+  "id": 340,
+  "word": "取り除く",
+  "reading": "とりのぞく",
+  "meaning": "loại bỏ, lấy ra"
+},
+{
+  "id": 341,
+  "word": "素材",
+  "reading": "そざい",
+  "meaning": "chất liệu, nguyên liệu"
+},
+{
+  "id": 342,
+  "word": "表示（する）",
+  "reading": "ひょうじ（する）",
+  "meaning": "hiển thị, biểu thị"
+},
+{
+  "id": 343,
+  "word": "分類（する）",
+  "reading": "ぶんるい（する）",
+  "meaning": "phân loại"
+},
+{
+  "id": 344,
+  "word": "すすぐ",
+  "reading": "すすぐ",
+  "meaning": "xả, súc, tráng"
+},
+{
+  "id": 345,
+  "word": "ネット",
+  "reading": "ネット",
+  "meaning": "lưới, túi lưới"
+},
+{
+  "id": 346,
+  "word": "吸収（する）",
+  "reading": "きゅうしゅう（する）",
+  "meaning": "hấp thụ, hút"
+},
+{
+  "id": 347,
+  "word": "泥",
+  "reading": "どろ",
+  "meaning": "bùn"
+},
+{
+  "id": 348,
+  "word": "知恵",
+  "reading": "ちえ",
+  "meaning": "trí tuệ, sự khôn ngoan"
+},
+{
+  "id": 349,
+  "word": "可燃ごみ",
+  "reading": "かねんごみ",
+  "meaning": "rác đốt được"
+},
+{
+  "id": 350,
+  "word": "資源ごみ",
+  "reading": "しげんごみ",
+  "meaning": "rác tái chế"
+},
+{
+  "id": 351,
+  "word": "粗大ごみ",
+  "reading": "そだいごみ",
+  "meaning": "rác cỡ lớn, rác cồng kềnh"
+},
+{
+  "id": 352,
+  "word": "古新聞",
+  "reading": "ふるしんぶん",
+  "meaning": "báo cũ"
+},
+{
+  "id": 353,
+  "word": "分別（する）",
+  "reading": "ぶんべつ（する）",
+  "meaning": "phân loại, phân chia"
+},
+{
+  "id": 354,
+  "word": "ごみ袋",
+  "reading": "ごみぶくろ",
+  "meaning": "túi rác, bao rác"
+},
+{
+  "id": 355,
+  "word": "生臭い",
+  "reading": "なまぐさい",
+  "meaning": "tanh, có mùi hôi tanh"
+},
+{
+  "id": 356,
+  "word": "大小",
+  "reading": "だいしょう",
+  "meaning": "lớn nhỏ, kích cỡ lớn nhỏ"
+},
+{
+  "id": 357,
+  "word": "しゃぶる",
+  "reading": "しゃぶる",
+  "meaning": "mút, ngậm"
+},
+{
+  "id": 358,
+  "word": "おむつ",
+  "reading": "おむつ",
+  "meaning": "tã"
+},
+{
+  "id": 359,
+  "word": "双子",
+  "reading": "ふたご",
+  "meaning": "sinh đôi, cặp song sinh"
+},
+{
+  "id": 360,
+  "word": "衣類",
+  "reading": "いるい",
+  "meaning": "quần áo, y phục"
+},
+{
+  "id": 361,
+  "word": "入れ替える",
+  "reading": "いれかえる",
+  "meaning": "thay đổi, thay thế, hoán đổi"
+},
+{
+  "id": 362,
+  "word": "狂う",
+  "reading": "くるう",
+  "meaning": "trục trặc, xáo trộn, phát điên"
+}
+,
+{
+  "id": 363,
+  "word": "処分（する）",
+  "reading": "しょぶん（する）",
+  "meaning": "xử lý, vứt bỏ, xử phạt"
+},
+{
+  "id": 364,
+  "word": "不用品",
+  "reading": "ふようひん",
+  "meaning": "đồ không cần dùng"
+},
+{
+  "id": 365,
+  "word": "はがす",
+  "reading": "はがす",
+  "meaning": "gỡ ra, bóc ra"
+},
+{
+  "id": 366,
+  "word": "束",
+  "reading": "たば",
+  "meaning": "bó, xấp"
+},
+{
+  "id": 367,
+  "word": "しばる",
+  "reading": "しばる",
+  "meaning": "buộc, bó, trói"
+},
+{
+  "id": 368,
+  "word": "段ボール",
+  "reading": "だんボール",
+  "meaning": "thùng các-tông, thùng giấy"
+},
+{
+  "id": 369,
+  "word": "ガムテープ",
+  "reading": "ガムテープ",
+  "meaning": "băng keo vải"
+},
+{
+  "id": 370,
+  "word": "押し込む",
+  "reading": "おしこむ",
+  "meaning": "ấn vào, nhét vào"
+},
+{
+  "id": 371,
+  "word": "リスト",
+  "reading": "リスト",
+  "meaning": "danh sách"
+},
+{
+  "id": 372,
+  "word": "引っ掛かる",
+  "reading": "ひっかかる",
+  "meaning": "mắc, vướng, mắc bẫy"
+},
+{
+  "id": 373,
+  "word": "持ち上げる",
+  "reading": "もちあげる",
+  "meaning": "nâng lên, nhấc lên"
+},
+{
+  "id": 374,
+  "word": "担ぐ",
+  "reading": "かつぐ",
+  "meaning": "vác, khiêng"
+},
+{
+  "id": 375,
+  "word": "くたびれる",
+  "reading": "くたびれる",
+  "meaning": "mệt nhoài, kiệt sức, cũ nát"
+},
+{
+  "id": 376,
+  "word": "すき間",
+  "reading": "すきま",
+  "meaning": "khe hở, kẽ hở"
+},
+{
+  "id": 377,
+  "word": "中身",
+  "reading": "なかみ",
+  "meaning": "đồ bên trong, nội dung"
+},
+{
+  "id": 378,
+  "word": "さっさと（する）",
+  "reading": "さっさと（する）",
+  "meaning": "nhanh chóng, mau lẹ"
+},
+{
+  "id": 379,
+  "word": "吊るす",
+  "reading": "つるす",
+  "meaning": "treo"
+},
+{
+  "id": 380,
+  "word": "まさに",
+  "reading": "まさに",
+  "meaning": "đúng là, chính xác là"
+},
+{
+  "id": 381,
+  "word": "居心地",
+  "reading": "いごこち",
+  "meaning": "cảm giác thoải mái khi ở"
+},
+{
+  "id": 382,
+  "word": "一変（する）",
+  "reading": "いっぺん（する）",
+  "meaning": "thay đổi hoàn toàn"
+},
+{
+  "id": 383,
+  "word": "アンテナ",
+  "reading": "アンテナ",
+  "meaning": "ăng-ten"
+},
+{
+  "id": 384,
+  "word": "いっそ",
+  "reading": "いっそ",
+  "meaning": "thà rằng, thà vậy"
+}
+,
+{
+  "id": 385,
+  "word": "街",
+  "reading": "まち",
+  "meaning": "phố, khu phố, thị trấn"
+},
+{
+  "id": 386,
+  "word": "都市",
+  "reading": "とし",
+  "meaning": "thành phố, đô thị"
+},
+{
+  "id": 387,
+  "word": "下町",
+  "reading": "したまち",
+  "meaning": "khu phố cổ, phố cổ"
+},
+{
+  "id": 388,
+  "word": "土地",
+  "reading": "とち",
+  "meaning": "đất, đất đai"
+},
+{
+  "id": 389,
+  "word": "活気",
+  "reading": "かっき",
+  "meaning": "sức sống, sự sôi nổi, nhộn nhịp"
+},
+{
+  "id": 390,
+  "word": "人通り",
+  "reading": "ひとどおり",
+  "meaning": "lượng người qua lại"
+},
+{
+  "id": 391,
+  "word": "絶える",
+  "reading": "たえる",
+  "meaning": "chấm dứt, dứt, tắt hẳn"
+},
+{
+  "id": 392,
+  "word": "坂",
+  "reading": "さか",
+  "meaning": "dốc, con dốc"
+},
+{
+  "id": 393,
+  "word": "辺り",
+  "reading": "あたり",
+  "meaning": "xung quanh, quanh đây"
+},
+{
+  "id": 394,
+  "word": "付近",
+  "reading": "ふきん",
+  "meaning": "khu vực lân cận, phụ cận"
+},
+{
+  "id": 395,
+  "word": "住宅",
+  "reading": "じゅうたく",
+  "meaning": "nhà ở, khu nhà ở"
+},
+{
+  "id": 396,
+  "word": "地区",
+  "reading": "ちく",
+  "meaning": "khu vực, quận"
+},
+{
+  "id": 397,
+  "word": "エリア",
+  "reading": "エリア",
+  "meaning": "vùng, khu vực"
+},
+{
+  "id": 398,
+  "word": "中間",
+  "reading": "ちゅうかん",
+  "meaning": "khoảng giữa, giữa chừng"
+},
+{
+  "id": 399,
+  "word": "境",
+  "reading": "さかい",
+  "meaning": "ranh giới, biên giới"
+},
+{
+  "id": 400,
+  "word": "斜め＜な＞",
+  "reading": "ななめ＜な＞",
+  "meaning": "chéo, xéo, nghiêng"
+},
+{
+  "id": 401,
+  "word": "抽選（する）",
+  "reading": "ちゅうせん（する）",
+  "meaning": "bốc thăm, rút thăm"
+},
+{
+  "id": 402,
+  "word": "避難（する）",
+  "reading": "ひなん（する）",
+  "meaning": "lánh nạn, sơ tán"
+},
+{
+  "id": 403,
+  "word": "訓練（する）",
+  "reading": "くんれん（する）",
+  "meaning": "huấn luyện, diễn tập"
+},
+{
+  "id": 404,
+  "word": "見回る",
+  "reading": "みまわる",
+  "meaning": "đi tuần tra, đi kiểm tra"
+},
+{
+  "id": 405,
+  "word": "築く",
+  "reading": "きずく",
+  "meaning": "xây dựng, gây dựng"
+},
+{
+  "id": 406,
+  "word": "見当",
+  "reading": "けんとう",
+  "meaning": "phỏng đoán, ước lượng"
+},
+{
+  "id": 407,
+  "word": "落書き（する）",
+  "reading": "らくがき（する）",
+  "meaning": "vẽ bậy, viết bậy"
+},
+{
+  "id": 408,
+  "word": "強化（する）",
+  "reading": "きょうか（する）",
+  "meaning": "tăng cường, đẩy mạnh"
+}
+,
+{
+  "id": 409,
+  "word": "自治体",
+  "reading": "じちたい",
+  "meaning": "tổ chức tự trị, chính quyền địa phương"
+},
+{
+  "id": 410,
+  "word": "知事",
+  "reading": "ちじ",
+  "meaning": "tỉnh trưởng, thống đốc tỉnh"
+},
+{
+  "id": 411,
+  "word": "応える",
+  "reading": "こたえる",
+  "meaning": "đáp lại, đáp ứng"
+},
+{
+  "id": 412,
+  "word": "住民",
+  "reading": "じゅうみん",
+  "meaning": "người dân, cư dân"
+},
+{
+  "id": 413,
+  "word": "身分証明書",
+  "reading": "みぶんしょうめいしょ",
+  "meaning": "giấy tờ tùy thân, giấy chứng minh"
+},
+{
+  "id": 414,
+  "word": "生年月日",
+  "reading": "せいねんがっぴ",
+  "meaning": "ngày tháng năm sinh"
+},
+{
+  "id": 415,
+  "word": "署名（する）",
+  "reading": "しょめい（する）",
+  "meaning": "ký tên, chữ ký"
+},
+{
+  "id": 416,
+  "word": "修正（する）",
+  "reading": "しゅうせい（する）",
+  "meaning": "chỉnh sửa, sửa chữa"
+},
+{
+  "id": 417,
+  "word": "年金",
+  "reading": "ねんきん",
+  "meaning": "lương hưu, tiền trợ cấp hưu trí"
+},
+{
+  "id": 418,
+  "word": "施設",
+  "reading": "しせつ",
+  "meaning": "cơ sở, cơ sở vật chất"
+},
+{
+  "id": 419,
+  "word": "ロッカー",
+  "reading": "ロッカー",
+  "meaning": "tủ có khóa, tủ đựng đồ"
+},
+{
+  "id": 420,
+  "word": "建築（する）",
+  "reading": "けんちく（する）",
+  "meaning": "xây dựng, kiến trúc"
+},
+{
+  "id": 421,
+  "word": "リニューアル（する）",
+  "reading": "リニューアル（する）",
+  "meaning": "đổi mới, làm mới, cải tạo"
+},
+{
+  "id": 422,
+  "word": "近づける",
+  "reading": "ちかづける",
+  "meaning": "đưa lại gần, cho đến gần"
+},
+{
+  "id": 423,
+  "word": "福祉",
+  "reading": "ふくし",
+  "meaning": "phúc lợi"
+},
+{
+  "id": 424,
+  "word": "年度",
+  "reading": "ねんど",
+  "meaning": "năm tài khóa, niên độ"
+},
+{
+  "id": 425,
+  "word": "交替（する）",
+  "reading": "こうたい（する）",
+  "meaning": "thay phiên, thay thế"
+},
+{
+  "id": 426,
+  "word": "収集（する）",
+  "reading": "しゅうしゅう（する）",
+  "meaning": "thu gom, thu thập, sưu tập"
+},
+{
+  "id": 427,
+  "word": "配布（する）",
+  "reading": "はいふ（する）",
+  "meaning": "phân phát, phân phối"
+},
+{
+  "id": 428,
+  "word": "処理（する）",
+  "reading": "しょり（する）",
+  "meaning": "xử lý"
+},
+{
+  "id": 429,
+  "word": "需要",
+  "reading": "じゅよう",
+  "meaning": "nhu cầu"
+},
+{
+  "id": 430,
+  "word": "提供（する）",
+  "reading": "ていきょう（する）",
+  "meaning": "cung cấp"
+},
+{
+  "id": 431,
+  "word": "用途",
+  "reading": "ようと",
+  "meaning": "mục đích sử dụng, công dụng"
+}
+,
+{
+  "id": 432,
+  "word": "故郷",
+  "reading": "こきょう",
+  "meaning": "quê hương, quê nhà"
+},
+{
+  "id": 433,
+  "word": "地元",
+  "reading": "じもと",
+  "meaning": "địa phương, bản địa, bản xứ"
+},
+{
+  "id": 434,
+  "word": "離れる",
+  "reading": "はなれる",
+  "meaning": "rời xa, cách xa"
+},
+{
+  "id": 435,
+  "word": "つかむ",
+  "reading": "つかむ",
+  "meaning": "nắm, nắm bắt"
+},
+{
+  "id": 436,
+  "word": "帰省（する）",
+  "reading": "きせい（する）",
+  "meaning": "về quê"
+},
+{
+  "id": 437,
+  "word": "アクセス（する）",
+  "reading": "アクセス（する）",
+  "meaning": "tiếp cận, truy cập, đường đi"
+},
+{
+  "id": 438,
+  "word": "改善（する）",
+  "reading": "かいぜん（する）",
+  "meaning": "cải thiện, cải tiến"
+},
+{
+  "id": 439,
+  "word": "行事",
+  "reading": "ぎょうじ",
+  "meaning": "sự kiện, hoạt động"
+},
+{
+  "id": 440,
+  "word": "はるか（な）",
+  "reading": "はるか（な）",
+  "meaning": "xa, xa xôi"
+},
+{
+  "id": 441,
+  "word": "誇り",
+  "reading": "ほこり",
+  "meaning": "niềm tự hào"
+},
+{
+  "id": 442,
+  "word": "載る",
+  "reading": "のる",
+  "meaning": "được đăng, được đăng tải"
+},
+{
+  "id": 443,
+  "word": "宣伝（する）",
+  "reading": "せんでん（する）",
+  "meaning": "quảng cáo, tuyên truyền"
+},
+{
+  "id": 444,
+  "word": "作成（する）",
+  "reading": "さくせい（する）",
+  "meaning": "tạo, làm, soạn thảo"
+},
+{
+  "id": 445,
+  "word": "見慣れる",
+  "reading": "みなれる",
+  "meaning": "nhìn quen, trở nên quen mắt"
+},
+{
+  "id": 446,
+  "word": "近郊",
+  "reading": "きんこう",
+  "meaning": "ngoại ô, vùng lân cận"
+},
+{
+  "id": 447,
+  "word": "描く",
+  "reading": "えがく",
+  "meaning": "vẽ, miêu tả, hình dung"
+},
+{
+  "id": 448,
+  "word": "若者",
+  "reading": "わかもの",
+  "meaning": "người trẻ, thanh niên, giới trẻ"
+},
+{
+  "id": 449,
+  "word": "Uターン（する）",
+  "reading": "Uターン（する）",
+  "meaning": "quay về quê, quay đầu"
+},
+{
+  "id": 450,
+  "word": "行き来（する）",
+  "reading": "いきき（する）",
+  "meaning": "đi lại, qua lại"
+},
+{
+  "id": 451,
+  "word": "担う",
+  "reading": "になう",
+  "meaning": "gánh vác, đảm nhận"
+}
+,
+{
+  "id": 452,
+  "word": "行き先",
+  "reading": "ゆきさき",
+  "meaning": "nơi đến, điểm đến"
+},
+{
+  "id": 453,
+  "word": "方面",
+  "reading": "ほうめん",
+  "meaning": "hướng, phương diện"
+},
+{
+  "id": 454,
+  "word": "行き帰り",
+  "reading": "ゆきかえり",
+  "meaning": "sự đi và về, đường đi và về"
+},
+{
+  "id": 455,
+  "word": "横断（する）",
+  "reading": "おうだん（する）",
+  "meaning": "băng qua, vượt qua"
+},
+{
+  "id": 456,
+  "word": "通行（する）",
+  "reading": "つうこう（する）",
+  "meaning": "đi lại, lưu thông"
+},
+{
+  "id": 457,
+  "word": "歩行者",
+  "reading": "ほこうしゃ",
+  "meaning": "người đi bộ"
+},
+{
+  "id": 458,
+  "word": "絶えず",
+  "reading": "たえず",
+  "meaning": "không ngừng, liên tục"
+},
+{
+  "id": 459,
+  "word": "手段",
+  "reading": "しゅだん",
+  "meaning": "phương tiện, biện pháp"
+},
+{
+  "id": 460,
+  "word": "公共",
+  "reading": "こうきょう",
+  "meaning": "công cộng"
+},
+{
+  "id": 461,
+  "word": "運賃",
+  "reading": "うんちん",
+  "meaning": "tiền cước, tiền vé, phí vận chuyển"
+},
+{
+  "id": 462,
+  "word": "つかまる",
+  "reading": "つかまる",
+  "meaning": "bám, nắm lấy"
+},
+{
+  "id": 463,
+  "word": "アナウンス（する）",
+  "reading": "アナウンス（する）",
+  "meaning": "thông báo, phát thông báo"
+},
+{
+  "id": 464,
+  "word": "見合わせる",
+  "reading": "みあわせる",
+  "meaning": "tạm ngừng, tạm hoãn"
+},
+{
+  "id": 465,
+  "word": "乱れる",
+  "reading": "みだれる",
+  "meaning": "rối loạn, xáo trộn, lung tung"
+},
+{
+  "id": 466,
+  "word": "再開（する）",
+  "reading": "さいかい（する）",
+  "meaning": "bắt đầu lại, tiếp tục trở lại"
+},
+{
+  "id": 467,
+  "word": "ICカード",
+  "reading": "アイシーカード",
+  "meaning": "thẻ IC"
+},
+{
+  "id": 468,
+  "word": "免許",
+  "reading": "めんきょ",
+  "meaning": "bằng, giấy phép"
+},
+{
+  "id": 469,
+  "word": "左右",
+  "reading": "さゆう",
+  "meaning": "trái phải, hai bên"
+},
+{
+  "id": 470,
+  "word": "直線",
+  "reading": "ちょくせん",
+  "meaning": "đường thẳng"
+},
+{
+  "id": 471,
+  "word": "なだらかな",
+  "reading": "なだらかな",
+  "meaning": "thoai thoải, nhẹ nhàng"
+},
+{
+  "id": 472,
+  "word": "間隔",
+  "reading": "かんかく",
+  "meaning": "khoảng cách, khoảng"
+},
+{
+  "id": 473,
+  "word": "スムーズな",
+  "reading": "スムーズな",
+  "meaning": "trôi chảy, thuận lợi, suôn sẻ"
+},
+{
+  "id": 474,
+  "word": "指す",
+  "reading": "さす",
+  "meaning": "chỉ, chỉ vào"
+},
+{
+  "id": 475,
+  "word": "のろのろ（な・する）",
+  "reading": "のろのろ（な・する）",
+  "meaning": "chầm chậm, chậm chạp"
+},
+{
+  "id": 476,
+  "word": "ぐるぐる[と]",
+  "reading": "ぐるぐる[と]",
+  "meaning": "loanh quanh, xoay vòng"
+},
+{
+  "id": 477,
+  "word": "パンク（する）",
+  "reading": "パンク（する）",
+  "meaning": "thủng lốp, nổ lốp"
+},
+{
+  "id": 478,
+  "word": "慎重な",
+  "reading": "しんちょうな",
+  "meaning": "thận trọng, cẩn thận"
+},
+{
+  "id": 479,
+  "word": "気を抜く",
+  "reading": "きをぬく",
+  "meaning": "lơ là, mất cảnh giác"
+}
+,
+{
+  "id": 480,
+  "word": "生産（する）",
+  "reading": "せいさん（する）",
+  "meaning": "sản xuất"
+},
+{
+  "id": 481,
+  "word": "供給（する）",
+  "reading": "きょうきゅう（する）",
+  "meaning": "cung cấp"
+},
+{
+  "id": 482,
+  "word": "栽培（する）",
+  "reading": "さいばい（する）",
+  "meaning": "trồng trọt, canh tác"
+},
+{
+  "id": 483,
+  "word": "農家",
+  "reading": "のうか",
+  "meaning": "nông dân, nhà nông"
+},
+{
+  "id": 484,
+  "word": "作物",
+  "reading": "さくもつ",
+  "meaning": "cây trồng, hoa màu"
+},
+{
+  "id": 485,
+  "word": "漁業",
+  "reading": "ぎょぎょう",
+  "meaning": "ngư nghiệp, nghề đánh cá"
+},
+{
+  "id": 486,
+  "word": "栄える",
+  "reading": "さかえる",
+  "meaning": "phồn vinh, hưng thịnh, phát triển"
+},
+{
+  "id": 487,
+  "word": "普及（する）",
+  "reading": "ふきゅう（する）",
+  "meaning": "phổ biến, phổ cập"
+},
+{
+  "id": 488,
+  "word": "急増（する）",
+  "reading": "きゅうぞう（する）",
+  "meaning": "tăng nhanh, tăng đột ngột"
+},
+{
+  "id": 489,
+  "word": "情緒",
+  "reading": "じょうちょ",
+  "meaning": "tình cảm, cảm xúc, nét trữ tình"
+},
+{
+  "id": 490,
+  "word": "向上（する）",
+  "reading": "こうじょう（する）",
+  "meaning": "nâng cao, cải thiện"
+},
+{
+  "id": 491,
+  "word": "構成（する）",
+  "reading": "こうせい（する）",
+  "meaning": "cấu thành, hình thành, cấu tạo"
+},
+{
+  "id": 492,
+  "word": "重視（する）",
+  "reading": "じゅうし（する）",
+  "meaning": "coi trọng, xem trọng"
+},
+{
+  "id": 493,
+  "word": "提案（する）",
+  "reading": "ていあん（する）",
+  "meaning": "đề xuất, đề nghị"
+},
+{
+  "id": 494,
+  "word": "検討（する）",
+  "reading": "けんとう（する）",
+  "meaning": "cân nhắc, xem xét, nghiên cứu"
+},
+{
+  "id": 495,
+  "word": "不可欠な",
+  "reading": "ふかけつな",
+  "meaning": "không thể thiếu"
+},
+{
+  "id": 496,
+  "word": "妨げる",
+  "reading": "さまたげる",
+  "meaning": "cản trở, gây trở ngại"
+},
+{
+  "id": 497,
+  "word": "生える",
+  "reading": "はえる",
+  "meaning": "mọc, mọc lên"
+},
+{
+  "id": 498,
+  "word": "著しい",
+  "reading": "いちじるしい",
+  "meaning": "đáng kể, rõ rệt, nổi bật"
+},
+{
+  "id": 499,
+  "word": "参考",
+  "reading": "さんこう",
+  "meaning": "tham khảo"
+},
+{
+  "id": 500,
+  "word": "リスク",
+  "reading": "リスク",
+  "meaning": "rủi ro"
+},
+{
+  "id": 501,
+  "word": "現地",
+  "reading": "げんち",
+  "meaning": "địa phương, nơi sở tại, hiện trường"
+}
+,
+{
+  "id": 502,
+  "word": "教わる",
+  "reading": "おそわる",
+  "meaning": "được dạy, học từ ai đó"
+},
+{
+  "id": 503,
+  "word": "願書",
+  "reading": "がんしょ",
+  "meaning": "đơn, đơn xin"
+},
+{
+  "id": 504,
+  "word": "推薦（する）",
+  "reading": "すいせん（する）",
+  "meaning": "tiến cử, giới thiệu"
+},
+{
+  "id": 505,
+  "word": "狙う",
+  "reading": "ねらう",
+  "meaning": "nhắm đến, hướng đến"
+},
+{
+  "id": 506,
+  "word": "意志",
+  "reading": "いし",
+  "meaning": "ý chí"
+},
+{
+  "id": 507,
+  "word": "開始（する）",
+  "reading": "かいし（する）",
+  "meaning": "bắt đầu, khởi đầu"
+},
+{
+  "id": 508,
+  "word": "通常",
+  "reading": "つうじょう",
+  "meaning": "thông thường, bình thường"
+},
+{
+  "id": 509,
+  "word": "担任（する）",
+  "reading": "たんにん（する）",
+  "meaning": "giáo viên chủ nhiệm, làm chủ nhiệm"
+},
+{
+  "id": 510,
+  "word": "受け持つ",
+  "reading": "うけもつ",
+  "meaning": "đảm nhiệm, phụ trách"
+},
+{
+  "id": 511,
+  "word": "委員",
+  "reading": "いいん",
+  "meaning": "ủy viên, thành viên ban, cán sự"
+},
+{
+  "id": 512,
+  "word": "なじむ",
+  "reading": "なじむ",
+  "meaning": "quen, hòa nhập, trở nên quen thuộc"
+},
+{
+  "id": 513,
+  "word": "充実（する）",
+  "reading": "じゅうじつ（する）",
+  "meaning": "đầy đủ, phong phú, trọn vẹn"
+},
+{
+  "id": 514,
+  "word": "高等（な）",
+  "reading": "こうとう（な）",
+  "meaning": "cấp cao, trình độ cao"
+},
+{
+  "id": 515,
+  "word": "ステップ",
+  "reading": "ステップ",
+  "meaning": "bước, bước tiến, bậc"
+},
+{
+  "id": 516,
+  "word": "過程",
+  "reading": "かてい",
+  "meaning": "quá trình"
+},
+{
+  "id": 517,
+  "word": "取り上げる",
+  "reading": "とりあげる",
+  "meaning": "đưa ra, đề cập; lấy đi, tịch thu"
+},
+{
+  "id": 518,
+  "word": "欠ける",
+  "reading": "かける",
+  "meaning": "thiếu, khuyết, sứt"
+},
+{
+  "id": 519,
+  "word": "優秀な",
+  "reading": "ゆうしゅうな",
+  "meaning": "ưu tú, xuất sắc"
+},
+{
+  "id": 520,
+  "word": "修了（する）",
+  "reading": "しゅうりょう（する）",
+  "meaning": "hoàn thành, kết thúc khóa học"
+},
+{
+  "id": 521,
+  "word": "ふさわしい",
+  "reading": "ふさわしい",
+  "meaning": "phù hợp, xứng đáng"
+},
+{
+  "id": 522,
+  "word": "認識（する）",
+  "reading": "にんしき（する）",
+  "meaning": "nhận thức, ý thức"
+},
+{
+  "id": 523,
+  "word": "語学学校",
+  "reading": "ごがくがっこう",
+  "meaning": "trường ngoại ngữ"
+}
+,
+{
+  "id": 524,
+  "word": "学ぶ",
+  "reading": "まなぶ",
+  "meaning": "học, học hỏi"
+},
+{
+  "id": 525,
+  "word": "学習（する）",
+  "reading": "がくしゅう（する）",
+  "meaning": "học tập, việc học"
+},
+{
+  "id": 526,
+  "word": "学力",
+  "reading": "がくりょく",
+  "meaning": "học lực"
+},
+{
+  "id": 527,
+  "word": "教養",
+  "reading": "きょうよう",
+  "meaning": "học vấn, giáo dưỡng"
+},
+{
+  "id": 528,
+  "word": "参考書",
+  "reading": "さんこうしょ",
+  "meaning": "sách tham khảo"
+},
+{
+  "id": 529,
+  "word": "書き込む",
+  "reading": "かきこむ",
+  "meaning": "viết vào, điền vào"
+},
+{
+  "id": 530,
+  "word": "書き取る",
+  "reading": "かきとる",
+  "meaning": "nghe rồi viết lại, ghi chép lại"
+},
+{
+  "id": 531,
+  "word": "記号",
+  "reading": "きごう",
+  "meaning": "ký hiệu"
+},
+{
+  "id": 532,
+  "word": "図",
+  "reading": "ず",
+  "meaning": "hình vẽ, sơ đồ"
+},
+{
+  "id": 533,
+  "word": "下線",
+  "reading": "かせん",
+  "meaning": "đường gạch dưới"
+},
+{
+  "id": 534,
+  "word": "法則",
+  "reading": "ほうそく",
+  "meaning": "quy tắc, quy luật"
+},
+{
+  "id": 535,
+  "word": "志す",
+  "reading": "こころざす",
+  "meaning": "có chí hướng, hướng tới, phấn đấu"
+},
+{
+  "id": 536,
+  "word": "徹夜（する）",
+  "reading": "てつや（する）",
+  "meaning": "thức trắng đêm, thức suốt đêm"
+},
+{
+  "id": 537,
+  "word": "上達（する）",
+  "reading": "じょうたつ（する）",
+  "meaning": "tiến bộ, trở nên thành thạo"
+},
+{
+  "id": 538,
+  "word": "こつこつ[と]",
+  "reading": "こつこつ[と]",
+  "meaning": "cần cù, chăm chỉ, đều đặn"
+},
+{
+  "id": 539,
+  "word": "地道な",
+  "reading": "じみちな",
+  "meaning": "đều đặn, vững chắc, kiên trì"
+},
+{
+  "id": 540,
+  "word": "根気",
+  "reading": "こんき",
+  "meaning": "sự kiên nhẫn, tính kiên trì"
+},
+{
+  "id": 541,
+  "word": "効率的な",
+  "reading": "こうりつてきな",
+  "meaning": "hiệu quả, có hiệu suất"
+},
+{
+  "id": 542,
+  "word": "旺盛な",
+  "reading": "おうせいな",
+  "meaning": "mạnh mẽ, sung mãn, tràn đầy"
+},
+{
+  "id": 543,
+  "word": "基礎",
+  "reading": "きそ",
+  "meaning": "nền tảng, căn bản"
+},
+{
+  "id": 544,
+  "word": "基本",
+  "reading": "きほん",
+  "meaning": "cơ bản, căn bản"
+},
+{
+  "id": 545,
+  "word": "除く",
+  "reading": "のぞく",
+  "meaning": "loại trừ, trừ ra"
+},
+{
+  "id": 546,
+  "word": "現状",
+  "reading": "げんじょう",
+  "meaning": "hiện trạng, tình trạng hiện tại"
+},
+{
+  "id": 547,
+  "word": "おろそかな",
+  "reading": "おろそかな",
+  "meaning": "sao lãng, lơ là, thờ ơ"
+},
+{
+  "id": 548,
+  "word": "可能（な）",
+  "reading": "かのう（な）",
+  "meaning": "có thể, khả thi"
+},
+{
+  "id": 549,
+  "word": "実現（する）",
+  "reading": "じつげん（する）",
+  "meaning": "thực hiện, biến thành hiện thực"
+},
+{
+  "id": 550,
+  "word": "混同（する）",
+  "reading": "こんどう（する）",
+  "meaning": "nhầm lẫn, lẫn lộn"
+},
+{
+  "id": 551,
+  "word": "複数",
+  "reading": "ふくすう",
+  "meaning": "số nhiều, nhiều"
+},
+{
+  "id": 552,
+  "word": "活用（する）",
+  "reading": "かつよう（する）",
+  "meaning": "tận dụng, sử dụng hiệu quả; chia từ"
+}
+,
+{
+  "id": 553,
+  "word": "挑戦（する）",
+  "reading": "ちょうせん（する）",
+  "meaning": "thử thách, thách thức"
+},
+{
+  "id": 554,
+  "word": "範囲",
+  "reading": "はんい",
+  "meaning": "phạm vi"
+},
+{
+  "id": 555,
+  "word": "パターン",
+  "reading": "パターン",
+  "meaning": "kiểu, mẫu"
+},
+{
+  "id": 556,
+  "word": "あらゆる",
+  "reading": "あらゆる",
+  "meaning": "tất cả, mọi"
+},
+{
+  "id": 557,
+  "word": "課題",
+  "reading": "かだい",
+  "meaning": "đề tài, vấn đề, bài tập"
+},
+{
+  "id": 558,
+  "word": "段落",
+  "reading": "だんらく",
+  "meaning": "đoạn văn"
+},
+{
+  "id": 559,
+  "word": "箇所",
+  "reading": "かしょ",
+  "meaning": "chỗ, điểm, vị trí"
+},
+{
+  "id": 560,
+  "word": "用紙",
+  "reading": "ようし",
+  "meaning": "tờ giấy, giấy dùng cho mục đích cụ thể"
+},
+{
+  "id": 561,
+  "word": "応用（する）",
+  "reading": "おうよう（する）",
+  "meaning": "ứng dụng, áp dụng"
+},
+{
+  "id": 562,
+  "word": "選択（する）",
+  "reading": "せんたく（する）",
+  "meaning": "lựa chọn, chọn"
+},
+{
+  "id": 563,
+  "word": "当てはまる",
+  "reading": "あてはまる",
+  "meaning": "phù hợp, thích hợp, đúng với"
+},
+{
+  "id": 564,
+  "word": "述べる",
+  "reading": "のべる",
+  "meaning": "trình bày, phát biểu"
+},
+{
+  "id": 565,
+  "word": "言い換える",
+  "reading": "いいかえる",
+  "meaning": "diễn đạt lại, nói cách khác"
+},
+{
+  "id": 566,
+  "word": "考え込む",
+  "reading": "かんがえこむ",
+  "meaning": "trầm ngâm suy nghĩ, suy nghĩ miên man"
+},
+{
+  "id": 567,
+  "word": "限る",
+  "reading": "かぎる",
+  "meaning": "giới hạn; chỉ có ~ là nhất"
+},
+{
+  "id": 568,
+  "word": "紛らわしい",
+  "reading": "まぎらわしい",
+  "meaning": "dễ nhầm lẫn, gây nhầm lẫn"
+},
+{
+  "id": 569,
+  "word": "さっぱり（～ない）",
+  "reading": "さっぱり（～ない）",
+  "meaning": "hoàn toàn không"
+},
+{
+  "id": 570,
+  "word": "勘",
+  "reading": "かん",
+  "meaning": "trực giác, linh cảm"
+},
+{
+  "id": 571,
+  "word": "本番",
+  "reading": "ほんばん",
+  "meaning": "buổi chính thức, lúc thực tế"
+},
+{
+  "id": 572,
+  "word": "迫る",
+  "reading": "せまる",
+  "meaning": "tiến gần, đến gần, ép"
+},
+{
+  "id": 573,
+  "word": "必死な",
+  "reading": "ひっしな",
+  "meaning": "hết sức, liều mạng, quyết tâm"
+},
+{
+  "id": 574,
+  "word": "いっせいに",
+  "reading": "いっせいに",
+  "meaning": "đồng loạt, cùng một lúc"
+},
+{
+  "id": 575,
+  "word": "終了（する）",
+  "reading": "しゅうりょう（する）",
+  "meaning": "kết thúc, chấm dứt"
+},
+{
+  "id": 576,
+  "word": "回収（する）",
+  "reading": "かいしゅう（する）",
+  "meaning": "thu hồi, thu gom"
+},
+{
+  "id": 577,
+  "word": "採点（する）",
+  "reading": "さいてん（する）",
+  "meaning": "chấm điểm"
+},
+{
+  "id": 578,
+  "word": "確実な",
+  "reading": "かくじつな",
+  "meaning": "chắc chắn, xác thực"
+}
+,
+{
+  "id": 579,
+  "word": "受講（する）",
+  "reading": "じゅこう（する）",
+  "meaning": "tham dự bài giảng, dự học"
+},
+{
+  "id": 580,
+  "word": "書き留める",
+  "reading": "かきとめる",
+  "meaning": "ghi chép lại"
+},
+{
+  "id": 581,
+  "word": "目標",
+  "reading": "もくひょう",
+  "meaning": "mục tiêu"
+},
+{
+  "id": 582,
+  "word": "心構え",
+  "reading": "こころがまえ",
+  "meaning": "sự chuẩn bị tinh thần, tâm thế"
+},
+{
+  "id": 583,
+  "word": "学問",
+  "reading": "がくもん",
+  "meaning": "học vấn, học thuật"
+},
+{
+  "id": 584,
+  "word": "分野",
+  "reading": "ぶんや",
+  "meaning": "lĩnh vực"
+},
+{
+  "id": 585,
+  "word": "取り組む",
+  "reading": "とりくむ",
+  "meaning": "bắt tay vào, nỗ lực thực hiện"
+},
+{
+  "id": 586,
+  "word": "意欲",
+  "reading": "いよく",
+  "meaning": "ý muốn, nhiệt huyết, động lực"
+},
+{
+  "id": 587,
+  "word": "思いつく",
+  "reading": "おもいつく",
+  "meaning": "nghĩ ra, nảy ra ý tưởng"
+},
+{
+  "id": 588,
+  "word": "発明（する）",
+  "reading": "はつめい（する）",
+  "meaning": "phát minh"
+},
+{
+  "id": 589,
+  "word": "分析（する）",
+  "reading": "ぶんせき（する）",
+  "meaning": "phân tích"
+},
+{
+  "id": 590,
+  "word": "継続（する）",
+  "reading": "けいぞく（する）",
+  "meaning": "tiếp tục, duy trì"
+},
+{
+  "id": 591,
+  "word": "ほんの",
+  "reading": "ほんの",
+  "meaning": "chỉ, chỉ một chút"
+},
+{
+  "id": 592,
+  "word": "受け入れる",
+  "reading": "うけいれる",
+  "meaning": "tiếp nhận, chấp nhận"
+},
+{
+  "id": 593,
+  "word": "キャンパス",
+  "reading": "キャンパス",
+  "meaning": "khuôn viên trường"
+},
+{
+  "id": 594,
+  "word": "休講（する）",
+  "reading": "きゅうこう（する）",
+  "meaning": "nghỉ giảng, nghỉ học"
+},
+{
+  "id": 595,
+  "word": "講師",
+  "reading": "こうし",
+  "meaning": "giảng viên"
+},
+{
+  "id": 596,
+  "word": "学会",
+  "reading": "がっかい",
+  "meaning": "hội học thuật, hội nghị học thuật"
+},
+{
+  "id": 597,
+  "word": "わずか[な/に]",
+  "reading": "わずか[な/に]",
+  "meaning": "chỉ một chút, ít ỏi"
+},
+{
+  "id": 598,
+  "word": "論理的な",
+  "reading": "ろんりてきな",
+  "meaning": "có tính logic, mang tính lý luận"
+},
+{
+  "id": 599,
+  "word": "論じる",
+  "reading": "ろんじる",
+  "meaning": "luận bàn, tranh luận"
+},
+{
+  "id": 600,
+  "word": "引用（する）",
+  "reading": "いんよう（する）",
+  "meaning": "trích dẫn"
+},
+{
+  "id": 601,
+  "word": "訳す",
+  "reading": "やくす",
+  "meaning": "dịch"
+},
+{
+  "id": 602,
+  "word": "編集（する）",
+  "reading": "へんしゅう（する）",
+  "meaning": "biên tập, chỉnh sửa"
+},
+{
+  "id": 603,
+  "word": "要旨",
+  "reading": "ようし",
+  "meaning": "bản tóm tắt, nội dung chính"
+},
+{
+  "id": 604,
+  "word": "明確な",
+  "reading": "めいかくな",
+  "meaning": "rõ ràng, rành mạch"
+},
+{
+  "id": 605,
+  "word": "挙げる",
+  "reading": "あげる",
+  "meaning": "đưa ra, nêu lên"
+},
+{
+  "id": 606,
+  "word": "用いる",
+  "reading": "もちいる",
+  "meaning": "sử dụng, áp dụng"
+},
+{
+  "id": 607,
+  "word": "手書き",
+  "reading": "てがき",
+  "meaning": "viết tay, bản viết tay"
+},
+{
+  "id": 608,
+  "word": "一気に",
+  "reading": "いっきに",
+  "meaning": "một hơi, một mạch"
+},
+{
+  "id": 609,
+  "word": "完成（する）",
+  "reading": "かんせい（する）",
+  "meaning": "hoàn thành, hoàn thiện"
+}
+,
+{
+  "id": 610,
+  "word": "起動（する）",
+  "reading": "きどう（する）",
+  "meaning": "khởi động"
+},
+{
+  "id": 611,
+  "word": "本体",
+  "reading": "ほんたい",
+  "meaning": "thân máy, bộ phận chính"
+},
+{
+  "id": 612,
+  "word": "キーボード",
+  "reading": "キーボード",
+  "meaning": "bàn phím"
+},
+{
+  "id": 613,
+  "word": "ディスプレイ",
+  "reading": "ディスプレイ",
+  "meaning": "màn hình, sự hiển thị"
+},
+{
+  "id": 614,
+  "word": "接続（する）",
+  "reading": "せつぞく（する）",
+  "meaning": "kết nối"
+},
+{
+  "id": 615,
+  "word": "検索（する）",
+  "reading": "けんさく（する）",
+  "meaning": "tìm kiếm"
+},
+{
+  "id": 616,
+  "word": "転送（する）",
+  "reading": "てんそう（する）",
+  "meaning": "chuyển tiếp, truyền dữ liệu"
+},
+{
+  "id": 617,
+  "word": "文書",
+  "reading": "ぶんしょ",
+  "meaning": "văn bản, tài liệu"
+},
+{
+  "id": 618,
+  "word": "設定（する）",
+  "reading": "せってい（する）",
+  "meaning": "cài đặt, thiết lập"
+},
+{
+  "id": 619,
+  "word": "余白",
+  "reading": "よはく",
+  "meaning": "lề, khoảng trống"
+},
+{
+  "id": 620,
+  "word": "フォント",
+  "reading": "フォント",
+  "meaning": "phông chữ, kiểu chữ"
+},
+{
+  "id": 621,
+  "word": "カーソル",
+  "reading": "カーソル",
+  "meaning": "con trỏ"
+},
+{
+  "id": 622,
+  "word": "改行（する）",
+  "reading": "かいぎょう（する）",
+  "meaning": "xuống dòng"
+},
+{
+  "id": 623,
+  "word": "区切る",
+  "reading": "くぎる",
+  "meaning": "ngắt, phân chia, phân đoạn"
+},
+{
+  "id": 624,
+  "word": "貼り付ける",
+  "reading": "はりつける",
+  "meaning": "dán"
+},
+{
+  "id": 625,
+  "word": "強調（する）",
+  "reading": "きょうちょう（する）",
+  "meaning": "nhấn mạnh"
+},
+{
+  "id": 626,
+  "word": "拡大（する）",
+  "reading": "かくだい（する）",
+  "meaning": "phóng to, mở rộng"
+},
+{
+  "id": 627,
+  "word": "消去（する）",
+  "reading": "しょうきょ（する）",
+  "meaning": "xóa, xóa bỏ"
+},
+{
+  "id": 628,
+  "word": "上書き保存（する）",
+  "reading": "うわがきほぞん（する）",
+  "meaning": "lưu đè"
+},
+{
+  "id": 629,
+  "word": "順序",
+  "reading": "じゅんじょ",
+  "meaning": "thứ tự, trình tự"
+},
+{
+  "id": 630,
+  "word": "印刷（する）",
+  "reading": "いんさつ（する）",
+  "meaning": "in, in ấn"
+},
+{
+  "id": 631,
+  "word": "プリンター",
+  "reading": "プリンター",
+  "meaning": "máy in"
+},
+{
+  "id": 632,
+  "word": "インク",
+  "reading": "インク",
+  "meaning": "mực"
+}
+,
+{
+  "id": 633,
+  "word": "求人",
+  "reading": "きゅうじん",
+  "meaning": "tuyển dụng, tìm người làm"
+},
+{
+  "id": 634,
+  "word": "志望（する）",
+  "reading": "しぼう（する）",
+  "meaning": "nguyện vọng, mong muốn"
+},
+{
+  "id": 635,
+  "word": "エントリー（する）",
+  "reading": "エントリー（する）",
+  "meaning": "đăng ký ứng tuyển, dự tuyển"
+},
+{
+  "id": 636,
+  "word": "携わる",
+  "reading": "たずさわる",
+  "meaning": "tham gia, làm việc liên quan đến"
+},
+{
+  "id": 637,
+  "word": "生かす",
+  "reading": "いかす",
+  "meaning": "phát huy, tận dụng"
+},
+{
+  "id": 638,
+  "word": "貴社",
+  "reading": "きしゃ",
+  "meaning": "quý công ty"
+},
+{
+  "id": 639,
+  "word": "御中",
+  "reading": "おんちゅう",
+  "meaning": "kính gửi (dùng cho công ty, tổ chức)"
+},
+{
+  "id": 640,
+  "word": "動機",
+  "reading": "どうき",
+  "meaning": "động cơ, động lực"
+},
+{
+  "id": 641,
+  "word": "熱意",
+  "reading": "ねつい",
+  "meaning": "nhiệt tình, nhiệt huyết"
+},
+{
+  "id": 642,
+  "word": "学歴",
+  "reading": "がくれき",
+  "meaning": "học vấn, trình độ học vấn"
+},
+{
+  "id": 643,
+  "word": "不問",
+  "reading": "ふもん",
+  "meaning": "không yêu cầu, không xét đến"
+},
+{
+  "id": 644,
+  "word": "制限（する）",
+  "reading": "せいげん（する）",
+  "meaning": "hạn chế, giới hạn"
+},
+{
+  "id": 645,
+  "word": "特技",
+  "reading": "とくぎ",
+  "meaning": "sở trường, kỹ năng đặc biệt"
+},
+{
+  "id": 646,
+  "word": "協調（する）",
+  "reading": "きょうちょう（する）",
+  "meaning": "hợp tác, hòa đồng"
+},
+{
+  "id": 647,
+  "word": "肝心な",
+  "reading": "かんじんな",
+  "meaning": "quan trọng, then chốt, cốt lõi"
+},
+{
+  "id": 648,
+  "word": "精一杯",
+  "reading": "せいいっぱい",
+  "meaning": "hết sức mình, dốc hết sức"
+},
+{
+  "id": 649,
+  "word": "アピール（する）",
+  "reading": "アピール（する）",
+  "meaning": "thể hiện, làm nổi bật, giới thiệu bản thân"
+},
+{
+  "id": 650,
+  "word": "対応（する）",
+  "reading": "たいおう（する）",
+  "meaning": "ứng phó, xử lý, đối ứng"
+},
+{
+  "id": 651,
+  "word": "合同（する）",
+  "reading": "ごうどう（する）",
+  "meaning": "kết hợp, liên hợp, tổ chức chung"
+},
+{
+  "id": 652,
+  "word": "望ましい",
+  "reading": "のぞましい",
+  "meaning": "đáng mong muốn, lý tưởng"
+},
+{
+  "id": 653,
+  "word": "好ましい",
+  "reading": "このましい",
+  "meaning": "đáng ưa, tốt đẹp, được ưa chuộng"
+},
+{
+  "id": 654,
+  "word": "公平（な）",
+  "reading": "こうへい（な）",
+  "meaning": "công bằng, công minh"
+},
+{
+  "id": 655,
+  "word": "せめて",
+  "reading": "せめて",
+  "meaning": "ít nhất, tối thiểu"
+},
+{
+  "id": 656,
+  "word": "受け取る",
+  "reading": "うけとる",
+  "meaning": "nhận, nhận được"
+},
+{
+  "id": 657,
+  "word": "内定（する）",
+  "reading": "ないてい（する）",
+  "meaning": "quyết định tuyển dụng không chính thức, nhận offer"
+},
+{
+  "id": 658,
+  "word": "辞退（する）",
+  "reading": "じたい（する）",
+  "meaning": "từ chối, xin rút lui"
+},
+{
+  "id": 659,
+  "word": "契約（する）",
+  "reading": "けいやく（する）",
+  "meaning": "hợp đồng, ký kết"
+},
+{
+  "id": 660,
+  "word": "入社（する）",
+  "reading": "にゅうしゃ（する）",
+  "meaning": "vào công ty, gia nhập công ty"
+},
+{
+  "id": 661,
+  "word": "心得る",
+  "reading": "こころえる",
+  "meaning": "nắm rõ, thấu hiểu, nhận thức"
+},
+{
+  "id": 662,
+  "word": "社会人",
+  "reading": "しゃかいじん",
+  "meaning": "người đi làm, người trưởng thành trong xã hội"
+},
+{
+  "id": 663,
+  "word": "自覚（する）",
+  "reading": "じかく（する）",
+  "meaning": "tự giác, tự nhận thức, ý thức bản thân"
+},
+{
+  "id": 664,
+  "word": "いよいよ",
+  "reading": "いよいよ",
+  "meaning": "cuối cùng, rốt cuộc; càng lúc càng"
+}
+,
+{
+  "id": 665,
+  "word": "大企業",
+  "reading": "だいきぎょう",
+  "meaning": "doanh nghiệp lớn, công ty lớn"
+},
+{
+  "id": 666,
+  "word": "大手",
+  "reading": "おおて",
+  "meaning": "công ty lớn, hàng đầu"
+},
+{
+  "id": 667,
+  "word": "代表（する）",
+  "reading": "だいひょう（する）",
+  "meaning": "đại diện"
+},
+{
+  "id": 668,
+  "word": "民間",
+  "reading": "みんかん",
+  "meaning": "tư nhân, dân sự"
+},
+{
+  "id": 669,
+  "word": "組織",
+  "reading": "そしき",
+  "meaning": "tổ chức"
+},
+{
+  "id": 670,
+  "word": "従業員",
+  "reading": "じゅうぎょういん",
+  "meaning": "nhân viên, người lao động"
+},
+{
+  "id": 671,
+  "word": "新入社員",
+  "reading": "しんにゅうしゃいん",
+  "meaning": "nhân viên mới"
+},
+{
+  "id": 672,
+  "word": "派遣社員",
+  "reading": "はけんしゃいん",
+  "meaning": "nhân viên phái cử, nhân viên tạm thời"
+},
+{
+  "id": 673,
+  "word": "オーナー",
+  "reading": "オーナー",
+  "meaning": "chủ, chủ sở hữu"
+},
+{
+  "id": 674,
+  "word": "重役",
+  "reading": "じゅうやく",
+  "meaning": "lãnh đạo cấp cao, thành viên ban lãnh đạo"
+},
+{
+  "id": 675,
+  "word": "オフィス",
+  "reading": "オフィス",
+  "meaning": "văn phòng"
+},
+{
+  "id": 676,
+  "word": "支給（する）",
+  "reading": "しきゅう（する）",
+  "meaning": "cấp, chi trả"
+},
+{
+  "id": 677,
+  "word": "出世（する）",
+  "reading": "しゅっせ（する）",
+  "meaning": "thăng tiến, thành đạt"
+},
+{
+  "id": 678,
+  "word": "昇進（する）",
+  "reading": "しょうしん（する）",
+  "meaning": "thăng chức, thăng tiến"
+},
+{
+  "id": 679,
+  "word": "転勤（する）",
+  "reading": "てんきん（する）",
+  "meaning": "chuyển công tác, thuyên chuyển"
+},
+{
+  "id": 680,
+  "word": "赴任（する）",
+  "reading": "ふにん（する）",
+  "meaning": "đi nhận nhiệm sở, nhận chức ở nơi khác"
+},
+{
+  "id": 681,
+  "word": "有給休暇",
+  "reading": "ゆうきゅうきゅうか",
+  "meaning": "nghỉ phép có lương"
+},
+{
+  "id": 682,
+  "word": "人事",
+  "reading": "じんじ",
+  "meaning": "nhân sự"
+},
+{
+  "id": 683,
+  "word": "人材",
+  "reading": "じんざい",
+  "meaning": "nhân tài, nguồn nhân lực"
+},
+{
+  "id": 684,
+  "word": "人手",
+  "reading": "ひとで",
+  "meaning": "nhân lực, người làm"
+},
+{
+  "id": 685,
+  "word": "モニター",
+  "reading": "モニター",
+  "meaning": "người đánh giá, người giám sát; màn hình"
+},
+{
+  "id": 686,
+  "word": "業績",
+  "reading": "ぎょうせき",
+  "meaning": "thành tích, kết quả kinh doanh"
+},
+{
+  "id": 687,
+  "word": "資本",
+  "reading": "しほん",
+  "meaning": "vốn, tư bản"
+},
+{
+  "id": 688,
+  "word": "方針",
+  "reading": "ほうしん",
+  "meaning": "phương châm, chính sách"
+},
+{
+  "id": 689,
+  "word": "我々",
+  "reading": "われわれ",
+  "meaning": "chúng tôi, chúng ta"
+},
+{
+  "id": 690,
+  "word": "製品",
+  "reading": "せいひん",
+  "meaning": "sản phẩm, thành phẩm"
+},
+{
+  "id": 691,
+  "word": "売れ行き",
+  "reading": "うれゆき",
+  "meaning": "tình hình bán hàng, sức bán"
+},
+{
+  "id": 692,
+  "word": "売り上げ",
+  "reading": "うりあげ",
+  "meaning": "doanh thu bán hàng"
+},
+{
+  "id": 693,
+  "word": "コスト",
+  "reading": "コスト",
+  "meaning": "chi phí"
+},
+{
+  "id": 694,
+  "word": "果たす",
+  "reading": "はたす",
+  "meaning": "hoàn thành, thực hiện"
+},
+{
+  "id": 695,
+  "word": "得る",
+  "reading": "える",
+  "meaning": "có được, đạt được"
+},
+{
+  "id": 696,
+  "word": "認める",
+  "reading": "みとめる",
+  "meaning": "công nhận, thừa nhận, chấp nhận"
+}
+,
+{
+  "id": 697,
+  "word": "ビジネス",
+  "reading": "ビジネス",
+  "meaning": "công việc, kinh doanh"
+},
+{
+  "id": 698,
+  "word": "就く",
+  "reading": "つく",
+  "meaning": "nhận công việc, đảm nhận chức vụ"
+},
+{
+  "id": 699,
+  "word": "生きがい",
+  "reading": "いきがい",
+  "meaning": "lẽ sống, ý nghĩa cuộc sống"
+},
+{
+  "id": 700,
+  "word": "やりがい",
+  "reading": "やりがい",
+  "meaning": "giá trị, sự đáng làm"
+},
+{
+  "id": 701,
+  "word": "抱く",
+  "reading": "いだく",
+  "meaning": "ôm ấp, nuôi dưỡng"
+},
+{
+  "id": 702,
+  "word": "打ち合わせ（する）",
+  "reading": "うちあわせ（する）",
+  "meaning": "họp bàn, trao đổi công việc"
+},
+{
+  "id": 703,
+  "word": "アポイント",
+  "reading": "アポイント",
+  "meaning": "cuộc hẹn"
+},
+{
+  "id": 704,
+  "word": "応対（する）",
+  "reading": "おうたい（する）",
+  "meaning": "tiếp khách, ứng tiếp, trả lời"
+},
+{
+  "id": 705,
+  "word": "伝言（する）",
+  "reading": "でんごん（する）",
+  "meaning": "lời nhắn, nhắn lại"
+},
+{
+  "id": 706,
+  "word": "改めて",
+  "reading": "あらためて",
+  "meaning": "một lần nữa, lại, vào dịp khác"
+},
+{
+  "id": 707,
+  "word": "じかに",
+  "reading": "じかに",
+  "meaning": "trực tiếp"
+},
+{
+  "id": 708,
+  "word": "プロジェクト",
+  "reading": "プロジェクト",
+  "meaning": "dự án"
+},
+{
+  "id": 709,
+  "word": "意図（する）",
+  "reading": "いと（する）",
+  "meaning": "ý định, ý đồ"
+},
+{
+  "id": 710,
+  "word": "新たな",
+  "reading": "あらたな",
+  "meaning": "mới, mới mẻ"
+},
+{
+  "id": 711,
+  "word": "組む",
+  "reading": "くむ",
+  "meaning": "kết hợp, phối hợp, lập nhóm"
+},
+{
+  "id": 712,
+  "word": "取り引き（する）",
+  "reading": "とりひき（する）",
+  "meaning": "giao dịch, quan hệ làm ăn"
+},
+{
+  "id": 713,
+  "word": "依頼（する）",
+  "reading": "いらい（する）",
+  "meaning": "yêu cầu, nhờ, đề nghị"
+},
+{
+  "id": 714,
+  "word": "任せる",
+  "reading": "まかせる",
+  "meaning": "giao phó, giao cho, ủy thác"
+},
+{
+  "id": 715,
+  "word": "引き受ける",
+  "reading": "ひきうける",
+  "meaning": "nhận lời, tiếp nhận, đảm nhận"
+},
+{
+  "id": 716,
+  "word": "こなす",
+  "reading": "こなす",
+  "meaning": "xử lý, hoàn thành thành thạo"
+},
+{
+  "id": 717,
+  "word": "成果",
+  "reading": "せいか",
+  "meaning": "thành quả, kết quả"
+},
+{
+  "id": 718,
+  "word": "達成（する）",
+  "reading": "たっせい（する）",
+  "meaning": "đạt được, hoàn thành"
+},
+{
+  "id": 719,
+  "word": "作業（する）",
+  "reading": "さぎょう（する）",
+  "meaning": "công việc, thao tác, tác nghiệp"
+},
+{
+  "id": 720,
+  "word": "保留（する）",
+  "reading": "ほりゅう（する）",
+  "meaning": "bảo lưu, tạm hoãn"
+},
+{
+  "id": 721,
+  "word": "やり直す",
+  "reading": "やりなおす",
+  "meaning": "làm lại"
+},
+{
+  "id": 722,
+  "word": "件",
+  "reading": "けん",
+  "meaning": "vụ việc, vấn đề, trường hợp"
+},
+{
+  "id": 723,
+  "word": "急用",
+  "reading": "きゅうよう",
+  "meaning": "việc gấp, việc khẩn"
+},
+{
+  "id": 724,
+  "word": "至急",
+  "reading": "しきゅう",
+  "meaning": "khẩn cấp, cấp tốc"
+},
+{
+  "id": 725,
+  "word": "手順",
+  "reading": "てじゅん",
+  "meaning": "trình tự, quy trình"
+},
+{
+  "id": 726,
+  "word": "移動（する）",
+  "reading": "いどう（する）",
+  "meaning": "di chuyển"
+},
+{
+  "id": 727,
+  "word": "大工",
+  "reading": "だいく",
+  "meaning": "thợ mộc"
+},
+{
+  "id": 728,
+  "word": "ガードマン",
+  "reading": "ガードマン",
+  "meaning": "nhân viên bảo vệ"
+}
+,
+{
+  "id": 729,
+  "word": "地位",
+  "reading": "ちい",
+  "meaning": "vị trí, địa vị"
+},
+{
+  "id": 730,
+  "word": "目上",
+  "reading": "めうえ",
+  "meaning": "người trên, bề trên"
+},
+{
+  "id": 731,
+  "word": "敬意",
+  "reading": "けいい",
+  "meaning": "sự tôn kính, kính trọng"
+},
+{
+  "id": 732,
+  "word": "敬う",
+  "reading": "うやまう",
+  "meaning": "tôn kính, kính trọng"
+},
+{
+  "id": 733,
+  "word": "的確な",
+  "reading": "てきかくな",
+  "meaning": "chính xác, xác đáng"
+},
+{
+  "id": 734,
+  "word": "忠告（する）",
+  "reading": "ちゅうこく（する）",
+  "meaning": "khuyên nhủ, nhắc nhở"
+},
+{
+  "id": 735,
+  "word": "サポート（する）",
+  "reading": "サポート（する）",
+  "meaning": "hỗ trợ, giúp đỡ"
+},
+{
+  "id": 736,
+  "word": "いばる",
+  "reading": "いばる",
+  "meaning": "kiêu căng, hống hách"
+},
+{
+  "id": 737,
+  "word": "押し付ける",
+  "reading": "おしつける",
+  "meaning": "áp đặt, ép buộc"
+},
+{
+  "id": 738,
+  "word": "ご無沙汰（する）",
+  "reading": "ごぶさた（する）",
+  "meaning": "lâu không liên lạc, lâu không gặp"
+},
+{
+  "id": 739,
+  "word": "恐縮（する）",
+  "reading": "きょうしゅく（する）",
+  "meaning": "ngại, áy náy, cảm thấy phiền"
+},
+{
+  "id": 740,
+  "word": "信頼（する）",
+  "reading": "しんらい（する）",
+  "meaning": "tin cậy, tin tưởng"
+},
+{
+  "id": 741,
+  "word": "従う",
+  "reading": "したがう",
+  "meaning": "tuân theo, tuân thủ"
+},
+{
+  "id": 742,
+  "word": "うなずく",
+  "reading": "うなずく",
+  "meaning": "gật đầu, gật gù"
+},
+{
+  "id": 743,
+  "word": "反論（する）",
+  "reading": "はんろん（する）",
+  "meaning": "phản biện, phản bác"
+},
+{
+  "id": 744,
+  "word": "わびる",
+  "reading": "わびる",
+  "meaning": "xin lỗi, tạ lỗi"
+},
+{
+  "id": 745,
+  "word": "やる気",
+  "reading": "やるき",
+  "meaning": "động lực, sự nhiệt huyết"
+},
+{
+  "id": 746,
+  "word": "お世辞",
+  "reading": "おせじ",
+  "meaning": "lời khen xã giao, lời nịnh"
+},
+{
+  "id": 747,
+  "word": "ごまをする",
+  "reading": "ごまをする",
+  "meaning": "xu nịnh, nịnh bợ"
+},
+{
+  "id": 748,
+  "word": "上等な",
+  "reading": "じょうとうな",
+  "meaning": "cao cấp, hảo hạng"
+},
+{
+  "id": 749,
+  "word": "苦痛",
+  "reading": "くつう",
+  "meaning": "sự đau khổ, khổ sở"
+},
+{
+  "id": 750,
+  "word": "夫人",
+  "reading": "ふじん",
+  "meaning": "phu nhân, vợ của người khác"
+},
+{
+  "id": 751,
+  "word": "ベテラン",
+  "reading": "ベテラン",
+  "meaning": "người kỳ cựu, người dày dạn kinh nghiệm"
+},
+{
+  "id": 752,
+  "word": "平社員",
+  "reading": "ひらしゃいん",
+  "meaning": "nhân viên thường, nhân viên không giữ chức vụ"
+}
+,
+{
+  "id": 753,
+  "word": "退職（する）",
+  "reading": "たいしょく（する）",
+  "meaning": "nghỉ việc, thôi việc"
+},
+{
+  "id": 754,
+  "word": "転職（する）",
+  "reading": "てんしょく（する）",
+  "meaning": "chuyển việc, đổi việc"
+},
+{
+  "id": 755,
+  "word": "首になる",
+  "reading": "くびになる",
+  "meaning": "bị đuổi việc, bị sa thải"
+},
+{
+  "id": 756,
+  "word": "リストラ（する）",
+  "reading": "リストラ（する）",
+  "meaning": "sa thải do tái cơ cấu, cắt giảm nhân sự"
+},
+{
+  "id": 757,
+  "word": "独立（する）",
+  "reading": "どくりつ（する）",
+  "meaning": "độc lập, tự lập, khởi nghiệp"
+},
+{
+  "id": 758,
+  "word": "着々[と]",
+  "reading": "ちゃくちゃく[と]",
+  "meaning": "từng bước vững chắc, đều đặn"
+},
+{
+  "id": 759,
+  "word": "フリー（な）",
+  "reading": "フリー（な）",
+  "meaning": "tự do, miễn phí"
+},
+{
+  "id": 760,
+  "word": "不平",
+  "reading": "ふへい",
+  "meaning": "sự bất bình, lời phàn nàn"
+},
+{
+  "id": 761,
+  "word": "満足（な/する）",
+  "reading": "まんぞく（な/する）",
+  "meaning": "hài lòng, thỏa mãn"
+},
+{
+  "id": 762,
+  "word": "辛抱（する）",
+  "reading": "しんぼう（する）",
+  "meaning": "chịu đựng, nhẫn nại"
+},
+{
+  "id": 763,
+  "word": "ぐっと",
+  "reading": "ぐっと",
+  "meaning": "nén chặt, mạnh lên, rất nhiều"
+},
+{
+  "id": 764,
+  "word": "負う",
+  "reading": "おう",
+  "meaning": "gánh chịu, mang trách nhiệm"
+},
+{
+  "id": 765,
+  "word": "溶け込む",
+  "reading": "とけこむ",
+  "meaning": "hòa nhập, hòa vào"
+},
+{
+  "id": 766,
+  "word": "やむを得ず",
+  "reading": "やむをえず",
+  "meaning": "bất đắc dĩ, không còn cách nào khác"
+},
+{
+  "id": 767,
+  "word": "立ち上げる",
+  "reading": "たちあげる",
+  "meaning": "thành lập, khởi động"
+},
+{
+  "id": 768,
+  "word": "試みる",
+  "reading": "こころみる",
+  "meaning": "thử, thử nghiệm"
+},
+{
+  "id": 769,
+  "word": "専念（する）",
+  "reading": "せんねん（する）",
+  "meaning": "chuyên tâm, tập trung"
+},
+{
+  "id": 770,
+  "word": "悔やむ",
+  "reading": "くやむ",
+  "meaning": "hối hận, tiếc nuối"
+},
+{
+  "id": 771,
+  "word": "見送る",
+  "reading": "みおくる",
+  "meaning": "tạm hoãn, trì hoãn; tiễn"
+},
+{
+  "id": 772,
+  "word": "逃す",
+  "reading": "のがす",
+  "meaning": "bỏ lỡ, để tuột mất"
+},
+{
+  "id": 773,
+  "word": "重なる",
+  "reading": "かさなる",
+  "meaning": "chồng chất, trùng lặp"
+},
+{
+  "id": 774,
+  "word": "引き止める",
+  "reading": "ひきとめる",
+  "meaning": "giữ lại, can ngăn"
+},
+{
+  "id": 775,
+  "word": "特殊（な）",
+  "reading": "とくしゅ（な）",
+  "meaning": "đặc thù, đặc biệt"
+},
+{
+  "id": 776,
+  "word": "身の回り",
+  "reading": "みのまわり",
+  "meaning": "đồ dùng cá nhân, những thứ xung quanh mình"
+},
+{
+  "id": 777,
+  "word": "状況",
+  "reading": "じょうきょう",
+  "meaning": "tình trạng, tình hình"
+}
+,
+{
+  "id": 778,
+  "word": "競技（する）",
+  "reading": "きょうぎ（する）",
+  "meaning": "thi đấu, môn thi đấu"
+},
+{
+  "id": 779,
+  "word": "競う",
+  "reading": "きそう",
+  "meaning": "cạnh tranh, ganh đua"
+},
+{
+  "id": 780,
+  "word": "戦う",
+  "reading": "たたかう",
+  "meaning": "chiến đấu, giao tranh"
+},
+{
+  "id": 781,
+  "word": "勝負（する）",
+  "reading": "しょうぶ（する）",
+  "meaning": "thi đấu, phân thắng bại"
+},
+{
+  "id": 782,
+  "word": "勝敗",
+  "reading": "しょうはい",
+  "meaning": "thắng bại, kết quả thi đấu"
+},
+{
+  "id": 783,
+  "word": "勝利（する）",
+  "reading": "しょうり（する）",
+  "meaning": "chiến thắng, thắng lợi"
+},
+{
+  "id": 784,
+  "word": "破る",
+  "reading": "やぶる",
+  "meaning": "đánh bại, phá vỡ, xé rách"
+},
+{
+  "id": 785,
+  "word": "やっつける",
+  "reading": "やっつける",
+  "meaning": "đánh bại, hạ gục"
+},
+{
+  "id": 786,
+  "word": "敗れる",
+  "reading": "やぶれる",
+  "meaning": "bị đánh bại, thua"
+},
+{
+  "id": 787,
+  "word": "攻める",
+  "reading": "せめる",
+  "meaning": "tấn công"
+},
+{
+  "id": 788,
+  "word": "逆転（する）",
+  "reading": "ぎゃくてん（する）",
+  "meaning": "lật ngược, đảo ngược tình thế"
+},
+{
+  "id": 789,
+  "word": "開会（する）",
+  "reading": "かいかい（する）",
+  "meaning": "khai mạc"
+},
+{
+  "id": 790,
+  "word": "中断（する）",
+  "reading": "ちゅうだん（する）",
+  "meaning": "gián đoạn, tạm dừng"
+},
+{
+  "id": 791,
+  "word": "延長（する）",
+  "reading": "えんちょう（する）",
+  "meaning": "kéo dài, gia hạn, đấu thêm giờ"
+},
+{
+  "id": 792,
+  "word": "勇ましい",
+  "reading": "いさましい",
+  "meaning": "dũng cảm, oai hùng"
+},
+{
+  "id": 793,
+  "word": "勢い",
+  "reading": "いきおい",
+  "meaning": "đà, sức mạnh, khí thế"
+},
+{
+  "id": 794,
+  "word": "さすが[に]",
+  "reading": "さすが[に]",
+  "meaning": "quả là, quả nhiên, xứng đáng"
+},
+{
+  "id": 795,
+  "word": "観客",
+  "reading": "かんきゃく",
+  "meaning": "khán giả"
+},
+{
+  "id": 796,
+  "word": "敵",
+  "reading": "てき",
+  "meaning": "đối phương, kẻ thù"
+},
+{
+  "id": 797,
+  "word": "グラウンド",
+  "reading": "グラウンド",
+  "meaning": "sân bãi, sân vận động"
+},
+{
+  "id": 798,
+  "word": "順位",
+  "reading": "じゅんい",
+  "meaning": "thứ tự, thứ hạng"
+},
+{
+  "id": 799,
+  "word": "トレーナー",
+  "reading": "トレーナー",
+  "meaning": "huấn luyện viên; áo nỉ thể thao"
+},
+{
+  "id": 800,
+  "word": "指導（する）",
+  "reading": "しどう（する）",
+  "meaning": "chỉ đạo, hướng dẫn"
+},
+{
+  "id": 801,
+  "word": "取り入れる",
+  "reading": "とりいれる",
+  "meaning": "đưa vào, áp dụng, tiếp thu"
+},
+{
+  "id": 802,
+  "word": "ハードな",
+  "reading": "ハードな",
+  "meaning": "khắc nghiệt, vất vả, gian khổ"
+},
+{
+  "id": 803,
+  "word": "通用（する）",
+  "reading": "つうよう（する）",
+  "meaning": "được chấp nhận, có hiệu lực, được công nhận"
+},
+{
+  "id": 804,
+  "word": "技",
+  "reading": "わざ",
+  "meaning": "kỹ năng, kỹ thuật, chiêu thức"
+},
+{
+  "id": 805,
+  "word": "今に",
+  "reading": "いまに",
+  "meaning": "chẳng mấy chốc, rồi sẽ"
+}
+,
+{
+  "id": 806,
+  "word": "格好",
+  "reading": "かっこう",
+  "meaning": "hình thức, bộ dạng, vẻ bề ngoài"
+},
+{
+  "id": 807,
+  "word": "持ち物",
+  "reading": "もちもの",
+  "meaning": "vật dụng, đồ đạc mang theo"
+},
+{
+  "id": 808,
+  "word": "身につける",
+  "reading": "みにつける",
+  "meaning": "mặc, đeo; học hỏi, tiếp thu"
+},
+{
+  "id": 809,
+  "word": "センス",
+  "reading": "センス",
+  "meaning": "gu thẩm mỹ, cảm nhận"
+},
+{
+  "id": 810,
+  "word": "ダサい",
+  "reading": "ダサい",
+  "meaning": "quê mùa, lỗi thời"
+},
+{
+  "id": 811,
+  "word": "いまひとつ",
+  "reading": "いまひとつ",
+  "meaning": "chưa được lắm, còn thiếu một chút"
+},
+{
+  "id": 812,
+  "word": "スタイル",
+  "reading": "スタイル",
+  "meaning": "thân hình, phong cách"
+},
+{
+  "id": 813,
+  "word": "足元（足下）",
+  "reading": "あしもと（あしもと）",
+  "meaning": "bước chân, dưới chân"
+},
+{
+  "id": 814,
+  "word": "ウエスト",
+  "reading": "ウエスト",
+  "meaning": "vòng eo"
+},
+{
+  "id": 815,
+  "word": "見た目",
+  "reading": "みため",
+  "meaning": "vẻ bề ngoài"
+},
+{
+  "id": 816,
+  "word": "人目",
+  "reading": "ひとめ",
+  "meaning": "ánh mắt người khác, sự chú ý của người khác"
+},
+{
+  "id": 817,
+  "word": "色彩",
+  "reading": "しきさい",
+  "meaning": "màu sắc, sắc thái"
+},
+{
+  "id": 818,
+  "word": "華やかな",
+  "reading": "はなやかな",
+  "meaning": "lộng lẫy, rực rỡ, tươi tắn"
+},
+{
+  "id": 819,
+  "word": "鮮やかな",
+  "reading": "あざやかな",
+  "meaning": "tươi sáng, rực rỡ, sống động"
+},
+{
+  "id": 820,
+  "word": "統一（する）",
+  "reading": "とういつ（する）",
+  "meaning": "thống nhất, đồng bộ"
+},
+{
+  "id": 821,
+  "word": "フリーサイズ",
+  "reading": "フリーサイズ",
+  "meaning": "kích cỡ tự do, một cỡ cho tất cả"
+},
+{
+  "id": 822,
+  "word": "ぶかぶか（な/する）",
+  "reading": "ぶかぶか（な/する）",
+  "meaning": "rộng thùng thình, quá rộng"
+},
+{
+  "id": 823,
+  "word": "生地",
+  "reading": "きじ",
+  "meaning": "vải, chất liệu vải"
+},
+{
+  "id": 824,
+  "word": "綿",
+  "reading": "めん",
+  "meaning": "sợi bông, vải cotton"
+},
+{
+  "id": 825,
+  "word": "オーダーメイド",
+  "reading": "オーダーメイド",
+  "meaning": "hàng đặt làm, hàng may đo"
+},
+{
+  "id": 826,
+  "word": "サングラス",
+  "reading": "サングラス",
+  "meaning": "kính râm, kính mát"
+},
+{
+  "id": 827,
+  "word": "（ボタンが）取れる",
+  "reading": "（ボタンが）とれる",
+  "meaning": "(nút) bị sút, bị rơi ra"
+},
+{
+  "id": 828,
+  "word": "浴衣",
+  "reading": "ゆかた",
+  "meaning": "yukata, kimono mùa hè của Nhật"
+}
+,
+{
+  "id": 829,
+  "word": "イベント",
+  "reading": "イベント",
+  "meaning": "sự kiện"
+},
+{
+  "id": 830,
+  "word": "アイドル",
+  "reading": "アイドル",
+  "meaning": "thần tượng"
+},
+{
+  "id": 831,
+  "word": "ステージ",
+  "reading": "ステージ",
+  "meaning": "sân khấu"
+},
+{
+  "id": 832,
+  "word": "興奮（する）",
+  "reading": "こうふん（する）",
+  "meaning": "phấn khích, hưng phấn"
+},
+{
+  "id": 833,
+  "word": "続々[と]",
+  "reading": "ぞくぞく[と]",
+  "meaning": "lần lượt, liên tục"
+},
+{
+  "id": 834,
+  "word": "演劇",
+  "reading": "えんげき",
+  "meaning": "kịch, nghệ thuật sân khấu"
+},
+{
+  "id": 835,
+  "word": "劇場",
+  "reading": "げきじょう",
+  "meaning": "nhà hát, rạp hát"
+},
+{
+  "id": 836,
+  "word": "役者",
+  "reading": "やくしゃ",
+  "meaning": "diễn viên"
+},
+{
+  "id": 837,
+  "word": "主役",
+  "reading": "しゅやく",
+  "meaning": "vai chính, nhân vật chính"
+},
+{
+  "id": 838,
+  "word": "セリフ",
+  "reading": "セリフ",
+  "meaning": "lời thoại, lời nói"
+},
+{
+  "id": 839,
+  "word": "演技（する）",
+  "reading": "えんぎ（する）",
+  "meaning": "diễn xuất, diễn kịch"
+},
+{
+  "id": 840,
+  "word": "オーケストラ",
+  "reading": "オーケストラ",
+  "meaning": "dàn nhạc giao hưởng"
+},
+{
+  "id": 841,
+  "word": "リズム",
+  "reading": "リズム",
+  "meaning": "nhịp điệu"
+},
+{
+  "id": 842,
+  "word": "鑑賞（する）",
+  "reading": "かんしょう（する）",
+  "meaning": "thưởng thức, thưởng ngoạn"
+},
+{
+  "id": 843,
+  "word": "芸術家",
+  "reading": "げいじゅつか",
+  "meaning": "nghệ sĩ"
+},
+{
+  "id": 844,
+  "word": "監督（する）",
+  "reading": "かんとく（する）",
+  "meaning": "đạo diễn, giám sát"
+},
+{
+  "id": 845,
+  "word": "あらすじ",
+  "reading": "あらすじ",
+  "meaning": "tóm tắt nội dung, cốt truyện"
+},
+{
+  "id": 846,
+  "word": "ありふれた",
+  "reading": "ありふれた",
+  "meaning": "tầm thường, phổ biến, thường thấy"
+},
+{
+  "id": 847,
+  "word": "ばかばかしい",
+  "reading": "ばかばかしい",
+  "meaning": "ngớ ngẩn, nực cười"
+},
+{
+  "id": 848,
+  "word": "退屈（な/する）",
+  "reading": "たいくつ（な/する）",
+  "meaning": "buồn tẻ, chán ngắt"
+},
+{
+  "id": 849,
+  "word": "人物",
+  "reading": "じんぶつ",
+  "meaning": "nhân vật, con người"
+},
+{
+  "id": 850,
+  "word": "場面",
+  "reading": "ばめん",
+  "meaning": "cảnh, tình huống, trường hợp"
+},
+{
+  "id": 851,
+  "word": "展開（する）",
+  "reading": "てんかい（する）",
+  "meaning": "triển khai, diễn biến, tiến triển"
+},
+{
+  "id": 852,
+  "word": "テンポ",
+  "reading": "テンポ",
+  "meaning": "nhịp độ, tiết tấu"
+},
+{
+  "id": 853,
+  "word": "評判",
+  "reading": "ひょうばん",
+  "meaning": "tiếng tăm, danh tiếng, đánh giá"
+},
+{
+  "id": 854,
+  "word": "評価（する）",
+  "reading": "ひょうか（する）",
+  "meaning": "đánh giá"
+},
+{
+  "id": 855,
+  "word": "感想",
+  "reading": "かんそう",
+  "meaning": "cảm tưởng, cảm nghĩ"
+},
+{
+  "id": 856,
+  "word": "賞",
+  "reading": "しょう",
+  "meaning": "giải thưởng"
+}
+,
+{
+  "id": 857,
+  "word": "書物",
+  "reading": "しょもつ",
+  "meaning": "sách, sách vở"
+},
+{
+  "id": 858,
+  "word": "絵本",
+  "reading": "えほん",
+  "meaning": "sách tranh"
+},
+{
+  "id": 859,
+  "word": "作品",
+  "reading": "さくひん",
+  "meaning": "tác phẩm"
+},
+{
+  "id": 860,
+  "word": "著者",
+  "reading": "ちょしゃ",
+  "meaning": "tác giả"
+},
+{
+  "id": 861,
+  "word": "書き手",
+  "reading": "かきて",
+  "meaning": "người viết, tác giả"
+},
+{
+  "id": 862,
+  "word": "ペンネーム",
+  "reading": "ペンネーム",
+  "meaning": "bút danh"
+},
+{
+  "id": 863,
+  "word": "主人公",
+  "reading": "しゅじんこう",
+  "meaning": "nhân vật chính"
+},
+{
+  "id": 864,
+  "word": "ロマン",
+  "reading": "ロマン",
+  "meaning": "sự lãng mạn, lý tưởng lãng mạn"
+},
+{
+  "id": 865,
+  "word": "伝記",
+  "reading": "でんき",
+  "meaning": "tiểu sử"
+},
+{
+  "id": 866,
+  "word": "人生",
+  "reading": "じんせい",
+  "meaning": "cuộc đời, đời người"
+},
+{
+  "id": 867,
+  "word": "神話",
+  "reading": "しんわ",
+  "meaning": "thần thoại"
+},
+{
+  "id": 868,
+  "word": "中世",
+  "reading": "ちゅうせい",
+  "meaning": "thời trung cổ"
+},
+{
+  "id": 869,
+  "word": "文明",
+  "reading": "ぶんめい",
+  "meaning": "văn minh"
+},
+{
+  "id": 870,
+  "word": "忠実な",
+  "reading": "ちゅうじつな",
+  "meaning": "trung thành, trung thực"
+},
+{
+  "id": 871,
+  "word": "奇妙な",
+  "reading": "きみょうな",
+  "meaning": "kỳ lạ, lạ lùng"
+},
+{
+  "id": 872,
+  "word": "背景",
+  "reading": "はいけい",
+  "meaning": "bối cảnh, phông nền"
+},
+{
+  "id": 873,
+  "word": "実際",
+  "reading": "じっさい",
+  "meaning": "thực tế, trên thực tế"
+},
+{
+  "id": 874,
+  "word": "文句",
+  "reading": "もんく",
+  "meaning": "câu văn, lời phàn nàn"
+},
+{
+  "id": 875,
+  "word": "果たして",
+  "reading": "はたして",
+  "meaning": "rốt cuộc, quả nhiên"
+},
+{
+  "id": 876,
+  "word": "発想（する）",
+  "reading": "はっそう（する）",
+  "meaning": "ý tưởng, sự sáng tạo"
+},
+{
+  "id": 877,
+  "word": "由来（する）",
+  "reading": "ゆらい（する）",
+  "meaning": "nguồn gốc, bắt nguồn"
+},
+{
+  "id": 878,
+  "word": "空想（する）",
+  "reading": "くうそう（する）",
+  "meaning": "tưởng tượng, mơ mộng"
+},
+{
+  "id": 879,
+  "word": "連想（する）",
+  "reading": "れんそう（する）",
+  "meaning": "liên tưởng"
+},
+{
+  "id": 880,
+  "word": "解釈（する）",
+  "reading": "かいしゃく（する）",
+  "meaning": "giải thích, diễn giải"
+},
+{
+  "id": 881,
+  "word": "発行（する）",
+  "reading": "はっこう（する）",
+  "meaning": "phát hành, xuất bản"
+},
+{
+  "id": 882,
+  "word": "生み出す",
+  "reading": "うみだす",
+  "meaning": "tạo ra, sáng tạo ra"
+},
+{
+  "id": 883,
+  "word": "読書家",
+  "reading": "どくしょか",
+  "meaning": "người thích đọc sách, mọt sách"
+}
+,
+{
+  "id": 884,
+  "word": "習い事",
+  "reading": "ならいごと",
+  "meaning": "việc học ngoại khóa, lớp học thêm"
+},
+{
+  "id": 885,
+  "word": "こだわる",
+  "reading": "こだわる",
+  "meaning": "chú trọng, câu nệ"
+},
+{
+  "id": 886,
+  "word": "こだわり",
+  "reading": "こだわり",
+  "meaning": "sự cầu kỳ, sự chú trọng, phong cách riêng"
+},
+{
+  "id": 887,
+  "word": "凝る",
+  "reading": "こる",
+  "meaning": "say mê, đắm chìm"
+},
+{
+  "id": 888,
+  "word": "熱中（する）",
+  "reading": "ねっちゅう（する）",
+  "meaning": "say mê, tập trung hết mình"
+},
+{
+  "id": 889,
+  "word": "コレクション（する）",
+  "reading": "コレクション（する）",
+  "meaning": "sưu tầm, bộ sưu tập"
+},
+{
+  "id": 890,
+  "word": "多彩な",
+  "reading": "たさいな",
+  "meaning": "đa dạng, phong phú"
+},
+{
+  "id": 891,
+  "word": "素人",
+  "reading": "しろうと",
+  "meaning": "người nghiệp dư, người không chuyên"
+},
+{
+  "id": 892,
+  "word": "初心者",
+  "reading": "しょしんしゃ",
+  "meaning": "người mới bắt đầu"
+},
+{
+  "id": 893,
+  "word": "本格的な",
+  "reading": "ほんかくてきな",
+  "meaning": "thực thụ, chính thức, chuyên nghiệp"
+},
+{
+  "id": 894,
+  "word": "名人",
+  "reading": "めいじん",
+  "meaning": "bậc thầy, chuyên gia"
+},
+{
+  "id": 895,
+  "word": "共通（する）",
+  "reading": "きょうつう（する）",
+  "meaning": "chung, có điểm chung"
+},
+{
+  "id": 896,
+  "word": "ブーム",
+  "reading": "ブーム",
+  "meaning": "trào lưu, cơn sốt"
+},
+{
+  "id": 897,
+  "word": "アウトドア",
+  "reading": "アウトドア",
+  "meaning": "hoạt động ngoài trời"
+},
+{
+  "id": 898,
+  "word": "編み物",
+  "reading": "あみもの",
+  "meaning": "việc đan móc, đồ đan"
+},
+{
+  "id": 899,
+  "word": "手品",
+  "reading": "てじな",
+  "meaning": "ảo thuật, trò ảo thuật"
+},
+{
+  "id": 900,
+  "word": "占い",
+  "reading": "うらない",
+  "meaning": "bói toán, xem bói"
+},
+{
+  "id": 901,
+  "word": "手話",
+  "reading": "しゅわ",
+  "meaning": "ngôn ngữ ký hiệu"
+},
+{
+  "id": 902,
+  "word": "伝統",
+  "reading": "でんとう",
+  "meaning": "truyền thống"
+},
+{
+  "id": 903,
+  "word": "作法",
+  "reading": "さほう",
+  "meaning": "lễ nghi, phép tắc"
+},
+{
+  "id": 904,
+  "word": "撮影（する）",
+  "reading": "さつえい（する）",
+  "meaning": "chụp ảnh, quay phim"
+},
+{
+  "id": 905,
+  "word": "レンズ",
+  "reading": "レンズ",
+  "meaning": "ống kính"
+},
+{
+  "id": 906,
+  "word": "宝くじ",
+  "reading": "たからくじ",
+  "meaning": "vé số, xổ số"
+},
+{
+  "id": 907,
+  "word": "当たる",
+  "reading": "あたる",
+  "meaning": "trúng, đụng, trúng thưởng"
+},
+{
+  "id": 908,
+  "word": "コツ",
+  "reading": "コツ",
+  "meaning": "bí quyết, mẹo"
+},
+{
+  "id": 909,
+  "word": "瞬間",
+  "reading": "しゅんかん",
+  "meaning": "khoảnh khắc"
+},
+{
+  "id": 910,
+  "word": "組み合わせる",
+  "reading": "くみあわせる",
+  "meaning": "kết hợp, ghép lại"
+},
+{
+  "id": 911,
+  "word": "身近（な）",
+  "reading": "みぢか（な）",
+  "meaning": "gần gũi, thân cận"
+}
+,
+{
+  "id": 912,
+  "word": "気候",
+  "reading": "きこう",
+  "meaning": "khí hậu"
+},
+{
+  "id": 913,
+  "word": "シーズン",
+  "reading": "シーズン",
+  "meaning": "mùa, mùa vụ"
+},
+{
+  "id": 914,
+  "word": "四季",
+  "reading": "しき",
+  "meaning": "bốn mùa"
+},
+{
+  "id": 915,
+  "word": "ふくらむ",
+  "reading": "ふくらむ",
+  "meaning": "phồng lên, căng lên"
+},
+{
+  "id": 916,
+  "word": "梅雨",
+  "reading": "つゆ",
+  "meaning": "mùa mưa"
+},
+{
+  "id": 917,
+  "word": "初夏",
+  "reading": "しょか",
+  "meaning": "đầu mùa hè, đầu hè"
+},
+{
+  "id": 918,
+  "word": "温帯",
+  "reading": "おんたい",
+  "meaning": "vùng ôn đới"
+},
+{
+  "id": 919,
+  "word": "属する",
+  "reading": "ぞくする",
+  "meaning": "thuộc về"
+},
+{
+  "id": 920,
+  "word": "確率",
+  "reading": "かくりつ",
+  "meaning": "xác suất"
+},
+{
+  "id": 921,
+  "word": "夕立",
+  "reading": "ゆうだち",
+  "meaning": "mưa rào buổi chiều"
+},
+{
+  "id": 922,
+  "word": "にわかな",
+  "reading": "にわかな",
+  "meaning": "đột ngột, bất ngờ"
+},
+{
+  "id": 923,
+  "word": "覆う",
+  "reading": "おおう",
+  "meaning": "bao phủ, che phủ"
+},
+{
+  "id": 924,
+  "word": "びしょびしょな",
+  "reading": "びしょびしょな",
+  "meaning": "ướt sũng, sũng nước"
+},
+{
+  "id": 925,
+  "word": "あいにく（な）",
+  "reading": "あいにく（な）",
+  "meaning": "đáng tiếc, không may"
+},
+{
+  "id": 926,
+  "word": "吹雪",
+  "reading": "ふぶき",
+  "meaning": "bão tuyết"
+},
+{
+  "id": 927,
+  "word": "凍える",
+  "reading": "こごえる",
+  "meaning": "lạnh cóng, tê cóng"
+},
+{
+  "id": 928,
+  "word": "冷え込む",
+  "reading": "ひえこむ",
+  "meaning": "trở lạnh, lạnh sâu"
+},
+{
+  "id": 929,
+  "word": "陽気（な）",
+  "reading": "ようき（な）",
+  "meaning": "tiết trời; vui vẻ, hoạt bát"
+},
+{
+  "id": 930,
+  "word": "日和",
+  "reading": "ひより",
+  "meaning": "tiết trời đẹp, thời tiết lý tưởng"
+},
+{
+  "id": 931,
+  "word": "日差し",
+  "reading": "ひざし",
+  "meaning": "ánh nắng"
+},
+{
+  "id": 932,
+  "word": "いっそう",
+  "reading": "いっそう",
+  "meaning": "hơn nữa, càng thêm"
+},
+{
+  "id": 933,
+  "word": "一段と",
+  "reading": "いちだんと",
+  "meaning": "hơn hẳn, thêm một bậc"
+},
+{
+  "id": 934,
+  "word": "急速な",
+  "reading": "きゅうそくな",
+  "meaning": "nhanh chóng, cấp tốc"
+},
+{
+  "id": 935,
+  "word": "ぐんぐん[と]",
+  "reading": "ぐんぐん[と]",
+  "meaning": "vùn vụt, nhanh chóng"
+},
+{
+  "id": 936,
+  "word": "いくぶん",
+  "reading": "いくぶん",
+  "meaning": "phần nào, hơi, một chút"
+},
+{
+  "id": 937,
+  "word": "めっきり",
+  "reading": "めっきり",
+  "meaning": "rõ rệt, hẳn đi"
+},
+{
+  "id": 938,
+  "word": "あまりに[も]",
+  "reading": "あまりに[も]",
+  "meaning": "quá, quá mức"
+},
+{
+  "id": 939,
+  "word": "差",
+  "reading": "さ",
+  "meaning": "sự chênh lệch, khoảng cách"
+},
+{
+  "id": 940,
+  "word": "本来",
+  "reading": "ほんらい",
+  "meaning": "vốn dĩ, vốn là"
+}
+,
+{
+  "id": 941,
+  "word": "接近（する）",
+  "reading": "せっきん（する）",
+  "meaning": "tiếp cận, đến gần"
+},
+{
+  "id": 942,
+  "word": "備える",
+  "reading": "そなえる",
+  "meaning": "chuẩn bị, phòng bị, đề phòng"
+},
+{
+  "id": 943,
+  "word": "砂",
+  "reading": "すな",
+  "meaning": "cát"
+},
+{
+  "id": 944,
+  "word": "あふれる",
+  "reading": "あふれる",
+  "meaning": "tràn, ngập"
+},
+{
+  "id": 945,
+  "word": "降水量",
+  "reading": "こうすいりょう",
+  "meaning": "lượng mưa"
+},
+{
+  "id": 946,
+  "word": "観測（する）",
+  "reading": "かんそく（する）",
+  "meaning": "quan trắc, đo đạc"
+},
+{
+  "id": 947,
+  "word": "大気",
+  "reading": "たいき",
+  "meaning": "không khí, khí quyển"
+},
+{
+  "id": 948,
+  "word": "荒れる",
+  "reading": "あれる",
+  "meaning": "trở nên dữ dội, biển động; da khô nứt"
+},
+{
+  "id": 949,
+  "word": "傾く",
+  "reading": "かたむく",
+  "meaning": "nghiêng, có chiều hướng sa sút"
+},
+{
+  "id": 950,
+  "word": "またぐ",
+  "reading": "またぐ",
+  "meaning": "bước qua, vượt qua"
+},
+{
+  "id": 951,
+  "word": "応答（する）",
+  "reading": "おうとう（する）",
+  "meaning": "đáp lại, hồi âm, phản hồi"
+},
+{
+  "id": 952,
+  "word": "静まる",
+  "reading": "しずまる",
+  "meaning": "lắng xuống, yên tĩnh, dịu đi"
+},
+{
+  "id": 953,
+  "word": "もたらす",
+  "reading": "もたらす",
+  "meaning": "mang đến, gây nên"
+},
+{
+  "id": 954,
+  "word": "及ぼす",
+  "reading": "およぼす",
+  "meaning": "gây ra, gây ảnh hưởng"
+},
+{
+  "id": 955,
+  "word": "及ぶ",
+  "reading": "およぶ",
+  "meaning": "đạt đến, lên đến, lan tới"
+},
+{
+  "id": 956,
+  "word": "去る",
+  "reading": "さる",
+  "meaning": "rời đi, bỏ đi"
+},
+{
+  "id": 957,
+  "word": "ひとまず",
+  "reading": "ひとまず",
+  "meaning": "tạm thời, trước mắt"
+},
+{
+  "id": 958,
+  "word": "直後",
+  "reading": "ちょくご",
+  "meaning": "ngay sau, ngay sau khi"
+},
+{
+  "id": 959,
+  "word": "行動（する）",
+  "reading": "こうどう（する）",
+  "meaning": "hành động, hoạt động"
+},
+{
+  "id": 960,
+  "word": "万一",
+  "reading": "まんいち",
+  "meaning": "nhỡ, chẳng may, vạn nhất"
+},
+{
+  "id": 961,
+  "word": "傾向",
+  "reading": "けいこう",
+  "meaning": "khuynh hướng, xu hướng"
+},
+{
+  "id": 962,
+  "word": "達する",
+  "reading": "たっする",
+  "meaning": "đạt, đạt đến"
+},
+{
+  "id": 963,
+  "word": "災害",
+  "reading": "さいがい",
+  "meaning": "thảm họa, thiên tai"
+}
+,
+{
+  "id": 964,
+  "word": "大地",
+  "reading": "だいち",
+  "meaning": "mặt đất, vùng đất"
+},
+{
+  "id": 965,
+  "word": "広大な",
+  "reading": "こうだいな",
+  "meaning": "bao la, rộng lớn"
+},
+{
+  "id": 966,
+  "word": "砂漠",
+  "reading": "さばく",
+  "meaning": "sa mạc"
+},
+{
+  "id": 967,
+  "word": "谷",
+  "reading": "たに",
+  "meaning": "thung lũng"
+},
+{
+  "id": 968,
+  "word": "滝",
+  "reading": "たき",
+  "meaning": "thác nước"
+},
+{
+  "id": 969,
+  "word": "岸",
+  "reading": "きし",
+  "meaning": "bờ, bến bờ"
+},
+{
+  "id": 970,
+  "word": "海辺",
+  "reading": "うみべ",
+  "meaning": "ven biển, bờ biển"
+},
+{
+  "id": 971,
+  "word": "透明な",
+  "reading": "とうめいな",
+  "meaning": "trong suốt"
+},
+{
+  "id": 972,
+  "word": "底",
+  "reading": "そこ",
+  "meaning": "đáy"
+},
+{
+  "id": 973,
+  "word": "生き物",
+  "reading": "いきもの",
+  "meaning": "sinh vật, động vật"
+},
+{
+  "id": 974,
+  "word": "生物",
+  "reading": "せいぶつ",
+  "meaning": "sinh vật"
+},
+{
+  "id": 975,
+  "word": "植物",
+  "reading": "しょくぶつ",
+  "meaning": "thực vật"
+},
+{
+  "id": 976,
+  "word": "芽",
+  "reading": "め",
+  "meaning": "mầm, chồi"
+},
+{
+  "id": 977,
+  "word": "人間",
+  "reading": "にんげん",
+  "meaning": "con người"
+},
+{
+  "id": 978,
+  "word": "天然",
+  "reading": "てんねん",
+  "meaning": "thiên nhiên, tự nhiên"
+},
+{
+  "id": 979,
+  "word": "日光",
+  "reading": "にっこう",
+  "meaning": "ánh nắng mặt trời"
+},
+{
+  "id": 980,
+  "word": "昇る",
+  "reading": "のぼる",
+  "meaning": "lên, mọc lên"
+},
+{
+  "id": 981,
+  "word": "日陰",
+  "reading": "ひかげ",
+  "meaning": "bóng râm"
+},
+{
+  "id": 982,
+  "word": "夕焼け",
+  "reading": "ゆうやけ",
+  "meaning": "ráng chiều, hoàng hôn đỏ"
+},
+{
+  "id": 983,
+  "word": "飛び回る",
+  "reading": "とびまわる",
+  "meaning": "bay quanh, bay khắp nơi"
+},
+{
+  "id": 984,
+  "word": "鳴く",
+  "reading": "なく",
+  "meaning": "kêu, hót, hú, gáy"
+},
+{
+  "id": 985,
+  "word": "し[い]んと（する）",
+  "reading": "し[い]んと（する）",
+  "meaning": "im lặng, lặng phắc như tờ"
+}
+,
+{
+  "id": 986,
+  "word": "休息（する）",
+  "reading": "きゅうそく（する）",
+  "meaning": "nghỉ giải lao, nghỉ ngơi"
+},
+{
+  "id": 987,
+  "word": "ゆっくり（する）",
+  "reading": "ゆっくり（する）",
+  "meaning": "thong thả, chậm rãi, thư giãn"
+},
+{
+  "id": 988,
+  "word": "ごろごろ（する）",
+  "reading": "ごろごろ（する）",
+  "meaning": "nằm không, lăn qua lăn lại; ầm ầm"
+},
+{
+  "id": 989,
+  "word": "だらだら[と] （する）",
+  "reading": "だらだら[と] （する）",
+  "meaning": "lê thê, uể oải, lừ đừ"
+},
+{
+  "id": 990,
+  "word": "のびのび（する）",
+  "reading": "のびのび（する）",
+  "meaning": "thong dong, thoải mái, tự do"
+},
+{
+  "id": 991,
+  "word": "くつろぐ",
+  "reading": "くつろぐ",
+  "meaning": "nghỉ ngơi, thư giãn"
+},
+{
+  "id": 992,
+  "word": "こもる",
+  "reading": "こもる",
+  "meaning": "rúc trong nhà, nhốt mình; đọng lại"
+},
+{
+  "id": 993,
+  "word": "ぐうぐう",
+  "reading": "ぐうぐう",
+  "meaning": "khò khò; sôi rột rột"
+},
+{
+  "id": 994,
+  "word": "どっと",
+  "reading": "どっと",
+  "meaning": "thình lình ập đến, cùng ồ lên"
+},
+{
+  "id": 995,
+  "word": "切り替える",
+  "reading": "きりかえる",
+  "meaning": "chuyển đổi, thay đổi"
+},
+{
+  "id": 996,
+  "word": "あれこれ",
+  "reading": "あれこれ",
+  "meaning": "việc này việc kia, cái này cái nọ"
+},
+{
+  "id": 997,
+  "word": "芝生",
+  "reading": "しばふ",
+  "meaning": "bãi cỏ"
+},
+{
+  "id": 998,
+  "word": "転がる",
+  "reading": "ころがる",
+  "meaning": "lăn, lăn đi"
+},
+{
+  "id": 999,
+  "word": "うなる",
+  "reading": "うなる",
+  "meaning": "gầm gừ, rên rỉ, trầm trồ"
+},
+{
+  "id": 1000,
+  "word": "ボート",
+  "reading": "ボート",
+  "meaning": "thuyền"
+},
+{
+  "id": 1001,
+  "word": "こぐ",
+  "reading": "こぐ",
+  "meaning": "chèo thuyền, đạp xe, đạp xích đu"
+},
+{
+  "id": 1002,
+  "word": "展覧会",
+  "reading": "てんらんかい",
+  "meaning": "cuộc triển lãm"
+},
+{
+  "id": 1003,
+  "word": "ばったり",
+  "reading": "ばったり",
+  "meaning": "tình cờ gặp; ngã sầm"
+},
+{
+  "id": 1004,
+  "word": "はらはら（する）",
+  "reading": "はらはら（する）",
+  "meaning": "hồi hộp, thấp thỏm, lo lắng"
+},
+{
+  "id": 1005,
+  "word": "[お]墓",
+  "reading": "[お]はか",
+  "meaning": "mộ, ngôi mộ"
+},
+{
+  "id": 1006,
+  "word": "突っ込む",
+  "reading": "つっこむ",
+  "meaning": "xông vào, đâm vào, nhét vào"
+},
+{
+  "id": 1007,
+  "word": "見渡す",
+  "reading": "みわたす",
+  "meaning": "nhìn quanh, nhìn bao quát"
+},
+{
+  "id": 1008,
+  "word": "眺める",
+  "reading": "ながめる",
+  "meaning": "ngắm, nhìn ngắm"
+},
+{
+  "id": 1009,
+  "word": "眺め",
+  "reading": "ながめ",
+  "meaning": "tầm nhìn, cảnh quan"
+},
+{
+  "id": 1010,
+  "word": "かすかな",
+  "reading": "かすかな",
+  "meaning": "mờ nhạt, lờ mờ, thấp thoáng"
+},
+{
+  "id": 1011,
+  "word": "おぶう",
+  "reading": "おぶう",
+  "meaning": "cõng, địu"
+},
+{
+  "id": 1012,
+  "word": "最適な",
+  "reading": "さいてきな",
+  "meaning": "thích hợp nhất, tối ưu"
+},
+{
+  "id": 1013,
+  "word": "余裕",
+  "reading": "よゆう",
+  "meaning": "sự dư dả, thong thả, thời gian rảnh"
+}
+,
+{
+  "id": 1014,
+  "word": "旅",
+  "reading": "たび",
+  "meaning": "chuyến đi, hành trình"
+},
+{
+  "id": 1015,
+  "word": "レジャー",
+  "reading": "レジャー",
+  "meaning": "hoạt động giải trí, nghỉ ngơi"
+},
+{
+  "id": 1016,
+  "word": "訪れる",
+  "reading": "おとずれる",
+  "meaning": "đến thăm, ghé thăm"
+},
+{
+  "id": 1017,
+  "word": "体験（する）",
+  "reading": "たいけん（する）",
+  "meaning": "trải nghiệm"
+},
+{
+  "id": 1018,
+  "word": "冒険（する）",
+  "reading": "ぼうけん（する）",
+  "meaning": "phiêu lưu, mạo hiểm"
+},
+{
+  "id": 1019,
+  "word": "見聞き（する）",
+  "reading": "みきき（する）",
+  "meaning": "tai nghe mắt thấy, học hỏi qua trải nghiệm"
+},
+{
+  "id": 1020,
+  "word": "巡る",
+  "reading": "めぐる",
+  "meaning": "đi vòng quanh, dạo quanh; xoay quanh"
+},
+{
+  "id": 1021,
+  "word": "プラン",
+  "reading": "プラン",
+  "meaning": "kế hoạch"
+},
+{
+  "id": 1022,
+  "word": "思い立つ",
+  "reading": "おもいたつ",
+  "meaning": "chợt nảy ra ý định"
+},
+{
+  "id": 1023,
+  "word": "豪華な",
+  "reading": "ごうかな",
+  "meaning": "sang trọng, xa hoa, lộng lẫy"
+},
+{
+  "id": 1024,
+  "word": "手配（する）",
+  "reading": "てはい（する）",
+  "meaning": "sắp xếp, chuẩn bị; truy nã"
+},
+{
+  "id": 1025,
+  "word": "前もって",
+  "reading": "まえもって",
+  "meaning": "trước, từ trước"
+},
+{
+  "id": 1026,
+  "word": "便",
+  "reading": "びん",
+  "meaning": "chuyến bay, chuyến tàu"
+},
+{
+  "id": 1027,
+  "word": "空席",
+  "reading": "くうせき",
+  "meaning": "ghế trống, chỗ trống"
+},
+{
+  "id": 1028,
+  "word": "超過（する）",
+  "reading": "ちょうか（する）",
+  "meaning": "vượt quá"
+},
+{
+  "id": 1029,
+  "word": "飛ぶ",
+  "reading": "とぶ",
+  "meaning": "bay"
+},
+{
+  "id": 1030,
+  "word": "思いがけず",
+  "reading": "おもいがけず",
+  "meaning": "không ngờ, bất ngờ, tình cờ"
+},
+{
+  "id": 1031,
+  "word": "引き返す",
+  "reading": "ひきかえす",
+  "meaning": "quay lại, quay ngược lại"
+},
+{
+  "id": 1032,
+  "word": "間もなく",
+  "reading": "まもなく",
+  "meaning": "chẳng bao lâu, sắp sửa"
+},
+{
+  "id": 1033,
+  "word": "宿泊（する）",
+  "reading": "しゅくはく（する）",
+  "meaning": "lưu trú, ở trọ"
+},
+{
+  "id": 1034,
+  "word": "大幅な",
+  "reading": "おおはばな",
+  "meaning": "lớn, đáng kể, nhiều"
+},
+{
+  "id": 1035,
+  "word": "旅先",
+  "reading": "たびさき",
+  "meaning": "nơi đi du lịch, điểm đến"
+},
+{
+  "id": 1036,
+  "word": "各地",
+  "reading": "かくち",
+  "meaning": "các nơi, các địa phương"
+},
+{
+  "id": 1037,
+  "word": "名所",
+  "reading": "めいしょ",
+  "meaning": "danh lam thắng cảnh, địa danh nổi tiếng"
+},
+{
+  "id": 1038,
+  "word": "市場",
+  "reading": "いちば",
+  "meaning": "chợ, thị trường"
+},
+{
+  "id": 1039,
+  "word": "免税店",
+  "reading": "めんぜいてん",
+  "meaning": "cửa hàng miễn thuế"
+},
+{
+  "id": 1040,
+  "word": "風景",
+  "reading": "ふうけい",
+  "meaning": "phong cảnh"
+},
+{
+  "id": 1041,
+  "word": "海水浴",
+  "reading": "かいすいよく",
+  "meaning": "tắm biển"
+},
+{
+  "id": 1042,
+  "word": "もぐる",
+  "reading": "もぐる",
+  "meaning": "lặn, lặn xuống"
+},
+{
+  "id": 1043,
+  "word": "跡",
+  "reading": "あと",
+  "meaning": "dấu vết, vết tích"
+},
+{
+  "id": 1044,
+  "word": "位置",
+  "reading": "いち",
+  "meaning": "vị trí, địa điểm"
+},
+{
+  "id": 1045,
+  "word": "めいめい",
+  "reading": "めいめい",
+  "meaning": "mỗi người, từng người"
+},
+{
+  "id": 1046,
+  "word": "しばしば",
+  "reading": "しばしば",
+  "meaning": "thường xuyên, nhiều lần"
+},
+{
+  "id": 1047,
+  "word": "出来事",
+  "reading": "できごと",
+  "meaning": "sự việc, sự kiện"
+}
+,
+{
+  "id": 1048,
+  "word": "測定（する）",
+  "reading": "そくてい（する）",
+  "meaning": "đo lường, đo đạc"
+},
+{
+  "id": 1049,
+  "word": "定期的な",
+  "reading": "ていきてきな",
+  "meaning": "định kỳ"
+},
+{
+  "id": 1050,
+  "word": "血圧",
+  "reading": "けつあつ",
+  "meaning": "huyết áp"
+},
+{
+  "id": 1051,
+  "word": "体力",
+  "reading": "たいりょく",
+  "meaning": "thể lực"
+},
+{
+  "id": 1052,
+  "word": "心身",
+  "reading": "しんしん",
+  "meaning": "tinh thần và thể chất"
+},
+{
+  "id": 1053,
+  "word": "健やかな",
+  "reading": "すこやかな",
+  "meaning": "khỏe mạnh"
+},
+{
+  "id": 1054,
+  "word": "かたよる",
+  "reading": "かたよる",
+  "meaning": "thiên lệch, mất cân bằng"
+},
+{
+  "id": 1055,
+  "word": "小柄な",
+  "reading": "こがらな",
+  "meaning": "nhỏ con, nhỏ người"
+},
+{
+  "id": 1056,
+  "word": "寿命",
+  "reading": "じゅみょう",
+  "meaning": "tuổi thọ"
+},
+{
+  "id": 1057,
+  "word": "一般に",
+  "reading": "いっぱんに",
+  "meaning": "nói chung, thông thường"
+},
+{
+  "id": 1058,
+  "word": "手首",
+  "reading": "てくび",
+  "meaning": "cổ tay"
+},
+{
+  "id": 1059,
+  "word": "かかと",
+  "reading": "かかと",
+  "meaning": "gót chân"
+},
+{
+  "id": 1060,
+  "word": "つま先",
+  "reading": "つまさき",
+  "meaning": "đầu ngón chân, mũi chân"
+},
+{
+  "id": 1061,
+  "word": "血管",
+  "reading": "けっかん",
+  "meaning": "mạch máu"
+},
+{
+  "id": 1062,
+  "word": "さらさら（な/する）",
+  "reading": "さらさら（な/する）",
+  "meaning": "mềm mại, trơn tru, thông suốt"
+},
+{
+  "id": 1063,
+  "word": "筋肉",
+  "reading": "きんにく",
+  "meaning": "cơ bắp"
+},
+{
+  "id": 1064,
+  "word": "障がい",
+  "reading": "しょうがい",
+  "meaning": "khuyết tật"
+},
+{
+  "id": 1065,
+  "word": "乗り越える",
+  "reading": "のりこえる",
+  "meaning": "vượt qua"
+},
+{
+  "id": 1066,
+  "word": "傷跡",
+  "reading": "きずあと",
+  "meaning": "vết sẹo, dấu vết"
+},
+{
+  "id": 1067,
+  "word": "いびき",
+  "reading": "いびき",
+  "meaning": "tiếng ngáy"
+},
+{
+  "id": 1068,
+  "word": "体が持つ",
+  "reading": "からだがもつ",
+  "meaning": "cơ thể chịu đựng được"
+}
+,
+{
+  "id": 1069,
+  "word": "休養（する）",
+  "reading": "きゅうよう（する）",
+  "meaning": "nghỉ dưỡng, nghỉ ngơi"
+},
+{
+  "id": 1070,
+  "word": "疲労（する）",
+  "reading": "ひろう（する）",
+  "meaning": "mệt mỏi, lao lực"
+},
+{
+  "id": 1071,
+  "word": "不調（な）",
+  "reading": "ふちょう（な）",
+  "meaning": "không khỏe, không ổn, trục trặc"
+},
+{
+  "id": 1072,
+  "word": "体調",
+  "reading": "たいちょう",
+  "meaning": "tình trạng cơ thể, sức khỏe"
+},
+{
+  "id": 1073,
+  "word": "やや",
+  "reading": "やや",
+  "meaning": "hơi, một chút"
+},
+{
+  "id": 1074,
+  "word": "寝心地",
+  "reading": "ねごこち",
+  "meaning": "cảm giác thoải mái khi nằm ngủ"
+},
+{
+  "id": 1075,
+  "word": "大した",
+  "reading": "たいした",
+  "meaning": "to tát, đáng kể, đáng nể"
+},
+{
+  "id": 1076,
+  "word": "念のため",
+  "reading": "ねんのため",
+  "meaning": "để chắc chắn, để đề phòng"
+},
+{
+  "id": 1077,
+  "word": "通院（する）",
+  "reading": "つういん（する）",
+  "meaning": "đi bệnh viện định kỳ, đi khám định kỳ"
+},
+{
+  "id": 1078,
+  "word": "レントゲン",
+  "reading": "レントゲン",
+  "meaning": "X-quang"
+},
+{
+  "id": 1079,
+  "word": "さらに",
+  "reading": "さらに",
+  "meaning": "hơn nữa, thêm nữa"
+},
+{
+  "id": 1080,
+  "word": "おとろえる",
+  "reading": "おとろえる",
+  "meaning": "suy yếu, sa sút"
+},
+{
+  "id": 1081,
+  "word": "きたえる",
+  "reading": "きたえる",
+  "meaning": "rèn luyện, tôi luyện"
+},
+{
+  "id": 1082,
+  "word": "適度な",
+  "reading": "てきどな",
+  "meaning": "vừa phải, chừng mực"
+},
+{
+  "id": 1083,
+  "word": "予防（する）",
+  "reading": "よぼう（する）",
+  "meaning": "phòng ngừa, phòng chống"
+},
+{
+  "id": 1084,
+  "word": "補給（する）",
+  "reading": "ほきゅう（する）",
+  "meaning": "bổ sung, cung cấp thêm"
+},
+{
+  "id": 1085,
+  "word": "不足（する）",
+  "reading": "ふそく（する）",
+  "meaning": "thiếu, không đủ"
+},
+{
+  "id": 1086,
+  "word": "サプリメント",
+  "reading": "サプリメント",
+  "meaning": "thực phẩm chức năng, viên bổ sung"
+},
+{
+  "id": 1087,
+  "word": "取り戻す",
+  "reading": "とりもどす",
+  "meaning": "lấy lại, giành lại"
+},
+{
+  "id": 1088,
+  "word": "ワクチン",
+  "reading": "ワクチン",
+  "meaning": "vắc-xin"
+},
+{
+  "id": 1089,
+  "word": "加入（する）",
+  "reading": "かにゅう（する）",
+  "meaning": "tham gia, gia nhập"
+},
+{
+  "id": 1090,
+  "word": "医師",
+  "reading": "いし",
+  "meaning": "bác sĩ"
+},
+{
+  "id": 1091,
+  "word": "くれぐれも",
+  "reading": "くれぐれも",
+  "meaning": "nhất định, nhất thiết, hết sức"
+}
+,
+{
+  "id": 1092,
+  "word": "具体的な",
+  "reading": "ぐたいてきな",
+  "meaning": "cụ thể, chi tiết"
+},
+{
+  "id": 1093,
+  "word": "程度",
+  "reading": "ていど",
+  "meaning": "mức độ"
+},
+{
+  "id": 1094,
+  "word": "ぼうっと（する）",
+  "reading": "ぼうっと（する）",
+  "meaning": "thẫn thờ, lờ mờ"
+},
+{
+  "id": 1095,
+  "word": "ふらふら＜な /する＞",
+  "reading": "ふらふら＜な /する＞",
+  "meaning": "hoa mắt, choáng váng, lảo đảo"
+},
+{
+  "id": 1096,
+  "word": "意識",
+  "reading": "いしき",
+  "meaning": "ý thức, sự nhận biết"
+},
+{
+  "id": 1097,
+  "word": "しゃがむ",
+  "reading": "しゃがむ",
+  "meaning": "ngồi xổm, ngồi thụp xuống"
+},
+{
+  "id": 1098,
+  "word": "視野",
+  "reading": "しや",
+  "meaning": "tầm nhìn, tầm mắt"
+},
+{
+  "id": 1099,
+  "word": "呼吸（する）",
+  "reading": "こきゅう（する）",
+  "meaning": "hô hấp, hít thở"
+},
+{
+  "id": 1100,
+  "word": "詰まる",
+  "reading": "つまる",
+  "meaning": "nghẹt, tắc, đầy ắp"
+},
+{
+  "id": 1101,
+  "word": "耐える",
+  "reading": "たえる",
+  "meaning": "chịu đựng"
+},
+{
+  "id": 1102,
+  "word": "便秘（する）",
+  "reading": "べんぴ（する）",
+  "meaning": "táo bón"
+},
+{
+  "id": 1103,
+  "word": "～気味",
+  "reading": "～ぎみ",
+  "meaning": "hơi có vẻ, có xu hướng"
+},
+{
+  "id": 1104,
+  "word": "寒気",
+  "reading": "さむけ",
+  "meaning": "cơn ớn lạnh, cảm giác ớn lạnh"
+},
+{
+  "id": 1105,
+  "word": "ねじる",
+  "reading": "ねじる",
+  "meaning": "vặn, xoắn, làm trặc"
+},
+{
+  "id": 1106,
+  "word": "しっしん",
+  "reading": "しっしん",
+  "meaning": "phát ban, chàm, nổi mẩn"
+},
+{
+  "id": 1107,
+  "word": "はれる",
+  "reading": "はれる",
+  "meaning": "sưng, sưng lên"
+},
+{
+  "id": 1108,
+  "word": "しきりに",
+  "reading": "しきりに",
+  "meaning": "không ngừng, liên tục"
+},
+{
+  "id": 1109,
+  "word": "異常（な）",
+  "reading": "いじょう（な）",
+  "meaning": "bất thường, sự bất thường"
+},
+{
+  "id": 1110,
+  "word": "伴う",
+  "reading": "ともなう",
+  "meaning": "đi kèm, kèm theo"
+},
+{
+  "id": 1111,
+  "word": "単なる",
+  "reading": "たんなる",
+  "meaning": "đơn thuần, chỉ là"
+},
+{
+  "id": 1112,
+  "word": "伝染（する）",
+  "reading": "でんせん（する）",
+  "meaning": "truyền nhiễm, lây nhiễm"
+},
+{
+  "id": 1113,
+  "word": "反応（する）",
+  "reading": "はんのう（する）",
+  "meaning": "phản ứng"
+}
+,
+{
+  "id": 1114,
+  "word": "病む",
+  "reading": "やむ",
+  "meaning": "bị bệnh, đau ốm"
+},
+{
+  "id": 1115,
+  "word": "負傷（する）",
+  "reading": "ふしょう（する）",
+  "meaning": "bị thương, chấn thương"
+},
+{
+  "id": 1116,
+  "word": "重体",
+  "reading": "じゅうたい",
+  "meaning": "tình trạng nguy kịch"
+},
+{
+  "id": 1117,
+  "word": "熱中症",
+  "reading": "ねっちゅうしょう",
+  "meaning": "sốc nhiệt, say nắng"
+},
+{
+  "id": 1118,
+  "word": "細菌",
+  "reading": "さいきん",
+  "meaning": "vi khuẩn, vi trùng"
+},
+{
+  "id": 1119,
+  "word": "つまずく",
+  "reading": "つまずく",
+  "meaning": "vấp, sẩy chân; gặp trở ngại"
+},
+{
+  "id": 1120,
+  "word": "医療",
+  "reading": "いりょう",
+  "meaning": "y tế, dịch vụ y tế"
+},
+{
+  "id": 1121,
+  "word": "高度（な）",
+  "reading": "こうど（な）",
+  "meaning": "trình độ cao, tiên tiến"
+},
+{
+  "id": 1122,
+  "word": "実績",
+  "reading": "じっせき",
+  "meaning": "thành tích thực tế, kết quả đạt được"
+},
+{
+  "id": 1123,
+  "word": "負担（する）",
+  "reading": "ふたん（する）",
+  "meaning": "gánh nặng, chịu chi phí"
+},
+{
+  "id": 1124,
+  "word": "適用（する）",
+  "reading": "てきよう（する）",
+  "meaning": "áp dụng"
+},
+{
+  "id": 1125,
+  "word": "手当て",
+  "reading": "てあて",
+  "meaning": "sơ cứu, chăm sóc; trợ cấp"
+},
+{
+  "id": 1126,
+  "word": "尽くす",
+  "reading": "つくす",
+  "meaning": "dốc hết sức, cống hiến hết mình"
+},
+{
+  "id": 1127,
+  "word": "薬品",
+  "reading": "やくひん",
+  "meaning": "dược phẩm, hóa chất"
+},
+{
+  "id": 1128,
+  "word": "作用（する）",
+  "reading": "さよう（する）",
+  "meaning": "tác dụng, ảnh hưởng"
+},
+{
+  "id": 1129,
+  "word": "目安",
+  "reading": "めやす",
+  "meaning": "mức tham khảo, tiêu chuẩn ước chừng"
+},
+{
+  "id": 1130,
+  "word": "副作用",
+  "reading": "ふくさよう",
+  "meaning": "tác dụng phụ"
+},
+{
+  "id": 1131,
+  "word": "余計[に]",
+  "reading": "よけい[に]",
+  "meaning": "thêm nữa, càng thêm, nhiều hơn"
+},
+{
+  "id": 1132,
+  "word": "余計な",
+  "reading": "よけいな",
+  "meaning": "thừa thãi, không cần thiết"
+},
+{
+  "id": 1133,
+  "word": "もむ",
+  "reading": "もむ",
+  "meaning": "bóp, xoa bóp"
+},
+{
+  "id": 1134,
+  "word": "告げる",
+  "reading": "つげる",
+  "meaning": "thông báo, cho biết"
+},
+{
+  "id": 1135,
+  "word": "覚悟（する）",
+  "reading": "かくご（する）",
+  "meaning": "quyết tâm, chuẩn bị tinh thần"
+},
+{
+  "id": 1136,
+  "word": "看病（する）",
+  "reading": "かんびょう（する）",
+  "meaning": "chăm sóc người bệnh"
+},
+{
+  "id": 1137,
+  "word": "配慮（する）",
+  "reading": "はいりょ（する）",
+  "meaning": "quan tâm, cân nhắc, lưu ý"
+},
+{
+  "id": 1138,
+  "word": "遺伝（する）",
+  "reading": "いでん（する）",
+  "meaning": "di truyền"
+},
+{
+  "id": 1139,
+  "word": "克服（する）",
+  "reading": "こくふく（する）",
+  "meaning": "khắc phục, vượt qua"
+},
+{
+  "id": 1140,
+  "word": "リハビリ",
+  "reading": "リハビリ",
+  "meaning": "phục hồi chức năng, vật lý trị liệu"
+}
+,
+{
+  "id": 1141,
+  "word": "肌",
+  "reading": "はだ",
+  "meaning": "da, làn da"
+},
+{
+  "id": 1142,
+  "word": "手入れ（する）",
+  "reading": "ていれ（する）",
+  "meaning": "chăm sóc, bảo dưỡng"
+},
+{
+  "id": 1143,
+  "word": "ケア（する）",
+  "reading": "ケア（する）",
+  "meaning": "chăm sóc"
+},
+{
+  "id": 1144,
+  "word": "維持（する）",
+  "reading": "いじ（する）",
+  "meaning": "duy trì, bảo trì"
+},
+{
+  "id": 1145,
+  "word": "機能（する）",
+  "reading": "きのう（する）",
+  "meaning": "chức năng, hoạt động"
+},
+{
+  "id": 1146,
+  "word": "かえって",
+  "reading": "かえって",
+  "meaning": "ngược lại, trái lại"
+},
+{
+  "id": 1147,
+  "word": "刺激",
+  "reading": "しげき",
+  "meaning": "sự kích thích, động lực"
+},
+{
+  "id": 1148,
+  "word": "かさかさ（な/する）",
+  "reading": "かさかさ（な/する）",
+  "meaning": "khô ráp, nhám"
+},
+{
+  "id": 1149,
+  "word": "低下（する）",
+  "reading": "ていか（する）",
+  "meaning": "suy giảm, giảm sút"
+},
+{
+  "id": 1150,
+  "word": "くっきり（する）",
+  "reading": "くっきり（する）",
+  "meaning": "rõ ràng, rõ nét"
+},
+{
+  "id": 1151,
+  "word": "つや",
+  "reading": "つや",
+  "meaning": "độ bóng, độ mượt"
+},
+{
+  "id": 1152,
+  "word": "脂肪",
+  "reading": "しぼう",
+  "meaning": "mỡ, chất béo"
+},
+{
+  "id": 1153,
+  "word": "肥満（する）",
+  "reading": "ひまん（する）",
+  "meaning": "béo phì"
+},
+{
+  "id": 1154,
+  "word": "減量（する）",
+  "reading": "げんりょう（する）",
+  "meaning": "giảm cân, giảm trọng lượng"
+},
+{
+  "id": 1155,
+  "word": "急激な",
+  "reading": "きゅうげきな",
+  "meaning": "đột ngột, dữ dội"
+},
+{
+  "id": 1156,
+  "word": "一向に（〜ない）",
+  "reading": "いっこうに（〜ない）",
+  "meaning": "hoàn toàn không, mãi mà không"
+},
+{
+  "id": 1157,
+  "word": "疑わしい",
+  "reading": "うたがわしい",
+  "meaning": "đáng nghi, khả nghi"
+},
+{
+  "id": 1158,
+  "word": "姿勢",
+  "reading": "しせい",
+  "meaning": "tư thế, thái độ"
+},
+{
+  "id": 1159,
+  "word": "（医者に）かかる",
+  "reading": "（いしゃに）かかる",
+  "meaning": "đi khám bác sĩ, được bác sĩ điều trị"
+},
+{
+  "id": 1160,
+  "word": "依存（する）",
+  "reading": "いぞん（する）",
+  "meaning": "phụ thuộc, lệ thuộc"
+},
+{
+  "id": 1161,
+  "word": "映す",
+  "reading": "うつす",
+  "meaning": "soi, chiếu, phản chiếu"
+}
+,
+{
+  "id": 1162,
+  "word": "騒音",
+  "reading": "そうおん",
+  "meaning": "tiếng ồn, tiếng động"
+},
+{
+  "id": 1163,
+  "word": "続出（する）",
+  "reading": "ぞくしゅつ（する）",
+  "meaning": "liên tục xuất hiện, xảy ra liên tiếp"
+},
+{
+  "id": 1164,
+  "word": "思わず",
+  "reading": "おもわず",
+  "meaning": "bất giác, bất chợt"
+},
+{
+  "id": 1165,
+  "word": "一方",
+  "reading": "いっぽう",
+  "meaning": "một phía, mặt khác, một chiều"
+},
+{
+  "id": 1166,
+  "word": "対立（する）",
+  "reading": "たいりつ（する）",
+  "meaning": "đối lập, đối đầu"
+},
+{
+  "id": 1167,
+  "word": "拒否（する）",
+  "reading": "きょひ（する）",
+  "meaning": "từ chối, cự tuyệt"
+},
+{
+  "id": 1168,
+  "word": "訴える",
+  "reading": "うったえる",
+  "meaning": "khiếu nại, kiện; kêu đau"
+},
+{
+  "id": 1169,
+  "word": "裁判（する）",
+  "reading": "さいばん（する）",
+  "meaning": "xét xử, phiên tòa"
+},
+{
+  "id": 1170,
+  "word": "関わる",
+  "reading": "かかわる",
+  "meaning": "liên quan, ảnh hưởng"
+},
+{
+  "id": 1171,
+  "word": "はねる",
+  "reading": "はねる",
+  "meaning": "văng, bắn, nhảy"
+},
+{
+  "id": 1172,
+  "word": "犯罪",
+  "reading": "はんざい",
+  "meaning": "tội phạm"
+},
+{
+  "id": 1173,
+  "word": "暴れる",
+  "reading": "あばれる",
+  "meaning": "quậy phá, làm loạn"
+},
+{
+  "id": 1174,
+  "word": "乱暴（な/する）",
+  "reading": "らんぼう（な/する）",
+  "meaning": "thô bạo, hung bạo, thô lỗ"
+},
+{
+  "id": 1175,
+  "word": "暴力",
+  "reading": "ぼうりょく",
+  "meaning": "bạo lực"
+},
+{
+  "id": 1176,
+  "word": "おどかす",
+  "reading": "おどかす",
+  "meaning": "đe dọa, hù dọa"
+},
+{
+  "id": 1177,
+  "word": "進入（する）",
+  "reading": "しんにゅう（する）",
+  "meaning": "xâm nhập, đột nhập"
+},
+{
+  "id": 1178,
+  "word": "のぞく",
+  "reading": "のぞく",
+  "meaning": "nhìn trộm, nhòm"
+},
+{
+  "id": 1179,
+  "word": "見知らぬ",
+  "reading": "みしらぬ",
+  "meaning": "không quen biết, xa lạ"
+},
+{
+  "id": 1180,
+  "word": "近寄る",
+  "reading": "ちかよる",
+  "meaning": "đến gần, tiến lại gần"
+},
+{
+  "id": 1181,
+  "word": "縮まる",
+  "reading": "ちぢまる",
+  "meaning": "co lại, ngắn lại, thu hẹp"
+},
+{
+  "id": 1182,
+  "word": "無理やり",
+  "reading": "むりやり",
+  "meaning": "cưỡng ép, ép buộc"
+},
+{
+  "id": 1183,
+  "word": "捜査（する）",
+  "reading": "そうさ（する）",
+  "meaning": "điều tra"
+},
+{
+  "id": 1184,
+  "word": "確定（する）",
+  "reading": "かくてい（する）",
+  "meaning": "xác định, xác nhận"
+},
+{
+  "id": 1185,
+  "word": "明らかな",
+  "reading": "あきらかな",
+  "meaning": "rõ ràng, minh bạch"
+},
+{
+  "id": 1186,
+  "word": "一致（する）",
+  "reading": "いっち（する）",
+  "meaning": "trùng khớp, thống nhất, nhất trí"
+},
+{
+  "id": 1187,
+  "word": "自ら",
+  "reading": "みずから",
+  "meaning": "tự mình, bản thân mình"
+},
+{
+  "id": 1188,
+  "word": "居場所",
+  "reading": "いばしょ",
+  "meaning": "nơi ở, chỗ ở, nơi thuộc về"
+},
+{
+  "id": 1189,
+  "word": "持ち主",
+  "reading": "もちぬし",
+  "meaning": "chủ nhân, chủ sở hữu"
+},
+{
+  "id": 1190,
+  "word": "あくまで[も]",
+  "reading": "あくまで[も]",
+  "meaning": "đến cùng; chỉ là"
+},
+{
+  "id": 1191,
+  "word": "実に",
+  "reading": "じつに",
+  "meaning": "quả thực, thật sự"
+},
+{
+  "id": 1192,
+  "word": "困難（な）",
+  "reading": "こんなん（な）",
+  "meaning": "khó khăn, gian nan"
+},
+{
+  "id": 1193,
+  "word": "改める",
+  "reading": "あらためる",
+  "meaning": "sửa đổi, cải thiện, đổi mới"
+},
+{
+  "id": 1194,
+  "word": "ようやく",
+  "reading": "ようやく",
+  "meaning": "cuối cùng cũng, mãi rồi cũng"
+}
+,
+{
+  "id": 1195,
+  "word": "発生（する）",
+  "reading": "はっせい（する）",
+  "meaning": "phát sinh, xảy ra"
+},
+{
+  "id": 1196,
+  "word": "相次ぐ",
+  "reading": "あいつぐ",
+  "meaning": "liên tiếp, liên tục xảy ra"
+},
+{
+  "id": 1197,
+  "word": "飛び出す",
+  "reading": "とびだす",
+  "meaning": "chạy ra, nhảy ra, phóng ra"
+},
+{
+  "id": 1198,
+  "word": "一瞬",
+  "reading": "いっしゅん",
+  "meaning": "khoảnh khắc, trong chốc lát"
+},
+{
+  "id": 1199,
+  "word": "あり得ない",
+  "reading": "ありえない",
+  "meaning": "không thể nào, không thể có"
+},
+{
+  "id": 1200,
+  "word": "荒っぽい",
+  "reading": "あらっぽい",
+  "meaning": "thô bạo, cẩu thả"
+},
+{
+  "id": 1201,
+  "word": "少年",
+  "reading": "しょうねん",
+  "meaning": "thiếu niên"
+},
+{
+  "id": 1202,
+  "word": "取り締まり",
+  "reading": "とりしまり",
+  "meaning": "sự kiểm soát, xử lý vi phạm"
+},
+{
+  "id": 1203,
+  "word": "防止（する）",
+  "reading": "ぼうし（する）",
+  "meaning": "phòng chống, ngăn chặn"
+},
+{
+  "id": 1204,
+  "word": "事情",
+  "reading": "じじょう",
+  "meaning": "sự tình, hoàn cảnh, tình hình"
+},
+{
+  "id": 1205,
+  "word": "有無",
+  "reading": "うむ",
+  "meaning": "có hay không"
+},
+{
+  "id": 1206,
+  "word": "目撃（する）",
+  "reading": "もくげき（する）",
+  "meaning": "chứng kiến, tận mắt nhìn thấy"
+},
+{
+  "id": 1207,
+  "word": "判断（する）",
+  "reading": "はんだん（する）",
+  "meaning": "phán đoán, đánh giá"
+},
+{
+  "id": 1208,
+  "word": "見逃す",
+  "reading": "みのがす",
+  "meaning": "bỏ lỡ, bỏ sót, bỏ qua"
+},
+{
+  "id": 1209,
+  "word": "行方",
+  "reading": "ゆくえ",
+  "meaning": "hành tung, hướng đi"
+},
+{
+  "id": 1210,
+  "word": "未だに",
+  "reading": "いまだに",
+  "meaning": "đến nay vẫn, cho đến giờ vẫn"
+},
+{
+  "id": 1211,
+  "word": "不明",
+  "reading": "ふめい",
+  "meaning": "không rõ, không xác định"
+},
+{
+  "id": 1212,
+  "word": "過失",
+  "reading": "かしつ",
+  "meaning": "sơ suất, lỗi do bất cẩn"
+},
+{
+  "id": 1213,
+  "word": "誤る",
+  "reading": "あやまる",
+  "meaning": "sai, mắc sai lầm"
+},
+{
+  "id": 1214,
+  "word": "もめる",
+  "reading": "もめる",
+  "meaning": "tranh chấp, cãi cọ"
+},
+{
+  "id": 1215,
+  "word": "予期（する）",
+  "reading": "よき（する）",
+  "meaning": "dự đoán, lường trước"
+},
+{
+  "id": 1216,
+  "word": "流す",
+  "reading": "ながす",
+  "meaning": "làm chảy, làm trôi; phát nhạc"
+},
+{
+  "id": 1217,
+  "word": "爆発（する）",
+  "reading": "ばくはつ（する）",
+  "meaning": "nổ, phát nổ"
+},
+{
+  "id": 1218,
+  "word": "抜く",
+  "reading": "ぬく",
+  "meaning": "rút ra, nhổ, tháo ra"
+},
+{
+  "id": 1219,
+  "word": "火災",
+  "reading": "かさい",
+  "meaning": "hỏa hoạn, cháy"
+},
+{
+  "id": 1220,
+  "word": "消防車",
+  "reading": "しょうぼうしゃ",
+  "meaning": "xe chữa cháy"
+},
+{
+  "id": 1221,
+  "word": "少なくとも",
+  "reading": "すくなくとも",
+  "meaning": "ít nhất, tối thiểu"
+},
+{
+  "id": 1222,
+  "word": "救助（する）",
+  "reading": "きゅうじょ（する）",
+  "meaning": "cứu hộ, cứu giúp"
+}
+,
+{
+  "id": 1223,
+  "word": "政策",
+  "reading": "せいさく",
+  "meaning": "chính sách"
+},
+{
+  "id": 1224,
+  "word": "治める",
+  "reading": "おさめる",
+  "meaning": "cai trị, thống trị"
+},
+{
+  "id": 1225,
+  "word": "政党",
+  "reading": "せいとう",
+  "meaning": "đảng chính trị"
+},
+{
+  "id": 1226,
+  "word": "掲げる",
+  "reading": "かかげる",
+  "meaning": "đưa ra, giương cao"
+},
+{
+  "id": 1227,
+  "word": "外交",
+  "reading": "がいこう",
+  "meaning": "ngoại giao"
+},
+{
+  "id": 1228,
+  "word": "コメント（する）",
+  "reading": "コメント（する）",
+  "meaning": "bình luận"
+},
+{
+  "id": 1229,
+  "word": "発言（する）",
+  "reading": "はつげん（する）",
+  "meaning": "phát ngôn, phát biểu"
+},
+{
+  "id": 1230,
+  "word": "国会",
+  "reading": "こっかい",
+  "meaning": "quốc hội"
+},
+{
+  "id": 1231,
+  "word": "議論（する）",
+  "reading": "ぎろん（する）",
+  "meaning": "tranh luận, thảo luận"
+},
+{
+  "id": 1232,
+  "word": "延びる",
+  "reading": "のびる",
+  "meaning": "kéo dài, giãn ra"
+},
+{
+  "id": 1233,
+  "word": "大臣",
+  "reading": "だいじん",
+  "meaning": "bộ trưởng"
+},
+{
+  "id": 1234,
+  "word": "議員",
+  "reading": "ぎいん",
+  "meaning": "nghị sĩ"
+},
+{
+  "id": 1235,
+  "word": "選挙（する）",
+  "reading": "せんきょ（する）",
+  "meaning": "bầu cử"
+},
+{
+  "id": 1236,
+  "word": "演説（する）",
+  "reading": "えんぜつ（する）",
+  "meaning": "diễn thuyết, phát biểu"
+},
+{
+  "id": 1237,
+  "word": "支持（する）",
+  "reading": "しじ（する）",
+  "meaning": "ủng hộ"
+},
+{
+  "id": 1238,
+  "word": "各々",
+  "reading": "おのおの",
+  "meaning": "mỗi người, từng người"
+},
+{
+  "id": 1239,
+  "word": "莫大な",
+  "reading": "ばくだいな",
+  "meaning": "to lớn, khổng lồ"
+},
+{
+  "id": 1240,
+  "word": "不正（な）",
+  "reading": "ふせい（な）",
+  "meaning": "bất chính, gian lận"
+},
+{
+  "id": 1241,
+  "word": "思想",
+  "reading": "しそう",
+  "meaning": "tư tưởng"
+},
+{
+  "id": 1242,
+  "word": "改正（する）",
+  "reading": "かいせい（する）",
+  "meaning": "sửa đổi, tu chính"
+},
+{
+  "id": 1243,
+  "word": "実施（する）",
+  "reading": "じっし（する）",
+  "meaning": "thực hiện, tiến hành"
+},
+{
+  "id": 1244,
+  "word": "要素",
+  "reading": "ようそ",
+  "meaning": "yếu tố, nhân tố"
+},
+{
+  "id": 1245,
+  "word": "成立（する）",
+  "reading": "せいりつ（する）",
+  "meaning": "thành lập, được thông qua"
+},
+{
+  "id": 1246,
+  "word": "事実",
+  "reading": "じじつ",
+  "meaning": "sự thật"
+},
+{
+  "id": 1247,
+  "word": "隠す",
+  "reading": "かくす",
+  "meaning": "che giấu, giấu"
+},
+{
+  "id": 1248,
+  "word": "抱える",
+  "reading": "かかえる",
+  "meaning": "ôm, gánh chịu, đối mặt"
+},
+{
+  "id": 1249,
+  "word": "支配（する）",
+  "reading": "しはい（する）",
+  "meaning": "chi phối, cai trị"
+},
+{
+  "id": 1250,
+  "word": "非難（する）",
+  "reading": "ひなん（する）",
+  "meaning": "chỉ trích, lên án"
+},
+{
+  "id": 1251,
+  "word": "要求（する）",
+  "reading": "ようきゅう（する）",
+  "meaning": "yêu cầu, đòi hỏi"
+},
+{
+  "id": 1252,
+  "word": "デモ（する）",
+  "reading": "デモ（する）",
+  "meaning": "biểu tình"
+},
+{
+  "id": 1253,
+  "word": "およそ",
+  "reading": "およそ",
+  "meaning": "khoảng chừng, xấp xỉ"
+},
+{
+  "id": 1254,
+  "word": "関連（する）",
+  "reading": "かんれん（する）",
+  "meaning": "liên quan"
+}
+,
+{
+  "id": 1255,
+  "word": "反映（する）",
+  "reading": "はんえい（する）",
+  "meaning": "phản ánh"
+},
+{
+  "id": 1256,
+  "word": "貢献（する）",
+  "reading": "こうけん（する）",
+  "meaning": "cống hiến, đóng góp"
+},
+{
+  "id": 1257,
+  "word": "寄付（する）",
+  "reading": "きふ（する）",
+  "meaning": "quyên góp"
+},
+{
+  "id": 1258,
+  "word": "平等（な）",
+  "reading": "びょうどう（な）",
+  "meaning": "bình đẳng"
+},
+{
+  "id": 1259,
+  "word": "復興（する）",
+  "reading": "ふっこう（する）",
+  "meaning": "phục hồi, tái thiết"
+},
+{
+  "id": 1260,
+  "word": "義務",
+  "reading": "ぎむ",
+  "meaning": "nghĩa vụ"
+},
+{
+  "id": 1261,
+  "word": "制度",
+  "reading": "せいど",
+  "meaning": "chế độ, hệ thống"
+},
+{
+  "id": 1262,
+  "word": "景気",
+  "reading": "けいき",
+  "meaning": "tình hình kinh tế"
+},
+{
+  "id": 1263,
+  "word": "インフレ",
+  "reading": "インフレ",
+  "meaning": "lạm phát"
+},
+{
+  "id": 1264,
+  "word": "加速（する）",
+  "reading": "かそく（する）",
+  "meaning": "tăng tốc, đẩy nhanh"
+},
+{
+  "id": 1265,
+  "word": "上回る",
+  "reading": "うわまわる",
+  "meaning": "vượt qua, vượt hơn"
+},
+{
+  "id": 1266,
+  "word": "予測（する）",
+  "reading": "よそく（する）",
+  "meaning": "dự đoán"
+},
+{
+  "id": 1267,
+  "word": "見解",
+  "reading": "けんかい",
+  "meaning": "quan điểm, kiến giải"
+},
+{
+  "id": 1268,
+  "word": "増す",
+  "reading": "ます",
+  "meaning": "tăng lên, gia tăng"
+},
+{
+  "id": 1269,
+  "word": "水準",
+  "reading": "すいじゅん",
+  "meaning": "mức, tiêu chuẩn"
+},
+{
+  "id": 1270,
+  "word": "深刻な",
+  "reading": "しんこくな",
+  "meaning": "nghiêm trọng, trầm trọng"
+},
+{
+  "id": 1271,
+  "word": "呼びかける",
+  "reading": "よびかける",
+  "meaning": "kêu gọi"
+},
+{
+  "id": 1272,
+  "word": "世間",
+  "reading": "せけん",
+  "meaning": "xã hội, thế gian, dư luận"
+},
+{
+  "id": 1273,
+  "word": "驚かす",
+  "reading": "おどろかす",
+  "meaning": "làm ngạc nhiên, gây kinh ngạc"
+},
+{
+  "id": 1274,
+  "word": "ニーズ",
+  "reading": "ニーズ",
+  "meaning": "nhu cầu"
+},
+{
+  "id": 1275,
+  "word": "了承（する）",
+  "reading": "りょうしょう（する）",
+  "meaning": "chấp thuận, đồng ý"
+},
+{
+  "id": 1276,
+  "word": "個人情報",
+  "reading": "こじんじょうほう",
+  "meaning": "thông tin cá nhân"
+},
+{
+  "id": 1277,
+  "word": "プライバシー",
+  "reading": "プライバシー",
+  "meaning": "sự riêng tư"
+},
+{
+  "id": 1278,
+  "word": "定着（する）",
+  "reading": "ていちゃく（する）",
+  "meaning": "bắt rễ, trở nên phổ biến"
+},
+{
+  "id": 1279,
+  "word": "両立（する）",
+  "reading": "りょうりつ（する）",
+  "meaning": "cân bằng, dung hòa cả hai"
+},
+{
+  "id": 1280,
+  "word": "システム",
+  "reading": "システム",
+  "meaning": "hệ thống"
+},
+{
+  "id": 1281,
+  "word": "煙",
+  "reading": "けむり",
+  "meaning": "khói"
+},
+{
+  "id": 1282,
+  "word": "公",
+  "reading": "おおやけ",
+  "meaning": "công cộng, công khai"
+},
+{
+  "id": 1283,
+  "word": "マスコミ",
+  "reading": "マスコミ",
+  "meaning": "truyền thông đại chúng"
+},
+{
+  "id": 1284,
+  "word": "メディア",
+  "reading": "メディア",
+  "meaning": "phương tiện truyền thông"
+},
+{
+  "id": 1285,
+  "word": "取材（する）",
+  "reading": "しゅざい（する）",
+  "meaning": "lấy tin, phỏng vấn, điều tra"
+},
+{
+  "id": 1286,
+  "word": "報道（する）",
+  "reading": "ほうどう（する）",
+  "meaning": "đưa tin, báo chí"
+},
+{
+  "id": 1287,
+  "word": "中継（する）",
+  "reading": "ちゅうけい（する）",
+  "meaning": "phát sóng trực tiếp, truyền hình trực tiếp"
+},
+{
+  "id": 1288,
+  "word": "訂正（する）",
+  "reading": "ていせい（する）",
+  "meaning": "đính chính, sửa chữa"
+},
+{
+  "id": 1289,
+  "word": "ただちに",
+  "reading": "ただちに",
+  "meaning": "ngay lập tức"
+},
+{
+  "id": 1290,
+  "word": "コマーシャル",
+  "reading": "コマーシャル",
+  "meaning": "quảng cáo"
+}
+,
+{
+  "id": 1291,
+  "word": "国旗",
+  "reading": "こっき",
+  "meaning": "quốc kỳ"
+},
+{
+  "id": 1292,
+  "word": "様々な",
+  "reading": "さまざまな",
+  "meaning": "đa dạng, nhiều loại khác nhau"
+},
+{
+  "id": 1293,
+  "word": "国籍",
+  "reading": "こくせき",
+  "meaning": "quốc tịch"
+},
+{
+  "id": 1294,
+  "word": "先進国",
+  "reading": "せんしんこく",
+  "meaning": "nước phát triển"
+},
+{
+  "id": 1295,
+  "word": "呼称",
+  "reading": "こしょう",
+  "meaning": "cách gọi, tên gọi"
+},
+{
+  "id": 1296,
+  "word": "宗教",
+  "reading": "しゅうきょう",
+  "meaning": "tôn giáo"
+},
+{
+  "id": 1297,
+  "word": "異文化",
+  "reading": "いぶんか",
+  "meaning": "văn hóa khác biệt, văn hóa nước ngoài"
+},
+{
+  "id": 1298,
+  "word": "否定（する）",
+  "reading": "ひてい（する）",
+  "meaning": "phủ định, phủ nhận"
+},
+{
+  "id": 1299,
+  "word": "移民（する）",
+  "reading": "いみん（する）",
+  "meaning": "di cư, người di cư"
+},
+{
+  "id": 1300,
+  "word": "見方",
+  "reading": "みかた",
+  "meaning": "cách nhìn, quan điểm"
+},
+{
+  "id": 1301,
+  "word": "権利",
+  "reading": "けんり",
+  "meaning": "quyền, quyền lợi"
+},
+{
+  "id": 1302,
+  "word": "支援（する）",
+  "reading": "しえん（する）",
+  "meaning": "hỗ trợ, viện trợ"
+},
+{
+  "id": 1303,
+  "word": "飢える",
+  "reading": "うえる",
+  "meaning": "đói, bị đói"
+},
+{
+  "id": 1304,
+  "word": "占める",
+  "reading": "しめる",
+  "meaning": "chiếm, chiếm giữ"
+},
+{
+  "id": 1305,
+  "word": "かつて",
+  "reading": "かつて",
+  "meaning": "trước đây, đã từng"
+},
+{
+  "id": 1306,
+  "word": "主張（する）",
+  "reading": "しゅちょう（する）",
+  "meaning": "chủ trương, khẳng định, nêu ý kiến"
+},
+{
+  "id": 1307,
+  "word": "交渉（する）",
+  "reading": "こうしょう（する）",
+  "meaning": "đàm phán, thương lượng"
+},
+{
+  "id": 1308,
+  "word": "比較（する）",
+  "reading": "ひかく（する）",
+  "meaning": "so sánh"
+},
+{
+  "id": 1309,
+  "word": "危機",
+  "reading": "きき",
+  "meaning": "nguy cơ, khủng hoảng"
+},
+{
+  "id": 1310,
+  "word": "テロ",
+  "reading": "テロ",
+  "meaning": "khủng bố"
+},
+{
+  "id": 1311,
+  "word": "悲劇",
+  "reading": "ひげき",
+  "meaning": "bi kịch, thảm kịch"
+},
+{
+  "id": 1312,
+  "word": "現に",
+  "reading": "げんに",
+  "meaning": "trên thực tế, thực tế là"
+},
+{
+  "id": 1313,
+  "word": "少子化",
+  "reading": "しょうしか",
+  "meaning": "tình trạng giảm sinh"
+},
+{
+  "id": 1314,
+  "word": "主に",
+  "reading": "おもに",
+  "meaning": "chủ yếu"
+},
+{
+  "id": 1315,
+  "word": "環境",
+  "reading": "かんきょう",
+  "meaning": "môi trường"
+},
+{
+  "id": 1316,
+  "word": "温暖化",
+  "reading": "おんだんか",
+  "meaning": "hiện tượng nóng lên toàn cầu"
+},
+{
+  "id": 1317,
+  "word": "開発（する）",
+  "reading": "かいはつ（する）",
+  "meaning": "phát triển, khai thác"
+},
+{
+  "id": 1318,
+  "word": "調査（する）",
+  "reading": "ちょうさ（する）",
+  "meaning": "điều tra, khảo sát"
+},
+{
+  "id": 1319,
+  "word": "エネルギー",
+  "reading": "エネルギー",
+  "meaning": "năng lượng"
+},
+{
+  "id": 1320,
+  "word": "無限（な）",
+  "reading": "むげん（な）",
+  "meaning": "vô hạn"
+},
+{
+  "id": 1321,
+  "word": "節電（する）",
+  "reading": "せつでん（する）",
+  "meaning": "tiết kiệm điện"
+},
+{
+  "id": 1322,
+  "word": "エコ",
+  "reading": "エコ",
+  "meaning": "thân thiện với môi trường"
+},
+{
+  "id": 1323,
+  "word": "省エネ",
+  "reading": "しょうエネ",
+  "meaning": "tiết kiệm năng lượng"
+},
+{
+  "id": 1324,
+  "word": "汚染（する）",
+  "reading": "おせん（する）",
+  "meaning": "ô nhiễm, làm ô nhiễm"
+},
+{
+  "id": 1325,
+  "word": "面積",
+  "reading": "めんせき",
+  "meaning": "diện tích"
+},
+{
+  "id": 1326,
+  "word": "守る",
+  "reading": "まもる",
+  "meaning": "bảo vệ, gìn giữ, tuân thủ"
+}
+,
+{
+  "id": 1327,
+  "word": "人柄",
+  "reading": "ひとがら",
+  "meaning": "nhân cách, tính cách, tính tình"
+},
+{
+  "id": 1328,
+  "word": "性質",
+  "reading": "せいしつ",
+  "meaning": "bản tính, tính chất"
+},
+{
+  "id": 1329,
+  "word": "向く",
+  "reading": "むく",
+  "meaning": "phù hợp, quay về hướng"
+},
+{
+  "id": 1330,
+  "word": "温厚な",
+  "reading": "おんこうな",
+  "meaning": "hòa nhã, ôn hòa"
+},
+{
+  "id": 1331,
+  "word": "社交的な",
+  "reading": "しゃこうてきな",
+  "meaning": "có tính xã giao, hòa đồng"
+},
+{
+  "id": 1332,
+  "word": "活発な",
+  "reading": "かっぱつな",
+  "meaning": "hoạt bát, năng động"
+},
+{
+  "id": 1333,
+  "word": "頑固（な）",
+  "reading": "がんこ（な）",
+  "meaning": "bướng bỉnh, ngoan cố"
+},
+{
+  "id": 1334,
+  "word": "素朴な",
+  "reading": "そぼくな",
+  "meaning": "chất phác, mộc mạc"
+},
+{
+  "id": 1335,
+  "word": "無邪気（な）",
+  "reading": "むじゃき（な）",
+  "meaning": "ngây thơ, trong sáng"
+},
+{
+  "id": 1336,
+  "word": "謙虚な",
+  "reading": "けんきょな",
+  "meaning": "khiêm tốn, khiêm nhường"
+},
+{
+  "id": 1337,
+  "word": "無口（な）",
+  "reading": "むくち（な）",
+  "meaning": "ít nói, kín tiếng"
+},
+{
+  "id": 1338,
+  "word": "人見知り（する）",
+  "reading": "ひとみしり（する）",
+  "meaning": "nhút nhát, ngại người lạ"
+},
+{
+  "id": 1339,
+  "word": "おく病（な）",
+  "reading": "おくびょう（な）",
+  "meaning": "nhát gan"
+},
+{
+  "id": 1340,
+  "word": "大胆な",
+  "reading": "だいたんな",
+  "meaning": "bạo dạn, táo bạo"
+},
+{
+  "id": 1341,
+  "word": "なれなれしい",
+  "reading": "なれなれしい",
+  "meaning": "suồng sã, quá thân mật"
+},
+{
+  "id": 1342,
+  "word": "厚かましい",
+  "reading": "あつかましい",
+  "meaning": "trơ trẽn, dày mặt"
+},
+{
+  "id": 1343,
+  "word": "欲張り（な）",
+  "reading": "よくばり（な）",
+  "meaning": "tham lam"
+},
+{
+  "id": 1344,
+  "word": "ねばり強い",
+  "reading": "ねばりづよい",
+  "meaning": "kiên nhẫn, kiên trì"
+},
+{
+  "id": 1345,
+  "word": "大ざっぱな",
+  "reading": "おおざっぱな",
+  "meaning": "đại khái, sơ sài"
+},
+{
+  "id": 1346,
+  "word": "だらしない",
+  "reading": "だらしない",
+  "meaning": "lôi thôi, bừa bãi, thiếu nghiêm túc"
+},
+{
+  "id": 1347,
+  "word": "ルーズな",
+  "reading": "ルーズな",
+  "meaning": "lỏng lẻo, lề mề"
+},
+{
+  "id": 1348,
+  "word": "短気（な）",
+  "reading": "たんき（な）",
+  "meaning": "nóng tính, nóng nảy"
+},
+{
+  "id": 1349,
+  "word": "ひきょう（な）",
+  "reading": "ひきょう（な）",
+  "meaning": "hèn hạ, đê tiện"
+},
+{
+  "id": 1350,
+  "word": "プライド",
+  "reading": "プライド",
+  "meaning": "lòng kiêu hãnh, lòng tự trọng"
+},
+{
+  "id": 1351,
+  "word": "典型的な",
+  "reading": "てんけいてきな",
+  "meaning": "điển hình, tiêu biểu"
+},
+{
+  "id": 1352,
+  "word": "要領",
+  "reading": "ようりょう",
+  "meaning": "cách thức, khả năng nắm bắt công việc"
+},
+{
+  "id": 1353,
+  "word": "乗り",
+  "reading": "のり",
+  "meaning": "sự hòa nhập, hòa đồng"
+},
+{
+  "id": 1354,
+  "word": "物事",
+  "reading": "ものごと",
+  "meaning": "sự vật, sự việc"
+},
+{
+  "id": 1355,
+  "word": "反面",
+  "reading": "はんめん",
+  "meaning": "mặt khác, mặt trái"
+}
+,
+{
+  "id": 1356,
+  "word": "快適な",
+  "reading": "かいてきな",
+  "meaning": "sảng khoái, dễ chịu, thoải mái"
+},
+{
+  "id": 1357,
+  "word": "快い",
+  "reading": "こころよい",
+  "meaning": "dễ chịu, thoải mái, sảng khoái"
+},
+{
+  "id": 1358,
+  "word": "心地よい",
+  "reading": "ここちよい",
+  "meaning": "dễ chịu, êm ái, thoải mái"
+},
+{
+  "id": 1359,
+  "word": "すがすがしい",
+  "reading": "すがすがしい",
+  "meaning": "sảng khoái, trong lành"
+},
+{
+  "id": 1360,
+  "word": "リフレッシュ（する）",
+  "reading": "リフレッシュ（する）",
+  "meaning": "làm mới, thư giãn, lấy lại tinh thần"
+},
+{
+  "id": 1361,
+  "word": "穏やかな",
+  "reading": "おだやかな",
+  "meaning": "ôn hòa, thanh thản, yên ả"
+},
+{
+  "id": 1362,
+  "word": "心強い",
+  "reading": "こころづよい",
+  "meaning": "vững tâm, yên lòng"
+},
+{
+  "id": 1363,
+  "word": "恋しい",
+  "reading": "こいしい",
+  "meaning": "nhớ nhung, thương nhớ"
+},
+{
+  "id": 1364,
+  "word": "前向き",
+  "reading": "まえむき",
+  "meaning": "tích cực, hướng về phía trước"
+},
+{
+  "id": 1365,
+  "word": "めでたい",
+  "reading": "めでたい",
+  "meaning": "đáng mừng, đáng chúc mừng"
+},
+{
+  "id": 1366,
+  "word": "ラッキーな",
+  "reading": "ラッキーな",
+  "meaning": "may mắn"
+},
+{
+  "id": 1367,
+  "word": "幸福（な）",
+  "reading": "こうふく（な）",
+  "meaning": "hạnh phúc"
+},
+{
+  "id": 1368,
+  "word": "張り切る",
+  "reading": "はりきる",
+  "meaning": "hăng hái, đầy nhiệt huyết"
+},
+{
+  "id": 1369,
+  "word": "わくわく（する）",
+  "reading": "わくわく（する）",
+  "meaning": "hồi hộp, phấn khởi, háo hức"
+},
+{
+  "id": 1370,
+  "word": "そわそわ[と]（する）",
+  "reading": "そわそわ[と]（する）",
+  "meaning": "bồn chồn, sốt ruột"
+},
+{
+  "id": 1371,
+  "word": "うっとり[と]（する）",
+  "reading": "うっとり[と]（する）",
+  "meaning": "ngây ngất, say đắm, mê mẩn"
+},
+{
+  "id": 1372,
+  "word": "すっと（する）",
+  "reading": "すっと（する）",
+  "meaning": "nhẹ nhàng, nhẹ nhõm"
+},
+{
+  "id": 1373,
+  "word": "気分転換（する）",
+  "reading": "きぶんてんかん（する）",
+  "meaning": "thay đổi tâm trạng, đổi không khí"
+}
+,
+{
+  "id": 1374,
+  "word": "ゆううつ（な）",
+  "reading": "ゆううつ（な）",
+  "meaning": "u uất, ảm đạm"
+},
+{
+  "id": 1375,
+  "word": "みじめな",
+  "reading": "みじめな",
+  "meaning": "đáng thương, khốn khổ"
+},
+{
+  "id": 1376,
+  "word": "つらい",
+  "reading": "つらい",
+  "meaning": "đau khổ, khổ sở, vất vả"
+},
+{
+  "id": 1377,
+  "word": "心細い",
+  "reading": "こころぼそい",
+  "meaning": "bất an, lo lắng, trơ trọi"
+},
+{
+  "id": 1378,
+  "word": "弱気（な）",
+  "reading": "よわき（な）",
+  "meaning": "yếu đuối, nhút nhát"
+},
+{
+  "id": 1379,
+  "word": "落ち込む",
+  "reading": "おちこむ",
+  "meaning": "buồn bã, suy sụp"
+},
+{
+  "id": 1380,
+  "word": "失望（する）",
+  "reading": "しつぼう（する）",
+  "meaning": "thất vọng"
+},
+{
+  "id": 1381,
+  "word": "絶望（する）",
+  "reading": "ぜつぼう（する）",
+  "meaning": "tuyệt vọng"
+},
+{
+  "id": 1382,
+  "word": "傷つく",
+  "reading": "きずつく",
+  "meaning": "bị tổn thương"
+},
+{
+  "id": 1383,
+  "word": "わずらわしい",
+  "reading": "わずらわしい",
+  "meaning": "phiền phức, phiền toái"
+},
+{
+  "id": 1384,
+  "word": "うんざり（する）",
+  "reading": "うんざり（する）",
+  "meaning": "chán ngán, ngán ngẩm"
+},
+{
+  "id": 1385,
+  "word": "戸惑う",
+  "reading": "とまどう",
+  "meaning": "bối rối, lúng túng"
+},
+{
+  "id": 1386,
+  "word": "ためらう",
+  "reading": "ためらう",
+  "meaning": "do dự, lưỡng lự"
+},
+{
+  "id": 1387,
+  "word": "申し訳ない",
+  "reading": "もうしわけない",
+  "meaning": "cảm thấy có lỗi, áy náy"
+},
+{
+  "id": 1388,
+  "word": "すまない",
+  "reading": "すまない",
+  "meaning": "xin lỗi, áy náy"
+},
+{
+  "id": 1389,
+  "word": "仕方[が]ない",
+  "reading": "しかた[が]ない",
+  "meaning": "đành chịu, không còn cách nào khác"
+},
+{
+  "id": 1390,
+  "word": "しまった",
+  "reading": "しまった",
+  "meaning": "tiêu rồi, chết rồi, thôi rồi"
+},
+{
+  "id": 1391,
+  "word": "恐れる",
+  "reading": "おそれる",
+  "meaning": "sợ, e sợ, khiếp sợ"
+},
+{
+  "id": 1392,
+  "word": "情けない",
+  "reading": "なさけない",
+  "meaning": "đáng buồn, thảm hại, tội nghiệp"
+},
+{
+  "id": 1393,
+  "word": "恥",
+  "reading": "はじ",
+  "meaning": "sự xấu hổ, sự mắc cỡ"
+},
+{
+  "id": 1394,
+  "word": "別に（〜ない）",
+  "reading": "べつに（〜ない）",
+  "meaning": "không có gì đặc biệt, không hẳn là"
+},
+{
+  "id": 1395,
+  "word": "構わない",
+  "reading": "かまわない",
+  "meaning": "không sao, không bận tâm"
+}
+,
+{
+  "id": 1396,
+  "word": "はきはき（する）",
+  "reading": "はきはき（する）",
+  "meaning": "rõ ràng, dứt khoát, hoạt bát"
+},
+{
+  "id": 1397,
+  "word": "清潔な",
+  "reading": "せいけつな",
+  "meaning": "sạch sẽ"
+},
+{
+  "id": 1398,
+  "word": "客観的な",
+  "reading": "きゃっかんてきな",
+  "meaning": "khách quan"
+},
+{
+  "id": 1399,
+  "word": "冷静な",
+  "reading": "れいせいな",
+  "meaning": "bình tĩnh, điềm tĩnh"
+},
+{
+  "id": 1400,
+  "word": "もっともな",
+  "reading": "もっともな",
+  "meaning": "hợp lý, có lý, chính đáng"
+},
+{
+  "id": 1401,
+  "word": "謙そん（する）",
+  "reading": "けんそん（する）",
+  "meaning": "khiêm tốn, khiêm nhường"
+},
+{
+  "id": 1402,
+  "word": "若々しい",
+  "reading": "わかわかしい",
+  "meaning": "trẻ trung, đầy sức sống"
+},
+{
+  "id": 1403,
+  "word": "ユニークな",
+  "reading": "ユニークな",
+  "meaning": "độc đáo, khác biệt"
+},
+{
+  "id": 1404,
+  "word": "唯一",
+  "reading": "ゆいいつ",
+  "meaning": "duy nhất"
+},
+{
+  "id": 1405,
+  "word": "洗練（する）",
+  "reading": "せんれん（する）",
+  "meaning": "trau chuốt, tinh tế"
+},
+{
+  "id": 1406,
+  "word": "品",
+  "reading": "ひん",
+  "meaning": "phẩm cách, sự thanh lịch"
+},
+{
+  "id": 1407,
+  "word": "広々「と」（する）",
+  "reading": "ひろびろ「と」（する）",
+  "meaning": "rộng rãi, mênh mông"
+},
+{
+  "id": 1408,
+  "word": "ふわふわ（な/する）",
+  "reading": "ふわふわ（な/する）",
+  "meaning": "mềm mại, bông xốp"
+},
+{
+  "id": 1409,
+  "word": "断然",
+  "reading": "だんぜん",
+  "meaning": "dứt khoát, tuyệt đối, hơn hẳn"
+},
+{
+  "id": 1410,
+  "word": "結構な",
+  "reading": "けっこうな",
+  "meaning": "tốt, tuyệt vời; đủ, được rồi"
+},
+{
+  "id": 1411,
+  "word": "見事な",
+  "reading": "みごとな",
+  "meaning": "tuyệt vời, xuất sắc, đẹp đẽ"
+},
+{
+  "id": 1412,
+  "word": "貴重な",
+  "reading": "きちょうな",
+  "meaning": "quý giá, quý báu"
+},
+{
+  "id": 1413,
+  "word": "質素（な）",
+  "reading": "しっそ（な）",
+  "meaning": "giản dị, đạm bạc"
+},
+{
+  "id": 1414,
+  "word": "同様な",
+  "reading": "どうような",
+  "meaning": "tương tự, giống nhau"
+}
+,
+{
+  "id": 1415,
+  "word": "憎らしい",
+  "reading": "にくらしい",
+  "meaning": "đáng ghét, đáng giận"
+},
+{
+  "id": 1416,
+  "word": "強引な",
+  "reading": "ごういんな",
+  "meaning": "ép buộc, cưỡng ép"
+},
+{
+  "id": 1417,
+  "word": "うっとうしい",
+  "reading": "うっとうしい",
+  "meaning": "u ám, phiền phức, khó chịu"
+},
+{
+  "id": 1418,
+  "word": "やっかい（な）",
+  "reading": "やっかい（な）",
+  "meaning": "phiền phức, rắc rối"
+},
+{
+  "id": 1419,
+  "word": "とんでもない",
+  "reading": "とんでもない",
+  "meaning": "không thể tin được, quá đáng"
+},
+{
+  "id": 1420,
+  "word": "安易な",
+  "reading": "あんいな",
+  "meaning": "dễ dãi, hời hợt"
+},
+{
+  "id": 1421,
+  "word": "無難な",
+  "reading": "ぶなんな",
+  "meaning": "an toàn, vừa phải, chấp nhận được"
+},
+{
+  "id": 1422,
+  "word": "平凡な",
+  "reading": "へいぼんな",
+  "meaning": "bình thường, tầm thường"
+},
+{
+  "id": 1423,
+  "word": "みっともない",
+  "reading": "みっともない",
+  "meaning": "khó coi, xấu hổ, không đứng đắn"
+},
+{
+  "id": 1424,
+  "word": "見苦しい",
+  "reading": "みぐるしい",
+  "meaning": "khó coi, chướng mắt"
+},
+{
+  "id": 1425,
+  "word": "みにくい",
+  "reading": "みにくい",
+  "meaning": "xấu xí, khó coi"
+},
+{
+  "id": 1426,
+  "word": "ぼろぼろな",
+  "reading": "ぼろぼろな",
+  "meaning": "rách nát, tả tơi"
+},
+{
+  "id": 1427,
+  "word": "あわれな",
+  "reading": "あわれな",
+  "meaning": "đáng thương, tội nghiệp"
+},
+{
+  "id": 1428,
+  "word": "乏しい",
+  "reading": "とぼしい",
+  "meaning": "thiếu thốn, khan hiếm, nghèo nàn"
+},
+{
+  "id": 1429,
+  "word": "中途半端（な）",
+  "reading": "ちゅうとはんぱ（な）",
+  "meaning": "nửa chừng, nửa vời"
+},
+{
+  "id": 1430,
+  "word": "まごまご（する）",
+  "reading": "まごまご（する）",
+  "meaning": "lúng túng, loay hoay"
+},
+{
+  "id": 1431,
+  "word": "矛盾（する）",
+  "reading": "むじゅん（する）",
+  "meaning": "mâu thuẫn, trái ngược"
+},
+{
+  "id": 1432,
+  "word": "にやにや（する）",
+  "reading": "にやにや（する）",
+  "meaning": "cười nhếch mép, cười thầm"
+},
+{
+  "id": 1433,
+  "word": "でこぼこ（な/する）",
+  "reading": "でこぼこ（な/する）",
+  "meaning": "lồi lõm, gồ ghề, gập ghềnh"
+},
+{
+  "id": 1434,
+  "word": "それなり",
+  "reading": "それなり",
+  "meaning": "trong chừng mực nào đó, tương xứng"
+}
+,
+{
+  "id": 1435,
+  "word": "気が早い",
+  "reading": "きがはやい",
+  "meaning": "nôn nóng, vội vàng"
+},
+{
+  "id": 1436,
+  "word": "気が重い",
+  "reading": "きがおもい",
+  "meaning": "cảm thấy nặng nề, chán nản"
+},
+{
+  "id": 1437,
+  "word": "気が合う",
+  "reading": "きがあう",
+  "meaning": "hợp tính, hợp nhau"
+},
+{
+  "id": 1438,
+  "word": "気が利く",
+  "reading": "きがきく",
+  "meaning": "chu đáo, ân cần"
+},
+{
+  "id": 1439,
+  "word": "気がつく",
+  "reading": "きがつく",
+  "meaning": "nhận ra, để ý; chu đáo"
+},
+{
+  "id": 1440,
+  "word": "気が強い",
+  "reading": "きがつよい",
+  "meaning": "mạnh mẽ, cứng cỏi"
+},
+{
+  "id": 1441,
+  "word": "気が小さい",
+  "reading": "きがちいさい",
+  "meaning": "nhút nhát, nhát gan"
+},
+{
+  "id": 1442,
+  "word": "気を遣う",
+  "reading": "きをつかう",
+  "meaning": "giữ ý, quan tâm, để ý"
+},
+{
+  "id": 1443,
+  "word": "気が進まない",
+  "reading": "きがすすまない",
+  "meaning": "không hứng thú, không muốn"
+},
+{
+  "id": 1444,
+  "word": "気にかかる",
+  "reading": "きにかかる",
+  "meaning": "lo lắng, bận tâm"
+},
+{
+  "id": 1445,
+  "word": "気にくわない",
+  "reading": "きにくわない",
+  "meaning": "bất mãn, không ưa"
+},
+{
+  "id": 1446,
+  "word": "心が通う",
+  "reading": "こころがかよう",
+  "meaning": "thấu hiểu nhau, đồng cảm"
+},
+{
+  "id": 1447,
+  "word": "心が狭い",
+  "reading": "こころがせまい",
+  "meaning": "hẹp hòi, nhỏ nhen"
+},
+{
+  "id": 1448,
+  "word": "心が動く",
+  "reading": "こころがうごく",
+  "meaning": "dao động, bị lung lay"
+},
+{
+  "id": 1449,
+  "word": "心を配る",
+  "reading": "こころをくばる",
+  "meaning": "quan tâm, chăm lo"
+},
+{
+  "id": 1450,
+  "word": "心を引かれる",
+  "reading": "こころをひかれる",
+  "meaning": "bị thu hút, bị cuốn hút"
+},
+{
+  "id": 1451,
+  "word": "心を許す",
+  "reading": "こころをゆるす",
+  "meaning": "tin tưởng, mở lòng"
+},
+{
+  "id": 1452,
+  "word": "胸が痛む",
+  "reading": "むねがいたむ",
+  "meaning": "đau lòng, xót xa"
+},
+{
+  "id": 1453,
+  "word": "胸が一杯になる",
+  "reading": "むねがいっぱいになる",
+  "meaning": "xúc động, cảm xúc dâng trào"
+},
+{
+  "id": 1454,
+  "word": "胸をはずませる",
+  "reading": "むねをはずませる",
+  "meaning": "hồi hộp, náo nức, lòng rộn ràng"
+}
+,
+{
+  "id": 1455,
+  "word": "頭が痛い",
+  "reading": "あたまがいたい",
+  "meaning": "đau đầu, lo lắng, bận tâm"
+},
+{
+  "id": 1456,
+  "word": "頭が固い",
+  "reading": "あたまがかたい",
+  "meaning": "cứng đầu, bảo thủ"
+},
+{
+  "id": 1457,
+  "word": "頭にくる",
+  "reading": "あたまにくる",
+  "meaning": "bực mình, phát cáu, tức giận"
+},
+{
+  "id": 1458,
+  "word": "頭が下がる",
+  "reading": "あたまがさがる",
+  "meaning": "khâm phục, kính trọng"
+},
+{
+  "id": 1459,
+  "word": "顔が広い",
+  "reading": "かおがひろい",
+  "meaning": "quen biết rộng, giao thiệp rộng"
+},
+{
+  "id": 1460,
+  "word": "顔を出す",
+  "reading": "かおをだす",
+  "meaning": "xuất hiện, có mặt, ghé mặt"
+},
+{
+  "id": 1461,
+  "word": "目がない",
+  "reading": "めがない",
+  "meaning": "mê, rất thích, ghiền"
+},
+{
+  "id": 1462,
+  "word": "目が離せない",
+  "reading": "めがはなせない",
+  "meaning": "không thể rời mắt"
+},
+{
+  "id": 1463,
+  "word": "目が回る",
+  "reading": "めがまわる",
+  "meaning": "hoa mắt, chóng mặt; bận tối tăm mặt mũi"
+},
+{
+  "id": 1464,
+  "word": "目に浮かぶ",
+  "reading": "めにうかぶ",
+  "meaning": "hiện lên trước mắt, hình dung ra"
+},
+{
+  "id": 1465,
+  "word": "目にする",
+  "reading": "めにする",
+  "meaning": "chứng kiến, bắt gặp, nhìn thấy"
+},
+{
+  "id": 1466,
+  "word": "目に付く",
+  "reading": "めにつく",
+  "meaning": "bắt mắt, đập vào mắt, dễ nhận thấy"
+},
+{
+  "id": 1467,
+  "word": "目を疑う",
+  "reading": "めをうたがう",
+  "meaning": "không tin vào mắt mình"
+},
+{
+  "id": 1468,
+  "word": "目を向ける",
+  "reading": "めをむける",
+  "meaning": "hướng sự chú ý, quan tâm đến"
+},
+{
+  "id": 1469,
+  "word": "目を通す",
+  "reading": "めをとおす",
+  "meaning": "xem qua, đọc lướt"
+},
+{
+  "id": 1470,
+  "word": "耳が痛い",
+  "reading": "みみがいたい",
+  "meaning": "nghe mà nhức nhối, bị nói trúng điểm yếu"
+},
+{
+  "id": 1471,
+  "word": "耳が遠い",
+  "reading": "みみがとおい",
+  "meaning": "lãng tai, nặng tai"
+},
+{
+  "id": 1472,
+  "word": "耳にする",
+  "reading": "みみにする",
+  "meaning": "nghe được, nghe thấy"
+},
+{
+  "id": 1473,
+  "word": "耳を傾ける",
+  "reading": "みみをかたむける",
+  "meaning": "lắng nghe, lắng tai nghe"
+},
+{
+  "id": 1474,
+  "word": "耳を疑う",
+  "reading": "みみをうたがう",
+  "meaning": "không tin vào tai mình"
+},
+{
+  "id": 1475,
+  "word": "口がうまい",
+  "reading": "くちがうまい",
+  "meaning": "khéo ăn nói, dẻo miệng"
+},
+{
+  "id": 1476,
+  "word": "口が堅い",
+  "reading": "くちがかたい",
+  "meaning": "kín miệng, biết giữ bí mật"
+},
+{
+  "id": 1477,
+  "word": "口が軽い",
+  "reading": "くちがかるい",
+  "meaning": "hay hở miệng, không giữ được bí mật"
+},
+{
+  "id": 1478,
+  "word": "口が重い",
+  "reading": "くちがおもい",
+  "meaning": "ít nói, lầm lì"
+},
+{
+  "id": 1479,
+  "word": "口が滑る",
+  "reading": "くちがすべる",
+  "meaning": "lỡ miệng, lỡ lời"
+},
+{
+  "id": 1480,
+  "word": "口が悪い",
+  "reading": "くちがわるい",
+  "meaning": "ăn nói cay độc, độc mồm độc miệng"
+},
+{
+  "id": 1481,
+  "word": "口にする",
+  "reading": "くちにする",
+  "meaning": "nói ra, đề cập; ăn, nếm"
+},
+{
+  "id": 1482,
+  "word": "口に合う",
+  "reading": "くちにあう",
+  "meaning": "hợp khẩu vị"
+},
+{
+  "id": 1483,
+  "word": "口を出す",
+  "reading": "くちをだす",
+  "meaning": "xen vào, can thiệp"
+}
+,
+{
+  "id": 1484,
+  "word": "手がふさがる",
+  "reading": "てがふさがる",
+  "meaning": "bận tay, không rảnh tay"
+},
+{
+  "id": 1485,
+  "word": "手が空く",
+  "reading": "てがあく",
+  "meaning": "rảnh tay"
+},
+{
+  "id": 1486,
+  "word": "手がかかる",
+  "reading": "てがかかる",
+  "meaning": "tốn công, mất nhiều công sức"
+},
+{
+  "id": 1487,
+  "word": "手が離せない",
+  "reading": "てがはなせない",
+  "meaning": "đang dở tay, không thể rời tay"
+},
+{
+  "id": 1488,
+  "word": "手に入れる",
+  "reading": "てにいれる",
+  "meaning": "đạt được, có được"
+},
+{
+  "id": 1489,
+  "word": "手にする",
+  "reading": "てにする",
+  "meaning": "cầm lấy, giành được, đạt được"
+},
+{
+  "id": 1490,
+  "word": "手につかない",
+  "reading": "てにつかない",
+  "meaning": "không tập trung được, không chú tâm được"
+},
+{
+  "id": 1491,
+  "word": "手をつける",
+  "reading": "てをつける",
+  "meaning": "bắt tay vào, đụng tay đến"
+},
+{
+  "id": 1492,
+  "word": "手を貸す",
+  "reading": "てをかす",
+  "meaning": "giúp một tay, giúp đỡ"
+},
+{
+  "id": 1493,
+  "word": "手を休める",
+  "reading": "てをやすめる",
+  "meaning": "nghỉ tay"
+},
+{
+  "id": 1494,
+  "word": "手を抜く",
+  "reading": "てをぬく",
+  "meaning": "làm qua loa, lơi tay, chiếu lệ"
+},
+{
+  "id": 1495,
+  "word": "腕がいい",
+  "reading": "うでがいい",
+  "meaning": "có tay nghề giỏi, khéo tay"
+},
+{
+  "id": 1496,
+  "word": "腕を磨く",
+  "reading": "うでをみがく",
+  "meaning": "rèn luyện tay nghề, nâng cao kỹ năng"
+},
+{
+  "id": 1497,
+  "word": "腕が上がる",
+  "reading": "うでがあがる",
+  "meaning": "tay nghề tăng lên, trình độ cao hơn"
+},
+{
+  "id": 1498,
+  "word": "肩を落とす",
+  "reading": "かたをおとす",
+  "meaning": "thất vọng, chán nản, rũ vai"
+},
+{
+  "id": 1499,
+  "word": "腹が立つ",
+  "reading": "はらがたつ",
+  "meaning": "tức giận, bực mình"
+},
+{
+  "id": 1500,
+  "word": "腹を抱える",
+  "reading": "はらをかかえる",
+  "meaning": "ôm bụng cười, cười vỡ bụng"
+},
+{
+  "id": 1501,
+  "word": "足が出る",
+  "reading": "あしがでる",
+  "meaning": "vượt ngân sách, bội chi"
+},
+{
+  "id": 1502,
+  "word": "足を伸ばす",
+  "reading": "あしをのばす",
+  "meaning": "đi thêm một chút, ghé thêm"
+},
+{
+  "id": 1503,
+  "word": "足を運ぶ",
+  "reading": "あしをはこぶ",
+  "meaning": "quá bộ đến, đích thân đến"
+},
+{
+  "id": 1504,
+  "word": "足を引っ張る",
+  "reading": "あしをひっぱる",
+  "meaning": "gây cản trở, ngáng chân, kéo chân"
+}
+,
+{
+  "id": 1505,
+  "word": "何かと",
+  "reading": "なにかと",
+  "meaning": "cách này hay cách khác, chuyện gì cũng"
+},
+{
+  "id": 1506,
+  "word": "何だかんだ",
+  "reading": "なんだかんだ",
+  "meaning": "chuyện này chuyện kia, nói gì thì nói"
+},
+{
+  "id": 1507,
+  "word": "なぜか",
+  "reading": "なぜか",
+  "meaning": "chẳng hiểu sao, không hiểu vì sao"
+},
+{
+  "id": 1508,
+  "word": "何だか",
+  "reading": "なんだか",
+  "meaning": "không hiểu sao, có chút gì đó"
+},
+{
+  "id": 1509,
+  "word": "何しろ",
+  "reading": "なにしろ",
+  "meaning": "dù sao thì, dù gì đi nữa"
+},
+{
+  "id": 1510,
+  "word": "何とも（〜ない）",
+  "reading": "なんとも（〜ない）",
+  "meaning": "hoàn toàn không, không chút nào"
+},
+{
+  "id": 1511,
+  "word": "どうか",
+  "reading": "どうか",
+  "meaning": "xin hãy, vui lòng"
+},
+{
+  "id": 1512,
+  "word": "どうにか",
+  "reading": "どうにか",
+  "meaning": "bằng cách nào đó, cuối cùng cũng"
+},
+{
+  "id": 1513,
+  "word": "どうしても",
+  "reading": "どうしても",
+  "meaning": "bằng mọi giá, nhất định; dù thế nào cũng không"
+},
+{
+  "id": 1514,
+  "word": "どうせ",
+  "reading": "どうせ",
+  "meaning": "đằng nào cũng, dù sao đi nữa"
+},
+{
+  "id": 1515,
+  "word": "どうやら",
+  "reading": "どうやら",
+  "meaning": "xem ra, có vẻ như"
+},
+{
+  "id": 1516,
+  "word": "とにかく",
+  "reading": "とにかく",
+  "meaning": "dù thế nào, tóm lại, trước hết cứ"
+},
+{
+  "id": 1517,
+  "word": "とても（〜ない）",
+  "reading": "とても（〜ない）",
+  "meaning": "hoàn toàn không thể"
+},
+{
+  "id": 1518,
+  "word": "より",
+  "reading": "より",
+  "meaning": "hơn, hơn nữa"
+},
+{
+  "id": 1519,
+  "word": "いかに",
+  "reading": "いかに",
+  "meaning": "như thế nào, biết bao nhiêu"
+},
+{
+  "id": 1520,
+  "word": "いかにも",
+  "reading": "いかにも",
+  "meaning": "quả thật, đúng là, rõ ràng là"
+}
+,
+{
+  "id": 1521,
+  "word": "それで",
+  "reading": "それで",
+  "meaning": "do đó, vì vậy"
+},
+{
+  "id": 1522,
+  "word": "そこで",
+  "reading": "そこで",
+  "meaning": "do vậy, vì thế"
+},
+{
+  "id": 1523,
+  "word": "すると",
+  "reading": "すると",
+  "meaning": "thế là, rồi thì"
+},
+{
+  "id": 1524,
+  "word": "なぜなら",
+  "reading": "なぜなら",
+  "meaning": "lý do là, bởi vì"
+},
+{
+  "id": 1525,
+  "word": "というのも",
+  "reading": "というのも",
+  "meaning": "là bởi vì"
+},
+{
+  "id": 1526,
+  "word": "つまり",
+  "reading": "つまり",
+  "meaning": "nghĩa là, tức là"
+},
+{
+  "id": 1527,
+  "word": "いわゆる",
+  "reading": "いわゆる",
+  "meaning": "cái gọi là"
+},
+{
+  "id": 1528,
+  "word": "その上",
+  "reading": "そのうえ",
+  "meaning": "hơn nữa, thêm vào đó"
+},
+{
+  "id": 1529,
+  "word": "そればかりか",
+  "reading": "そればかりか",
+  "meaning": "không chỉ vậy"
+},
+{
+  "id": 1530,
+  "word": "しかも",
+  "reading": "しかも",
+  "meaning": "chưa kể, hơn nữa"
+},
+{
+  "id": 1531,
+  "word": "また",
+  "reading": "また",
+  "meaning": "ngoài ra, cũng"
+},
+{
+  "id": 1532,
+  "word": "しかし",
+  "reading": "しかし",
+  "meaning": "nhưng, tuy nhiên"
+},
+{
+  "id": 1533,
+  "word": "ところが",
+  "reading": "ところが",
+  "meaning": "tuy vậy, nhưng không ngờ"
+},
+{
+  "id": 1534,
+  "word": "それでも",
+  "reading": "それでも",
+  "meaning": "dù vậy, mặc dù vậy"
+},
+{
+  "id": 1535,
+  "word": "（それ）にもかかわらず",
+  "reading": "（それ）にもかかわらず",
+  "meaning": "bất chấp điều đó, mặc dù vậy"
+},
+{
+  "id": 1536,
+  "word": "そうはいっても",
+  "reading": "そうはいっても",
+  "meaning": "dù nói vậy, tuy nói thế"
+},
+{
+  "id": 1537,
+  "word": "それにしては",
+  "reading": "それにしては",
+  "meaning": "so với điều đó thì, vậy mà"
+},
+{
+  "id": 1538,
+  "word": "一方",
+  "reading": "いっぽう",
+  "meaning": "mặt khác, ngược lại"
+},
+{
+  "id": 1539,
+  "word": "ただ",
+  "reading": "ただ",
+  "meaning": "có điều, tuy nhiên"
+},
+{
+  "id": 1540,
+  "word": "ただし",
+  "reading": "ただし",
+  "meaning": "tuy nhiên, với điều kiện là"
+},
+{
+  "id": 1541,
+  "word": "なお",
+  "reading": "なお",
+  "meaning": "ngoài ra, xin lưu ý"
+},
+{
+  "id": 1542,
+  "word": "または",
+  "reading": "または",
+  "meaning": "hoặc là, hoặc"
+},
+{
+  "id": 1543,
+  "word": "それとも",
+  "reading": "それとも",
+  "meaning": "hay là"
+},
+{
+  "id": 1544,
+  "word": "ところで",
+  "reading": "ところで",
+  "meaning": "mà này, nhân tiện"
+},
+{
+  "id": 1545,
+  "word": "さて",
+  "reading": "さて",
+  "meaning": "nào, bây giờ thì"
+},
+{
+  "id": 1546,
+  "word": "それでは",
+  "reading": "それでは",
+  "meaning": "vậy thì, thế thì"
+}
 ]
