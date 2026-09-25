@@ -76,6 +76,12 @@
     width: 45px;
     height: 45px;
 
+     display: flex; /*## Dùng Flexbox để căn icon */
+    align-items: center; /*## Căn giữa theo chiều dọc */
+    justify-content: center; /*## Căn giữa theo chiều ngang */
+
+    padding: 0; /*## Xóa padding mặc định của button */
+
     border:
         1px solid #334155;
 
@@ -87,6 +93,7 @@
     color: white;
 
     font-size: 21px;
+    line-height: 1; /*## Tránh ký tự ☰ bị lệch do line-height */
 
     cursor: pointer;
 }
