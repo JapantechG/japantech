@@ -494,17 +494,14 @@ function nextQuestion() {
 
 function showQuestion() {
 
-    /*
-        Minimal database:
-
+    /* Minimal database:
         word
         reading
-        meaning
-    */
+        meaning */
+      /* Xóa chức năng click của câu trước */
+    questionElement.onclick = null;
 
-    switch (
-        currentConfig.subMode
-    ) {
+    switch (currentConfig.subMode) {
 
         case "kanji_hiragana":
 
@@ -532,7 +529,27 @@ function showQuestion() {
         case "audio_hiragana": /*###*/
         case "audio_meaning":
         case "audio_kanji":
+            /* Hiển thị biểu tượng loa thay cho từ vựng */
             questionElement.textContent = "🔊";
+
+             /* Bấm vào loa để nghe lại */
+            questionElement.onclick =
+                () => {
+                    /*Chỉ cho nghe khi game đang chạy và chưa chọn đáp án.*/
+                    if (
+                        !gameActive
+                        ||
+                        answerLocked
+                    ) {
+                        return;
+                    }
+        
+                    speakJapanese(
+                        currentQuestion.reading
+                    );
+                };    
+
+            /* Tự động đọc 1 lần khi câu mới xuất hiện */
             setTimeout(
                 () => {
                 speakJapanese(
