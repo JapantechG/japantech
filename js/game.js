@@ -1336,16 +1336,26 @@ function endGame() {
     playSfx(
         "gameover"
     );
-
+    
+const bestScoreKey = getBestScoreKey();
 
     const oldBest =
+    Number(
+        localStorage.getItem(
+            bestScoreKey
+        )
+        ||
+        0
+    );
+
+    /*## const oldBest =
         Number(
             localStorage.getItem(
                 "batlingo_n1_bestScore"
             )
             ||
             0
-        );
+        );*/
 
 
     const best =
@@ -1355,9 +1365,14 @@ function endGame() {
         );
 
 
-    localStorage.setItem(
+    /*## localStorage.setItem(
         "batlingo_n1_bestScore",
         best
+    );*/
+    
+    localStorage.setItem(
+    bestScoreKey,
+    best
     );
 
 
