@@ -528,8 +528,21 @@ function showQuestion() {
                 currentQuestion.meaning;
 
             break;
-
-
+            
+        case "audio_hiragana": /*###*/
+        case "audio_meaning":
+        case "audio_kanji":
+            questionElement.textContent = "🔊";
+            setTimeout(
+                () => {
+                speakJapanese(
+                currentQuestion.reading
+                );
+                },
+                200
+            );
+            break;
+            
         default:
 
             questionElement.textContent =
@@ -557,7 +570,7 @@ function getAnswerField() {
 
 
         case "meaning_kanji":
-
+        case "audio_kanji":
             return "word";
 
 
@@ -771,6 +784,17 @@ function renderAnswers(
 /* =============================================================
    SELECT ANSWER
    ============================================================= */
+/*AUDIOMODE ADDIN ##*/
+function isAudioMode() {
+
+    return (
+        currentConfig.subMode === "audio_hiragana"
+        ||
+        currentConfig.subMode === "audio_meaning"
+        ||
+        currentConfig.subMode === "audio_kanji"
+    );
+}
 
 function selectAnswer(
     button,
@@ -846,11 +870,25 @@ function selectAnswer(
         updateHUD();
 
 
-        speakJapanese(
+        /*##speakJapanese(
             currentQuestion.reading,
             nextQuestion
-        );
+        );*/
+        if (isAudioMode()) {
 
+                setTimeout(
+                    nextQuestion,
+                    500
+                );
+            
+            }
+            else {
+            
+                speakJapanese(
+                    currentQuestion.reading,
+                    nextQuestion
+                );
+            }
 
         return;
     }
@@ -885,7 +923,7 @@ function selectAnswer(
     updateHUD();
 
 
-    speakJapanese(
+    /*###speakJapanese(
         currentQuestion.reading,
         () => {
 
@@ -902,7 +940,34 @@ function selectAnswer(
             nextQuestion();
 
         }
-    );
+    );*/
+
+     const continueGame = () => {
+        
+            if (lives <= 0) {
+                endGame();
+                return;
+            }
+        
+            nextQuestion();
+        };
+        
+        
+        if (isAudioMode()) {
+        
+            setTimeout(
+                continueGame,
+                500
+            );
+        
+        }
+        else {
+        
+            speakJapanese(
+                currentQuestion.reading,
+                continueGame
+            );
+        }
 }
 
 
@@ -1077,7 +1142,7 @@ function handleTimeout() {
     updateHUD();
 
 
-    speakJapanese(
+    /*###speakJapanese(
         currentQuestion.reading,
         () => {
 
@@ -1094,7 +1159,33 @@ function handleTimeout() {
             nextQuestion();
 
         }
-    );
+    );*/
+    const continueGame = () => {
+
+            if (lives <= 0) {
+                endGame();
+                return;
+            }
+        
+            nextQuestion();
+        };
+        
+        
+        if (isAudioMode()) {
+        
+            setTimeout(
+                continueGame,
+                500
+            );
+        
+        }
+        else {
+        
+            speakJapanese(
+                currentQuestion.reading,
+                continueGame
+            );
+        }
 }
 
 
