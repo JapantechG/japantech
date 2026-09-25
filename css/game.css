@@ -216,9 +216,10 @@
     display: grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        1fr; /*## Mỗi đáp án chiếm 1 hàng */
+        /*### repeat(2,1fr);  */
 
-    gap: 12px;
+    gap: 10px; /*gap: 12px;*/
 
     margin-top: 22px;
 }
@@ -226,7 +227,7 @@
 .answer-button {
     position: relative;
 
-    min-height: 72px;
+    min-height: 65px; /*## min-height: 72px;*/
 
     display: flex;
 
@@ -498,12 +499,12 @@
     }
 }
 
-@media (max-width: 360px) {
+/*##@media (max-width: 360px) {
 
     .answers {
         grid-template-columns: 1fr;
     }
-}
+} không còn cần nữa, vì .answers mặc định đã là 1fr */
 
 @media (pointer: coarse) {
 
