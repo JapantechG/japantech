@@ -447,7 +447,7 @@ export function getConnectionInfo() {
     };
 }
 
-export async function startRoomGame() {
+export async function startRoomGame(matchData) {
 
     if (
         !roomCode ||
@@ -457,8 +457,14 @@ export async function startRoomGame() {
         return;
     }
 
+        const roomRef =
+        ref(
+            db,
+            `rooms/${roomCode}`
+        );
 
-    await update(
+
+    /*await update(
         ref(
             db,
             `rooms/${roomCode}`
@@ -467,5 +473,40 @@ export async function startRoomGame() {
             status: "playing",
             startedAt: Date.now()
         }
+    );*/
+
+    await update(
+        roomRef,
+        {
+            status: "playing",
+
+            startedAt:
+                Date.now(),
+
+            match: {
+                level:
+                    matchData.level,
+
+                category:
+                    matchData.category,
+
+                mode:
+                    matchData.mode,
+
+                questionIds:
+                    matchData.questionIds,
+                
+                questions:
+                    matchData.questions,
+
+                currentQuestion:
+                    0
+            }
+        }
+    );
+
+      console.log(
+        "[Firebase] Match started:",
+        matchData
     );
 }
