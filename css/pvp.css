@@ -73,15 +73,21 @@
     width: 48px;
     height: 48px;
 
+   display: flex;              /*## Căn icon bằng Flexbox */
+    align-items: center;        /*## Căn giữa dọc */
+    justify-content: center;    /*## Căn giữa ngang */
+
     border:
         1px solid #475569;
 
     border-radius: 12px;
+    padding: 0;                 /*## Xóa padding mặc định của button */
 
     background:
         rgba(15,23,42,0.9);
 
     color: white;
+    line-height: 1;             /*## Hạn chế glyph bị lệch */
 
     font-size: 22px;
 
