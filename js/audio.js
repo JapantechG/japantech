@@ -123,28 +123,98 @@ export function speakJapanese(
     if (japaneseVoice) {
         speech.voice = japaneseVoice;
     }
+   
+            /* =============================================================
+            SPEECH CALLBACK SAFETY
+            ============================================================= */
+         
+         /*
+             Biến kiểm tra callback đã được chạy hay chưa.
+         
+             false = chưa chạy
+             true  = đã chạy
+         
+             Mục đích:
+             Không cho callback chạy 2 lần.
+         */
+         let finished = false;
+         
+         
+         /*
+             Function dùng chung để kết thúc speech
+             và tiếp tục game.
+         */
+         function finish() {
+         
+             /*
+                 Nếu callback đã chạy rồi
+                 thì dừng ngay.
+             */
+             if (finished) {
+                 return;
+             }
+         
+             /*
+                 Đánh dấu đã hoàn thành.
+             */
+             finished = true;
+         
+         
+             /*
+                 Hủy safety timer vì speech
+                 đã kết thúc bình thường hoặc đã báo lỗi.
+             */
+             clearTimeout(
+                 safetyTimer
+             );
+         
+         
+             /*
+                 Chạy callback.
+         
+                 Trong game.js callback này
+                 thường là nextQuestion.
+             */
+             callback();
+         }
 
-
+      /*
+          SAFETY TIMER
+      
+          Nếu sau 3 giây browser vẫn không gọi
+          onend hoặc onerror thì tự gọi finish().
+      
+          Mục đích:
+          tránh game bị treo vô hạn.
+      */
+      const safetyTimer =
+          setTimeout(
+              finish,
+              3000
+          );
+   /*Speech đọc xong bình thường.*/
     speech.onend =
         () => {
-
+           /*Chờ thêm 200ms rồi tiếp tục game.*/
             setTimeout(
-                callback,
+                /*###callback,*/
+               finish,
                 200
             );
         };
 
-
+   /*Speech gặp lỗi*/
     speech.onerror =
         () => {
-
+             /* Dù speech lỗi,vẫn tiếp tục game sau 300ms.*/
             setTimeout(
-                callback,
+                /*###callback,*/
+                finish,
                 300
             );
         };
 
-
+   /*Bắt đầu đọc.*/
     speechSynthesis.speak(
         speech
     );
