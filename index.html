@@ -509,7 +509,7 @@
                 </div>
 
 
-                <div class="players-area">
+                <!--##<div class="players-area">
 
                     <div class="player-slot">
 
@@ -555,7 +555,68 @@
 
                     </div>
 
-                </div>
+                </div>-->
+                <div class="players-area">
+
+                        <!-- LEFT PLAYER -->
+                        <div class="player-slot">
+
+                            <div
+                                id="leftPlayerAvatar"
+                                class="player-avatar"
+                            >
+                                🐵
+                            </div>
+
+                            <div
+                                id="leftPlayerName"
+                                class="room-player-name"
+                            >
+                                YOU
+                            </div>
+
+                            <div
+                                id="leftPlayerStatus"
+                                class="player-status ready"
+                            >
+                                READY
+                            </div>
+
+                        </div>
+
+
+                        <div class="room-vs">
+                            VS
+                        </div>
+
+
+                        <!-- RIGHT PLAYER -->
+                        <div class="player-slot">
+
+                            <div
+                                id="rightPlayerAvatar"
+                                class="player-avatar waiting"
+                            >
+                                ?
+                            </div>
+
+                            <div
+                                id="rightPlayerName"
+                                class="room-player-name"
+                            >
+                                WAITING...
+                            </div>
+
+                            <div
+                                id="rightPlayerStatus"
+                                class="player-status"
+                            >
+                                WAITING
+                            </div>
+
+                        </div>
+
+                    </div>
 
 
                 <div
@@ -564,7 +625,13 @@
                 >
                     WAITING FOR PLAYER...
                 </div>
-
+                <button
+                    id="startBattleButton"
+                    class="battle-button hidden"
+                    type="button"
+                >
+                    ⚔ START BATTLE
+                </button>
 
                 <button
                     id="leaveRoomButton"
