@@ -103,6 +103,10 @@ const subModes = {
             id: "audio_hiragana",
             name: "AUDIO → HIRAGANA"
         },
+        {
+            id: "audio_kanji",
+            name: "AUDIO → KANJI"
+        },
 
         {
             id: "audio_meaning",
