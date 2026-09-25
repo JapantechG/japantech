@@ -36,6 +36,7 @@ export function playSfx(name) {
         return;
     }
 
+    sounds[name].volume = 0.3;
     sound.currentTime = 0;
 
     sound
@@ -54,7 +55,7 @@ export function playLobbyMusic() {
         return;
     }
 
-    sounds.lobby.volume = 0.35;
+    sounds.lobby.volume = 0.15;
 
     sounds.lobby
         .play()
