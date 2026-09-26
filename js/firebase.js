@@ -449,20 +449,14 @@ export function getConnectionInfo() {
 
 export async function startRoomGame(matchData) {
 
-    if (
-        !roomCode ||
-        playerRole !== "host"
-    ) {
+    if (!roomCode || playerRole !== "host") 
+    {
 
         return;
     }
 
-        const roomRef =
-        ref(
-            db,
-            `rooms/${roomCode}`
-        );
-
+        
+        const roomRef = ref(db,`rooms/${roomCode}`);
 
     /*await update(
         ref(
@@ -475,33 +469,61 @@ export async function startRoomGame(matchData) {
         }
     );*/
 
-    await update(
-        roomRef,
+      /*
+        Tạo MATCH MỚI hoàn toàn.
+        Dùng set cho match để dữ liệu trận cũ
+        như answers không còn tồn tại.
+    */
+
+    await set(
+        ref(db,`rooms/${roomCode}/match`),
+        {   
+
+             matchId: Date.now(),
+
+            level: matchData.level,
+
+            category: matchData.category,
+
+            mode: matchData.mode,
+
+            questionIds: matchData.questionIds,
+
+            questions: matchData.questions,
+
+            currentQuestion:0,
+
+            hostScore: 0,
+
+            guestScore: 0
+        }
+    );
+
+      /*
+        Chuyển room sang playing
+    */
+
+    await update(roomRef,
         {
             status: "playing",
 
-            startedAt:
-                Date.now(),
+            startedAt: Date.now(),
 
-            match: {
-                level:
-                    matchData.level,
+            finishedAt: null
 
-                category:
-                    matchData.category,
+            /*match: {
+                level: matchData.level,
 
-                mode:
-                    matchData.mode,
+                category: matchData.category,
 
-                questionIds:
-                    matchData.questionIds,
+                mode: matchData.mode,
+
+                questionIds: matchData.questionIds,
                 
-                questions:
-                    matchData.questions,
+                questions: matchData.questions,
 
-                currentQuestion:
-                    0
-            }
+                currentQuestion: 0
+            }*/
         }
     );
 
@@ -509,4 +531,129 @@ export async function startRoomGame(matchData) {
         "[Firebase] Match started:",
         matchData
     );
+}
+
+export async function submitRoomAnswer(
+    questionIndex,
+    optionId
+) {
+
+    if (
+        !roomCode ||
+        !playerRole
+    ) {
+        return;
+    }
+
+
+    const answerRef =
+        ref(
+            db,
+            `rooms/${roomCode}/match/answers/${questionIndex}/${playerRole}`
+        );
+
+
+    await set(
+        answerRef,
+        {
+            optionId:
+                optionId,
+
+            answeredAt:
+                Date.now()
+        }
+    );
+}
+
+export async function nextRoomQuestion(
+    nextIndex,
+    hostScore,
+    guestScore
+) {
+
+    if (
+        !roomCode ||
+        playerRole !== "host"
+    ) {
+        return;
+    }
+
+
+    await update(
+        ref(
+            db,
+            `rooms/${roomCode}/match`
+        ),
+        {
+            currentQuestion:
+                nextIndex,
+
+            hostScore:
+                hostScore,
+
+            guestScore:
+                guestScore
+        }
+    );
+}
+
+export async function finishRoomGame(
+    hostScore,
+    guestScore
+) {
+
+    if (
+        !roomCode ||
+        playerRole !== "host"
+    ) {
+        return;
+    }
+
+
+    await update(
+        ref(
+            db,
+            `rooms/${roomCode}`
+        ),
+        {
+            status:
+                "finished",
+
+            finishedAt:
+                Date.now(),
+
+            "match/hostScore":
+                hostScore,
+
+            "match/guestScore":
+                guestScore
+        }
+    );
+}
+
+export function resetRoomConnection()
+{
+
+    /*
+        Ngừng listener room cũ
+    */
+
+    if (unsubscribeRoom)
+    {
+        unsubscribeRoom();
+
+        unsubscribeRoom = null;
+    }
+
+
+    /*
+        Reset local Firebase state
+    */
+
+    roomCode = null;
+
+    playerRole = null;
+
+    playerId = null;
+
 }

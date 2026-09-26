@@ -374,3 +374,514 @@
 
     cursor: pointer;
 }
+
+/* =============================================================
+   PVP BATTLE PLAYERS
+   ============================================================= */
+
+.pvp-battle-players {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+
+    margin-bottom: 30px;
+}
+
+
+.pvp-battle-player {
+    width: 150px;
+
+    padding: 14px;
+
+    border: 2px solid #3d4a5c;
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.pvp-battle-player-name {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+.pvp-player-state {
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    opacity: 0.8;
+}
+
+
+.pvp-player-score {
+    margin-top: 10px;
+
+    font-size: 13px;
+}
+
+
+.pvp-player-score span {
+    font-size: 20px;
+    font-weight: 900;
+
+    margin-left: 5px;
+}
+
+
+/*
+    Đã chọn nhưng chưa reveal
+*/
+
+.pvp-battle-player.locked {
+    border-color: #ffc107;
+}
+
+
+/*
+    Trả lời đúng
+*/
+
+.pvp-battle-player.correct {
+    border-color: #2ecc71;
+
+    background:
+        rgba(46, 204, 113, 0.12);
+}
+
+
+/*
+    Trả lời sai
+*/
+
+.pvp-battle-player.wrong {
+    border-color: #ff4757;
+
+    background:
+        rgba(255, 71, 87, 0.12);
+}
+
+
+/*
+    Khóa answer
+*/
+
+.answer-button.locked {
+    pointer-events: none;
+
+    opacity: 0.55;
+}
+
+
+.answer-button.selected {
+    border-color: #ffc107;
+
+    opacity: 1;
+}
+
+
+.answer-button.correct-answer {
+    border-color: #2ecc71;
+
+    background:
+        rgba(46, 204, 113, 0.18);
+
+    opacity: 1;
+}
+
+
+.answer-button.wrong-answer {
+    border-color: #ff4757;
+
+    background:
+        rgba(255, 71, 87, 0.18);
+
+    opacity: 1;
+}
+
+/* =============================================================
+   PVP ANSWER STATE
+   ============================================================= */
+
+#pvpAnswers .answer-button {
+    position: relative;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease,
+        opacity 0.2s ease;
+}
+
+
+/* vừa bấm - chưa biết đúng sai */
+
+#pvpAnswers .answer-button.selected {
+    border: 2px solid #f5b942;
+
+    background:
+        rgba(245, 185, 66, 0.18);
+
+    transform:
+        scale(1.02);
+
+    opacity: 1;
+}
+
+
+/* khóa sau khi chọn */
+
+#pvpAnswers .answer-button.locked {
+    pointer-events: none;
+}
+
+
+/* các đáp án không chọn */
+
+#pvpAnswers .answer-button.locked:not(.selected) {
+    opacity: 0.45;
+}
+
+
+/* đáp án đúng sau reveal */
+
+#pvpAnswers .answer-button.correct-answer {
+    border: 2px solid #35d07f;
+
+    background:
+        rgba(53, 208, 127, 0.22);
+
+    opacity: 1;
+}
+
+
+/* đáp án mình chọn sai */
+
+#pvpAnswers .answer-button.wrong-answer {
+    border: 2px solid #ff5263;
+
+    background:
+        rgba(255, 82, 99, 0.22);
+
+    opacity: 1;
+}
+
+/* =============================================================
+   PVP ANSWER STATE
+   ============================================================= */
+
+/* trạng thái bình thường */
+#pvpAnswers .answer-button {
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        opacity 0.25s ease,
+        transform 0.15s ease;
+
+    border: 2px solid transparent;
+}
+
+
+/* =============================================================
+   ĐÃ CHỌN - CHƯA REVEAL
+   ============================================================= */
+
+/* câu mình vừa chọn -> vàng */
+#pvpAnswers .answer-button.selected {
+    background-color: rgba(255, 193, 7, 0.22);
+
+    border-color: #ffc107;
+
+    transform: scale(1.02);
+
+    opacity: 1;
+}
+
+
+/* khóa toàn bộ sau khi chọn */
+#pvpAnswers .answer-button.locked {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+/* câu không chọn -> mờ */
+#pvpAnswers .answer-button.locked:not(.selected) {
+    opacity: 0.35;
+}
+
+
+/* =============================================================
+   REVEAL
+   ============================================================= */
+
+/* đáp án đúng -> xanh */
+#pvpAnswers .answer-button.correct-answer {
+    background-color: #20b968;
+
+    border-color: #56e596;
+
+    opacity: 1;
+
+    color: #ffffff;
+}
+
+
+/* đáp án mình chọn sai -> đỏ */
+#pvpAnswers .answer-button.wrong-answer {
+    background-color: #d9364f;
+
+    border-color: #ff6478;
+
+    opacity: 1;
+
+    color: #ffffff;
+}
+
+
+/*
+    Khi reveal:
+    selected cũ không được giữ màu vàng
+*/
+#pvpAnswers .answer-button.selected.correct-answer {
+    background-color: #20b968;
+    border-color: #56e596;
+}
+
+
+#pvpAnswers .answer-button.selected.wrong-answer {
+    background-color: #d9364f;
+    border-color: #ff6478;
+}
+
+/* =============================================================
+   PVP GAME BACKGROUND
+   ============================================================= */
+
+#pvpScreen.battle-mode {
+    background-image:
+        linear-gradient(
+            rgba(3, 7, 18, 0.72),
+            rgba(3, 7, 18, 0.88)
+        ),
+        url("../assets/images/backgrounds/pvp-battle-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =============================================================
+   PVP RESULT BACKGROUND
+   ============================================================= */
+
+#pvpScreen.result-mode {
+    background-image:
+        linear-gradient(
+            rgba(3, 7, 18, 0.55),
+            rgba(3, 7, 18, 0.88)
+        ),
+        url("../assets/images/backgrounds/pvp-result-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* =============================================================
+   PVP RESULT
+   ============================================================= */
+
+.pvp-result-panel {
+    width: 100%;
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+
+    text-align: center;
+}
+
+
+/* BATTLE FINISHED */
+
+.pvp-result-title {
+    margin-bottom: 30px;
+
+    color: #fbbf24;
+
+    font-size: clamp(28px, 8vw, 46px);
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px rgba(251, 191, 36, 0.5),
+        0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+
+/* SCORE AREA */
+
+.pvp-result-score {
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* PLAYER CARD */
+
+.pvp-result-score > div:not(.room-vs) {
+    padding: 20px 10px;
+
+    border:
+        2px solid rgba(148, 163, 184, 0.35);
+
+    border-radius: 16px;
+
+    background:
+        rgba(15, 23, 42, 0.78);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+
+/* PLAYER NAME */
+
+.pvp-result-score span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* SCORE */
+
+.pvp-result-score strong {
+    display: block;
+
+    color: white;
+
+    font-size:
+        clamp(32px, 9vw, 52px);
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+/* VS */
+
+.pvp-result-score .room-vs {
+    color: #ef4444;
+
+    font-size: 30px;
+    font-weight: 900;
+
+    font-style: italic;
+
+    text-shadow:
+        0 0 12px
+        rgba(239, 68, 68, 0.55);
+}
+
+
+/* WIN / DRAW */
+
+.pvp-result-message {
+    margin-top: 30px;
+
+    padding: 13px 20px;
+
+    color: #fbbf24;
+
+    font-size:
+        clamp(22px, 6vw, 34px);
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 15px
+        rgba(251, 191, 36, 0.65);
+}
+
+/* WINNER */
+
+.pvp-result-score > div.winner {
+    border-color: #fbbf24;
+
+    background:
+        rgba(251, 191, 36, 0.13);
+
+    transform:
+        scale(1.06);
+
+    box-shadow:
+        0 0 25px
+        rgba(251, 191, 36, 0.28);
+}
+
+
+.pvp-result-score > div.winner strong {
+    color: #fbbf24;
+
+    text-shadow:
+        0 0 15px
+        rgba(251, 191, 36, 0.55);
+}
+
+.pvp-level {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+    height: 30px;
+
+    margin-bottom: 8px;
+    padding: 0 16px;
+
+    border: 1px solid #fbbf24;
+    border-radius: 20px;
+
+    background: rgba(251, 191, 36, 0.12);
+
+    color: #fbbf24;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 12px
+        rgba(251, 191, 36, 0.15);
+}

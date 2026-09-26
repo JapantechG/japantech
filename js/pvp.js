@@ -6,12 +6,28 @@ from "./audio.js";
 import {
     createRoom,
     joinRoom,
-    startRoomGame
+    startRoomGame,
+    submitRoomAnswer,
+    nextRoomQuestion,
+    finishRoomGame,
+    resetRoomConnection
 } from "./firebase.js";
 
 let pvpDatabase = [];
 
 let currentConfig = null;
+
+let currentPvpRoom = null;
+
+let displayedQuestionIndex = -1;
+
+let answerLocked = false;
+
+let revealStarted = false;
+
+let currentPlayerRole = null;
+
+let currentMatchId = null;
 
 
 /* =============================================================
@@ -110,6 +126,74 @@ const pvpAnswers =
         "pvpAnswers"
     );
 
+const pvpHostCard =
+    document.getElementById(
+        "pvpHostCard"
+    );
+
+
+const pvpGuestCard =
+    document.getElementById(
+        "pvpGuestCard"
+    );
+
+
+const pvpHostState =
+    document.getElementById(
+        "pvpHostState"
+    );
+
+
+const pvpGuestState =
+    document.getElementById(
+        "pvpGuestState"
+    );
+
+
+const pvpHostScore =
+    document.getElementById(
+        "pvpHostScore"
+    );
+
+
+const pvpGuestScore =
+    document.getElementById(
+        "pvpGuestScore"
+    );
+
+const pvpResultPanel =
+    document.getElementById(
+        "pvpResultPanel"
+    );
+
+
+const pvpFinalHostScore =
+    document.getElementById(
+        "pvpFinalHostScore"
+    );
+
+
+const pvpFinalGuestScore =
+    document.getElementById(
+        "pvpFinalGuestScore"
+    );
+
+
+const pvpResultMessage =
+    document.getElementById(
+        "pvpResultMessage"
+    );
+
+const pvpScreen =
+    document.getElementById(
+        "pvpScreen"
+    );
+
+const pvpLevel =
+    document.getElementById(
+        "pvpLevel"
+    );
+
 async function loadPvpDatabase(
     level
 ) {
@@ -199,36 +283,45 @@ function createQuestionIds(
     );
 }
 
-function showPvpQuestion(
-    match
-) {
+function showPvpQuestion(match) 
+{
 
-    const index =
-        match.currentQuestion || 0;
+        pvpHostCard.classList.remove("locked","correct","wrong");
 
-
-    const questionId =
-        match.questionIds[index];
-
-
-    const data =
-        getQuestionById(
-            questionId
+        pvpGuestCard.classList.remove(
+            "locked",
+            "correct",
+            "wrong"
         );
 
+        pvpHostState.textContent ="THINKING...";
 
-    if (
-        !data
-    ) {
+        pvpGuestState.textContent = "THINKING...";
 
-        console.error(
-            "[PVP] Question not found:",
-            questionId
-        );
+        pvpAnswers.innerHTML ="";
 
-        return;
+        pvpLevel.textContent = `${match.level.toUpperCase()} - ${match.category.toUpperCase()}`;
 
-    }
+        const index = match.currentQuestion || 0;
+
+
+        const questionId = match.questionIds[index];
+
+
+         const data = getQuestionById(questionId);
+
+
+    if (!data) 
+        {
+
+            console.error(
+                "[PVP] Question not found:",
+                questionId
+            );
+
+            return;
+
+        }
 
 
     /*
@@ -346,6 +439,19 @@ questionData.optionIds.forEach(
         button.textContent =
             option.meaning;
 
+         /*
+            Click answer
+        */
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                selectPvpAnswer(optionId,button);
+
+            }
+        );
+
 
         pvpAnswers.appendChild(
             button
@@ -354,6 +460,321 @@ questionData.optionIds.forEach(
      }
         );
 
+}
+
+async function selectPvpAnswer(optionId,selectedButton) 
+    {
+
+    if (answerLocked || !currentPvpRoom) 
+    {
+        return;
+    }
+
+
+    const match = currentPvpRoom.match;
+
+
+    const questionIndex = match.currentQuestion || 0;
+
+
+    /*
+        Khóa local ngay lập tức
+    */
+
+    answerLocked =true;
+
+    playSfx("click");
+
+
+    const buttons = pvpAnswers.querySelectorAll(".answer-button");
+
+
+    buttons.forEach(button => 
+        {
+             
+            button.disabled =true;
+
+            button.classList.add("locked");
+
+        }
+    );
+
+
+    selectedButton.classList.add("selected");
+
+
+    /*
+        Gửi Firebase
+    */
+
+    try {
+
+        await submitRoomAnswer(questionIndex,optionId);
+
+    }
+    catch (error) {
+
+        console.error(
+            "[PVP] Submit answer error:",
+            error
+        );
+
+
+        /*
+            Nếu Firebase lỗi
+            cho phép chọn lại
+        */
+
+        answerLocked = false;
+
+
+        buttons.forEach(button => 
+            {
+
+                button.classList.remove("locked");
+
+            }
+        );
+
+
+        selectedButton.classList.remove("selected");
+
+    }
+}
+
+function updatePvpAnswerState(
+    room
+) {
+
+    const match =
+        room.match;
+
+
+    const questionIndex =
+        match.currentQuestion || 0;
+
+
+    const answers =
+        match.answers?.[questionIndex]
+        || {};
+
+
+    const hostAnswer =
+        answers.host;
+
+
+    const guestAnswer =
+        answers.guest;
+
+
+    /*
+        PLAYER 1 / HOST
+    */
+
+    if (
+        hostAnswer
+    ) {
+
+        pvpHostState.textContent =
+            "LOCKED";
+
+        pvpHostCard.classList.add(
+            "locked"
+        );
+
+    }
+    else {
+
+        pvpHostState.textContent =
+            "THINKING...";
+
+    }
+
+
+    /*
+        PLAYER 2 / GUEST
+    */
+
+    if (
+        guestAnswer
+    ) {
+
+        pvpGuestState.textContent =
+            "LOCKED";
+
+        pvpGuestCard.classList.add(
+            "locked"
+        );
+
+    }
+    else {
+
+        pvpGuestState.textContent =
+            "THINKING...";
+
+    }
+
+
+    /*
+        Chưa đủ 2 người
+        => tuyệt đối chưa reveal
+    */
+
+    if (
+        !hostAnswer ||
+        !guestAnswer
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+        Cả 2 đã trả lời
+    */
+
+    revealPvpAnswers(room,hostAnswer,guestAnswer);
+}
+
+function revealPvpAnswers(room,hostAnswer,guestAnswer) 
+{
+
+    if (revealStarted) 
+    {
+        return;
+    }
+
+
+    revealStarted = true;
+
+    const match = room.match;
+
+    const questionIndex = match.currentQuestion || 0;
+
+    const questionData =match.questions[questionIndex];
+
+    const correctOptionId =questionData.questionId;
+
+
+    const hostCorrect =String(hostAnswer.optionId)===String(correctOptionId);
+
+    const guestCorrect =String(guestAnswer.optionId)===String(correctOptionId);
+
+    const myCorrect =currentPlayerRole === "host" ? hostCorrect : guestCorrect;
+
+            if (myCorrect) 
+            {
+
+                playSfx("correct");
+
+            }
+            else {
+
+                playSfx("wrong");
+
+            }
+
+
+    /*
+        Player cards
+    */
+
+    pvpHostCard.classList.remove("locked");
+
+
+    pvpGuestCard.classList.remove("locked");
+
+
+    pvpHostCard.classList.add(hostCorrect ? "correct" : "wrong");
+
+
+    pvpGuestCard.classList.add(
+        guestCorrect
+            ? "correct"
+            : "wrong"
+    );
+
+
+    pvpHostState.textContent =
+        hostCorrect
+            ? "CORRECT"
+            : "WRONG";
+
+
+    pvpGuestState.textContent =
+        guestCorrect
+            ? "CORRECT"
+            : "WRONG";
+
+
+    /*
+        Reveal buttons
+    */
+
+    const buttons = pvpAnswers.querySelectorAll(".answer-button");
+
+    const myAnswer = currentPlayerRole === "host" ? hostAnswer : guestAnswer;
+
+
+    buttons.forEach(button => 
+        {
+
+            const optionId = button.dataset.optionId;
+
+            /*
+            Bỏ trạng thái vàng
+        */
+
+            button.classList.remove("selected");
+
+            /*
+                Đáp án đúng -> XANH
+            */
+
+            if (String(optionId) === String(correctOptionId)) 
+            {
+
+                button.classList.add("correct-answer");
+
+            }
+
+
+            /*
+                Đáp án người hiện tại chọn sai -> ĐỎ
+            */
+
+            /*const myAnswer = currentPvpRoom && currentPvpRoom.match
+                    ?.answers
+                    ?.[questionIndex]
+                    ?.[getCurrentPlayerRole()];*/
+
+
+            if (myAnswer &&
+                String(optionId) ===
+                String(myAnswer.optionId) &&
+                String(optionId) !==
+                String(correctOptionId)
+            ) {
+
+                button.classList.add("wrong-answer");
+
+            }
+
+        }
+    );
+
+
+    /*
+        Host chịu trách nhiệm
+        tính score + chuyển câu
+    */
+
+    scheduleNextPvpQuestion(
+        room,
+        hostCorrect,
+        guestCorrect
+    );
 }
 
 function createPvpQuestions(
@@ -473,15 +894,18 @@ export function initPvp(
    FIREBASE ROOM UPDATE
    ============================================================= */
 
-window.addEventListener(
-    "batlingo-room-update",
-    event => {
+window.addEventListener("batlingo-room-update",event => 
+    {
 
         const {
+            roomCode,
             playerRole,
             room
         } = event.detail;
 
+        currentPvpRoom = room;
+
+        currentPlayerRole =playerRole;
 
         console.log(
             "[PVP] Room:",
@@ -494,6 +918,13 @@ window.addEventListener(
             playerRole
         );
 
+        if (room.status === "finished") 
+            {
+
+                showPvpResult(room);
+
+                return;
+            }
 
         /* =====================================================
            HOST VIEW
@@ -701,56 +1132,245 @@ window.addEventListener(
                 "[PVP] GAME START!"
             );
 
-              startPvpMatch(
-                room
-                );
+              startPvpMatch(room);
 
         }
     }
 );
 
-async function startPvpMatch(
-    room
+function getCurrentPlayerRole() {
+
+    return currentPlayerRole;
+}
+
+function scheduleNextPvpQuestion(
+    room,
+    hostCorrect,
+    guestCorrect
 ) {
+
+    /*
+        CHỈ HOST chuyển câu
+    */
+
+    if (
+        currentPlayerRole !== "host"
+    ) {
+
+        return;
+
+    }
+
 
     const match =
         room.match;
+
+
+    const currentIndex =
+        match.currentQuestion || 0;
+
+
+    let hostScore =
+        match.hostScore || 0;
+
+
+    let guestScore =
+        match.guestScore || 0;
+
+
+    /*
+        Tạm thời:
+        đúng = +100
+    */
+
+    if (
+        hostCorrect
+    ) {
+
+        hostScore +=
+            100;
+
+    }
+
+
+    if (
+        guestCorrect
+    ) {
+
+        guestScore +=
+            100;
+
+    }
+
+
+    /*
+        Hiển thị score ngay
+    */
+
+    pvpHostScore.textContent =
+        hostScore;
+
+
+    pvpGuestScore.textContent =
+        guestScore;
+
+
+    /*
+        Chờ 1.5 giây để xem kết quả
+    */
+
+    setTimeout(
+        async () => {
+
+            const nextIndex =
+                currentIndex + 1;
+
+
+            /*
+                Hết 20 câu
+            */
+
+            if (
+                nextIndex >=
+                match.questions.length
+            ) {
+
+                console.log(
+                    "[PVP] MATCH FINISHED"
+                );
+
+            try {
+
+                    await finishRoomGame(
+                        hostScore,
+                        guestScore
+                    );
+
+                }
+                catch (error) {
+
+                    console.error(
+                        "[PVP] Finish error:",
+                        error
+                    );
+
+                }
+
+                return;
+
+            }
+
+
+            try {
+
+                await nextRoomQuestion(
+                    nextIndex,
+                    hostScore,
+                    guestScore
+                );
+
+            }
+            catch (error) {
+
+                console.error(
+                    "[PVP] Next question error:",
+                    error
+                );
+
+            }
+
+        },
+        1500
+    );
+}
+
+async function startPvpMatch(room) 
+{
+    pvpScreen.classList.remove("result-mode");
+
+    pvpScreen.classList.add("battle-mode");
+
+    const match = room.match;
+
+    /*Phát hiện trận mới*/
+
+            if (currentMatchId !== match.matchId)
+            {
+
+                currentMatchId = match.matchId;
+
+                displayedQuestionIndex =-1;
+
+                answerLocked =false;
+
+                revealStarted =false;
+
+                /*Ẩn result cũ*/
+
+                pvpResultPanel.classList.add("hidden");
+
+                /*Hiện battle*/
+
+                pvpGamePanel.classList.remove("hidden");
+
+            }
 
 
     /*
         Load đúng database
     */
 
-    if (
-        pvpDatabase.length === 0
-    ) {
+    if (pvpDatabase.length === 0) 
+    {
 
-        await loadPvpDatabase(
-            match.level
-        );
+        await loadPvpDatabase(match.level);
 
     }
 
+        /*
+        Score
+    */
 
-    console.log(
-        "[PVP] Match:",
-        match
-    );
+    pvpHostScore.textContent =  match.hostScore || 0;
 
 
-    console.log(
-        "[PVP] Shared questions:",
-        match.questionIds
-    );
+    pvpGuestScore.textContent = match.guestScore || 0;
+
+      /*
+        Hiển thị câu
+    */
+
+    const questionIndex = match.currentQuestion || 0;
+
+        if (displayedQuestionIndex !== questionIndex) 
+            {
+
+                displayedQuestionIndex = questionIndex;
+
+                answerLocked = false;
+
+                revealStarted = false;
+
+                showPvpQuestion(match);
+
+            }
+    
+    /* Update trạng thái answer*/
+
+    updatePvpAnswerState(room);
+
+
+    console.log("[PVP] Match:",match);
+
+
+    console.log("[PVP] Shared questions:",match.questionIds);
 
 
     /*
         Hiển thị câu hiện tại
     */
 
-    showPvpQuestion(
-        match
-    );
+    /*showPvpQuestion(match);*/
 }
 
 function getQuestionById(
@@ -999,18 +1619,14 @@ function openWaitingRoom(
    LEAVE
    ============================================================= */
 
-document
-    .getElementById(
-        "leaveRoomButton"
-    )
-    .addEventListener(
-        "click",
-        () => {
+document.getElementById("leaveRoomButton").addEventListener("click",() => 
+    {
 
             /*
                 Sau này:
                 server.leaveRoom()
             */
+            resetRoomConnection();
 
             resetPvpScreen();
 
@@ -1024,32 +1640,86 @@ document
 
 function resetPvpScreen() {
 
-    waitingRoomPanel.classList.add(
-        "hidden"
-    );
+    waitingRoomPanel.classList.add("hidden");
 
 
-    roomSelectPanel.classList.remove(
-        "hidden"
-    );
+    roomSelectPanel.classList.remove("hidden");
+
+     /* Battle screen */
+
+    pvpGamePanel.classList.add("hidden");
+
+    /*Result screen*/
+
+    pvpResultPanel.classList.add("hidden");
+
+    currentRoomCode.textContent = "----";
+
+     /* Reset PVP state*/
+      /*
+        Nếu đã tạo biến này
+    */
+
+    if (typeof currentMatchId !== "undefined"
+    )
+    {
+        currentMatchId = null;
+    }
+
+    displayedQuestionIndex = -1;
+
+    currentPvpRoom = null;
+
+    currentPlayerRole = null;
+
+    answerLocked = false;
+
+    revealStarted = false;
+
+     /*
+        Reset database cache
+    */
+
+    pvpDatabase = [];
+
+       /*
+        Reset score UI
+    */
+
+    pvpHostScore.textContent = "0";
+
+    pvpGuestScore.textContent = "0";
+
+      /*
+        Reset result
+    */
+
+    pvpFinalHostScore.textContent = "0";
+
+    pvpFinalGuestScore.textContent = "0";
+
+    pvpResultMessage.textContent = "---";
+
+       /*
+        Reset background
+    */
+
+    pvpScreen.classList.remove("battle-mode","result-mode");
 
 
-    currentRoomCode.textContent =
-        "----";
-
-
-    document
-        .getElementById(
-            "roomCodeInput"
-        )
-        .value =
-            "";
+    document.getElementById("roomCodeInput").value ="";
 }
 
 startBattleButton.addEventListener("click",async () => 
     {
 
             try {
+
+                    displayedQuestionIndex =-1;
+
+                    answerLocked =false;
+
+                    revealStarted =false;
 
                 startBattleButton.disabled = true;
 
@@ -1159,3 +1829,58 @@ startBattleButton.addEventListener("click",async () =>
         }
     );
 
+function showPvpResult(room) 
+{
+
+    const hostScore = room.match?.hostScore || 0;
+
+
+    const guestScore = room.match?.guestScore || 0;
+
+    pvpGamePanel.classList.add("hidden");
+
+    pvpResultPanel.classList.remove("hidden");
+
+    /*
+        Background result
+    */
+
+    pvpScreen.classList.remove("battle-mode");
+
+    pvpScreen.classList.add("result-mode");
+
+    pvpFinalHostScore.textContent =hostScore;
+
+    pvpFinalGuestScore.textContent =guestScore;
+
+        /*
+        Player cards
+    */
+
+    const playerCards =pvpResultPanel.querySelectorAll(".pvp-result-score > div:not(.room-vs)");
+
+    playerCards.forEach(card => card.classList.remove("winner"));
+
+    if (hostScore > guestScore) 
+    {
+
+        pvpResultMessage.textContent = "PLAYER 1 WINS";
+
+        playerCards[0]?.classList.add("winner");
+
+    }
+    else if (guestScore > hostScore) 
+    {
+
+        pvpResultMessage.textContent = "PLAYER 2 WINS";
+
+        playerCards[1]?.classList.add("winner");
+
+    }
+    else 
+    {
+
+        pvpResultMessage.textContent = "DRAW";
+
+    }
+}

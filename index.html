@@ -645,12 +645,76 @@
                     <div
                         id="pvpGamePanel"
                         class="hidden"
-                    >
-
-                        <div
-                            id="pvpQuestionNumber"
-                            class="question-number"
                         >
+                        <div class="pvp-battle-players">
+
+                            <!-- PLAYER 1 / HOST -->
+
+                            <div
+                                id="pvpHostCard"
+                                class="pvp-battle-player"
+                            >
+
+                                <div class="pvp-battle-player-name">
+                                    PLAYER 1
+                                </div>
+
+                                <div
+                                    id="pvpHostState"
+                                    class="pvp-player-state"
+                                >
+                                    THINKING...
+                                </div>
+
+                                <div class="pvp-player-score">
+                                    SCORE
+                                    <span id="pvpHostScore">
+                                        0
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="room-vs">
+                                VS
+                            </div>
+
+
+                            <!-- PLAYER 2 / GUEST -->
+
+                            <div
+                                id="pvpGuestCard"
+                                class="pvp-battle-player"
+                            >
+
+                                <div class="pvp-battle-player-name">
+                                    PLAYER 2
+                                </div>
+
+                                <div
+                                    id="pvpGuestState"
+                                    class="pvp-player-state"
+                                >
+                                    THINKING...
+                                </div>
+
+                                <div class="pvp-player-score">
+                                    SCORE
+                                    <span id="pvpGuestScore">
+                                        0
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="pvpLevel" class="pvp-level">
+                                N1 - VOCABULARY
+                        </div>
+
+                        <div id="pvpQuestionNumber" class="question-number">
                             QUESTION 1
                         </div>
 
@@ -678,6 +742,49 @@
                         </div>
 
                     </div>
+
+                    <div id="pvpResultPanel" class="pvp-result-panel hidden">
+
+                            <div class="pvp-result-title">
+                                BATTLE FINISHED
+                            </div>
+
+
+                            <div class="pvp-result-score">
+
+                                <div>
+                                    <span>PLAYER 1</span>
+
+                                    <strong id="pvpFinalHostScore">
+                                        0
+                                    </strong>
+                                </div>
+
+
+                                <div class="room-vs">
+                                    VS
+                                </div>
+
+
+                                <div>
+                                    <span>PLAYER 2</span>
+
+                                    <strong id="pvpFinalGuestScore">
+                                        0
+                                    </strong>
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                id="pvpResultMessage"
+                                class="pvp-result-message"
+                            >
+                                ---
+                            </div>
+
+                        </div>
 
         </div>
 
