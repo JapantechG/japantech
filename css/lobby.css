@@ -352,12 +352,17 @@
     pointer-events: auto;
 }
 
+.home-user-menu {
+    pointer-events: auto;
+}
+
 
 /* =========================================
    TOP ACTION GROUP
 ========================================= */
 
 .home-actions {
+    position: relative;
     margin-left: auto;
 
     display: flex;
@@ -630,7 +635,7 @@
 }
 /* UI nằm trên overlay nhưng KHÔNG đổi position */
 .lobby-header {
-    z-index: 2;
+    z-index: 50;
 }
 
 .setup-container {
