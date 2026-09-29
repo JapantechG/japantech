@@ -626,11 +626,40 @@ onAuthStateChanged(
                 user.uid
             );
 
+                window.dispatchEvent(
+                new CustomEvent(
+                    "batlingo-auth-state",
+                    {
+                        detail: {
+                            loggedIn: true,
+                            uid: user.uid,
+                            email: user.email,
+                            displayName:
+                                user.displayName,
+                            photoURL:
+                                user.photoURL
+                        }
+                    }
+                )
+            );
+
+
         }
         else {
 
             console.log(
                 "[AUTH] Signed out"
+            );
+
+             window.dispatchEvent(
+                new CustomEvent(
+                    "batlingo-auth-state",
+                    {
+                        detail: {
+                            loggedIn: false
+                        }
+                    }
+                )
             );
 
         }
@@ -673,6 +702,49 @@ async function resendVerificationEmail() {
         );
 
     }
+}
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+export async function logout() {
+
+    try {
+
+        await signOut(auth);
+
+        console.log(
+            "[AUTH] Logout success"
+        );
+
+    }
+    catch (error) {
+
+        console.error(
+            "[AUTH] Logout:",
+            error
+        );
+
+    }
+
+}
+
+/* =========================================
+   AUTH CHECK
+========================================= */
+
+export function isLoggedIn() {
+
+    const user =
+        auth.currentUser;
+
+
+    return Boolean(
+        user &&
+        user.emailVerified
+    );
+
 }
 
 /* =========================================================

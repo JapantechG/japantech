@@ -287,3 +287,12 @@ window.addEventListener(
 
     }
 );
+
+window.addEventListener(
+    "batlingo-login-success",
+    () => {
+
+        closeAuth();
+
+    }
+);

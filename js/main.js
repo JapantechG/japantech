@@ -27,7 +27,13 @@ import {
     t
 } from "./i18n.js";
 
-import "./auth.js";
+import {
+    logout
+} from "./auth.js";
+
+import {
+    auth
+} from "./firebase.js";
 
 /* =========================================
    I18N
@@ -70,6 +76,24 @@ const authLanguage =
     document.getElementById(
         "authLanguage"
     );
+
+const homeUserBtn =
+    document.getElementById("homeUserBtn");
+
+const homeUserMenu =
+    document.getElementById("homeUserMenu");
+
+const userMenuName =
+    document.getElementById("userMenuName");
+
+const userMenuEmail =
+    document.getElementById("userMenuEmail");
+
+const userMenuAvatar =
+    document.getElementById("userMenuAvatar");
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
 
 
 
@@ -382,3 +406,247 @@ function handleBattleClick() {
     openLobby();
 
 }
+
+/* =========================================
+   AUTH UI STATE
+========================================= */
+
+window.addEventListener(
+    "batlingo-auth-state",
+    event => {
+
+        const {
+            loggedIn,
+            displayName,
+            email,
+            photoURL
+        } = event.detail;
+
+
+        if (loggedIn) {
+
+            /* Hide Login */
+
+            homeLoginBtn?.classList.add(
+                "hidden"
+            );
+
+
+            /* Show User */
+
+            homeUserBtn?.classList.remove(
+                "hidden"
+            );
+
+
+            /* Name */
+
+            const userName =
+                homeUserBtn?.querySelector(
+                    ".home-user-name"
+                );
+
+
+            if (userName) {
+
+                userName.textContent =
+                    displayName ||
+                    email?.split("@")[0] ||
+                    "User";
+
+            }
+
+
+            /* Avatar */
+
+                const avatar =
+            homeUserBtn?.querySelector(
+                ".home-user-avatar"
+            );
+
+            const avatarFallback =
+            homeUserBtn?.querySelector(
+                ".home-user-avatar-fallback"
+            );
+
+
+
+           if (photoURL) {
+
+                            avatar.src = photoURL;
+
+                            avatar.classList.remove(
+                                "hidden"
+                            );
+
+                            avatarFallback.classList.add(
+                                "hidden"
+                            );
+
+                        }
+                        else {
+
+                            avatar.removeAttribute("src");
+
+                            avatar.classList.add(
+                                "hidden"
+                            );
+
+
+                            const name =
+                                displayName ||
+                                email?.split("@")[0] ||
+                                "U";
+
+
+                            avatarFallback.textContent =
+                                name.charAt(0).toUpperCase();
+
+                            avatarFallback.classList.remove(
+                                "hidden"
+                            );
+
+                        }
+
+
+
+            const displayUserName =
+            displayName ||
+            email?.split("@")[0] ||
+            "User";
+
+            if (userMenuName) {
+
+                    userMenuName.textContent =
+                        displayUserName;
+
+                }
+
+
+                if (userMenuEmail) {
+
+                    userMenuEmail.textContent =
+                        email || "";
+
+                }
+
+            /* USER MENU AVATAR */
+
+                if (userMenuAvatar) {
+
+                    if (photoURL) {
+
+                        userMenuAvatar.innerHTML = "";
+
+                        const img =
+                            document.createElement("img");
+
+                        img.src = photoURL;
+                        img.alt = "";
+
+                        userMenuAvatar.appendChild(img);
+
+                    }
+                    else {
+
+                        userMenuAvatar.textContent =
+                            displayUserName
+                                .charAt(0)
+                                .toUpperCase();
+
+                    }
+
+                }
+
+
+        }
+        else {
+
+            homeLoginBtn?.classList.remove(
+                "hidden"
+            );
+
+
+            homeUserBtn?.classList.add(
+                "hidden"
+            );
+
+        }
+
+    }
+);
+
+/* =========================================
+   USER MENU
+========================================= */
+
+homeUserBtn?.addEventListener(
+    "click",
+    event => {
+
+        event.stopPropagation();
+
+        homeUserMenu?.classList.toggle(
+            "hidden"
+        );
+
+    }
+);
+
+document.addEventListener(
+    "click",
+    event => {
+
+        if (
+            homeUserMenu &&
+            !homeUserMenu.contains(event.target) &&
+            !homeUserBtn?.contains(event.target)
+        ) {
+
+            homeUserMenu.classList.add(
+                "hidden"
+            );
+
+        }
+
+    }
+);
+
+logoutBtn?.addEventListener(
+    "click",
+    async () => {
+
+        homeUserMenu?.classList.add(
+            "hidden"
+        );
+
+        await logout();
+
+    }
+);
+
+/* =========================================
+   AUTH GUARD
+========================================= */
+
+function requireLogin() {
+
+    const user =
+        auth.currentUser;
+
+
+    if (
+        !user ||
+        !user.emailVerified
+    ) {
+
+        window.BatLingoAuthUI?.open();
+
+        return false;
+
+    }
+
+
+    return true;
+}
+

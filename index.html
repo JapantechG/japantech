@@ -110,19 +110,77 @@
 
 
         <!-- USER - sau khi login -->
-        <button
+                <button
             id="homeUserBtn"
-            class="top-user-btn hidden"
-            type="button">
-
+            class="home-user-btn hidden"
+            type="button"
+        >
             <img
-                id="homeUserAvatar"
-                class="top-user-avatar"
-                alt="User">
+                class="home-user-avatar hidden"
+                alt=""
+            >
 
-            <span id="homeUserName"></span>
+            <span class="home-user-avatar-fallback">
+                U
+            </span>
 
+            <span class="home-user-name">
+                User
+            </span>
         </button>
+
+                    <!-- USER MENU -->
+            <div
+                id="homeUserMenu"
+                class="home-user-menu hidden"
+            >
+                <div class="home-user-menu-header">
+
+                    <div
+                        id="userMenuAvatar"
+                        class="user-menu-avatar"
+                    >
+                        U
+                    </div>
+
+                    <div class="user-menu-info">
+
+                        <strong id="userMenuName">
+                            User
+                        </strong>
+
+                        <span id="userMenuEmail">
+                            user@email.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home-user-menu-divider"></div>
+
+
+                <button
+                    id="userProfileBtn"
+                    class="home-user-menu-item"
+                    type="button"
+                >
+                    👤
+                    <span>PROFILE</span>
+                </button>
+
+
+                <button
+                    id="logoutBtn"
+                    class="home-user-menu-item logout"
+                    type="button"
+                >
+                    ↪
+                    <span>LOGOUT</span>
+                </button>
+
+            </div>
 
     </div>
 

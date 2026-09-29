@@ -36,7 +36,7 @@ export function playSfx(name) {
         return;
     }
 
-    sounds[name].volume = 0.3;
+    sounds[name].volume = 0.2;
     sound.currentTime = 0;
 
     sound
@@ -230,4 +230,26 @@ export function stopSpeech() {
 
         speechSynthesis.cancel();
     }
+}
+
+export async function logout() {
+
+    try {
+
+        await signOut(auth);
+
+        console.log(
+            "[AUTH] Logout success"
+        );
+
+    }
+    catch (error) {
+
+        console.error(
+            "[AUTH] Logout:",
+            error
+        );
+
+    }
+
 }

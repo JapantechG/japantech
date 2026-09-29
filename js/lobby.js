@@ -4,6 +4,10 @@ import {
 }
 from "./audio.js";
 
+import {
+    isLoggedIn
+} from "./auth.js";
+
 
 /* =============================================================
    DATA
@@ -661,64 +665,82 @@ export function initLobby({
        ========================================================= */
 
     document
-        .getElementById(
-            "battleButton"
-        )
-        .addEventListener(
-            "click",
-            () => {
+    .getElementById(
+        "battleButton"
+    )
+    .addEventListener(
+        "click",
+        () => {
 
-                const category =
-                    categories[
-                        categoryIndex
-                    ];
+            /* =================================
+               LOGIN CHECK
+            ================================= */
 
+            if (!isLoggedIn()) {
 
-                const config = {
+                window.BatLingoAuthUI?.open();
 
-                    battleMode:
-                        battleModes[
-                            battleModeIndex
-                        ].id,
-
-                    studyMode:
-                        studyModes[
-                            studyModeIndex
-                        ].id,
-
-                    target:
-                        getTargets()[
-                            studyTargetIndex
-                        ].id,
-
-                    category:
-                        category.id,
-
-                    subMode:
-                        subModes[
-                            category.id
-                        ][
-                            subModeIndex
-                        ].id
-
-                };
-
-
-                if (
-                    config.battleMode ===
-                    "solo"
-                ) {
-
-                    stopLobbyMusic();
-
-                    onSolo(config);
-
-                    return;
-                }
-
-
-                onPvp(config);
+                return;
 
             }
-        );
+
+
+            /* =================================
+               CREATE BATTLE CONFIG
+            ================================= */
+
+            const category =
+                categories[
+                    categoryIndex
+                ];
+
+
+            const config = {
+
+                battleMode:
+                    battleModes[
+                        battleModeIndex
+                    ].id,
+
+                studyMode:
+                    studyModes[
+                        studyModeIndex
+                    ].id,
+
+                target:
+                    getTargets()[
+                        studyTargetIndex
+                    ].id,
+
+                category:
+                    category.id,
+
+                subMode:
+                    subModes[
+                        category.id
+                    ][
+                        subModeIndex
+                    ].id
+
+            };
+
+
+            if (
+                config.battleMode ===
+                "solo"
+            ) {
+
+                stopLobbyMusic();
+
+                onSolo(config);
+
+                return;
+
+            }
+
+
+            onPvp(config);
+
+        }
+    );
 }
