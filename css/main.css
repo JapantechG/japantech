@@ -212,3 +212,88 @@ button {
 
     cursor: pointer;
 }
+
+
+
+
+
+.home-language-icon {
+    font-size: 15px;
+}
+
+
+
+
+.home-language option {
+    color: #111;
+}
+
+
+
+
+.home-login-btn:hover {
+    background:
+        rgba(255,255,255,.17);
+}
+
+
+.home-login-btn:active {
+    transform: scale(.97);
+}
+
+
+.home-login-icon {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   LOGGED USER
+========================================= */
+
+
+
+
+.home-user-avatar {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background:
+        rgba(255,255,255,.12);
+}
+
+
+.home-user-name {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+
+}

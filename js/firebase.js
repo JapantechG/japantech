@@ -10,6 +10,10 @@ import { initializeApp } from
     "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
 
 import {
+    getAuth
+} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+import {
     getDatabase,
     ref,
     get,
@@ -56,9 +60,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
+const auth = getAuth(app);
+
 const db = getDatabase(app);
 
-
+export {
+    app,
+    auth,
+    db
+};
 // ============================================================
 // CURRENT CONNECTION
 // ============================================================

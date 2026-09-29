@@ -22,6 +22,18 @@ import {
 }
 from "./audio.js";
 
+import {
+    initI18n,
+    t
+} from "./i18n.js";
+
+import "./auth.js";
+
+/* =========================================
+   I18N
+========================================= */
+
+initI18n();
 
 /* =============================================================
    DOM
@@ -43,6 +55,79 @@ const gameOverScreen =
     document.getElementById(
         "gameOverScreen"
     );
+
+const homeLoginBtn =
+    document.getElementById(
+        "homeLoginBtn"
+    );
+
+    const homeLanguage =
+    document.getElementById(
+        "homeLanguage"
+    );
+
+const authLanguage =
+    document.getElementById(
+        "authLanguage"
+    );
+
+
+
+function setUILanguage(language) {
+
+    homeLanguage.value =
+        language;
+
+    authLanguage.value =
+        language;
+
+
+    localStorage.setItem(
+        "batlingo_ui_language",
+        language
+    );
+
+
+    /*
+       Bước sau:
+
+       I18n.setLanguage(language);
+    */
+
+}
+
+
+homeLanguage.addEventListener(
+    "change",
+    event => {
+
+        setUILanguage(
+            event.target.value
+        );
+
+    }
+);
+
+
+authLanguage.addEventListener(
+    "change",
+    event => {
+
+        setUILanguage(
+            event.target.value
+        );
+
+    }
+);
+
+homeLoginBtn.addEventListener(
+    "click",
+    () => {
+
+        BatLingoAuthUI.open();
+
+    }
+);
 
 
 /* =============================================================
@@ -283,3 +368,17 @@ document.addEventListener(
     "pointerdown",
     enableAudio
 );
+
+function handleBattleClick() {
+
+    if (!window.currentUser) {
+
+        BatLingoAuthUI.open();
+
+        return;
+    }
+
+
+    openLobby();
+
+}

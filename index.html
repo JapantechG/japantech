@@ -36,33 +36,98 @@
     <link rel="stylesheet" href="css/lobby.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/pvp.css">
+    <link rel="stylesheet" href="./css/auth.css">
 </head>
 
 <body>
-
+  
     <!-- =====================================================
          LOBBY
          ===================================================== -->
 
     <section id="setupScreen" class="setup-screen">
 
-        <div class="screen-overlay"></div>
+        <!-- BACKGROUND OVERLAY -->
+        <div class="lobby-overlay"></div>
 
         <header class="lobby-header">
 
-            <div class="mini-logo">
-                BAT<span>LINGO</span>
-            </div>
+    <div class="mini-logo">
+        BAT<span>LINGO</span>
+    </div>
 
-            <button
-                id="menuButton"
-                class="menu-button"
-                type="button"
-            >
-                ☰
-            </button>
 
-        </header>
+    <!-- TOP ACTIONS -->
+    <div class="home-actions">
+
+        <!-- MENU -->
+        <button
+            id="menuButton"
+            class="top-action-btn menu-button"
+            type="button"
+            aria-label="Menu">
+
+            ☰
+
+        </button>
+
+
+        <!-- LANGUAGE -->
+        <div class="top-language">
+
+            <span class="top-language-icon">
+                🌐
+            </span>
+
+            <select
+                id="homeLanguage"
+                class="top-language-select"
+                aria-label="Interface Language">
+
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="vi">Tiếng Việt</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- LOGIN -->
+        <button
+            id="homeLoginBtn"
+            class="top-action-btn login-button"
+            type="button">
+
+            <span>♟</span>
+
+            <span data-i18n="home.login">
+                Login
+            </span>
+
+        </button>
+
+
+        <!-- USER - sau khi login -->
+        <button
+            id="homeUserBtn"
+            class="top-user-btn hidden"
+            type="button">
+
+            <img
+                id="homeUserAvatar"
+                class="top-user-avatar"
+                alt="User">
+
+            <span id="homeUserName"></span>
+
+        </button>
+
+    </div>
+
+</header>
+        
 
 
         <div class="setup-container">
@@ -80,7 +145,7 @@
 
             <div class="selector-section">
 
-                <div class="selector-label">
+                <div class="selector-label" data-i18n="home.battleMode">
                     BATTLE MODE
                 </div>
 
@@ -120,7 +185,7 @@
 
             <div class="selector-section">
 
-                <div class="selector-label">
+                <div class="selector-label" data-i18n="home.studyMode">
                     STUDY MODE
                 </div>
 
@@ -909,6 +974,467 @@
 
     </aside>
 
+    <!-- =========================================
+     AUTH SCREEN
+========================================= -->
+<section id="authScreen" class="screen auth-screen hidden">
+
+    <div class="auth-container">
+
+        <!-- TOP -->
+        <div class="auth-top">
+
+            <button
+                id="authBackBtn"
+                class="auth-back-btn"
+                type="button"
+                aria-label="Back">
+                ←
+            </button>
+
+            <select
+                id="authLanguage"
+                class="auth-language"
+                aria-label="Language">
+
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="vi">Tiếng Việt</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- BRAND -->
+        <div class="auth-brand">
+
+            <img
+                src="./assets/images/icons/apple-touch-icon.png"
+                class="auth-logo"
+                alt="BatLingo">
+
+            <h1>BatLingo</h1>
+
+            <p>LEARN • BATTLE • WIN</p>
+
+        </div>
+
+
+        <!-- =================================
+             LOGIN PANEL
+        ================================== -->
+        <div
+            id="loginPanel"
+            class="auth-panel">
+
+            <h2 data-i18n="auth.loginTitle">
+                Welcome back
+            </h2>
+
+            <p
+                class="auth-description"
+                data-i18n="auth.loginDescription">
+                Sign in to continue your battle.
+            </p>
+
+
+            <!-- EMAIL -->
+
+            <div class="auth-field">
+
+                <label
+                    for="loginEmail"
+                    data-i18n="auth.email">
+                    Email
+                </label>
+
+                <input
+                    id="loginEmail"
+                    type="email"
+                    autocomplete="email"
+                    data-i18n-placeholder="auth.emailPlaceholder"
+                    placeholder="example@email.com">
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="auth-field">
+
+                <label
+                    for="loginPassword"
+                    data-i18n="auth.password">
+                    Password
+                </label>
+
+                <div class="auth-password-box">
+
+                    <input
+                        id="loginPassword"
+                        type="password"
+                        autocomplete="current-password"
+                        data-i18n-placeholder="auth.passwordPlaceholder"
+                        placeholder="Password">
+
+                    <button
+                        class="auth-eye"
+                        type="button"
+                        data-password-target="loginPassword"
+                        aria-label="Show password">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="forgotPasswordBtn"
+                class="auth-link auth-forgot"
+                type="button"
+                data-i18n="auth.forgotPassword">
+
+                Forgot password?
+
+            </button>
+
+
+            <!-- ERROR -->
+
+            <div
+                id="loginError"
+                class="auth-message auth-error hidden">
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <button
+                id="emailLoginBtn"
+                class="auth-primary-btn"
+                type="button"
+                data-i18n="auth.login">
+
+                LOGIN
+
+            </button>
+
+
+            <!-- OR -->
+
+            <div class="auth-divider">
+
+                <span></span>
+
+                <p data-i18n="auth.or">
+                    OR
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- GOOGLE -->
+
+            <button
+                id="googleLoginBtn"
+                class="auth-google-btn"
+                type="button">
+
+                <span class="google-logo">G</span>
+
+                <span data-i18n="auth.google">
+                    Continue with Google
+                </span>
+
+            </button>
+
+
+            <!-- SIGN UP -->
+
+            <div class="auth-switch">
+
+                <span data-i18n="auth.noAccount">
+                    Don't have an account?
+                </span>
+
+                <button
+                    id="openSignupBtn"
+                    class="auth-link"
+                    type="button"
+                    data-i18n="auth.signup">
+
+                    Sign up
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             SIGN UP PANEL
+        ================================== -->
+        <div
+            id="signupPanel"
+            class="auth-panel hidden">
+
+            <h2 data-i18n="auth.createAccount">
+                Create account
+            </h2>
+
+            <p
+                class="auth-description"
+                data-i18n="auth.signupDescription">
+
+                Create your BatLingo account.
+
+            </p>
+
+
+            <!-- EMAIL -->
+
+            <div class="auth-field">
+
+                <label
+                    for="signupEmail"
+                    data-i18n="auth.email">
+
+                    Email
+
+                </label>
+
+                <input
+                    id="signupEmail"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="example@email.com">
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="auth-field">
+
+                <label
+                    for="signupPassword"
+                    data-i18n="auth.password">
+
+                    Password
+
+                </label>
+
+                <div class="auth-password-box">
+
+                    <input
+                        id="signupPassword"
+                        type="password"
+                        autocomplete="new-password">
+
+                    <button
+                        class="auth-eye"
+                        type="button"
+                        data-password-target="signupPassword">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORD RULES -->
+
+            <div class="password-rules">
+
+                <div
+                    id="passwordRuleLength"
+                    class="password-rule">
+
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleLength">
+                        8–64 characters
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="passwordRuleUpper"
+                    class="password-rule">
+
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleUpper">
+                        At least 1 uppercase letter
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="passwordRuleLower"
+                    class="password-rule">
+
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleLower">
+                        At least 1 lowercase letter
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="passwordRuleNumber"
+                    class="password-rule">
+
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleNumber">
+                        At least 1 number
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="auth-field">
+
+                <label
+                    for="signupPasswordConfirm"
+                    data-i18n="auth.confirmPassword">
+
+                    Confirm password
+
+                </label>
+
+                <div class="auth-password-box">
+
+                    <input
+                        id="signupPasswordConfirm"
+                        type="password"
+                        autocomplete="new-password">
+
+                    <button
+                        class="auth-eye"
+                        type="button"
+                        data-password-target="signupPasswordConfirm">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="signupError"
+                class="auth-message auth-error hidden">
+            </div>
+
+
+            <button
+                id="createAccountBtn"
+                class="auth-primary-btn"
+                type="button"
+                data-i18n="auth.createAccount">
+
+                CREATE ACCOUNT
+
+            </button>
+
+
+            <div class="auth-switch">
+
+                <span data-i18n="auth.haveAccount">
+                    Already have an account?
+                </span>
+
+                <button
+                    id="backLoginBtn"
+                    class="auth-link"
+                    type="button"
+                    data-i18n="auth.login">
+
+                    Login
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             VERIFY EMAIL
+        ================================== -->
+        <div
+            id="verifyPanel"
+            class="auth-panel auth-center hidden">
+
+            <div class="verify-icon">
+                ✉
+            </div>
+
+            <h2 data-i18n="auth.verifyTitle">
+                Check your email
+            </h2>
+
+            <p data-i18n="auth.verifyDescription">
+                We sent a verification link to:
+            </p>
+
+            <strong id="verifyEmailAddress"></strong>
+
+            <p
+                class="verify-note"
+                data-i18n="auth.verifyNote">
+
+                Open the email and click the verification link before logging in.
+
+            </p>
+
+                <button
+                id="resendVerifyBtn"
+                class="auth-resend-btn"
+                type="button"
+            >
+                RESEND EMAIL
+            </button>
+            <button
+                id="verifyBackLoginBtn"
+                class="auth-primary-btn"
+                type="button"
+                data-i18n="auth.backLogin">
+
+                BACK TO LOGIN
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 
     <!-- =====================================================
@@ -941,16 +1467,11 @@
         src="assets/audio/sfx/wrong.mp3"
     ></audio>
 
-    <audio
-        id="gameoverSound"
-        src="assets/audio/sfx/gameover.mp3"
-    ></audio>
+    <audio id="gameoverSound" src="assets/audio/sfx/gameover.mp3"></audio>
 
+    <script type="module" src="js/main.js"></script>
 
-    <script
-        type="module"
-        src="js/main.js"
-    ></script>
+    <script src="./js/auth-ui.js"></script>
 
 </body>
 

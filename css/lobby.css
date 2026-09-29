@@ -320,3 +320,321 @@
         margin-bottom: 18px;
     }
 }
+/* =========================================
+   LOBBY HEADER
+========================================= */
+
+.lobby-header {
+    position: absolute;
+
+    top: max(
+        16px,
+        env(safe-area-inset-top)
+    );
+
+    left: 20px;
+    right: 20px;
+
+    z-index: 50;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    pointer-events: none;
+}
+
+
+/* Cho các control nhận click */
+.lobby-header button,
+.lobby-header select,
+.home-actions {
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   TOP ACTION GROUP
+========================================= */
+
+.home-actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   COMMON BUTTON
+========================================= */
+
+.top-action-btn,
+.top-language,
+.top-user-btn {
+    height: 42px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+    background:
+        rgba(8, 13, 23, .72);
+
+    color: #fff;
+
+    backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 4px 14px
+        rgba(0,0,0,.25);
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.top-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 14px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        transform .1s ease;
+}
+
+
+.top-action-btn:hover {
+    background:
+        rgba(25,35,55,.9);
+}
+
+
+.top-action-btn:active {
+    transform: scale(.96);
+}
+
+
+/* Menu chỉ cần icon */
+.menu-button {
+    width: 42px;
+
+    padding: 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   LANGUAGE
+========================================= */
+
+.top-language {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        0 8px
+        0 12px;
+
+    border-radius: 12px;
+}
+
+
+.top-language-icon {
+    font-size: 14px;
+}
+
+
+.top-language-select {
+    height: 100%;
+
+    min-width: 82px;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.top-language-select option {
+    color: #111;
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-button {
+    min-width: 92px;
+}
+
+
+/* =========================================
+   LOGGED USER
+========================================= */
+
+.top-user-btn {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    max-width: 150px;
+
+    padding:
+        4px 12px
+        4px 5px;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+}
+
+
+.top-user-avatar {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+#homeUserName {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .lobby-header {
+        top: max(
+            10px,
+            env(safe-area-inset-top)
+        );
+
+        left: 10px;
+        right: 10px;
+    }
+
+
+    .home-actions {
+        gap: 5px;
+    }
+
+
+    .menu-button {
+        width: 38px;
+    }
+
+
+    .top-action-btn,
+    .top-language,
+    .top-user-btn {
+        height: 38px;
+    }
+
+
+    .top-language {
+        padding:
+            0 5px
+            0 8px;
+    }
+
+
+    .top-language-select {
+        min-width: 65px;
+        max-width: 80px;
+
+        font-size: 12px;
+    }
+
+
+    .login-button {
+        min-width: auto;
+
+        padding:
+            0 10px;
+    }
+
+
+    .mini-logo {
+        display: none;
+    }
+
+}
+/* =========================================
+   LOBBY BACKGROUND OVERLAY
+========================================= */
+
+.setup-screen {
+    position: relative;
+}
+
+.lobby-overlay {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(3, 8, 18, 0.50) 0%,
+            rgba(3, 8, 18, 0.55) 50%,
+            rgba(3, 8, 18, 0.65) 100%
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+/* UI nằm trên overlay nhưng KHÔNG đổi position */
+.lobby-header {
+    z-index: 2;
+}
+
+.setup-container {
+    position: relative;
+    z-index: 2;
+}
+

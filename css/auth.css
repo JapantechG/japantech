@@ -1,0 +1,603 @@
+/* =========================================
+   AUTH SCREEN
+========================================= */
+
+.auth-screen {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #273449 0%,
+            #111827 45%,
+            #080d16 100%
+        );
+
+    color: #fff;
+}
+
+
+.auth-screen.hidden,
+.auth-panel.hidden,
+.auth-message.hidden {
+    display: none;
+}
+
+
+.auth-container {
+    width: min(100%, 440px);
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding:
+        max(18px, env(safe-area-inset-top))
+        22px
+        max(30px, env(safe-area-inset-bottom));
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.auth-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 42px;
+}
+
+
+.auth-back-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+    color: #fff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.auth-language {
+    height: 38px;
+
+    padding: 0 12px;
+
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 10px;
+
+    background: rgba(0,0,0,.25);
+    color: #fff;
+
+    outline: none;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.auth-brand {
+    margin: 18px 0 25px;
+
+    text-align: center;
+}
+
+
+.auth-logo {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+}
+
+
+.auth-brand h1 {
+    margin: 5px 0 2px;
+
+    font-size: 30px;
+}
+
+
+.auth-brand p {
+    margin: 0;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    opacity: .55;
+}
+
+
+/* =========================================
+   PANEL
+========================================= */
+
+.auth-panel {
+    padding: 25px;
+
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.065);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.28);
+
+    backdrop-filter: blur(14px);
+}
+
+
+.auth-panel h2 {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+
+.auth-description {
+    margin: 7px 0 25px;
+
+    font-size: 14px;
+
+    opacity: .62;
+}
+
+
+/* =========================================
+   FIELD
+========================================= */
+
+.auth-field {
+    margin-bottom: 16px;
+}
+
+
+.auth-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    opacity: .8;
+}
+
+
+.auth-field input {
+    width: 100%;
+    height: 49px;
+
+    padding: 0 14px;
+
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 11px;
+
+    background: rgba(0,0,0,.25);
+    color: #fff;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.auth-field input:focus {
+    border-color: rgba(255,255,255,.55);
+}
+
+
+.auth-password-box {
+    position: relative;
+}
+
+
+.auth-password-box input {
+    padding-right: 50px;
+}
+
+
+.auth-eye {
+    position: absolute;
+
+    right: 5px;
+    top: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    transform: translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.auth-primary-btn {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 10px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #fff;
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .12s ease,
+        opacity .12s ease;
+}
+
+
+.auth-primary-btn:active {
+    transform: scale(.98);
+}
+
+
+.auth-primary-btn:disabled {
+    opacity: .45;
+
+    cursor: default;
+}
+
+
+.auth-link {
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #fff;
+
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.auth-forgot {
+    display: block;
+
+    margin:
+        -4px 0 18px
+        auto;
+
+    font-size: 12px;
+
+    opacity: .75;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 22px 0;
+}
+
+
+.auth-divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255,255,255,.12);
+}
+
+
+.auth-divider p {
+    margin: 0;
+
+    font-size: 11px;
+
+    opacity: .45;
+}
+
+
+/* =========================================
+   GOOGLE
+========================================= */
+
+.auth-google-btn {
+    width: 100%;
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 11px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.08);
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.google-logo {
+    display: grid;
+    place-items: center;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #fff;
+    color: #222;
+
+    font-weight: 900;
+}
+
+
+/* =========================================
+   SWITCH
+========================================= */
+
+.auth-switch {
+    display: flex;
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 23px;
+
+    font-size: 13px;
+}
+
+
+.auth-switch > span {
+    opacity: .6;
+}
+
+
+/* =========================================
+   PASSWORD RULES
+========================================= */
+
+.password-rules {
+    display: grid;
+
+    gap: 6px;
+
+    margin:
+        -4px 0
+        19px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: rgba(0,0,0,.17);
+}
+
+
+.password-rule {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    opacity: .5;
+}
+
+
+.password-rule.valid {
+    opacity: 1;
+}
+
+
+.password-rule.valid > span:first-child::before {
+    content: "✓";
+
+    font-weight: bold;
+}
+
+
+.password-rule.valid > span:first-child {
+    font-size: 0;
+}
+
+
+.password-rule.valid > span:first-child::before {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.auth-message {
+    margin: 10px 0;
+
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+}
+
+
+.auth-error {
+    background: rgba(255,255,255,.08);
+}
+
+
+/* =========================================
+   VERIFY
+========================================= */
+
+.auth-center {
+    text-align: center;
+}
+
+
+.verify-icon {
+    display: grid;
+    place-items: center;
+
+    width: 70px;
+    height: 70px;
+
+    margin:
+        5px auto
+        20px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.1);
+
+    font-size: 30px;
+}
+
+
+.auth-center strong {
+    display: block;
+
+    margin: 12px 0;
+
+    word-break: break-word;
+}
+
+
+.verify-note {
+    margin: 20px 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    opacity: .6;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .auth-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    .auth-panel {
+        padding: 22px 18px;
+    }
+
+
+    .auth-brand {
+        margin-top: 8px;
+    }
+
+
+    .auth-logo {
+        width: 64px;
+        height: 64px;
+    }
+
+}
+
+/* =========================================
+   RESEND VERIFY EMAIL
+========================================= */
+
+.auth-resend-btn {
+    width: 100%;
+    min-height: 46px;
+
+    margin-top: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.auth-resend-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+
+    border-color: rgba(255, 255, 255, 0.38);
+}
+
+
+.auth-resend-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* Disabled / cooldown */
+
+.auth-resend-btn:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
