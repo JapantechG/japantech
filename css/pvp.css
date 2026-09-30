@@ -885,3 +885,32 @@
         0 0 12px
         rgba(251, 191, 36, 0.15);
 }
+
+.pvp-rematch-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pvp-rematch-button {
+    min-width: 180px;
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.pvp-rematch-button:disabled {
+    opacity: 0.55;
+    cursor: default;
+}
+
+.pvp-rematch-status {
+    margin-top: 10px;
+    min-height: 20px;
+
+    font-size: 13px;
+    opacity: 0.8;
+}
