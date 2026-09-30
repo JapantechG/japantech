@@ -1,5 +1,7 @@
 import {
-    playSfx
+    playSfx,
+    speakJapanese,
+    stopSpeech
 }
 from "./audio.js";
 
@@ -294,10 +296,155 @@ function createQuestionIds(
         )
     );
 }
+/* =============================================================
+   PVP MODE
+   ============================================================= */
 
+function isPvpAudioMode(
+    mode
+) {
+
+    return (
+        mode === "audio_hiragana"
+        ||
+        mode === "audio_meaning"
+        ||
+        mode === "audio_kanji"
+    );
+}
+
+
+function getPvpAnswerField(
+    mode
+) {
+
+    switch (mode) {
+
+        case "kanji_hiragana":
+        case "audio_hiragana":
+
+            return "reading";
+
+
+        case "meaning_kanji":
+        case "audio_kanji":
+
+            return "word";
+
+
+        default:
+
+            return "meaning";
+    }
+}
+
+
+function showPvpQuestionContent(
+    data,
+    mode
+) {
+
+    /*
+        Xóa click của câu trước
+    */
+
+    pvpQuestion.onclick = null;
+
+
+    switch (mode) {
+
+        case "kanji_hiragana":
+
+            pvpQuestion.textContent =
+                data.word;
+
+            break;
+
+
+        case "hiragana_meaning":
+
+            pvpQuestion.textContent =
+                data.reading;
+
+            break;
+
+
+        case "meaning_kanji":
+
+            pvpQuestion.textContent =
+                data.meaning;
+
+            break;
+
+
+        case "audio_hiragana":
+        case "audio_meaning":
+        case "audio_kanji":
+
+            /*
+                Audio mode:
+                chỉ hiện loa
+            */
+
+            pvpQuestion.textContent =
+                "🔊";
+
+
+            /*
+                Click loa để nghe lại
+            */
+
+            pvpQuestion.onclick =
+                () => {
+
+                    if (
+                        answerLocked
+                    ) {
+                        return;
+                    }
+
+
+                    speakJapanese(
+                        data.reading
+                    );
+                };
+
+
+            /*
+                Tự đọc 1 lần
+            */
+
+            setTimeout(
+                () => {
+
+                    if (
+                        !answerLocked
+                    ) {
+
+                        speakJapanese(
+                            data.reading
+                        );
+                    }
+
+                },
+                200
+            );
+
+            break;
+
+
+        default:
+
+            pvpQuestion.textContent =
+                data.word;
+
+            break;
+    }
+}
 function showPvpQuestion(match) 
 {
-
+        stopSpeech();
+    
         pvpHostCard.classList.remove("locked","correct","wrong");
 
         pvpGuestCard.classList.remove(
@@ -359,20 +506,26 @@ function showPvpQuestion(match)
         `QUESTION ${index + 1}`;
 
 
-    /*
-        Question
-    */
-
-    pvpQuestion.textContent =
-        data.word;
-
-
-    /*
-        Reading
-    */
-
-    pvpReading.textContent =
-        data.reading || "";
+    const mode = match.mode;
+    
+    
+        /*
+            Không hiện reading sẵn.
+            Nếu KANJI → HIRAGANA sẽ lộ đáp án.
+        */
+        
+        pvpReading.textContent =
+            "";
+        
+        
+        /*
+            Render question theo mode HOST đã chọn
+        */
+        
+        showPvpQuestionContent(
+            data,
+            mode
+        );
 
     console.log(
         "[PVP] Showing question:",
@@ -412,6 +565,7 @@ pvpAnswers.innerHTML =
 /*
     Render 4 đáp án
 */
+const answerField =getPvpAnswerField(mode);
 
 questionData.optionIds.forEach(
     (
@@ -440,16 +594,13 @@ questionData.optionIds.forEach(
             "answer-button";
 
 
-        button.type =
-            "button";
+        button.type = "button";
 
 
-        button.dataset.optionId =
-            optionId;
+        button.dataset.optionId = optionId;
 
 
-        button.textContent =
-            option.meaning;
+        button.textContent = option[answerField];
 
          /*
             Click answer
