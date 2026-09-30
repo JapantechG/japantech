@@ -632,22 +632,19 @@ questionData.optionIds.forEach(
             Click answer
         */
 
-        button.addEventListener(
-            "click",
-            () => {
-
-                selectPvpAnswer(optionId,button);
-
-            }
-        );
+        button.addEventListener("click",() => {selectPvpAnswer(optionId,button);});
 
 
-        pvpAnswers.appendChild(
-            button
-        );
+        pvpAnswers.appendChild(button);
 
      }
         );
+
+    /*
+    Mỗi câu PvP = 10 giây
+    */
+
+    startPvpTimer();
 
 }
 
@@ -674,6 +671,7 @@ async function selectPvpAnswer(optionId,selectedButton)
 
     playSfx("click");
 
+    stopPvpTimer();
 
     const buttons = pvpAnswers.querySelectorAll(".answer-button");
 
@@ -2311,5 +2309,149 @@ async function startPvpRematch()
 
         pvpRematchStatus.textContent =
             "REMATCH START ERROR";
+    }
+}
+
+function startPvpTimer()
+{
+    stopPvpTimer();
+
+
+    pvpTimeLeft =
+        PVP_QUESTION_TIME;
+
+
+    updatePvpTimer();
+
+
+    pvpTimer =
+        setInterval(
+            () => {
+
+                pvpTimeLeft -=
+                    0.1;
+
+
+                if (
+                    pvpTimeLeft <= 0
+                ) {
+
+                    pvpTimeLeft = 0;
+
+                    updatePvpTimer();
+
+                    stopPvpTimer();
+
+                    handlePvpTimeout();
+
+                    return;
+                }
+
+
+                updatePvpTimer();
+
+            },
+            100
+        );
+}
+
+
+function stopPvpTimer()
+{
+    if (!pvpTimer) {
+        return;
+    }
+
+
+    clearInterval(
+        pvpTimer
+    );
+
+
+    pvpTimer = null;
+}
+
+
+function updatePvpTimer()
+{
+    pvpTimerText.textContent =
+        pvpTimeLeft.toFixed(1);
+
+
+    const percent =
+        Math.max(
+            0,
+            (
+                pvpTimeLeft
+                /
+                PVP_QUESTION_TIME
+            )
+            *
+            100
+        );
+
+
+    pvpTimerBar.style.width =
+        `${percent}%`;
+}
+
+async function handlePvpTimeout()
+{
+    if (
+        answerLocked
+        ||
+        !currentPvpRoom?.match
+    ) {
+        return;
+    }
+
+
+    answerLocked = true;
+
+    stopSpeech();
+
+
+    console.log(
+        "[PVP] Answer timeout"
+    );
+
+
+    /*
+        Khóa 4 đáp án
+    */
+
+    const buttons =
+        pvpAnswers.querySelectorAll(
+            "button"
+        );
+
+
+    buttons.forEach(
+        button => {
+
+            button.disabled = true;
+        }
+    );
+
+
+    /*
+        Gửi TIMEOUT như một answer.
+        optionId = null
+    */
+
+    try {
+
+        await submitRoomAnswer(
+            currentPvpRoom.match.currentQuestion,
+            null
+        );
+
+    }
+    catch (error) {
+
+        console.error(
+            "[PVP] Timeout submit error:",
+            error
+        );
     }
 }
