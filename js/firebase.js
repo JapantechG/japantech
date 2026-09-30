@@ -521,6 +521,7 @@ export async function startRoomGame(matchData) {
 
             finishedAt: null
 
+            rematch: null
             /*match: {
                 level: matchData.level,
 
