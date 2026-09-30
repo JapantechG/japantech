@@ -224,6 +224,16 @@ const pvpTimerBar =
         "pvpTimerBar"
     );
 
+const pvpTimerText =
+    document.getElementById(
+        "pvpTimerText"
+    );
+
+const pvpTimerBar =
+    document.getElementById(
+        "pvpTimerBar"
+    );
+
 async function loadPvpDatabase(
     level
 ) {
