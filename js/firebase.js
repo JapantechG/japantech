@@ -667,3 +667,32 @@ export function resetRoomConnection()
     playerId = null;
 
 }
+
+export async function requestRematch()
+{
+    if (
+        !roomCode ||
+        !playerRole
+    ) {
+        return;
+    }
+
+
+    const rematchRef =
+        ref(
+            db,
+            `rooms/${roomCode}/rematch/${playerRole}`
+        );
+
+
+    await set(
+        rematchRef,
+        true
+    );
+
+
+    console.log(
+        "[Firebase] Rematch accepted:",
+        playerRole
+    );
+}
