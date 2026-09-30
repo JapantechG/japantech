@@ -519,7 +519,7 @@ export async function startRoomGame(matchData) {
 
             startedAt: Date.now(),
 
-            finishedAt: null
+            finishedAt: null,
 
             rematch: null
             /*match: {
