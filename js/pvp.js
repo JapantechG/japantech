@@ -34,6 +34,12 @@ let currentMatchId = null;
 
 let rematchStarting = false;
 
+let pvpTimer = null;
+
+let pvpTimeLeft = 10;
+
+const PVP_QUESTION_TIME = 10;
+
 /* =============================================================
    DOM
    ============================================================= */
@@ -206,6 +212,16 @@ const pvpRematchButton =
 const pvpRematchStatus =
     document.getElementById(
         "pvpRematchStatus"
+    );
+
+const pvpTimerText =
+    document.getElementById(
+        "pvpTimerText"
+    );
+
+const pvpTimerBar =
+    document.getElementById(
+        "pvpTimerBar"
     );
 
 async function loadPvpDatabase(
