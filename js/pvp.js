@@ -10,6 +10,7 @@ import {
     submitRoomAnswer,
     nextRoomQuestion,
     finishRoomGame,
+    requestRematch,
     resetRoomConnection
 } from "./firebase.js";
 
@@ -192,6 +193,16 @@ const pvpScreen =
 const pvpLevel =
     document.getElementById(
         "pvpLevel"
+    );
+
+const pvpRematchButton =
+    document.getElementById(
+        "pvpRematchButton"
+    );
+
+const pvpRematchStatus =
+    document.getElementById(
+        "pvpRematchStatus"
     );
 
 async function loadPvpDatabase(
@@ -922,6 +933,8 @@ window.addEventListener("batlingo-room-update",event =>
             {
 
                 showPvpResult(room);
+
+                updateRematchState(room);
 
                 return;
             }
@@ -1898,5 +1911,100 @@ function showPvpResult(room)
 
         pvpResultMessage.textContent = "DRAW";
 
+    }
+}
+
+pvpRematchButton.addEventListener(
+    "click",
+    async () => {
+
+        try {
+
+            pvpRematchButton.disabled = true;
+
+            pvpRematchStatus.textContent =
+                "WAITING FOR OPPONENT...";
+
+
+            await requestRematch();
+
+        }
+        catch (error) {
+
+            console.error(
+                "[PVP] Rematch error:",
+                error
+            );
+
+
+            pvpRematchButton.disabled = false;
+
+            pvpRematchStatus.textContent =
+                "REMATCH ERROR";
+        }
+    }
+);
+
+function updateRematchState(room)
+{
+    const hostAccepted =
+        room.rematch?.host === true;
+
+    const guestAccepted =
+        room.rematch?.guest === true;
+
+
+    if (
+        hostAccepted &&
+        guestAccepted
+    ) {
+
+        pvpRematchStatus.textContent =
+            "BOTH PLAYERS READY";
+
+        return;
+    }
+
+
+    if (
+        currentPlayerRole === "host"
+    ) {
+
+        if (hostAccepted) {
+
+            pvpRematchButton.disabled = true;
+
+            pvpRematchStatus.textContent =
+                "WAITING FOR OPPONENT...";
+        }
+        else {
+
+            pvpRematchButton.disabled = false;
+
+            pvpRematchStatus.textContent =
+                guestAccepted
+                    ? "OPPONENT WANTS A REMATCH"
+                    : "";
+        }
+
+    }
+    else {
+
+        if (guestAccepted) {
+
+            pvpRematchButton.disabled = true;
+
+            pvpRematchStatus.textContent =
+                "WAITING FOR OPPONENT...";
+        }
+        else {
+
+            pvpRematchButton.disabled = false;
+
+            pvpRematchStatus.textContent =
+                hostAccepted
+                    ? "OPPONENT WANTS A REMATCH"
+                    : "";
+        }
     }
 }
