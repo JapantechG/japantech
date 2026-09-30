@@ -1842,7 +1842,14 @@ document.getElementById("leaveRoomButton").addEventListener("click",() =>
    ============================================================= */
 
 function resetPvpScreen() {
+    stopPvpTimer();
 
+    stopSpeech();
+    
+    pvpTimeLeft = PVP_QUESTION_TIME;
+    
+    updatePvpTimer();
+    
     waitingRoomPanel.classList.add("hidden");
 
 
@@ -2048,7 +2055,9 @@ startBattleButton.addEventListener("click",async () =>
 
 function showPvpResult(room) 
 {
-
+    stopPvpTimer();
+    stopSpeech();
+    
     const hostScore = room.match?.hostScore || 0;
 
 
@@ -2313,12 +2322,16 @@ async function startPvpRematch()
 }
 
 function startPvpTimer()
-{
+{    
+     /*
+        Dừng timer câu trước nếu còn
+    */
     stopPvpTimer();
 
-
-    pvpTimeLeft =
-        PVP_QUESTION_TIME;
+     /*
+        Reset mỗi câu về 10 giây
+    */
+    pvpTimeLeft = PVP_QUESTION_TIME;
 
 
     updatePvpTimer();
@@ -2443,7 +2456,7 @@ async function handlePvpTimeout()
 
         await submitRoomAnswer(
             currentPvpRoom.match.currentQuestion,
-            null
+            "TIMEOUT"
         );
 
     }
