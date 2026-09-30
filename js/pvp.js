@@ -1612,6 +1612,14 @@ function openWaitingRoom(
 
     currentRoomCode.textContent =
         roomCode;
+
+    /* START button state */
+
+    startBattleButton.disabled = false;
+
+    startBattleButton.classList.add(
+        "hidden"
+    );
 }
 
 
@@ -1644,6 +1652,14 @@ function resetPvpScreen() {
 
 
     roomSelectPanel.classList.remove("hidden");
+
+       /* Reset START button */
+
+    startBattleButton.disabled = false;
+
+    startBattleButton.classList.add(
+        "hidden"
+    );
 
      /* Battle screen */
 
