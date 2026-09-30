@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/pvp.css">
     <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="css/flashcard.css">
 </head>
 
 <body>
@@ -529,7 +530,197 @@
         </div>
 
     </main>
+    <!-- =========================================================
+     FLASHCARD SCREEN
+     ========================================================= -->
 
+<section id="flashcardScreen" class="flashcard-screen hidden">
+    <div class="flashcard-brand">
+    <span class="flashcard-brand-bat">
+        Bat
+    </span>
+    <span class="flashcard-brand-lingo">
+        Lingo
+    </span>
+    </div>
+    <!-- HEADER -->
+    <div class="flashcard-header">
+
+        <button
+            id="flashcardBackButton"
+            class="flashcard-back-button"
+            type="button"
+        >
+            ←
+        </button>
+
+        <div class="flashcard-header-info">
+
+            <div
+                id="flashcardLevel"
+                class="flashcard-level"
+            >
+                N1 - VOCABULARY
+            </div>
+
+            <div
+                id="flashcardProgress"
+                class="flashcard-progress"
+            >
+                1 / 100
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CARD AREA
+         ===================================================== -->
+
+    <div class="flashcard-container">
+
+        <button
+            id="flashcardAutoButton"
+            class="flashcard-auto-button"
+            type="button"
+        >
+        <span
+            id="flashcardAutoIcon"
+            class="flashcard-auto-icon"
+        >
+            ▶
+        </span>
+
+        <span id="flashcardAutoText">
+            AUTO
+        </span>
+        </button>
+
+        <div
+            id="flashcard"
+            class="flashcard"
+        >
+
+            <!-- =========================
+                 FRONT
+                 ========================= -->
+
+            <div
+                id="flashcardFront"
+                class="flashcard-face flashcard-front"
+            >
+
+                <div
+                    id="flashcardQuestion"
+                    class="flashcard-question"
+                >
+                    促進
+                </div>
+
+                <div class="flashcard-tap-hint">
+                    TAP TO REVEAL
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 BACK
+                 ========================= -->
+
+            <div
+                id="flashcardBack"
+                class="flashcard-face flashcard-back hidden"
+            >
+
+                <button
+                    class="flashcard-audio-button"
+                    data-flashcard-audio
+                    type="button"
+                    aria-label="Play audio"
+                >
+                    🔊
+                </button>
+
+
+                <div
+                    id="flashcardPrimary"
+                    class="flashcard-primary"
+                >
+                    そくしん
+                </div>
+
+
+                <div
+                    id="flashcardSecondary"
+                    class="flashcard-secondary"
+                >
+                    thúc đẩy, xúc tiến
+                </div>
+
+
+                <div
+                    id="flashcardExtra"
+                    class="flashcard-extra"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             RATING
+             ================================================= -->
+
+        <div
+            id="flashcardRating"
+            class="flashcard-rating hidden"
+        >
+
+            <button
+                id="flashcardAgain"
+                class="flashcard-rate-button again"
+                type="button"
+            >
+                <span>AGAIN</span>
+            </button>
+
+
+            <button
+                id="flashcardHard"
+                class="flashcard-rate-button hard"
+                type="button"
+            >
+                <span>HARD</span>
+            </button>
+
+
+            <button
+                id="flashcardGood"
+                class="flashcard-rate-button good"
+                type="button"
+            >
+                <span>GOOD</span>
+            </button>
+
+
+            <button
+                id="flashcardEasy"
+                class="flashcard-rate-button easy"
+                type="button"
+            >
+                <span>EASY</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
 
     <!-- =====================================================

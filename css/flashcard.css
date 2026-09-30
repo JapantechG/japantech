@@ -1,0 +1,572 @@
+/* =========================================================
+   FLASHCARD SCREEN
+   ========================================================= */
+
+.flashcard-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(45, 65, 110, 0.95),
+            rgba(10, 15, 30, 0.98) 70%
+        );
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.flashcard-header {
+    position: relative;
+
+    width: 100%;
+
+    padding-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.flashcard-back-button {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    backdrop-filter: blur(8px);
+}
+
+
+.flashcard-header-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 44px;
+}
+
+
+.flashcard-level {
+    color: white;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.flashcard-progress {
+    margin-top: 4px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.flashcard-container {
+    flex: 1;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.flashcard {
+    position: relative;
+
+    width: min(520px, 90vw);
+    height: min(540px, 58vh);
+
+    min-height: 360px;
+
+    border-radius: 28px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    background: white;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.flashcard:active {
+    transform: scale(0.985);
+}
+
+
+/* =========================================================
+   CARD FACE
+   ========================================================= */
+
+.flashcard-face {
+    position: absolute;
+    inset: 0;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FRONT
+   ========================================================= */
+
+.flashcard-front {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f2f4f8
+        );
+}
+
+
+.flashcard-question {
+    font-size: clamp(
+        42px,
+        10vw,
+        76px
+    );
+
+    font-weight: 800;
+
+    color: #151a28;
+
+    line-height: 1.25;
+
+    word-break: break-word;
+}
+
+
+.flashcard-tap-hint {
+    position: absolute;
+
+    bottom: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #999;
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+.flashcard-back {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #eef2f8
+        );
+}
+
+
+.flashcard-primary {
+    font-size: clamp(
+        32px,
+        8vw,
+        58px
+    );
+
+    font-weight: 800;
+
+    color: #171c29;
+
+    line-height: 1.3;
+}
+
+
+.flashcard-secondary {
+    margin-top: 22px;
+
+    font-size: clamp(
+        20px,
+        5vw,
+        30px
+    );
+
+    font-weight: 600;
+
+    color: #555d70;
+}
+
+
+.flashcard-extra {
+    margin-top: 14px;
+
+    font-size: 18px;
+
+    color: #8990a0;
+}
+
+
+/* =========================================================
+   AUDIO
+   ========================================================= */
+
+.flashcard-audio-button {
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    background: #edf0f6;
+}
+
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.flashcard-rating {
+    width: min(520px, 90vw);
+
+    margin-top: 22px;
+
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.flashcard-rate-button {
+    height: 52px;
+
+    border: none;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.12s ease,
+        background 0.12s ease;
+}
+
+
+.flashcard-rate-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+.flashcard-rate-button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   HIDDEN
+   ========================================================= */
+
+.flashcard-screen.hidden,
+.flashcard-face.hidden,
+.flashcard-rating.hidden {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .flashcard-header {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .flashcard-container {
+        justify-content: flex-start;
+
+        padding-top: 25px;
+    }
+
+
+    .flashcard {
+        width: 92vw;
+
+        height: min(
+            500px,
+            58vh
+        );
+
+        min-height: 340px;
+
+        border-radius: 22px;
+    }
+
+
+    .flashcard-face {
+        padding: 25px;
+    }
+
+
+    .flashcard-rating {
+        width: 92vw;
+
+        gap: 6px;
+
+        margin-top: 16px;
+    }
+
+
+    .flashcard-rate-button {
+        height: 48px;
+
+        font-size: 10px;
+    }
+
+}
+
+.flashcard-auto-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    width: fit-content;
+    min-width: 100px;
+    height: 38px;
+
+    margin:
+        0 auto
+        14px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 19px;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        border-color 0.2s ease;
+}
+
+
+.flashcard-auto-button:hover {
+    background:
+        rgba(255, 255, 255, 0.17);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.flashcard-auto-button:active {
+    transform:
+        scale(0.96);
+}
+
+
+.flashcard-auto-button.running {
+    background:
+        rgba(255, 255, 255, 0.20);
+
+    border-color:
+        rgba(255, 255, 255, 0.32);
+}
+
+
+.flashcard-auto-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 14px;
+
+    font-size: 11px;
+}
+
+
+/* =====================================
+   AUTO đang chạy
+===================================== */
+
+.flashcard-auto-button.running {
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color:
+        rgba(255, 255, 255, 0.30);
+}
+
+
+.flashcard-auto-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+
+    font-size: 11px;
+}
+
+.flashcard-brand {
+    position: absolute;
+
+    top: 18px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    letter-spacing: -0.8px;
+
+    z-index: 10;
+
+    user-select: none;
+}
+
+
+.flashcard-brand-bat {
+    color: #ffffff;
+}
+
+
+.flashcard-brand-lingo {
+    color: #ff8a00;
+}
+
+.flashcard-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(4, 8, 20, 0.72),
+            rgba(4, 8, 20, 0.82)
+        ),
+        url("../assets/images/backgrounds/flashcard-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow-y: auto;
+}

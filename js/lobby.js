@@ -23,6 +23,11 @@ const battleModes = [
     {
         id: "pvp",
         name: "1 VS 1"
+    },
+
+    {
+        id: "flashcard",
+        name: "FLASHCARD"
     }
 
 ];
@@ -343,7 +348,8 @@ function getTargets() {
 
 export function initLobby({
     onSolo,
-    onPvp
+    onPvp,
+    onFlashcard
 }) {
 
     /* BATTLE MODE */
@@ -664,13 +670,8 @@ export function initLobby({
        BATTLE BUTTON
        ========================================================= */
 
-    document
-    .getElementById(
-        "battleButton"
-    )
-    .addEventListener(
-        "click",
-        () => {
+    document.getElementById("battleButton").addEventListener("click",() => 
+        {
 
             /* =================================
                LOGIN CHECK
@@ -689,57 +690,56 @@ export function initLobby({
                CREATE BATTLE CONFIG
             ================================= */
 
-            const category =
-                categories[
-                    categoryIndex
-                ];
+            const category =categories[categoryIndex];
 
 
             const config = {
 
-                battleMode:
-                    battleModes[
-                        battleModeIndex
-                    ].id,
+                battleMode: battleModes[battleModeIndex].id,
 
-                studyMode:
-                    studyModes[
-                        studyModeIndex
-                    ].id,
+                studyMode: studyModes[studyModeIndex].id,
 
-                target:
-                    getTargets()[
-                        studyTargetIndex
-                    ].id,
+                target: getTargets()[studyTargetIndex].id,
 
-                category:
-                    category.id,
+                category: category.id,
 
-                subMode:
-                    subModes[
-                        category.id
-                    ][
-                        subModeIndex
-                    ].id
+                subMode: subModes[category.id][subModeIndex].id
 
             };
 
+                /*
+                SOLO
+            */
 
-            if (
-                config.battleMode ===
-                "solo"
-            ) {
-
-                stopLobbyMusic();
-
-                onSolo(config);
+            if (config.battleMode === "solo")
+            {
+                onSolo?.(config);
 
                 return;
+            }
 
+            /*
+                1 VS 1
+            */
+
+            if (config.battleMode === "pvp")
+            {
+                onPvp?.(config);
+
+                return;
             }
 
 
-            onPvp(config);
+            /*
+                FLASHCARD
+            */
+
+            if (config.battleMode === "flashcard")
+            {
+                onFlashcard?.(config);
+
+                return;
+            }
 
         }
     );

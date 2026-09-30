@@ -35,6 +35,12 @@ import {
     auth
 } from "./firebase.js";
 
+import {
+    initFlashcard,
+    closeFlashcard
+}
+from "./flashcard.js";
+
 /* =========================================
    I18N
 ========================================= */
@@ -95,7 +101,8 @@ const userMenuAvatar =
 const logoutBtn =
     document.getElementById("logoutBtn");
 
-
+const flashcardScreen =
+    document.getElementById("flashcardScreen");
 
 function setUILanguage(language) {
 
@@ -162,38 +169,39 @@ initLobby({
 
     /* SOLO */
 
-    onSolo: config => {
-
-        setupScreen.classList.add(
-            "hidden"
-        );
-
-
-        startGame(
-            config
-        );
+    onSolo: config => 
+    {
+        setupScreen.classList.add("hidden");
+        startGame(config);
 
     },
 
 
     /* 1 VS 1 */
 
-    onPvp: config => {
+    onPvp: config => 
+    {
+        setupScreen.classList.add("hidden");
 
-        setupScreen.classList.add(
-            "hidden"
-        );
+        pvpScreen.classList.remove("hidden");
 
+        initPvp(config);
 
-        pvpScreen.classList.remove(
-            "hidden"
-        );
+    },
 
+    /* =========================
+       FLASHCARD
+       ========================= */
 
-        initPvp(
-            config
-        );
+    onFlashcard: config =>
+    {
+        console.log("[MAIN] Start Flashcard:",config);
 
+        setupScreen.classList.add("hidden");
+
+        flashcardScreen.classList.remove("hidden");
+
+        initFlashcard(config);
     }
 
 });
@@ -631,8 +639,7 @@ logoutBtn?.addEventListener(
 
 function requireLogin() {
 
-    const user =
-        auth.currentUser;
+    const user = auth.currentUser;
 
 
     if (
@@ -650,3 +657,18 @@ function requireLogin() {
     return true;
 }
 
+window.addEventListener("batlingo-flashcard-close",() =>
+    {
+        flashcardScreen.classList.add(
+            "hidden"
+        );
+
+
+        setupScreen.classList.remove(
+            "hidden"
+        );
+
+
+        playLobbyMusic();
+    }
+);
