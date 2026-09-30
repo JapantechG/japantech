@@ -1319,6 +1319,12 @@ async function startPvpMatch(room)
 
                 revealStarted =false;
 
+                 rematchStarting = false;
+
+                pvpRematchButton.disabled = false;
+            
+                pvpRematchStatus.textContent = "";
+
                 /*Ẩn result cũ*/
 
                 pvpResultPanel.classList.add("hidden");
@@ -1674,6 +1680,12 @@ function resetPvpScreen() {
     startBattleButton.classList.add(
         "hidden"
     );
+
+    rematchStarting = false;
+
+    pvpRematchButton.disabled = false;
+        
+    pvpRematchStatus.textContent = "";
 
      /* Battle screen */
 
