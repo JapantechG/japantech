@@ -30,6 +30,7 @@ let currentPlayerRole = null;
 
 let currentMatchId = null;
 
+let rematchStarting = false;
 
 /* =============================================================
    DOM
@@ -1962,6 +1963,20 @@ function updateRematchState(room)
         pvpRematchStatus.textContent =
             "BOTH PLAYERS READY";
 
+           /*
+                Chỉ HOST tạo trận mới
+            */
+        
+            if (
+                currentPlayerRole === "host" &&
+                !rematchStarting
+            ) {
+        
+                rematchStarting = true;
+        
+                startPvpRematch();
+            }
+
         return;
     }
 
@@ -2006,5 +2021,106 @@ function updateRematchState(room)
                     ? "OPPONENT WANTS A REMATCH"
                     : "";
         }
+    }
+}
+
+async function startPvpRematch()
+{
+    try {
+
+        console.log(
+            "[PVP] Starting rematch..."
+        );
+
+
+        /*
+            Dùng lại config của trận vừa chơi
+        */
+
+        const oldMatch =
+            currentPvpRoom?.match;
+
+
+        if (!oldMatch) {
+
+            throw new Error(
+                "MATCH_NOT_FOUND"
+            );
+        }
+
+
+        /*
+            Load đúng database
+        */
+
+        const database =
+            await loadPvpDatabase(
+                oldMatch.level
+            );
+
+
+        /*
+            Random bộ 20 câu mới
+        */
+
+        const questionIds =
+            createQuestionIds(
+                database,
+                20
+            );
+
+
+        const questions =
+            createPvpQuestions(
+                database,
+                questionIds
+            );
+
+
+        /*
+            Tạo MATCH mới trong cùng ROOM
+        */
+
+        await startRoomGame(
+            {
+                level:
+                    oldMatch.level,
+
+                category:
+                    oldMatch.category,
+
+                mode:
+                    oldMatch.mode,
+
+                questionIds:
+                    questionIds,
+
+                questions:
+                    questions
+            }
+        );
+
+
+        console.log(
+            "[PVP] Rematch started."
+        );
+
+    }
+    catch (error) {
+
+        console.error(
+            "[PVP] Rematch start error:",
+            error
+        );
+
+
+        /*
+            Cho phép thử lại nếu start lỗi
+        */
+
+        rematchStarting = false;
+
+        pvpRematchStatus.textContent =
+            "REMATCH START ERROR";
     }
 }
