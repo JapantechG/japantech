@@ -224,6 +224,11 @@ const pvpTimerBar =
         "pvpTimerBar"
     );
 
+const pvpHostName = document.getElementById("pvpHostName");
+const pvpGuestName = document.getElementById("pvpGuestName");
+const pvpFinalHostName = document.getElementById("pvpFinalHostName");
+const pvpFinalGuestName = document.getElementById("pvpFinalGuestName");
+
 async function loadPvpDatabase(
     level
 ) {
@@ -1074,26 +1079,23 @@ export function initPvp(
 window.addEventListener("batlingo-room-update",event => 
     {
 
-        const {
-            roomCode,
-            playerRole,
-            room
-        } = event.detail;
+        const {roomCode,playerRole,room} = event.detail;
+        const hostName = room.host?.name || "Host";
+        const guestName = room.guest?.name || "Guest";
+
+        if (pvpHostName) pvpHostName.textContent = hostName;
+        if (pvpGuestName) pvpGuestName.textContent = guestName;
+    
+        if (pvpFinalHostName) pvpFinalHostName.textContent = hostName;
+        if (pvpFinalGuestName) pvpFinalGuestName.textContent = guestName;
 
         currentPvpRoom = room;
 
         currentPlayerRole =playerRole;
 
-        console.log(
-            "[PVP] Room:",
-            room
-        );
+        console.log("[PVP] Room:",room);
 
-
-        console.log(
-            "[PVP] Role:",
-            playerRole
-        );
+        console.log("[PVP] Role:",playerRole);
 
         if (room.status === "finished") 
             {
@@ -2080,7 +2082,7 @@ function showPvpResult(room)
     if (hostScore > guestScore) 
     {
 
-        pvpResultMessage.textContent = "PLAYER 1 WINS";
+        pvpResultMessage.textContent = `${hostName} WIN`;
 
         playerCards[0]?.classList.add("winner");
 
@@ -2088,7 +2090,7 @@ function showPvpResult(room)
     else if (guestScore > hostScore) 
     {
 
-        pvpResultMessage.textContent = "PLAYER 2 WINS";
+        pvpResultMessage.textContent = `${guestName} WIN`;
 
         playerCards[1]?.classList.add("winner");
 
