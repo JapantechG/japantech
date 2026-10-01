@@ -18,7 +18,11 @@ import {
 }
 from "./firebase.js";
 
-
+import {
+    calculateSoloExp,
+    applyExp
+}
+from "./progression.js";
 /* =========================================================
    USER SCHEMA
 ========================================================= */
@@ -750,28 +754,54 @@ export async function saveSoloResult({
     }
 
 
-    const statsRef =
+    /* =====================================================
+       CALCULATE EXP
+    ===================================================== */
+
+    const gainedExp =
+        calculateSoloExp({
+            correct,
+            wrong
+        });
+
+
+    const userRef =
         ref(
             db,
-            `users/${user.uid}/stats`
+            `users/${user.uid}`
         );
 
 
     /* =====================================================
-       UPDATE STATS
+       TRANSACTION
+
+       Stats + Progress cùng transaction.
     ===================================================== */
 
     const result =
         await runTransaction(
-            statsRef,
+            userRef,
 
             current => {
 
+                if (!current) {
+                    return current;
+                }
+
+
                 const stats =
-                    current || {};
+                    current.stats || {};
 
 
-                return {
+                const progress =
+                    current.progress || {};
+
+
+                /* =========================================
+                   STATS
+                ========================================= */
+
+                current.stats = {
 
                     ...stats,
 
@@ -824,6 +854,7 @@ export async function saveSoloResult({
                             Number(
                                 stats.bestCombo
                             ) || 0,
+
                             bestCombo
                         ),
 
@@ -833,10 +864,58 @@ export async function saveSoloResult({
                             Number(
                                 stats.bestSoloScore
                             ) || 0,
+
                             score
                         )
 
                 };
+
+
+                /* =========================================
+                   EXP / LEVEL
+                ========================================= */
+
+                const newProgress =
+                    applyExp(
+                        progress,
+                        gainedExp
+                    );
+
+
+                current.progress = {
+
+                    ...progress,
+
+                    level:
+                        newProgress.level,
+
+                    exp:
+                        newProgress.exp,
+
+                    totalExp:
+                        newProgress.totalExp,
+
+                    lastStudyAt:
+                        Date.now()
+
+                };
+
+
+                /* =========================================
+                   SYSTEM
+                ========================================= */
+
+                current.system = {
+
+                    ...(current.system || {}),
+
+                    lastUpdatedAt:
+                        Date.now()
+
+                };
+
+
+                return current;
 
             }
         );
@@ -845,25 +924,21 @@ export async function saveSoloResult({
     if (!result.committed) {
 
         throw new Error(
-            "SOLO_STATS_UPDATE_FAILED"
+            "SOLO_RESULT_UPDATE_FAILED"
         );
     }
 
 
-    const newStats =
+    const newUserData =
         result.snapshot.val();
 
 
     /* =====================================================
-       UPDATE LOCAL USER DATA
+       UPDATE LOCAL CACHE
     ===================================================== */
 
-    if (window.currentUserData) {
-
-        window.currentUserData.stats =
-            newStats;
-
-    }
+    window.currentUserData =
+        newUserData;
 
 
     console.log(
@@ -873,10 +948,22 @@ export async function saveSoloResult({
             questions,
             correct,
             wrong,
-            bestCombo
+            bestCombo,
+            gainedExp,
+            level:
+                newUserData
+                    ?.progress
+                    ?.level
         }
     );
 
 
-    return newStats;
+    return {
+
+        userData:
+            newUserData,
+
+        gainedExp
+
+    };
 }
