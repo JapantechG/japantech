@@ -713,3 +713,76 @@ profileBackBtn?.addEventListener(
 
     }
 );
+
+/* =========================================
+   PROFILE UPDATED
+========================================= */
+
+window.addEventListener(
+    "batlingo-profile-updated",
+
+    event => {
+
+        const {
+            displayName
+        } = event.detail;
+
+
+        /* HOME USER NAME */
+
+        const homeName =
+            homeUserBtn?.querySelector(
+                ".home-user-name"
+            );
+
+
+        if (homeName) {
+
+            homeName.textContent =
+                displayName;
+        }
+
+
+        /* USER MENU */
+
+        if (userMenuName) {
+
+            userMenuName.textContent =
+                displayName;
+        }
+
+
+        /* FALLBACK AVATAR */
+
+        const avatar =
+            homeUserBtn?.querySelector(
+                ".home-user-avatar"
+            );
+
+
+        const avatarFallback =
+            homeUserBtn?.querySelector(
+                ".home-user-avatar-fallback"
+            );
+
+
+        /*
+            Nếu không có ảnh thì đổi chữ
+            avatar theo tên mới.
+        */
+
+        if (
+            avatarFallback &&
+            avatar?.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            avatarFallback.textContent =
+                displayName
+                    .charAt(0)
+                    .toUpperCase();
+        }
+
+    }
+);
