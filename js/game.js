@@ -1444,43 +1444,29 @@ function endGame() {
 ========================================================= */
 saveSoloResult({
 
-    score:
-        score,
+    score: score,
 
-    questions:
-        questionCount,
+    /*questions: questionCount,*/
+    questions: correctCount + wrongCount,
 
-    correct:
-        correctCount,
+    correct: correctCount,
 
-    wrong:
-        wrongCount,
+    wrong: wrongCount,
 
-    bestCombo:
-        maxCombo
+    bestCombo: maxCombo
 
 })
-.catch(
-    error => {
+.catch(error => 
+    {
 
-        console.error(
-            "[SOLO] Save result failed:",
-            error
-        );
+        console.error("[SOLO] Save result failed:",error);
 
     }
 );
     
 const bestScoreKey = getBestScoreKey();
 
-    const oldBest =
-    Number(
-        localStorage.getItem(
-            bestScoreKey
-        )
-        ||
-        0
-    );
+    const oldBest = Number(localStorage.getItem(bestScoreKey)||0);
 
     /*## const oldBest =
         Number(
