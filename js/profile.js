@@ -77,88 +77,116 @@ const profileMessage =
         "profileMessage"
     );
 
+const profileLevel =
+    document.getElementById(
+        "profileLevel"
+    );
+
+
+const profileElo =
+    document.getElementById(
+        "profileElo"
+    );
+
+
+const profileExpText =
+    document.getElementById(
+        "profileExpText"
+    );
+
+
+const profileExpFill =
+    document.getElementById(
+        "profileExpFill"
+    );
+
+
+const profileBattles =
+    document.getElementById(
+        "profileBattles"
+    );
+
+
+const profileWins =
+    document.getElementById(
+        "profileWins"
+    );
+
+
+const profileLosses =
+    document.getElementById(
+        "profileLosses"
+    );
+
+
+const profileDraws =
+    document.getElementById(
+        "profileDraws"
+    );
+
+
+const profileWinRate =
+    document.getElementById(
+        "profileWinRate"
+    );
+
+
+const profileBestCombo =
+    document.getElementById(
+        "profileBestCombo"
+    );
+
 /* =========================================================
    OPEN
 ========================================================= */
 
 export function openProfile()
 {
-    const user =
-        window.currentUser;
+    const user = window.currentUser;
 
+    const userData = window.currentUserData;
 
-    const userData =
-        window.currentUserData;
-
-
-    if (
-        !user ||
-        !userData?.profile
-    ) {
+    if (!user || !userData?.profile) 
+    {
         return;
     }
+    
 
+    const profile = userData.profile;
 
-    const profile =
-        userData.profile;
+    renderPlayerStatus(userData);
 
+    const displayName = profile.displayName || "Player";
 
-    const displayName =
-        profile.displayName ||
-        "Player";
-
-
-    const batlingoId =
-        profile.batlingoId ||
-        "-";
-
+    const batlingoId = profile.batlingoId || "-";
 
     /* NAME */
 
-    profileDisplayName.textContent =
-        displayName;
+    profileDisplayName.textContent = displayName;
 
-
-    profileNameInput.value =
-        displayName;
-
+    profileNameInput.value = displayName;
 
     /* ID */
 
-    profileBatlingoId.textContent =
-        batlingoId;
+    profileBatlingoId.textContent = batlingoId;
 
-
-    profileIdReadonly.textContent =
-        batlingoId;
-
+    profileIdReadonly.textContent = batlingoId;
 
     /* EMAIL */
 
-    profileEmail.textContent =
-        user.email || "-";
-
+    profileEmail.textContent = user.email || "-";
 
     /* BIO */
 
-    profileBioInput.value =
-        profile.bio || "";
-
+    profileBioInput.value = profile.bio || "";
 
     /* AVATAR */
 
-    renderProfileAvatar(
-        profile.photoURL,
-        displayName
-    );
-
+    renderProfileAvatar(profile.photoURL,displayName);
 
     updateCounters();
 
-
-    profileScreen.classList.remove(
-        "hidden"
-    );
+    profileScreen.classList.remove("hidden");
 }
 
 
@@ -409,3 +437,169 @@ profileBioInput?.addEventListener(
     "input",
     updateCounters
 );
+
+/* =========================================================
+   PLAYER STATUS
+========================================================= */
+
+function renderPlayerStatus(
+    userData
+)
+{
+    const progress =
+        userData?.progress || {};
+
+
+    const rating =
+        userData?.rating || {};
+
+
+    const stats =
+        userData?.stats || {};
+
+
+    /* =========================================
+       LEVEL
+    ========================================= */
+
+    const level =
+        Number(
+            progress.level
+        ) || 1;
+
+
+    profileLevel.textContent =
+        level;
+
+
+    /* =========================================
+       ELO
+    ========================================= */
+
+    const elo =
+        Number(
+            rating.elo
+        ) || 1000;
+
+
+    profileElo.textContent =
+        elo;
+
+
+    /* =========================================
+       EXP
+
+       Hiện tại dùng 100 EXP / level.
+       Sau này ta tách thành Level System riêng.
+    ========================================= */
+
+    const exp =
+        Number(
+            progress.exp
+        ) || 0;
+
+
+    const expRequired =
+        100;
+
+
+    const expPercent =
+        Math.min(
+            100,
+            Math.max(
+                0,
+                (
+                    exp /
+                    expRequired
+                ) * 100
+            )
+        );
+
+
+    profileExpText.textContent =
+        `${exp} / ${expRequired}`;
+
+
+    profileExpFill.style.width =
+        `${expPercent}%`;
+
+
+    /* =========================================
+       BATTLE STATS
+    ========================================= */
+
+    const battles =
+        Number(
+            stats.totalGames
+        ) || 0;
+
+
+    const wins =
+        Number(
+            stats.wins
+        ) || 0;
+
+
+    const losses =
+        Number(
+            stats.losses
+        ) || 0;
+
+
+    const draws =
+        Number(
+            stats.draws
+        ) || 0;
+
+
+    const bestCombo =
+        Number(
+            stats.bestCombo
+        ) || 0;
+
+
+    profileBattles.textContent =
+        battles;
+
+
+    profileWins.textContent =
+        wins;
+
+
+    profileLosses.textContent =
+        losses;
+
+
+    profileDraws.textContent =
+        draws;
+
+
+    profileBestCombo.textContent =
+        bestCombo;
+
+
+    /* =========================================
+       WIN RATE
+    ========================================= */
+
+    if (battles > 0) {
+
+        const winRate =
+            (
+                wins /
+                battles *
+                100
+            ).toFixed(1);
+
+
+        profileWinRate.textContent =
+            `${winRate}%`;
+
+    }
+    else {
+
+        profileWinRate.textContent =
+            "--";
+
+    }
+}
