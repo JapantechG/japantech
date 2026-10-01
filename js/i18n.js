@@ -98,122 +98,123 @@ const translations = {
                 "メール内のリンクをクリックしてからログインしてください。",
 
             backLogin: "ログインへ戻る"
-        }
+        },
+          common: {
+          back: "戻る",
+          save: "保存",
+          cancel: "キャンセル",
+          confirm: "確認",
+          continue: "続ける",
+          close: "閉じる",
+          retry: "もう一度",
+          loading: "読み込み中...",
+          saving: "保存中...",
+          yes: "はい",
+          no: "いいえ"
+         },
+      
+      profile: {
+          title: "プロフィール",
+          level: "レベル",
+          exp: "EXP",
+          rank: "ランク",
+          elo: "ELO",
+          battles: "バトル",
+          wins: "勝利",
+          losses: "敗北",
+          draws: "引き分け",
+          winRate: "勝率",
+          bestCombo: "ベストコンボ",
+          bestScore: "ベストスコア",
+          displayName: "表示名",
+          displayNameHint: "公開プレイヤー名",
+          bio: "自己紹介",
+          email: "メールアドレス",
+          batlingoId: "BATLINGO ID",
+          save: "プロフィールを保存",
+          saved: "プロフィールを保存しました"
+      },
+      
+      game: {
+          question: "問題",
+          score: "スコア",
+          best: "ベスト",
+          combo: "コンボ",
+          lives: "ライフ",
+          vocabulary: "語彙",
+          grammar: "文法",
+          listening: "聴解",
+          reading: "読解",
+          correct: "正解",
+          wrong: "不正解",
+          timeUp: "時間切れ"
+      },
+      
+      gameOver: {
+          title: "ゲーム終了",
+          finalScore: "スコア",
+          questions: "問題数",
+          bestCombo: "ベストコンボ",
+          bestScore: "ベストスコア",
+          expGained: "獲得EXP",
+          retry: "もう一度",
+          home: "ホームへ"
+      },
+      
+      pvp: {
+          title: "1 VS 1",
+          createRoom: "ルーム作成",
+          joinRoom: "ルーム参加",
+          roomCode: "ルームコード",
+          enterRoomCode: "ルームコードを入力",
+          waitingOpponent: "対戦相手を待っています...",
+          opponentJoined: "対戦相手が参加しました",
+          startBattle: "バトル開始",
+          you: "あなた",
+          opponent: "相手",
+          rematch: "再戦",
+          leaveRoom: "ルームを退出"
+      },
+      
+      flashcard: {
+          title: "フラッシュカード",
+          study: "学習",
+          review: "復習",
+          known: "覚えた",
+          unknown: "まだ",
+          again: "もう一度",
+          learned: "習得済み",
+          remaining: "残り"
+      },
+      
+      rank: {
+          title: "ランクバトル",
+          rank: "ランク",
+          elo: "ELO",
+          peakElo: "最高ELO",
+          season: "シーズン",
+          findMatch: "対戦相手を探す",
+          searching: "検索中..."
+      },
+      
+      result: {
+          victory: "勝利",
+          defeat: "敗北",
+          draw: "引き分け",
+          expGained: "獲得EXP",
+          levelUp: "レベルアップ！"
+      },
+      
+      error: {
+          generic: "エラーが発生しました。",
+          network: "ネットワークエラーが発生しました。",
+          saveFailed: "保存できませんでした。",
+          roomNotFound: "ルームが見つかりません。",
+          roomFull: "ルームは満員です。"
+      }
     },
 
-      common: {
-       back: "戻る",
-       save: "保存",
-       cancel: "キャンセル",
-       confirm: "確認",
-       continue: "続ける",
-       close: "閉じる",
-       retry: "もう一度",
-       loading: "読み込み中...",
-       saving: "保存中...",
-       yes: "はい",
-       no: "いいえ"
-   },
-   
-   profile: {
-       title: "プロフィール",
-       level: "レベル",
-       exp: "EXP",
-       rank: "ランク",
-       elo: "ELO",
-       battles: "バトル",
-       wins: "勝利",
-       losses: "敗北",
-       draws: "引き分け",
-       winRate: "勝率",
-       bestCombo: "ベストコンボ",
-       bestScore: "ベストスコア",
-       displayName: "表示名",
-       displayNameHint: "公開プレイヤー名",
-       bio: "自己紹介",
-       email: "メールアドレス",
-       batlingoId: "BATLINGO ID",
-       save: "プロフィールを保存",
-       saved: "プロフィールを保存しました"
-   },
-   
-   game: {
-       question: "問題",
-       score: "スコア",
-       best: "ベスト",
-       combo: "コンボ",
-       lives: "ライフ",
-       vocabulary: "語彙",
-       grammar: "文法",
-       listening: "聴解",
-       reading: "読解",
-       correct: "正解",
-       wrong: "不正解",
-       timeUp: "時間切れ"
-   },
-   
-   gameOver: {
-       title: "ゲーム終了",
-       finalScore: "スコア",
-       questions: "問題数",
-       bestCombo: "ベストコンボ",
-       bestScore: "ベストスコア",
-       expGained: "獲得EXP",
-       retry: "もう一度",
-       home: "ホームへ"
-   },
-   
-   pvp: {
-       title: "1 VS 1",
-       createRoom: "ルーム作成",
-       joinRoom: "ルーム参加",
-       roomCode: "ルームコード",
-       enterRoomCode: "ルームコードを入力",
-       waitingOpponent: "対戦相手を待っています...",
-       opponentJoined: "対戦相手が参加しました",
-       startBattle: "バトル開始",
-       you: "あなた",
-       opponent: "相手",
-       rematch: "再戦",
-       leaveRoom: "ルームを退出"
-   },
-   
-   flashcard: {
-       title: "フラッシュカード",
-       study: "学習",
-       review: "復習",
-       known: "覚えた",
-       unknown: "まだ",
-       again: "もう一度",
-       learned: "習得済み",
-       remaining: "残り"
-   },
-   
-   rank: {
-       title: "ランクバトル",
-       rank: "ランク",
-       elo: "ELO",
-       peakElo: "最高ELO",
-       season: "シーズン",
-       findMatch: "対戦相手を探す",
-       searching: "検索中..."
-   },
-   
-   result: {
-       victory: "勝利",
-       defeat: "敗北",
-       draw: "引き分け",
-       expGained: "獲得EXP",
-       levelUp: "レベルアップ！"
-   },
-   
-   error: {
-       generic: "エラーが発生しました。",
-       network: "ネットワークエラーが発生しました。",
-       saveFailed: "保存できませんでした。",
-       roomNotFound: "ルームが見つかりません。",
-       roomFull: "ルームは満員です。"
-   }
+      
 
 
     /* =========================
@@ -295,9 +296,8 @@ const translations = {
                 "Open the email and click the verification link before logging in.",
 
             backLogin: "BACK TO LOGIN"
-        }
-    },
-      common: {
+        },
+       common: {
     back: "BACK",
     save: "SAVE",
     cancel: "CANCEL",
@@ -410,6 +410,8 @@ error: {
     roomNotFound: "Room not found.",
     roomFull: "Room is full."
 }
+    },
+      
 
 
     /* =========================
@@ -491,10 +493,8 @@ error: {
                 "请点击邮件中的验证链接，然后再登录。",
 
             backLogin: "返回登录"
-        }
-    },
-
-   common: {
+        },
+       common: {
     back: "返回",
     save: "保存",
     cancel: "取消",
@@ -608,6 +608,9 @@ error: {
     roomFull: "房间已满。"
 }
 
+    },
+
+   
     /* =========================
        VIETNAMESE
     ========================= */
@@ -687,11 +690,8 @@ error: {
                 "Mở email và nhấn vào liên kết xác nhận trước khi đăng nhập.",
 
             backLogin: "QUAY LẠI ĐĂNG NHẬP"
-        }
-    }
-};
-
-common: {
+        },
+       common: {
     back: "QUAY LẠI",
     save: "LƯU",
     cancel: "HỦY",
@@ -804,6 +804,10 @@ error: {
     roomNotFound: "Không tìm thấy phòng.",
     roomFull: "Phòng đã đầy."
 }
+    }
+};
+
+
 
 
 /* =========================================================
