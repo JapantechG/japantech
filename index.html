@@ -169,7 +169,7 @@
                     type="button"
                 >
                     👤
-                    <span>PROFILE</span>
+                    <span data-i18n="menu.profile">PROFILE</span>
                 </button>
 
 
@@ -179,7 +179,7 @@
                     type="button"
                 >
                     ↪
-                    <span>LOGOUT</span>
+                    <span data-i18n="menu.logout">LOGOUT</span>
                 </button>
 
             </div>
@@ -192,24 +192,17 @@
      PROFILE SCREEN
 ===================================================== -->
 
-<section
-    id="profileScreen"
-    class="profile-screen hidden"
->
+<section id="profileScreen" class="profile-screen hidden">
     <div class="profile-container">
 
         <!-- HEADER -->
         <div class="profile-header">
 
-            <button
-                id="profileBackBtn"
-                class="profile-back-btn"
-                type="button"
-            >
+            <button id="profileBackBtn" class="profile-back-btn" type="button">
                 ←
             </button>
 
-            <h1>PROFILE</h1>
+            <h1 data-i18n="profile.title">PROFILE</h1>
 
             <div class="profile-header-space"></div>
 
@@ -276,7 +269,7 @@
             
                     <div class="profile-elo-box">
             
-                        <span class="profile-status-label">
+                        <span class="profile-status-label" data-i18n="profile.elo">
                             ELO
                         </span>
             
@@ -295,7 +288,7 @@
             
                     <div class="profile-exp-header">
             
-                        <span>
+                        <span data-i18n="profile.exp">
                             EXP
                         </span>
             
@@ -329,7 +322,7 @@
                             0
                         </span>
             
-                        <span class="profile-stat-label">
+                        <span class="profile-stat-label" data-i18n="profile.battles">
                             BATTLES
                         </span>
             
@@ -343,7 +336,7 @@
                             0
                         </span>
             
-                        <span class="profile-stat-label">
+                        <span class="profile-stat-label" data-i18n="profile.wins">
                             WINS
                         </span>
             
@@ -357,7 +350,7 @@
                             0
                         </span>
             
-                        <span class="profile-stat-label">
+                        <span class="profile-stat-label" data-i18n="profile.losses">
                             LOSSES
                         </span>
             
@@ -371,7 +364,7 @@
                             --
                         </span>
             
-                        <span class="profile-stat-label">
+                        <span class="profile-stat-label" data-i18n="profile.winRate">
                             WIN RATE
                         </span>
             
@@ -385,7 +378,7 @@
                             0
                         </span>
             
-                        <span class="profile-stat-label">
+                        <span class="profile-stat-label" data-i18n="profile.draws">
                             DRAWS
                         </span>
             
@@ -399,7 +392,7 @@
                             0
                         </span>
             
-                        <span class="profile-stat-label">
+                        <span class="profile-stat-label" data-i18n="profile.bestCombo">
                             BEST COMBO
                         </span>
             
@@ -416,7 +409,7 @@
 
             <div class="profile-field">
 
-                <label for="profileNameInput">
+                <label for="profileNameInput" data-i18n="profile.displayName">
                     DISPLAY NAME
                 </label>
 
@@ -429,7 +422,7 @@
                 >
 
                 <div class="profile-field-info">
-                    <span>Your public player name</span>
+                    <span data-i18n="profile.displayNameHint">Your public player name</span>
 
                     <span id="profileNameCounter">
                         0 / 20
@@ -443,7 +436,7 @@
 
             <div class="profile-field">
 
-                <label for="profileBioInput">
+                <label for="profileBioInput" data-i18n="profile.bio">
                     BIO
                 </label>
 
@@ -451,6 +444,7 @@
                     id="profileBioInput"
                     maxlength="100"
                     placeholder="Tell other players about yourself"
+                    data-i18n-placeholder="profile.bioPlaceholder"
                 ></textarea>
 
                 <div class="profile-field-info">
@@ -470,7 +464,7 @@
 
             <div class="profile-field">
 
-                <label>
+                <label data-i18n="profile.email">
                     EMAIL
                 </label>
 
@@ -488,7 +482,7 @@
 
             <div class="profile-field">
 
-                <label>
+                <label data-i18n="profile.batlingoId">
                     BATLINGO ID
                 </label>
 
@@ -516,6 +510,7 @@
                 id="profileSaveBtn"
                 class="profile-save-btn"
                 type="button"
+                data-i18n="profile.save"
             >
                 SAVE PROFILE
             </button>
@@ -621,10 +616,7 @@
 
             <div class="selector-section">
 
-                <div
-                    id="studyTargetLabel"
-                    class="selector-label"
-                >
+                <div id="studyTargetLabel" class="selector-label" data-i18n="home.jlptLevel">
                     JLPT LEVEL
                 </div>
 
@@ -664,7 +656,7 @@
 
             <div class="selector-section">
 
-                <div class="selector-label">
+                <div class="selector-label" data-i18n="home.category">
                     CATEGORY
                 </div>
 
@@ -704,7 +696,7 @@
 
             <div class="selector-section">
 
-                <div class="selector-label">
+                <div class="selector-label" data-i18n="home.questionMode">
                     QUESTION MODE
                 </div>
 
@@ -747,7 +739,7 @@
                 class="battle-button"
                 type="button"
             >
-                ⚔ BATTLE
+                ⚔ <span data-i18n="home.battle">BATTLE</span>
             </button>
 
         </div>
@@ -775,7 +767,7 @@
 
                 <div class="score-box">
 
-                    <div class="score-label">
+                    <div class="score-label" data-i18n="game.score">
                         SCORE
                     </div>
 
@@ -784,7 +776,7 @@
                     </div>
 
                     <div class="best-score">
-                        BEST:
+                        <span data-i18n="game.best">BEST</span>:
                         <span id="bestScore">0</span>
                     </div>
 
@@ -860,7 +852,7 @@
             </div>
 
 
-            <div class="keyboard-hint">
+            <div class="keyboard-hint" data-i18n="game.keyboardHint">
                 PRESS 1 · 2 · 3 · 4
             </div>
 
