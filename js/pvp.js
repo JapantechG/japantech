@@ -1051,6 +1051,21 @@ function getCurrentPlayerRole() {
     return currentPlayerRole;
 }
 
+window.addEventListener("batlingo-room-deleted", event => 
+{
+    const { playerRole } = event.detail;
+
+    if (playerRole !== "guest") return;
+
+    stopPvpTimer();
+    stopSpeech();
+
+    alert("Host đã rời phòng.");
+
+    resetRoomConnection();
+    resetPvpScreen();
+});
+
 function scheduleNextPvpQuestion(
     room,
     hostCorrect,
@@ -1760,63 +1775,44 @@ function showPvpResult(room)
     }
 }
 
-pvpRematchButton.addEventListener(
-    "click",
-    async () => {
-
+pvpRematchButton.addEventListener("click",async () => 
+    {
         try {
 
             pvpRematchButton.disabled = true;
 
-            pvpRematchStatus.textContent =
-                "WAITING FOR OPPONENT...";
-
+            pvpRematchStatus.textContent ="WAITING FOR OPPONENT...";
 
             await requestRematch();
 
         }
-        catch (error) {
+        catch (error) 
+        {
 
-            console.error(
-                "[PVP] Rematch error:",
-                error
-            );
-
+            console.error("[PVP] Rematch error:",error);
 
             pvpRematchButton.disabled = false;
 
-            pvpRematchStatus.textContent =
-                "REMATCH ERROR";
+            pvpRematchStatus.textContent = "REMATCH ERROR";
         }
     }
 );
 
 function updateRematchState(room)
 {
-    const hostAccepted =
-        room.rematch?.host === true;
+    const hostAccepted = room.rematch?.host === true;
 
-    const guestAccepted =
-        room.rematch?.guest === true;
+    const guestAccepted = room.rematch?.guest === true;
 
 
-    if (
-        hostAccepted &&
-        guestAccepted
-    ) {
+    if (hostAccepted && guestAccepted) 
+    {
+        pvpRematchStatus.textContent = "BOTH PLAYERS READY";
 
-        pvpRematchStatus.textContent =
-            "BOTH PLAYERS READY";
-
-           /*
-                Chỉ HOST tạo trận mới
-            */
+           /*Chỉ HOST tạo trận mới*/
         
-            if (
-                currentPlayerRole === "host" &&
-                !rematchStarting
-            ) {
-        
+            if (currentPlayerRole === "host" && !rematchStarting) 
+            {
                 rematchStarting = true;
         
                 startPvpRematch();
@@ -1826,101 +1822,65 @@ function updateRematchState(room)
     }
 
 
-    if (
-        currentPlayerRole === "host"
-    ) {
-
+    if (currentPlayerRole === "host") 
+    {
         if (hostAccepted) {
 
             pvpRematchButton.disabled = true;
 
-            pvpRematchStatus.textContent =
-                "WAITING FOR OPPONENT...";
+            pvpRematchStatus.textContent = "WAITING FOR OPPONENT...";
         }
         else {
 
             pvpRematchButton.disabled = false;
 
-            pvpRematchStatus.textContent =
-                guestAccepted
-                    ? "OPPONENT WANTS A REMATCH"
-                    : "";
+            pvpRematchStatus.textContent = guestAccepted ? "OPPONENT WANTS A REMATCH" : "";
         }
 
     }
-    else {
-
-        if (guestAccepted) {
-
+    else 
+    {
+        if (guestAccepted) 
+        {
             pvpRematchButton.disabled = true;
 
-            pvpRematchStatus.textContent =
-                "WAITING FOR OPPONENT...";
+            pvpRematchStatus.textContent = "WAITING FOR OPPONENT...";
         }
-        else {
-
+        else 
+        {
             pvpRematchButton.disabled = false;
 
-            pvpRematchStatus.textContent =
-                hostAccepted
-                    ? "OPPONENT WANTS A REMATCH"
-                    : "";
+            pvpRematchStatus.textContent = hostAccepted ? "OPPONENT WANTS A REMATCH" : "";
         }
     }
 }
 
 async function startPvpRematch()
 {
-    try {
-
-        console.log(
-            "[PVP] Starting rematch..."
-        );
-
+    try 
+    {
+        console.log("[PVP] Starting rematch...");
 
         /*
             Dùng lại config của trận vừa chơi
         */
 
-        const oldMatch =
-            currentPvpRoom?.match;
-
+        const oldMatch = currentPvpRoom?.match;
 
         if (!oldMatch) {
 
-            throw new Error(
-                "MATCH_NOT_FOUND"
-            );
+            throw new Error("MATCH_NOT_FOUND");
         }
 
+        /*Load đúng database*/
 
-        /*
-            Load đúng database
-        */
+        const database = await loadPvpDatabase(oldMatch.level);
 
-        const database =
-            await loadPvpDatabase(
-                oldMatch.level
-            );
+        /* Random bộ 20 câu mới*/
 
+        const questionIds = createQuestionIds(database,20);
 
-        /*
-            Random bộ 20 câu mới
-        */
-
-        const questionIds =
-            createQuestionIds(
-                database,
-                20
-            );
-
-
-        const questions =
-            createPvpQuestions(
-                database,
-                questionIds
-            );
-
+        const questions = createPvpQuestions(database,questionIds);
 
         /*
             Tạo MATCH mới trong cùng ROOM
@@ -1945,59 +1905,37 @@ async function startPvpRematch()
             }
         );
 
-
-        console.log(
-            "[PVP] Rematch started."
-        );
+        console.log("[PVP] Rematch started.");
 
     }
-    catch (error) {
+    catch (error) 
+    {
+        console.error("[PVP] Rematch start error:",error);
 
-        console.error(
-            "[PVP] Rematch start error:",
-            error
-        );
-
-
-        /*
-            Cho phép thử lại nếu start lỗi
-        */
+        /*Cho phép thử lại nếu start lỗi*/
 
         rematchStarting = false;
 
-        pvpRematchStatus.textContent =
-            "REMATCH START ERROR";
+        pvpRematchStatus.textContent = "REMATCH START ERROR";
     }
 }
 
 function startPvpTimer()
 {    
-     /*
-        Dừng timer câu trước nếu còn
-    */
+     /*Dừng timer câu trước nếu còn*/
     stopPvpTimer();
 
-     /*
-        Reset mỗi câu về 10 giây
-    */
+     /*Reset mỗi câu về 10 giây*/
     pvpTimeLeft = PVP_QUESTION_TIME;
-
 
     updatePvpTimer();
 
+    pvpTimer = setInterval(() => 
+        {
+                pvpTimeLeft -= 0.1;
 
-    pvpTimer =
-        setInterval(
-            () => {
-
-                pvpTimeLeft -=
-                    0.1;
-
-
-                if (
-                    pvpTimeLeft <= 0
-                ) {
-
+                if (pvpTimeLeft <= 0) 
+                {
                     pvpTimeLeft = 0;
 
                     updatePvpTimer();
@@ -2020,15 +1958,12 @@ function startPvpTimer()
 
 function stopPvpTimer()
 {
-    if (!pvpTimer) {
+    if (!pvpTimer) 
+    {
         return;
     }
 
-
-    clearInterval(
-        pvpTimer
-    );
-
+    clearInterval(pvpTimer);
 
     pvpTimer = null;
 }
@@ -2036,61 +1971,35 @@ function stopPvpTimer()
 
 function updatePvpTimer()
 {
-    pvpTimerText.textContent =
-        pvpTimeLeft.toFixed(1);
+    pvpTimerText.textContent = pvpTimeLeft.toFixed(1);
 
+    const percent = Math.max(0,(pvpTimeLeft/PVP_QUESTION_TIME)*100);
 
-    const percent =
-        Math.max(
-            0,
-            (
-                pvpTimeLeft
-                /
-                PVP_QUESTION_TIME
-            )
-            *
-            100
-        );
-
-
-    pvpTimerBar.style.width =
-        `${percent}%`;
+    pvpTimerBar.style.width =`${percent}%`;
 }
 
 async function handlePvpTimeout()
 {
-    if (
-        answerLocked
-        ||
-        !currentPvpRoom?.match
-    ) {
+    if (answerLocked || !currentPvpRoom?.match) 
+    {
         return;
     }
-
 
     answerLocked = true;
 
     stopSpeech();
 
 
-    console.log(
-        "[PVP] Answer timeout"
-    );
-
+    console.log("[PVP] Answer timeout");
 
     /*
         Khóa 4 đáp án
     */
 
-    const buttons =
-        pvpAnswers.querySelectorAll(
-            "button"
-        );
+    const buttons =pvpAnswers.querySelectorAll("button");
 
-
-    buttons.forEach(
-        button => {
-
+    buttons.forEach(button => 
+        {
             button.disabled = true;
         }
     );
@@ -2101,19 +2010,12 @@ async function handlePvpTimeout()
         optionId = null
     */
 
-    try {
-
-        await submitRoomAnswer(
-            currentPvpRoom.match.currentQuestion,
-            "TIMEOUT"
-        );
-
+    try 
+    {
+        await submitRoomAnswer(currentPvpRoom.match.currentQuestion,"TIMEOUT");
     }
-    catch (error) {
-
-        console.error(
-            "[PVP] Timeout submit error:",
-            error
-        );
+    catch (error) 
+    {
+        console.error("[PVP] Timeout submit error:",error);
     }
 }
