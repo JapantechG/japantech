@@ -5,7 +5,10 @@ import {
 }
 from "./audio.js";
 
-
+import {
+    saveSoloResult
+}
+from "./user.js";
 /* =============================================================
    STATE
    ============================================================= */
@@ -1426,22 +1429,47 @@ document.addEventListener(
 
 function endGame() {
 
-    gameActive =
-        false;
+    gameActive = false;
 
-
-    answerLocked =
-        true;
-
+    answerLocked = true;
 
     stopTimer();
 
     stopSpeech();
 
+    playSfx("gameover");
 
-    playSfx(
-        "gameover"
-    );
+/* =========================================================
+   SAVE SOLO RESULT
+========================================================= */
+saveSoloResult({
+
+    score:
+        score,
+
+    questions:
+        questionCount,
+
+    correct:
+        correctCount,
+
+    wrong:
+        wrongCount,
+
+    bestCombo:
+        maxCombo
+
+})
+.catch(
+    error => {
+
+        console.error(
+            "[SOLO] Save result failed:",
+            error
+        );
+
+    }
+);
     
 const bestScoreKey = getBestScoreKey();
 
