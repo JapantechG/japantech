@@ -44,356 +44,167 @@ const PVP_QUESTION_TIME = 10;
    DOM
    ============================================================= */
 
-const roomSelectPanel =
-    document.getElementById(
-        "roomSelectPanel"
-    );
+const roomSelectPanel = document.getElementById("roomSelectPanel");
 
+const waitingRoomPanel = document.getElementById("waitingRoomPanel");
 
-const waitingRoomPanel =
-    document.getElementById(
-        "waitingRoomPanel"
-    );
+const currentRoomCode = document.getElementById("currentRoomCode");
 
+const leftPlayerAvatar = document.getElementById("leftPlayerAvatar");
 
-const currentRoomCode =
-    document.getElementById(
-        "currentRoomCode"
-    );
+const leftPlayerName = document.getElementById("leftPlayerName");
 
-const leftPlayerAvatar =
-    document.getElementById(
-        "leftPlayerAvatar"
-    );
+const leftPlayerStatus = document.getElementById("leftPlayerStatus");
 
+const rightPlayerAvatar =document.getElementById("rightPlayerAvatar");
 
-const leftPlayerName =
-    document.getElementById(
-        "leftPlayerName"
-    );
+const rightPlayerName = document.getElementById("rightPlayerName");
 
+const rightPlayerStatus = document.getElementById("rightPlayerStatus");
 
-const leftPlayerStatus =
-    document.getElementById(
-        "leftPlayerStatus"
-    );
+const waitingMessage = document.getElementById("waitingMessage");
 
+const startBattleButton = document.getElementById("startBattleButton");
 
-const rightPlayerAvatar =
-    document.getElementById(
-        "rightPlayerAvatar"
-    );
+const pvpGamePanel = document.getElementById("pvpGamePanel");
 
+const pvpQuestionNumber = document.getElementById("pvpQuestionNumber");
 
-const rightPlayerName =
-    document.getElementById(
-        "rightPlayerName"
-    );
+const pvpQuestion = document.getElementById("pvpQuestion");
 
+const pvpReading = document.getElementById("pvpReading");
 
-const rightPlayerStatus =
-    document.getElementById(
-        "rightPlayerStatus"
-    );
+const pvpAnswers = document.getElementById("pvpAnswers");
 
+const pvpHostCard = document.getElementById("pvpHostCard");
 
-const waitingMessage =
-    document.getElementById(
-        "waitingMessage"
-    );
+const pvpGuestCard = document.getElementById("pvpGuestCard");
 
-const startBattleButton =
-    document.getElementById(
-        "startBattleButton"
-    );
+const pvpHostState = document.getElementById("pvpHostState");
 
-const pvpGamePanel =
-    document.getElementById(
-        "pvpGamePanel"
-    );
+const pvpGuestState = document.getElementById("pvpGuestState");
 
+const pvpHostScore = document.getElementById("pvpHostScore");
 
-const pvpQuestionNumber =
-    document.getElementById(
-        "pvpQuestionNumber"
-    );
+const pvpGuestScore = document.getElementById("pvpGuestScore");
 
+const pvpResultPanel = document.getElementById("pvpResultPanel");
 
-const pvpQuestion =
-    document.getElementById(
-        "pvpQuestion"
-    );
+const pvpFinalHostScore = document.getElementById("pvpFinalHostScore");
 
+const pvpFinalGuestScore = document.getElementById("pvpFinalGuestScore");
 
-const pvpReading =
-    document.getElementById(
-        "pvpReading"
-    );
+const pvpResultMessage = document.getElementById("pvpResultMessage");
 
+const pvpScreen = document.getElementById("pvpScreen");
 
-const pvpAnswers =
-    document.getElementById(
-        "pvpAnswers"
-    );
+const pvpLevel = document.getElementById("pvpLevel");
 
-const pvpHostCard =
-    document.getElementById(
-        "pvpHostCard"
-    );
+const pvpRematchButton = document.getElementById("pvpRematchButton");
 
+const pvpRematchStatus = document.getElementById("pvpRematchStatus");
 
-const pvpGuestCard =
-    document.getElementById(
-        "pvpGuestCard"
-    );
+const pvpTimerText = document.getElementById("pvpTimerText");
 
-
-const pvpHostState =
-    document.getElementById(
-        "pvpHostState"
-    );
-
-
-const pvpGuestState =
-    document.getElementById(
-        "pvpGuestState"
-    );
-
-
-const pvpHostScore =
-    document.getElementById(
-        "pvpHostScore"
-    );
-
-
-const pvpGuestScore =
-    document.getElementById(
-        "pvpGuestScore"
-    );
-
-const pvpResultPanel =
-    document.getElementById(
-        "pvpResultPanel"
-    );
-
-
-const pvpFinalHostScore =
-    document.getElementById(
-        "pvpFinalHostScore"
-    );
-
-
-const pvpFinalGuestScore =
-    document.getElementById(
-        "pvpFinalGuestScore"
-    );
-
-
-const pvpResultMessage =
-    document.getElementById(
-        "pvpResultMessage"
-    );
-
-const pvpScreen =
-    document.getElementById(
-        "pvpScreen"
-    );
-
-const pvpLevel =
-    document.getElementById(
-        "pvpLevel"
-    );
-
-const pvpRematchButton =
-    document.getElementById(
-        "pvpRematchButton"
-    );
-
-const pvpRematchStatus =
-    document.getElementById(
-        "pvpRematchStatus"
-    );
-
-const pvpTimerText =
-    document.getElementById(
-        "pvpTimerText"
-    );
-
-const pvpTimerBar =
-    document.getElementById(
-        "pvpTimerBar"
-    );
-
+const pvpTimerBar = document.getElementById("pvpTimerBar");
 const pvpHostName = document.getElementById("pvpHostName");
 const pvpGuestName = document.getElementById("pvpGuestName");
 const pvpFinalHostName = document.getElementById("pvpFinalHostName");
 const pvpFinalGuestName = document.getElementById("pvpFinalGuestName");
 
-async function loadPvpDatabase(
-    level
-) {
+async function loadPvpDatabase(level) 
+{
+    const file = `data/${level.toLowerCase()}.json`;
 
-    const file =
-        `data/${level.toLowerCase()}.json`;
+    const response = await fetch(file);
 
-
-    const response =
-        await fetch(
-            file
-        );
-
-
-    if (
-        !response.ok
-    ) {
-
-        throw new Error(
-            "DATABASE_LOAD_FAILED"
-        );
-
+    if (!response.ok) 
+    {
+        throw new Error("DATABASE_LOAD_FAILED");
     }
 
 
-    pvpDatabase =
-        await response.json();
+    pvpDatabase = await response.json();
 
 
-    console.log(
-        "[PVP] Database loaded:",
-        level,
-        pvpDatabase.length
-    );
-
+    console.log("[PVP] Database loaded:",level,pvpDatabase.length);
 
     return pvpDatabase;
 }
 
-function createQuestionIds(
-    database,
-    count = 20
-) {
-
-    const ids =
-        database.map(
-            item => item.id
-        );
+function createQuestionIds(database,count = 20) 
+{
+    const ids =database.map(item => item.id);
+    /*Fisher-Yates shuffle*/
+    for (let i = ids.length - 1;i > 0;i--) 
+    {
+        const j = Math.floor(Math.random()*(i + 1));
 
 
-    /*
-        Fisher-Yates shuffle
-    */
-
-    for (
-        let i = ids.length - 1;
-        i > 0;
-        i--
-    ) {
-
-        const j =
-            Math.floor(
-                Math.random()
-                *
-                (i + 1)
-            );
-
-
-        [
-            ids[i],
-            ids[j]
-        ] =
-        [
-            ids[j],
-            ids[i]
-        ];
+        [ids[i],ids[j]] =[ids[j],ids[i]];
 
     }
 
 
-    return ids.slice(
-        0,
-        Math.min(
-            count,
-            ids.length
-        )
+    return ids.slice(0,Math.min(count,ids.length)
     );
 }
 /* =============================================================
    PVP MODE
    ============================================================= */
 
-function isPvpAudioMode(
-    mode
-) {
-
-    return (
-        mode === "audio_hiragana"
-        ||
-        mode === "audio_meaning"
-        ||
-        mode === "audio_kanji"
-    );
+function isPvpAudioMode(mode) 
+{
+    return (mode === "audio_hiragana" || mode === "audio_meaning" || mode === "audio_kanji");
 }
 
 
-function getPvpAnswerField(
-    mode
-) {
+function getPvpAnswerField(mode) 
+{
 
-    switch (mode) {
-
+    switch (mode) 
+    {
         case "kanji_hiragana":
         case "audio_hiragana":
-
             return "reading";
-
-
+            
         case "meaning_kanji":
         case "audio_kanji":
-
             return "word";
 
-
         default:
-
             return "meaning";
     }
 }
 
 
-function showPvpQuestionContent(
-    data,
-    mode
-) {
+function showPvpQuestionContent(data,mode) 
+{
 
-    /*
-        Xóa click của câu trước
-    */
+    /*Xóa click của câu trước*/
 
     pvpQuestion.onclick = null;
 
 
-    switch (mode) {
-
+    switch (mode) 
+    {
         case "kanji_hiragana":
 
-            pvpQuestion.textContent =
-                data.word;
+            pvpQuestion.textContent = data.word;
 
             break;
 
 
         case "hiragana_meaning":
 
-            pvpQuestion.textContent =
-                data.reading;
+            pvpQuestion.textContent = data.reading;
 
             break;
 
 
         case "meaning_kanji":
 
-            pvpQuestion.textContent =
-                data.meaning;
+            pvpQuestion.textContent = data.meaning;
 
             break;
 
@@ -407,27 +218,21 @@ function showPvpQuestionContent(
                 chỉ hiện loa
             */
 
-            pvpQuestion.textContent =
-                "🔊";
-
+            pvpQuestion.textContent = "🔊";
 
             /*
                 Click loa để nghe lại
             */
 
-            pvpQuestion.onclick =
-                () => {
-
-                    if (
-                        answerLocked
-                    ) {
+            pvpQuestion.onclick =() => 
+                {
+                    if (answerLocked) 
+                    {
                         return;
                     }
 
 
-                    speakJapanese(
-                        data.reading
-                    );
+                    speakJapanese(data.reading);
                 };
 
 
@@ -435,16 +240,12 @@ function showPvpQuestionContent(
                 Tự đọc 1 lần
             */
 
-            setTimeout(
-                () => {
+            setTimeout(() => 
+                {
 
-                    if (
-                        !answerLocked
-                    ) {
-
-                        speakJapanese(
-                            data.reading
-                        );
+                    if (!answerLocked) 
+                    {
+                        speakJapanese(data.reading);
                     }
 
                 },
@@ -453,11 +254,9 @@ function showPvpQuestionContent(
 
             break;
 
-
         default:
 
-            pvpQuestion.textContent =
-                data.word;
+            pvpQuestion.textContent = data.word;
 
             break;
     }
@@ -1111,80 +910,52 @@ window.addEventListener("batlingo-room-update",event =>
            HOST VIEW
            ===================================================== */
 
-        if (
-            playerRole === "host"
-        ) {
+        if (playerRole === "host") 
+        {
 
             // LEFT = YOU
 
-            leftPlayerAvatar.textContent =
-                "🐵";
+            leftPlayerAvatar.textContent = "🐵";
 
-            leftPlayerAvatar.classList.remove(
-                "waiting"
-            );
+            leftPlayerAvatar.classList.remove("waiting");
 
-            leftPlayerName.textContent =
-                "YOU";
+            leftPlayerName.textContent = "YOU";
 
-            leftPlayerStatus.textContent =
-                "READY";
+            leftPlayerStatus.textContent = "READY";
 
-            leftPlayerStatus.classList.add(
-                "ready"
-            );
+            leftPlayerStatus.classList.add("ready");
 
 
             // RIGHT = GUEST
 
-            if (
-                room.guest
-            ) {
+            if (room.guest?.connected === true) 
+            {
+                rightPlayerAvatar.textContent = "🐃";
 
-                rightPlayerAvatar.textContent =
-                    "🐃";
+                rightPlayerAvatar.classList.remove("waiting");
 
-                rightPlayerAvatar.classList.remove(
-                    "waiting"
-                );
+                rightPlayerName.textContent = room.guest.name;
 
-                rightPlayerName.textContent =
-                    room.guest.name;
+                rightPlayerStatus.textContent = "READY";
 
-                rightPlayerStatus.textContent =
-                    "READY";
+                rightPlayerStatus.classList.add("ready");
 
-                rightPlayerStatus.classList.add(
-                    "ready"
-                );
-
-
-                waitingMessage.textContent =
-                    "OPPONENT CONNECTED";
+                waitingMessage.textContent = "OPPONENT CONNECTED";
 
             }
             else {
 
-                rightPlayerAvatar.textContent =
-                    "?";
+                rightPlayerAvatar.textContent = "?";
 
-                rightPlayerAvatar.classList.add(
-                    "waiting"
-                );
+                rightPlayerAvatar.classList.add("waiting");
 
-                rightPlayerName.textContent =
-                    "WAITING...";
+                rightPlayerName.textContent = "WAITING...";
 
-                rightPlayerStatus.textContent =
-                    "WAITING";
+                rightPlayerStatus.textContent = "WAITING";
 
-                rightPlayerStatus.classList.remove(
-                    "ready"
-                );
+                rightPlayerStatus.classList.remove("ready");
 
-
-                waitingMessage.textContent =
-                    "WAITING FOR PLAYER...";
+                waitingMessage.textContent = "WAITING FOR PLAYER...";
 
             }
 
@@ -1195,52 +966,35 @@ window.addEventListener("batlingo-room-update",event =>
            GUEST VIEW
            ===================================================== */
 
-        if (
-            playerRole === "guest"
-        ) {
+        if (playerRole === "guest") 
+        {
 
             // LEFT = HOST
 
-            leftPlayerAvatar.textContent =
-                "🐵";
+            leftPlayerAvatar.textContent = "🐵";
 
-            leftPlayerAvatar.classList.remove(
-                "waiting"
-            );
+            leftPlayerAvatar.classList.remove("waiting");
 
-            leftPlayerName.textContent =
-                room.host.name;
+            leftPlayerName.textContent = room.host.name;
 
-            leftPlayerStatus.textContent =
-                "READY";
+            leftPlayerStatus.textContent = "READY";
 
-            leftPlayerStatus.classList.add(
-                "ready"
-            );
+            leftPlayerStatus.classList.add("ready");
 
 
             // RIGHT = YOU
 
-            rightPlayerAvatar.textContent =
-                "🐃";
+            rightPlayerAvatar.textContent = "🐃";
 
-            rightPlayerAvatar.classList.remove(
-                "waiting"
-            );
+            rightPlayerAvatar.classList.remove("waiting");
 
-            rightPlayerName.textContent =
-                "YOU";
+            rightPlayerName.textContent = "YOU";
 
-            rightPlayerStatus.textContent =
-                "READY";
+            rightPlayerStatus.textContent = "READY";
 
-            rightPlayerStatus.classList.add(
-                "ready"
-            );
+            rightPlayerStatus.classList.add("ready");
 
-
-            waitingMessage.textContent =
-                "OPPONENT CONNECTED";
+            waitingMessage.textContent = "OPPONENT CONNECTED";
 
         }
 
@@ -1249,69 +1003,42 @@ window.addEventListener("batlingo-room-update",event =>
            BOTH CONNECTED
            ===================================================== */
 
-        if (
-            room.host &&
-            room.guest
-        ) {
+        if (room.host?.connected === true && room.guest?.connected === true) 
+        {
 
-            console.log(
-                "[PVP] Both players connected."
-            );
+            console.log("[PVP] Both players connected.");
 
 
-            console.log(
-                room.host.name,
-                "VS",
-                room.guest.name
-            );
+            console.log(room.host.name,"VS",room.guest.name);
 
-              if (
-                    playerRole === "host"
-                ) {
+              if (playerRole === "host") 
+              {
 
-                    startBattleButton.classList.remove(
-                        "hidden"
-                    );
+                    startBattleButton.classList.remove("hidden");
 
-
-                    waitingMessage.textContent =
-                        "OPPONENT READY";
+                    waitingMessage.textContent = "OPPONENT READY";
 
                 }
                 else {
 
-                    startBattleButton.classList.add(
-                        "hidden"
-                    );
+                    startBattleButton.classList.add("hidden");
 
-
-                    waitingMessage.textContent =
-                        "WAITING FOR HOST...";
+                    waitingMessage.textContent = "WAITING FOR HOST...";
 
                     }
         }
         
-        if (
-            !room.guest
-        ) {
-
-            startBattleButton.classList.add(
-                "hidden"
-            );
-
+        if (room.guest?.connected !== true) 
+        {
+            startBattleButton.classList.add("hidden");
         }
 
-          /*
-            HOST ĐÃ BẤM START
-        */
+          /* HOST ĐÃ BẤM START*/
 
-        if (
-            room.status === "playing" && room.match
-        ) {
+        if (room.status === "playing" && room.match) 
+        {
 
-            console.log(
-                "[PVP] GAME START!"
-            );
+            console.log("[PVP] GAME START!");
 
               startPvpMatch(room);
 
