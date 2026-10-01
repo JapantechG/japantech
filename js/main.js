@@ -41,6 +41,12 @@ import {
 }
 from "./flashcard.js";
 
+import {
+    openProfile,
+    closeProfile
+}
+from "./profile.js";
+
 /* =========================================
    I18N
 ========================================= */
@@ -103,6 +109,17 @@ const logoutBtn =
 
 const flashcardScreen =
     document.getElementById("flashcardScreen");
+
+const userProfileBtn =
+    document.getElementById(
+        "userProfileBtn"
+    );
+
+
+const profileBackBtn =
+    document.getElementById(
+        "profileBackBtn"
+    );
 
 function setUILanguage(language) {
 
@@ -670,5 +687,29 @@ window.addEventListener("batlingo-flashcard-close",() =>
 
 
         playLobbyMusic();
+    }
+);
+
+userProfileBtn?.addEventListener(
+    "click",
+    () => {
+
+        homeUserMenu?.classList.add(
+            "hidden"
+        );
+
+
+        openProfile();
+
+    }
+);
+
+
+profileBackBtn?.addEventListener(
+    "click",
+    () => {
+
+        closeProfile();
+
     }
 );
