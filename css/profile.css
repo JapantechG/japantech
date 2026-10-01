@@ -1,0 +1,365 @@
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-screen {
+    position: fixed;
+    inset: 0;
+
+    z-index: 300;
+
+    overflow-y: auto;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #172554 0%,
+            #0b1120 45%,
+            #050816 100%
+        );
+}
+
+
+.profile-screen.hidden {
+    display: none;
+}
+
+
+.profile-container {
+    width: min(520px, calc(100% - 32px));
+
+    margin: 0 auto;
+
+    padding:
+        max(20px, env(safe-area-inset-top))
+        0
+        50px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.profile-header {
+    display: grid;
+
+    grid-template-columns:
+        48px
+        1fr
+        48px;
+
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+
+.profile-header h1 {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    color: white;
+}
+
+
+.profile-back-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.07);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.profile-card {
+    padding: 30px 24px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 24px;
+
+    background:
+        rgba(15,23,42,.88);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.profile-avatar-area {
+    position: relative;
+
+    width: 104px;
+
+    margin: 0 auto 16px;
+}
+
+
+.profile-avatar {
+    width: 104px;
+    height: 104px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: 3px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    background: #1e293b;
+
+    color: white;
+
+    font-size: 40px;
+
+    font-weight: 800;
+}
+
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.profile-avatar-edit {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 34px;
+    height: 34px;
+
+    border: 2px solid #0f172a;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PLAYER
+========================================================= */
+
+.profile-main-name {
+    text-align: center;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+
+.profile-batlingo-id {
+    margin-top: 5px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+.profile-divider {
+    height: 1px;
+
+    margin: 26px 0;
+
+    background:
+        rgba(255,255,255,.1);
+}
+
+
+/* =========================================================
+   FIELDS
+========================================================= */
+
+.profile-field {
+    margin-bottom: 20px;
+}
+
+
+.profile-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+.profile-field input,
+.profile-field textarea,
+.profile-readonly {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.05);
+
+    color: white;
+
+    font: inherit;
+}
+
+
+.profile-field input {
+    height: 48px;
+
+    padding: 0 14px;
+}
+
+
+.profile-field textarea {
+    min-height: 90px;
+
+    padding: 14px;
+
+    resize: vertical;
+}
+
+
+.profile-readonly {
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 14px;
+
+    color: #94a3b8;
+}
+
+
+.profile-field-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+.profile-save-btn {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 8px;
+
+    border: 0;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    color: white;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+
+.profile-save-btn:disabled {
+    opacity: .5;
+
+    cursor: default;
+}
+
+
+.profile-message {
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+.profile-message.hidden {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .profile-container {
+        width:
+            calc(100% - 24px);
+    }
+
+
+    .profile-card {
+        padding:
+            26px 18px;
+    }
+
+}
