@@ -598,3 +598,128 @@ export async function ensureUserProfile(
 
     return userData;
 }
+
+/* =========================================================
+   UPDATE USER PROFILE
+========================================================= */
+
+export async function updateUserProfile({
+    displayName,
+    bio
+})
+{
+    const user =
+        window.currentUser;
+
+
+    if (!user?.uid) {
+
+        throw new Error(
+            "USER_NOT_LOGGED_IN"
+        );
+    }
+
+
+    /* =========================================
+       VALIDATE DISPLAY NAME
+    ========================================= */
+
+    const cleanName =
+        String(displayName || "")
+            .trim();
+
+
+    if (
+        cleanName.length < 2 ||
+        cleanName.length > 20
+    ) {
+
+        throw new Error(
+            "INVALID_DISPLAY_NAME"
+        );
+    }
+
+
+    /* =========================================
+       VALIDATE BIO
+    ========================================= */
+
+    const cleanBio =
+        String(bio || "")
+            .trim();
+
+
+    if (cleanBio.length > 100) {
+
+        throw new Error(
+            "BIO_TOO_LONG"
+        );
+    }
+
+
+    const now =
+        Date.now();
+
+
+    /* =========================================
+       UPDATE FIREBASE
+
+       Chỉ update field cho phép.
+       Không đụng BLG ID / createdAt...
+    ========================================= */
+
+    const userRef =
+        ref(
+            db,
+            `users/${user.uid}`
+        );
+
+
+    await update(
+        userRef,
+        {
+            "profile/displayName":
+                cleanName,
+
+            "profile/bio":
+                cleanBio,
+
+            "system/lastUpdatedAt":
+                now
+        }
+    );
+
+
+    /* =========================================
+       UPDATE LOCAL DATA
+    ========================================= */
+
+    if (window.currentUserData?.profile) {
+
+        window.currentUserData
+            .profile
+            .displayName =
+                cleanName;
+
+
+        window.currentUserData
+            .profile
+            .bio =
+                cleanBio;
+
+
+        window.currentUserData
+            .system
+            .lastUpdatedAt =
+                now;
+    }
+
+
+    return {
+        displayName:
+            cleanName,
+
+        bio:
+            cleanBio
+    };
+}
