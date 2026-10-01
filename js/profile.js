@@ -1,0 +1,230 @@
+/* =========================================================
+   BATLINGO PROFILE
+========================================================= */
+
+const profileScreen =
+    document.getElementById(
+        "profileScreen"
+    );
+
+
+const profileDisplayName =
+    document.getElementById(
+        "profileDisplayName"
+    );
+
+
+const profileBatlingoId =
+    document.getElementById(
+        "profileBatlingoId"
+    );
+
+
+const profileNameInput =
+    document.getElementById(
+        "profileNameInput"
+    );
+
+
+const profileBioInput =
+    document.getElementById(
+        "profileBioInput"
+    );
+
+
+const profileEmail =
+    document.getElementById(
+        "profileEmail"
+    );
+
+
+const profileIdReadonly =
+    document.getElementById(
+        "profileIdReadonly"
+    );
+
+
+const profileAvatar =
+    document.getElementById(
+        "profileAvatar"
+    );
+
+
+const profileNameCounter =
+    document.getElementById(
+        "profileNameCounter"
+    );
+
+
+const profileBioCounter =
+    document.getElementById(
+        "profileBioCounter"
+    );
+
+
+/* =========================================================
+   OPEN
+========================================================= */
+
+export function openProfile()
+{
+    const user =
+        window.currentUser;
+
+
+    const userData =
+        window.currentUserData;
+
+
+    if (
+        !user ||
+        !userData?.profile
+    ) {
+        return;
+    }
+
+
+    const profile =
+        userData.profile;
+
+
+    const displayName =
+        profile.displayName ||
+        "Player";
+
+
+    const batlingoId =
+        profile.batlingoId ||
+        "-";
+
+
+    /* NAME */
+
+    profileDisplayName.textContent =
+        displayName;
+
+
+    profileNameInput.value =
+        displayName;
+
+
+    /* ID */
+
+    profileBatlingoId.textContent =
+        batlingoId;
+
+
+    profileIdReadonly.textContent =
+        batlingoId;
+
+
+    /* EMAIL */
+
+    profileEmail.textContent =
+        user.email || "-";
+
+
+    /* BIO */
+
+    profileBioInput.value =
+        profile.bio || "";
+
+
+    /* AVATAR */
+
+    renderProfileAvatar(
+        profile.photoURL,
+        displayName
+    );
+
+
+    updateCounters();
+
+
+    profileScreen.classList.remove(
+        "hidden"
+    );
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+export function closeProfile()
+{
+    profileScreen.classList.add(
+        "hidden"
+    );
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+function renderProfileAvatar(
+    photoURL,
+    displayName
+)
+{
+    profileAvatar.innerHTML = "";
+
+
+    if (photoURL) {
+
+        const img =
+            document.createElement(
+                "img"
+            );
+
+
+        img.src =
+            photoURL;
+
+
+        img.alt =
+            displayName;
+
+
+        profileAvatar.appendChild(
+            img
+        );
+
+
+        return;
+    }
+
+
+    profileAvatar.textContent =
+        displayName
+            .charAt(0)
+            .toUpperCase();
+}
+
+
+/* =========================================================
+   COUNTER
+========================================================= */
+
+function updateCounters()
+{
+    profileNameCounter.textContent =
+        `${profileNameInput.value.length} / 20`;
+
+
+    profileBioCounter.textContent =
+        `${profileBioInput.value.length} / 100`;
+}
+
+
+profileNameInput?.addEventListener(
+    "input",
+    updateCounters
+);
+
+
+profileBioInput?.addEventListener(
+    "input",
+    updateCounters
+);
