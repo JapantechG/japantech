@@ -17,6 +17,10 @@ import {
     auth
 } from "./firebase.js";
 
+import {
+    ensureUserProfile
+} from "./user.js";
+
 
 /* =========================================================
    ELEMENTS
@@ -614,7 +618,12 @@ function getAuthErrorMessage(code) {
 
 onAuthStateChanged(
     auth,
-    user => {
+
+    async user => {
+
+        /* =========================================
+           LOGGED IN
+        ========================================= */
 
         if (
             user &&
@@ -626,44 +635,158 @@ onAuthStateChanged(
                 user.uid
             );
 
+
+            try {
+
+                /* =================================
+                   CREATE / LOAD BATLINGO USER
+
+                   New account:
+                   → Create users/{uid}
+                   → Create BLG ID
+
+                   Existing account:
+                   → Load existing data
+                   → Keep EXP / ELO / wallet...
+                ================================= */
+
+                const userData =
+                    await ensureUserProfile(
+                        user
+                    );
+
+
+                console.log(
+                    "[USER] BatLingo ID:",
+                    userData.profile.batlingoId
+                );
+
+
+                /*
+                    Global user
+
+                    Sau này game.js / pvp.js /
+                    profile UI có thể sử dụng.
+                */
+
+                window.currentUser =
+                    user;
+
+
+                window.currentUserData =
+                    userData;
+
+
+                /* =================================
+                   NOTIFY UI
+                ================================= */
+
                 window.dispatchEvent(
-                new CustomEvent(
-                    "batlingo-auth-state",
-                    {
-                        detail: {
-                            loggedIn: true,
-                            uid: user.uid,
-                            email: user.email,
-                            displayName:
-                                user.displayName,
-                            photoURL:
-                                user.photoURL
+                    new CustomEvent(
+                        "batlingo-auth-state",
+                        {
+                            detail: {
+
+                                loggedIn: true,
+
+                                uid:
+                                    user.uid,
+
+                                batlingoId:
+                                    userData
+                                        .profile
+                                        .batlingoId,
+
+                                email:
+                                    user.email,
+
+                                displayName:
+                                    userData
+                                        .profile
+                                        .displayName,
+
+                                photoURL:
+                                    userData
+                                        .profile
+                                        .photoURL,
+
+                                userData:
+                                    userData
+                            }
                         }
-                    }
-                )
-            );
+                    )
+                );
+
+            }
+            catch (error) {
+
+                console.error(
+                    "[USER] Failed to load user:",
+                    error
+                );
 
 
-        }
-        else {
+                /*
+                    Auth thành công nhưng
+                    BatLingo database lỗi.
 
-            console.log(
-                "[AUTH] Signed out"
-            );
+                    Không cho app hiểu nhầm
+                    user đã sẵn sàng.
+                */
 
-             window.dispatchEvent(
-                new CustomEvent(
-                    "batlingo-auth-state",
-                    {
-                        detail: {
-                            loggedIn: false
+                window.currentUser =
+                    null;
+
+
+                window.currentUserData =
+                    null;
+
+
+                window.dispatchEvent(
+                    new CustomEvent(
+                        "batlingo-auth-state",
+                        {
+                            detail: {
+                                loggedIn: false,
+                                databaseError: true
+                            }
                         }
-                    }
-                )
-            );
+                    )
+                );
+            }
 
+
+            return;
         }
 
+
+        /* =========================================
+           LOGGED OUT
+        ========================================= */
+
+        console.log(
+            "[AUTH] Signed out"
+        );
+
+
+        window.currentUser =
+            null;
+
+
+        window.currentUserData =
+            null;
+
+
+        window.dispatchEvent(
+            new CustomEvent(
+                "batlingo-auth-state",
+                {
+                    detail: {
+                        loggedIn: false
+                    }
+                }
+            )
+        );
     }
 );
 
