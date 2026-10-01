@@ -723,3 +723,160 @@ export async function updateUserProfile({
             cleanBio
     };
 }
+
+/* =========================================================
+   SAVE SOLO RESULT
+========================================================= */
+
+export async function saveSoloResult({
+    score,
+    questions,
+    correct,
+    wrong,
+    bestCombo
+})
+{
+    const user =
+        window.currentUser;
+
+
+    if (!user?.uid) {
+
+        console.log(
+            "[SOLO] Guest result not saved."
+        );
+
+        return null;
+    }
+
+
+    const statsRef =
+        ref(
+            db,
+            `users/${user.uid}/stats`
+        );
+
+
+    /* =====================================================
+       UPDATE STATS
+    ===================================================== */
+
+    const result =
+        await runTransaction(
+            statsRef,
+
+            current => {
+
+                const stats =
+                    current || {};
+
+
+                return {
+
+                    ...stats,
+
+
+                    totalGames:
+                        (
+                            Number(
+                                stats.totalGames
+                            ) || 0
+                        ) + 1,
+
+
+                    soloGames:
+                        (
+                            Number(
+                                stats.soloGames
+                            ) || 0
+                        ) + 1,
+
+
+                    totalQuestions:
+                        (
+                            Number(
+                                stats.totalQuestions
+                            ) || 0
+                        ) +
+                        questions,
+
+
+                    correctAnswers:
+                        (
+                            Number(
+                                stats.correctAnswers
+                            ) || 0
+                        ) +
+                        correct,
+
+
+                    wrongAnswers:
+                        (
+                            Number(
+                                stats.wrongAnswers
+                            ) || 0
+                        ) +
+                        wrong,
+
+
+                    bestCombo:
+                        Math.max(
+                            Number(
+                                stats.bestCombo
+                            ) || 0,
+                            bestCombo
+                        ),
+
+
+                    bestSoloScore:
+                        Math.max(
+                            Number(
+                                stats.bestSoloScore
+                            ) || 0,
+                            score
+                        )
+
+                };
+
+            }
+        );
+
+
+    if (!result.committed) {
+
+        throw new Error(
+            "SOLO_STATS_UPDATE_FAILED"
+        );
+    }
+
+
+    const newStats =
+        result.snapshot.val();
+
+
+    /* =====================================================
+       UPDATE LOCAL USER DATA
+    ===================================================== */
+
+    if (window.currentUserData) {
+
+        window.currentUserData.stats =
+            newStats;
+
+    }
+
+
+    console.log(
+        "[SOLO] Result saved:",
+        {
+            score,
+            questions,
+            correct,
+            wrong,
+            bestCombo
+        }
+    );
+
+
+    return newStats;
+}
