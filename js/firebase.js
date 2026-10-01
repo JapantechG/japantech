@@ -672,29 +672,15 @@ export function resetRoomConnection()
 
 export async function requestRematch()
 {
-    if (
-        !roomCode ||
-        !playerRole
-    ) {
+    if (!roomCode || !playerRole) 
+    {
         return;
     }
 
 
-    const rematchRef =
-        ref(
-            db,
-            `rooms/${roomCode}/rematch/${playerRole}`
-        );
+    const rematchRef = ref(db,`rooms/${roomCode}/rematch/${playerRole}`);
 
+    await set(rematchRef,true);
 
-    await set(
-        rematchRef,
-        true
-    );
-
-
-    console.log(
-        "[Firebase] Rematch accepted:",
-        playerRole
-    );
+    console.log("[Firebase] Rematch accepted:",playerRole);
 }
