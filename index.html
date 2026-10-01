@@ -186,7 +186,192 @@
     </div>
 
 </header>
-        
+
+<!-- =====================================================
+     PROFILE SCREEN
+===================================================== -->
+
+<section
+    id="profileScreen"
+    class="profile-screen hidden"
+>
+    <div class="profile-container">
+
+        <!-- HEADER -->
+        <div class="profile-header">
+
+            <button
+                id="profileBackBtn"
+                class="profile-back-btn"
+                type="button"
+            >
+                ←
+            </button>
+
+            <h1>PROFILE</h1>
+
+            <div class="profile-header-space"></div>
+
+        </div>
+
+
+        <!-- PROFILE CARD -->
+        <div class="profile-card">
+
+            <!-- AVATAR -->
+            <div class="profile-avatar-area">
+
+                <div
+                    id="profileAvatar"
+                    class="profile-avatar"
+                >
+                    U
+                </div>
+
+                <button
+                    id="profileAvatarEditBtn"
+                    class="profile-avatar-edit"
+                    type="button"
+                >
+                    ✎
+                </button>
+
+            </div>
+
+
+            <!-- NAME -->
+            <div
+                id="profileDisplayName"
+                class="profile-main-name"
+            >
+                Player
+            </div>
+
+
+            <!-- BATLINGO ID -->
+            <div
+                id="profileBatlingoId"
+                class="profile-batlingo-id"
+            >
+                BLG-0000000
+            </div>
+
+
+            <div class="profile-divider"></div>
+
+
+            <!-- DISPLAY NAME -->
+
+            <div class="profile-field">
+
+                <label for="profileNameInput">
+                    DISPLAY NAME
+                </label>
+
+                <input
+                    id="profileNameInput"
+                    type="text"
+                    maxlength="20"
+                    autocomplete="off"
+                    placeholder="Your BatLingo name"
+                >
+
+                <div class="profile-field-info">
+                    <span>Your public player name</span>
+
+                    <span id="profileNameCounter">
+                        0 / 20
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- BIO -->
+
+            <div class="profile-field">
+
+                <label for="profileBioInput">
+                    BIO
+                </label>
+
+                <textarea
+                    id="profileBioInput"
+                    maxlength="100"
+                    placeholder="Tell other players about yourself"
+                ></textarea>
+
+                <div class="profile-field-info">
+
+                    <span></span>
+
+                    <span id="profileBioCounter">
+                        0 / 100
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="profile-field">
+
+                <label>
+                    EMAIL
+                </label>
+
+                <div
+                    id="profileEmail"
+                    class="profile-readonly"
+                >
+                    -
+                </div>
+
+            </div>
+
+
+            <!-- ID -->
+
+            <div class="profile-field">
+
+                <label>
+                    BATLINGO ID
+                </label>
+
+                <div
+                    id="profileIdReadonly"
+                    class="profile-readonly"
+                >
+                    BLG-0000000
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="profileMessage"
+                class="profile-message hidden"
+            ></div>
+
+
+            <!-- SAVE -->
+
+            <button
+                id="profileSaveBtn"
+                class="profile-save-btn"
+                type="button"
+            >
+                SAVE PROFILE
+            </button>
+
+        </div>
+
+    </div>
+</section>
 
 
         <div class="setup-container">
