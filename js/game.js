@@ -29,6 +29,9 @@ let maxCombo = 0;
 
 let questionCount = 0;
 
+let correctCount = 0;
+
+let wrongCount = 0;
 
 let answerLocked = false;
 
@@ -279,6 +282,9 @@ export async function startGame(
 
     questionCount = 0;
 
+    correctCount = 0;
+
+    wrongCount = 0;
 
     answerLocked = false;
 
@@ -813,10 +819,8 @@ function isAudioMode() {
     );
 }
 
-function selectAnswer(
-    button,
-    selectedAnswer
-) {
+function selectAnswer(button,selectedAnswer) 
+{
 
     if (
         !gameActive
@@ -860,20 +864,16 @@ function selectAnswer(
         );
 
 
-        playSfx(
-            "correct"
-        );
+        playSfx("correct");
 
-
+        correctCount++;
+        
         combo++;
 
 
-        if (
-            combo > maxCombo
-        ) {
-
-            maxCombo =
-                combo;
+        if (combo > maxCombo) 
+        {
+            maxCombo = combo;
         }
 
 
@@ -927,12 +927,11 @@ function selectAnswer(
         "wrong"
     );
 
-
+    wrongCount++;
+    
     lives--;
 
-
     combo = 0;
-
 
     showReading();
 
@@ -1149,12 +1148,11 @@ function handleTimeout() {
         "wrong"
     );
 
-
+    wrongCount++;
+    
     lives--;
 
-
     combo = 0;
-
 
     updateHUD();
 
