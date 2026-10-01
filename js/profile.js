@@ -1,3 +1,8 @@
+import {
+    updateUserProfile
+}
+from "./user.js";
+
 /* =========================================================
    BATLINGO PROFILE
 ========================================================= */
@@ -61,6 +66,16 @@ const profileBioCounter =
         "profileBioCounter"
     );
 
+const profileSaveBtn =
+    document.getElementById(
+        "profileSaveBtn"
+    );
+
+
+const profileMessage =
+    document.getElementById(
+        "profileMessage"
+    );
 
 /* =========================================================
    OPEN
@@ -223,6 +238,172 @@ profileNameInput?.addEventListener(
     updateCounters
 );
 
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+function showProfileMessage(
+    message,
+    type = "success"
+)
+{
+    if (!profileMessage) {
+        return;
+    }
+
+
+    profileMessage.textContent =
+        message;
+
+
+    profileMessage.classList.remove(
+        "hidden",
+        "success",
+        "error"
+    );
+
+
+    profileMessage.classList.add(
+        type
+    );
+}
+
+
+/* =========================================================
+   SAVE PROFILE
+========================================================= */
+
+profileSaveBtn?.addEventListener(
+    "click",
+
+    async () => {
+
+        const displayName =
+            profileNameInput.value;
+
+
+        const bio =
+            profileBioInput.value;
+
+
+        profileSaveBtn.disabled =
+            true;
+
+
+        profileSaveBtn.textContent =
+            "SAVING...";
+
+
+        profileMessage?.classList.add(
+            "hidden"
+        );
+
+
+        try {
+
+            const result =
+                await updateUserProfile({
+                    displayName,
+                    bio
+                });
+
+
+            /* =================================
+               UPDATE PROFILE SCREEN
+            ================================= */
+
+            profileDisplayName.textContent =
+                result.displayName;
+
+
+            renderProfileAvatar(
+                window.currentUserData
+                    ?.profile
+                    ?.photoURL,
+                result.displayName
+            );
+
+
+            /* =================================
+               TELL OTHER UI
+
+               Home / PvP / etc.
+            ================================= */
+
+            window.dispatchEvent(
+                new CustomEvent(
+                    "batlingo-profile-updated",
+                    {
+                        detail: {
+                            displayName:
+                                result.displayName,
+
+                            bio:
+                                result.bio
+                        }
+                    }
+                )
+            );
+
+
+            showProfileMessage(
+                "Profile saved.",
+                "success"
+            );
+
+        }
+        catch (error) {
+
+            console.error(
+                "[PROFILE] Save:",
+                error
+            );
+
+
+            switch (error.message) {
+
+                case "INVALID_DISPLAY_NAME":
+
+                    showProfileMessage(
+                        "Name must be 2–20 characters.",
+                        "error"
+                    );
+
+                    break;
+
+
+                case "BIO_TOO_LONG":
+
+                    showProfileMessage(
+                        "Bio must be 100 characters or less.",
+                        "error"
+                    );
+
+                    break;
+
+
+                default:
+
+                    showProfileMessage(
+                        "Could not save profile.",
+                        "error"
+                    );
+            }
+
+        }
+        finally {
+
+            profileSaveBtn.disabled =
+                false;
+
+
+            profileSaveBtn.textContent =
+                "SAVE PROFILE";
+
+        }
+
+    }
+);
 
 profileBioInput?.addEventListener(
     "input",
