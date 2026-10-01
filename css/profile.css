@@ -372,3 +372,195 @@
 .profile-message.error {
     color: #f87171;
 }
+
+/* =========================================================
+   PLAYER STATUS
+========================================================= */
+
+.profile-player-status {
+    margin-top: 26px;
+}
+
+
+/* LEVEL / ELO */
+
+.profile-status-top {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 12px;
+}
+
+
+.profile-level-box,
+.profile-elo-box {
+    padding: 16px;
+
+    border: 1px solid
+        rgba(255,255,255,.1);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    text-align: center;
+}
+
+
+.profile-status-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+.profile-level-box strong,
+.profile-elo-box strong {
+    color: white;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   EXP
+========================================================= */
+
+.profile-exp-area {
+    margin-top: 18px;
+}
+
+
+.profile-exp-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.profile-exp-bar {
+    width: 100%;
+    height: 9px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+
+.profile-exp-fill {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    transition:
+        width .35s ease;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.profile-stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+
+.profile-stat-item {
+    min-width: 0;
+
+    padding: 14px 8px;
+
+    border: 1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    text-align: center;
+}
+
+
+.profile-stat-value {
+    display: block;
+
+    overflow: hidden;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    text-overflow: ellipsis;
+}
+
+
+.profile-stat-label {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .6px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .profile-stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
