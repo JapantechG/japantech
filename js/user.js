@@ -574,11 +574,11 @@ export async function ensureUserProfile(
             now;
 
 
-        if (user.displayName) {
+       /* if (user.displayName) {
 
             userData.profile.displayName =
                 user.displayName;
-        }
+        }*/
 
 
         if (user.photoURL) {
