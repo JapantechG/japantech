@@ -1075,11 +1075,11 @@
 
         <div class="pvp-container">
 
-            <div class="pvp-title">
+            <div class="pvp-title" data-i18n="pvp.title">
                 1 VS 1
             </div>
 
-            <div class="pvp-subtitle">
+            <div class="pvp-subtitle" data-i18n="pvp.onlineBattle">
                 ONLINE BATTLE
             </div>
 
@@ -1092,6 +1092,7 @@
                     id="createRoomButton"
                     class="create-room-button"
                     type="button"
+                    data-i18n="pvp.createRoom"
                 >
                     CREATE ROOM
                 </button>
@@ -1104,7 +1105,7 @@
                 </div>
 
 
-                <div class="room-code-label">
+                <div class="room-code-label" data-i18n="pvp.roomCode">
                     ROOM CODE
                 </div>
 
@@ -1122,6 +1123,7 @@
                     id="joinRoomButton"
                     class="join-room-button"
                     type="button"
+                    data-i18n="pvp.joinRoom"
                 >
                     JOIN ROOM
                 </button>
@@ -1133,7 +1135,7 @@
 
             <div id="waitingRoomPanel" class="waiting-room hidden">
 
-                <div class="waiting-label">
+                <div class="waiting-label" data-i18n="pvp.roomCode">
                     ROOM CODE
                 </div>
 
@@ -1144,58 +1146,10 @@
                     ----
                 </div>
 
-                <div class="room-code-help">
+                <div class="room-code-help" data-i18n="pvp.sendCode">
                     SEND THIS CODE TO YOUR FRIEND
                 </div>
 
-
-                <!--##<div class="players-area">
-
-                    <div class="player-slot">
-
-                        <div class="player-avatar">
-                            🐵
-                        </div>
-
-                        <div class="room-player-name">
-                            YOU
-                        </div>
-
-                        <div class="player-status ready">
-                            READY
-                        </div>
-
-                    </div>
-
-
-                    <div class="room-vs">
-                        VS
-                    </div>
-
-
-                    <div class="player-slot">
-
-                        <div class="player-avatar waiting">
-                            ?
-                        </div>
-
-                        <div
-                            id="player2Name"
-                            class="room-player-name"
-                        >
-                            WAITING...
-                        </div>
-
-                        <div
-                            id="player2Status"
-                            class="player-status"
-                        >
-                            WAITING
-                        </div>
-
-                    </div>
-
-                </div>-->
                 <div class="players-area">
 
                         <!-- LEFT PLAYER -->
@@ -1270,13 +1224,14 @@
                     class="battle-button hidden"
                     type="button"
                 >
-                    ⚔ START BATTLE
+                    ⚔ <span data-i18n="pvp.startBattle">START BATTLE</span>
                 </button>
 
                 <button
                     id="leaveRoomButton"
                     class="leave-room-button"
                     type="button"
+                    data-i18n="pvp.leaveRoom"
                 >
                     LEAVE ROOM
                 </button>
@@ -1441,6 +1396,7 @@
                                     id="pvpRematchButton"
                                     class="pvp-rematch-button"
                                     type="button"
+                                    data-i18n="pvp.rematch"
                                 >
                                     REMATCH
                                 </button>
