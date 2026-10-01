@@ -91,14 +91,12 @@ let unsubscribeRoom = null;
 
 function createPlayerId() {
 
-    if (crypto.randomUUID) {
+    if (crypto.randomUUID) 
+    {
         return crypto.randomUUID();
     }
 
-    return (
-        Date.now().toString(36) +
-        Math.random().toString(36).substring(2)
-    );
+    return (Date.now().toString(36) + Math.random().toString(36).substring(2));
 }
 
 
@@ -111,19 +109,15 @@ function createPlayerId() {
 // để tránh người chơi nhập nhầm
 // ============================================================
 
-function generateRoomCode(length = 4) {
-
-    const chars =
-        "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+function generateRoomCode(length = 4) 
+{
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
     let code = "";
 
-    for (let i = 0; i < length; i++) {
-
-        const index =
-            Math.floor(
-                Math.random() * chars.length
-            );
+    for (let i = 0; i < length; i++) 
+    {
+        const index = Math.floor(Math.random() * chars.length);
 
         code += chars[index];
     }
@@ -140,13 +134,12 @@ export async function createRoom(playerName) {
 
     playerName = playerName.trim();
 
-    if (!playerName) {
+    if (!playerName) 
+    {
         throw new Error("PLAYER_NAME_EMPTY");
     }
 
-
     playerId = createPlayerId();
-
 
     // ----------------------------------------
     // Tạo room code chưa tồn tại
@@ -156,21 +149,17 @@ export async function createRoom(playerName) {
     let roomRef;
 
 
-    while (true) {
-
+    while (true) 
+    {
         code = generateRoomCode();
 
-        roomRef =
-            ref(
-                db,
-                `rooms/${code}`
-            );
+        roomRef = ref(db,`rooms/${code}`);
 
-        const snapshot =
-            await get(roomRef);
+        const snapshot = await get(roomRef);
 
 
-        if (!snapshot.exists()) {
+        if (!snapshot.exists()) 
+        {
             break;
         }
     }
@@ -207,17 +196,9 @@ export async function createRoom(playerName) {
     // Nếu host mất kết nối
     // ----------------------------------------
 
-    const connectedRef =
-        ref(
-            db,
-            `rooms/${roomCode}/host/connected`
-        );
+    const connectedRef = ref(db,`rooms/${roomCode}/host/connected`);
 
-
-    await onDisconnect(
-        connectedRef
-    ).set(false);
-
+    await onDisconnect(connectedRef).set(false);
 
     // ----------------------------------------
     // Bắt đầu theo dõi room
@@ -226,11 +207,7 @@ export async function createRoom(playerName) {
     listenRoom();
 
 
-    console.log(
-        "[BatLingo] Room created:",
-        roomCode
-    );
-
+    console.log("[BatLingo] Room created:",roomCode);
 
     return roomCode;
 }
@@ -240,65 +217,44 @@ export async function createRoom(playerName) {
 // JOIN ROOM
 // ============================================================
 
-export async function joinRoom(
-    code,
-    playerName
-) {
+export async function joinRoom(code,playerName) 
+{
+    code = code.trim().toUpperCase();
 
-    code =
-        code
-            .trim()
-            .toUpperCase();
+    playerName = playerName.trim();
 
-
-    playerName =
-        playerName.trim();
-
-
-    if (!code) {
+    if (!code) 
+    {
         throw new Error("ROOM_CODE_EMPTY");
     }
 
-
-    if (!playerName) {
+    if (!playerName) 
+    {
         throw new Error("PLAYER_NAME_EMPTY");
     }
 
-
-    const roomRef =
-        ref(
-            db,
-            `rooms/${code}`
-        );
-
+    const roomRef = ref(db,`rooms/${code}`);
 
     // ----------------------------------------
     // Đọc room
     // ----------------------------------------
 
-    const snapshot =
-        await get(roomRef);
+    const snapshot = await get(roomRef);
 
 
     // Room không tồn tại
-    if (!snapshot.exists()) {
-
-        throw new Error(
-            "ROOM_NOT_FOUND"
-        );
+    if (!snapshot.exists()) 
+    {
+        throw new Error("ROOM_NOT_FOUND");
     }
 
 
-    const room =
-        snapshot.val();
-
+    const room = snapshot.val();
 
     // Room đã có người thứ 2
-    if (room.guest) {
-
-        throw new Error(
-            "ROOM_FULL"
-        );
+    if (room.guest) 
+    {
+        throw new Error("ROOM_FULL");
     }
 
 
@@ -306,18 +262,17 @@ export async function joinRoom(
     // Tạo player
     // ----------------------------------------
 
-    playerId =
-        createPlayerId();
+    playerId = createPlayerId();
 
 
     // ----------------------------------------
     // Add guest
     // ----------------------------------------
 
-    await update(
-        roomRef,
+    await update(roomRef,
         {
-            guest: {
+            guest: 
+            {
                 id: playerId,
                 name: playerName,
                 connected: true
@@ -337,30 +292,19 @@ export async function joinRoom(
     // Nếu guest mất kết nối
     // ----------------------------------------
 
-    const connectedRef =
-        ref(
-            db,
-            `rooms/${roomCode}/guest/connected`
-        );
+    /*const connectedRef = ref(db,`rooms/${roomCode}/guest/connected`);
 
+    await onDisconnect(connectedRef).set(false);*/
+    const roomDisconnectRef = ref(db, `rooms/${roomCode}`);
 
-    await onDisconnect(
-        connectedRef
-    ).set(false);
-
-
+    await onDisconnect(roomDisconnectRef).remove();
     // ----------------------------------------
     // Listen room
     // ----------------------------------------
 
     listenRoom();
 
-
-    console.log(
-        "[BatLingo] Joined room:",
-        roomCode
-    );
-
+    console.log("[BatLingo] Joined room:",roomCode);
 
     return roomCode;
 }
@@ -374,65 +318,57 @@ export async function joinRoom(
 // callback chạy trên cả hai máy
 // ============================================================
 
-function listenRoom() {
+function listenRoom() 
+{
 
-    if (!roomCode) {
+    if (!roomCode) 
+    {
         return;
     }
 
-
     // Nếu đã có listener cũ
-    if (unsubscribeRoom) {
-
+    if (unsubscribeRoom) 
+    {
         unsubscribeRoom();
 
         unsubscribeRoom = null;
     }
 
 
-    const roomRef =
-        ref(
-            db,
-            `rooms/${roomCode}`
-        );
+    const roomRef = ref(db,`rooms/${roomCode}`);
 
 
-    unsubscribeRoom =
-        onValue(
-            roomRef,
-
-            snapshot => {
-
+    unsubscribeRoom = onValue(roomRef,snapshot => 
+        {
                 // Room bị xóa
-                if (!snapshot.exists()) {
-
-                    console.log(
-                        "[BatLingo] Room deleted."
-                    );
-
+                if (!snapshot.exists()) 
+                {
+                    console.log("[BatLingo] Room deleted.");
+                    
+                    window.dispatchEvent(new CustomEvent("batlingo-room-deleted", 
+                        {
+                            detail: 
+                            {
+                                roomCode,
+                                playerRole
+                            }
+                        }));
+                    
                     return;
                 }
 
+                const room = snapshot.val();
 
-                const room =
-                    snapshot.val();
-
-
-                console.log(
-                    "[BatLingo] Room update:",
-                    room
-                );
-
+                console.log("[BatLingo] Room update:",room);
 
                 // --------------------------------
                 // Phát event cho pvp.js
                 // --------------------------------
 
-                window.dispatchEvent(
-                    new CustomEvent(
-                        "batlingo-room-update",
+                window.dispatchEvent(new CustomEvent("batlingo-room-update",
                         {
-                            detail: {
+                            detail: 
+                            {
                                 roomCode,
                                 playerRole,
                                 room
@@ -451,34 +387,23 @@ function listenRoom() {
 
 export function getConnectionInfo() {
 
-    return {
+    return 
+    {
         roomCode,
         playerRole,
         playerId
     };
 }
 
-export async function startRoomGame(matchData) {
-
+export async function startRoomGame(matchData) 
+{
     if (!roomCode || playerRole !== "host") 
     {
-
         return;
     }
 
         
-        const roomRef = ref(db,`rooms/${roomCode}`);
-
-    /*await update(
-        ref(
-            db,
-            `rooms/${roomCode}`
-        ),
-        {
-            status: "playing",
-            startedAt: Date.now()
-        }
-    );*/
+    const roomRef = ref(db,`rooms/${roomCode}`);
 
       /*
         Tạo MATCH MỚI hoàn toàn.
@@ -486,11 +411,9 @@ export async function startRoomGame(matchData) {
         như answers không còn tồn tại.
     */
 
-    await set(
-        ref(db,`rooms/${roomCode}/match`),
+    await set(ref(db,`rooms/${roomCode}/match`),
         {   
-
-             matchId: Date.now(),
+            matchId: Date.now(),
 
             level: matchData.level,
 
@@ -523,50 +446,24 @@ export async function startRoomGame(matchData) {
             finishedAt: null,
 
             rematch: null
-            /*match: {
-                level: matchData.level,
-
-                category: matchData.category,
-
-                mode: matchData.mode,
-
-                questionIds: matchData.questionIds,
-                
-                questions: matchData.questions,
-
-                currentQuestion: 0
-            }*/
         }
     );
 
-      console.log(
-        "[Firebase] Match started:",
-        matchData
+    console.log("[Firebase] Match started:",matchData
     );
 }
 
-export async function submitRoomAnswer(
-    questionIndex,
-    optionId
-) {
+export async function submitRoomAnswer(questionIndex,optionId) 
+{
 
-    if (
-        !roomCode ||
-        !playerRole
-    ) {
+    if (!roomCode || !playerRole) 
+    {
         return;
     }
 
+    const answerRef =ref(db,`rooms/${roomCode}/match/answers/${questionIndex}/${playerRole}`);
 
-    const answerRef =
-        ref(
-            db,
-            `rooms/${roomCode}/match/answers/${questionIndex}/${playerRole}`
-        );
-
-
-    await set(
-        answerRef,
+    await set(answerRef,
         {
             optionId:
                 optionId,
@@ -577,25 +474,15 @@ export async function submitRoomAnswer(
     );
 }
 
-export async function nextRoomQuestion(
-    nextIndex,
-    hostScore,
-    guestScore
-) {
+export async function nextRoomQuestion(nextIndex,hostScore,guestScore) 
+{
 
-    if (
-        !roomCode ||
-        playerRole !== "host"
-    ) {
+    if (!roomCode || playerRole !== "host") 
+    {
         return;
     }
 
-
-    await update(
-        ref(
-            db,
-            `rooms/${roomCode}/match`
-        ),
+    await update(ref(db,`rooms/${roomCode}/match`),
         {
             currentQuestion:
                 nextIndex,
@@ -609,24 +496,16 @@ export async function nextRoomQuestion(
     );
 }
 
-export async function finishRoomGame(
-    hostScore,
-    guestScore
-) {
+export async function finishRoomGame(hostScore,guestScore) 
+{
 
-    if (
-        !roomCode ||
-        playerRole !== "host"
-    ) {
+    if (!roomCode || playerRole !== "host") 
+    {
         return;
     }
 
 
-    await update(
-        ref(
-            db,
-            `rooms/${roomCode}`
-        ),
+    await update(ref(db,`rooms/${roomCode}`),
         {
             status:
                 "finished",
