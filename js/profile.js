@@ -3,6 +3,11 @@ import {
 }
 from "./user.js";
 
+import {
+    getExpRequired
+}
+from "./progression.js";
+
 /* =========================================================
    BATLINGO PROFILE
 ========================================================= */
@@ -493,27 +498,12 @@ function renderPlayerStatus(
        Sau này ta tách thành Level System riêng.
     ========================================= */
 
-    const exp =
-        Number(
-            progress.exp
-        ) || 0;
+    const exp = Number(progress.exp) || 0;
 
 
-    const expRequired =
-        100;
+    const expRequired =getExpRequired(level);
 
-
-    const expPercent =
-        Math.min(
-            100,
-            Math.max(
-                0,
-                (
-                    exp /
-                    expRequired
-                ) * 100
-            )
-        );
+    const expPercent =Math.min(100,Math.max(0,(exp /expRequired) * 100));
 
 
     profileExpText.textContent =
