@@ -533,13 +533,13 @@ export async function ensureUserProfile(
         Đồng bộ lại từ Firebase Auth.
     */
 
-    if (user.displayName) {
+    /*if (user.displayName) {
 
         updates[
             "profile/displayName"
         ] =
             user.displayName;
-    }
+    }*/
 
 
     if (user.photoURL) {
