@@ -1610,45 +1610,23 @@ function getQuestionById(
    CREATE ROOM
    ============================================================= */
 
-document
-    .getElementById(
-        "createRoomButton"
-    )
-    .addEventListener(
-        "click",
-        async () => {
+document.getElementById("createRoomButton").addEventListener("click",async () => 
+    {
 
-            console.log(
-                "[PVP] Create button clicked"
-            );
+            console.log("[PVP] Create button clicked");
 
 
             try {
 
-                const playerName =
-                    "Player 1";
+                const playerName = window.currentUserData?.profile?.displayName || window.currentUser?.displayName || "Player";
 
+                console.log("[PVP] Creating Firebase room...");
 
-                console.log(
-                    "[PVP] Creating Firebase room..."
-                );
+                const roomCode = await createRoom(playerName);
 
+                console.log("[PVP] Room created:",roomCode);
 
-                const roomCode =
-                    await createRoom(
-                        playerName
-                    );
-
-
-                console.log(
-                    "[PVP] Room created:",
-                    roomCode
-                );
-
-
-                openWaitingRoom(
-                    roomCode
-                );
+                openWaitingRoom(roomCode);
 
             }
             catch (error) {
@@ -1674,102 +1652,56 @@ document
    JOIN ROOM
    ============================================================= */
 
-document
-    .getElementById(
-        "joinRoomButton"
-    )
-    .addEventListener(
-        "click",
-        async () => {
+document.getElementById("joinRoomButton").addEventListener("click",async () => {
 
-            const input =
-                document.getElementById(
-                    "roomCodeInput"
-                );
+            const input = document.getElementById("roomCodeInput");
+
+            const code = input.value.trim().toUpperCase();
 
 
-            const code =
-                input
-                    .value
-                    .trim()
-                    .toUpperCase();
-
-
-            if (
-                code.length !== 4
-            ) {
-
+            if (code.length !== 4)
+            {
                 input.focus();
-
                 return;
             }
 
 
             try {
 
-                const playerName =
-                    "Player 2";
+                const playerName = window.currentUserData?.profile?.displayName || window.currentUser?.displayName || "Player";
+
+                console.log("[PVP] Joining room:",code);
 
 
-                console.log(
-                    "[PVP] Joining room:",
-                    code
-                );
+                await joinRoom(code,playerName);
 
+                openWaitingRoom(code);
 
-                await joinRoom(
-                    code,
-                    playerName
-                );
-
-
-                openWaitingRoom(
-                    code
-                );
-
-
-                console.log(
-                    "[PVP] Joined:",
-                    code
-                );
+                console.log("[PVP] Joined:",code);
 
             }
             catch (error) {
 
-                console.error(
-                    "[PVP] Join error:",
-                    error
-                );
+                console.error("[PVP] Join error:",error);
 
-
-                switch (
-                    error.message
-                ) {
+                switch (error.message)
+                {
 
                     case "ROOM_NOT_FOUND":
 
-                        alert(
-                            "Không tìm thấy phòng."
-                        );
+                        alert("Không tìm thấy phòng.");
 
                         break;
-
 
                     case "ROOM_FULL":
 
-                        alert(
-                            "Phòng đã đủ người."
-                        );
+                        alert("Phòng đã đủ người.");
 
                         break;
 
-
                     default:
 
-                        alert(
-                            "Không thể vào phòng: "
-                            + error.message
-                        );
+                        alert("Không thể vào phòng: " + error.message);
 
                         break;
                 }
@@ -2052,28 +1984,26 @@ function showPvpResult(room)
     
     const hostScore = room.match?.hostScore || 0;
 
-
     const guestScore = room.match?.guestScore || 0;
+
+    const hostName = room.host?.name || "Host";
+    const guestName = room.guest?.name || "Guest";
 
     pvpGamePanel.classList.add("hidden");
 
     pvpResultPanel.classList.remove("hidden");
 
-    /*
-        Background result
-    */
+    /*Background result*/
 
     pvpScreen.classList.remove("battle-mode");
 
     pvpScreen.classList.add("result-mode");
 
-    pvpFinalHostScore.textContent =hostScore;
+    pvpFinalHostScore.textContent = hostScore;
 
-    pvpFinalGuestScore.textContent =guestScore;
+    pvpFinalGuestScore.textContent = guestScore;
 
-        /*
-        Player cards
-    */
+    /*Player cards*/
 
     const playerCards =pvpResultPanel.querySelectorAll(".pvp-result-score > div:not(.room-vs)");
 
