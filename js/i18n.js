@@ -101,6 +101,120 @@ const translations = {
         }
     },
 
+      common: {
+       back: "戻る",
+       save: "保存",
+       cancel: "キャンセル",
+       confirm: "確認",
+       continue: "続ける",
+       close: "閉じる",
+       retry: "もう一度",
+       loading: "読み込み中...",
+       saving: "保存中...",
+       yes: "はい",
+       no: "いいえ"
+   },
+   
+   profile: {
+       title: "プロフィール",
+       level: "レベル",
+       exp: "EXP",
+       rank: "ランク",
+       elo: "ELO",
+       battles: "バトル",
+       wins: "勝利",
+       losses: "敗北",
+       draws: "引き分け",
+       winRate: "勝率",
+       bestCombo: "ベストコンボ",
+       bestScore: "ベストスコア",
+       displayName: "表示名",
+       displayNameHint: "公開プレイヤー名",
+       bio: "自己紹介",
+       email: "メールアドレス",
+       batlingoId: "BATLINGO ID",
+       save: "プロフィールを保存",
+       saved: "プロフィールを保存しました"
+   },
+   
+   game: {
+       question: "問題",
+       score: "スコア",
+       best: "ベスト",
+       combo: "コンボ",
+       lives: "ライフ",
+       vocabulary: "語彙",
+       grammar: "文法",
+       listening: "聴解",
+       reading: "読解",
+       correct: "正解",
+       wrong: "不正解",
+       timeUp: "時間切れ"
+   },
+   
+   gameOver: {
+       title: "ゲーム終了",
+       finalScore: "スコア",
+       questions: "問題数",
+       bestCombo: "ベストコンボ",
+       bestScore: "ベストスコア",
+       expGained: "獲得EXP",
+       retry: "もう一度",
+       home: "ホームへ"
+   },
+   
+   pvp: {
+       title: "1 VS 1",
+       createRoom: "ルーム作成",
+       joinRoom: "ルーム参加",
+       roomCode: "ルームコード",
+       enterRoomCode: "ルームコードを入力",
+       waitingOpponent: "対戦相手を待っています...",
+       opponentJoined: "対戦相手が参加しました",
+       startBattle: "バトル開始",
+       you: "あなた",
+       opponent: "相手",
+       rematch: "再戦",
+       leaveRoom: "ルームを退出"
+   },
+   
+   flashcard: {
+       title: "フラッシュカード",
+       study: "学習",
+       review: "復習",
+       known: "覚えた",
+       unknown: "まだ",
+       again: "もう一度",
+       learned: "習得済み",
+       remaining: "残り"
+   },
+   
+   rank: {
+       title: "ランクバトル",
+       rank: "ランク",
+       elo: "ELO",
+       peakElo: "最高ELO",
+       season: "シーズン",
+       findMatch: "対戦相手を探す",
+       searching: "検索中..."
+   },
+   
+   result: {
+       victory: "勝利",
+       defeat: "敗北",
+       draw: "引き分け",
+       expGained: "獲得EXP",
+       levelUp: "レベルアップ！"
+   },
+   
+   error: {
+       generic: "エラーが発生しました。",
+       network: "ネットワークエラーが発生しました。",
+       saveFailed: "保存できませんでした。",
+       roomNotFound: "ルームが見つかりません。",
+       roomFull: "ルームは満員です。"
+   }
+
 
     /* =========================
        ENGLISH
@@ -183,6 +297,119 @@ const translations = {
             backLogin: "BACK TO LOGIN"
         }
     },
+      common: {
+    back: "BACK",
+    save: "SAVE",
+    cancel: "CANCEL",
+    confirm: "CONFIRM",
+    continue: "CONTINUE",
+    close: "CLOSE",
+    retry: "RETRY",
+    loading: "Loading...",
+    saving: "Saving...",
+    yes: "YES",
+    no: "NO"
+},
+
+profile: {
+    title: "PROFILE",
+    level: "LEVEL",
+    exp: "EXP",
+    rank: "RANK",
+    elo: "ELO",
+    battles: "BATTLES",
+    wins: "WINS",
+    losses: "LOSSES",
+    draws: "DRAWS",
+    winRate: "WIN RATE",
+    bestCombo: "BEST COMBO",
+    bestScore: "BEST SCORE",
+    displayName: "DISPLAY NAME",
+    displayNameHint: "Your public player name",
+    bio: "BIO",
+    email: "EMAIL",
+    batlingoId: "BATLINGO ID",
+    save: "SAVE PROFILE",
+    saved: "Profile saved."
+},
+
+game: {
+    question: "QUESTION",
+    score: "SCORE",
+    best: "BEST",
+    combo: "COMBO",
+    lives: "LIVES",
+    vocabulary: "VOCABULARY",
+    grammar: "GRAMMAR",
+    listening: "LISTENING",
+    reading: "READING",
+    correct: "CORRECT",
+    wrong: "WRONG",
+    timeUp: "TIME UP"
+},
+
+gameOver: {
+    title: "GAME OVER",
+    finalScore: "SCORE",
+    questions: "QUESTIONS",
+    bestCombo: "BEST COMBO",
+    bestScore: "BEST SCORE",
+    expGained: "EXP GAINED",
+    retry: "RETRY",
+    home: "HOME"
+},
+
+pvp: {
+    title: "1 VS 1",
+    createRoom: "CREATE ROOM",
+    joinRoom: "JOIN ROOM",
+    roomCode: "ROOM CODE",
+    enterRoomCode: "Enter room code",
+    waitingOpponent: "Waiting for opponent...",
+    opponentJoined: "Opponent joined",
+    startBattle: "START BATTLE",
+    you: "YOU",
+    opponent: "OPPONENT",
+    rematch: "REMATCH",
+    leaveRoom: "LEAVE ROOM"
+},
+
+flashcard: {
+    title: "FLASHCARD",
+    study: "STUDY",
+    review: "REVIEW",
+    known: "KNOWN",
+    unknown: "DON'T KNOW",
+    again: "AGAIN",
+    learned: "LEARNED",
+    remaining: "REMAINING"
+},
+
+rank: {
+    title: "RANK BATTLE",
+    rank: "RANK",
+    elo: "ELO",
+    peakElo: "PEAK ELO",
+    season: "SEASON",
+    findMatch: "FIND MATCH",
+    searching: "SEARCHING..."
+},
+
+result: {
+    victory: "VICTORY",
+    defeat: "DEFEAT",
+    draw: "DRAW",
+    expGained: "EXP GAINED",
+    levelUp: "LEVEL UP!"
+},
+
+error: {
+    generic: "Something went wrong.",
+    network: "Network error.",
+    saveFailed: "Could not save.",
+    roomNotFound: "Room not found.",
+    roomFull: "Room is full."
+}
 
 
     /* =========================
@@ -267,6 +494,119 @@ const translations = {
         }
     },
 
+   common: {
+    back: "返回",
+    save: "保存",
+    cancel: "取消",
+    confirm: "确认",
+    continue: "继续",
+    close: "关闭",
+    retry: "再试一次",
+    loading: "加载中...",
+    saving: "保存中...",
+    yes: "是",
+    no: "否"
+},
+
+profile: {
+    title: "个人资料",
+    level: "等级",
+    exp: "经验值",
+    rank: "段位",
+    elo: "ELO",
+    battles: "对战",
+    wins: "胜利",
+    losses: "失败",
+    draws: "平局",
+    winRate: "胜率",
+    bestCombo: "最高连击",
+    bestScore: "最高分",
+    displayName: "玩家名称",
+    displayNameHint: "公开显示的玩家名称",
+    bio: "简介",
+    email: "电子邮箱",
+    batlingoId: "BATLINGO ID",
+    save: "保存个人资料",
+    saved: "个人资料已保存"
+},
+
+game: {
+    question: "问题",
+    score: "分数",
+    best: "最高分",
+    combo: "连击",
+    lives: "生命",
+    vocabulary: "词汇",
+    grammar: "语法",
+    listening: "听力",
+    reading: "阅读",
+    correct: "正确",
+    wrong: "错误",
+    timeUp: "时间到"
+},
+
+gameOver: {
+    title: "游戏结束",
+    finalScore: "分数",
+    questions: "题数",
+    bestCombo: "最高连击",
+    bestScore: "最高分",
+    expGained: "获得经验值",
+    retry: "再试一次",
+    home: "主页"
+},
+
+pvp: {
+    title: "1 VS 1",
+    createRoom: "创建房间",
+    joinRoom: "加入房间",
+    roomCode: "房间代码",
+    enterRoomCode: "输入房间代码",
+    waitingOpponent: "等待对手...",
+    opponentJoined: "对手已加入",
+    startBattle: "开始对战",
+    you: "你",
+    opponent: "对手",
+    rematch: "再战",
+    leaveRoom: "离开房间"
+},
+
+flashcard: {
+    title: "闪卡",
+    study: "学习",
+    review: "复习",
+    known: "已掌握",
+    unknown: "不会",
+    again: "再来一次",
+    learned: "已学习",
+    remaining: "剩余"
+},
+
+rank: {
+    title: "排位赛",
+    rank: "段位",
+    elo: "ELO",
+    peakElo: "最高 ELO",
+    season: "赛季",
+    findMatch: "寻找对手",
+    searching: "搜索中..."
+},
+
+result: {
+    victory: "胜利",
+    defeat: "失败",
+    draw: "平局",
+    expGained: "获得经验值",
+    levelUp: "升级！"
+},
+
+error: {
+    generic: "发生错误。",
+    network: "网络错误。",
+    saveFailed: "保存失败。",
+    roomNotFound: "找不到房间。",
+    roomFull: "房间已满。"
+}
 
     /* =========================
        VIETNAMESE
@@ -351,6 +691,120 @@ const translations = {
     }
 };
 
+common: {
+    back: "QUAY LẠI",
+    save: "LƯU",
+    cancel: "HỦY",
+    confirm: "XÁC NHẬN",
+    continue: "TIẾP TỤC",
+    close: "ĐÓNG",
+    retry: "CHƠI LẠI",
+    loading: "Đang tải...",
+    saving: "Đang lưu...",
+    yes: "CÓ",
+    no: "KHÔNG"
+},
+
+profile: {
+    title: "HỒ SƠ",
+    level: "CẤP ĐỘ",
+    exp: "EXP",
+    rank: "XẾP HẠNG",
+    elo: "ELO",
+    battles: "TRẬN ĐẤU",
+    wins: "THẮNG",
+    losses: "THUA",
+    draws: "HÒA",
+    winRate: "TỈ LỆ THẮNG",
+    bestCombo: "COMBO CAO NHẤT",
+    bestScore: "ĐIỂM CAO NHẤT",
+    displayName: "TÊN HIỂN THỊ",
+    displayNameHint: "Tên công khai của người chơi",
+    bio: "GIỚI THIỆU",
+    email: "EMAIL",
+    batlingoId: "BATLINGO ID",
+    save: "LƯU HỒ SƠ",
+    saved: "Đã lưu hồ sơ."
+},
+
+game: {
+    question: "CÂU HỎI",
+    score: "ĐIỂM",
+    best: "KỶ LỤC",
+    combo: "COMBO",
+    lives: "MẠNG",
+    vocabulary: "TỪ VỰNG",
+    grammar: "NGỮ PHÁP",
+    listening: "NGHE",
+    reading: "ĐỌC HIỂU",
+    correct: "ĐÚNG",
+    wrong: "SAI",
+    timeUp: "HẾT GIỜ"
+},
+
+gameOver: {
+    title: "KẾT THÚC",
+    finalScore: "ĐIỂM",
+    questions: "SỐ CÂU",
+    bestCombo: "COMBO CAO NHẤT",
+    bestScore: "KỶ LỤC",
+    expGained: "EXP NHẬN ĐƯỢC",
+    retry: "CHƠI LẠI",
+    home: "TRANG CHỦ"
+},
+
+pvp: {
+    title: "1 VS 1",
+    createRoom: "TẠO PHÒNG",
+    joinRoom: "VÀO PHÒNG",
+    roomCode: "MÃ PHÒNG",
+    enterRoomCode: "Nhập mã phòng",
+    waitingOpponent: "Đang chờ đối thủ...",
+    opponentJoined: "Đối thủ đã vào phòng",
+    startBattle: "BẮT ĐẦU",
+    you: "BẠN",
+    opponent: "ĐỐI THỦ",
+    rematch: "ĐẤU LẠI",
+    leaveRoom: "RỜI PHÒNG"
+},
+
+flashcard: {
+    title: "FLASHCARD",
+    study: "HỌC",
+    review: "ÔN TẬP",
+    known: "ĐÃ NHỚ",
+    unknown: "CHƯA NHỚ",
+    again: "HỌC LẠI",
+    learned: "ĐÃ HỌC",
+    remaining: "CÒN LẠI"
+},
+
+rank: {
+    title: "ĐẤU HẠNG",
+    rank: "HẠNG",
+    elo: "ELO",
+    peakElo: "ELO CAO NHẤT",
+    season: "MÙA GIẢI",
+    findMatch: "TÌM ĐỐI THỦ",
+    searching: "ĐANG TÌM..."
+},
+
+result: {
+    victory: "CHIẾN THẮNG",
+    defeat: "THẤT BẠI",
+    draw: "HÒA",
+    expGained: "EXP NHẬN ĐƯỢC",
+    levelUp: "LÊN CẤP!"
+},
+
+error: {
+    generic: "Đã xảy ra lỗi.",
+    network: "Lỗi kết nối mạng.",
+    saveFailed: "Không thể lưu.",
+    roomNotFound: "Không tìm thấy phòng.",
+    roomFull: "Phòng đã đầy."
+}
+
 
 /* =========================================================
    CURRENT LANGUAGE
@@ -374,23 +828,22 @@ if (!SUPPORTED_LANGUAGES.includes(uiLanguage)) {
 
 export function t(key) {
 
-    const parts = key.split(".");
+     const parts = key.split(".");
 
-    let value = translations[uiLanguage];
+    function getValue(language) 
+    {
+        let value = translations[language];
 
-    for (const part of parts) {
-
-        if (
-            value === undefined ||
-            value === null
-        ) {
-            return key;
+        for (const part of parts) 
+        {
+            if (value === undefined || value === null) return undefined;
+            value = value[part];
         }
 
-        value = value[part];
+        return value;
     }
 
-    return value ?? key;
+    return getValue(uiLanguage) ?? getValue(DEFAULT_LANGUAGE) ?? key;
 }
 
 
