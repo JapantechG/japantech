@@ -1325,9 +1325,8 @@ document.getElementById("leaveRoomButton").addEventListener("click",async () =>
         catch (error) 
         {
             console.error("[PVP] Leave room error:", error);
-            resetRoomConnection();
         }
-
+        resetRoomConnection();
         resetPvpScreen();
     }
     );
@@ -1339,7 +1338,6 @@ document.getElementById("leaveRoomButton").addEventListener("click",async () =>
 
 function resetPvpScreen() {
     stopPvpTimer();
-
     stopSpeech();
     
     pvpTimeLeft = PVP_QUESTION_TIME;
@@ -1384,6 +1382,10 @@ function resetPvpScreen() {
     {
         currentMatchId = null;
     }
+
+    currentPvpRoom = null;
+    currentPlayerRole = null;
+    currentMatchId = null;
 
     displayedQuestionIndex = -1;
 
