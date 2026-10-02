@@ -100,7 +100,6 @@ function setUILanguage(language)
 
 }
 
-
 homeLanguage.addEventListener("change",event => 
     {
         setUILanguage(event.target.value);
@@ -124,7 +123,8 @@ homeLoginBtn.addEventListener("click",() =>
    LOBBY
    ============================================================= */
 
-initLobby({
+initLobby(
+    {
 
     /* SOLO */
 
@@ -160,7 +160,8 @@ initLobby({
         initFlashcard(config);
     }
 
-});
+}
+);
 
 /* =============================================================
    PVP BACK
@@ -244,7 +245,6 @@ document.addEventListener("click",event =>
         {
             return;
         }
-
         playSfx("click");
     }
 );
@@ -299,128 +299,77 @@ window.addEventListener("batlingo-auth-state",event =>
 
             if (userName) 
             {
-                userName.textContent =
-                    displayName ||
-                    email?.split("@")[0] ||
-                    "User";
-
+                userName.textContent =displayName || email?.split("@")[0] || "User";
             }
-
 
             /* Avatar */
 
-                const avatar =
-            homeUserBtn?.querySelector(
-                ".home-user-avatar"
-            );
+            const avatar =homeUserBtn?.querySelector(".home-user-avatar");
 
-            const avatarFallback =
-            homeUserBtn?.querySelector(
-                ".home-user-avatar-fallback"
-            );
+            const avatarFallback =homeUserBtn?.querySelector(".home-user-avatar-fallback");
 
+           if (photoURL) 
+           {
+                avatar.src = photoURL;
 
+                avatar.classList.remove("hidden");
 
-           if (photoURL) {
+                avatarFallback.classList.add("hidden");
+            }
+            else 
+            {
+                avatar.removeAttribute("src");
 
-                            avatar.src = photoURL;
+                avatar.classList.add("hidden");
 
-                            avatar.classList.remove(
-                                "hidden"
-                            );
+                const name =displayName || email?.split("@")[0] ||"U";
 
-                            avatarFallback.classList.add(
-                                "hidden"
-                            );
+                avatarFallback.textContent =name.charAt(0).toUpperCase();
 
-                        }
-                        else {
+                avatarFallback.classList.remove("hidden");
+            }
 
-                            avatar.removeAttribute("src");
+            const displayUserName =displayName || email?.split("@")[0] ||"User";
 
-                            avatar.classList.add(
-                                "hidden"
-                            );
+            if (userMenuName) 
+            {
+                userMenuName.textContent =displayUserName;
+            }
 
-
-                            const name =
-                                displayName ||
-                                email?.split("@")[0] ||
-                                "U";
-
-
-                            avatarFallback.textContent =
-                                name.charAt(0).toUpperCase();
-
-                            avatarFallback.classList.remove(
-                                "hidden"
-                            );
-
-                        }
-
-
-
-            const displayUserName =
-            displayName ||
-            email?.split("@")[0] ||
-            "User";
-
-            if (userMenuName) {
-
-                    userMenuName.textContent =
-                        displayUserName;
-
-                }
-
-
-                if (userMenuEmail) {
-
-                    userMenuEmail.textContent =
-                        email || "";
-
-                }
+            if (userMenuEmail) 
+            {
+                userMenuEmail.textContent =email || "";
+            }
 
             /* USER MENU AVATAR */
 
-                if (userMenuAvatar) {
-
-                    if (photoURL) {
-
+                if (userMenuAvatar) 
+                {
+                    if (photoURL) 
+                    {
                         userMenuAvatar.innerHTML = "";
 
-                        const img =
-                            document.createElement("img");
+                        const img =document.createElement("img");
 
                         img.src = photoURL;
                         img.alt = "";
 
                         userMenuAvatar.appendChild(img);
-
                     }
-                    else {
-
-                        userMenuAvatar.textContent =
-                            displayUserName
-                                .charAt(0)
-                                .toUpperCase();
-
+                    else 
+                    {
+                        userMenuAvatar.textContent =displayUserName.charAt(0).toUpperCase();
                     }
 
                 }
 
 
         }
-        else {
+        else 
+        {
+            homeLoginBtn?.classList.remove("hidden");
 
-            homeLoginBtn?.classList.remove(
-                "hidden"
-            );
-
-
-            homeUserBtn?.classList.add(
-                "hidden"
-            );
-
+            homeUserBtn?.classList.add("hidden");
         }
 
     }
@@ -430,48 +379,28 @@ window.addEventListener("batlingo-auth-state",event =>
    USER MENU
 ========================================= */
 
-homeUserBtn?.addEventListener(
-    "click",
-    event => {
-
+homeUserBtn?.addEventListener("click",event => 
+    {
         event.stopPropagation();
-
-        homeUserMenu?.classList.toggle(
-            "hidden"
-        );
-
+        
+        homeUserMenu?.classList.toggle("hidden");
     }
 );
 
-document.addEventListener(
-    "click",
-    event => {
-
-        if (
-            homeUserMenu &&
-            !homeUserMenu.contains(event.target) &&
-            !homeUserBtn?.contains(event.target)
-        ) {
-
-            homeUserMenu.classList.add(
-                "hidden"
-            );
-
+document.addEventListener("click",event => 
+    {
+        if (homeUserMenu && !homeUserMenu.contains(event.target) && !homeUserBtn?.contains(event.target)) 
+        {
+            homeUserMenu.classList.add("hidden");
         }
-
     }
 );
 
-logoutBtn?.addEventListener(
-    "click",
-    async () => {
-
-        homeUserMenu?.classList.add(
-            "hidden"
-        );
+logoutBtn?.addEventListener("click",async () => 
+    {
+        homeUserMenu?.classList.add("hidden");
 
         await logout();
-
     }
 );
 
@@ -479,63 +408,42 @@ logoutBtn?.addEventListener(
    AUTH GUARD
 ========================================= */
 
-function requireLogin() {
-
+function requireLogin() 
+{
     const user = auth.currentUser;
 
-
-    if (
-        !user ||
-        !user.emailVerified
-    ) {
-
+    if (!user || !user.emailVerified) 
+    {
         window.BatLingoAuthUI?.open();
 
         return false;
-
     }
-
 
     return true;
 }
 
 window.addEventListener("batlingo-flashcard-close",() =>
     {
-        flashcardScreen.classList.add(
-            "hidden"
-        );
+        flashcardScreen.classList.add("hidden");
 
-
-        setupScreen.classList.remove(
-            "hidden"
-        );
-
+        setupScreen.classList.remove("hidden");
 
         playLobbyMusic();
     }
 );
 
-userProfileBtn?.addEventListener(
-    "click",
-    () => {
-
-        homeUserMenu?.classList.add(
-            "hidden"
-        );
-
+userProfileBtn?.addEventListener("click",() => 
+    {
+        homeUserMenu?.classList.add("hidden");
 
         openProfile();
-
     }
 );
 
 
-profileBackBtn?.addEventListener(
-    "click",
-    () => {
-
+profileBackBtn?.addEventListener("click",() => 
+    {
         closeProfile();
-
     }
 );
 
@@ -543,71 +451,39 @@ profileBackBtn?.addEventListener(
    PROFILE UPDATED
 ========================================= */
 
-window.addEventListener(
-    "batlingo-profile-updated",
-
-    event => {
-
-        const {
-            displayName
-        } = event.detail;
-
+window.addEventListener("batlingo-profile-updated",event => 
+    {
+        const {displayName} = event.detail;
 
         /* HOME USER NAME */
 
-        const homeName =
-            homeUserBtn?.querySelector(
-                ".home-user-name"
-            );
+        const homeName =homeUserBtn?.querySelector(".home-user-name");
 
-
-        if (homeName) {
-
-            homeName.textContent =
-                displayName;
+        if (homeName) 
+        {
+            homeName.textContent =displayName;
         }
-
 
         /* USER MENU */
 
-        if (userMenuName) {
-
-            userMenuName.textContent =
-                displayName;
+        if (userMenuName) 
+        {
+            userMenuName.textContent =displayName;
         }
 
-
         /* FALLBACK AVATAR */
+        const avatar =homeUserBtn?.querySelector(".home-user-avatar");
 
-        const avatar =
-            homeUserBtn?.querySelector(
-                ".home-user-avatar"
-            );
-
-
-        const avatarFallback =
-            homeUserBtn?.querySelector(
-                ".home-user-avatar-fallback"
-            );
-
+        const avatarFallback =homeUserBtn?.querySelector(".home-user-avatar-fallback");
 
         /*
             Nếu không có ảnh thì đổi chữ
             avatar theo tên mới.
         */
 
-        if (
-            avatarFallback &&
-            avatar?.classList.contains(
-                "hidden"
-            )
-        ) {
-
-            avatarFallback.textContent =
-                displayName
-                    .charAt(0)
-                    .toUpperCase();
+        if (avatarFallback && avatar?.classList.contains("hidden")) 
+        {
+            avatarFallback.textContent = displayName.charAt(0).toUpperCase();
         }
-
     }
 );
