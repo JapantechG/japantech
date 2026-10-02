@@ -1325,8 +1325,9 @@ document.getElementById("leaveRoomButton").addEventListener("click",async () =>
         catch (error) 
         {
             console.error("[PVP] Leave room error:", error);
+            resetRoomConnection();
         }
-        resetRoomConnection();
+        
         resetPvpScreen();
     }
     );
