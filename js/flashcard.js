@@ -854,8 +854,7 @@ function resetFlashcardSwipe() {
     }, 200);
 }
 
-function finishFlashcardSwipe(direction) 
-{
+function finishFlashcardSwipe(direction) {
     flashcardDidSwipe = true;
 
     const targetX = direction === "right" ? window.innerWidth : -window.innerWidth;
@@ -869,9 +868,9 @@ function finishFlashcardSwipe(direction)
         flashcard.style.transform = "";
 
         if (direction === "right") {
-            swipeNextFlashcard();
-        } else {
             swipePreviousFlashcard();
+        } else {
+            swipeNextFlashcard();
         }
 
         requestAnimationFrame(() => {
