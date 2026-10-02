@@ -3,18 +3,15 @@ import {
 }
 from "./lobby.js";
 
-
 import {
     startGame
 }
 from "./game.js";
 
-
 import {
     initPvp
 }
 from "./pvp.js";
-
 
 import {
     playLobbyMusic,
@@ -57,84 +54,43 @@ initI18n();
    DOM
    ============================================================= */
 
-const setupScreen =
-    document.getElementById(
-        "setupScreen"
-    );
+const setupScreen =document.getElementById("setupScreen");
 
+const pvpScreen =document.getElementById("pvpScreen");
 
-const pvpScreen =
-    document.getElementById(
-        "pvpScreen"
-    );
+const gameOverScreen =document.getElementById("gameOverScreen");
 
+const homeLoginBtn =document.getElementById("homeLoginBtn");
 
-const gameOverScreen =
-    document.getElementById(
-        "gameOverScreen"
-    );
+const homeLanguage =document.getElementById("homeLanguage");
 
-const homeLoginBtn =
-    document.getElementById(
-        "homeLoginBtn"
-    );
+const authLanguage =document.getElementById("authLanguage");
 
-    const homeLanguage =
-    document.getElementById(
-        "homeLanguage"
-    );
+const homeUserBtn =document.getElementById("homeUserBtn");
 
-const authLanguage =
-    document.getElementById(
-        "authLanguage"
-    );
+const homeUserMenu =document.getElementById("homeUserMenu");
 
-const homeUserBtn =
-    document.getElementById("homeUserBtn");
+const userMenuName =document.getElementById("userMenuName");
 
-const homeUserMenu =
-    document.getElementById("homeUserMenu");
+const userMenuEmail =document.getElementById("userMenuEmail");
 
-const userMenuName =
-    document.getElementById("userMenuName");
+const userMenuAvatar =document.getElementById("userMenuAvatar");
 
-const userMenuEmail =
-    document.getElementById("userMenuEmail");
+const logoutBtn =document.getElementById("logoutBtn");
 
-const userMenuAvatar =
-    document.getElementById("userMenuAvatar");
+const flashcardScreen =document.getElementById("flashcardScreen");
 
-const logoutBtn =
-    document.getElementById("logoutBtn");
+const userProfileBtn =document.getElementById("userProfileBtn");
 
-const flashcardScreen =
-    document.getElementById("flashcardScreen");
+const profileBackBtn =document.getElementById("profileBackBtn");
 
-const userProfileBtn =
-    document.getElementById(
-        "userProfileBtn"
-    );
+function setUILanguage(language) 
+{
+    homeLanguage.value = language;
 
+    authLanguage.value = language;
 
-const profileBackBtn =
-    document.getElementById(
-        "profileBackBtn"
-    );
-
-function setUILanguage(language) {
-
-    homeLanguage.value =
-        language;
-
-    authLanguage.value =
-        language;
-
-
-    localStorage.setItem(
-        "batlingo_ui_language",
-        language
-    );
-
+    localStorage.setItem("batlingo_ui_language",language);
 
     /*
        Bước sau:
@@ -145,35 +101,21 @@ function setUILanguage(language) {
 }
 
 
-homeLanguage.addEventListener(
-    "change",
-    event => {
-
-        setUILanguage(
-            event.target.value
-        );
-
+homeLanguage.addEventListener("change",event => 
+    {
+        setUILanguage(event.target.value);
     }
 );
 
-
-authLanguage.addEventListener(
-    "change",
-    event => {
-
-        setUILanguage(
-            event.target.value
-        );
-
+authLanguage.addEventListener("change",event => 
+    {
+        setUILanguage(event.target.value);
     }
 );
 
-homeLoginBtn.addEventListener(
-    "click",
-    () => {
-
+homeLoginBtn.addEventListener("click",() => 
+    {
         BatLingoAuthUI.open();
-
     }
 );
 
@@ -190,9 +132,7 @@ initLobby({
     {
         setupScreen.classList.add("hidden");
         startGame(config);
-
     },
-
 
     /* 1 VS 1 */
 
@@ -203,7 +143,6 @@ initLobby({
         pvpScreen.classList.remove("hidden");
 
         initPvp(config);
-
     },
 
     /* =========================
@@ -223,127 +162,62 @@ initLobby({
 
 });
 
-
 /* =============================================================
    PVP BACK
    ============================================================= */
 
-document
-    .getElementById(
-        "pvpBackButton"
-    )
-    .addEventListener(
-        "click",
-        () => {
+document.getElementById("pvpBackButton").addEventListener("click",() => 
+    {
+        pvpScreen.classList.add("hidden");
 
-            pvpScreen.classList.add(
-                "hidden"
-            );
+        setupScreen.classList.remove("hidden");
 
-
-            setupScreen.classList.remove(
-                "hidden"
-            );
-
-        }
+    }
     );
-
 
 /* =============================================================
    GAME OVER → LOBBY
    ============================================================= */
 
-document
-    .getElementById(
-        "backLobbyButton"
-    )
-    .addEventListener(
-        "click",
-        () => {
+document.getElementById("backLobbyButton").addEventListener("click",() => 
+    {
+        gameOverScreen.classList.add("hidden");
 
-            gameOverScreen.classList.add(
-                "hidden"
-            );
+        setupScreen.classList.remove("hidden");
 
-
-            setupScreen.classList.remove(
-                "hidden"
-            );
-
-
-            playLobbyMusic();
-
-        }
+        playLobbyMusic();
+    }
     );
-
 
 /* =============================================================
    MENU
    ============================================================= */
 
-const sideMenu =
-    document.getElementById(
-        "sideMenu"
-    );
+const sideMenu =document.getElementById("sideMenu");
 
+const menuOverlay =document.getElementById("menuOverlay");
 
-const menuOverlay =
-    document.getElementById(
-        "menuOverlay"
-    );
+function openMenu() 
+{
+    sideMenu.classList.add("show");
 
-
-function openMenu() {
-
-    sideMenu.classList.add(
-        "show"
-    );
-
-
-    menuOverlay.classList.add(
-        "show"
-    );
+    menuOverlay.classList.add("show");
 }
 
 
-function closeMenu() {
+function closeMenu() 
+{
+    sideMenu.classList.remove("show");
 
-    sideMenu.classList.remove(
-        "show"
-    );
-
-
-    menuOverlay.classList.remove(
-        "show"
-    );
+    menuOverlay.classList.remove("show");
 }
 
 
-document
-    .getElementById(
-        "menuButton"
-    )
-    .addEventListener(
-        "click",
-        openMenu
-    );
+document.getElementById("menuButton").addEventListener("click",openMenu);
 
+document.getElementById("menuCloseButton").addEventListener("click",closeMenu);
 
-document
-    .getElementById(
-        "menuCloseButton"
-    )
-    .addEventListener(
-        "click",
-        closeMenu
-    );
-
-
-menuOverlay.addEventListener(
-    "click",
-    closeMenu
-);
-
+menuOverlay.addEventListener("click",closeMenu);
 
 /* =============================================================
    GLOBAL BUTTON CLICK SOUND
@@ -357,42 +231,23 @@ menuOverlay.addEventListener(
    Nên bỏ 2 loại trên.
    ============================================================= */
 
-document.addEventListener(
-    "click",
-    event => {
+document.addEventListener("click",event => 
+    {
+        const button =event.target.closest("button");
 
-        const button =
-            event.target.closest(
-                "button"
-            );
-
-
-        if (!button) {
+        if (!button) 
+        {
             return;
         }
 
-
-        if (
-            button.classList.contains(
-                "answer-button"
-            )
-            ||
-            button.classList.contains(
-                "selector-arrow"
-            )
-        ) {
-
+        if (button.classList.contains("answer-button") || button.classList.contains("selector-arrow")) 
+        {
             return;
         }
 
-
-        playSfx(
-            "click"
-        );
-
+        playSfx("click");
     }
 );
-
 
 /* =============================================================
    START BGM
@@ -401,79 +256,49 @@ document.addEventListener(
    chưa tương tác với trang.
    ============================================================= */
 
-function enableAudio() {
-
+function enableAudio() 
+{
     playLobbyMusic();
 
-
-    document.removeEventListener(
-        "pointerdown",
-        enableAudio
-    );
+    document.removeEventListener("pointerdown",enableAudio);
 }
 
+document.addEventListener("pointerdown",enableAudio);
 
-document.addEventListener(
-    "pointerdown",
-    enableAudio
-);
-
-function handleBattleClick() {
-
-    if (!window.currentUser) {
-
+function handleBattleClick() 
+{
+    if (!window.currentUser) 
+    {
         BatLingoAuthUI.open();
-
         return;
     }
-
-
     openLobby();
-
 }
 
 /* =========================================
    AUTH UI STATE
 ========================================= */
 
-window.addEventListener(
-    "batlingo-auth-state",
-    event => {
+window.addEventListener("batlingo-auth-state",event => 
+    {
+        const {loggedIn,displayName,email,photoURL} = event.detail;
 
-        const {
-            loggedIn,
-            displayName,
-            email,
-            photoURL
-        } = event.detail;
-
-
-        if (loggedIn) {
-
+        if (loggedIn) 
+        {
             /* Hide Login */
 
-            homeLoginBtn?.classList.add(
-                "hidden"
-            );
-
+            homeLoginBtn?.classList.add("hidden");
 
             /* Show User */
 
-            homeUserBtn?.classList.remove(
-                "hidden"
-            );
-
+            homeUserBtn?.classList.remove("hidden");
 
             /* Name */
 
-            const userName =
-                homeUserBtn?.querySelector(
-                    ".home-user-name"
-                );
+            const userName =homeUserBtn?.querySelector(".home-user-name");
 
-
-            if (userName) {
-
+            if (userName) 
+            {
                 userName.textContent =
                     displayName ||
                     email?.split("@")[0] ||
