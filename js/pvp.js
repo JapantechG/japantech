@@ -13,6 +13,7 @@ import {
     nextRoomQuestion,
     finishRoomGame,
     requestRematch,
+    leaveRoom,
     resetRoomConnection
 } from "./firebase.js";
 
@@ -1317,16 +1318,17 @@ function openWaitingRoom(
 
 document.getElementById("leaveRoomButton").addEventListener("click",() => 
     {
-
-            /*
-                Sau này:
-                server.leaveRoom()
-            */
-            resetRoomConnection();
-
-            resetPvpScreen();
-
+        try 
+        {
+            await leaveRoom();
         }
+        catch (error) 
+        {
+            console.error("[PVP] Leave room error:", error);
+            resetRoomConnection();
+        }
+
+        resetPvpScreen();
     );
 
 
@@ -1451,67 +1453,34 @@ startBattleButton.addEventListener("click",async () =>
                     Lấy config đã chọn từ Lobby
                 */
 
-                if (
-                    !currentConfig
-                ) {
-
-                    throw new Error(
-                        "PVP_CONFIG_NOT_FOUND"
-                    );
-
+                if (!currentConfig) 
+                {
+                    throw new Error("PVP_CONFIG_NOT_FOUND");
                 }
-            console.log(
-                "[PVP] FULL currentConfig:",
-                currentConfig
-                );
+            console.log("[PVP] FULL currentConfig:",currentConfig);
 
             const level = currentConfig.target;
             const category = currentConfig.category;  
             const mode = currentConfig.subMode;
 
-                 console.log(
-                    "[PVP] Config:",
-                    {
-                        level,
-                        category,
-                        mode
-                    }
-                );
+            console.log("[PVP] Config:",{level,category,mode});
             /*
                 Load database
             */
 
             const database = await loadPvpDatabase(level);
 
-
             /*
                 HOST random 20 câu hỏi
             */
 
-            const questionIds =
-                createQuestionIds(
-                    database,
-                    20
-                );
+            const questionIds = createQuestionIds(database,20);
 
+            console.log("[PVP] Question IDs:",questionIds);
 
-            console.log(
-                "[PVP] Question IDs:",
-                questionIds
-            );
+            const questions = createPvpQuestions(database,questionIds);
 
-            const questions =
-                createPvpQuestions(
-                    database,
-                    questionIds
-                );
-
-
-            console.log(
-                "[PVP] Questions:",
-                questions
-            );
-
+            console.log("[PVP] Questions:",questions);
 
             /*
                 Gửi match lên Firebase
@@ -1538,16 +1507,11 @@ startBattleButton.addEventListener("click",async () =>
                 /*await startRoomGame();*/
 
             }
-            catch (error) {
-
-                console.error(
-                    "[PVP] Start error:",
-                    error
-                );
-
+            catch (error) 
+            {
+                console.error("[PVP] Start error:",error);
 
                 startBattleButton.disabled = false;
-
             }
 
         }
