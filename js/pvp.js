@@ -478,6 +478,11 @@ function updatePvpAnswerState(room)
 
         pvpHostCard.classList.add("locked");
     }
+    else if (room.host?.connected !== true) 
+    {
+        pvpHostState.textContent = "DISCONNECTED";
+        pvpHostCard.classList.remove("locked");
+    }
     else 
     {
         pvpHostState.textContent = "THINKING...";
@@ -491,6 +496,11 @@ function updatePvpAnswerState(room)
         pvpGuestState.textContent = "LOCKED";
 
         pvpGuestCard.classList.add("locked");
+    }
+    else if (room.guest?.connected !== true) 
+    {
+        pvpGuestState.textContent = "DISCONNECTED";
+        pvpGuestCard.classList.remove("locked");
     }
     else 
     {
@@ -1043,7 +1053,9 @@ async function startPvpMatch(room)
 
                 revealStarted =false;
 
-                 rematchStarting = false;
+                rematchStarting = false;
+
+                opponentDisconnected = false;
 
                 pvpRematchButton.disabled = false;
             
@@ -1333,18 +1345,17 @@ function resetPvpScreen() {
     
     waitingRoomPanel.classList.add("hidden");
 
-
     roomSelectPanel.classList.remove("hidden");
 
        /* Reset START button */
 
     startBattleButton.disabled = false;
 
-    startBattleButton.classList.add(
-        "hidden"
-    );
+    startBattleButton.classList.add("hidden");
 
     rematchStarting = false;
+
+    opponentDisconnected = false;
 
     pvpRematchButton.disabled = false;
         
@@ -1419,6 +1430,14 @@ startBattleButton.addEventListener("click",async () =>
     {
 
             try {
+                    /* Guest phải còn online trước khi START */
+                    if (!currentPvpRoom?.guest || currentPvpRoom.guest.connected !== true) 
+                    {
+                        startBattleButton.disabled = true;
+                        startBattleButton.classList.add("hidden");
+                        waitingMessage.textContent = "OPPONENT DISCONNECTED";
+                        return;
+                    }
 
                     displayedQuestionIndex =-1;
 
