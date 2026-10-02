@@ -19,6 +19,7 @@ import {
     get,
     set,
     update,
+    remove,
     onValue,
     onDisconnect,
     runTransaction
@@ -193,12 +194,12 @@ export async function createRoom(playerName) {
 
 
     // ----------------------------------------
-    // Nếu host mất kết nối
+    // HOST mất kết nối -> xóa ROOM
     // ----------------------------------------
 
-    const connectedRef = ref(db,`rooms/${roomCode}/host/connected`);
-
-    await onDisconnect(connectedRef).set(false);
+    const roomDisconnectRef = ref(db, `rooms/${roomCode}`);
+    
+    await onDisconnect(roomDisconnectRef).remove();
 
     // ----------------------------------------
     // Bắt đầu theo dõi room
@@ -289,15 +290,13 @@ export async function joinRoom(code,playerName)
 
 
     // ----------------------------------------
-    // Nếu guest mất kết nối
+    // GUEST mất kết nối -> connected = false
     // ----------------------------------------
-
-    /*const connectedRef = ref(db,`rooms/${roomCode}/guest/connected`);
-
-    await onDisconnect(connectedRef).set(false);*/
-    const roomDisconnectRef = ref(db, `rooms/${roomCode}`);
-
-    await onDisconnect(roomDisconnectRef).remove();
+    
+    const connectedRef = ref(db, `rooms/${roomCode}/guest/connected`);
+    
+    await onDisconnect(connectedRef).set(false);
+    
     // ----------------------------------------
     // Listen room
     // ----------------------------------------
@@ -520,6 +519,28 @@ export async function finishRoomGame(hostScore,guestScore)
                 guestScore
         }
     );
+}
+
+export async function leaveRoom()
+{
+    if (!roomCode || !playerRole) 
+    {
+        return;
+    }
+
+    const currentRoomCode = roomCode;
+    const currentRole = playerRole;
+
+    if (currentRole === "host") 
+    {
+        await remove(ref(db, `rooms/${currentRoomCode}`));
+    }
+    else if (currentRole === "guest") 
+    {
+        await update(ref(db, `rooms/${currentRoomCode}`), {"guest/connected": false,status: "waiting"});
+    }
+    
+    resetRoomConnection();
 }
 
 export function resetRoomConnection()
