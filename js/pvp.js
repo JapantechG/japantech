@@ -1316,7 +1316,7 @@ function openWaitingRoom(
    LEAVE
    ============================================================= */
 
-document.getElementById("leaveRoomButton").addEventListener("click",() => 
+document.getElementById("leaveRoomButton").addEventListener("click",async () => 
     {
         try 
         {
