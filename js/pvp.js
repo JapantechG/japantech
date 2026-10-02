@@ -34,6 +34,8 @@ let currentMatchId = null;
 
 let rematchStarting = false;
 
+let opponentDisconnected = false;
+
 let pvpTimer = null;
 
 let pvpTimeLeft = 10;
@@ -267,11 +269,7 @@ function showPvpQuestion(match)
     
         pvpHostCard.classList.remove("locked","correct","wrong");
 
-        pvpGuestCard.classList.remove(
-            "locked",
-            "correct",
-            "wrong"
-        );
+        pvpGuestCard.classList.remove("locked","correct","wrong");
 
         pvpHostState.textContent ="THINKING...";
 
@@ -283,23 +281,16 @@ function showPvpQuestion(match)
 
         const index = match.currentQuestion || 0;
 
-
         const questionId = match.questionIds[index];
-
 
          const data = getQuestionById(questionId);
 
 
     if (!data) 
         {
-
-            console.error(
-                "[PVP] Question not found:",
-                questionId
-            );
+            console.error("[PVP] Question not found:",questionId);
 
             return;
-
         }
 
 
@@ -308,23 +299,16 @@ function showPvpQuestion(match)
         → Game
     */
 
-    waitingRoomPanel.classList.add(
-        "hidden"
-    );
+    waitingRoomPanel.classList.add("hidden");
 
-
-    pvpGamePanel.classList.remove(
-        "hidden"
-    );
+    pvpGamePanel.classList.remove("hidden");
 
 
     /*
         Question number
     */
 
-    pvpQuestionNumber.textContent =
-        `QUESTION ${index + 1}`;
-
+    pvpQuestionNumber.textContent = `QUESTION ${index + 1}`;
 
     const mode = match.mode;
     
@@ -334,91 +318,51 @@ function showPvpQuestion(match)
             Nếu KANJI → HIRAGANA sẽ lộ đáp án.
         */
         
-        pvpReading.textContent =
-            "";
+        pvpReading.textContent = "";
         
+        /*Render question theo mode HOST đã chọn*/
         
-        /*
-            Render question theo mode HOST đã chọn
-        */
-        
-        showPvpQuestionContent(
-            data,
-            mode
-        );
+    showPvpQuestionContent(data,mode);
 
-    console.log(
-        "[PVP] Showing question:",
-        data
-    );
+    console.log("[PVP] Showing question:",data);
 
-   /*
-    Lấy thông tin 4 đáp án
-*/
+   /*Lấy thông tin 4 đáp án*/
 
-const questionData =
-    match.questions[index];
+const questionData = match.questions[index];
 
-
-if (
-    !questionData
-) {
-
-    console.error(
-        "[PVP] Question data not found:",
-        index
-    );
+if (!questionData) 
+{
+    console.error("[PVP] Question data not found:",index);
 
     return;
-
 }
 
+/*Clear đáp án cũ*/
 
-/*
-    Clear đáp án cũ
-*/
-
-pvpAnswers.innerHTML =
-    "";
-
+pvpAnswers.innerHTML = "";
 
 /*
     Render 4 đáp án
 */
 const answerField =getPvpAnswerField(mode);
 
-questionData.optionIds.forEach(
-    (
-        optionId,
-        optionIndex
-    ) => {
+questionData.optionIds.forEach((optionId,optionIndex) => 
+    {
 
-        const option =
-            getQuestionById(
-                optionId
-            );
+        const option =getQuestionById(optionId);
 
-
-        if (!option) {
+        if (!option) 
+        {
             return;
         }
 
+        const button = document.createElement("button");
 
-        const button =
-            document.createElement(
-                "button"
-            );
-
-
-        button.className =
-            "answer-button";
-
+        button.className = "answer-button";
 
         button.type = "button";
 
-
         button.dataset.optionId = optionId;
-
 
         button.textContent = option[answerField];
 
@@ -427,7 +371,6 @@ questionData.optionIds.forEach(
         */
 
         button.addEventListener("click",() => {selectPvpAnswer(optionId,button);});
-
 
         pvpAnswers.appendChild(button);
 
@@ -472,11 +415,9 @@ async function selectPvpAnswer(optionId,selectedButton)
 
     buttons.forEach(button => 
         {
-             
             button.disabled =true;
 
             button.classList.add("locked");
-
         }
     );
 
@@ -495,11 +436,7 @@ async function selectPvpAnswer(optionId,selectedButton)
     }
     catch (error) {
 
-        console.error(
-            "[PVP] Submit answer error:",
-            error
-        );
-
+        console.error("[PVP] Submit answer error:",error);
 
         /*
             Nếu Firebase lỗi
@@ -508,108 +445,67 @@ async function selectPvpAnswer(optionId,selectedButton)
 
         answerLocked = false;
 
-
         buttons.forEach(button => 
             {
-
                 button.classList.remove("locked");
-
             }
         );
 
-
         selectedButton.classList.remove("selected");
-
     }
 }
 
-function updatePvpAnswerState(
-    room
-) {
+function updatePvpAnswerState(room) 
+{
 
-    const match =
-        room.match;
+    const match = room.match;
 
+    const questionIndex = match.currentQuestion || 0;
 
-    const questionIndex =
-        match.currentQuestion || 0;
+    const answers = match.answers?.[questionIndex] || {};
 
+    const hostAnswer = answers.host;
 
-    const answers =
-        match.answers?.[questionIndex]
-        || {};
-
-
-    const hostAnswer =
-        answers.host;
-
-
-    const guestAnswer =
-        answers.guest;
-
+    const guestAnswer = answers.guest;
 
     /*
         PLAYER 1 / HOST
     */
 
-    if (
-        hostAnswer
-    ) {
+    if (hostAnswer) 
+    {
+        pvpHostState.textContent = "LOCKED";
 
-        pvpHostState.textContent =
-            "LOCKED";
-
-        pvpHostCard.classList.add(
-            "locked"
-        );
-
+        pvpHostCard.classList.add("locked");
     }
-    else {
-
-        pvpHostState.textContent =
-            "THINKING...";
-
+    else 
+    {
+        pvpHostState.textContent = "THINKING...";
     }
-
 
     /*
         PLAYER 2 / GUEST
     */
+    if (guestAnswer) 
+    {
+        pvpGuestState.textContent = "LOCKED";
 
-    if (
-        guestAnswer
-    ) {
-
-        pvpGuestState.textContent =
-            "LOCKED";
-
-        pvpGuestCard.classList.add(
-            "locked"
-        );
-
+        pvpGuestCard.classList.add("locked");
     }
-    else {
-
-        pvpGuestState.textContent =
-            "THINKING...";
-
+    else 
+    {
+        pvpGuestState.textContent = "THINKING...";
     }
-
 
     /*
         Chưa đủ 2 người
         => tuyệt đối chưa reveal
     */
 
-    if (
-        !hostAnswer ||
-        !guestAnswer
-    ) {
-
+    if (!hostAnswer || !guestAnswer) 
+    {
         return;
-
     }
-
 
     /*
         Cả 2 đã trả lời
@@ -626,7 +522,6 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
         return;
     }
 
-
     revealStarted = true;
 
     const match = room.match;
@@ -637,7 +532,6 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
 
     const correctOptionId =questionData.questionId;
 
-
     const hostCorrect =String(hostAnswer.optionId)===String(correctOptionId);
 
     const guestCorrect =String(guestAnswer.optionId)===String(correctOptionId);
@@ -646,16 +540,12 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
 
             if (myCorrect) 
             {
-
                 playSfx("correct");
-
             }
-            else {
-
+            else 
+            {
                 playSfx("wrong");
-
             }
-
 
     /*
         Player cards
@@ -663,31 +553,15 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
 
     pvpHostCard.classList.remove("locked");
 
-
     pvpGuestCard.classList.remove("locked");
-
 
     pvpHostCard.classList.add(hostCorrect ? "correct" : "wrong");
 
+    pvpGuestCard.classList.add(guestCorrect ? "correct" : "wrong");
 
-    pvpGuestCard.classList.add(
-        guestCorrect
-            ? "correct"
-            : "wrong"
-    );
+    pvpHostState.textContent = hostCorrect ? "CORRECT" : "WRONG";
 
-
-    pvpHostState.textContent =
-        hostCorrect
-            ? "CORRECT"
-            : "WRONG";
-
-
-    pvpGuestState.textContent =
-        guestCorrect
-            ? "CORRECT"
-            : "WRONG";
-
+    pvpGuestState.textContent = guestCorrect ? "CORRECT" : "WRONG";
 
     /*
         Reveal buttons
@@ -697,49 +571,26 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
 
     const myAnswer = currentPlayerRole === "host" ? hostAnswer : guestAnswer;
 
-
     buttons.forEach(button => 
         {
-
             const optionId = button.dataset.optionId;
-
-            /*
-            Bỏ trạng thái vàng
-        */
-
+            /* Bỏ trạng thái vàng*/
             button.classList.remove("selected");
 
-            /*
-                Đáp án đúng -> XANH
-            */
+            /*Đáp án đúng -> XANH */
 
             if (String(optionId) === String(correctOptionId)) 
             {
-
                 button.classList.add("correct-answer");
-
             }
-
 
             /*
                 Đáp án người hiện tại chọn sai -> ĐỎ
             */
 
-            /*const myAnswer = currentPvpRoom && currentPvpRoom.match
-                    ?.answers
-                    ?.[questionIndex]
-                    ?.[getCurrentPlayerRole()];*/
-
-
-            if (myAnswer &&
-                String(optionId) ===
-                String(myAnswer.optionId) &&
-                String(optionId) !==
-                String(correctOptionId)
-            ) {
-
+            if (myAnswer && String(optionId) === String(myAnswer.optionId) && String(optionId) !== String(correctOptionId)) 
+            {
                 button.classList.add("wrong-answer");
-
             }
 
         }
@@ -751,83 +602,40 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
         tính score + chuyển câu
     */
 
-    scheduleNextPvpQuestion(
-        room,
-        hostCorrect,
-        guestCorrect
-    );
+    scheduleNextPvpQuestion(room,hostCorrect,guestCorrect);
 }
 
-function createPvpQuestions(
-    database,
-    questionIds
-) {
+function createPvpQuestions(database,questionIds) 
+{
 
-    return questionIds.map(
-        questionId => {
+    return questionIds.map(questionId => 
+        {
+            const question =database.find(item => String(item.id) === String(questionId));
 
-            const question =
-                database.find(
-                    item =>
-                        String(item.id) ===
-                        String(questionId)
-                );
-
-
-            if (!question) {
+            if (!question) 
+            {
                 return null;
             }
-
 
             /*
                 Lấy 3 đáp án sai
             */
 
-            const wrongAnswers =
-                database
-                    .filter(
-                        item =>
-                            String(item.id) !==
-                            String(questionId)
-                    )
-                    .sort(
-                        () =>
-                            Math.random() - 0.5
-                    )
-                    .slice(
-                        0,
-                        3
-                    );
-
+            const wrongAnswers = database.filter(item => String(item.id) !== String(questionId)).sort(() => Math.random() - 0.5).slice(0,3);
 
             /*
                 Đáp án đúng + 3 sai
             */
 
-            const options =
-                [
-                    question,
-                    ...wrongAnswers
-                ];
-
+            const options =[question,...wrongAnswers];
 
             /*
                 Shuffle 4 đáp án
             */
 
-            for (
-                let i = options.length - 1;
-                i > 0;
-                i--
-            ) {
-
-                const j =
-                    Math.floor(
-                        Math.random()
-                        *
-                        (i + 1)
-                    );
-
+            for (let i = options.length - 1;i > 0;i--) 
+            {
+                const j =Math.floor(Math.random()*(i + 1));
 
                 [
                     options[i],
@@ -891,6 +699,13 @@ window.addEventListener("batlingo-room-update",event =>
         currentPvpRoom = room;
 
         currentPlayerRole =playerRole;
+
+        const opponentConnected = playerRole === "host" ? room.guest?.connected === true : room.host?.connected === true;
+
+        if (room.status === "playing" && room.match) 
+        {
+            opponentDisconnected = !opponentConnected;
+        }
 
         console.log("[PVP] Room:",room);
 
