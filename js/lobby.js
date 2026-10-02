@@ -14,7 +14,6 @@ import { t } from "./i18n.js";
    ============================================================= */
 
 const battleModes = [
-
     {
         id: "solo",
         name: "SOLO BATTLE"
@@ -29,12 +28,9 @@ const battleModes = [
         id: "flashcard",
         name: "FLASHCARD"
     }
-
 ];
 
-
 const studyModes = [
-
     {
         id: "jlpt",
         name: "JLPT"
@@ -44,33 +40,25 @@ const studyModes = [
         id: "topic",
         name: "CHỦ ĐỀ"
     }
-
 ];
 
-
 const jlptLevels = [
-
     { id: "n5", name: "N5" },
     { id: "n4", name: "N4" },
     { id: "n3", name: "N3" },
     { id: "n2", name: "N2" },
     { id: "n1", name: "N1" }
-
 ];
 
-
 const topics = [
-
     { id: "colors", name: "MÀU SẮC" },
     { id: "flowers", name: "HOA" },
     { id: "animals", name: "ĐỘNG VẬT" },
     { id: "food", name: "ĐỒ ĂN" }
-
 ];
 
 
 const categories = [
-
     {
         id: "vocabulary",
         name: "TỪ VỰNG"
@@ -90,14 +78,10 @@ const categories = [
         id: "reading",
         name: "ĐỌC HIỂU"
     }
-
 ];
 
-
-const subModes = {
-
-    vocabulary: [
-
+const subModes = {vocabulary: 
+    [
         {
             id: "kanji_meaning",
             name: "KANJI → MEANING"
@@ -134,7 +118,6 @@ const subModes = {
 
     ],
 
-
     grammar: [
 
         {
@@ -149,7 +132,6 @@ const subModes = {
 
     ],
 
-
     listening: [
 
         {
@@ -158,7 +140,6 @@ const subModes = {
         }
 
     ],
-
 
     reading: [
 
@@ -170,7 +151,6 @@ const subModes = {
     ]
 
 };
-
 
 /* =============================================================
    STATE
@@ -189,482 +169,181 @@ let categoryIndex = 0;
 
 let subModeIndex = 0;
 
-
 /* =============================================================
    DOM
    ============================================================= */
 
-const battleModeValue =
-    document.getElementById(
-        "battleModeValue"
-    );
+const battleModeValue =document.getElementById("battleModeValue");
 
-const studyModeValue =
-    document.getElementById(
-        "studyModeValue"
-    );
+const studyModeValue =document.getElementById("studyModeValue");
 
-const studyTargetValue =
-    document.getElementById(
-        "studyTargetValue"
-    );
+const studyTargetValue =document.getElementById("studyTargetValue");
 
-const studyTargetLabel =
-    document.getElementById(
-        "studyTargetLabel"
-    );
+const studyTargetLabel =document.getElementById("studyTargetLabel");
 
-const categoryValue =
-    document.getElementById(
-        "categoryValue"
-    );
+const categoryValue =document.getElementById("categoryValue");
 
-const subModeValue =
-    document.getElementById(
-        "subModeValue"
-    );
-
+const subModeValue =document.getElementById("subModeValue");
 
 /* =============================================================
    SLIDE
    ============================================================= */
 
-function slideSelector(
-    element,
-    newText,
-    direction
-) {
-
+function slideSelector(element,newText,direction) 
+{
     playSfx("slide");
 
+    const viewport =element.parentElement;
 
-    const viewport =
-        element.parentElement;
-
-
-    const clone =
-        element.cloneNode(true);
-
+    const clone =element.cloneNode(true);
 
     clone.removeAttribute("id");
 
-    clone.textContent =
-        newText;
+    clone.textContent =newText;
 
+    if (direction === "next") 
+    {
+        element.classList.add("slide-out-left");
 
-    if (direction === "next") {
-
-        element.classList.add(
-            "slide-out-left"
-        );
-
-        clone.classList.add(
-            "slide-in-right"
-        );
-
+        clone.classList.add("slide-in-right");
     }
-    else {
+    else 
+    {
+        element.classList.add("slide-out-right");
 
-        element.classList.add(
-            "slide-out-right"
-        );
-
-        clone.classList.add(
-            "slide-in-left"
-        );
+        clone.classList.add("slide-in-left");
     }
 
+    viewport.appendChild(clone);
 
-    viewport.appendChild(
-        clone
-    );
+    setTimeout(() => 
+        {
+            element.textContent =newText;
 
-
-    setTimeout(
-        () => {
-
-            element.textContent =
-                newText;
-
-
-            element.classList.remove(
-                "slide-out-left",
-                "slide-out-right"
-            );
-
+            element.classList.remove("slide-out-left","slide-out-right");
 
             clone.remove();
-
         },
-
         220
     );
 }
-
 
 /* =============================================================
    HELPER
    ============================================================= */
 
-function moveIndex(
-    index,
-    length,
-    direction
-) {
-
-    if (direction === "next") {
-
-        return (
-            index + 1
-        ) % length;
+function moveIndex(index,length,direction) 
+{
+    if (direction === "next") 
+    {
+        return (index + 1) % length;
     }
-
-
-    return (
-        index - 1 + length
-    ) % length;
+    return (index - 1 + length) % length;
 }
 
-
-function getTargets() {
-
-    if (
-        studyModes[
-            studyModeIndex
-        ].id === "jlpt"
-    ) {
-
+function getTargets() 
+{
+    if (studyModes[studyModeIndex].id === "jlpt") 
+    {
         return jlptLevels;
     }
-
-
     return topics;
 }
-
 
 /* =============================================================
    INIT
    ============================================================= */
-
-export function initLobby({
-    onSolo,
-    onPvp,
-    onFlashcard
-}) {
-
+export function initLobby({onSolo,onPvp,onFlashcard}) 
+{
     /* BATTLE MODE */
+    document.getElementById("battleModeNext").addEventListener("click",() => 
+        {
+                battleModeIndex =moveIndex(battleModeIndex,battleModes.length,"next");
 
-    document
-        .getElementById(
-            "battleModeNext"
-        )
-        .addEventListener(
-            "click",
-            () => {
-
-                battleModeIndex =
-                    moveIndex(
-                        battleModeIndex,
-                        battleModes.length,
-                        "next"
-                    );
-
-
-                slideSelector(
-                    battleModeValue,
-                    battleModes[
-                        battleModeIndex
-                    ].name,
-                    "next"
-                );
-
+                slideSelector(battleModeValue,battleModes[battleModeIndex].name,"next");
             }
         );
 
+    document.getElementById("battleModePrev").addEventListener("click",() => 
+        {
+                battleModeIndex =moveIndex(battleModeIndex,battleModes.length,"prev");
 
-    document
-        .getElementById(
-            "battleModePrev"
-        )
-        .addEventListener(
-            "click",
-            () => {
-
-                battleModeIndex =
-                    moveIndex(
-                        battleModeIndex,
-                        battleModes.length,
-                        "prev"
-                    );
-
-
-                slideSelector(
-                    battleModeValue,
-                    battleModes[
-                        battleModeIndex
-                    ].name,
-                    "prev"
-                );
-
+                slideSelector(battleModeValue,battleModes[battleModeIndex].name,"prev");
             }
         );
-
 
     /* STUDY MODE */
 
-    function changeStudyMode(
-        direction
-    ) {
+    function changeStudyMode(direction) 
+    {
+        studyModeIndex =moveIndex(studyModeIndex,studyModes.length,direction);
 
-        studyModeIndex =
-            moveIndex(
-                studyModeIndex,
-                studyModes.length,
-                direction
-            );
+        const mode =studyModes[studyModeIndex];
 
-
-        const mode =
-            studyModes[
-                studyModeIndex
-            ];
-
-
-        slideSelector(
-            studyModeValue,
-            mode.name,
-            direction
-        );
-
+        slideSelector(studyModeValue,mode.name,direction);
 
         studyTargetIndex = 0;
 
+        const targets =getTargets();
 
-        const targets =
-            getTargets();
+        studyTargetLabel.textContent =mode.id === "jlpt" ? "JLPT LEVEL" : "TOPIC";
 
-
-        studyTargetLabel.textContent =
-            mode.id === "jlpt"
-                ? "JLPT LEVEL"
-                : "TOPIC";
-
-
-        slideSelector(
-            studyTargetValue,
-            targets[0].name,
-            direction
-        );
+        slideSelector(studyTargetValue,targets[0].name,direction);
     }
 
+    document.getElementById("studyModeNext").addEventListener("click",() => changeStudyMode("next"));
 
-    document
-        .getElementById(
-            "studyModeNext"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeStudyMode(
-                    "next"
-                )
-        );
-
-
-    document
-        .getElementById(
-            "studyModePrev"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeStudyMode(
-                    "prev"
-                )
-        );
-
+    document.getElementById("studyModePrev").addEventListener("click", () =>changeStudyMode("prev"));
 
     /* TARGET */
+    function changeTarget(direction) 
+    {
+        const targets =getTargets();
 
-    function changeTarget(
-        direction
-    ) {
+        studyTargetIndex =moveIndex(studyTargetIndex,targets.length,direction);
 
-        const targets =
-            getTargets();
-
-
-        studyTargetIndex =
-            moveIndex(
-                studyTargetIndex,
-                targets.length,
-                direction
-            );
-
-
-        slideSelector(
-            studyTargetValue,
-            targets[
-                studyTargetIndex
-            ].name,
-            direction
-        );
+        slideSelector(studyTargetValue,targets[studyTargetIndex].name,direction);
     }
 
+    document.getElementById("studyTargetNext").addEventListener("click",() => changeTarget("next"));
 
-    document
-        .getElementById(
-            "studyTargetNext"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeTarget(
-                    "next"
-                )
-        );
-
-
-    document
-        .getElementById(
-            "studyTargetPrev"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeTarget(
-                    "prev"
-                )
-        );
-
+    document.getElementById("studyTargetPrev").addEventListener("click", () => changeTarget("prev"));
 
     /* CATEGORY */
 
-    function changeCategory(
-        direction
-    ) {
+    function changeCategory(direction) 
+    {
+        categoryIndex =moveIndex(categoryIndex,categories.length,direction);
 
-        categoryIndex =
-            moveIndex(
-                categoryIndex,
-                categories.length,
-                direction
-            );
+        const category =categories[categoryIndex];
 
-
-        const category =
-            categories[
-                categoryIndex
-            ];
-
-
-        slideSelector(
-            categoryValue,
-            category.name,
-            direction
-        );
-
+        slideSelector(categoryValue,category.name,direction);
 
         subModeIndex = 0;
 
-
-        slideSelector(
-            subModeValue,
-            subModes[
-                category.id
-            ][0].name,
-            direction
-        );
+        slideSelector(subModeValue,subModes[category.id][0].name,direction);
     }
 
+    document.getElementById("categoryNext").addEventListener("click", () => changeCategory("next"));
 
-    document
-        .getElementById(
-            "categoryNext"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeCategory(
-                    "next"
-                )
-        );
-
-
-    document
-        .getElementById(
-            "categoryPrev"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeCategory(
-                    "prev"
-                )
-        );
-
+    document.getElementById("categoryPrev").addEventListener("click", () => changeCategory("prev"));
 
     /* SUB MODE */
 
-    function changeSubMode(
-        direction
-    ) {
+    function changeSubMode(direction)
+    {
+        const category =categories[categoryIndex];
 
-        const category =
-            categories[
-                categoryIndex
-            ];
+        const modes = subModes[category.id];
 
+        subModeIndex =moveIndex(subModeIndex,modes.length,direction);
 
-        const modes =
-            subModes[
-                category.id
-            ];
-
-
-        subModeIndex =
-            moveIndex(
-                subModeIndex,
-                modes.length,
-                direction
-            );
-
-
-        slideSelector(
-            subModeValue,
-            modes[
-                subModeIndex
-            ].name,
-            direction
-        );
+        slideSelector(subModeValue,modes[subModeIndex].name,direction);
     }
 
+    document.getElementById("subModeNext").addEventListener("click",() => changeSubMode("next"));
 
-    document
-        .getElementById(
-            "subModeNext"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeSubMode(
-                    "next"
-                )
-        );
-
-
-    document
-        .getElementById(
-            "subModePrev"
-        )
-        .addEventListener(
-            "click",
-            () =>
-                changeSubMode(
-                    "prev"
-                )
-        );
-
+    document.getElementById("subModePrev").addEventListener("click", () =>changeSubMode("prev"));
 
     /* =========================================================
        BATTLE BUTTON
@@ -672,26 +351,21 @@ export function initLobby({
 
     document.getElementById("battleButton").addEventListener("click",() => 
         {
-
             /* =================================
                LOGIN CHECK
             ================================= */
-
-            if (!isLoggedIn()) {
-
+            if (!isLoggedIn()) 
+            {
                 window.BatLingoAuthUI?.open();
 
                 return;
-
             }
-
 
             /* =================================
                CREATE BATTLE CONFIG
             ================================= */
 
             const category =categories[categoryIndex];
-
 
             const config = {
 
@@ -707,9 +381,7 @@ export function initLobby({
 
             };
 
-                /*
-                SOLO
-            */
+            /*SOLO*/
 
             if (config.battleMode === "solo")
             {
@@ -718,9 +390,7 @@ export function initLobby({
                 return;
             }
 
-            /*
-                1 VS 1
-            */
+            /*1 VS 1*/
 
             if (config.battleMode === "pvp")
             {
@@ -729,10 +399,7 @@ export function initLobby({
                 return;
             }
 
-
-            /*
-                FLASHCARD
-            */
+            /*FLASHCARD*/
 
             if (config.battleMode === "flashcard")
             {
