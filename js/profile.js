@@ -12,134 +12,49 @@ from "./progression.js";
    BATLINGO PROFILE
 ========================================================= */
 
-const profileScreen =
-    document.getElementById(
-        "profileScreen"
-    );
+const profileScreen = document.getElementById("profileScreen");
 
+const profileDisplayName =document.getElementById("profileDisplayName");
 
-const profileDisplayName =
-    document.getElementById(
-        "profileDisplayName"
-    );
+const profileBatlingoId =document.getElementById("profileBatlingoId");
 
+const profileNameInput =document.getElementById("profileNameInput");
 
-const profileBatlingoId =
-    document.getElementById(
-        "profileBatlingoId"
-    );
+const profileBioInput =document.getElementById("profileBioInput");
 
+const profileEmail =document.getElementById("profileEmail");
 
-const profileNameInput =
-    document.getElementById(
-        "profileNameInput"
-    );
+const profileIdReadonly =document.getElementById("profileIdReadonly");
 
+const profileAvatar =document.getElementById("profileAvatar");
 
-const profileBioInput =
-    document.getElementById(
-        "profileBioInput"
-    );
+const profileNameCounter =document.getElementById("profileNameCounter");
 
+const profileBioCounter =document.getElementById("profileBioCounter");
 
-const profileEmail =
-    document.getElementById(
-        "profileEmail"
-    );
+const profileSaveBtn =document.getElementById("profileSaveBtn");
 
+const profileMessage =document.getElementById("profileMessage");
 
-const profileIdReadonly =
-    document.getElementById(
-        "profileIdReadonly"
-    );
+const profileLevel =document.getElementById("profileLevel");
 
+const profileElo =document.getElementById("profileElo");
 
-const profileAvatar =
-    document.getElementById(
-        "profileAvatar"
-    );
+const profileExpText =document.getElementById("profileExpText");
 
+const profileExpFill =document.getElementById("profileExpFill");
 
-const profileNameCounter =
-    document.getElementById(
-        "profileNameCounter"
-    );
+const profileBattles =document.getElementById("profileBattles");
 
+const profileWins =document.getElementById("profileWins");
 
-const profileBioCounter =
-    document.getElementById(
-        "profileBioCounter"
-    );
+const profileLosses =document.getElementById("profileLosses");
 
-const profileSaveBtn =
-    document.getElementById(
-        "profileSaveBtn"
-    );
+const profileDraws =document.getElementById("profileDraws");
 
+const profileWinRate =document.getElementById("profileWinRate");
 
-const profileMessage =
-    document.getElementById(
-        "profileMessage"
-    );
-
-const profileLevel =
-    document.getElementById(
-        "profileLevel"
-    );
-
-
-const profileElo =
-    document.getElementById(
-        "profileElo"
-    );
-
-
-const profileExpText =
-    document.getElementById(
-        "profileExpText"
-    );
-
-
-const profileExpFill =
-    document.getElementById(
-        "profileExpFill"
-    );
-
-
-const profileBattles =
-    document.getElementById(
-        "profileBattles"
-    );
-
-
-const profileWins =
-    document.getElementById(
-        "profileWins"
-    );
-
-
-const profileLosses =
-    document.getElementById(
-        "profileLosses"
-    );
-
-
-const profileDraws =
-    document.getElementById(
-        "profileDraws"
-    );
-
-
-const profileWinRate =
-    document.getElementById(
-        "profileWinRate"
-    );
-
-
-const profileBestCombo =
-    document.getElementById(
-        "profileBestCombo"
-    );
+const profileBestCombo =document.getElementById("profileBestCombo");
 
 /* =========================================================
    OPEN
@@ -156,7 +71,6 @@ export function openProfile()
         return;
     }
     
-
     const profile = userData.profile;
 
     renderPlayerStatus(userData);
@@ -201,9 +115,7 @@ export function openProfile()
 
 export function closeProfile()
 {
-    profileScreen.classList.add(
-        "hidden"
-    );
+    profileScreen.classList.add("hidden");
 }
 
 
@@ -211,45 +123,25 @@ export function closeProfile()
    AVATAR
 ========================================================= */
 
-function renderProfileAvatar(
-    photoURL,
-    displayName
-)
+function renderProfileAvatar(photoURL,displayName)
 {
     profileAvatar.innerHTML = "";
 
+    if (photoURL) 
+    {
+        const img = document.createElement("img");
 
-    if (photoURL) {
+        img.src = photoURL;
 
-        const img =
-            document.createElement(
-                "img"
-            );
+        img.alt = displayName;
 
-
-        img.src =
-            photoURL;
-
-
-        img.alt =
-            displayName;
-
-
-        profileAvatar.appendChild(
-            img
-        );
-
+        profileAvatar.appendChild(img);
 
         return;
     }
 
-
-    profileAvatar.textContent =
-        displayName
-            .charAt(0)
-            .toUpperCase();
+    profileAvatar.textContent = displayName.charAt(0).toUpperCase();
 }
-
 
 /* =========================================================
    COUNTER
@@ -257,48 +149,29 @@ function renderProfileAvatar(
 
 function updateCounters()
 {
-    profileNameCounter.textContent =
-        `${profileNameInput.value.length} / 20`;
+    profileNameCounter.textContent = `${profileNameInput.value.length} / 20`;
 
-
-    profileBioCounter.textContent =
-        `${profileBioInput.value.length} / 100`;
+    profileBioCounter.textContent = `${profileBioInput.value.length} / 100`;
 }
 
-
-profileNameInput?.addEventListener(
-    "input",
-    updateCounters
-);
+profileNameInput?.addEventListener("input",updateCounters);
 
 /* =========================================================
    MESSAGE
 ========================================================= */
 
-function showProfileMessage(
-    message,
-    type = "success"
-)
+function showProfileMessage(message,type = "success")
 {
-    if (!profileMessage) {
+    if (!profileMessage)
+    {
         return;
     }
 
+    profileMessage.textContent = message;
 
-    profileMessage.textContent =
-        message;
+    profileMessage.classList.remove("hidden","success","error");
 
-
-    profileMessage.classList.remove(
-        "hidden",
-        "success",
-        "error"
-    );
-
-
-    profileMessage.classList.add(
-        type
-    );
+    profileMessage.classList.add(type);
 }
 
 
@@ -306,56 +179,29 @@ function showProfileMessage(
    SAVE PROFILE
 ========================================================= */
 
-profileSaveBtn?.addEventListener(
-    "click",
+profileSaveBtn?.addEventListener("click",async () => 
+    {
+        const displayName = profileNameInput.value;
 
-    async () => {
+        const bio = profileBioInput.value;
 
-        const displayName =
-            profileNameInput.value;
+        profileSaveBtn.disabled = true;
 
+        profileSaveBtn.textContent = "SAVING...";
 
-        const bio =
-            profileBioInput.value;
+        profileMessage?.classList.add("hidden");
 
-
-        profileSaveBtn.disabled =
-            true;
-
-
-        profileSaveBtn.textContent =
-            "SAVING...";
-
-
-        profileMessage?.classList.add(
-            "hidden"
-        );
-
-
-        try {
-
-            const result =
-                await updateUserProfile({
-                    displayName,
-                    bio
-                });
-
+        try 
+        {
+            const result = await updateUserProfile({displayName,bio});
 
             /* =================================
                UPDATE PROFILE SCREEN
             ================================= */
 
-            profileDisplayName.textContent =
-                result.displayName;
+            profileDisplayName.textContent = result.displayName;
 
-
-            renderProfileAvatar(
-                window.currentUserData
-                    ?.profile
-                    ?.photoURL,
-                result.displayName
-            );
-
+            renderProfileAvatar(window.currentUserData?.profile?.photoURL,result.displayName);
 
             /* =================================
                TELL OTHER UI
@@ -363,9 +209,7 @@ profileSaveBtn?.addEventListener(
                Home / PvP / etc.
             ================================= */
 
-            window.dispatchEvent(
-                new CustomEvent(
-                    "batlingo-profile-updated",
+            window.dispatchEvent(new CustomEvent("batlingo-profile-updated",
                     {
                         detail: {
                             displayName:
@@ -378,118 +222,64 @@ profileSaveBtn?.addEventListener(
                 )
             );
 
-
-            showProfileMessage(
-                "Profile saved.",
-                "success"
-            );
-
+            showProfileMessage("Profile saved.","success");
         }
-        catch (error) {
+        catch (error) 
+        {
+            console.error("[PROFILE] Save:",error);
 
-            console.error(
-                "[PROFILE] Save:",
-                error
-            );
-
-
-            switch (error.message) {
-
+            switch (error.message) 
+            {
                 case "INVALID_DISPLAY_NAME":
-
-                    showProfileMessage(
-                        "Name must be 2–20 characters.",
-                        "error"
-                    );
-
+                    showProfileMessage("Name must be 2–20 characters.","error");
                     break;
-
 
                 case "BIO_TOO_LONG":
-
-                    showProfileMessage(
-                        "Bio must be 100 characters or less.",
-                        "error"
-                    );
-
+                    showProfileMessage("Bio must be 100 characters or less.","error");
                     break;
 
-
                 default:
-
-                    showProfileMessage(
-                        "Could not save profile.",
-                        "error"
-                    );
+                    showProfileMessage("Could not save profile.","error");
             }
-
         }
-        finally {
+        finally 
+        {
+            profileSaveBtn.disabled = false;
 
-            profileSaveBtn.disabled =
-                false;
-
-
-            profileSaveBtn.textContent =
-                "SAVE PROFILE";
-
+            profileSaveBtn.textContent = "SAVE PROFILE";
         }
-
     }
 );
 
-profileBioInput?.addEventListener(
-    "input",
-    updateCounters
-);
+profileBioInput?.addEventListener("input",updateCounters);
 
 /* =========================================================
    PLAYER STATUS
 ========================================================= */
 
-function renderPlayerStatus(
-    userData
-)
+function renderPlayerStatus(userData)
 {
-    const progress =
-        userData?.progress || {};
+    const progress = userData?.progress || {};
 
+    const rating = userData?.rating || {};
 
-    const rating =
-        userData?.rating || {};
-
-
-    const stats =
-        userData?.stats || {};
-
+    const stats = userData?.stats || {};
 
     /* =========================================
        LEVEL
     ========================================= */
 
-    const level =
-        Number(
-            progress.level
-        ) || 1;
+    const level =Number(progress.level) || 1;
 
-
-    profileLevel.textContent =
-        level;
-
+    profileLevel.textContent = level;
 
     /* =========================================
        ELO
     ========================================= */
 
-    const elo =
-        Number(
-            rating.elo
-        ) || 1000;
+    const elo = Number(rating.elo) || 1000;
 
-
-    profileElo.textContent =
-        elo;
-
+    profileElo.textContent = elo;
 
     /* =========================================
        EXP
@@ -500,28 +290,19 @@ function renderPlayerStatus(
 
     const exp = Number(progress.exp) || 0;
 
-
     const expRequired =getExpRequired(level);
 
     const expPercent =Math.min(100,Math.max(0,(exp /expRequired) * 100));
 
+    profileExpText.textContent =`${exp} / ${expRequired}`;
 
-    profileExpText.textContent =
-        `${exp} / ${expRequired}`;
-
-
-    profileExpFill.style.width =
-        `${expPercent}%`;
-
+    profileExpFill.style.width = `${expPercent}%`;
 
     /* =========================================
        BATTLE STATS
     ========================================= */
 
-    const battles =
-        Number(
-            stats.totalGames
-        ) || 0;
+    const battles = Number(stats.totalGames) || 0;
 
 
     const wins =
