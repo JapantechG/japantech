@@ -41,23 +41,13 @@ export const USER_SCHEMA_VERSION = 1;
 
 function formatBatlingoId(number)
 {
-    if (
-        !Number.isInteger(number) ||
-        number < 1 ||
-        number > 9999999
-    ) {
-        throw new Error(
-            "BATLINGO_ID_OUT_OF_RANGE"
-        );
+    if (!Number.isInteger(number) || number < 1 ||number > 9999999) 
+    {
+        throw new Error("BATLINGO_ID_OUT_OF_RANGE");
     }
 
-
-    return (
-        "BLG-" +
-        String(number).padStart(7, "0")
-    );
+    return ("BLG-" + String(number).padStart(7, "0"));
 }
-
 
 /* =========================================================
    ALLOCATE BATLINGO ID
@@ -70,49 +60,29 @@ function formatBatlingoId(number)
 
 async function allocateBatlingoId()
 {
-    const counterRef =
-        ref(
-            db,
-            "system/lastBatlingoId"
-        );
+    const counterRef =ref(db,"system/lastBatlingoId");
 
-
-    const result =
-        await runTransaction(
-            counterRef,
-            currentValue =>
+    const result = await runTransaction(counterRef,currentValue =>
             {
-                const current =
-                    Number(currentValue) || 0;
+                const current = Number(currentValue) || 0;
 
-
-                if (
-                    current >= 9999999
-                ) {
+                if (current >= 9999999) 
+                {
                     return;
                 }
-
 
                 return current + 1;
             }
         );
 
-
-    if (!result.committed) {
-
-        throw new Error(
-            "BATLINGO_ID_LIMIT_REACHED"
-        );
+    if (!result.committed) 
+    {
+        throw new Error("BATLINGO_ID_LIMIT_REACHED");
     }
 
+    const number =result.snapshot.val();
 
-    const number =
-        result.snapshot.val();
-
-
-    return formatBatlingoId(
-        number
-    );
+    return formatBatlingoId(number);
 }
 
 
@@ -120,14 +90,9 @@ async function allocateBatlingoId()
    DEFAULT USER DATA
 ========================================================= */
 
-function createDefaultUserData(
-    user,
-    batlingoId
-)
+function createDefaultUserData(user,batlingoId)
 {
-    const now =
-        Date.now();
-
+    const now = Date.now();
 
     return {
 
@@ -140,16 +105,13 @@ function createDefaultUserData(
             batlingoId,
 
             displayName:
-                user.displayName ||
-                user.email?.split("@")[0] ||
-                "Player",
+                user.displayName || user.email?.split("@")[0] || "Player",
 
             photoURL:
                 user.photoURL || "",
 
             provider:
-                user.providerData?.[0]
-                    ?.providerId || "",
+                user.providerData?.[0]?.providerId || "",
 
             createdAt:
                 now,
@@ -448,64 +410,33 @@ export async function ensureUserProfile(
     user
 )
 {
-    if (!user?.uid) {
-
-        throw new Error(
-            "USER_REQUIRED"
-        );
+    if (!user?.uid) 
+    {
+        throw new Error("USER_REQUIRED");
     }
 
+    const userRef =ref(db,`users/${user.uid}`);
 
-    const userRef =
-        ref(
-            db,
-            `users/${user.uid}`
-        );
-
-
-    const snapshot =
-        await get(
-            userRef
-        );
-
+    const snapshot =await get(userRef);
 
     /* =====================================================
        NEW USER
     ===================================================== */
 
-    if (!snapshot.exists()) {
+    if (!snapshot.exists()) 
+    {
+        console.log("[USER] Creating new user...";
 
-        console.log(
-            "[USER] Creating new user..."
-        );
+        const batlingoId = await allocateBatlingoId();
 
+        const userData = createDefaultUserData(user,batlingoId);
 
-        const batlingoId =
-            await allocateBatlingoId();
+        await set(userRef,userData);
 
-
-        const userData =
-            createDefaultUserData(
-                user,
-                batlingoId
-            );
-
-
-        await set(
-            userRef,
-            userData
-        );
-
-
-        console.log(
-            "[USER] Created:",
-            batlingoId
-        );
-
+        console.log("[USER] Created:",batlingoId);
 
         return userData;
     }
-
 
     /* =====================================================
        EXISTING USER
@@ -513,13 +444,9 @@ export async function ensureUserProfile(
        Tuyệt đối KHÔNG set toàn bộ user.
     ===================================================== */
 
-    const userData =
-        snapshot.val();
+    const userData = snapshot.val();
 
-
-    const now =
-        Date.now();
-
+    const now = Date.now();
 
     const updates = {
 
@@ -530,75 +457,40 @@ export async function ensureUserProfile(
             now
     };
 
-
     /*
         Google avatar/name có thể thay đổi.
 
         Đồng bộ lại từ Firebase Auth.
     */
 
-    /*if (user.displayName) {
-
-        updates[
-            "profile/displayName"
-        ] =
-            user.displayName;
-    }*/
-
-
-    if (user.photoURL) {
-
-        updates[
-            "profile/photoURL"
-        ] =
-            user.photoURL;
+    if (user.photoURL) 
+    {
+        updates["profile/photoURL"] = user.photoURL;
     }
 
+    await update(userRef,updates);
 
-    await update(
-        userRef,
-        updates
-    );
-
-
-    console.log(
-        "[USER] Loaded:",
-        userData.profile?.batlingoId
-    );
-
+    console.log("[USER] Loaded:",userData.profile?.batlingoId);
 
     /*
         Update object local để dữ liệu
         trả về khớp Firebase vừa update.
     */
 
-    if (userData.profile) {
+    if (userData.profile) 
+    {
+        userData.profile.lastLoginAt = now;
 
-        userData.profile.lastLoginAt =
-            now;
-
-
-       /* if (user.displayName) {
-
-            userData.profile.displayName =
-                user.displayName;
-        }*/
-
-
-        if (user.photoURL) {
-
-            userData.profile.photoURL =
-                user.photoURL;
+        if (user.photoURL) 
+        {
+            userData.profile.photoURL = user.photoURL;
         }
     }
 
-
-    if (userData.system) {
-
-        userData.system.lastUpdatedAt =
-            now;
+    if (userData.system) 
+    {
+        userData.system.lastUpdatedAt = now;
     }
-
 
     return userData;
 }
@@ -607,20 +499,13 @@ export async function ensureUserProfile(
    UPDATE USER PROFILE
 ========================================================= */
 
-export async function updateUserProfile({
-    displayName,
-    bio
-})
+export async function updateUserProfile({displayName,bio})
 {
-    const user =
-        window.currentUser;
+    const user = window.currentUser;
 
-
-    if (!user?.uid) {
-
-        throw new Error(
-            "USER_NOT_LOGGED_IN"
-        );
+    if (!user?.uid) 
+    {
+        throw new Error("USER_NOT_LOGGED_IN");
     }
 
 
@@ -628,42 +513,25 @@ export async function updateUserProfile({
        VALIDATE DISPLAY NAME
     ========================================= */
 
-    const cleanName =
-        String(displayName || "")
-            .trim();
+    const cleanName = String(displayName || "").trim();
 
-
-    if (
-        cleanName.length < 2 ||
-        cleanName.length > 20
-    ) {
-
-        throw new Error(
-            "INVALID_DISPLAY_NAME"
-        );
+    if (cleanName.length < 2 || cleanName.length > 20) 
+    {
+        throw new Error("INVALID_DISPLAY_NAME");
     }
-
 
     /* =========================================
        VALIDATE BIO
     ========================================= */
 
-    const cleanBio =
-        String(bio || "")
-            .trim();
+    const cleanBio = String(bio || "").trim();
 
-
-    if (cleanBio.length > 100) {
-
-        throw new Error(
-            "BIO_TOO_LONG"
-        );
+    if (cleanBio.length > 100) 
+    {
+        throw new Error("BIO_TOO_LONG");
     }
 
-
-    const now =
-        Date.now();
-
+    const now = Date.now();
 
     /* =========================================
        UPDATE FIREBASE
@@ -672,15 +540,9 @@ export async function updateUserProfile({
        Không đụng BLG ID / createdAt...
     ========================================= */
 
-    const userRef =
-        ref(
-            db,
-            `users/${user.uid}`
-        );
+    const userRef =ref(db,`users/${user.uid}`);
 
-
-    await update(
-        userRef,
+    await update(userRef,
         {
             "profile/displayName":
                 cleanName,
@@ -698,26 +560,14 @@ export async function updateUserProfile({
        UPDATE LOCAL DATA
     ========================================= */
 
-    if (window.currentUserData?.profile) {
+    if (window.currentUserData?.profile) 
+    {
+        window.currentUserData.profile.displayName = cleanName;
 
-        window.currentUserData
-            .profile
-            .displayName =
-                cleanName;
+        window.currentUserData.profile.bio = cleanBio;
 
-
-        window.currentUserData
-            .profile
-            .bio =
-                cleanBio;
-
-
-        window.currentUserData
-            .system
-            .lastUpdatedAt =
-                now;
+        window.currentUserData.system.lastUpdatedAt =now;
     }
-
 
     return {
         displayName:
@@ -732,45 +582,24 @@ export async function updateUserProfile({
    SAVE SOLO RESULT
 ========================================================= */
 
-export async function saveSoloResult({
-    score,
-    questions,
-    correct,
-    wrong,
-    bestCombo
-})
+export async function saveSoloResult({score,questions,correct,wrong,bestCombo})
 {
-    const user =
-        window.currentUser;
+    const user = window.currentUser;
 
-
-    if (!user?.uid) {
-
-        console.log(
-            "[SOLO] Guest result not saved."
-        );
+    if (!user?.uid) 
+    {
+        console.log("[SOLO] Guest result not saved.");
 
         return null;
     }
-
 
     /* =====================================================
        CALCULATE EXP
     ===================================================== */
 
-    const gainedExp =
-        calculateSoloExp({
-            correct,
-            wrong
-        });
+    const gainedExp = calculateSoloExp({correct,wrong});
 
-
-    const userRef =
-        ref(
-            db,
-            `users/${user.uid}`
-        );
-
+    const userRef =ref(db,`users/${user.uid}`);
 
     /* =====================================================
        TRANSACTION
@@ -778,109 +607,51 @@ export async function saveSoloResult({
        Stats + Progress cùng transaction.
     ===================================================== */
 
-    const result =
-        await runTransaction(
-            userRef,
-
-            current => {
-
-                if (!current) {
+    const result = await runTransaction(userRef,current => 
+       {
+                if (!current) 
+                {
                     return current;
                 }
 
+                const stats = current.stats || {};
 
-                const stats =
-                    current.stats || {};
-
-
-                const progress =
-                    current.progress || {};
-
+                const progress = current.progress || {};
 
                 /* =========================================
                    STATS
                 ========================================= */
 
                 current.stats = {
-
                     ...stats,
 
-
                     totalGames:
-                        (
-                            Number(
-                                stats.totalGames
-                            ) || 0
-                        ) + 1,
-
+                        (Number(stats.totalGames) || 0) + 1,
 
                     soloGames:
-                        (
-                            Number(
-                                stats.soloGames
-                            ) || 0
-                        ) + 1,
-
+                        (Number(stats.soloGames) || 0) + 1,
 
                     totalQuestions:
-                        (
-                            Number(
-                                stats.totalQuestions
-                            ) || 0
-                        ) +
-                        questions,
-
+                        (Number(stats.totalQuestions) || 0) + questions,
 
                     correctAnswers:
-                        (
-                            Number(
-                                stats.correctAnswers
-                            ) || 0
-                        ) +
-                        correct,
-
+                        (Number(stats.correctAnswers) || 0 ) + correct,
 
                     wrongAnswers:
-                        (
-                            Number(
-                                stats.wrongAnswers
-                            ) || 0
-                        ) +
-                        wrong,
-
+                        (Number(stats.wrongAnswers) || 0) + wrong,
 
                     bestCombo:
-                        Math.max(
-                            Number(
-                                stats.bestCombo
-                            ) || 0,
-
-                            bestCombo
-                        ),
-
+                        Math.max(Number(stats.bestCombo) || 0,bestCombo),
 
                     bestSoloScore:
-                        Math.max(
-                            Number(
-                                stats.bestSoloScore
-                            ) || 0,
-
-                            score
-                        )
-
+                        Math.max(Number(stats.bestSoloScore) || 0,score)
                 };
-
 
                 /* =========================================
                    EXP / LEVEL
                 ========================================= */
 
-                const newProgress =
-                    applyExp(
-                        progress,
-                        gainedExp
-                    );
-
+                const newProgress = applyExp(progress,gainedExp);
 
                 current.progress = {
 
@@ -897,9 +668,7 @@ export async function saveSoloResult({
 
                     lastStudyAt:
                         Date.now()
-
                 };
-
 
                 /* =========================================
                    SYSTEM
@@ -914,35 +683,24 @@ export async function saveSoloResult({
 
                 };
 
-
                 return current;
-
             }
         );
 
-
-    if (!result.committed) {
-
-        throw new Error(
-            "SOLO_RESULT_UPDATE_FAILED"
-        );
+    if (!result.committed) 
+    {
+        throw new Error("SOLO_RESULT_UPDATE_FAILED");
     }
 
-
-    const newUserData =
-        result.snapshot.val();
-
+    const newUserData = result.snapshot.val();
 
     /* =====================================================
        UPDATE LOCAL CACHE
     ===================================================== */
 
-    window.currentUserData =
-        newUserData;
+    window.currentUserData = newUserData;
 
-
-    console.log(
-        "[SOLO] Result saved:",
+    console.log("[SOLO] Result saved:",
         {
             score,
             questions,
@@ -951,15 +709,11 @@ export async function saveSoloResult({
             bestCombo,
             gainedExp,
             level:
-                newUserData
-                    ?.progress
-                    ?.level
+                newUserData?.progress?.level
         }
     );
 
-
     return {
-
         userData:
             newUserData,
 
