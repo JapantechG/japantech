@@ -670,42 +670,37 @@ function runFlashcardAuto()
         );
 }
 
-function autoNextFlashcard()
-{
-    if (!flashcardActive || !flashcardAutoMode)
-    {
-        return;
-    }
+function autoNextFlashcard() {
+    if (!flashcardAutoMode || !flashcardActive) return;
 
     const currentCard = flashcardCards[flashcardIndex];
 
-    /*
-        AUTO = chưa xác nhận nhớ
-
-        → đưa vào AGAIN
-    */
-
-    if (currentCard)
+    if (currentCard) 
     {
         flashcardAgainCards.push(currentCard);
     }
 
-    flashcardIndex++;
+    flashcard.style.transition = "transform 0.2s ease";
+    flashcard.style.transform = `translateX(-${window.innerWidth}px) rotate(-15deg)`;
 
-    /*
-        Card cuối
-    */
+    setTimeout(() => {
+        flashcardIndex++;
 
-    if (flashcardIndex >= flashcardAutoEndIndex)
-    {
-        finishFlashcardAuto();
+        flashcard.style.transition = "none";
+        flashcard.style.transform = "";
 
-        return;
-    }
+        if (flashcardIndex >= flashcardAutoEndIndex) 
+        {
+            finishFlashcardAuto();
+            return;
+        }
 
-    showFlashcard();
+        showFlashcard();
 
-    runFlashcardAuto();
+        requestAnimationFrame(() => {flashcard.style.transition = "";});
+
+        runFlashcardAuto();
+    }, 200);
 }
 
 function finishFlashcardAuto()
