@@ -253,7 +253,7 @@ export async function joinRoom(code,playerName)
     const room = snapshot.val();
 
     // Room đã có người thứ 2
-    if (room.guest) 
+    if (room.guest?.connected === true) 
     {
         throw new Error("ROOM_FULL");
     }
