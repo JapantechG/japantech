@@ -425,7 +425,7 @@ export async function ensureUserProfile(
 
     if (!snapshot.exists()) 
     {
-        console.log("[USER] Creating new user...";
+        console.log("[USER] Creating new user...";)
 
         const batlingoId = await allocateBatlingoId();
 
