@@ -12,77 +12,48 @@
  */
 export function isAudioMode(mode)
 {
-    return (
-        mode === "audio_hiragana" ||
-        mode === "audio_meaning" ||
-        mode === "audio_kanji"
-    );
+    return (mode === "audio_hiragana" || mode === "audio_meaning" || mode === "audio_kanji");
 }
-
 
 /* =============================================================
    QUESTION
    ============================================================= */
-
 /**
  * Lấy nội dung hiển thị ở phía QUESTION.
  */
-export function getQuestionText(
-    data,
-    mode
-)
+export function getQuestionText(data,mode)
 {
-    if (!data) {
+    if (!data) 
+    {
         return "";
     }
 
-
     switch (mode)
     {
-        /*
-            Kanji → Hiragana
-        */
+        /*Kanji → Hiragana*/
         case "kanji_hiragana":
-
             return data.word;
 
-
-        /*
-            Hiragana → Meaning
-        */
+        /*Hiragana → Meaning*/
         case "hiragana_meaning":
-
             return data.reading;
 
-
-        /*
-            Meaning → Kanji
-        */
+        /*Meaning → Kanji*/
         case "meaning_kanji":
-
             return data.meaning;
 
-
-        /*
-            Audio modes
-        */
+        /*Audio modes*/
         case "audio_hiragana":
         case "audio_meaning":
         case "audio_kanji":
 
             return "🔊";
 
-
-        /*
-            Default:
-            Kanji → Meaning
-        */
+        /* Default: Kanji → Meaning*/
         default:
-
             return data.word;
     }
 }
-
 
 /* =============================================================
    ANSWER FIELD
@@ -105,15 +76,11 @@ export function getAnswerField(mode)
     {
         case "kanji_hiragana":
         case "audio_hiragana":
-
             return "reading";
-
 
         case "meaning_kanji":
         case "audio_kanji":
-
             return "word";
-
 
         /*
             kanji_meaning
@@ -121,32 +88,24 @@ export function getAnswerField(mode)
             audio_meaning
         */
         default:
-
             return "meaning";
     }
 }
 
-
 /**
  * Lấy đáp án chính.
  */
-export function getAnswerText(
-    data,
-    mode
-)
+export function getAnswerText(data,mode)
 {
-    if (!data) {
+    if (!data) 
+    {
         return "";
     }
 
-
-    const field =
-        getAnswerField(mode);
-
+    const field = getAnswerField(mode);
 
     return data[field] ?? "";
 }
-
 
 /* =============================================================
    FLASHCARD BACK
@@ -157,10 +116,7 @@ export function getAnswerText(
  *
  * Không phụ thuộc UI.
  */
-export function getFlashcardBack(
-    data,
-    mode
-)
+export function getFlashcardBack(data,mode)
 {
     if (!data)
     {
@@ -171,7 +127,6 @@ export function getFlashcardBack(
         };
     }
 
-
     switch (mode)
     {
         /*
@@ -181,13 +136,11 @@ export function getFlashcardBack(
             thúc đẩy
         */
         case "kanji_hiragana":
-
             return {
                 primary: data.reading ?? "",
                 secondary: data.meaning ?? "",
                 extra: ""
             };
-
 
         /*
             そくしん
@@ -203,7 +156,6 @@ export function getFlashcardBack(
                 extra: ""
             };
 
-
         /*
             thúc đẩy
               ↓
@@ -211,13 +163,11 @@ export function getFlashcardBack(
             そくしん
         */
         case "meaning_kanji":
-
             return {
                 primary: data.word ?? "",
                 secondary: data.reading ?? "",
                 extra: ""
             };
-
 
         /*
             🔊
@@ -234,7 +184,6 @@ export function getFlashcardBack(
                 extra: data.meaning ?? ""
             };
 
-
         /*
             🔊
              ↓
@@ -243,13 +192,11 @@ export function getFlashcardBack(
             そくしん
         */
         case "audio_meaning":
-
             return {
                 primary: data.meaning ?? "",
                 secondary: data.word ?? "",
                 extra: data.reading ?? ""
             };
-
 
         /*
             🔊
@@ -259,19 +206,16 @@ export function getFlashcardBack(
             thúc đẩy
         */
         case "audio_kanji":
-
             return {
                 primary: data.word ?? "",
                 secondary: data.reading ?? "",
                 extra: data.meaning ?? ""
             };
 
-
         /*
             Kanji → Meaning
         */
         default:
-
             return {
                 primary: data.meaning ?? "",
                 secondary: data.reading ?? "",
@@ -288,25 +232,14 @@ export function getFlashcardBack(
 /**
  * Tìm question bằng ID.
  */
-export function getQuestionById(
-    database,
-    id
-)
+export function getQuestionById(database,id)
 {
     if (!Array.isArray(database))
     {
         return null;
     }
 
-
-    return (
-        database.find(
-            item =>
-                String(item.id) ===
-                String(id)
-        )
-        ?? null
-    );
+    return (database.find(item => String(item.id) === String(id))?? null);
 }
 
 
@@ -325,33 +258,14 @@ export function shuffleQuestions(database)
     }
 
 
-    const result =
-        [...database];
+    const result = [...database];
 
-
-    for (
-        let i = result.length - 1;
-        i > 0;
-        i--
-    )
+    for (let i = result.length - 1;i > 0;i--)
     {
-        const j =
-            Math.floor(
-                Math.random() *
-                (i + 1)
-            );
+        const j =Math.floor(Math.random() *(i + 1));
 
-
-        [
-            result[i],
-            result[j]
-        ] =
-        [
-            result[j],
-            result[i]
-        ];
+        [result[i],result[j]] =[result[j],result[i]];
     }
-
 
     return result;
 }
