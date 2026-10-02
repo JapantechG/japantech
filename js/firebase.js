@@ -553,7 +553,6 @@ export function resetRoomConnection()
     if (unsubscribeRoom)
     {
         unsubscribeRoom();
-
         unsubscribeRoom = null;
     }
 
