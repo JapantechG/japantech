@@ -1329,6 +1329,7 @@ document.getElementById("leaveRoomButton").addEventListener("click",async () =>
         }
 
         resetPvpScreen();
+    }
     );
 
 
