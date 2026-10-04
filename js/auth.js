@@ -262,42 +262,19 @@ async function forgotPassword()
         return;
     }
 
+    try 
+    {
+        await sendPasswordResetEmail(auth,email);
 
-    try {
+        showError(loginError,"Password reset email sent. Please check your inbox.");
 
-        await sendPasswordResetEmail(
-            auth,
-            email
-        );
-
-
-        showError(
-            loginError,
-            "Password reset email sent. Please check your inbox."
-        );
-
-
-        console.log(
-            "[AUTH] Password reset sent:",
-            email
-        );
-
+        console.log("[AUTH] Password reset sent:",email);
     }
-    catch (error) {
+    catch (error) 
+    {
+        console.error("[AUTH] Password reset:",error);
 
-        console.error(
-            "[AUTH] Password reset:",
-            error
-        );
-
-
-        showError(
-            loginError,
-            getAuthErrorMessage(
-                error.code
-            )
-        );
-
+        showError(loginError,getAuthErrorMessage(error.code));
     }
 }
 
@@ -305,47 +282,25 @@ async function forgotPassword()
    GOOGLE LOGIN
 ========================================= */
 
-async function loginWithGoogle() {
-
+async function loginWithGoogle() 
+{
     clearError(loginError);
 
-
-    if (googleLoginBtn) {
-
+    if (googleLoginBtn) 
+    {
         googleLoginBtn.disabled = true;
-
     }
+    try 
+    {
+        const credential = await signInWithPopup(auth,googleProvider);
 
+        const user = credential.user;
 
-    try {
+        console.log("[AUTH] Google login success:",user.uid);
 
-        const credential =
-            await signInWithPopup(
-                auth,
-                googleProvider
-            );
+        console.log("[AUTH] Google user:",user.displayName,user.email);
 
-
-        const user =
-            credential.user;
-
-
-        console.log(
-            "[AUTH] Google login success:",
-            user.uid
-        );
-
-
-        console.log(
-            "[AUTH] Google user:",
-            user.displayName,
-            user.email
-        );
-
-
-        window.dispatchEvent(
-            new CustomEvent(
-                "batlingo-login-success",
+        window.dispatchEvent(new CustomEvent("batlingo-login-success",
                 {
                     detail: {
                         uid: user.uid,
@@ -359,93 +314,58 @@ async function loginWithGoogle() {
         );
 
     }
-    catch (error) {
-
+    catch (error) 
+    {
         /*
          * User tự đóng popup
          * → không cần hiện lỗi.
          */
-
-        if (
-            error.code ===
-            "auth/popup-closed-by-user"
-        ) {
-
-            console.log(
-                "[AUTH] Google login cancelled"
-            );
-
+        if (error.code === "auth/popup-closed-by-user") 
+        {
+            console.log("[AUTH] Google login cancelled");
             return;
         }
 
+        console.error("[AUTH] Google login:",error.code,error.message);
 
-        console.error(
-            "[AUTH] Google login:",
-            error.code,
-            error.message
-        );
-
-
-        showError(
-            loginError,
-            getAuthErrorMessage(
-                error.code
-            )
-        );
-
+        showError(loginError,getAuthErrorMessage(error.code));
     }
-    finally {
-
-        if (googleLoginBtn) {
-
+    finally 
+    {
+        if (googleLoginBtn) 
+        {
             googleLoginBtn.disabled = false;
-
         }
-
     }
-
 }
 
 /* =========================================================
    FIREBASE ERROR
 ========================================================= */
 
-function getAuthErrorMessage(code) {
-
-    switch (code) {
-
+function getAuthErrorMessage(code) 
+{
+    switch (code) 
+    {
         case "auth/email-already-in-use":
-
             return "This email is already registered.";
 
-
         case "auth/invalid-email":
-
             return "Invalid email address.";
 
-
         case "auth/weak-password":
-
             return "Password is too weak.";
 
-
         case "auth/invalid-credential":
-
             return "Incorrect email or password.";
 
-
         case "auth/user-disabled":
-
             return "This account has been disabled.";
 
-
         case "auth/too-many-requests":
-
             return "Too many attempts. Please try again later.";
 
-
         case "auth/network-request-failed":
-
             return "Network error. Please check your connection.";
         
         case "auth/popup-blocked":
@@ -460,40 +380,27 @@ function getAuthErrorMessage(code) {
         case "auth/account-exists-with-different-credential":
             return "An account already exists with this email using another sign-in method.";
 
-
         default:
-
             return "Something went wrong. Please try again.";
     }
 }
-
 
 /* =========================================================
    AUTH STATE
 ========================================================= */
 
-onAuthStateChanged(
-    auth,
-
-    async user => {
-
+onAuthStateChanged(auth,async user => 
+   {
         /* =========================================
            LOGGED IN
         ========================================= */
 
-        if (
-            user &&
-            user.emailVerified
-        ) {
+        if (user && user.emailVerified) 
+        {
+            console.log("[AUTH] Signed in:",user.uid);
 
-            console.log(
-                "[AUTH] Signed in:",
-                user.uid
-            );
-
-
-            try {
-
+            try 
+            {
                 /* =================================
                    CREATE / LOAD BATLINGO USER
 
@@ -506,17 +413,9 @@ onAuthStateChanged(
                    → Keep EXP / ELO / wallet...
                 ================================= */
 
-                const userData =
-                    await ensureUserProfile(
-                        user
-                    );
+                const userData = await ensureUserProfile(user);
 
-
-                console.log(
-                    "[USER] BatLingo ID:",
-                    userData.profile.batlingoId
-                );
-
+                console.log("[USER] BatLingo ID:",userData.profile.batlingoId);
 
                 /*
                     Global user
@@ -525,24 +424,17 @@ onAuthStateChanged(
                     profile UI có thể sử dụng.
                 */
 
-                window.currentUser =
-                    user;
+                window.currentUser = user;
 
-
-                window.currentUserData =
-                    userData;
-
+                window.currentUserData = userData;
 
                 /* =================================
                    NOTIFY UI
                 ================================= */
 
-                window.dispatchEvent(
-                    new CustomEvent(
-                        "batlingo-auth-state",
+                window.dispatchEvent(new CustomEvent("batlingo-auth-state",
                         {
                             detail: {
-
                                 loggedIn: true,
 
                                 uid:
@@ -574,13 +466,9 @@ onAuthStateChanged(
                 );
 
             }
-            catch (error) {
-
-                console.error(
-                    "[USER] Failed to load user:",
-                    error
-                );
-
+            catch (error) 
+            {
+                console.error("[USER] Failed to load user:",error);
 
                 /*
                     Auth thành công nhưng
@@ -590,17 +478,11 @@ onAuthStateChanged(
                     user đã sẵn sàng.
                 */
 
-                window.currentUser =
-                    null;
+                window.currentUser = null;
 
+                window.currentUserData = null;
 
-                window.currentUserData =
-                    null;
-
-
-                window.dispatchEvent(
-                    new CustomEvent(
-                        "batlingo-auth-state",
+                window.dispatchEvent( new CustomEvent("batlingo-auth-state",
                         {
                             detail: {
                                 loggedIn: false,
@@ -611,31 +493,20 @@ onAuthStateChanged(
                 );
             }
 
-
             return;
         }
-
 
         /* =========================================
            LOGGED OUT
         ========================================= */
 
-        console.log(
-            "[AUTH] Signed out"
-        );
+        console.log("[AUTH] Signed out");
 
+        window.currentUser = null;
 
-        window.currentUser =
-            null;
+        window.currentUserData = null;
 
-
-        window.currentUserData =
-            null;
-
-
-        window.dispatchEvent(
-            new CustomEvent(
-                "batlingo-auth-state",
+        window.dispatchEvent(new CustomEvent("batlingo-auth-state",
                 {
                     detail: {
                         loggedIn: false
@@ -646,40 +517,26 @@ onAuthStateChanged(
     }
 );
 
-async function resendVerificationEmail() {
+async function resendVerificationEmail() 
+{
+    const user = auth.currentUser;
 
-    const user =
-        auth.currentUser;
-
-
-    if (!user) {
-
-        console.log(
-            "[AUTH] No current user"
-        );
+    if (!user) 
+    {
+        console.log("[AUTH] No current user");
 
         return;
     }
 
-
-    try {
-
+    try 
+    {
         await sendEmailVerification(user);
 
-        console.log(
-            "[AUTH] Verification email resent:",
-            user.email
-        );
-
+        console.log("[AUTH] Verification email resent:",user.email);
     }
-    catch (error) {
-
-        console.error(
-            "[AUTH] Resend verification:",
-            error.code,
-            error.message
-        );
-
+    catch (error)
+    {
+        console.error("[AUTH] Resend verification:",error.code,error.message);
     }
 }
 
@@ -687,74 +544,41 @@ async function resendVerificationEmail() {
    LOGOUT
 ========================================= */
 
-export async function logout() {
-
-    try {
-
+export async function logout() 
+{
+    try 
+    {
         await signOut(auth);
 
-        console.log(
-            "[AUTH] Logout success"
-        );
-
+        console.log("[AUTH] Logout success");
     }
-    catch (error) {
-
-        console.error(
-            "[AUTH] Logout:",
-            error
-        );
-
+    catch (error) 
+    {
+        console.error("[AUTH] Logout:",error);
     }
-
 }
 
 /* =========================================
    AUTH CHECK
 ========================================= */
 
-export function isLoggedIn() {
+export function isLoggedIn() 
+{
+    const user = auth.currentUser;
 
-    const user =
-        auth.currentUser;
-
-
-    return Boolean(
-        user &&
-        user.emailVerified
-    );
-
+    return Boolean(user && user.emailVerified);
 }
 
 /* =========================================================
    EVENTS
 ========================================================= */
 
-createAccountBtn?.addEventListener(
-    "click",
-    createAccount
-);
+createAccountBtn?.addEventListener("click",createAccount);
 
+emailLoginBtn?.addEventListener("click",login);
 
-emailLoginBtn?.addEventListener(
-    "click",
-    login
-);
+forgotPasswordBtn?.addEventListener("click",forgotPassword);
 
+document.getElementById("resendVerifyBtn")?.addEventListener("click",resendVerificationEmail);
 
-forgotPasswordBtn?.addEventListener(
-    "click",
-    forgotPassword
-);
-
-document
-    .getElementById("resendVerifyBtn")
-    ?.addEventListener(
-        "click",
-        resendVerificationEmail
-    );
-
-googleLoginBtn?.addEventListener(
-    "click",
-    loginWithGoogle
-);
+googleLoginBtn?.addEventListener("click",loginWithGoogle);
