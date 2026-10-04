@@ -27,7 +27,6 @@
 
     <meta name="theme-color" content="#080d17">
 
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/lobby.css">
     <link rel="stylesheet" href="css/game.css">
@@ -69,10 +68,7 @@
                 🌐
             </span>
 
-            <select
-                id="homeLanguage"
-                class="top-language-select"
-                aria-label="Interface Language">
+            <select id="homeLanguage" class="top-language-select" aria-label="Interface Language">
 
                 <option value="ja">日本語</option>
                 <option value="en">English</option>
@@ -94,7 +90,7 @@
         </button>
 
         <!-- USER - sau khi login -->
-                <button id="homeUserBtn" class="home-user-btn hidden" type="button" >
+            <button id="homeUserBtn" class="home-user-btn hidden" type="button">
             <img class="home-user-avatar hidden" alt="">
 
             <span class="home-user-avatar-fallback">
@@ -132,12 +128,7 @@
                     <span data-i18n="menu.profile">PROFILE</span>
                 </button>
 
-
-                <button
-                    id="logoutBtn"
-                    class="home-user-menu-item logout"
-                    type="button"
-                >
+                <button id="logoutBtn" class="home-user-menu-item logout" type="button">
                     ↪
                     <span data-i18n="menu.logout">LOGOUT</span>
                 </button>
@@ -185,7 +176,6 @@
 
             </div>
 
-
             <!-- NAME -->
             <div id="profileDisplayName" class="profile-main-name">
                 Player
@@ -218,7 +208,6 @@
             
                     </div>
             
-            
                     <div class="profile-elo-box">
             
                         <span class="profile-status-label" data-i18n="profile.elo">
@@ -232,7 +221,6 @@
                     </div>
             
                 </div>
-            
             
                 <!-- EXP -->
             
@@ -250,18 +238,12 @@
             
                     </div>
             
-            
                     <div class="profile-exp-bar">
-            
-                        <div
-                            id="profileExpFill"
-                            class="profile-exp-fill"
-                        ></div>
+                        <div id="profileExpFill" class="profile-exp-fill"></div>
             
                     </div>
             
                 </div>
-            
             
                 <!-- BATTLE STATS -->
             
@@ -280,7 +262,6 @@
             
                     </div>
             
-            
                     <div class="profile-stat-item">
             
                         <span class="profile-stat-value"
@@ -294,7 +275,6 @@
             
                     </div>
             
-            
                     <div class="profile-stat-item">
             
                         <span class="profile-stat-value"
@@ -307,7 +287,6 @@
                         </span>
             
                     </div>
-            
             
                     <div class="profile-stat-item">
             
@@ -385,11 +364,8 @@
                     BIO
                 </label>
 
-                <textarea id="profileBioInput"
-                    maxlength="100"
-                    placeholder="Tell other players about yourself"
-                    data-i18n-placeholder="profile.bioPlaceholder"
-                ></textarea>
+                <textarea id="profileBioInput" maxlength="100" placeholder="Tell other players about yourself"
+                    data-i18n-placeholder="profile.bioPlaceholder"></textarea>
 
                 <div class="profile-field-info">
                     <span></span>
@@ -579,19 +555,12 @@
                     </button>
 
                     <div class="selector-viewport">
-                        <div
-                            id="subModeValue"
-                            class="selector-value sub-mode-value"
-                        >
+                        <div id="subModeValue" class="selector-value sub-mode-value">
                             KANJI → MEANING
                         </div>
                     </div>
 
-                    <button
-                        id="subModeNext"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="subModeNext" class="selector-arrow" type="button">
                         ▶
                     </button>
 
@@ -599,14 +568,9 @@
 
             </div>
 
-
             <!-- BATTLE -->
 
-            <button
-                id="battleButton"
-                class="battle-button"
-                type="button"
-            >
+            <button id="battleButton" class="battle-button" type="button">
                 ⚔ <span data-i18n="home.battle">BATTLE</span>
             </button>
 
@@ -614,16 +578,11 @@
 
     </section>
 
-
-
     <!-- =====================================================
          SOLO GAME
          ===================================================== -->
 
-    <main
-        id="gameScreen"
-        class="game-screen hidden"
-    >
+    <main id="gameScreen" class="game-screen hidden">
 
         <div class="game-container">
 
@@ -652,73 +611,43 @@
 
             </div>
 
-            <div
-                    id="gameModeInfo"
-                    class="game-mode-info"
-            >
+            <div id="gameModeInfo" class="game-mode-info">
                      JLPT N1 · VOCABULARY
             </div>
 
-            <div
-                id="questionNumber"
-                class="question-number"
-            >
+            <div id="questionNumber" class="question-number">
                 QUESTION 1
             </div>
 
-
-            <div
-                id="question"
-                class="question"
-            >
+            <div id="question" class="question">
                 ---
             </div>
 
-
-            <div
-                id="reading"
-                class="reading"
-            >
+            <div id="reading" class="reading">
                 ---
             </div>
-
 
             <!-- TIMER -->
 
             <div class="timer-area">
 
-                <div
-                    id="timerText"
-                    class="timer-text"
-                >
+                <div id="timerText" class="timer-text">
                     10.0
                 </div>
 
                 <div class="timer-track">
-                    <div
-                        id="timerBar"
-                        class="timer-bar"
-                    ></div>
+                    <div id="timerBar" class="timer-bar"></div>
                 </div>
 
             </div>
 
-
             <!-- ANSWERS -->
 
-            <div
-                id="answers"
-                class="answers"
-            ></div>
+            <div id="answers" class="answers"></div>
 
-
-            <div
-                id="combo"
-                class="combo"
-            >
+            <div id="combo" class="combo">
                 🔥 COMBO 0
             </div>
-
 
             <div class="keyboard-hint" data-i18n="game.keyboardHint">
                 PRESS 1 · 2 · 3 · 4
@@ -743,27 +672,17 @@
     <!-- HEADER -->
     <div class="flashcard-header">
 
-        <button
-            id="flashcardBackButton"
-            class="flashcard-back-button"
-            type="button"
-        >
+        <button id="flashcardBackButton" class="flashcard-back-button" type="button">
             ←
         </button>
 
         <div class="flashcard-header-info">
 
-            <div
-                id="flashcardLevel"
-                class="flashcard-level"
-            >
+            <div id="flashcardLevel" class="flashcard-level">
                 N1 - VOCABULARY
             </div>
 
-            <div
-                id="flashcardProgress"
-                class="flashcard-progress"
-            >
+            <div id="flashcardProgress" class="flashcard-progress">
                 1 / 100
             </div>
 
@@ -771,22 +690,14 @@
 
     </div>
 
-
     <!-- =====================================================
          CARD AREA
          ===================================================== -->
 
     <div class="flashcard-container">
 
-        <button
-            id="flashcardAutoButton"
-            class="flashcard-auto-button"
-            type="button"
-        >
-        <span
-            id="flashcardAutoIcon"
-            class="flashcard-auto-icon"
-        >
+        <button id="flashcardAutoButton" class="flashcard-auto-button" type="button">
+        <span id="flashcardAutoIcon" class="flashcard-auto-icon">
             ▶
         </span>
 
@@ -795,24 +706,15 @@
         </span>
         </button>
 
-        <div
-            id="flashcard"
-            class="flashcard"
-        >
+        <div id="flashcard" class="flashcard">
 
             <!-- =========================
                  FRONT
                  ========================= -->
 
-            <div
-                id="flashcardFront"
-                class="flashcard-face flashcard-front"
-            >
+            <div id="flashcardFront" class="flashcard-face flashcard-front">
 
-                <div
-                    id="flashcardQuestion"
-                    class="flashcard-question"
-                >
+                <div id="flashcardQuestion" class="flashcard-question">
                     促進
                 </div>
 
@@ -822,94 +724,49 @@
 
             </div>
 
-
             <!-- =========================
                  BACK
                  ========================= -->
+            <div id="flashcardBack" class="flashcard-face flashcard-back hidden">
 
-            <div
-                id="flashcardBack"
-                class="flashcard-face flashcard-back hidden"
-            >
-
-                <button
-                    class="flashcard-audio-button"
-                    data-flashcard-audio
-                    type="button"
-                    aria-label="Play audio"
-                >
+                <button class="flashcard-audio-button" data-flashcard-audio type="button" aria-label="Play audio">
                     🔊
                 </button>
 
-
-                <div
-                    id="flashcardPrimary"
-                    class="flashcard-primary"
-                >
+                <div id="flashcardPrimary" class="flashcard-primary">
                     そくしん
                 </div>
 
-
-                <div
-                    id="flashcardSecondary"
-                    class="flashcard-secondary"
-                >
+                <div id="flashcardSecondary" class="flashcard-secondary">
                     thúc đẩy, xúc tiến
                 </div>
 
 
-                <div
-                    id="flashcardExtra"
-                    class="flashcard-extra"
-                >
+                <div id="flashcardExtra" class="flashcard-extra">
                 </div>
 
             </div>
 
         </div>
 
-
         <!-- =================================================
              RATING
              ================================================= -->
+        <div id="flashcardRating" class="flashcard-rating hidden">
 
-        <div
-            id="flashcardRating"
-            class="flashcard-rating hidden"
-        >
-
-            <button
-                id="flashcardAgain"
-                class="flashcard-rate-button again"
-                type="button"
-            >
+            <button id="flashcardAgain" class="flashcard-rate-button again" type="button">
                 <span>AGAIN</span>
             </button>
 
-
-            <button
-                id="flashcardHard"
-                class="flashcard-rate-button hard"
-                type="button"
-            >
+            <button id="flashcardHard" class="flashcard-rate-button hard" type="button">
                 <span>HARD</span>
             </button>
 
-
-            <button
-                id="flashcardGood"
-                class="flashcard-rate-button good"
-                type="button"
-            >
+            <button id="flashcardGood" class="flashcard-rate-button good" type="button">
                 <span>GOOD</span>
             </button>
 
-
-            <button
-                id="flashcardEasy"
-                class="flashcard-rate-button easy"
-                type="button"
-            >
+            <button id="flashcardEasy" class="flashcard-rate-button easy" type="button">
                 <span>EASY</span>
             </button>
 
@@ -919,27 +776,16 @@
 
 </section>
 
-
     <!-- =====================================================
          PVP
          ===================================================== -->
-
-    <section
-        id="pvpScreen"
-        class="pvp-screen hidden"
-    >
+    <section id="pvpScreen" class="pvp-screen hidden">
 
         <div class="screen-overlay"></div>
 
-
-        <button
-            id="pvpBackButton"
-            class="back-button"
-            type="button"
-        >
+        <button id="pvpBackButton" class="back-button" type="button">
             ←
         </button>
-
 
         <div class="pvp-container">
 
@@ -951,20 +797,13 @@
                 ONLINE BATTLE
             </div>
 
-
             <!-- CREATE / JOIN -->
 
             <div id="roomSelectPanel">
 
-                <button
-                    id="createRoomButton"
-                    class="create-room-button"
-                    type="button"
-                    data-i18n="pvp.createRoom"
-                >
+                <button id="createRoomButton" class="create-room-button" type="button" data-i18n="pvp.createRoom">
                     CREATE ROOM
                 </button>
-
 
                 <div class="or-divider">
                     <span></span>
@@ -972,32 +811,17 @@
                     <span></span>
                 </div>
 
-
                 <div class="room-code-label" data-i18n="pvp.roomCode">
                     ROOM CODE
                 </div>
 
-                <input
-                    id="roomCodeInput"
-                    class="room-code-input"
-                    type="text"
-                    maxlength="4"
-                    placeholder="A7K2"
-                    autocomplete="off"
-                >
+                <input id="roomCodeInput" class="room-code-input" type="text" maxlength="4" placeholder="A7K2" autocomplete="off">
 
-
-                <button
-                    id="joinRoomButton"
-                    class="join-room-button"
-                    type="button"
-                    data-i18n="pvp.joinRoom"
-                >
+                <button id="joinRoomButton" class="join-room-button" type="button" data-i18n="pvp.joinRoom">
                     JOIN ROOM
                 </button>
 
             </div>
-
 
             <!-- WAITING ROOM -->
 
@@ -1007,10 +831,7 @@
                     ROOM CODE
                 </div>
 
-                <div
-                    id="currentRoomCode"
-                    class="current-room-code"
-                >
+                <div id="currentRoomCode" class="current-room-code">
                     ----
                 </div>
 
@@ -1023,56 +844,36 @@
                         <!-- LEFT PLAYER -->
                         <div class="player-slot">
 
-                            <div
-                                id="leftPlayerAvatar"
-                                class="player-avatar"
-                            >
+                            <div id="leftPlayerAvatar" class="player-avatar">
                                 🐵
                             </div>
 
-                            <div
-                                id="leftPlayerName"
-                                class="room-player-name"
-                            >
+                            <div id="leftPlayerName" class="room-player-name">
                                 YOU
                             </div>
 
-                            <div
-                                id="leftPlayerStatus"
-                                class="player-status ready"
-                            >
+                            <div id="leftPlayerStatus" class="player-status ready">
                                 READY
                             </div>
 
                         </div>
 
-
                         <div class="room-vs">
                             VS
                         </div>
 
-
                         <!-- RIGHT PLAYER -->
                         <div class="player-slot">
 
-                            <div
-                                id="rightPlayerAvatar"
-                                class="player-avatar waiting"
-                            >
+                            <div id="rightPlayerAvatar" class="player-avatar waiting">
                                 ?
                             </div>
 
-                            <div
-                                id="rightPlayerName"
-                                class="room-player-name"
-                            >
+                            <div id="rightPlayerName" class="room-player-name">
                                 WAITING...
                             </div>
 
-                            <div
-                                id="rightPlayerStatus"
-                                class="player-status"
-                            >
+                            <div id="rightPlayerStatus" class="player-status">
                                 WAITING
                             </div>
 
@@ -1080,55 +881,32 @@
 
                     </div>
 
-
-                <div
-                    id="waitingMessage"
-                    class="waiting-message"
-                >
+                <div id="waitingMessage" class="waiting-message">
                     WAITING FOR PLAYER...
                 </div>
-                <button
-                    id="startBattleButton"
-                    class="battle-button hidden"
-                    type="button"
-                >
+                <button id="startBattleButton" class="battle-button hidden" type="button">
                     ⚔ <span data-i18n="pvp.startBattle">START BATTLE</span>
                 </button>
 
-                <button
-                    id="leaveRoomButton"
-                    class="leave-room-button"
-                    type="button"
-                    data-i18n="pvp.leaveRoom"
-                >
+                <button id="leaveRoomButton" class="leave-room-button" type="button" data-i18n="pvp.leaveRoom">
                     LEAVE ROOM
                 </button>
 
             </div>
 
                 <!-- PVP GAME -->
-
-                    <div
-                        id="pvpGamePanel"
-                        class="hidden"
-                        >
+                    <div id="pvpGamePanel" class="hidden">
                         <div class="pvp-battle-players">
 
                             <!-- PLAYER 1 / HOST -->
 
-                            <div
-                                id="pvpHostCard"
-                                class="pvp-battle-player"
-                            >
+                            <div id="pvpHostCard" class="pvp-battle-player">
 
                                 <div id="pvpHostName" class="pvp-battle-player-name">
                                     PLAYER 1
                                 </div>
 
-                                <div
-                                    id="pvpHostState"
-                                    class="pvp-player-state"
-                                >
+                                <div id="pvpHostState" class="pvp-player-state">
                                     THINKING...
                                 </div>
 
@@ -1141,27 +919,18 @@
 
                             </div>
 
-
                             <div class="room-vs">
                                 VS
                             </div>
 
-
                             <!-- PLAYER 2 / GUEST -->
-
-                            <div
-                                id="pvpGuestCard"
-                                class="pvp-battle-player"
-                            >
+                            <div id="pvpGuestCard" class="pvp-battle-player">
 
                                 <div id="pvpGuestName" class="pvp-battle-player-name">
                                     PLAYER 2
                                 </div>
 
-                                <div
-                                    id="pvpGuestState"
-                                    class="pvp-player-state"
-                                >
+                                <div id="pvpGuestState" class="pvp-player-state">
                                     THINKING...
                                 </div>
 
@@ -1185,18 +954,11 @@
                         </div>
 
 
-                        <div
-                            id="pvpQuestion"
-                            class="question"
-                        >
+                        <div id="pvpQuestion" class="question">
                             ---
                         </div>
 
-
-                        <div
-                            id="pvpReading"
-                            class="reading"
-                        >
+                        <div id="pvpReading" class="reading">
                             ---
                         </div>
                         
@@ -1209,10 +971,7 @@
                         </div>
 
 
-                        <div
-                            id="pvpAnswers"
-                            class="answers"
-                        >
+                        <div id="pvpAnswers" class="answers">
                         </div>
 
                     </div>
@@ -1250,29 +1009,17 @@
 
                             </div>
 
-
-                            <div
-                                id="pvpResultMessage"
-                                class="pvp-result-message"
-                            >
+                            <div id="pvpResultMessage" class="pvp-result-message">
                                 ---
                             </div>
 
                             <div class="pvp-rematch-area">
 
-                                <button
-                                    id="pvpRematchButton"
-                                    class="pvp-rematch-button"
-                                    type="button"
-                                    data-i18n="pvp.rematch"
-                                >
+                                <button id="pvpRematchButton" class="pvp-rematch-button" type="button" data-i18n="pvp.rematch">
                                     REMATCH
                                 </button>
                             
-                                <div
-                                    id="pvpRematchStatus"
-                                    class="pvp-rematch-status"
-                                ></div>
+                                <div id="pvpRematchStatus" class="pvp-rematch-status"></div>
                             
                             </div>
 
@@ -1288,10 +1035,7 @@
          GAME OVER
          ===================================================== -->
 
-    <section
-        id="gameOverScreen"
-        class="game-over-screen hidden"
-    >
+    <section id="gameOverScreen" class="game-over-screen hidden">
 
         <div class="game-over-card">
 
@@ -1303,13 +1047,9 @@
                 SCORE
             </div>
 
-            <div
-                id="finalScore"
-                class="final-score"
-            >
+            <div id="finalScore" class="final-score">
                 0
             </div>
-
 
             <div class="result-row">
                 <span>❓QUESTION</span>
@@ -1326,20 +1066,11 @@
                 <strong id="finalBestScore">0</strong>
             </div>
 
-
-            <button
-                id="retryButton"
-                class="battle-button"
-                type="button"
-            >
+            <button id="retryButton" class="battle-button" type="button">
                 RETRY
             </button>
 
-            <button
-                id="backLobbyButton"
-                class="secondary-button"
-                type="button"
-            >
+            <button id="backLobbyButton" class="secondary-button" type="button">
                 BACK TO LOBBY
             </button>
 
@@ -1347,37 +1078,22 @@
 
     </section>
 
-
-
     <!-- =====================================================
          SIDE MENU
          ===================================================== -->
 
-    <div
-        id="menuOverlay"
-        class="menu-overlay"
-    ></div>
+    <div id="menuOverlay" class="menu-overlay"></div>
 
-
-    <aside
-        id="sideMenu"
-        class="side-menu"
-    >
-
+    <aside id="sideMenu" class="side-menu">
         <div class="side-menu-header">
 
             <strong>MENU</strong>
 
-            <button
-                id="menuCloseButton"
-                class="menu-close"
-                type="button"
-            >
+            <button id="menuCloseButton" class="menu-close" type="button">
                 ✕
             </button>
 
         </div>
-
 
         <button class="menu-item" type="button">
             👤 PROFILE
@@ -1411,24 +1127,15 @@
         <!-- TOP -->
         <div class="auth-top">
 
-            <button
-                id="authBackBtn"
-                class="auth-back-btn"
-                type="button"
-                aria-label="Back">
+            <button id="authBackBtn" class="auth-back-btn" type="button" aria-label="Back">
                 ←
             </button>
 
-            <select
-                id="authLanguage"
-                class="auth-language"
-                aria-label="Language">
-
+            <select id="authLanguage" class="auth-language" aria-label="Language">
                 <option value="ja">日本語</option>
                 <option value="en">English</option>
                 <option value="zh">中文</option>
                 <option value="vi">Tiếng Việt</option>
-
             </select>
 
         </div>
@@ -1437,10 +1144,7 @@
         <!-- BRAND -->
         <div class="auth-brand">
 
-            <img
-                src="./assets/images/icons/apple-touch-icon.png"
-                class="auth-logo"
-                alt="BatLingo">
+            <img src="./assets/images/icons/apple-touch-icon.png" class="auth-logo" alt="BatLingo">
 
             <h1>BatLingo</h1>
 
@@ -1460,9 +1164,7 @@
                 Welcome back
             </h2>
 
-            <p
-                class="auth-description"
-                data-i18n="auth.loginDescription">
+            <p class="auth-description" data-i18n="auth.loginDescription">
                 Sign in to continue your battle.
             </p>
 
@@ -1470,17 +1172,11 @@
             <!-- EMAIL -->
 
             <div class="auth-field">
-
-                <label
-                    for="loginEmail"
-                    data-i18n="auth.email">
+                <label for="loginEmail" data-i18n="auth.email">
                     Email
                 </label>
 
-                <input
-                    id="loginEmail"
-                    type="email"
-                    autocomplete="email"
+                <input id="loginEmail" type="email" autocomplete="email"
                     data-i18n-placeholder="auth.emailPlaceholder"
                     placeholder="example@email.com">
 
@@ -1491,44 +1187,26 @@
 
             <div class="auth-field">
 
-                <label
-                    for="loginPassword"
-                    data-i18n="auth.password">
-                    Password
+                <label for="loginPassword" data-i18n="auth.password">
+                   Password
                 </label>
 
                 <div class="auth-password-box">
 
-                    <input
-                        id="loginPassword"
-                        type="password"
-                        autocomplete="current-password"
+                    <input id="loginPassword" type="password" autocomplete="current-password"
                         data-i18n-placeholder="auth.passwordPlaceholder"
                         placeholder="Password">
 
-                    <button
-                        class="auth-eye"
-                        type="button"
-                        data-password-target="loginPassword"
-                        aria-label="Show password">
-
+                    <button class="auth-eye" type="button" data-password-target="loginPassword" aria-label="Show password">
                         👁
-
                     </button>
 
                 </div>
 
             </div>
 
-
-            <button
-                id="forgotPasswordBtn"
-                class="auth-link auth-forgot"
-                type="button"
-                data-i18n="auth.forgotPassword">
-
+            <button id="forgotPasswordBtn" class="auth-link auth-forgot" type="button" data-i18n="auth.forgotPassword">
                 Forgot password?
-
             </button>
 
 
@@ -1542,16 +1220,9 @@
 
             <!-- LOGIN -->
 
-            <button
-                id="emailLoginBtn"
-                class="auth-primary-btn"
-                type="button"
-                data-i18n="auth.login">
-
+            <button id="emailLoginBtn" class="auth-primary-btn" type="button" data-i18n="auth.login">
                 LOGIN
-
             </button>
-
 
             <!-- OR -->
 
@@ -1570,10 +1241,7 @@
 
             <!-- GOOGLE -->
 
-            <button
-                id="googleLoginBtn"
-                class="auth-google-btn"
-                type="button">
+            <button id="googleLoginBtn" class="auth-google-btn" type="button">
 
                 <span class="google-logo">G</span>
 
@@ -1592,14 +1260,8 @@
                     Don't have an account?
                 </span>
 
-                <button
-                    id="openSignupBtn"
-                    class="auth-link"
-                    type="button"
-                    data-i18n="auth.signup">
-
+                <button id="openSignupBtn" class="auth-link" type="button" data-i18n="auth.signup">
                     Sign up
-
                 </button>
 
             </div>
@@ -1618,12 +1280,8 @@
                 Create account
             </h2>
 
-            <p
-                class="auth-description"
-                data-i18n="auth.signupDescription">
-
+            <p class="auth-description" data-i18n="auth.signupDescription">
                 Create your BatLingo account.
-
             </p>
 
 
@@ -1631,19 +1289,11 @@
 
             <div class="auth-field">
 
-                <label
-                    for="signupEmail"
-                    data-i18n="auth.email">
-
+                <label for="signupEmail" data-i18n="auth.email">
                     Email
-
                 </label>
 
-                <input
-                    id="signupEmail"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="example@email.com">
+                <input id="signupEmail" type="email" autocomplete="email" placeholder="example@email.com">
 
             </div>
 
@@ -1652,25 +1302,15 @@
 
             <div class="auth-field">
 
-                <label
-                    for="signupPassword"
-                    data-i18n="auth.password">
-
+                <label for="signupPassword" data-i18n="auth.password">
                     Password
-
                 </label>
 
                 <div class="auth-password-box">
 
-                    <input
-                        id="signupPassword"
-                        type="password"
-                        autocomplete="new-password">
+                    <input id="signupPassword" type="password" autocomplete="new-password">
 
-                    <button
-                        class="auth-eye"
-                        type="button"
-                        data-password-target="signupPassword">
+                    <button class="auth-eye" type="button" data-password-target="signupPassword">
 
                         👁
 
@@ -1685,9 +1325,7 @@
 
             <div class="password-rules">
 
-                <div
-                    id="passwordRuleLength"
-                    class="password-rule">
+                <div id="passwordRuleLength" class="password-rule">
 
                     <span>○</span>
 
@@ -1698,9 +1336,7 @@
                 </div>
 
 
-                <div
-                    id="passwordRuleUpper"
-                    class="password-rule">
+                <div id="passwordRuleUpper" class="password-rule">
 
                     <span>○</span>
 
@@ -1711,9 +1347,7 @@
                 </div>
 
 
-                <div
-                    id="passwordRuleLower"
-                    class="password-rule">
+                <div id="passwordRuleLower" class="password-rule">
 
                     <span>○</span>
 
@@ -1723,11 +1357,7 @@
 
                 </div>
 
-
-                <div
-                    id="passwordRuleNumber"
-                    class="password-rule">
-
+                <div id="passwordRuleNumber" class="password-rule">
                     <span>○</span>
 
                     <span data-i18n="auth.ruleNumber">
@@ -1743,9 +1373,7 @@
 
             <div class="auth-field">
 
-                <label
-                    for="signupPasswordConfirm"
-                    data-i18n="auth.confirmPassword">
+                <label for="signupPasswordConfirm" data-i18n="auth.confirmPassword">
 
                     Confirm password
 
@@ -1753,18 +1381,10 @@
 
                 <div class="auth-password-box">
 
-                    <input
-                        id="signupPasswordConfirm"
-                        type="password"
-                        autocomplete="new-password">
+                    <input id="signupPasswordConfirm" type="password" autocomplete="new-password">
 
-                    <button
-                        class="auth-eye"
-                        type="button"
-                        data-password-target="signupPasswordConfirm">
-
+                    <button class="auth-eye" type="button" data-password-target="signupPasswordConfirm">
                         👁
-
                     </button>
 
                 </div>
@@ -1772,20 +1392,12 @@
             </div>
 
 
-            <div
-                id="signupError"
-                class="auth-message auth-error hidden">
+            <div id="signupError" class="auth-message auth-error hidden">
             </div>
 
 
-            <button
-                id="createAccountBtn"
-                class="auth-primary-btn"
-                type="button"
-                data-i18n="auth.createAccount">
-
+            <button id="createAccountBtn" class="auth-primary-btn" type="button" data-i18n="auth.createAccount">
                 CREATE ACCOUNT
-
             </button>
 
 
@@ -1795,14 +1407,8 @@
                     Already have an account?
                 </span>
 
-                <button
-                    id="backLoginBtn"
-                    class="auth-link"
-                    type="button"
-                    data-i18n="auth.login">
-
+                <button id="backLoginBtn" class="auth-link" type="button" data-i18n="auth.login">
                     Login
-
                 </button>
 
             </div>
@@ -1813,9 +1419,7 @@
         <!-- =================================
              VERIFY EMAIL
         ================================== -->
-        <div
-            id="verifyPanel"
-            class="auth-panel auth-center hidden">
+        <div id="verifyPanel" class="auth-panel auth-center hidden">
 
             <div class="verify-icon">
                 ✉
@@ -1831,68 +1435,33 @@
 
             <strong id="verifyEmailAddress"></strong>
 
-            <p
-                class="verify-note"
-                data-i18n="auth.verifyNote">
-
+            <p class="verify-note" data-i18n="auth.verifyNote">
                 Open the email and click the verification link before logging in.
-
             </p>
 
-                <button
-                id="resendVerifyBtn"
-                class="auth-resend-btn"
-                type="button"
-            >
+                <button id="resendVerifyBtn" class="auth-resend-btn" type="button">
                 RESEND EMAIL
+                    
             </button>
-            <button
-                id="verifyBackLoginBtn"
-                class="auth-primary-btn"
-                type="button"
-                data-i18n="auth.backLogin">
-
+            <button id="verifyBackLoginBtn" class="auth-primary-btn" type="button" data-i18n="auth.backLogin">
                 BACK TO LOGIN
-
             </button>
-
         </div>
-
     </div>
-
 </section>
-
-
 
     <!-- =====================================================
          AUDIO
          ===================================================== -->
+    <audio id="lobbyBgm" src="assets/audio/bgm/lobby.mp3" loop></audio>
 
-    <audio
-        id="lobbyBgm"
-        src="assets/audio/bgm/lobby.mp3"
-        loop
-    ></audio>
+    <audio id="clickSound" src="assets/audio/sfx/click.mp3"></audio>
 
-    <audio
-        id="clickSound"
-        src="assets/audio/sfx/click.mp3"
-    ></audio>
+    <audio id="slideSound"src="assets/audio/sfx/slide.mp3"></audio>
 
-    <audio
-        id="slideSound"
-        src="assets/audio/sfx/slide.mp3"
-    ></audio>
+    <audio id="correctSound" src="assets/audio/sfx/correct.mp3"></audio>
 
-    <audio
-        id="correctSound"
-        src="assets/audio/sfx/correct.mp3"
-    ></audio>
-
-    <audio
-        id="wrongSound"
-        src="assets/audio/sfx/wrong.mp3"
-    ></audio>
+    <audio id="wrongSound" src="assets/audio/sfx/wrong.mp3"></audio>
 
     <audio id="gameoverSound" src="assets/audio/sfx/gameover.mp3"></audio>
 
