@@ -21,6 +21,9 @@ let currentChoices = [];
 
 let currentConfig = null;
 
+let currentCorrectAnswer = null;
+
+let currentGrammarExample = null;
 
 let lives = 3;
 
@@ -40,7 +43,6 @@ let answerLocked = false;
 
 let gameActive = false;
 
-
 let timer = null;
 
 let timeLeft = 0;
@@ -52,195 +54,122 @@ let questionTime = 10;
    DOM
    ============================================================= */
 
-const gameScreen =
-    document.getElementById(
-        "gameScreen"
-    );
+const gameScreen = document.getElementById("gameScreen");
 
-const lifeElement =
-    document.getElementById(
-        "life"
-    );
+const lifeElement = document.getElementById("life");
 
-const scoreElement =
-    document.getElementById(
-        "score"
-    );
+const scoreElement = document.getElementById("score");
 
-const bestScoreElement =
-    document.getElementById(
-        "bestScore"
-    );
+const bestScoreElement =document.getElementById("bestScore");
 
-const questionNumberElement =
-    document.getElementById(
-        "questionNumber"
-    );
+const questionNumberElement =document.getElementById("questionNumber");
 
-const questionElement =
-    document.getElementById(
-        "question"
-    );
+const questionElement =document.getElementById("question");
 
-const readingElement =
-    document.getElementById(
-        "reading"
-    );
+const readingElement =document.getElementById("reading");
 
-const answersElement =
-    document.getElementById(
-        "answers"
-    );
+const answersElement =document.getElementById("answers");
 
-const timerTextElement =
-    document.getElementById(
-        "timerText"
-    );
+const timerTextElement =document.getElementById("timerText");
 
-const timerBarElement =
-    document.getElementById(
-        "timerBar"
-    );
+const timerBarElement =document.getElementById("timerBar");
 
-const comboElement =
-    document.getElementById(
-        "combo"
-    );
+const comboElement =document.getElementById("combo");
 
-const gameModeInfoElement =
-    document.getElementById(
-        "gameModeInfo"
-    );
+const gameModeInfoElement =document.getElementById("gameModeInfo");
 
 /* =============================================================
    GAME MODE INFORMATION
    ============================================================= */
 
-function updateGameModeInfo() {
+function updateGameModeInfo() 
+{
+    if (currentConfig.studyMode === "jlpt") 
+    {
+        const level = currentConfig.target.toUpperCase();
 
-    if (
-        currentConfig.studyMode ===
-        "jlpt"
-    ) {
+        let categoryName = "";
 
-        const level =
-            currentConfig.target
-                .toUpperCase();
-
-
-        let categoryName =
-            "";
-
-
-        switch (
-            currentConfig.category
-        ) {
-
+        switch (currentConfig.category) 
+        {
             case "vocabulary":
-
-                categoryName =
-                    "VOCABULARY";
-
+                categoryName = "VOCABULARY";
                 break;
-
 
             case "grammar":
-
-                categoryName =
-                    "GRAMMAR";
-
+                categoryName = "GRAMMAR";
                 break;
-
 
             case "listening":
-
-                categoryName =
-                    "LISTENING";
-
+                categoryName = "LISTENING";
                 break;
-
 
             case "reading":
-
-                categoryName =
-                    "READING";
-
+                categoryName = "READING";
                 break;
-
         }
 
-
-        gameModeInfoElement.textContent =
-            `JLPT ${level} · ${categoryName}`;
-
+        gameModeInfoElement.textContent = `JLPT ${level} · ${categoryName}`;
 
         return;
     }
-
 
     /*
         Sau này xử lý TOPIC...
     */
 
-    gameModeInfoElement.textContent =
-        "";
-}
-/*--xxxxxxx--*/       
+    gameModeInfoElement.textContent = "";
+}    
 /* =============================================================
    GET DATA FILE
    ============================================================= */
 
-function getDataFile(config) {
-
-    /*
-        JLPT → TỪ VỰNG
-    */
-    if (
-        config.studyMode === "jlpt"
-        &&
-        config.category === "vocabulary"
-    ) {
-
+function getDataFile(config) 
+{
+    /*JLPT → TỪ VỰNG*/
+    if (config.studyMode === "jlpt" && config.category === "vocabulary") 
+        {
         const files = {
-
             n5: "data/n5.json",
             n4: "data/n4.json",
             n3: "data/n3.json",
             n2: "data/n2.json",
             n1: "data/n1.json"
-
         };
 
-
-        return files[
-            config.target
-        ] ?? null;
+        return files[config.target] ?? null;
     }
 
-    if (
-    config.studyMode === "topic"
-    &&
-    config.category === "vocabulary"
-) {
+            /* GRAMMAR */
+        if (config.studyMode === "jlpt" && config.category === "grammar") 
+        {
 
-    const files = {
+            const files = {
+                n5: "data/grammar/n5.json",
+                n4: "data/grammar/n4.json",
+                n3: "data/grammar/n3.json",
+                n2: "data/grammar/n2.json",
+                n1: "data/grammar/n1.json"
+            };
 
-        animals:
-            "data/topics/animals.json",
+            return files[config.target] ?? null;
+        }
 
-        food:
-            "data/topics/food.json",
+    if (config.studyMode === "topic" && config.category === "vocabulary") 
+        {
+                const files = {
+                    animals:
+                        "data/topics/animals.json",
 
-        colors:
-            "data/topics/colors.json"
+                    food:
+                        "data/topics/food.json",
 
-    };
+                    colors:
+                        "data/topics/colors.json"
+                };
 
-
-    return files[
-        config.target
-    ] ?? null;
-}
+                return files[config.target] ?? null;
+        }
 
     /*
         Sau này thêm:
@@ -253,19 +182,15 @@ function getDataFile(config) {
         ở đây.
     */
 
-
     return null;
 }
-/*--xxxxxxx--*/
 
 /* =============================================================
    START GAME
    ============================================================= */
 
-export async function startGame(
-    config
-) {
-
+export async function startGame(config) 
+{
     currentConfig =config;
 
     updateGameModeInfo();
@@ -273,7 +198,6 @@ export async function startGame(
     stopSpeech();
 
     stopTimer();
-
 
     lives = 3;
 
@@ -293,216 +217,162 @@ export async function startGame(
 
     gameActive = true;
 
-
-    /*
-        Hiện tại database mới có N1.
-
-        Sau này:
-        data/${config.target}.json
-    */
-
-    /*const response =
-        await fetch(
-            "data/n1.json"
-        );*/
- 
-
-    /*if (!response.ok) {
-
-        alert(
-            "Không thể load data"
-        );
-
-        return;
-    }
-
-
-    questions =
-        await response.json();*/
     /* =========================================================
    LOAD DATABASE
    ========================================================= */
 
-const dataFile =
-    getDataFile(config);
-
+const dataFile = getDataFile(config);
 
 /*
     Mode chưa có database
 */
-if (!dataFile) {
-
-    alert(
-        "Mode này hiện chưa có database."
-    );
+if (!dataFile) 
+{
+    alert("Mode này hiện chưa có database.");
 
     gameActive = false;
 
     return;
 }
-
 
 /*
     Load đúng JSON đã được mapping
 */
-const response =
-    await fetch(
-        dataFile
-    );
+const response = await fetch(dataFile);
 
 
-if (!response.ok) {
-
-    alert(
-        `Không thể load ${dataFile}`
-    );
+if (!response.ok) 
+{
+    alert(`Không thể load ${dataFile}`);
 
     gameActive = false;
 
     return;
 }
 
+questions = await response.json();    
 
-questions =
-    await response.json();    
-/*xxxxxxxxxx*\ */
-
-    if (
-        questions.length < 4
-    ) {
-
-        alert(
-            "Database cần ít nhất 4 từ."
-        );
+    if (questions.length < 4) 
+    {
+        alert("Database cần ít nhất 4 từ.");
 
         return;
     }
 
-
     updateHUD();
 
-
-    gameScreen.classList.remove(
-        "hidden"
-    );
-
+    gameScreen.classList.remove("hidden");
 
     nextQuestion();
 }
-
 
 /* =============================================================
    QUESTION TIME
    ============================================================= */
 
-function getQuestionTime(
-    number
-) {
-
-    if (number <= 10) {
+function getQuestionTime(number) 
+{
+    if (number <= 10) 
+    {
         return 10;
     }
 
-    if (number <= 20) {
+    if (number <= 20) 
+    {
         return 8;
     }
 
-    if (number <= 30) {
+    if (number <= 30) 
+    {
         return 6;
     }
 
-    if (number <= 50) {
+    if (number <= 50) 
+    {
         return 5;
     }
 
-    if (number <= 75) {
+    if (number <= 75) 
+    {
         return 4;
     }
 
-    if (number <= 100) {
+    if (number <= 100) 
+    {
         return 3;
     }
 
-
     return 2.5;
 }
-
 
 /* =============================================================
    NEXT QUESTION
    ============================================================= */
 
-function nextQuestion() {
-
-    if (!gameActive) {
+function nextQuestion() 
+{
+    if (!gameActive) 
+    {
         return;
     }
 
-
     stopTimer();
 
-
-    answerLocked =
-        false;
-
+    answerLocked = false;
 
     questionCount++;
 
+    currentQuestion = questions[Math.floor(Math.random()*questions.length)];
 
-    currentQuestion =
-        questions[
-            Math.floor(
-                Math.random()
-                *
-                questions.length
-            )
-        ];
+/* =========================================================
+   GRAMMAR SENTENCE
+   Random 1 example của grammar hiện tại
+   ========================================================= */
 
+   currentGrammarExample = null;
 
-    currentChoices =
-        generateChoices(
-            currentQuestion
-        );
+   if (currentConfig.category === "grammar" && currentConfig.subMode === "grammar_sentence") 
+    {
+        const examples = currentQuestion.examples ?? [];
 
+        if (examples.length > 0) 
+        {
+            currentGrammarExample = examples[Math.floor(Math.random() * examples.length)];
+        }
+    }
 
-    readingElement.textContent =
-        currentQuestion.reading;
+    currentChoices =generateChoices(currentQuestion);
 
+    /* READING */
+    readingElement.textContent = currentQuestion.reading ?? "";
 
-    readingElement.classList.remove(
-        "show"
-    );
-
+    readingElement.classList.remove("show");
 
     showQuestion();
 
+    renderAnswers(currentChoices);
 
-    renderAnswers(
-        currentChoices
-    );
+    if (currentConfig.subMode === "grammar_sentence") 
+    {
+        questionTime = 60;
+    }
+    else 
+    {
+        questionTime = getQuestionTime(questionCount);
+    }
 
 
-    questionTime =
-        getQuestionTime(
-            questionCount
-        );
-
-
-    startTimer(
-        questionTime
-    );
-
+    startTimer(questionTime);
 
     updateHUD();
 }
-
 
 /* =============================================================
    SHOW QUESTION
    ============================================================= */
 
-function showQuestion() {
-
+function showQuestion() 
+{
     /* Minimal database:
         word
         reading
@@ -510,29 +380,30 @@ function showQuestion() {
       /* Xóa chức năng click của câu trước */
     questionElement.onclick = null;
 
-    switch (currentConfig.subMode) {
+    switch (currentConfig.subMode) 
+    {
+        /* =====================================================
+        GRAMMAR
+        ===================================================== */
+
+        case "grammar_meaning":
+            questionElement.textContent = currentQuestion.grammar;
+            break;
+
+        case "grammar_sentence":
+            questionElement.textContent = currentGrammarExample?.translation ?? "";
+            break;
 
         case "kanji_hiragana":
-
-            questionElement.textContent =
-                currentQuestion.word;
-
+            questionElement.textContent = currentQuestion.word;
             break;
-
 
         case "hiragana_meaning":
-
-            questionElement.textContent =
-                currentQuestion.reading;
-
+            questionElement.textContent = currentQuestion.reading;
             break;
 
-
         case "meaning_kanji":
-
-            questionElement.textContent =
-                currentQuestion.meaning;
-
+            questionElement.textContent = currentQuestion.meaning;
             break;
             
         case "audio_hiragana": /*###*/
@@ -542,330 +413,203 @@ function showQuestion() {
             questionElement.textContent = "🔊";
 
              /* Bấm vào loa để nghe lại */
-            questionElement.onclick =
-                () => {
+            questionElement.onclick = () => {
                     /*Chỉ cho nghe khi game đang chạy và chưa chọn đáp án.*/
-                    if (
-                        !gameActive
-                        ||
-                        answerLocked
-                    ) {
+                    if (!gameActive ||answerLocked) 
+                    {
                         return;
                     }
         
-                    speakJapanese(
-                        currentQuestion.reading
-                    );
+                    speakJapanese(currentQuestion.reading);
                 };    
 
             /* Tự động đọc 1 lần khi câu mới xuất hiện */
-            setTimeout(
-                () => {
-                speakJapanese(
-                currentQuestion.reading
-                );
-                },
-                200
-            );
+            setTimeout(() => {speakJapanese(currentQuestion.reading);},200);
             break;
             
         default:
 
-            questionElement.textContent =
-                currentQuestion.word;
-
+            questionElement.textContent = currentQuestion.word;
             break;
     }
 }
-
 
 /* =============================================================
    GET ANSWER FIELD
    ============================================================= */
 
-function getAnswerField() {
-
-    switch (
-        currentConfig.subMode
-    ) {
-
+function getAnswerField() 
+{
+    switch (currentConfig.subMode) 
+    {
         case "kanji_hiragana":
         case "audio_hiragana":
-
             return "reading";
-
 
         case "meaning_kanji":
         case "audio_kanji":
             return "word";
 
-
         default:
-
             return "meaning";
     }
 }
 
-
 /* =============================================================
    GENERATE CHOICES
-
-   Database KHÔNG chứa choices.
-   Choices được random từ database.
    ============================================================= */
 
-function generateChoices(
-    question
-) {
+function generateChoices(question) 
+{
+    if (currentConfig.subMode === "grammar_sentence") 
+    {
+        return generateGrammarSentenceChoices(question);
+    }
 
-    const field =
-        getAnswerField();
+    const field = getAnswerField();
+    const correct = question[field];
 
+    currentCorrectAnswer = correct;
 
-    const correct =
-        question[field];
+    const wrongAnswers = questions.filter(item => item[field] !== correct).map(item => item[field]);
 
+    const uniqueWrong = [...new Set(wrongAnswers)];
 
-    const wrongAnswers =
-        questions
-            .filter(
-                item =>
-                    item[field]
-                    !== correct
-            )
-            .map(
-                item =>
-                    item[field]
-            );
+    shuffleArray(uniqueWrong);
 
+    const choices = [correct, ...uniqueWrong.slice(0, 3)];
 
-    const uniqueWrong =
-        [
-            ...new Set(
-                wrongAnswers
-            )
-        ];
-
-
-    shuffleArray(
-        uniqueWrong
-    );
-
-
-    const choices = [
-
-        correct,
-
-        ...uniqueWrong.slice(
-            0,
-            3
-        )
-
-    ];
-
-
-    shuffleArray(
-        choices
-    );
-
+    shuffleArray(choices);
 
     return choices;
 }
 
+function generateGrammarSentenceChoices(question)
+{
+    const correct = question.grammar;
+
+    currentCorrectAnswer = correct;
+
+
+    /* Lấy grammar của các câu khác làm đáp án sai */
+
+    const wrongAnswers = questions
+        .filter(item =>
+            item.id !== question.id &&
+            item.grammar &&
+            item.grammar !== correct
+        )
+        .map(item => item.grammar);
+
+
+    /* Loại duplicate */
+
+    const uniqueWrong = [...new Set(wrongAnswers)];
+
+    shuffleArray(uniqueWrong);
+
+
+    /* 1 đúng + 3 sai */
+
+    const choices = [
+        correct,
+        ...uniqueWrong.slice(0, 3)
+    ];
+
+
+    /* Random vị trí đáp án */
+
+    shuffleArray(choices);
+
+    return choices;
+}
 
 /* =============================================================
    SHUFFLE
    ============================================================= */
 
-function shuffleArray(
-    array
-) {
+function shuffleArray(array) 
+{
+    for (let i = array.length - 1;i > 0;i--) 
+    {
+        const j =Math.floor(Math.random()*(i + 1));
 
-    for (
-        let i =
-            array.length - 1;
-
-        i > 0;
-
-        i--
-    ) {
-
-        const j =
-            Math.floor(
-                Math.random()
-                *
-                (i + 1)
-            );
-
-
-        [
-            array[i],
-            array[j]
-        ]
-        =
-        [
-            array[j],
-            array[i]
-        ];
+        [array[i],array[j]] = [array[j],array[i]];
     }
-
 
     return array;
 }
-
 
 /* =============================================================
    RENDER ANSWERS
    ============================================================= */
 
-function renderAnswers(
-    choices
-) {
+function renderAnswers(choices) 
+{
+    answersElement.innerHTML = "";
 
-    answersElement.innerHTML =
-        "";
+    choices.forEach((choice, index) => {const button = document.createElement("button");
 
+            button.type = "button";
 
-    choices.forEach(
-        (choice, index) => {
+            button.className = "answer-button";
 
-            const button =
-                document.createElement(
-                    "button"
-                );
+            button.dataset.answerIndex = index;
 
+            const number = document.createElement("span");
 
-            button.type =
-                "button";
+            number.className = "answer-number";
 
+            number.textContent = index + 1;
 
-            button.className =
-                "answer-button";
+            const text = document.createElement("span");
 
+            text.className = "answer-text";
 
-            button.dataset.answerIndex =
-                index;
+            text.textContent = choice;
 
+            button.appendChild(number);
 
-            const number =
-                document.createElement(
-                    "span"
-                );
+            button.appendChild(text);
 
+            button.addEventListener("click",() => {selectAnswer(button,choice);});
 
-            number.className =
-                "answer-number";
-
-
-            number.textContent =
-                index + 1;
-
-
-            const text =
-                document.createElement(
-                    "span"
-                );
-
-
-            text.className =
-                "answer-text";
-
-
-            text.textContent =
-                choice;
-
-
-            button.appendChild(
-                number
-            );
-
-
-            button.appendChild(
-                text
-            );
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    selectAnswer(
-                        button,
-                        choice
-                    );
-
-                }
-            );
-
-
-            answersElement.appendChild(
-                button
-            );
+            answersElement.appendChild(button);
 
         }
     );
 }
 
-
 /* =============================================================
    SELECT ANSWER
    ============================================================= */
 /*AUDIOMODE ADDIN ##*/
-function isAudioMode() {
-
-    return (
-        currentConfig.subMode === "audio_hiragana"
-        ||
-        currentConfig.subMode === "audio_meaning"
-        ||
-        currentConfig.subMode === "audio_kanji"
-    );
+function isAudioMode() 
+{
+    return (currentConfig.subMode === "audio_hiragana" || currentConfig.subMode === "audio_meaning" || currentConfig.subMode === "audio_kanji");
 }
 
 function selectAnswer(button,selectedAnswer) 
 {
-
-    if (
-        !gameActive
-        ||
-        answerLocked
-    ) {
-
+    if (!gameActive ||answerLocked) 
+    {
         return;
     }
 
-
-    answerLocked =
-        true;
-
+    answerLocked = true;
 
     stopTimer();
 
-
     disableAnswers();
 
-
-    const field =
-        getAnswerField();
-
-
-    const correctAnswer =
-        currentQuestion[field];
-
+    const correctAnswer = currentCorrectAnswer;
 
     /* =========================================================
        CORRECT
        ========================================================= */
-
-    if (
-        selectedAnswer ===
-        correctAnswer
-    ) {
-
-        button.classList.add(
-            "correct"
-        );
-
+    if (selectedAnswer ===correctAnswer) 
+    {
+        button.classList.add("correct");
 
         playSfx("correct");
 
@@ -873,62 +617,37 @@ function selectAnswer(button,selectedAnswer)
         
         combo++;
 
-
         if (combo > maxCombo) 
         {
             maxCombo = combo;
         }
 
-
-        score +=
-            calculateScore();
-
+        score += calculateScore();
 
         showReading();
 
-
         updateHUD();
 
-
-        /*##speakJapanese(
-            currentQuestion.reading,
-            nextQuestion
-        );*/
-        if (isAudioMode()) {
-
-                setTimeout(
-                    nextQuestion,
-                    500
-                );
-            
-            }
-            else {
-            
-                speakJapanese(
-                    currentQuestion.reading,
-                    nextQuestion
-                );
-            }
-
+        if (isAudioMode()) 
+        {
+                setTimeout(nextQuestion,500);
+        }
+        else
+        {
+            speakJapanese(currentQuestion.reading,nextQuestion);
+        }
         return;
     }
-
 
     /* =========================================================
        WRONG
        ========================================================= */
 
-    button.classList.add(
-        "wrong"
-    );
-
+    button.classList.add("wrong");
 
     showCorrectAnswer();
 
-
-    playSfx(
-        "wrong"
-    );
+    playSfx("wrong");
 
     wrongCount++;
     
@@ -938,218 +657,123 @@ function selectAnswer(button,selectedAnswer)
 
     showReading();
 
-
     updateHUD();
-
-
-    /*###speakJapanese(
-        currentQuestion.reading,
-        () => {
-
-            if (
-                lives <= 0
-            ) {
-
-                endGame();
-
-                return;
-            }
-
-
-            nextQuestion();
-
-        }
-    );*/
 
      const continueGame = () => {
         
-            if (lives <= 0) {
-                endGame();
-                return;
-            }
+        if (lives <= 0) 
+        {
+               endGame();
+            return;
+        }
         
             nextQuestion();
         };
         
-        
-        if (isAudioMode()) {
-        
-            setTimeout(
-                continueGame,
-                500
-            );
-        
+        if (isAudioMode()) 
+        {
+            setTimeout(continueGame,500);
         }
-        else {
-        
-            speakJapanese(
-                currentQuestion.reading,
-                continueGame
-            );
+        else 
+        {
+            speakJapanese(currentQuestion.reading,continueGame);
         }
 }
-
 
 /* =============================================================
    SCORE
    ============================================================= */
 
-function calculateScore() {
+function calculateScore() 
+{
+    let gained = 100 +Math.floor(timeLeft * 10);
 
-    let gained =
-        100
-        +
-        Math.floor(
-            timeLeft * 10
-        );
-
-
-    if (
-        combo >= 10
-    ) {
-
+    if (combo >= 10) 
+    {
         gained *= 1.5;
-
     }
-    else if (
-        combo >= 5
-    ) {
-
+    else if (combo >= 5) 
+    {
         gained *= 1.2;
     }
 
-
-    return Math.floor(
-        gained
-    );
+    return Math.floor(gained);
 }
-
 
 /* =============================================================
    TIMER
    ============================================================= */
 
-function startTimer(
-    duration
-) {
-
+function startTimer(duration) 
+{
     stopTimer();
 
-
-    timeLeft =
-        duration;
-
+    timeLeft = duration;
 
     updateTimer();
 
+    timer = setInterval(() => 
+        {
+                timeLeft -= 0.1;
 
-    timer =
-        setInterval(
-            () => {
-
-                timeLeft -=
-                    0.1;
-
-
-                if (
-                    timeLeft <= 0
-                ) {
-
+                if (timeLeft <= 0) 
+                {
                     timeLeft = 0;
-
 
                     updateTimer();
 
-
                     stopTimer();
 
-
                     handleTimeout();
-
 
                     return;
                 }
 
-
                 updateTimer();
-
             },
-
             100
         );
 }
 
 
-function stopTimer() {
-
-    if (timer) {
-
-        clearInterval(
-            timer
-        );
-
+function stopTimer() 
+{
+    if (timer) 
+    {
+        clearInterval(timer);
 
         timer = null;
     }
 }
 
+function updateTimer() 
+{
+    timerTextElement.textContent = timeLeft.toFixed(1);
 
-function updateTimer() {
+    const percent = Math.max(0,(timeLeft/questionTime)*100);
 
-    timerTextElement.textContent =
-        timeLeft.toFixed(1);
-
-
-    const percent =
-        Math.max(
-            0,
-            (
-                timeLeft
-                /
-                questionTime
-            )
-            *
-            100
-        );
-
-
-    timerBarElement.style.width =
-        `${percent}%`;
+    timerBarElement.style.width = `${percent}%`;
 }
-
 
 /* =============================================================
    TIMEOUT
    ============================================================= */
-
 function handleTimeout() {
 
-    if (
-        answerLocked
-        ||
-        !gameActive
-    ) {
-
+    if (answerLocked || !gameActive) 
+    {
         return;
     }
 
-
-    answerLocked =
-        true;
-
+    answerLocked = true;
 
     disableAnswers();
 
-
     showCorrectAnswer();
-
 
     showReading();
 
-
-    playSfx(
-        "wrong"
-    );
+    playSfx("wrong");
 
     wrongCount++;
     
@@ -1159,130 +783,66 @@ function handleTimeout() {
 
     updateHUD();
 
-
-    /*###speakJapanese(
-        currentQuestion.reading,
-        () => {
-
-            if (
-                lives <= 0
-            ) {
-
-                endGame();
-
-                return;
-            }
-
-
-            nextQuestion();
-
-        }
-    );*/
-    const continueGame = () => {
-
-            if (lives <= 0) {
+    const continueGame = () => 
+        {
+            if (lives <= 0) 
+            {
                 endGame();
                 return;
             }
-        
             nextQuestion();
         };
         
-        
-        if (isAudioMode()) {
-        
-            setTimeout(
-                continueGame,
-                500
-            );
-        
+        if (isAudioMode()) 
+        {
+            setTimeout(continueGame,500);
         }
-        else {
-        
-            speakJapanese(
-                currentQuestion.reading,
-                continueGame
-            );
+        else 
+        {
+            speakJapanese(currentQuestion.reading,continueGame);
         }
 }
-
 
 /* =============================================================
    ANSWER HELPERS
    ============================================================= */
 
-function disableAnswers() {
+function disableAnswers() 
+{
+    const buttons =answersElement.querySelectorAll(".answer-button");
 
-    const buttons =
-        answersElement
-            .querySelectorAll(
-                ".answer-button"
-            );
-
-
-    buttons.forEach(
-        button => {
-
-            button.disabled =
-                true;
-
-        }
-    );
+    buttons.forEach(button => {button.disabled =true;});
 }
 
+function showCorrectAnswer() 
+{
+    const correct = currentCorrectAnswer;
 
-function showCorrectAnswer() {
+    const buttons =answersElement.querySelectorAll(".answer-button");
 
-    const correct =
-        currentQuestion[
-            getAnswerField()
-        ];
+    buttons.forEach(button => {
+        
+        const text =button.querySelector(".answer-text");
 
-
-    const buttons =
-        answersElement
-            .querySelectorAll(
-                ".answer-button"
-            );
-
-
-    buttons.forEach(
-        button => {
-
-            const text =
-                button.querySelector(
-                    ".answer-text"
-                );
-
-
-            if (
-                text.textContent ===
-                correct
-            ) {
-
-                button.classList.add(
-                    "correct"
-                );
+            if (text.textContent ===correct) 
+            {
+                button.classList.add("correct");
             }
-
         }
     );
 }
 
-
-function showReading() {
-
-    readingElement.classList.add(
-        "show"
-    );
+function showReading() 
+{
+    readingElement.classList.add("show");
 }
 
 /* =============================================================
    BEST SCORE KEY
    ============================================================= */
 
-function getBestScoreKey() {
-
+function getBestScoreKey() 
+{
     return `batlingo_${currentConfig.target}_bestScore`;
 }
 
@@ -1290,127 +850,66 @@ function getBestScoreKey() {
    HUD
    ============================================================= */
 
-function updateHUD() {
+function updateHUD() 
+{
+    lifeElement.textContent = "❤️ ".repeat(Math.max(0,lives)).trim();
 
-    lifeElement.textContent =
-        "❤️ ".repeat(
-            Math.max(
-                0,
-                lives
-            )
-        ).trim();
+    scoreElement.textContent = score;
 
+    comboElement.textContent = `🔥 COMBO ${combo}`;
 
-    scoreElement.textContent =
-        score;
+    questionNumberElement.textContent = `QUESTION ${questionCount}`;
 
+    const best =Number(localStorage.getItem(getBestScoreKey())||0);
 
-    comboElement.textContent =
-        `🔥 COMBO ${combo}`;
-
-
-    questionNumberElement.textContent =
-        `QUESTION ${questionCount}`;
-
-
-    const best =
-        Number(
-            localStorage.getItem(
-                 getBestScoreKey()/*"batlingo_n1_bestScore"*/
-            )
-            ||
-            0
-        );
-
-
-    bestScoreElement.textContent =
-        Math.max(
-            best,
-            score
-        );
+    bestScoreElement.textContent =Math.max(best,score);
 }
-
 
 /* =============================================================
    KEYBOARD 1 / 2 / 3 / 4
    ============================================================= */
 
-document.addEventListener(
-    "keydown",
-    event => {
-
-        if (
-            !gameActive
-            ||
-            answerLocked
-        ) {
-
+document.addEventListener("keydown",event => 
+    {
+        if (!gameActive || answerLocked) 
+        {
             return;
         }
-
 
         /*
             Không xử lý 1-4 nếu đang
             gõ vào input.
         */
 
-        const active =
-            document.activeElement;
+        const active = document.activeElement;
 
-
-        if (
-            active
-            &&
-            (
-                active.tagName ===
-                "INPUT"
-                ||
-                active.tagName ===
-                "TEXTAREA"
-            )
-        ) {
-
+        if (active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA")) 
+        {
             return;
         }
 
-
         const keys = {
-
             "1": 0,
             "2": 1,
             "3": 2,
             "4": 3
-
         };
 
+        const index = keys[event.key];
 
-        const index =
-            keys[event.key];
-
-
-        if (
-            index === undefined
-        ) {
-
+        if (index === undefined) 
+        {
             return;
         }
 
+        const buttons = answersElement.querySelectorAll(".answer-button");
 
-        const buttons =
-            answersElement
-                .querySelectorAll(
-                    ".answer-button"
-                );
+        const button = buttons[index];
 
-
-        const button =
-            buttons[index];
-
-
-        if (!button) {
+        if (!button) 
+        {
             return;
         }
-
 
         /*
             Keyboard và mouse
@@ -1418,17 +917,15 @@ document.addEventListener(
         */
 
         button.click();
-
     }
 );
-
 
 /* =============================================================
    END GAME
    ============================================================= */
 
-function endGame() {
-
+function endGame() 
+{
     gameActive = false;
 
     answerLocked = true;
@@ -1464,111 +961,37 @@ saveSoloResult({
     }
 );
     
-const bestScoreKey = getBestScoreKey();
+    const bestScoreKey = getBestScoreKey();
 
     const oldBest = Number(localStorage.getItem(bestScoreKey)||0);
 
-    /*## const oldBest =
-        Number(
-            localStorage.getItem(
-                "batlingo_n1_bestScore"
-            )
-            ||
-            0
-        );*/
+    const best = Math.max(oldBest,score);
 
+    localStorage.setItem(bestScoreKey,best);
 
-    const best =
-        Math.max(
-            oldBest,
-            score
-        );
+    gameScreen.classList.add("hidden");
 
+    const gameOverScreen = document.getElementById("gameOverScreen");
 
-    /*## localStorage.setItem(
-        "batlingo_n1_bestScore",
-        best
-    );*/
-    
-    localStorage.setItem(
-    bestScoreKey,
-    best
-    );
+    gameOverScreen.classList.remove("hidden");
 
+    document.getElementById("finalScore").textContent = score;
 
-    gameScreen.classList.add(
-        "hidden"
-    );
+    document.getElementById("finalQuestion").textContent = questionCount;
 
+    document.getElementById("finalCombo").textContent = maxCombo;
 
-    const gameOverScreen =
-        document.getElementById(
-            "gameOverScreen"
-        );
-
-
-    gameOverScreen.classList.remove(
-        "hidden"
-    );
-
-
-    document
-        .getElementById(
-            "finalScore"
-        )
-        .textContent =
-            score;
-
-
-    document
-        .getElementById(
-            "finalQuestion"
-        )
-        .textContent =
-            questionCount;
-
-
-    document
-        .getElementById(
-            "finalCombo"
-        )
-        .textContent =
-            maxCombo;
-
-
-    document
-        .getElementById(
-            "finalBestScore"
-        )
-        .textContent =
-            best;
+    document.getElementById("finalBestScore").textContent = best;
 }
-
 
 /* =============================================================
    RETRY
    ============================================================= */
 
-document
-    .getElementById(
-        "retryButton"
-    )
-    .addEventListener(
-        "click",
-        () => {
+document.getElementById("retryButton").addEventListener("click",() => {
 
-            document
-                .getElementById(
-                    "gameOverScreen"
-                )
-                .classList.add(
-                    "hidden"
-                );
+            document.getElementById("gameOverScreen").classList.add("hidden");
 
-
-            startGame(
-                currentConfig
-            );
-
+            startGame(currentConfig);
         }
     );

@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
       <!-- =====================================================
          TITLE
          ===================================================== -->
 
     <title>BatLingo - Language Battle Arena</title>
-
         <!-- =====================================================
          BROWSER TAB ICON
          ===================================================== -->
@@ -63,20 +59,12 @@
     <div class="home-actions">
 
         <!-- MENU -->
-        <button
-            id="menuButton"
-            class="top-action-btn menu-button"
-            type="button"
-            aria-label="Menu">
-
+        <button id="menuButton" class="top-action-btn menu-button" type="button" aria-label="Menu">
             ☰
-
         </button>
-
 
         <!-- LANGUAGE -->
         <div class="top-language">
-
             <span class="top-language-icon">
                 🌐
             </span>
@@ -95,13 +83,8 @@
 
         </div>
 
-
         <!-- LOGIN -->
-        <button
-            id="homeLoginBtn"
-            class="top-action-btn login-button"
-            type="button">
-
+        <button id="homeLoginBtn" class="top-action-btn login-button" type="button">
             <span>♟</span>
 
             <span data-i18n="home.login">
@@ -110,17 +93,9 @@
 
         </button>
 
-
         <!-- USER - sau khi login -->
-                <button
-            id="homeUserBtn"
-            class="home-user-btn hidden"
-            type="button"
-        >
-            <img
-                class="home-user-avatar hidden"
-                alt=""
-            >
+                <button id="homeUserBtn" class="home-user-btn hidden" type="button" >
+            <img class="home-user-avatar hidden" alt="">
 
             <span class="home-user-avatar-fallback">
                 U
@@ -132,21 +107,14 @@
         </button>
 
                     <!-- USER MENU -->
-            <div
-                id="homeUserMenu"
-                class="home-user-menu hidden"
-            >
+            <div id="homeUserMenu" class="home-user-menu hidden">
                 <div class="home-user-menu-header">
 
-                    <div
-                        id="userMenuAvatar"
-                        class="user-menu-avatar"
-                    >
+                    <div id="userMenuAvatar" class="user-menu-avatar">
                         U
                     </div>
 
                     <div class="user-menu-info">
-
                         <strong id="userMenuName">
                             User
                         </strong>
@@ -154,20 +122,12 @@
                         <span id="userMenuEmail">
                             user@email.com
                         </span>
-
                     </div>
-
                 </div>
-
 
                 <div class="home-user-menu-divider"></div>
 
-
-                <button
-                    id="userProfileBtn"
-                    class="home-user-menu-item"
-                    type="button"
-                >
+                <button id="userProfileBtn" class="home-user-menu-item" type="button">
                     👤
                     <span data-i18n="menu.profile">PROFILE</span>
                 </button>
@@ -215,18 +175,11 @@
             <!-- AVATAR -->
             <div class="profile-avatar-area">
 
-                <div
-                    id="profileAvatar"
-                    class="profile-avatar"
-                >
+                <div id="profileAvatar" class="profile-avatar">
                     U
                 </div>
 
-                <button
-                    id="profileAvatarEditBtn"
-                    class="profile-avatar-edit"
-                    type="button"
-                >
+                <button id="profileAvatarEditBtn" class="profile-avatar-edit" type="button">
                     ✎
                 </button>
 
@@ -238,13 +191,12 @@
                 Player
             </div>
 
-
             <!-- BATLINGO ID -->
             <div id="profileBatlingoId" class="profile-batlingo-id">
                 BLG-0000000
             </div>
 
-                         <!-- =====================================================
+            <!-- =====================================================
                  PLAYER STATUS
             ===================================================== -->
             
@@ -359,8 +311,7 @@
             
                     <div class="profile-stat-item">
             
-                        <span class="profile-stat-value"
-                              id="profileWinRate">
+                        <span class="profile-stat-value" id="profileWinRate">
                             --
                         </span>
             
@@ -370,11 +321,9 @@
             
                     </div>
             
-            
                     <div class="profile-stat-item">
             
-                        <span class="profile-stat-value"
-                              id="profileDraws">
+                        <span class="profile-stat-value" id="profileDraws">
                             0
                         </span>
             
@@ -387,8 +336,7 @@
             
                     <div class="profile-stat-item">
             
-                        <span class="profile-stat-value"
-                              id="profileBestCombo">
+                        <span class="profile-stat-value" id="profileBestCombo">
                             0
                         </span>
             
@@ -404,7 +352,6 @@
             
             <div class="profile-divider"></div>
 
-
             <!-- DISPLAY NAME -->
 
             <div class="profile-field">
@@ -413,8 +360,7 @@
                     DISPLAY NAME
                 </label>
 
-                <input
-                    id="profileNameInput"
+                <input id="profileNameInput"
                     type="text"
                     maxlength="20"
                     autocomplete="off"
@@ -431,7 +377,6 @@
 
             </div>
 
-
             <!-- BIO -->
 
             <div class="profile-field">
@@ -440,17 +385,14 @@
                     BIO
                 </label>
 
-                <textarea
-                    id="profileBioInput"
+                <textarea id="profileBioInput"
                     maxlength="100"
                     placeholder="Tell other players about yourself"
                     data-i18n-placeholder="profile.bioPlaceholder"
                 ></textarea>
 
                 <div class="profile-field-info">
-
                     <span></span>
-
                     <span id="profileBioCounter">
                         0 / 100
                     </span>
@@ -458,7 +400,6 @@
                 </div>
 
             </div>
-
 
             <!-- EMAIL -->
 
@@ -468,15 +409,11 @@
                     EMAIL
                 </label>
 
-                <div
-                    id="profileEmail"
-                    class="profile-readonly"
-                >
+                <div id="profileEmail" class="profile-readonly">
                     -
                 </div>
 
             </div>
-
 
             <!-- ID -->
 
@@ -486,32 +423,19 @@
                     BATLINGO ID
                 </label>
 
-                <div
-                    id="profileIdReadonly"
-                    class="profile-readonly"
-                >
+                <div id="profileIdReadonly" class="profile-readonly">
                     BLG-0000000
                 </div>
 
             </div>
 
-
             <!-- MESSAGE -->
 
-            <div
-                id="profileMessage"
-                class="profile-message hidden"
-            ></div>
-
+            <div id="profileMessage" class="profile-message hidden"></div>
 
             <!-- SAVE -->
 
-            <button
-                id="profileSaveBtn"
-                class="profile-save-btn"
-                type="button"
-                data-i18n="profile.save"
-            >
+            <button id="profileSaveBtn" class="profile-save-btn" type="button" data-i18n="profile.save">
                 SAVE PROFILE
             </button>
 
@@ -520,9 +444,7 @@
     </div>
 </section>
 
-
         <div class="setup-container">
-
             <div class="game-logo">
                 BAT<span>LINGO</span>
             </div>
@@ -542,35 +464,21 @@
 
                 <div class="selector">
 
-                    <button
-                        id="battleModePrev"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="battleModePrev" class="selector-arrow" type="button">
                         ◀
                     </button>
 
                     <div class="selector-viewport">
-                        <div
-                            id="battleModeValue"
-                            class="selector-value"
-                        >
+                        <div id="battleModeValue" class="selector-value">
                             SOLO BATTLE
                         </div>
                     </div>
 
-                    <button
-                        id="battleModeNext"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="battleModeNext" class="selector-arrow" type="button">
                         ▶
                     </button>
-
                 </div>
-
             </div>
-
 
             <!-- STUDY MODE -->
 
@@ -582,35 +490,23 @@
 
                 <div class="selector">
 
-                    <button
-                        id="studyModePrev"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="studyModePrev" class="selector-arrow" type="button">
                         ◀
                     </button>
 
                     <div class="selector-viewport">
-                        <div
-                            id="studyModeValue"
-                            class="selector-value"
-                        >
+                        <div id="studyModeValue" class="selector-value">
                             JLPT
                         </div>
                     </div>
 
-                    <button
-                        id="studyModeNext"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="studyModeNext" class="selector-arrow" type="button">
                         ▶
                     </button>
 
                 </div>
 
             </div>
-
 
             <!-- TARGET -->
 
@@ -622,35 +518,23 @@
 
                 <div class="selector">
 
-                    <button
-                        id="studyTargetPrev"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="studyTargetPrev" class="selector-arrow" type="button">
                         ◀
                     </button>
 
                     <div class="selector-viewport">
-                        <div
-                            id="studyTargetValue"
-                            class="selector-value level-value"
-                        >
+                        <div id="studyTargetValue" class="selector-value level-value">
                             N1
                         </div>
                     </div>
 
-                    <button
-                        id="studyTargetNext"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="studyTargetNext" class="selector-arrow" type="button">
                         ▶
                     </button>
 
                 </div>
 
             </div>
-
 
             <!-- CATEGORY -->
 
@@ -662,35 +546,23 @@
 
                 <div class="selector">
 
-                    <button
-                        id="categoryPrev"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="categoryPrev" class="selector-arrow" type="button">
                         ◀
                     </button>
 
                     <div class="selector-viewport">
-                        <div
-                            id="categoryValue"
-                            class="selector-value"
-                        >
+                        <div id="categoryValue" class="selector-value">
                             TỪ VỰNG
                         </div>
                     </div>
 
-                    <button
-                        id="categoryNext"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="categoryNext" class="selector-arrow" type="button">
                         ▶
                     </button>
 
                 </div>
 
             </div>
-
 
             <!-- QUESTION MODE -->
 
@@ -702,11 +574,7 @@
 
                 <div class="selector">
 
-                    <button
-                        id="subModePrev"
-                        class="selector-arrow"
-                        type="button"
-                    >
+                    <button id="subModePrev" class="selector-arrow" type="button">
                         ◀
                     </button>
 

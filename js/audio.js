@@ -28,44 +28,40 @@ const sounds = {
    SFX
    ============================================================= */
 
-export function playSfx(name) {
-
+export function playSfx(name) 
+{
     const sound = sounds[name];
 
-    if (!sound) {
+    if (!sound) 
+    {
         return;
     }
 
     sounds[name].volume = 0.2;
     sound.currentTime = 0;
-
-    sound
-        .play()
-        .catch(() => {});
+    sound.play().catch(() => {});
 }
-
 
 /* =============================================================
    BGM
    ============================================================= */
 
-export function playLobbyMusic() {
-
-    if (!sounds.lobby) {
+export function playLobbyMusic() 
+{
+    if (!sounds.lobby) 
+    {
         return;
     }
 
     sounds.lobby.volume = 0.15;
 
-    sounds.lobby
-        .play()
-        .catch(() => {});
+    sounds.lobby.play().catch(() => {});
 }
 
-
-export function stopLobbyMusic() {
-
-    if (!sounds.lobby) {
+export function stopLobbyMusic() 
+{
+    if (!sounds.lobby) 
+    {
         return;
     }
 
@@ -74,60 +70,40 @@ export function stopLobbyMusic() {
     sounds.lobby.currentTime = 0;
 }
 
-
 /* =============================================================
    JAPANESE SPEECH
    ============================================================= */
 
-export function speakJapanese(
-    text,
-    callback = () => {}
-) {
-
-    if (
-        !("speechSynthesis" in window)
-    ) {
+export function speakJapanese(text,callback = () => {}) 
+{
+    if (!("speechSynthesis" in window)) 
+    {
 
         setTimeout(callback, 500);
 
         return;
     }
 
-
     speechSynthesis.cancel();
 
-
-    const speech =
-        new SpeechSynthesisUtterance(
-            text
-        );
-
+    const speech = new SpeechSynthesisUtterance(text);
 
     speech.lang = "ja-JP";
     speech.rate = 0.9;
     speech.pitch = 1;
 
+    const voices = speechSynthesis.getVoices();
 
-    const voices =
-        speechSynthesis.getVoices();
+    const japaneseVoice = voices.find(voice => voice.lang.toLowerCase().startsWith("ja"));
 
-
-    const japaneseVoice =
-        voices.find(
-            voice =>
-                voice.lang
-                    .toLowerCase()
-                    .startsWith("ja")
-        );
-
-
-    if (japaneseVoice) {
+    if (japaneseVoice) 
+    {
         speech.voice = japaneseVoice;
     }
    
-            /* =============================================================
-            SPEECH CALLBACK SAFETY
-            ============================================================= */
+        /* =============================================================
+        SPEECH CALLBACK SAFETY
+         ============================================================= */
          
          /*
              Biến kiểm tra callback đã được chạy hay chưa.
@@ -140,18 +116,18 @@ export function speakJapanese(
          */
          let finished = false;
          
-         
          /*
              Function dùng chung để kết thúc speech
              và tiếp tục game.
          */
-         function finish() {
-         
+         function finish() 
+         {
              /*
                  Nếu callback đã chạy rồi
                  thì dừng ngay.
              */
-             if (finished) {
+             if (finished) 
+            {
                  return;
              }
          
@@ -160,15 +136,11 @@ export function speakJapanese(
              */
              finished = true;
          
-         
              /*
                  Hủy safety timer vì speech
                  đã kết thúc bình thường hoặc đã báo lỗi.
              */
-             clearTimeout(
-                 safetyTimer
-             );
-         
+             clearTimeout(safetyTimer);
          
              /*
                  Chạy callback.
@@ -188,68 +160,43 @@ export function speakJapanese(
           Mục đích:
           tránh game bị treo vô hạn.
       */
-      const safetyTimer =
-          setTimeout(
-              finish,
-              3000
-          );
+      const safetyTimer = setTimeout(finish,3000);
    /*Speech đọc xong bình thường.*/
-    speech.onend =
-        () => {
+    speech.onend = () => {
            /*Chờ thêm 200ms rồi tiếp tục game.*/
-            setTimeout(
-                /*###callback,*/
-               finish,
-                200
-            );
+            setTimeout(finish,200);
         };
 
    /*Speech gặp lỗi*/
-    speech.onerror =
-        () => {
+    speech.onerror =　() => {
              /* Dù speech lỗi,vẫn tiếp tục game sau 300ms.*/
-            setTimeout(
-                /*###callback,*/
-                finish,
-                300
-            );
+            setTimeout(finish,300);
         };
 
    /*Bắt đầu đọc.*/
-    speechSynthesis.speak(
-        speech
-    );
+    speechSynthesis.speak(speech);
 }
 
 
-export function stopSpeech() {
-
-    if (
-        "speechSynthesis" in window
-    ) {
-
+export function stopSpeech() 
+{
+    if ("speechSynthesis" in window)
+    {
         speechSynthesis.cancel();
     }
 }
 
-export async function logout() {
-
-    try {
-
+export async function logout() 
+{
+    try 
+    {
         await signOut(auth);
 
-        console.log(
-            "[AUTH] Logout success"
-        );
-
+        console.log("[AUTH] Logout success");
     }
-    catch (error) {
-
-        console.error(
-            "[AUTH] Logout:",
-            error
-        );
-
+    catch (error)
+     {
+        console.error("[AUTH] Logout:",error);
     }
 
 }

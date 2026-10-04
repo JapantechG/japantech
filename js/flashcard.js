@@ -844,12 +844,11 @@ function resetFlashcardSwipe() {
     flashcard.style.transition = "transform 0.2s ease";
     flashcard.style.transform = "";
 
-    setTimeout(() => {
-        flashcard.style.transition = "";
-    }, 200);
+    setTimeout(() => {flashcard.style.transition = "";}, 200);
 }
 
-function finishFlashcardSwipe(direction) {
+function finishFlashcardSwipe(direction) 
+{
     flashcardDidSwipe = true;
 
     const targetX = direction === "right" ? window.innerWidth : -window.innerWidth;
@@ -858,18 +857,20 @@ function finishFlashcardSwipe(direction) {
     flashcard.style.transition = "transform 0.2s ease";
     flashcard.style.transform = `translateX(${targetX}px) rotate(${rotate}deg)`;
 
-    setTimeout(() => {
+    setTimeout(() => 
+    {
         flashcard.style.transition = "none";
         flashcard.style.transform = "";
 
-        if (direction === "right") {
+        if (direction === "right") 
+        {
             swipePreviousFlashcard();
-        } else {
+        } 
+        else 
+        {
             swipeNextFlashcard();
         }
 
-        requestAnimationFrame(() => {
-            flashcard.style.transition = "";
-        });
+        requestAnimationFrame(() => {flashcard.style.transition = "";});
     }, 200);
 }

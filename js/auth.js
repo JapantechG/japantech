@@ -21,69 +21,49 @@ import {
     ensureUserProfile
 } from "./user.js";
 
-
 /* =========================================================
    ELEMENTS
 ========================================================= */
-const googleLoginBtn =
-    document.getElementById("googleLoginBtn");
+const googleLoginBtn = document.getElementById("googleLoginBtn");
 
-const signupEmail =
-    document.getElementById("signupEmail");
+const signupEmail = document.getElementById("signupEmail");
 
-const signupPassword =
-    document.getElementById("signupPassword");
+const signupPassword = document.getElementById("signupPassword");
 
-const signupPasswordConfirm =
-    document.getElementById("signupPasswordConfirm");
+const signupPasswordConfirm = document.getElementById("signupPasswordConfirm");
 
-const signupError =
-    document.getElementById("signupError");
+const signupError = document.getElementById("signupError");
 
-const createAccountBtn =
-    document.getElementById("createAccountBtn");
+const createAccountBtn = document.getElementById("createAccountBtn");
 
+const loginEmail = document.getElementById("loginEmail");
 
-const loginEmail =
-    document.getElementById("loginEmail");
+const loginPassword = document.getElementById("loginPassword");
 
-const loginPassword =
-    document.getElementById("loginPassword");
+const loginError = document.getElementById("loginError");
 
-const loginError =
-    document.getElementById("loginError");
+const emailLoginBtn = document.getElementById("emailLoginBtn");
 
-const emailLoginBtn =
-    document.getElementById("emailLoginBtn");
+const forgotPasswordBtn = document.getElementById("forgotPasswordBtn");
 
-
-const forgotPasswordBtn =
-    document.getElementById("forgotPasswordBtn");
-
-
-const verifyEmailAddress =
-    document.getElementById("verifyEmailAddress");
+const verifyEmailAddress = document.getElementById("verifyEmailAddress");
 
 /* =========================================
    GOOGLE PROVIDER
 ========================================= */
 
-const googleProvider =
-    new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
 
-
-googleProvider.setCustomParameters({
-    prompt: "select_account"
-});
-
+googleProvider.setCustomParameters({prompt: "select_account"});
 
 /* =========================================================
    HELPERS
 ========================================================= */
 
-function showError(element, message) {
-
-    if (!element) {
+function showError(element, message) 
+{
+    if (!element) 
+    {
         return;
     }
 
@@ -91,10 +71,10 @@ function showError(element, message) {
     element.classList.remove("hidden");
 }
 
-
-function clearError(element) {
-
-    if (!element) {
+function clearError(element) 
+{
+    if (!element) 
+    {
         return;
     }
 
@@ -102,13 +82,12 @@ function clearError(element) {
     element.classList.add("hidden");
 }
 
-
 /* =========================================================
    PASSWORD VALIDATION
 ========================================================= */
 
-function isValidPassword(password) {
-
+function isValidPassword(password) 
+{
     return (
         password.length >= 8 &&
         password.length <= 64 &&
@@ -118,62 +97,41 @@ function isValidPassword(password) {
     );
 }
 
-
 /* =========================================================
    CREATE ACCOUNT
 ========================================================= */
 
-async function createAccount() {
-
+async function createAccount() 
+{
     clearError(signupError);
 
+    const email = signupEmail.value.trim();
 
-    const email =
-        signupEmail.value.trim();
+    const password = signupPassword.value;
 
-    const password =
-        signupPassword.value;
-
-    const confirmPassword =
-        signupPasswordConfirm.value;
-
+    const confirmPassword =signupPasswordConfirm.value;
 
     /* -------------------------
        Basic validation
     ------------------------- */
 
-    if (!email) {
-
-        showError(
-            signupError,
-            "Please enter your email."
-        );
-
+    if (!email) 
+    {
+        showError(signupError,"Please enter your email.");
         return;
     }
 
-
-    if (!isValidPassword(password)) {
-
-        showError(
-            signupError,
-            "Password does not meet the requirements."
-        );
-
+    if (!isValidPassword(password)) 
+    {
+        showError(signupError,"Password does not meet the requirements.");
         return;
     }
 
-
-    if (password !== confirmPassword) {
-
-        showError(
-            signupError,
-            "Passwords do not match."
-        );
-
+    if (password !== confirmPassword) 
+    {
+        showError(signupError,"Passwords do not match.");
         return;
     }
-
 
     /* -------------------------
        Disable button
@@ -181,22 +139,13 @@ async function createAccount() {
 
     createAccountBtn.disabled = true;
 
-
     try {
 
         /* Create Firebase account */
 
-        const credential =
-            await createUserWithEmailAndPassword(
-                auth,
-                email,
-                password
-            );
+        const credential = await createUserWithEmailAndPassword(auth,email,password);
 
-
-        const user =
-            credential.user;
-
+        const user = credential.user;
 
         /* -------------------------
            Send verification email
@@ -204,21 +153,14 @@ async function createAccount() {
 
         await sendEmailVerification(user);
 
-
-        console.log(
-            "[AUTH] Verification email sent:",
-            user.email
-        );
-
+        console.log("[AUTH] Verification email sent:",user.email);
 
         /* Show email in Verify screen */
 
-        if (verifyEmailAddress) {
-
-            verifyEmailAddress.textContent =
-                user.email;
+        if (verifyEmailAddress) 
+        {
+            verifyEmailAddress.textContent = user.email;
         }
-
 
         /* -------------------------
            Logout until verified
@@ -226,180 +168,94 @@ async function createAccount() {
 
         await signOut(auth);
 
-
         /* -------------------------
            Tell Auth UI to show
            verification panel
         ------------------------- */
 
-        window.dispatchEvent(
-            new CustomEvent(
-                "batlingo-auth-verify",
-                {
-                    detail: {
-                        email
-                    }
-                }
-            )
-        );
-
+        window.dispatchEvent(new CustomEvent("batlingo-auth-verify",{detail: {email}}));
 
     }
-    catch (error) {
+    catch (error) 
+    {
+        console.error("[AUTH] Create account:",error);
 
-        console.error(
-            "[AUTH] Create account:",
-            error
-        );
-
-
-        showError(
-            signupError,
-            getAuthErrorMessage(
-                error.code
-            )
-        );
-
+        showError(signupError,getAuthErrorMessage(error.code));
     }
-    finally {
-
+    finally 
+    {
         createAccountBtn.disabled = false;
-
     }
 }
-
 
 /* =========================================================
    LOGIN
 ========================================================= */
 
-async function login() {
-
+async function login() 
+{
     clearError(loginError);
 
+    const email = loginEmail.value.trim();
 
-    const email =
-        loginEmail.value.trim();
+    const password = loginPassword.value;
 
-    const password =
-        loginPassword.value;
-
-
-    if (!email || !password) {
-
-        showError(
-            loginError,
-            "Enter your email and password."
-        );
-
+    if (!email || !password) 
+    {
+        showError(loginError,"Enter your email and password.");
         return;
     }
 
-
     emailLoginBtn.disabled = true;
 
+    try 
+    {
+        const credential = await signInWithEmailAndPassword(auth,email,password);
 
-    try {
-
-        const credential =
-            await signInWithEmailAndPassword(
-                auth,
-                email,
-                password
-            );
-
-
-        const user =
-            credential.user;
-
+        const user = credential.user;
 
         /* -------------------------
            Email not verified
         ------------------------- */
 
-        if (!user.emailVerified) {
-
-            window.dispatchEvent(
-        new CustomEvent(
-            "batlingo-auth-verify",
-            {
-                detail: {
-                    email: user.email
-                }
-            }
-        )
-    );
-
-
+        if (!user.emailVerified) 
+        {
+            window.dispatchEvent(new CustomEvent("batlingo-auth-verify",{detail: {email: user.email}}));
             return;
         }
 
-
-        console.log(
-            "[AUTH] Login success:",
-            user.uid
-        );
-
+        console.log("[AUTH] Login success:",user.uid);
 
         /* Notify rest of app */
 
-        window.dispatchEvent(
-            new CustomEvent(
-                "batlingo-login-success",
-                {
-                    detail: {
-                        uid: user.uid,
-                        email: user.email
-                    }
-                }
-            )
-        );
-
+        window.dispatchEvent(new CustomEvent("batlingo-login-success",{detail: {uid: user.uid,email: user.email}}));
 
     }
-    catch (error) {
+    catch (error) 
+    {
+        console.error("[AUTH] Login:",error);
 
-        console.error(
-            "[AUTH] Login:",
-            error
-        );
-
-
-        showError(
-            loginError,
-            getAuthErrorMessage(
-                error.code
-            )
-        );
-
+        showError(loginError,getAuthErrorMessage(error.code));
     }
-    finally {
-
+    finally 
+    {
         emailLoginBtn.disabled = false;
-
     }
 }
-
 
 /* =========================================================
    FORGOT PASSWORD
 ========================================================= */
 
-async function forgotPassword() {
-
+async function forgotPassword() 
+{
     clearError(loginError);
 
+    const email = loginEmail.value.trim();
 
-    const email =
-        loginEmail.value.trim();
-
-
-    if (!email) {
-
-        showError(
-            loginError,
-            "Enter your email first."
-        );
+    if (!email) 
+    {
+        showError(loginError,"Enter your email first.");
 
         loginEmail.focus();
 

@@ -66,11 +66,7 @@ const auth = getAuth(app);
 
 const db = getDatabase(app);
 
-export {
-    app,
-    auth,
-    db
-};
+export {app,auth,db};
 // ============================================================
 // CURRENT CONNECTION
 // ============================================================
@@ -78,20 +74,17 @@ export {
 let roomCode = null;
 
 let playerRole = null;
-// "host"
-// "guest"
 
 let playerId = null;
 
 let unsubscribeRoom = null;
 
-
 // ============================================================
 // CREATE PLAYER ID
 // ============================================================
 
-function createPlayerId() {
-
+function createPlayerId() 
+{
     if (crypto.randomUUID) 
     {
         return crypto.randomUUID();
@@ -99,7 +92,6 @@ function createPlayerId() {
 
     return (Date.now().toString(36) + Math.random().toString(36).substring(2));
 }
-
 
 // ============================================================
 // CREATE ROOM CODE
@@ -131,8 +123,8 @@ function generateRoomCode(length = 4)
 // CREATE ROOM
 // ============================================================
 
-export async function createRoom(playerName) {
-
+export async function createRoom(playerName) 
+{
     playerName = playerName.trim();
 
     if (!playerName) 
@@ -149,7 +141,6 @@ export async function createRoom(playerName) {
     let code;
     let roomRef;
 
-
     while (true) 
     {
         code = generateRoomCode();
@@ -165,13 +156,11 @@ export async function createRoom(playerName) {
         }
     }
 
-
     // ----------------------------------------
     // Tạo room trên Firebase
     // ----------------------------------------
 
-    await set(
-        roomRef,
+    await set(roomRef,
         {
             status: "waiting",
 
@@ -187,11 +176,9 @@ export async function createRoom(playerName) {
         }
     );
 
-
     roomCode = code;
 
     playerRole = "host";
-
 
     // ----------------------------------------
     // HOST mất kết nối -> xóa ROOM
@@ -212,7 +199,6 @@ export async function createRoom(playerName) {
 
     return roomCode;
 }
-
 
 // ============================================================
 // JOIN ROOM
@@ -258,13 +244,11 @@ export async function joinRoom(code,playerName)
         throw new Error("ROOM_FULL");
     }
 
-
     // ----------------------------------------
     // Tạo player
     // ----------------------------------------
 
     playerId = createPlayerId();
-
 
     // ----------------------------------------
     // Add guest
@@ -283,11 +267,9 @@ export async function joinRoom(code,playerName)
         }
     );
 
-
     roomCode = code;
 
     playerRole = "guest";
-
 
     // ----------------------------------------
     // GUEST mất kết nối -> connected = false
@@ -307,7 +289,6 @@ export async function joinRoom(code,playerName)
 
     return roomCode;
 }
-
 
 // ============================================================
 // LISTEN ROOM
@@ -575,7 +556,6 @@ export async function requestRematch()
     {
         return;
     }
-
 
     const rematchRef = ref(db,`rooms/${roomCode}/rematch/${playerRole}`);
 
