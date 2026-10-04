@@ -304,73 +304,36 @@ function renderPlayerStatus(userData)
 
     const battles = Number(stats.totalGames) || 0;
 
+    const wins = Number(stats.wins) || 0;
 
-    const wins =
-        Number(
-            stats.wins
-        ) || 0;
+    const losses = Number(stats.losses) || 0;
 
+    const draws = Number(stats.draws) || 0;
 
-    const losses =
-        Number(
-            stats.losses
-        ) || 0;
+    const bestCombo = Number(stats.bestCombo) || 0;
 
+    profileBattles.textContent = battles;
 
-    const draws =
-        Number(
-            stats.draws
-        ) || 0;
+    profileWins.textContent = wins;
 
+    profileLosses.textContent = losses;
 
-    const bestCombo =
-        Number(
-            stats.bestCombo
-        ) || 0;
+    profileDraws.textContent = draws;
 
-
-    profileBattles.textContent =
-        battles;
-
-
-    profileWins.textContent =
-        wins;
-
-
-    profileLosses.textContent =
-        losses;
-
-
-    profileDraws.textContent =
-        draws;
-
-
-    profileBestCombo.textContent =
-        bestCombo;
-
+    profileBestCombo.textContent = bestCombo;
 
     /* =========================================
        WIN RATE
     ========================================= */
 
-    if (battles > 0) {
+    if (battles > 0) 
+    {
+        const winRate =(wins /battles *100).toFixed(1);
 
-        const winRate =
-            (
-                wins /
-                battles *
-                100
-            ).toFixed(1);
-
-
-        profileWinRate.textContent =
-            `${winRate}%`;
-
+        profileWinRate.textContent = `${winRate}%`;
     }
-    else {
-
-        profileWinRate.textContent =
-            "--";
-
+    else 
+    {
+        profileWinRate.textContent = "--";
     }
 }
