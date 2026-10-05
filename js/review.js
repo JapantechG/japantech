@@ -157,6 +157,8 @@ function renderQuestion(database) {
     reviewQuestionLevel.textContent =
         `${config.target.toUpperCase()} · ${config.category.toUpperCase()}`;
 
+    reviewStreak.classList.remove("correct", "wrong", "mastered");
+    
     reviewStreak.textContent =
         `${currentReviewItem.correctStreak || 0} / 3`;
 
@@ -287,10 +289,11 @@ function renderChoices(choices) {
 
         button.type = "button";
         button.className = "review-answer-button";
+        button.dataset.answer = choice;
         button.textContent = `${index + 1}. ${choice}`;
 
         button.addEventListener("click", () => {
-            testAnswer(choice);
+            testAnswer(choice, button);
         });
 
         reviewAnswers.appendChild(button);
@@ -302,25 +305,42 @@ function renderChoices(choices) {
    TEMP ANSWER TEST
    ============================================================= */
 
-async function testAnswer(answer) {
+async function testAnswer(answer, selectedButton) {
     if (answerLocked) return;
 
     answerLocked = true;
 
+    disableAnswerButtons();
+
     if (answer === currentCorrectAnswer) {
+        selectedButton.classList.add("correct");
         await handleCorrectAnswer();
     } else {
+        selectedButton.classList.add("wrong");
+        highlightCorrectAnswer();
         await handleWrongAnswer();
     }
 }
 
+function disableAnswerButtons() {
+    reviewAnswers.querySelectorAll(".review-answer-button").forEach(button => {
+        button.disabled = true;
+    });
+}
+
+function highlightCorrectAnswer() {
+    reviewAnswers.querySelectorAll(".review-answer-button").forEach(button => {
+        if (button.dataset.answer === currentCorrectAnswer) {
+            button.classList.add("correct");
+        }
+    });
+}
 
 /* =============================================================
    CORRECT
    ============================================================= */
 
-async function handleCorrectAnswer() 
-{
+async function handleCorrectAnswer() {
     try {
         const result = await markReviewCorrect(
             currentReviewItem.groupKey,
@@ -334,13 +354,26 @@ async function handleCorrectAnswer()
         );
 
         if (result.mastered) {
-            handleMastered();
+            reviewStreak.textContent = "✓ MASTERED";
+            reviewStreak.classList.add("mastered");
+
+            setTimeout(() => {
+                reviewStreak.classList.remove("mastered");
+                handleMastered();
+            }, 800);
+
             return;
         }
 
         currentReviewItem.correctStreak = result.streak;
 
-        setTimeout(() => {nextQuestion();}, 500);
+        reviewStreak.textContent = `✓ ${result.streak} / 3`;
+        reviewStreak.classList.add("correct");
+
+        setTimeout(() => {
+            reviewStreak.classList.remove("correct");
+            nextQuestion();
+        }, 700);
     }
     catch (error) {
         console.error("[REVIEW] Correct update failed:", error);
@@ -367,9 +400,13 @@ async function handleWrongAnswer() {
 
         currentReviewItem.correctStreak = 0;
 
+        reviewStreak.textContent = "✕ 0 / 3";
+        reviewStreak.classList.add("wrong");
+
         setTimeout(() => {
+            reviewStreak.classList.remove("wrong");
             nextQuestion();
-        }, 700);
+        }, 900);
     }
     catch (error) {
         console.error("[REVIEW] Wrong update failed:", error);
