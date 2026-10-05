@@ -104,6 +104,8 @@ function createDefaultUserData(user,batlingoId)
 
             batlingoId,
 
+            email: user.email || "",
+
             displayName:
                 user.displayName || user.email?.split("@")[0] || "Player",
 
