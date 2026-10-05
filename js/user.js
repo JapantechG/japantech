@@ -14,7 +14,7 @@ from
 
 
 import {
-    db
+    auth,db
 }
 from "./firebase.js";
 
@@ -722,4 +722,223 @@ export async function saveSoloResult({score,questions,correct,wrong,bestCombo})
         gainedExp
 
     };
+}
+
+
+/* =============================================================
+   REVIEW - WRONG QUESTIONS
+   ============================================================= */
+
+function getReviewGroupKey(config) {
+    return `${config.studyMode}_${config.target}_${config.category}_${config.subMode}`;
+}
+
+
+/* =============================================================
+   SAVE WRONG QUESTION
+   ============================================================= */
+
+export async function saveWrongQuestion(questionId, config, source = "solo") {
+    const user = auth.currentUser;
+
+    if (!user) 
+    {
+        console.warn("[REVIEW] User not logged in.");
+        return;
+    }
+
+    if (questionId === undefined || questionId === null) 
+    {
+        console.warn("[REVIEW] Invalid question ID.");
+        return;
+    }
+
+    if (!config) 
+    {
+        console.warn("[REVIEW] Missing config.");
+        return;
+    }
+
+    const groupKey = getReviewGroupKey(config);
+
+    const configRef = ref(db,`users/${user.uid}/review/${groupKey}/config`);
+
+    const itemRef = ref(db,`users/${user.uid}/review/${groupKey}/items/${questionId}`);
+
+    /* ---------------------------------------------------------
+       CREATE GROUP CONFIG
+       Chỉ tạo nếu config của group chưa tồn tại
+       --------------------------------------------------------- */
+
+    const configSnapshot = await get(configRef);
+
+    if (!configSnapshot.exists()) 
+    {
+        await set(configRef, 
+        {
+            studyMode: config.studyMode,
+            target: config.target,
+            category: config.category,
+            subMode: config.subMode
+        });
+    }
+
+    /* ---------------------------------------------------------
+       CREATE / UPDATE WRONG ITEM
+       --------------------------------------------------------- */
+
+    await runTransaction(itemRef, current => 
+    {
+        if (!current) 
+        {
+            return {
+                wrongCount: 1,
+                wrongSolo: source === "solo" ? 1 : 0,
+                wrongPvp: source === "pvp" ? 1 : 0,
+                correctStreak: 0,
+                lastWrongAt: Date.now()
+            };
+        }
+
+        return {
+            ...current,
+            wrongCount: (current.wrongCount || 0) + 1,
+            wrongSolo: (current.wrongSolo || 0) + (source === "solo" ? 1 : 0),
+            wrongPvp: (current.wrongPvp || 0) + (source === "pvp" ? 1 : 0),
+            correctStreak: 0,
+            lastWrongAt: Date.now()
+        };
+    });
+
+    /* ---------------------------------------------------------
+       NOTIFY UI
+       Sau này dùng để update REVIEW badge
+       --------------------------------------------------------- */
+
+    window.dispatchEvent(new CustomEvent("batlingo-review-changed"));
+
+    console.log("[REVIEW] Wrong question saved:",groupKey,questionId);
+}
+
+/* =============================================================
+   GET REVIEW COUNT
+   ============================================================= */
+
+export async function getReviewCount() 
+{
+    const user = auth.currentUser;
+    if (!user) return 0;
+
+    const reviewRef = ref(db, `users/${user.uid}/review`);
+    const snapshot = await get(reviewRef);
+
+    if (!snapshot.exists()) return 0;
+
+    const reviewData = snapshot.val();
+    let count = 0;
+
+    Object.values(reviewData).forEach(group => {
+        if (!group.items) return;
+        count += Object.keys(group.items).length;
+    });
+
+    return count;
+}
+
+/* =============================================================
+   GET REVIEW ITEMS
+   ============================================================= */
+
+export async function getReviewItems() {
+    const user = auth.currentUser;
+    if (!user) return [];
+
+    const reviewRef = ref(db, `users/${user.uid}/review`);
+    const snapshot = await get(reviewRef);
+
+    if (!snapshot.exists()) return [];
+
+    const reviewData = snapshot.val();
+    const result = [];
+
+    Object.entries(reviewData).forEach(([groupKey, group]) => {
+        if (!group.config || !group.items) return;
+
+        Object.entries(group.items).forEach(([questionId, item]) => {
+            result.push({
+                groupKey,
+                questionId,
+                config: group.config,
+                ...item
+            });
+        });
+    });
+
+    return result;
+}
+
+/* =============================================================
+   REVIEW CORRECT
+   ============================================================= */
+
+export async function markReviewCorrect(groupKey, questionId) {
+    const user = auth.currentUser;
+    if (!user) return { mastered: false, streak: 0 };
+
+    const itemRef = ref(
+        db,
+        `users/${user.uid}/review/${groupKey}/items/${questionId}`
+    );
+
+    let newStreak = 0;
+    let mastered = false;
+
+    await runTransaction(itemRef, current => {
+        if (!current) return current;
+
+        newStreak = (current.correctStreak || 0) + 1;
+
+        if (newStreak >= 3) {
+            mastered = true;
+            return null;
+        }
+
+        return {
+            ...current,
+            correctStreak: newStreak,
+            lastReviewAt: Date.now()
+        };
+    });
+
+    window.dispatchEvent(new CustomEvent("batlingo-review-changed"));
+
+    return {
+        mastered,
+        streak: newStreak
+    };
+}
+
+/* =============================================================
+   REVIEW WRONG
+   ============================================================= */
+
+export async function markReviewWrong(groupKey, questionId) {
+    const user = auth.currentUser;
+    if (!user) return;
+
+    const itemRef = ref(
+        db,
+        `users/${user.uid}/review/${groupKey}/items/${questionId}`
+    );
+
+    await runTransaction(itemRef, current => {
+        if (!current) return current;
+
+        return {
+            ...current,
+            correctStreak: 0,
+            reviewWrongCount: (current.reviewWrongCount || 0) + 1,
+            lastReviewAt: Date.now()
+        };
+    });
 }

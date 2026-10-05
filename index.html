@@ -656,6 +656,43 @@
         </div>
 
     </main>
+
+    <!-- =========================================================
+     REVIEW SCREEN
+     ========================================================= -->
+
+    <section id="reviewScreen" class="review-screen hidden">
+
+        <div class="review-header">
+            <button id="reviewBackButton" class="review-back-button" type="button">←</button>
+
+            <div class="review-header-info">
+                <div class="review-title">REVIEW</div>
+                <div id="reviewSessionInfo" class="review-session-info">10 WORDS</div>
+            </div>
+        </div>
+
+        <div class="review-card">
+
+            <div id="reviewQuestionLevel" class="review-question-level">
+                N1 · VOCABULARY
+            </div>
+
+            <div id="reviewStreak" class="review-streak">
+                0 / 3
+            </div>
+
+            <div id="reviewQuestion" class="review-question">
+                QUESTION
+            </div>
+
+            <div id="reviewReading" class="review-reading"></div>
+
+            <div id="reviewAnswers" class="review-answers"></div>
+
+        </div>
+
+    </section>
     <!-- =========================================================
      FLASHCARD SCREEN
      ========================================================= -->
@@ -1464,6 +1501,21 @@
     <audio id="wrongSound" src="assets/audio/sfx/wrong.mp3"></audio>
 
     <audio id="gameoverSound" src="assets/audio/sfx/gameover.mp3"></audio>
+
+    <!-- =========================================================
+        REVIEW FLOATING BUTTON
+        ========================================================= -->
+
+    <button id="reviewFloatingButton" class="review-floating-button hidden" type="button">
+        <span class="review-floating-icon">↻</span>
+        <span class="review-floating-label">
+            REVIEW
+        </span>
+
+        <span id="reviewFloatingCount" class="review-floating-count">
+            0
+        </span>
+    </button>
 
     <script type="module" src="js/main.js"></script>
 

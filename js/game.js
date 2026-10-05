@@ -6,7 +6,8 @@ import {
 from "./audio.js";
 
 import {
-    saveSoloResult
+    saveSoloResult,
+    saveWrongQuestion
 }
 from "./user.js";
 /* =============================================================
@@ -650,6 +651,8 @@ function selectAnswer(button,selectedAnswer)
     playSfx("wrong");
 
     wrongCount++;
+
+    saveWrongQuestion(currentQuestion.id,currentConfig,"solo").catch(error => {console.error("[REVIEW] Save wrong failed:", error);});
     
     lives--;
 
@@ -758,8 +761,8 @@ function updateTimer()
 /* =============================================================
    TIMEOUT
    ============================================================= */
-function handleTimeout() {
-
+function handleTimeout() 
+{
     if (answerLocked || !gameActive) 
     {
         return;
@@ -776,6 +779,8 @@ function handleTimeout() {
     playSfx("wrong");
 
     wrongCount++;
+
+    saveWrongQuestion(currentQuestion.id,currentConfig,"solo").catch(error => {console.error("[REVIEW] Save timeout failed:", error);});
     
     lives--;
 

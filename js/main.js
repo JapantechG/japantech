@@ -44,6 +44,10 @@ import {
 }
 from "./profile.js";
 
+import {getReviewCount} from "./user.js";
+
+import { startReview } from "./review.js";
+
 /* =========================================
    I18N
 ========================================= */
@@ -83,6 +87,17 @@ const flashcardScreen =document.getElementById("flashcardScreen");
 const userProfileBtn =document.getElementById("userProfileBtn");
 
 const profileBackBtn =document.getElementById("profileBackBtn");
+
+const reviewFloatingButton = document.getElementById("reviewFloatingButton");
+const reviewFloatingCount = document.getElementById("reviewFloatingCount");
+
+const reviewScreen = document.getElementById("reviewScreen");
+const reviewBackButton = document.getElementById("reviewBackButton");
+
+reviewBackButton?.addEventListener("click", () => {
+    reviewScreen.classList.add("hidden");
+    playLobbyMusic();
+});
 
 function setUILanguage(language) 
 {
@@ -285,6 +300,8 @@ window.addEventListener("batlingo-auth-state",event =>
 
         if (loggedIn) 
         {
+            updateReviewBadge();
+
             /* Hide Login */
 
             homeLoginBtn?.classList.add("hidden");
@@ -370,6 +387,13 @@ window.addEventListener("batlingo-auth-state",event =>
             homeLoginBtn?.classList.remove("hidden");
 
             homeUserBtn?.classList.add("hidden");
+
+            reviewFloatingButton?.classList.add("hidden");
+
+            if (reviewFloatingCount) 
+            {
+                reviewFloatingCount.textContent = "0";
+            }
         }
 
     }
@@ -487,3 +511,49 @@ window.addEventListener("batlingo-profile-updated",event =>
         }
     }
 );
+
+/* =============================================================
+   REVIEW BADGE
+   ============================================================= */
+
+async function updateReviewBadge() 
+{
+    if (!reviewFloatingButton || !reviewFloatingCount) return;
+
+    try 
+    {
+        const count = await getReviewCount();
+
+        reviewFloatingCount.textContent = count;
+
+        if (count > 0) 
+        {
+            reviewFloatingButton.classList.remove("hidden");
+        } 
+        else 
+        {
+            reviewFloatingButton.classList.add("hidden");
+        }
+    } 
+    catch (error) 
+    {
+        console.error("[REVIEW] Failed to load review count:", error);
+
+        reviewFloatingButton.classList.add("hidden");
+    }
+}
+
+window.addEventListener("batlingo-review-changed", () => {updateReviewBadge();});
+
+reviewFloatingButton?.addEventListener("click", async () => {
+    try {
+        const started = await startReview();
+
+        if (!started) {
+            updateReviewBadge();
+        }
+    }
+    catch (error) {
+        console.error("[REVIEW] Start failed:", error);
+    }
+});
