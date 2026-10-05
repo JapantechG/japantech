@@ -17,6 +17,9 @@ import {
     resetRoomConnection
 } from "./firebase.js";
 
+import { saveWrongQuestion } from "./user.js";
+
+/* =============================================================
 let pvpDatabase = [];
 
 let currentConfig = null;
@@ -525,6 +528,26 @@ function updatePvpAnswerState(room)
     revealPvpAnswers(room,hostAnswer,guestAnswer);
 }
 
+function savePvpWrongQuestion(match, questionIndex) 
+{
+    const questionId = match.questionIds?.[questionIndex];
+
+    if (questionId === undefined || questionId === null)
+    {
+        console.warn("[REVIEW] PvP question ID not found.");
+        return;
+    }
+
+    const config = {
+        studyMode: currentConfig?.studyMode || "jlpt",
+        target: match.level,
+        category: match.category,
+        subMode: match.mode
+    };
+
+    saveWrongQuestion(questionId, config, "pvp").catch(error => console.error("[REVIEW] Save PvP wrong failed:", error));
+}
+
 function revealPvpAnswers(room,hostAnswer,guestAnswer) 
 {
 
@@ -549,14 +572,21 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
 
     const myCorrect =currentPlayerRole === "host" ? hostCorrect : guestCorrect;
 
-            if (myCorrect) 
-            {
-                playSfx("correct");
-            }
-            else 
-            {
-                playSfx("wrong");
-            }
+    const myAnswer = currentPlayerRole === "host" ? hostAnswer : guestAnswer;
+    
+    if (myCorrect) 
+    {
+        playSfx("correct");
+    }
+    else 
+    {
+        playSfx("wrong");
+                
+        if (myAnswer.optionId !== "TIMEOUT") 
+        {
+            savePvpWrongQuestion(match, questionIndex);
+        }
+     }
 
     /*
         Player cards
@@ -580,7 +610,7 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
 
     const buttons = pvpAnswers.querySelectorAll(".answer-button");
 
-    const myAnswer = currentPlayerRole === "host" ? hostAnswer : guestAnswer;
+    /*const myAnswer = currentPlayerRole === "host" ? hostAnswer : guestAnswer;*/
 
     buttons.forEach(button => 
         {
@@ -1814,10 +1844,17 @@ async function handlePvpTimeout()
 
     try 
     {
-        await submitRoomAnswer(currentPvpRoom.match.currentQuestion,"TIMEOUT");
+        const match = currentPvpRoom.match;
+        const questionIndex = match.currentQuestion || 0;
+    
+        await submitRoomAnswer(questionIndex, "TIMEOUT");
+    
+        savePvpWrongQuestion(match, questionIndex);
+    
+        console.log("[REVIEW] PvP timeout saved:",match.questionIds[questionIndex]);
     }
     catch (error) 
     {
-        console.error("[PVP] Timeout submit error:",error);
+        console.error("[PVP] Timeout submit error:", error);
     }
 }
