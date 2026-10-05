@@ -62,6 +62,13 @@
             ☰
         </button>
 
+        <!-- REVIEW -->
+        <button id="reviewFloatingButton" class="review-header-button hidden" type="button">
+            <span class="review-floating-icon">↻</span>
+            <span class="review-floating-label">REVIEW</span>
+            <span id="reviewFloatingCount" class="review-floating-count">0</span>
+        </button>
+
         <!-- LANGUAGE -->
         <div class="top-language">
             <span class="top-language-icon">
@@ -1501,21 +1508,6 @@
     <audio id="wrongSound" src="assets/audio/sfx/wrong.mp3"></audio>
 
     <audio id="gameoverSound" src="assets/audio/sfx/gameover.mp3"></audio>
-
-    <!-- =========================================================
-        REVIEW FLOATING BUTTON
-        ========================================================= -->
-
-    <button id="reviewFloatingButton" class="review-floating-button hidden" type="button">
-        <span class="review-floating-icon">↻</span>
-        <span class="review-floating-label">
-            REVIEW
-        </span>
-
-        <span id="reviewFloatingCount" class="review-floating-count">
-            0
-        </span>
-    </button>
 
     <script type="module" src="js/main.js"></script>
 
