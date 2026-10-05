@@ -103,7 +103,7 @@ export async function initFlashcard(config)
         Load database
     */
 
-    await loadFlashcardDatabase(config.target);
+    await loadFlashcardDatabase(config);
 
     /*
         Random toàn bộ deck
@@ -134,26 +134,41 @@ export async function initFlashcard(config)
    DATABASE
    ============================================================= */
 
-async function loadFlashcardDatabase(level)
+async function loadFlashcardDatabase(config) 
 {
-    /*
-        Giữ cùng đường dẫn database hiện tại.
-    */
+    let file = null;
 
-    const file = `data/${level.toLowerCase()}.json`;
+    if (config.studyMode === "jlpt" && config.category === "vocabulary") 
+    {
+        file = `data/${config.target.toLowerCase()}.json`;
+    }
+    else if (config.studyMode === "jlpt" && config.category === "grammar") 
+    {
+        file = `data/grammar/${config.target.toLowerCase()}.json`;
+    }
+    else if (config.studyMode === "topic" && config.category === "vocabulary") 
+    {
+        file = `data/topics/${config.target.toLowerCase()}.json`;
+    }
+
+    if (!file) 
+    {
+        throw new Error("FLASHCARD_DATABASE_NOT_FOUND");
+    }
+
+    console.log("[FLASHCARD] Loading:", file);
 
     const response = await fetch(file);
 
-    if (!response.ok)
+    if (!response.ok) 
     {
-        throw new Error("FLASHCARD_DATABASE_LOAD_FAILED");
+        throw new Error(`FLASHCARD_DATABASE_LOAD_FAILED: ${file}`);
     }
 
     flashcardDatabase = await response.json();
 
-    console.log("[FLASHCARD] Database loaded:",level,flashcardDatabase.length);
+    console.log("[FLASHCARD] Database loaded:",config.studyMode,config.target,config.category,flashcardDatabase.length);
 }
-
 
 /* =============================================================
    SHOW CARD
