@@ -522,86 +522,62 @@ button {
     }
 
 }
-
-
-
-
 /* =========================================================
-   REVIEW FLOATING BUTTON
+   REVIEW HEADER
    ========================================================= */
-
-.review-floating-button {
-    position: fixed;
-    right: 18px;
-    bottom: calc(18px + env(safe-area-inset-bottom));
-    z-index: 900;
-
+.review-header-button {
+    height: 40px;
+    padding: 0 7px 0 11px;
     display: flex;
     align-items: center;
-    gap: 7px;
-
-    height: 46px;
-    padding: 0 9px 0 14px;
-
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 24px;
-
-    background: rgba(18, 22, 32, 0.92);
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    background: rgba(18, 22, 32, 0.78);
     color: #fff;
-
     font-family: inherit;
-    font-weight: 700;
-
     cursor: pointer;
-
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    transition: transform 0.15s ease, opacity 0.15s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
-.review-floating-button:hover {
-    transform: translateY(-2px);
+.review-header-button:hover {
+    background: rgba(255, 255, 255, 0.12);
 }
 
-.review-floating-button:active {
-    transform: scale(0.96);
+.review-header-button:active {
+    transform: scale(.96);
+}
+
+.review-header-button.hidden {
+    display: none;
 }
 
 .review-floating-icon {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1;
 }
 
 .review-floating-label {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
-    letter-spacing: 0.8px;
+    letter-spacing: .5px;
 }
 
 .review-floating-count {
-    min-width: 26px;
-    height: 26px;
-    padding: 0 7px;
-
+    min-width: 23px;
+    height: 23px;
+    padding: 0 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border-radius: 13px;
-
+    border-radius: 12px;
     background: #fff;
     color: #111;
-
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
 }
 
-.review-floating-button.hidden {
-    display: none;
-}
 
 
 /* =========================================================
