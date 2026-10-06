@@ -214,7 +214,7 @@ function showFlashcard()
     /*
         FRONT
     */
-    const question =getQuestionText(data,flashcardConfig.subMode);
+    const question = getQuestionText(data,flashcardConfig.subMode,flashcardConfig.category);
 
     if (flashcardQuestion)
     {
@@ -225,7 +225,7 @@ function showFlashcard()
         BACK
     */
 
-    const back = getFlashcardBack(data,flashcardConfig.subMode);
+   const back = getFlashcardBack(data,flashcardConfig.subMode,flashcardConfig.category);
 
     if (flashcardPrimary)
     {
