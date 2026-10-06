@@ -127,6 +127,11 @@
 /* ============================================================
    SELECTOR
    ============================================================ */
+.selector-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+}
 
 .selector-section {
     margin-bottom: 14px;
