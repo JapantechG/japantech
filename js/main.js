@@ -48,6 +48,8 @@ import {getReviewCount} from "./user.js";
 
 import { startReview } from "./review.js";
 
+import "./info.js";
+
 /* =========================================
    I18N
 ========================================= */
