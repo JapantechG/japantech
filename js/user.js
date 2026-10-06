@@ -297,7 +297,7 @@ function createDefaultUserData(user,batlingoId)
 
             totalPlayTime: 0,
 
-            reviewCount: 0
+            reviewCount: 0,
 
             spare01: 0,
             spare02: 0,
