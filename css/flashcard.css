@@ -344,6 +344,14 @@
 
 @media (max-width: 600px) {
 
+    .flashcard-nav-button {
+        display: none;
+    }
+
+    .flashcard-navigation {
+        gap: 0;
+    }
+
     .flashcard-header {
         padding-left: 14px;
         padding-right: 14px;
