@@ -21,35 +21,36 @@ export function isAudioMode(mode)
 /**
  * Lấy nội dung hiển thị ở phía QUESTION.
  */
-export function getQuestionText(data,mode)
-{
-    if (!data) 
+export function getQuestionText(data, mode, category = "vocabulary") {
+    if (!data) return "";
+
+    if (category === "grammar") 
     {
-        return "";
+        switch (mode) 
+        {
+            case "grammar_meaning":
+            case "grammar_sentence":
+            default:
+                return data.grammar ?? "";
+        }
     }
 
-    switch (mode)
+    switch (mode) 
     {
-        /*Kanji → Hiragana*/
         case "kanji_hiragana":
             return data.word;
 
-        /*Hiragana → Meaning*/
         case "hiragana_meaning":
             return data.reading;
 
-        /*Meaning → Kanji*/
         case "meaning_kanji":
             return data.meaning;
 
-        /*Audio modes*/
         case "audio_hiragana":
         case "audio_meaning":
         case "audio_kanji":
-
             return "🔊";
 
-        /* Default: Kanji → Meaning*/
         default:
             return data.word;
     }
@@ -116,7 +117,7 @@ export function getAnswerText(data,mode)
  *
  * Không phụ thuộc UI.
  */
-export function getFlashcardBack(data,mode)
+export function getFlashcardBack(data, mode, category = "vocabulary")
 {
     if (!data)
     {
@@ -126,6 +127,28 @@ export function getFlashcardBack(data,mode)
             extra: ""
         };
     }
+
+   if (category === "grammar") 
+   {
+       const examples = data.examples ?? [];
+   
+       if (mode === "grammar_sentence") 
+       {
+           const example = examples[Math.floor(Math.random() * examples.length)];
+   
+           return {
+               primary: data.reading ?? "",
+               secondary: example?.sentence ?? "",
+               extra: example?.translation ?? ""
+           };
+       }
+   
+       return {
+           primary: data.reading ?? "",
+           secondary: data.meaning ?? "",
+           extra: ""
+       };
+   }
 
     switch (mode)
     {
