@@ -29,7 +29,6 @@ from "./progression.js";
 
 export const USER_SCHEMA_VERSION = 1;
 
-
 /* =========================================================
    BATLINGO ID
 
@@ -741,98 +740,125 @@ function getReviewGroupKey(config)
    SAVE WRONG QUESTION
    ============================================================= */
 
-export async function saveWrongQuestion(questionId, config, source = "solo") 
-{
+export async function saveWrongQuestion(questionId, config, source = "solo") {
     const user = auth.currentUser;
+    const MAX_REVIEW_ITEMS = 50;
 
-    if (!user) 
-    {
+    if (!user) {
         console.warn("[REVIEW] User not logged in.");
-        return;
+        return false;
     }
 
-    if (questionId === undefined || questionId === null) 
-    {
+    if (questionId === undefined || questionId === null) {
         console.warn("[REVIEW] Invalid question ID.");
-        return;
+        return false;
     }
 
-    if (!config) 
-    {
+    if (!config) {
         console.warn("[REVIEW] Missing config.");
-        return;
+        return false;
     }
 
     const groupKey = getReviewGroupKey(config);
+    const groupPath = `users/${user.uid}/review/${groupKey}`;
+    const configRef = ref(db, `${groupPath}/config`);
+    const itemRef = ref(db, `${groupPath}/items/${questionId}`);
+    const countRef = ref(db, `users/${user.uid}/stats/reviewCount`);
 
-    const configRef = ref(db,`users/${user.uid}/review/${groupKey}/config`);
+    try {
+        /* ---------------------------------------------------------
+           CHECK ITEM
+           --------------------------------------------------------- */
 
-    const itemRef = ref(db,`users/${user.uid}/review/${groupKey}/items/${questionId}`);
+        const itemSnapshot = await get(itemRef);
 
-    /* ---------------------------------------------------------
-       CREATE GROUP CONFIG
-       Chỉ tạo nếu config của group chưa tồn tại
-       --------------------------------------------------------- */
+        /* ---------------------------------------------------------
+           ITEM ĐÃ TỒN TẠI
+           → luôn update, kể cả Review đang 50/50
+           --------------------------------------------------------- */
 
-    const configSnapshot = await get(configRef);
+        if (itemSnapshot.exists()) {
+            await runTransaction(itemRef, current => {
+                if (!current) return current;
 
-    if (!configSnapshot.exists()) 
-    {
-        await set(configRef, 
-        {
-            studyMode: config.studyMode,
-            target: config.target,
-            category: config.category,
-            subMode: config.subMode
+                return {
+                    ...current,
+                    wrongCount: (current.wrongCount || 0) + 1,
+                    wrongSolo: (current.wrongSolo || 0) + (source === "solo" ? 1 : 0),
+                    wrongPvp: (current.wrongPvp || 0) + (source === "pvp" ? 1 : 0),
+                    correctStreak: 0,
+                    lastWrongAt: Date.now()
+                };
+            });
+
+            window.dispatchEvent(new CustomEvent("batlingo-review-changed"));
+
+            console.log("[REVIEW] Existing item updated:", groupKey, questionId);
+            return true;
+        }
+
+        /* ---------------------------------------------------------
+           ITEM MỚI
+           → kiểm tra giới hạn 50
+           --------------------------------------------------------- */
+
+        const countSnapshot = await get(countRef);
+        const reviewCount = Number(countSnapshot.val()) || 0;
+
+        if (reviewCount >= MAX_REVIEW_ITEMS) {
+            console.log(`[REVIEW] Queue full: ${reviewCount}/${MAX_REVIEW_ITEMS}`);
+            return false;
+        }
+
+        /* ---------------------------------------------------------
+           CREATE GROUP CONFIG
+           Chỉ tạo khi thực sự thêm item mới
+           --------------------------------------------------------- */
+
+        const configSnapshot = await get(configRef);
+
+        if (!configSnapshot.exists()) {
+            await set(configRef, {
+                studyMode: config.studyMode,
+                target: config.target,
+                category: config.category,
+                subMode: config.subMode
+            });
+        }
+
+        /* ---------------------------------------------------------
+           CREATE NEW ITEM
+           --------------------------------------------------------- */
+
+        await set(itemRef, {
+            wrongCount: 1,
+            wrongSolo: source === "solo" ? 1 : 0,
+            wrongPvp: source === "pvp" ? 1 : 0,
+            correctStreak: 0,
+            lastWrongAt: Date.now()
         });
+
+        /* ---------------------------------------------------------
+           REVIEW COUNT
+           --------------------------------------------------------- */
+
+        await runTransaction(countRef, current => {
+            return Math.min((current || 0) + 1, MAX_REVIEW_ITEMS);
+        });
+
+        /* ---------------------------------------------------------
+           NOTIFY UI
+           --------------------------------------------------------- */
+
+        window.dispatchEvent(new CustomEvent("batlingo-review-changed"));
+
+        console.log("[REVIEW] New item saved:", groupKey, questionId);
+        return true;
     }
-
-    /* ---------------------------------------------------------
-       CREATE / UPDATE WRONG ITEM
-       --------------------------------------------------------- */
-      let isNewItem = false;
-         
-      await runTransaction(itemRef, current => 
-      {
-          if (!current) {
-              isNewItem = true;
-      
-              return {
-                  wrongCount: 1,
-                  wrongSolo: source === "solo" ? 1 : 0,
-                  wrongPvp: source === "pvp" ? 1 : 0,
-                  correctStreak: 0,
-                  lastWrongAt: Date.now()
-              };
-          }
-      
-          return {
-              ...current,
-              wrongCount: (current.wrongCount || 0) + 1,
-              wrongSolo: (current.wrongSolo || 0) + (source === "solo" ? 1 : 0),
-              wrongPvp: (current.wrongPvp || 0) + (source === "pvp" ? 1 : 0),
-              correctStreak: 0,
-              lastWrongAt: Date.now()
-          };
-      });
-
-      if (isNewItem) 
-      {
-          const countRef = ref(db, `users/${user.uid}/stats/reviewCount`);
-      
-          await runTransaction(countRef, current => {
-              return (current || 0) + 1;
-          });
-      }
-
-    /* ---------------------------------------------------------
-       NOTIFY UI
-       Sau này dùng để update REVIEW badge
-       --------------------------------------------------------- */
-
-    window.dispatchEvent(new CustomEvent("batlingo-review-changed"));
-
-    console.log("[REVIEW] Wrong question saved:",groupKey,questionId);
+    catch (error) {
+        console.error("[REVIEW] Save wrong question failed:", error);
+        return false;
+    }
 }
 
 /* =============================================================
