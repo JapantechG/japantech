@@ -525,7 +525,7 @@ async function updateReviewBadge() {
         return;
     }
 
-    // Hiện nút ngay lập tức
+    // Hiện ngay: ↻ REVIEW ···
     reviewFloatingButton.classList.remove("hidden");
     reviewFloatingCount.textContent = "...";
 
