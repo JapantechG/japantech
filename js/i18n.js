@@ -69,12 +69,26 @@ const translations = {
             vi: "BẮT ĐẦU"
         }
     },
+   
+      learningLanguage: {
+       ja: "学習言語",
+       en: "LEARNING LANGUAGE",
+       zh: "学习语言",
+       vi: "NGÔN NGỮ HỌC"
+   },
+   
+   languageJapanese: {
+       ja: "🇯🇵 日本語",
+       en: "🇯🇵 JAPANESE",
+       zh: "🇯🇵 日语",
+       vi: "🇯🇵 TIẾNG NHẬT"
+   },
 
 
     /* =====================================================
        BATTLE MODE
     ===================================================== */
-
+      
     battleMode: {
         solo: {
             ja: "ソロバトル",
