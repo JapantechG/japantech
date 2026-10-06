@@ -67,22 +67,23 @@ const translations = {
             en: "BATTLE",
             zh: "开始对战",
             vi: "BẮT ĐẦU"
-        }
+        },
+       learningLanguage: {
+          ja: "学習言語",
+          en: "LEARNING LANGUAGE",
+          zh: "学习语言",
+          vi: "NGÔN NGỮ HỌC"
+        },
+   
+      languageJapanese: {
+             ja: "🇯🇵 日本語",
+             en: "🇯🇵 JAPANESE",
+             zh: "🇯🇵 日语",
+             vi: "🇯🇵 TIẾNG NHẬT"
+       }
     },
    
-      learningLanguage: {
-       ja: "学習言語",
-       en: "LEARNING LANGUAGE",
-       zh: "学习语言",
-       vi: "NGÔN NGỮ HỌC"
-   },
-   
-   languageJapanese: {
-       ja: "🇯🇵 日本語",
-       en: "🇯🇵 JAPANESE",
-       zh: "🇯🇵 日语",
-       vi: "🇯🇵 TIẾNG NHẬT"
-   },
+      
 
 
     /* =====================================================
