@@ -516,29 +516,37 @@ window.addEventListener("batlingo-profile-updated",event =>
    REVIEW BADGE
    ============================================================= */
 
-async function updateReviewBadge() 
-{
+async function updateReviewBadge() {
     if (!reviewFloatingButton || !reviewFloatingCount) return;
 
-    try 
-    {
+    if (!window.currentUser) {
+        reviewFloatingButton.classList.add("hidden");
+        reviewFloatingCount.textContent = "0";
+        return;
+    }
+
+    // Hiện nút ngay lập tức
+    reviewFloatingButton.classList.remove("hidden");
+    reviewFloatingCount.textContent = "...";
+
+    try {
         const count = await getReviewCount();
+
+        // Trong lúc await user có thể đã logout
+        if (!window.currentUser) {
+            reviewFloatingButton.classList.add("hidden");
+            return;
+        }
 
         reviewFloatingCount.textContent = count;
 
-        if (count > 0) 
-        {
-            reviewFloatingButton.classList.remove("hidden");
-        } 
-        else 
-        {
+        // Không có câu cần ôn → ẩn Review
+        if (count <= 0) {
             reviewFloatingButton.classList.add("hidden");
         }
-    } 
-    catch (error) 
-    {
-        console.error("[REVIEW] Failed to load review count:", error);
-
+    }
+    catch (error) {
+        console.error("[REVIEW] Count failed:", error);
         reviewFloatingButton.classList.add("hidden");
     }
 }
