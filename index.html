@@ -750,47 +750,57 @@
         </span>
         </button>
 
-        <div id="flashcard" class="flashcard">
-
-            <!-- =========================
-                 FRONT
-                 ========================= -->
-
-            <div id="flashcardFront" class="flashcard-face flashcard-front">
-
-                <div id="flashcardQuestion" class="flashcard-question">
-                    促進
+        <div class="flashcard-navigation">
+            <button id="flashcardPrevButton" class="flashcard-nav-button flashcard-nav-prev" type="button" aria-label="Previous card">
+                ‹
+            </button>
+                
+            <div id="flashcard" class="flashcard">
+    
+                <!-- =========================
+                     FRONT
+                     ========================= -->
+    
+                <div id="flashcardFront" class="flashcard-face flashcard-front">
+    
+                    <div id="flashcardQuestion" class="flashcard-question">
+                        促進
+                    </div>
+    
+                    <div class="flashcard-tap-hint">
+                        TAP TO REVEAL
+                    </div>
+    
                 </div>
-
-                <div class="flashcard-tap-hint">
-                    TAP TO REVEAL
+    
+                <!-- =========================
+                     BACK
+                     ========================= -->
+                <div id="flashcardBack" class="flashcard-face flashcard-back hidden">
+    
+                    <button class="flashcard-audio-button" data-flashcard-audio type="button" aria-label="Play audio">
+                        🔊
+                    </button>
+    
+                    <div id="flashcardPrimary" class="flashcard-primary">
+                        そくしん
+                    </div>
+    
+                    <div id="flashcardSecondary" class="flashcard-secondary">
+                        thúc đẩy, xúc tiến
+                    </div>
+    
+    
+                    <div id="flashcardExtra" class="flashcard-extra">
+                    </div>
+    
                 </div>
-
+    
             </div>
-
-            <!-- =========================
-                 BACK
-                 ========================= -->
-            <div id="flashcardBack" class="flashcard-face flashcard-back hidden">
-
-                <button class="flashcard-audio-button" data-flashcard-audio type="button" aria-label="Play audio">
-                    🔊
-                </button>
-
-                <div id="flashcardPrimary" class="flashcard-primary">
-                    そくしん
-                </div>
-
-                <div id="flashcardSecondary" class="flashcard-secondary">
-                    thúc đẩy, xúc tiến
-                </div>
-
-
-                <div id="flashcardExtra" class="flashcard-extra">
-                </div>
-
-            </div>
-
+    
+            <button id="flashcardNextButton" class="flashcard-nav-button flashcard-nav-next" type="button" aria-label="Next card">
+                    ›
+            </button>
         </div>
 
         <!-- =================================================
