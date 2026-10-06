@@ -297,6 +297,8 @@ function createDefaultUserData(user,batlingoId)
 
             totalPlayTime: 0,
 
+            reviewCount: 0
+
             spare01: 0,
             spare02: 0,
             spare03: 0,
@@ -729,7 +731,8 @@ export async function saveSoloResult({score,questions,correct,wrong,bestCombo})
    REVIEW - WRONG QUESTIONS
    ============================================================= */
 
-function getReviewGroupKey(config) {
+function getReviewGroupKey(config) 
+{
     return `${config.studyMode}_${config.target}_${config.category}_${config.subMode}`;
 }
 
@@ -738,7 +741,8 @@ function getReviewGroupKey(config) {
    SAVE WRONG QUESTION
    ============================================================= */
 
-export async function saveWrongQuestion(questionId, config, source = "solo") {
+export async function saveWrongQuestion(questionId, config, source = "solo") 
+{
     const user = auth.currentUser;
 
     if (!user) 
@@ -786,29 +790,40 @@ export async function saveWrongQuestion(questionId, config, source = "solo") {
     /* ---------------------------------------------------------
        CREATE / UPDATE WRONG ITEM
        --------------------------------------------------------- */
+      let isNewItem = false;
+         
+      await runTransaction(itemRef, current => 
+      {
+          if (!current) {
+              isNewItem = true;
+      
+              return {
+                  wrongCount: 1,
+                  wrongSolo: source === "solo" ? 1 : 0,
+                  wrongPvp: source === "pvp" ? 1 : 0,
+                  correctStreak: 0,
+                  lastWrongAt: Date.now()
+              };
+          }
+      
+          return {
+              ...current,
+              wrongCount: (current.wrongCount || 0) + 1,
+              wrongSolo: (current.wrongSolo || 0) + (source === "solo" ? 1 : 0),
+              wrongPvp: (current.wrongPvp || 0) + (source === "pvp" ? 1 : 0),
+              correctStreak: 0,
+              lastWrongAt: Date.now()
+          };
+      });
 
-    await runTransaction(itemRef, current => 
-    {
-        if (!current) 
-        {
-            return {
-                wrongCount: 1,
-                wrongSolo: source === "solo" ? 1 : 0,
-                wrongPvp: source === "pvp" ? 1 : 0,
-                correctStreak: 0,
-                lastWrongAt: Date.now()
-            };
-        }
-
-        return {
-            ...current,
-            wrongCount: (current.wrongCount || 0) + 1,
-            wrongSolo: (current.wrongSolo || 0) + (source === "solo" ? 1 : 0),
-            wrongPvp: (current.wrongPvp || 0) + (source === "pvp" ? 1 : 0),
-            correctStreak: 0,
-            lastWrongAt: Date.now()
-        };
-    });
+      if (isNewItem) 
+      {
+          const countRef = ref(db, `users/${user.uid}/stats/reviewCount`);
+      
+          await runTransaction(countRef, current => {
+              return (current || 0) + 1;
+          });
+      }
 
     /* ---------------------------------------------------------
        NOTIFY UI
@@ -829,20 +844,7 @@ export async function getReviewCount()
     const user = auth.currentUser;
     if (!user) return 0;
 
-    const reviewRef = ref(db, `users/${user.uid}/review`);
-    const snapshot = await get(reviewRef);
-
-    if (!snapshot.exists()) return 0;
-
-    const reviewData = snapshot.val();
-    let count = 0;
-
-    Object.values(reviewData).forEach(group => {
-        if (!group.items) return;
-        count += Object.keys(group.items).length;
-    });
-
-    return count;
+    return await ensureReviewCount();
 }
 
 /* =============================================================
@@ -910,6 +912,15 @@ export async function markReviewCorrect(groupKey, questionId) {
         };
     });
 
+   if (mastered) 
+   {
+       const countRef = ref(db, `users/${user.uid}/stats/reviewCount`);
+   
+       await runTransaction(countRef, current => {
+           return Math.max(0, (current || 0) - 1);
+       });
+   }
+
     window.dispatchEvent(new CustomEvent("batlingo-review-changed"));
 
     return {
@@ -941,4 +952,36 @@ export async function markReviewWrong(groupKey, questionId) {
             lastReviewAt: Date.now()
         };
     });
+}
+
+export async function ensureReviewCount() {
+    const user = auth.currentUser;
+    if (!user) return 0;
+
+    const countRef = ref(db, `users/${user.uid}/stats/reviewCount`);
+    const countSnapshot = await get(countRef);
+
+    if (countSnapshot.exists()) {
+        return countSnapshot.val() || 0;
+    }
+
+    const reviewRef = ref(db, `users/${user.uid}/review`);
+    const reviewSnapshot = await get(reviewRef);
+
+    let count = 0;
+
+    if (reviewSnapshot.exists()) {
+        const reviewData = reviewSnapshot.val();
+
+        Object.values(reviewData).forEach(group => {
+            if (!group.items) return;
+            count += Object.keys(group.items).length;
+        });
+    }
+
+    await set(countRef, count);
+
+    console.log("[REVIEW] reviewCount initialized:", count);
+
+    return count;
 }
