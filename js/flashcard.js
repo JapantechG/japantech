@@ -889,3 +889,34 @@ function finishFlashcardSwipe(direction)
         requestAnimationFrame(() => {flashcard.style.transition = "";});
     }, 200);
 }
+
+document.getElementById("flashcardPrevButton")?.addEventListener("click", event => {
+    event.stopPropagation();
+    if (flashcardAutoMode) return;
+    swipePreviousFlashcard();
+});
+
+document.getElementById("flashcardNextButton")?.addEventListener("click", event => {
+    event.stopPropagation();
+    if (flashcardAutoMode) return;
+    swipeNextFlashcard();
+});
+
+document.addEventListener("keydown", event => {
+    if (!flashcardActive || flashcardAutoMode) return;
+
+    if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        swipePreviousFlashcard();
+    }
+
+    if (event.key === "ArrowRight") {
+        event.preventDefault();
+        swipeNextFlashcard();
+    }
+
+    if (event.code === "Space") {
+        event.preventDefault();
+        toggleFlashcard();
+    }
+});
