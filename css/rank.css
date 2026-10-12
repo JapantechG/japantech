@@ -1,0 +1,93 @@
+/* Ranked screen uses the existing BatLingo lobby background */
+.rank-screen{position:relative;min-height:100dvh;display:flex;justify-content:center;align-items:center;padding:75px 16px 35px;background:#080d17 url('../assets/images/backgrounds/lobby-bg.png') center/cover no-repeat;color:#f8fafc;isolation:isolate}
+.rank-screen::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(3,8,18,.65),rgba(3,8,18,.86));z-index:-1}
+.rank-container{width:min(100%,540px);display:grid;gap:16px;text-align:center}
+.rank-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.rank-header h1{font-size:clamp(19px,5vw,26px);letter-spacing:2px;color:#fbbf24;margin:0}
+.rank-back{width:44px;height:44px;border:1px solid #334155;border-radius:12px;background:#111827;color:white;font-size:23px;cursor:pointer}
+.rank-season{font-size:11px;letter-spacing:1.4px;color:#94a3b8}
+.rank-card{padding:26px 20px;border:1px solid rgba(245,158,11,.35);border-radius:20px;background:rgba(15,23,42,.88);box-shadow:0 12px 35px rgba(0,0,0,.3)}
+.rank-badge{font-size:64px;line-height:1.3}
+.rank-tier{font-size:28px;font-weight:900;color:#fbbf24;letter-spacing:2px}
+.rank-rating{font-size:30px;font-weight:900;margin:7px 0}
+.rank-muted{font-size:12px;color:#94a3b8}
+.rank-progress{height:10px;background:#334155;border-radius:99px;overflow:hidden;margin:15px 0 7px}
+.rank-progress-fill{height:100%;width:0;background:linear-gradient(90deg,#d97706,#fbbf24);border-radius:99px;transition:width .3s}
+.rank-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.rank-stat{padding:16px 8px;background:rgba(15,23,42,.9);border:1px solid #334155;border-radius:14px}
+.rank-stat strong{display:block;font-size:23px}
+.rank-stat span{font-size:10px;color:#94a3b8;letter-spacing:1px}
+.rank-action{width:100%;min-height:54px;border:0;border-radius:13px;background:linear-gradient(135deg,#f59e0b,#b45309);font-size:17px;font-weight:900;color:#fff;cursor:pointer}
+.rank-secondary{background:rgba(15,23,42,.88);border:1px solid #475569;color:#f8fafc}
+.rank-notice{min-height:22px;font-size:12px;color:#fbbf24;line-height:1.5}
+@media(max-width:480px){.rank-container{gap:12px}.rank-card{padding:20px 16px}.rank-badge{font-size:54px}.rank-tier{font-size:24px}}
+
+.rank-screen.hidden{display:none!important}
+
+.rank-accept-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.rank-accept-overlay.hidden {
+    display: none;
+}
+
+.rank-accept-card {
+    width: min(100%, 390px);
+    padding: 30px 22px;
+    text-align: center;
+    background: #111827;
+    color: #f8fafc;
+    border: 2px solid #fbbf24;
+    border-radius: 20px;
+    box-shadow: 0 0 45px rgba(251, 191, 36, 0.15);
+}
+
+.rank-accept-card h2 {
+    color: #fbbf24;
+    margin-bottom: 16px;
+}
+
+.rank-accept-timer {
+    font-size: 64px;
+    font-weight: 900;
+    color: #fbbf24;
+    margin: 16px 0;
+}
+
+.rank-accept-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.rank-accept-actions button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#rankAcceptButton {
+    background: #22c55e;
+    color: #052e16;
+}
+
+#rankDeclineButton {
+    background: #ef4444;
+    color: white;
+}
+
+#rankAcceptButton:disabled {
+    opacity: 0.5;
+    cursor: default;
+}

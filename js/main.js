@@ -49,12 +49,18 @@ import {getReviewCount} from "./user.js";
 import { startReview } from "./review.js";
 
 import "./info.js";
+import { initRank, openRank } from "./rank.js";
+import { initLeaderboard } from "./leaderboard.js";
+import { initRankedGame } from "./ranked-game.js";
 
 /* =========================================
    I18N
 ========================================= */
 
 initI18n();
+initRank();
+initRankedGame();
+initLeaderboard();
 
 /* =============================================================
    DOM
@@ -175,6 +181,9 @@ initLobby(
         flashcardScreen.classList.remove("hidden");
 
         initFlashcard(config);
+    },
+    onRank: config => {
+        openRank(config, { back: () => playLobbyMusic() });
     }
 
 }

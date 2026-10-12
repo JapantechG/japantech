@@ -27,6 +27,10 @@ const battleModes = [
     {
         id: "flashcard",
         name: "FLASHCARD"
+    },
+    {   
+        id: "rank", 
+        name: "RANKED BATTLE" 
     }
 ];
 
@@ -253,7 +257,7 @@ function getTargets()
 /* =============================================================
    INIT
    ============================================================= */
-export function initLobby({onSolo,onPvp,onFlashcard}) 
+export function initLobby({onSolo,onPvp,onFlashcard, onRank}) 
 {
     /* BATTLE MODE */
     document.getElementById("battleModeNext").addEventListener("click",() => 
@@ -408,6 +412,14 @@ export function initLobby({onSolo,onPvp,onFlashcard})
                 return;
             }
 
+            /*RANK*/
+            if (config.battleMode === "rank") 
+            {
+                 onRank?.(config);
+                 
+                return;
+             }
+                
         }
     );
 }
