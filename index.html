@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/pvp.css">
     <link rel="stylesheet" href="./css/auth.css">
@@ -36,6 +37,7 @@
     <link rel="stylesheet" href="css/rank.css">
     <link rel="stylesheet" href="css/leaderboard.css">
     <link rel="stylesheet" href="css/ranked-game.css">
+    <link rel="stylesheet" href="css/mascot.css">
 </head>
 
 <body>
@@ -62,13 +64,6 @@
         <!-- MENU -->
         <button id="menuButton" class="top-action-btn menu-button" type="button" aria-label="Menu">
             ☰
-        </button>
-
-        <!-- REVIEW -->
-        <button id="reviewFloatingButton" class="review-header-button hidden" type="button">
-            <span class="review-floating-icon">↻</span>
-            <span class="review-floating-label">REVIEW</span>
-            <span id="reviewFloatingCount" class="review-floating-count">0</span>
         </button>
 
         <!-- LANGUAGE -->
@@ -428,8 +423,234 @@
 
     </div>
 </section>
+        
+<!-- =========================================
+     NEW HOME SCREEN
+========================================= -->
 
-        <div class="setup-container">
+<div id="homeScreen" class="bat-home">
+
+    <!-- PLAYER STATUS -->
+    <section class="bat-home-player">
+
+        <div class="bat-home-player-top">
+
+            <div class="bat-home-player-name">
+                <span class="bat-home-player-icon">✦</span>
+                <strong id="batHomePlayerName">PLAYER</strong>
+            </div>
+
+            <span id="batHomePlayerLevel"
+                  class="bat-home-player-level">
+                LV. 1
+            </span>
+
+        </div>
+
+        <div class="bat-home-exp-track">
+            <div id="batHomeExpFill"
+                 class="bat-home-exp-fill"></div>
+        </div>
+
+        <div class="bat-home-exp-bottom">
+            <span>EXP</span>
+            <span id="batHomeExpText">0 / 100</span>
+        </div>
+
+    </section>
+
+    <!-- BRAND -->
+    <section class="bat-home-brand">
+
+        <div class="bat-home-logo">
+            BAT<span>LINGO</span>
+        </div>
+
+        <p>LANGUAGE BATTLE ARENA</p>
+
+    </section>
+
+    <!-- LEARNING LANGUAGE -->
+    <section class="bat-home-language">
+
+        <div class="bat-home-label"
+             data-i18n="home.learningLanguage">
+            LEARNING LANGUAGE
+        </div>
+
+        <button id="batHomeLanguageBtn"
+                class="bat-home-language-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="batHomeLanguageOptions">
+
+            <span class="bat-home-flag">🇯🇵</span>
+
+            <strong data-i18n="home.languageJapanese">
+                JAPANESE
+            </strong>
+
+            <span class="bat-home-language-chevron">⌄</span>
+
+        </button>
+
+        <div id="batHomeLanguageOptions"
+             class="bat-home-language-options hidden">
+
+            <div class="bat-home-language-option selected">
+                <span>🇯🇵</span>
+                <strong>JAPANESE</strong>
+                <span class="bat-home-language-check">✓</span>
+            </div>
+
+            <div class="bat-home-language-option unavailable">
+                <span>🇺🇸</span>
+                <strong>ENGLISH</strong>
+                <small>SOON</small>
+            </div>
+
+            <div class="bat-home-language-option unavailable">
+                <span>🇨🇳</span>
+                <strong>CHINESE</strong>
+                <small>SOON</small>
+            </div>
+
+            <div class="bat-home-language-option unavailable">
+                <span>🇻🇳</span>
+                <strong>VIETNAMESE</strong>
+                <small>SOON</small>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GAME MODES -->
+    <section class="bat-home-modes">
+
+        <div class="bat-home-label">GAME MODES</div>
+
+        <div class="bat-home-mode-grid">
+
+            <button class="bat-home-mode-card bat-mode-solo"
+                    data-home-mode="solo"
+                    type="button">
+
+                <span class="bat-home-mode-icon">⚡</span>
+                <strong>SOLO</strong>
+                <small>Practice & Challenge</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+            <button class="bat-home-mode-card bat-mode-flashcard"
+                    data-home-mode="flashcard"
+                    type="button">
+
+                <span class="bat-home-mode-icon">▤</span>
+                <strong>FLASHCARD</strong>
+                <small>Learn & Memorize</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+            <button class="bat-home-mode-card bat-mode-pvp"
+                    data-home-mode="pvp"
+                    type="button">
+
+                <span class="bat-home-mode-icon">⚔</span>
+                <strong>1V1 BATTLE</strong>
+                <small>Challenge Friends</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+            <button class="bat-home-mode-card bat-mode-rank"
+                    data-home-mode="rank"
+                    type="button">
+
+                <span class="bat-home-mode-icon">🏆</span>
+                <strong>RANKED</strong>
+                <small>Climb the Ranks</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK ACCESS -->
+    <section class="bat-home-quick">
+
+        <div class="bat-home-label">QUICK ACCESS</div>
+
+        <div class="bat-home-quick-grid">
+
+            <button id="batHomeLeaderboard"
+                    class="bat-home-quick-item"
+                    type="button">
+                <span>🏆</span>
+                <small>LEADERBOARD</small>
+            </button>
+
+            <!-- REVIEW -->
+            <button id="batHomeReview"
+                    class="bat-home-quick-item"
+                    type="button">
+
+                <span>↻</span>
+
+                <small>REVIEW</small>
+
+                <span id="batHomeReviewCount"
+                    class="bat-home-review-count hidden">
+                    0
+                </span>
+
+            </button>
+
+            <button id="batHomeFriends"
+                    class="bat-home-quick-item"
+                    type="button"
+                    disabled>
+                <span>👥</span>
+                <small>FRIENDS</small>
+                <em>SOON</em>
+            </button>
+
+            <button id="batHomeMore"
+                    class="bat-home-quick-item"
+                    type="button"
+                    disabled>
+                <span>⋯</span>
+                <small>MORE</small>
+                <em>SOON</em>
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+        <div id="configScreen" class="setup-container hidden">
+            
+            <div class="bat-config-header">
+                <button id="batConfigBackBtn"
+                        class="bat-config-back"
+                        type="button"
+                        aria-label="Back to Home">
+                    ←
+                </button>
+
+                <span id="batConfigModeTitle">
+                    SOLO BATTLE
+                </span>
+
+                <div class="bat-config-spacer"></div>
+            </div>
+
             <div class="game-logo">
                 BAT<span>LINGO</span>
             </div>
@@ -1667,6 +1888,192 @@
         </div>
     </div>
 </section>
+
+
+
+<!-- ==========================================
+     MASCOT FIRST SELECTION - BATLINGO
+========================================== -->
+<section id="mascotScreen"
+         class="mascot-screen hidden"
+         aria-label="Choose your Mascot">
+
+    <div class="mascot-container">
+
+        <!-- HEADER -->
+        <header class="mascot-header">
+            <span class="mascot-subtitle">
+                WELCOME TO BATLINGO
+            </span>
+
+            <h1>CHOOSE YOUR MASCOT</h1>
+
+            <p>
+                Chọn người bạn đồng hành trong
+                hành trình học tập!
+            </p>
+        </header>
+
+        <!-- MASCOT CARDS -->
+        <div class="mascot-selection">
+
+            <!-- MONKEY -->
+            <button type="button"
+                    class="mascot-card monkey"
+                    data-mascot="monkey"
+                    aria-pressed="false">
+
+                <span class="mascot-selected-icon">✓</span>
+
+                <div class="mascot-image-wrapper">
+                    <img class="mascot-image"
+                         alt="Monkey Mascot"
+                         hidden>
+
+                    <span class="mascot-fallback"
+                          aria-hidden="true">🐒</span>
+                </div>
+
+                <span class="mascot-card-name">
+                    MONKEY
+                </span>
+
+                <span class="mascot-card-type">
+                    Linh hoạt • Thông minh
+                </span>
+
+            </button>
+
+            <!-- BUFFALO -->
+            <button type="button"
+                    class="mascot-card buffalo"
+                    data-mascot="buffalo"
+                    aria-pressed="false">
+
+                <span class="mascot-selected-icon">✓</span>
+
+                <div class="mascot-image-wrapper">
+                    <img class="mascot-image"
+                         src="assets/mascot/buffalo.png"
+                         alt="Buffalo Mascot"
+                         hidden>
+
+                    <span class="mascot-fallback"
+                          aria-hidden="true">🐃</span>
+                </div>
+
+                <span class="mascot-card-name">
+                    BUFFALO
+                </span>
+
+                <span class="mascot-card-type">
+                    Mạnh mẽ • Kiên trì
+                </span>
+
+            </button>
+
+        </div>
+
+        <!-- MASCOT INFORMATION -->
+        <div id="mascotDetails"
+             class="mascot-details hidden"
+             aria-live="polite">
+
+            <span id="mascotDetailsTitle"
+                  class="mascot-details-title"></span>
+
+            <h2 id="mascotDetailsName"></h2>
+
+            <p id="mascotDetailsText"
+               class="mascot-description"></p>
+
+            <div id="mascotDetailsTraits"
+                 class="mascot-traits"></div>
+
+            <!-- DEFAULT SKILL -->
+            <div class="mascot-skill-box">
+
+                <span class="mascot-skill-label">
+                    DEFAULT SKILL
+                </span>
+
+                <h3 id="mascotSkillName"></h3>
+
+                <p id="mascotSkillDescription"></p>
+
+                <span class="mascot-skill-note">
+                    Kỹ năng chỉ có hiệu lực
+                    trong chế độ Solo
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- OK -->
+        <button id="mascotOkBtn"
+                class="mascot-ok-btn"
+                type="button"
+                disabled>
+            OK – CONFIRM
+        </button>
+
+        <p class="mascot-footer-note">
+            Mascot khởi đầu chỉ được chọn một lần.
+        </p>
+
+        <p id="mascotMessage"
+           class="mascot-message"
+           role="status"
+           aria-live="polite"></p>
+
+    </div>
+
+    <!-- CONFIRMATION POPUP -->
+    <div id="mascotConfirm"
+         class="mascot-confirm hidden">
+
+        <div class="mascot-confirm-panel"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="mascotConfirmTitle">
+
+            <div id="mascotConfirmIcon"
+                 class="mascot-confirm-icon">★</div>
+
+            <h2 id="mascotConfirmTitle">
+                CONFIRM YOUR MASCOT
+            </h2>
+
+            <p id="mascotConfirmText"></p>
+
+            <p class="mascot-confirm-warning">
+                Sau khi xác nhận, bạn không thể
+                thay đổi Mascot khởi đầu.
+            </p>
+
+            <div class="mascot-confirm-buttons">
+
+                <button id="mascotCancelBtn"
+                        class="mascot-cancel-btn"
+                        type="button">
+                    QUAY LẠI
+                </button>
+
+                <button id="mascotSaveBtn"
+                        class="mascot-save-btn"
+                        type="button">
+                    XÁC NHẬN
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
 
     <!-- =====================================================
          AUDIO

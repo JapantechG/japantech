@@ -110,21 +110,46 @@ export function openRank(config = {}, { back } = {}) {
   }
   activeConfig = { ...config };
   backCallback = typeof back === 'function' ? back : null;
+
   $('setupScreen')?.classList.add('hidden');
   $('rankScreen')?.classList.remove('hidden');
+  
   if ($('rankNotice')) $('rankNotice').textContent = '';
   renderRank();
 }
 
+
 export async function closeRank() {
-  hideAcceptPopup();
-  if (isRankSearching()) {
-    try { await cancelRankSearch(); } catch (error) { console.error('[RANK] Cancel:', error); }
-  }
-  $('rankScreen')?.classList.add('hidden');
-  $('setupScreen')?.classList.remove('hidden');
-  backCallback?.();
+
+    hideAcceptPopup();
+
+    // Hide Ranked immediately
+    $("rankScreen")?.classList.add("hidden");
+
+    // Cancel active matchmaking
+    if (isRankSearching()) {
+        try {
+            await cancelRankSearch();
+        } catch (error) {
+            console.error("[RANK] Cancel:", error);
+        }
+    }
+
+    // Return to Home via main.js
+    if (backCallback) {
+
+        backCallback();
+
+    } else {
+
+        $("setupScreen")?.classList.remove("hidden");
+
+        $("homeScreen")?.classList.remove("hidden");
+
+        $("configScreen")?.classList.add("hidden");
+    }
 }
+
 
 export function initRank() {
   if (initialized) return;
@@ -190,34 +215,43 @@ if (detail.type === 'accept_required') {
 
     // Stage 3: openRankedGame(detail)
   } 
-  else if (detail.type === 'searching') 
-  {
-      findButton.textContent = 'CANCEL SEARCH';
-      if ($('rankNotice')) $('rankNotice').textContent = 'Đang tìm đối thủ cùng cấu hình, chênh lệch Elo tối đa ±200...';
-    } else if (detail.type === 'cancelled' || detail.type === 'expired') 
-    {
+  
+else if (detail.type === "searching") {
+
+    findButton.textContent = "CANCEL SEARCH";
+
+    if ($("rankNotice")) {
+        $("rankNotice").textContent =
+            "Đang tìm đối thủ cùng cấu hình, chênh lệch Elo tối đa ±200...";
+    }
+
+} else if (
+    detail.type === "cancelled" ||
+    detail.type === "expired"
+) {
+
     hideAcceptPopup();
-    findButton.textContent = '⚔ FIND MATCH';
 
-    if ($('rankNotice')) {
-        $('rankNotice').textContent = 'MATCH FOUND!';
+    findButton.textContent = "⚔ FIND MATCH";
+
+    if ($("rankNotice")) {
+        $("rankNotice").textContent =
+            detail.type === "expired"
+                ? "Hàng chờ đã hết hạn."
+                : "Đã hủy tìm trận.";
     }
 
-    openRankedGame({
-        matchId: detail.matchId,
-        role: detail.role,
-        opponentUid: detail.opponentUid,
-        group: detail.group
-    });
+} else if (detail.type === "error") {
 
-  } else if (detail.type === 'cancelled' || detail.type === 'expired') {
-      findButton.textContent = '⚔ FIND MATCH';
-      if ($('rankNotice')) $('rankNotice').textContent = detail.type === 'expired' ? 'Hàng chờ đã hết hạn.' : 'Đã hủy tìm trận.';
-    } else if (detail.type === 'error') {
-      hideAcceptPopup();
-      findButton.textContent = '⚔ FIND MATCH';
-      if ($('rankNotice')) $('rankNotice').textContent = `Matchmaking error: ${detail.message}`;
+    hideAcceptPopup();
+
+    findButton.textContent = "⚔ FIND MATCH";
+
+    if ($("rankNotice")) {
+        $("rankNotice").textContent =
+            `Matchmaking error: ${detail.message}`;
     }
+  }
   });
 
   

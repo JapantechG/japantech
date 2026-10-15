@@ -52,9 +52,9 @@ function openAuth()
 }
 
 
-function closeAuth() 
+function closeAuth()
 {
-    authScreen.classList.add("hidden");
+    authScreen?.classList.add("hidden");
 }
 
 
@@ -172,18 +172,45 @@ window.BatLingoAuthUI =
     showPanel: showAuthPanel
 };
 
+
 /* =========================================
    LOGIN SUCCESS
+   Firebase Auth thành công nhưng có thể
+   vẫn đang kiểm tra Mascot.
 ========================================= */
 
-window.addEventListener("batlingo-login-success",() => {
+window.addEventListener("batlingo-login-success", () => {
+
+    console.log("[AUTH UI] Login successful");
+
+    // Đóng form Login để chuẩn bị chọn Mascot.
+    // Chưa coi quá trình khởi tạo tài khoản là hoàn tất.
+    closeAuth();
+});
+
+
+/* =========================================
+   AUTH STATE - USER READY
+========================================= */
+
+window.addEventListener("batlingo-auth-state", event => {
+
+    const { loggedIn, databaseError } = event.detail || {};
+
+    if (loggedIn) {
+
+        console.log("[AUTH UI] User and Mascot ready");
 
         closeAuth();
+        return;
     }
-);
 
-window.addEventListener("batlingo-login-success",() => {
+    if (databaseError) {
 
-        closeAuth();
+        console.error("[AUTH UI] Database initialization failed");
+
+        // Có thể hiển thị lại Login và thông báo lỗi.
+        // Không tự đăng xuất hoặc xóa Firebase data.
     }
-);
+
+});

@@ -659,3 +659,7 @@
     z-index: 2;
 }
 
+/* Home / Configuration shared shell */
+.setup-screen {
+    overflow: visible;
+}

@@ -21,6 +21,12 @@ import {
     ensureUserProfile
 } from "./user.js";
 
+import {
+    initMascot,
+    ensureMascotSelected,
+    cancelMascotFlow
+} from "./mascot.js";
+
 /* =========================================================
    ELEMENTS
 ========================================================= */
@@ -385,137 +391,168 @@ function getAuthErrorMessage(code)
     }
 }
 
+
 /* =========================================================
-   AUTH STATE
+   AUTH STATE + MASCOT INITIALIZATION
 ========================================================= */
 
-onAuthStateChanged(auth,async user => 
-   {
-        /* =========================================
-           LOGGED IN
-        ========================================= */
+// Khởi tạo giao diện Mascot một lần.
+initMascot();
 
-        if (user && user.emailVerified) 
-        {
-            console.log("[AUTH] Signed in:",user.uid);
+// Mã phiên để tránh callback đăng nhập cũ chạy sau logout.
+let authStateVersion = 0;
 
-            try 
-            {
-                /* =================================
-                   CREATE / LOAD BATLINGO USER
+onAuthStateChanged(auth, async user => {
 
-                   New account:
-                   → Create users/{uid}
-                   → Create BLG ID
+    const version = ++authStateVersion;
 
-                   Existing account:
-                   → Load existing data
-                   → Keep EXP / ELO / wallet...
-                ================================= */
+    /* =========================================
+       LOGGED IN + EMAIL VERIFIED
+    ========================================= */
 
-                const userData = await ensureUserProfile(user);
+    if (user && user.emailVerified) {
 
-                console.log("[USER] BatLingo ID:",userData.profile.batlingoId);
+        console.log("[AUTH] Signed in:", user.uid);
 
-                /*
-                    Global user
+        try {
+            /* =================================
+               STEP 1: LOAD USER PROFILE
+            ================================= */
 
-                    Sau này game.js / pvp.js /
-                    profile UI có thể sử dụng.
-                */
+            const userData = await ensureUserProfile(user);
 
-                window.currentUser = user;
-
-                window.currentUserData = userData;
-
-                /* =================================
-                   NOTIFY UI
-                ================================= */
-
-                window.dispatchEvent(new CustomEvent("batlingo-auth-state",
-                        {
-                            detail: {
-                                loggedIn: true,
-
-                                uid:
-                                    user.uid,
-
-                                batlingoId:
-                                    userData
-                                        .profile
-                                        .batlingoId,
-
-                                email:
-                                    user.email,
-
-                                displayName:
-                                    userData
-                                        .profile
-                                        .displayName,
-
-                                photoURL:
-                                    userData
-                                        .profile
-                                        .photoURL,
-
-                                userData:
-                                    userData
-                            }
-                        }
-                    )
-                );
-
-            }
-            catch (error) 
-            {
-                console.error("[USER] Failed to load user:",error);
-
-                /*
-                    Auth thành công nhưng
-                    BatLingo database lỗi.
-
-                    Không cho app hiểu nhầm
-                    user đã sẵn sàng.
-                */
-
-                window.currentUser = null;
-
-                window.currentUserData = null;
-
-                window.dispatchEvent( new CustomEvent("batlingo-auth-state",
-                        {
-                            detail: {
-                                loggedIn: false,
-                                databaseError: true
-                            }
-                        }
-                    )
-                );
+            // Nếu đã logout hoặc đổi tài khoản trong khi tải.
+            if (
+                version !== authStateVersion ||
+                auth.currentUser?.uid !== user.uid
+            ) {
+                return;
             }
 
-            return;
+            console.log(
+                "[USER] BatLingo ID:",
+                userData.profile.batlingoId
+            );
+
+            window.currentUser = user;
+            window.currentUserData = userData;
+
+            /* =================================
+               STEP 2: CHECK MASCOT
+            ================================= */
+
+            console.log("[MASCOT] Checking:", user.uid);
+
+            const mascot = await ensureMascotSelected(user.uid);
+
+            // Nếu phiên đăng nhập đã thay đổi.
+            if (
+                version !== authStateVersion ||
+                auth.currentUser?.uid !== user.uid
+            ) {
+                return;
+            }
+
+            if (!mascot) {
+                console.warn("[MASCOT] Selection not completed");
+                return;
+            }
+
+            console.log("[MASCOT] Ready:", mascot.id);
+
+            /* =================================
+               STEP 3: SYNC USER DATA
+            ================================= */
+
+            window.currentUserData ??= {};
+
+            window.currentUserData.mascot = mascot;
+
+            // Cập nhật object được truyền vào sự kiện.
+            userData.mascot = mascot;
+
+            /* =================================
+               STEP 4: NOTIFY UI
+            ================================= */
+
+            window.dispatchEvent(
+                new CustomEvent("batlingo-auth-state", {
+                    detail: {
+                        loggedIn: true,
+
+                        uid: user.uid,
+
+                        batlingoId:
+                            userData.profile.batlingoId,
+
+                        email: user.email,
+
+                        displayName:
+                            userData.profile.displayName,
+
+                        photoURL:
+                            userData.profile.photoURL,
+
+                        userData: userData
+                    }
+                })
+            );
+
+            console.log("[AUTH] User and Mascot ready");
+
+        } catch (error) {
+
+            if (
+                version !== authStateVersion ||
+                auth.currentUser?.uid !== user.uid
+            ) {
+                return;
+            }
+
+            console.error(
+                "[AUTH] Failed to initialize user:",
+                error
+            );
+
+            cancelMascotFlow();
+
+            window.currentUser = null;
+            window.currentUserData = null;
+
+            window.dispatchEvent(
+                new CustomEvent("batlingo-auth-state", {
+                    detail: {
+                        loggedIn: false,
+                        databaseError: true
+                    }
+                })
+            );
         }
 
-        /* =========================================
-           LOGGED OUT
-        ========================================= */
-
-        console.log("[AUTH] Signed out");
-
-        window.currentUser = null;
-
-        window.currentUserData = null;
-
-        window.dispatchEvent(new CustomEvent("batlingo-auth-state",
-                {
-                    detail: {
-                        loggedIn: false
-                    }
-                }
-            )
-        );
+        return;
     }
-);
+
+    /* =========================================
+       LOGGED OUT / EMAIL NOT VERIFIED
+    ========================================= */
+
+    console.log("[AUTH] Signed out or not verified");
+
+    cancelMascotFlow();
+
+    window.currentUser = null;
+    window.currentUserData = null;
+
+    window.dispatchEvent(
+        new CustomEvent("batlingo-auth-state", {
+            detail: {
+                loggedIn: false
+            }
+        })
+    );
+
+});
+
 
 async function resendVerificationEmail() 
 {

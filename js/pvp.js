@@ -20,6 +20,8 @@ import {
 import { saveWrongQuestion } from "./user.js";
 
 /* =============================================================
+   PVP STATE
+   ============================================================= */
 let pvpDatabase = [];
 
 let currentConfig = null;
@@ -728,6 +730,15 @@ window.addEventListener("batlingo-room-update",event =>
     {
 
         const {roomCode,playerRole,room} = event.detail;
+
+        console.log("[PVP DEBUG]", {
+                roomCode,
+                playerRole,
+                host: room?.host,
+                guest: room?.guest,
+                status: room?.status
+                });
+
         const hostName = room.host?.name || "Host";
         const guestName = room.guest?.name || "Guest";
 
@@ -740,6 +751,8 @@ window.addEventListener("batlingo-room-update",event =>
         currentPvpRoom = room;
 
         currentPlayerRole =playerRole;
+
+        updateStartBattleButton();
 
         const opponentConnected = playerRole === "host" ? room.guest?.connected === true : room.host?.connected === true;
 
@@ -855,52 +868,35 @@ window.addEventListener("batlingo-room-update",event =>
         }
 
 
-        /* =====================================================
-           BOTH CONNECTED
-           ===================================================== */
+                /* =========================================
+        BOTH PLAYERS CONNECTED
+        ========================================= */
 
-        if (room.host?.connected === true && room.guest?.connected === true) 
-        {
-
+        if (
+            room.host?.connected === true &&
+            room.guest?.connected === true
+        ) {
             console.log("[PVP] Both players connected.");
+            console.log(room.host.name, "VS", room.guest.name);
 
+            waitingMessage.textContent =
+                playerRole === "host"
+                    ? "OPPONENT READY"
+                    : "WAITING FOR HOST...";
+        }
 
-            console.log(room.host.name,"VS",room.guest.name);
+                /* HOST ĐÃ BẤM START*/
 
-              if (playerRole === "host") 
-              {
+                if (room.status === "playing" && room.match) 
+                {
 
-                    startBattleButton.classList.remove("hidden");
+                    console.log("[PVP] GAME START!");
 
-                    waitingMessage.textContent = "OPPONENT READY";
+                    startPvpMatch(room);
 
                 }
-                else {
-
-                    startBattleButton.classList.add("hidden");
-
-                    waitingMessage.textContent = "WAITING FOR HOST...";
-
-                    }
-        }
-        
-        if (room.guest?.connected !== true) 
-        {
-            startBattleButton.classList.add("hidden");
-        }
-
-          /* HOST ĐÃ BẤM START*/
-
-        if (room.status === "playing" && room.match) 
-        {
-
-            console.log("[PVP] GAME START!");
-
-              startPvpMatch(room);
-
-        }
-    }
-);
+            }
+        );
 
 function getCurrentPlayerRole() {
 
@@ -1174,39 +1170,6 @@ function getQuestionById(
 }
 
 /* =============================================================
-   GENERATE ROOM CODE
-   ============================================================= */
-
-/*##function generateRoomCode() {
-
-    const chars =
-        "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-
-
-    let code = "";
-
-
-    for (
-        let i = 0;
-        i < 4;
-        i++
-    ) {
-
-        code +=
-            chars[
-                Math.floor(
-                    Math.random()
-                    *
-                    chars.length
-                )
-            ];
-    }
-
-
-    return code;
-}*/
-
-/* =============================================================
    CREATE ROOM
    ============================================================= */
 
@@ -1314,31 +1277,41 @@ document.getElementById("joinRoomButton").addEventListener("click",async () => {
 /* =============================================================
    OPEN WAITING ROOM
    ============================================================= */
+function updateStartBattleButton() {
 
-function openWaitingRoom(
-    roomCode
-) {
+    const room = currentPvpRoom;
 
-    roomSelectPanel.classList.add(
-        "hidden"
+    const canStart =
+        currentPlayerRole === "host" &&
+        (room?.status === "waiting" ||
+         room?.status === "connected") &&
+        room.host?.connected === true &&
+        room.guest?.connected === true;
+
+    startBattleButton.disabled = !canStart;
+
+    startBattleButton.classList.toggle(
+        "hidden",
+        !canStart
     );
 
+    console.log("[PVP] START BUTTON:", {
+        role: currentPlayerRole,
+        status: room?.status,
+        hostConnected: room?.host?.connected,
+        guestConnected: room?.guest?.connected,
+        canStart
+    });
+}
 
-    waitingRoomPanel.classList.remove(
-        "hidden"
-    );
+function openWaitingRoom(roomCode) {
 
+    roomSelectPanel.classList.add("hidden");
+    waitingRoomPanel.classList.remove("hidden");
 
-    currentRoomCode.textContent =
-        roomCode;
+    currentRoomCode.textContent = roomCode;
 
-    /* START button state */
-
-    startBattleButton.disabled = false;
-
-    startBattleButton.classList.add(
-        "hidden"
-    );
+    updateStartBattleButton();
 }
 
 
@@ -1403,16 +1376,7 @@ function resetPvpScreen() {
 
     currentRoomCode.textContent = "----";
 
-     /* Reset PVP state*/
-      /*
-        Nếu đã tạo biến này
-    */
-
-    if (typeof currentMatchId !== "undefined"
-    )
-    {
-        currentMatchId = null;
-    }
+    /* Reset PVP state */
 
     currentPvpRoom = null;
     currentPlayerRole = null;
@@ -1420,12 +1384,7 @@ function resetPvpScreen() {
 
     displayedQuestionIndex = -1;
 
-    currentPvpRoom = null;
-
-    currentPlayerRole = null;
-
     answerLocked = false;
-
     revealStarted = false;
 
      /*

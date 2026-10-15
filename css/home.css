@@ -1,0 +1,484 @@
+
+/* ==========================================
+   BATLINGO HOME
+   Independent styles
+========================================== */
+
+.bat-home {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 660px);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    padding: 12px 0 28px;
+}
+
+.bat-home.hidden {
+    display: none !important;
+}
+
+/* PLAYER */
+
+.bat-home-player {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    background: rgba(15, 23, 42, .88);
+    backdrop-filter: blur(12px);
+}
+
+.bat-home-player-top,
+.bat-home-exp-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bat-home-player-name {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    font-size: 13px;
+}
+
+.bat-home-player-name strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bat-home-player-icon,
+.bat-home-player-level {
+    color: #fbbf24;
+    font-weight: 900;
+}
+
+.bat-home-exp-track {
+    height: 8px;
+    margin-top: 13px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #334155;
+}
+
+.bat-home-exp-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    transition: width .3s ease;
+}
+
+.bat-home-exp-bottom {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* BRAND */
+
+.bat-home-brand {
+    text-align: center;
+    padding: 2px 0;
+}
+
+.bat-home-logo {
+    font-size: clamp(36px, 9vw, 58px);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.bat-home-logo span {
+    color: #f59e0b;
+}
+
+.bat-home-brand p {
+    margin: 6px 0 0;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #94a3b8;
+}
+
+/* LANGUAGE */
+
+.bat-home-label {
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #cbd5e1;
+}
+
+.bat-home-language {
+    position: relative;
+}
+
+.bat-home-language-btn {
+    width: 100%;
+    min-height: 57px;
+    padding: 11px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border: 1px solid #334155;
+    border-radius: 13px;
+    background: rgba(15, 23, 42, .92);
+    color: white;
+    cursor: pointer;
+}
+
+.bat-home-flag {
+    font-size: 26px;
+}
+
+.bat-home-language-btn strong {
+    flex: 1;
+    text-align: left;
+    font-size: 15px;
+}
+
+.bat-home-language-chevron {
+    font-size: 22px;
+    transition: transform .2s;
+}
+
+.bat-home-language-btn[aria-expanded="true"]
+.bat-home-language-chevron {
+    transform: rotate(180deg);
+}
+
+.bat-home-language-options {
+    position: absolute;
+    z-index: 80;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+
+    padding: 7px;
+    border: 1px solid #334155;
+    border-radius: 13px;
+    background: #111c30;
+    box-shadow: 0 15px 35px rgba(0,0,0,.4);
+}
+
+.bat-home-language-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.bat-home-language-option > span:first-child {
+    font-size: 22px;
+}
+
+.bat-home-language-option.selected {
+    background: rgba(59,130,246,.16);
+}
+
+.bat-home-language-check,
+.bat-home-language-option small {
+    margin-left: auto;
+}
+
+.bat-home-language-check {
+    color: #60a5fa;
+}
+
+.bat-home-language-option.unavailable {
+    opacity: .45;
+}
+
+/* GAME MODES */
+
+.bat-home-mode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.bat-home-mode-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    min-width: 0;
+    min-height: 157px;
+    padding: 19px;
+
+    border: 1px solid #334155;
+    border-radius: 15px;
+    background: rgba(15, 23, 42, .90);
+
+    color: white;
+    text-align: left;
+    cursor: pointer;
+
+    transition:
+        transform .18s ease,
+        border-color .18s ease,
+        box-shadow .18s ease;
+}
+
+.bat-home-mode-card:hover {
+    transform: translateY(-3px);
+    border-color: #64748b;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+}
+
+.bat-home-mode-card:active {
+    transform: scale(.98);
+}
+
+.bat-home-mode-icon {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 6px;
+    border-radius: 12px;
+
+    font-size: 23px;
+    color: white;
+}
+
+.bat-mode-solo .bat-home-mode-icon {
+    background: #2563eb;
+}
+
+.bat-mode-flashcard .bat-home-mode-icon {
+    background: #059669;
+}
+
+.bat-mode-pvp .bat-home-mode-icon {
+    background: #d97706;
+}
+
+.bat-mode-rank .bat-home-mode-icon {
+    background: #7c3aed;
+}
+
+.bat-home-mode-card strong {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.bat-home-mode-card small {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.bat-home-mode-arrow {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    color: #64748b;
+    font-size: 20px;
+}
+
+/* QUICK ACCESS */
+
+.bat-home-quick {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.bat-home-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 10px;
+}
+
+.bat-home-quick-item {
+    position: relative;
+    min-width: 0;
+    min-height: 92px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+    background: rgba(15,23,42,.85);
+    color: white;
+    cursor: pointer;
+}
+
+.bat-home-quick-item > span:first-child {
+    font-size: 25px;
+    color: #fbbf24;
+}
+
+.bat-home-quick-item small {
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.bat-home-quick-item:hover:not(:disabled) {
+    background: #1e293b;
+}
+
+.bat-home-quick-item:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.bat-home-quick-item em {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 8px;
+    font-style: normal;
+    color: #94a3b8;
+}
+
+/* CONFIGURATION */
+
+.bat-config-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.bat-config-back {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #334155;
+    border-radius: 11px;
+    background: #0f172a;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#batConfigModeTitle {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.bat-config-spacer {
+    width: 40px;
+}
+
+/* Hide old Battle Mode on Config only */
+
+#configScreen > .selector-section:has(#battleModeValue) {
+    display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .bat-home {
+        gap: 19px;
+        padding-top: 8px;
+    }
+
+    .bat-home-mode-grid {
+        gap: 10px;
+    }
+
+    .bat-home-mode-card {
+        min-height: 145px;
+        padding: 14px;
+    }
+
+    .bat-home-mode-card strong {
+        font-size: 13px;
+    }
+
+    .bat-home-mode-card small {
+        font-size: 11px;
+    }
+
+    .bat-home-quick-grid {
+        gap: 6px;
+    }
+
+    .bat-home-quick-item {
+        min-height: 78px;
+    }
+
+    .bat-home-quick-item small {
+        font-size: 9px;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bat-home-mode-card,
+    .bat-home-exp-fill,
+    .bat-home-language-chevron {
+        transition: none;
+    }
+}
+
+#configScreen.hidden {
+    display: none !important;
+}
+
+/* ==========================================
+   QUICK ACCESS - REVIEW COUNT
+========================================== */
+
+.bat-home-quick-item {
+    position: relative;
+}
+
+/* ==========================================
+   QUICK ACCESS - REVIEW COUNT
+========================================== */
+
+.bat-home-review-count {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+
+    min-width: 22px;
+    height: 22px;
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 23, 42, 0.65);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+
+    box-sizing: border-box;
+}
+
+.bat-home-review-count.hidden {
+    display: none !important;
+}

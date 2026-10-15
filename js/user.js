@@ -236,34 +236,23 @@ function createDefaultUserData(user,batlingoId)
         },
 
 
+      
         /* =========================
-           CHARACTER
+        CHARACTER / COSMETIC
         ========================= */
 
         character: {
-
-            characterId:
-                "monkey",
-
-            characterName:
-                "",
-
-            skinId:
-                "default",
-
-            avatarId:
-                "default",
-
-            frameId:
-                "default",
-
-            titleId:
-                "",
-
+            characterId: "",       // Không mặc định Monkey
+            characterName: "",
+            skinId: "default",
+            avatarId: "default",
+            frameId: "default",
+            titleId: "",
             spare01: "",
             spare02: "",
             spare03: ""
         },
+
 
 
         /* =========================
@@ -395,108 +384,154 @@ function createDefaultUserData(user,batlingoId)
 }
 
 
+
 /* =========================================================
-   ENSURE USER PROFILE
+   ENSURE USER PROFILE - MASCOT COMPATIBLE
 
-   Đây là function chính.
+   New user:
+     - Allocate BatLingo ID
+     - Create default user data
+     - Do NOT create Mascot automatically
 
-   Account mới:
-       → cấp BLG ID
-       → tạo database
-
-   Account cũ:
-       → KHÔNG reset
-       → update login info
+   Existing user:
+     - Load existing data
+     - Keep EXP, ELO, Wallet, Mascot...
+     - Update login info only
 ========================================================= */
 
-export async function ensureUserProfile(
-    user
-)
-{
-    if (!user?.uid) 
-    {
+export async function ensureUserProfile(user) {
+
+    if (!user?.uid) {
         throw new Error("USER_REQUIRED");
     }
 
-    const userRef =ref(db,`users/${user.uid}`);
+    const uid = user.uid;
+    const userRef = ref(db, `users/${uid}`);
 
-    const snapshot =await get(userRef);
+    console.log("[USER] Loading:", uid);
 
-    /* =====================================================
+    let snapshot = await get(userRef);
+
+    /* =========================================
        NEW USER
-    ===================================================== */
+    ========================================= */
 
-    if (!snapshot.exists()) 
-    {
-        console.log("[USER] Creating new user...");
+    if (!snapshot.exists()) {
+
+        console.log("[USER] Creating new account:", uid);
 
         const batlingoId = await allocateBatlingoId();
 
-        const userData = createDefaultUserData(user,batlingoId);
+        const defaultData = createDefaultUserData(
+            user,
+            batlingoId
+        );
 
-        await set(userRef,userData);
+        // Transaction prevents overwriting another
+        // initialization of the same account.
+        const result = await runTransaction(
+            userRef,
+            current => {
 
-        console.log("[USER] Created:",batlingoId);
+                // Another process created this user.
+                // Preserve the existing object.
+                if (current !== null) {
+                    return;
+                }
 
-        return userData;
+                return defaultData;
+            },
+            { applyLocally: false }
+        );
+
+        if (result.committed) {
+
+            console.log(
+                "[USER] Created:",
+                batlingoId
+            );
+
+            // Mascot intentionally does not exist yet.
+            // mascot.js will handle first-time selection.
+
+            return result.snapshot.val();
+        }
+
+        // Another request may have created the user.
+        snapshot = await get(userRef);
+
+        if (!snapshot.exists()) {
+            throw new Error("USER_CREATE_FAILED");
+        }
     }
 
-    /* =====================================================
+    /* =========================================
        EXISTING USER
-
-       Tuyệt đối KHÔNG set toàn bộ user.
-    ===================================================== */
+    ========================================= */
 
     const userData = snapshot.val();
+
+    if (!userData?.profile?.batlingoId) {
+        throw new Error("USER_PROFILE_INVALID");
+    }
 
     const now = Date.now();
 
     const updates = {
-
-        "profile/lastLoginAt":
-            now,
-
-        "system/lastUpdatedAt":
-            now
+        "profile/lastLoginAt": now,
+        "system/lastUpdatedAt": now
     };
 
-    /*
-        Google avatar/name có thể thay đổi.
-
-        Đồng bộ lại từ Firebase Auth.
-    */
-
-    if (user.photoURL) 
-    {
+    if (user.photoURL) {
         updates["profile/photoURL"] = user.photoURL;
     }
 
-    await update(userRef,updates);
+    // Update specific fields only.
+    // Never replace users/{uid} here.
+    await update(userRef, updates);
 
-    console.log("[USER] Loaded:",userData.profile?.batlingoId);
+    /* =========================================
+       SYNC LOCAL OBJECT
+    ========================================= */
 
-    /*
-        Update object local để dữ liệu
-        trả về khớp Firebase vừa update.
-    */
+    userData.profile.lastLoginAt = now;
 
-    if (userData.profile) 
-    {
-        userData.profile.lastLoginAt = now;
-
-        if (user.photoURL) 
-        {
-            userData.profile.photoURL = user.photoURL;
-        }
+    if (user.photoURL) {
+        userData.profile.photoURL = user.photoURL;
     }
 
-    if (userData.system) 
-    {
-        userData.system.lastUpdatedAt = now;
+    userData.system ??= {};
+    userData.system.lastUpdatedAt = now;
+
+    /* =========================================
+       MASCOT CHECK
+    ========================================= */
+
+    if (userData.mascot?.id) {
+
+        console.log(
+            "[USER] Existing Mascot:",
+            userData.mascot.id
+        );
+
+    } else {
+
+        console.log(
+            "[USER] No Mascot selected yet."
+        );
+
+        // Do not set a default Mascot.
+        // Do not copy character.characterId.
     }
+
+    console.log(
+        "[USER] Loaded:",
+        userData.profile.batlingoId
+    );
 
     return userData;
 }
+
 
 /* =========================================================
    UPDATE USER PROFILE
@@ -702,6 +737,21 @@ export async function saveSoloResult({score,questions,correct,wrong,bestCombo})
     ===================================================== */
 
     window.currentUserData = newUserData;
+
+    
+        /* ==========================================
+        NOTIFY HOME EXP UPDATED
+        ========================================== */
+
+        window.dispatchEvent(
+            new CustomEvent("batlingo-progress-updated", {
+                detail: {
+                    userData: newUserData,
+                    gainedExp
+                }
+            })
+        );
+
 
     console.log("[SOLO] Result saved:",
         {

@@ -173,6 +173,30 @@ let categoryIndex = 0;
 
 let subModeIndex = 0;
 
+
+// Set Battle Mode from new Home
+export function selectBattleMode(modeId) {
+
+    const index = battleModes.findIndex(
+        mode => mode.id === modeId
+    );
+
+    if (index === -1) {
+        console.warn("[LOBBY] Invalid mode:", modeId);
+        return false;
+    }
+
+    battleModeIndex = index;
+
+    // Update the existing selector value as well
+    if (battleModeValue) {
+        battleModeValue.textContent = battleModes[index].name;
+    }
+
+    return true;
+}
+
+
 /* =============================================================
    DOM
    ============================================================= */
@@ -253,6 +277,32 @@ function getTargets()
     }
     return topics;
 }
+
+
+// Reset configuration when opening a mode from Home
+export function resetLobbyConfig() {
+
+    studyModeIndex = 0;
+    studyTargetIndex = 4; // N1
+    categoryIndex = 0;
+    subModeIndex = 0;
+
+    const category = categories[categoryIndex];
+
+    studyModeValue.textContent =
+        studyModes[studyModeIndex].name;
+
+    studyTargetLabel.textContent = "JLPT LEVEL";
+
+    studyTargetValue.textContent =
+        jlptLevels[studyTargetIndex].name;
+
+    categoryValue.textContent = category.name;
+
+    subModeValue.textContent =
+        subModes[category.id][subModeIndex].name;
+}
+
 
 /* =============================================================
    INIT

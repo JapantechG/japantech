@@ -1,7 +1,17 @@
+
 import {
-    initLobby
-}
-from "./lobby.js";
+    initLobby,
+    selectBattleMode,
+    resetLobbyConfig
+} from "./lobby.js";
+
+import {
+    initHome,
+    showHome,
+    showConfiguration,
+    updateHomePlayer,
+    updateHomeReviewCount
+} from "./home.js";
 
 import {
     startGame
@@ -44,6 +54,12 @@ import {
 }
 from "./profile.js";
 
+import {
+    initMascot,
+    ensureMascotSelected,
+    cancelMascotFlow
+} from "./mascot.js";
+
 import {getReviewCount} from "./user.js";
 
 import { startReview } from "./review.js";
@@ -61,6 +77,7 @@ initI18n();
 initRank();
 initRankedGame();
 initLeaderboard();
+initMascot();
 
 /* =============================================================
    DOM
@@ -95,9 +112,6 @@ const flashcardScreen =document.getElementById("flashcardScreen");
 const userProfileBtn =document.getElementById("userProfileBtn");
 
 const profileBackBtn =document.getElementById("profileBackBtn");
-
-const reviewFloatingButton = document.getElementById("reviewFloatingButton");
-const reviewFloatingCount = document.getElementById("reviewFloatingCount");
 
 const reviewScreen = document.getElementById("reviewScreen");
 const reviewBackButton = document.getElementById("reviewBackButton");
@@ -183,38 +197,74 @@ initLobby(
         initFlashcard(config);
     },
     onRank: config => {
-        openRank(config, { back: () => playLobbyMusic() });
+        openRank(config, {
+            back: () => {
+                showHome();
+                playLobbyMusic();
+            }
+        });
     }
 
 }
 );
 
+
+/* ==========================================
+   NEW HOME INITIALIZATION
+========================================== */
+
+initHome({
+
+    onSelectMode: (modeId) => {
+
+        // Reset study configuration
+        resetLobbyConfig();
+
+        // Keep original battle mode logic
+        const selected = selectBattleMode(modeId);
+
+        if (!selected) return;
+
+        // Open existing configuration
+        showConfiguration(modeId);
+
+    }
+
+});
+
+
 /* =============================================================
    PVP BACK
    ============================================================= */
 
-document.getElementById("pvpBackButton").addEventListener("click",() => 
-    {
+
+document.getElementById("pvpBackButton")
+    .addEventListener("click", () => {
+
         pvpScreen.classList.add("hidden");
 
-        setupScreen.classList.remove("hidden");
+        showHome();
 
-    }
-    );
+        playLobbyMusic();
+    });
+
 
 /* =============================================================
    GAME OVER → LOBBY
    ============================================================= */
 
-document.getElementById("backLobbyButton").addEventListener("click",() => 
-    {
+
+document.getElementById("backLobbyButton")
+    .addEventListener("click", () => {
+
         gameOverScreen.classList.add("hidden");
 
-        setupScreen.classList.remove("hidden");
+        showHome();
 
         playLobbyMusic();
-    }
-    );
+    });
+
+
 
 /* =============================================================
    MENU
@@ -309,8 +359,20 @@ window.addEventListener("batlingo-auth-state",event =>
     {
         const {loggedIn,displayName,email,photoURL} = event.detail;
 
+        
+updateHomePlayer({
+    displayName: loggedIn
+        ? (displayName || email?.split("@")[0] || "PLAYER")
+        : "PLAYER"
+});
+/* ==========================================
+   UPDATE HOME LEVEL / EXP ON LOGIN
+========================================== */
+
         if (loggedIn) 
         {
+            updateHomePlayer(event.detail.userData);
+
             updateReviewBadge();
 
             /* Hide Login */
@@ -346,6 +408,9 @@ window.addEventListener("batlingo-auth-state",event =>
             }
             else 
             {
+
+                updateHomePlayer(null);
+
                 avatar.removeAttribute("src");
 
                 avatar.classList.add("hidden");
@@ -395,16 +460,12 @@ window.addEventListener("batlingo-auth-state",event =>
         }
         else 
         {
-            homeLoginBtn?.classList.remove("hidden");
+            ++reviewUpdateToken;
 
+            homeLoginBtn?.classList.remove("hidden");
             homeUserBtn?.classList.add("hidden");
 
-            reviewFloatingButton?.classList.add("hidden");
-
-            if (reviewFloatingCount) 
-            {
-                reviewFloatingCount.textContent = "0";
-            }
+            updateHomeReviewCount(0);
         }
 
     }
@@ -457,15 +518,19 @@ function requireLogin()
     return true;
 }
 
-window.addEventListener("batlingo-flashcard-close",() =>
-    {
+
+window.addEventListener(
+    "batlingo-flashcard-close",
+    () => {
+
         flashcardScreen.classList.add("hidden");
 
-        setupScreen.classList.remove("hidden");
+        showHome();
 
         playLobbyMusic();
     }
 );
+
 
 userProfileBtn?.addEventListener("click",() => 
     {
@@ -524,55 +589,110 @@ window.addEventListener("batlingo-profile-updated",event =>
 );
 
 /* =============================================================
-   REVIEW BADGE
+   HOME - REVIEW QUICK ACCESS
+   ============================================================= */
+
+let reviewUpdateToken = 0;
+
+/* =============================================================
+   UPDATE REVIEW COUNT
    ============================================================= */
 
 async function updateReviewBadge() {
-    if (!reviewFloatingButton || !reviewFloatingCount) return;
 
-    if (!window.currentUser) {
-        reviewFloatingButton.classList.add("hidden");
-        reviewFloatingCount.textContent = "0";
+    const token = ++reviewUpdateToken;
+
+    // Không đăng nhập
+    if (!auth.currentUser) {
+        updateHomeReviewCount(0);
         return;
     }
 
-    // Hiện ngay: ↻ REVIEW ···
-    reviewFloatingButton.classList.remove("hidden");
-    reviewFloatingCount.textContent = "...";
-
     try {
+
+        // Sử dụng dữ liệu Review hiện có
         const count = await getReviewCount();
 
-        // Trong lúc await user có thể đã logout
-        if (!window.currentUser) {
-            reviewFloatingButton.classList.add("hidden");
+        // Tránh kết quả Firebase cũ ghi đè
+        if (token !== reviewUpdateToken) return;
+
+        // Kiểm tra lại tài khoản sau await
+        if (!auth.currentUser) {
+            updateHomeReviewCount(0);
             return;
         }
 
-        reviewFloatingCount.textContent = count;
+        // Cập nhật bộ đếm Quick Access
+        updateHomeReviewCount(count);
 
-        // Không có câu cần ôn → ẩn Review
-        if (count <= 0) {
-            reviewFloatingButton.classList.add("hidden");
-        }
     }
     catch (error) {
-        console.error("[REVIEW] Count failed:", error);
-        reviewFloatingButton.classList.add("hidden");
+
+        console.error(
+            "[REVIEW] Count failed:",
+            error
+        );
+
+        if (token === reviewUpdateToken) {
+            updateHomeReviewCount(0);
+        }
     }
 }
 
-window.addEventListener("batlingo-review-changed", () => {updateReviewBadge();});
+/* =============================================================
+   REVIEW DATA CHANGED
+   ============================================================= */
 
-reviewFloatingButton?.addEventListener("click", async () => {
-    try {
-        const started = await startReview();
+window.addEventListener(
+    "batlingo-review-changed",
+    updateReviewBadge
+);
 
-        if (!started) {
-            updateReviewBadge();
+/* =============================================================
+   REVIEW QUICK ACCESS CLICK
+   ============================================================= */
+
+document.getElementById("batHomeReview")
+    ?.addEventListener("click", async () => {
+
+        if (!requireLogin()) return;
+
+        try {
+
+            const started = await startReview();
+
+            if (!started) {
+
+                console.log(
+                    "[REVIEW] No questions to review."
+                );
+
+                updateReviewBadge();
+            }
+
+        }
+        catch (error) {
+
+            console.error(
+                "[REVIEW] Start failed:",
+                error
+            );
         }
     }
-    catch (error) {
-        console.error("[REVIEW] Start failed:", error);
+);
+
+
+/* ==========================================
+   UPDATE HOME AFTER SOLO
+========================================== */
+
+window.addEventListener(
+    "batlingo-progress-updated",
+    event => {
+
+        updateHomePlayer(event.detail.userData);
+
     }
-});
+);
+
+updateHomePlayer(window.currentUserData);
