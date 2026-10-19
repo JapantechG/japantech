@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "context": "【音声スクリプト（デモ）】\n報告書は今日中に提出してください。印刷は不要で、電子メールに添付すれば結構です。",
+    "question": "報告書の提出方法は何ですか。",
+    "options": [
+      "メールに添付する",
+      "印刷して手渡す",
+      "郵送する",
+      "電話で伝える"
+    ],
+    "answer": 1,
+    "explanation": "Dữ liệu minh họa dạng transcript; cần thu âm và kiểm tra nội dung trước khi phát hành."
+  },
+  {
+    "id": 2,
+    "context": "【音声スクリプト（デモ）】\n予約した商品は来週の火曜日に届く予定です。到着したら担当者から連絡いたします。",
+    "question": "商品はいつ届く予定ですか。",
+    "options": [
+      "来週の火曜日",
+      "今週の火曜日",
+      "来週の木曜日",
+      "明日"
+    ],
+    "answer": 1,
+    "explanation": "Dữ liệu minh họa dạng transcript; cần thu âm và kiểm tra nội dung trước khi phát hành."
+  },
+  {
+    "id": 3,
+    "context": "【音声スクリプト（デモ）】\n駅前の工事により、いつものバス停は利用できません。臨時のバス停は交差点の先にあります。",
+    "question": "バスに乗る人はどこへ行きますか。",
+    "options": [
+      "交差点の先",
+      "いつものバス停",
+      "駅の構内",
+      "市役所の裏"
+    ],
+    "answer": 1,
+    "explanation": "Dữ liệu minh họa dạng transcript; cần thu âm và kiểm tra nội dung trước khi phát hành."
+  },
+  {
+    "id": 4,
+    "context": "【音声スクリプト（デモ）】\n会議は午後三時からの予定でしたが、担当者の都合で三時半に変更されました。",
+    "question": "会議は何時からですか。",
+    "options": [
+      "午後三時半",
+      "午後三時",
+      "午後二時半",
+      "午後四時"
+    ],
+    "answer": 1,
+    "explanation": "Dữ liệu minh họa dạng transcript; cần thu âm và kiểm tra nội dung trước khi phát hành."
+  },
+  {
+    "id": 5,
+    "context": "【音声スクリプト（デモ）】\n明日の見学会は雨でも行います。ただし、集合場所は正門から西側の入口に変わりました。",
+    "question": "参加者はどこに集合しますか。",
+    "options": [
+      "西側の入口",
+      "正門",
+      "駅の改札",
+      "会議室"
+    ],
+    "answer": 1,
+    "explanation": "Dữ liệu minh họa dạng transcript; cần thu âm và kiểm tra nội dung trước khi phát hành."
+  },
+  {
+    "id": 6,
+    "context": "【音声スクリプト（デモ）】\n報告書は今日中に提出してください。印刷は不要で、電子メールに添付すれば結構です。",
+    "question": "報告書の提出方法は何ですか。",
+    "options": [
+      "メールに添付する",
+      "印刷して手渡す",
+      "郵送する",
+      "電話で伝える"
+    ],
+    "answer": 1,
+    "explanation": "Dữ liệu minh họa dạng transcript; cần thu âm và kiểm tra nội dung trước khi phát hành."
+  }
+]

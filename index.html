@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="css/leaderboard.css">
     <link rel="stylesheet" href="css/ranked-game.css">
     <link rel="stylesheet" href="css/mascot.css">
+    <link rel="stylesheet" href="./css/jlpt-exam.css">
 </head>
 
 <body>
@@ -64,6 +65,15 @@
         <!-- MENU -->
         <button id="menuButton" class="top-action-btn menu-button" type="button" aria-label="Menu">
             ☰
+        </button>
+
+        <button
+            id="jlptExamHeaderBtn"
+            class="jlpt-exam-balloon"
+            type="button"
+            title="JLPT Exam"
+        >
+            🎓 <span>JLPT EXAM</span>
         </button>
 
         <!-- LANGUAGE -->
@@ -2072,6 +2082,455 @@
     </div>
 
 </section>
+
+
+
+<!-- ==========================================
+     BATLINGO - JLPT EXAM SCREEN
+========================================== -->
+
+<section id="jlptExamScreen"
+         class="jlpt-exam-screen hidden">
+
+    <div class="jlpt-exam-container">
+
+        <!-- HEADER -->
+        <header class="jlpt-exam-header">
+
+            <button id="jlptExamBack"
+                    class="jlpt-exam-back"
+                    type="button">
+                ←
+            </button>
+
+            <div class="jlpt-exam-heading">
+                <h1>JLPT EXAM</h1>
+                <p>日本語能力試験 · Practice & Test</p>
+            </div>
+
+            <span class="jlpt-exam-badge">EXAM</span>
+        </header>
+
+        <div id="jlptExamReviewToolbar"
+            class="jlpt-exam-review-toolbar">
+
+            <button id="jlptExamOpenPractice"
+                    type="button"
+                    class="active">
+                🎓 EXAM
+            </button>
+
+            <button id="jlptExamOpenReview"
+                    type="button">
+                📖 REVIEW
+                <span id="jlptExamReviewCounter">0/50</span>
+            </button>
+        </div>
+
+        <!-- ==================================
+             CONFIGURATION
+        ================================== -->
+        <div id="jlptExamConfig">
+
+            <!-- MODE -->
+            <div class="jlpt-exam-card">
+                <h2>EXAM MODE</h2>
+
+                <div class="jlpt-exam-mode-select">
+
+                    <label>
+                        <input type="radio"
+                               name="jlptExamType"
+                               value="practice"
+                               checked>
+                        <span>📖 PRACTICE</span>
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="jlptExamType"
+                               value="test">
+                        <span>⏱ TEST</span>
+                    </label>
+                </div>
+
+                <p id="jlptExamModeDescription"
+                   class="jlpt-exam-description">
+                    Practice: luyện tập không giới hạn thời gian.
+                </p>
+            </div>
+
+            <!-- LEVEL -->
+            <div class="jlpt-exam-card">
+                <h2>SELECT LEVEL</h2>
+
+                <div id="jlptExamLevels"
+                     class="jlpt-exam-levels">
+
+                    <button type="button" data-level="N5">N5</button>
+                    <button type="button" data-level="N4">N4</button>
+                    <button type="button" data-level="N3">N3</button>
+                    <button type="button" data-level="N2">N2</button>
+                    <button type="button" data-level="N1">N1</button>
+
+                </div>
+            </div>
+
+            <!-- MONDAI -->
+            <div class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <h2>SELECT MONDAI</h2>
+
+                    <button id="jlptExamToggleAll"
+                            class="jlpt-exam-small-btn"
+                            type="button">
+                        SELECT ALL
+                    </button>
+                </div>
+
+                <div id="jlptExamMondai"></div>
+            </div>
+
+            <!-- SET -->
+            <div class="jlpt-exam-card">
+                <h2>EXAM SET</h2>
+
+                <label class="jlpt-exam-radio">
+                    <input type="radio"
+                           name="jlptExamSetMode"
+                           value="random"
+                           checked>
+                    Random Set
+                </label>
+
+                <label class="jlpt-exam-radio">
+                    <input type="radio"
+                           name="jlptExamSetMode"
+                           value="manual">
+                    Select Set
+                </label>
+
+                <select id="jlptExamSetSelect"
+                        class="jlpt-exam-select"
+                        disabled>
+                </select>
+            </div>
+
+            <!-- SUMMARY -->
+            <div class="jlpt-exam-card">
+                <div class="jlpt-exam-row">
+                    <span>Selected Mondai</span>
+                    <strong id="jlptExamSelectedCount">0</strong>
+                </div>
+
+                <div class="jlpt-exam-row">
+                    <span>Total Questions</span>
+                    <strong id="jlptExamQuestionCount">0</strong>
+                </div>
+            </div>
+
+            <p id="jlptExamConfigMessage"
+               class="jlpt-exam-message"
+               role="status"></p>
+
+            <button id="jlptExamStart"
+                    class="jlpt-exam-primary"
+                    type="button">
+                START EXAM
+            </button>
+        </div>
+
+        <div id="jlptExamReviewScreen"
+            class="hidden">
+
+            <div class="jlpt-exam-card">
+                <h2>WRONG ANSWER REVIEW</h2>
+
+                <p id="jlptExamReviewStatus">
+                    Đang tải danh sách...
+                </p>
+
+                <div class="jlpt-exam-review-progress">
+                    <div id="jlptExamReviewProgressBar"></div>
+                </div>
+
+                <p class="jlpt-exam-description">
+                    Tối đa 50 câu. Mỗi lần ôn tối đa 10 câu.
+                    Đúng 3 lần liên tiếp để xóa câu khỏi danh sách.
+                </p>
+
+                <button id="jlptExamReviewStart"
+                        type="button"
+                        class="jlpt-exam-primary">
+                    START REVIEW
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ==================================
+             PLAYING
+        ================================== -->
+        <div id="jlptExamPlaying" class="hidden">
+
+            <!-- PROGRESS -->
+            <div class="jlpt-exam-card">
+                <div class="jlpt-exam-row">
+                    <strong id="jlptExamPlayingTitle"></strong>
+                    <span id="jlptExamProgress">0 / 0</span>
+                </div>
+
+                <div class="jlpt-exam-progress">
+                    <div id="jlptExamProgressBar"></div>
+                </div>
+
+                <div class="jlpt-exam-row jlpt-exam-timer-row">
+                    <span id="jlptExamTimerLabel">Elapsed</span>
+                    <strong id="jlptExamTimer">00:00</strong>
+                </div>
+            </div>
+
+            <!-- QUESTION NAVIGATOR -->
+            <div class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <h2>QUESTION NAVIGATOR</h2>
+                    <strong id="jlptExamAnswered">0 / 0</strong>
+                </div>
+
+                <div id="jlptExamQuestionNavigator"
+                     class="jlpt-exam-question-navigator">
+                </div>
+
+                <div class="jlpt-exam-legend">
+                    <span>✓ Answered</span>
+                    <span>⚑ Flagged</span>
+                    <span>○ Unanswered</span>
+                </div>
+            </div>
+
+            <!-- QUESTION -->
+            <div class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <span id="jlptExamQuestionGroup"
+                          class="jlpt-exam-question-group"></span>
+
+                    <button id="jlptExamFlag"
+                            class="jlpt-exam-flag"
+                            type="button">
+                        ⚑ FLAG
+                    </button>
+                </div>
+
+                <div id="jlptExamContext"
+                     class="jlpt-exam-context"></div>
+
+                <div id="jlptExamAudioBox"
+                    class="jlpt-exam-audio-box hidden">
+
+                    <audio id="jlptExamAudio"
+                        controls
+                        preload="none">
+                    </audio>
+                </div>
+
+                <div id="jlptExamQuestionText"
+                     class="jlpt-exam-question"></div>
+
+                <div id="jlptExamAnswers"
+                     class="jlpt-exam-answers"></div>
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="jlpt-exam-navigation">
+
+                <button id="jlptExamPrev" type="button">
+                    ← PREV
+                </button>
+
+                <button id="jlptExamNext" type="button">
+                    NEXT →
+                </button>
+            </div>
+
+            <button id="jlptExamSubmit"
+                    class="jlpt-exam-primary"
+                    type="button">
+                SUBMIT EXAM
+            </button>
+        </div>
+
+        <!-- ==================================
+             RESULT
+        ================================== -->
+        <div id="jlptExamResult" class="hidden">
+
+            <div class="jlpt-exam-card jlpt-exam-result">
+
+                <h2>EXAM COMPLETED</h2>
+
+                <div id="jlptExamAccuracy"
+                     class="jlpt-exam-accuracy">0%</div>
+
+                <div id="jlptExamResultSummary"></div>
+            </div>
+
+            <div class="jlpt-exam-card">
+                <h2>MONDAI RESULTS</h2>
+
+                <div id="jlptExamResultDetails"></div>
+            </div>
+            
+            <button
+                id="jlptExamReviewAnswersBtn"
+                class="jlpt-exam-primary"
+                type="button">
+                📖 REVIEW ANSWERS
+            </button>
+
+            <button id="jlptExamRetry"
+                    class="jlpt-exam-primary"
+                    type="button">
+                RETRY
+            </button>
+
+            <button id="jlptExamReturn"
+                    class="jlpt-exam-secondary"
+                    type="button">
+                BACK TO CONFIG
+            </button>
+        </div>
+
+        
+        <!-- ==========================================
+            JLPT EXAM - REVIEW ANSWERS
+        ========================================== -->
+
+        <div id="jlptExamAnswerReview" class="hidden">
+
+            <div class="jlpt-exam-card">
+                <div class="jlpt-exam-row">
+                    <h2>REVIEW ANSWERS</h2>
+                    <span id="jlptAnswerReviewProgress">0 / 0</span>
+                </div>
+
+                <div id="jlptAnswerReviewSummary"></div>
+
+                <div class="jlpt-answer-review-filters">
+                    <button data-review-filter="all"
+                            class="active" type="button">
+                        ALL
+                    </button>
+
+                    <button data-review-filter="correct"
+                            type="button">
+                        CORRECT
+                    </button>
+
+                    <button data-review-filter="wrong"
+                            type="button">
+                        WRONG
+                    </button>
+
+                    <button data-review-filter="unanswered"
+                            type="button">
+                        UNANSWERED
+                    </button>
+                </div>
+
+                <div id="jlptAnswerReviewNavigator"
+                    class="jlpt-exam-question-navigator">
+                </div>
+            </div>
+
+            <div id="jlptAnswerReviewQuestionCard"
+                class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <span id="jlptAnswerReviewGroup"
+                        class="jlpt-exam-question-group"></span>
+
+                    <strong id="jlptAnswerReviewStatus"></strong>
+                </div>
+
+                <div id="jlptAnswerReviewContext"
+                    class="jlpt-exam-context"></div>
+                
+                <div id="jlptAnswerReviewAudioBox"
+                    class="jlpt-exam-audio-box hidden">
+
+                    <audio id="jlptAnswerReviewAudio"
+                        controls
+                        preload="none">
+                    </audio>
+                </div>
+                    
+
+                <div id="jlptAnswerReviewQuestion"
+                    class="jlpt-exam-question"></div>
+
+                <div id="jlptAnswerReviewOptions"
+                    class="jlpt-exam-answers"></div>
+
+                <p id="jlptAnswerReviewExplanation"
+                class="jlpt-exam-description"></p>
+            </div>
+
+            <div class="jlpt-exam-navigation">
+                <button id="jlptAnswerReviewPrev" type="button">
+                    ← PREV
+                </button>
+
+                <button id="jlptAnswerReviewNext" type="button">
+                    NEXT →
+                </button>
+            </div>
+
+            <button id="jlptAnswerReviewBack"
+                    class="jlpt-exam-secondary"
+                    type="button">
+                BACK TO RESULT
+            </button>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ==========================================
+     SUBMIT CONFIRMATION
+========================================== -->
+
+<div id="jlptExamConfirm"
+     class="jlpt-exam-confirm hidden">
+
+    <div class="jlpt-exam-confirm-box"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="jlptExamConfirmTitle">
+
+        <h2 id="jlptExamConfirmTitle">
+            SUBMIT EXAM?
+        </h2>
+
+        <p id="jlptExamConfirmSummary"></p>
+
+        <div class="jlpt-exam-confirm-actions">
+
+            <button id="jlptExamCancelSubmit"
+                    type="button">
+                CANCEL
+            </button>
+
+            <button id="jlptExamConfirmSubmit"
+                    type="button">
+                SUBMIT
+            </button>
+        </div>
+    </div>
+</div>
 
 
 

@@ -69,6 +69,8 @@ import { initRank, openRank } from "./rank.js";
 import { initLeaderboard } from "./leaderboard.js";
 import { initRankedGame } from "./ranked-game.js";
 
+import { initJLPTExam } from "./jlpt-exam-ui.js";
+
 /* =========================================
    I18N
 ========================================= */
@@ -78,6 +80,8 @@ initRank();
 initRankedGame();
 initLeaderboard();
 initMascot();
+
+initJLPTExam();
 
 /* =============================================================
    DOM

@@ -1,0 +1,75 @@
+
+[
+  {
+    "id": 1,
+    "question": "彼の努力は、近年になってようやく<strong>顕著</strong>な成果として現れた。",
+    "options": [
+      "けんちょ",
+      "けんじょ",
+      "げんちょ",
+      "けんしょう"
+    ],
+    "answer": 1,
+    "explanation": "顕著（けんちょ）：rõ rệt, nổi bật."
+  },
+  {
+    "id": 2,
+    "question": "政府は新しい政策の<strong>遂行</strong>に全力を注いでいる。",
+    "options": [
+      "すいこう",
+      "ついこう",
+      "ずいこう",
+      "すいぎょう"
+    ],
+    "answer": 1,
+    "explanation": "遂行（すいこう）：thực hiện, hoàn thành nhiệm vụ."
+  },
+  {
+    "id": 3,
+    "question": "不正行為が発覚し、会社の信頼は大きく<strong>損なわれた</strong>。",
+    "options": [
+      "そこなわれた",
+      "そなわれた",
+      "おこなわれた",
+      "つぐなわれた"
+    ],
+    "answer": 1,
+    "explanation": "損なう（そこなう）：làm tổn hại, làm suy giảm."
+  },
+  {
+    "id": 4,
+    "question": "その計画には、まだ<strong>漠然</strong>とした部分が多い。",
+    "options": [
+      "ばくぜん",
+      "まくぜん",
+      "ばくねん",
+      "まくねん"
+    ],
+    "answer": 1,
+    "explanation": "漠然（ばくぜん）：mơ hồ, không rõ ràng."
+  },
+  {
+    "id": 5,
+    "question": "彼女は批判にも<strong>屈せず</strong>、自分の信念を貫いた。",
+    "options": [
+      "くっせず",
+      "かっせず",
+      "きっせず",
+      "こっせず"
+    ],
+    "answer": 1,
+    "explanation": "屈する（くっする）：khuất phục, chịu thua."
+  },
+  {
+    "id": 6,
+    "question": "住民の反対によって、建設計画は<strong>撤回</strong>された。",
+    "options": [
+      "てっかい",
+      "てんかい",
+      "せっかい",
+      "てつかい"
+    ],
+    "answer": 1,
+    "explanation": "撤回（てっかい）：rút lại, thu hồi quyết định."
+  }
+]

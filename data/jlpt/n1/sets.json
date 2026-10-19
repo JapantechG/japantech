@@ -1,0 +1,9 @@
+{
+  "level": "N1",
+  "sets": [
+    {
+      "id": "set01",
+      "enabled": true
+    }
+  ]
+}

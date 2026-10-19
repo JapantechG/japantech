@@ -1,0 +1,793 @@
+
+/* ==========================================
+   BATLINGO - JLPT EXAM
+========================================== */
+
+.jlpt-exam-screen.hidden,
+.jlpt-exam-screen .hidden,
+.jlpt-exam-confirm.hidden {
+    display: none !important;
+}
+
+/* HEADER BALLOON */
+
+.jlpt-exam-balloon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 14px;
+    border: 1px solid #f59e0b;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #92400e, #d97706);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: 0 3px 15px #f59e0b35;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.jlpt-exam-balloon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px #f59e0b55;
+}
+
+/* SCREEN */
+
+.jlpt-exam-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 21000;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background:
+        radial-gradient(circle at 50% 0%, #243e62, transparent 55%),
+        linear-gradient(150deg, #080e19, #14223a);
+    color: #f8fafc;
+    padding: 25px 16px 50px;
+}
+
+.jlpt-exam-container {
+    width: min(100%, 700px);
+    margin: 0 auto;
+}
+
+/* EXAM HEADER */
+
+.jlpt-exam-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 23px;
+}
+
+.jlpt-exam-heading {
+    min-width: 0;
+    flex: 1;
+}
+
+.jlpt-exam-heading h1 {
+    margin: 0;
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: #fbbf24;
+}
+
+.jlpt-exam-heading p {
+    margin: 4px 0 0;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.jlpt-exam-back {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border: 1px solid #475569;
+    border-radius: 12px;
+    background: #172338;
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.jlpt-exam-badge {
+    padding: 7px 10px;
+    border-radius: 20px;
+    background: #78350f;
+    color: #fde68a;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* CARDS */
+
+.jlpt-exam-card {
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, .94);
+}
+
+.jlpt-exam-card h2 {
+    margin: 0 0 15px;
+    font-size: 13px;
+    letter-spacing: .7px;
+    color: #cbd5e1;
+}
+
+.jlpt-exam-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.jlpt-exam-row:last-child {
+    margin-bottom: 0;
+}
+
+.jlpt-exam-description {
+    margin: 13px 0 0;
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* MODE */
+
+.jlpt-exam-mode-select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.jlpt-exam-mode-select label {
+    cursor: pointer;
+}
+
+.jlpt-exam-mode-select input {
+    position: absolute;
+    opacity: 0;
+}
+
+.jlpt-exam-mode-select span {
+    display: block;
+    padding: 14px 8px;
+    border: 1px solid #475569;
+    border-radius: 11px;
+    background: #1e293b;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.jlpt-exam-mode-select input:checked + span {
+    background: #78350f;
+    border-color: #fbbf24;
+    color: #fde68a;
+}
+
+.jlpt-exam-mode-select input:focus-visible + span {
+    outline: 2px solid #fbbf24;
+    outline-offset: 3px;
+}
+
+/* LEVEL */
+
+.jlpt-exam-levels {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.jlpt-exam-levels button,
+.jlpt-exam-mondai-btn {
+    min-height: 43px;
+    padding: 8px;
+    border: 1px solid #475569;
+    border-radius: 9px;
+    background: #1e293b;
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.jlpt-exam-levels button.active,
+.jlpt-exam-mondai-btn.active {
+    border-color: #fbbf24;
+    background: #92400e;
+    color: white;
+}
+
+/* MONDAI */
+
+.jlpt-exam-small-btn {
+    padding: 7px 10px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #1e293b;
+    color: #e2e8f0;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.jlpt-exam-category {
+    margin-top: 18px;
+}
+
+.jlpt-exam-category:first-child {
+    margin-top: 0;
+}
+
+.jlpt-exam-category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.jlpt-exam-category-header strong {
+    font-size: 13px;
+}
+
+.jlpt-exam-category-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.jlpt-exam-mondai-btn {
+    min-width: 78px;
+    font-size: 12px;
+}
+
+/* SET */
+
+.jlpt-exam-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.jlpt-exam-radio input {
+    accent-color: #f59e0b;
+}
+
+.jlpt-exam-select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid #475569;
+    border-radius: 9px;
+    background: #172338;
+    color: #fff;
+}
+
+.jlpt-exam-select:disabled {
+    opacity: .45;
+}
+
+/* BUTTONS */
+
+.jlpt-exam-primary,
+.jlpt-exam-secondary {
+    width: 100%;
+    min-height: 47px;
+    padding: 13px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.jlpt-exam-primary {
+    border: 0;
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+    color: #111827;
+}
+
+.jlpt-exam-secondary {
+    margin-top: 10px;
+    border: 1px solid #475569;
+    background: #1e293b;
+    color: #fff;
+}
+
+.jlpt-exam-primary:disabled,
+.jlpt-exam-navigation button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.jlpt-exam-message {
+    font-size: 12px;
+    color: #fca5a5;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* PROGRESS + TIMER */
+
+.jlpt-exam-progress {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #334155;
+}
+
+#jlptExamProgressBar {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    background: #fbbf24;
+    transition: width .2s;
+}
+
+.jlpt-exam-timer-row {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#jlptExamTimer {
+    font-variant-numeric: tabular-nums;
+    color: #fbbf24;
+    font-size: 20px;
+}
+
+/* QUESTION NAVIGATOR */
+
+.jlpt-exam-question-navigator {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.jlpt-exam-nav-item {
+    position: relative;
+    min-height: 44px;
+    border: 1px solid #475569;
+    border-radius: 9px;
+    background: #1e293b;
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.jlpt-exam-nav-item.answered {
+    border-color: #16a34a;
+    background: #14532d;
+    color: #dcfce7;
+}
+
+.jlpt-exam-nav-item.current {
+    outline: 2px solid #fbbf24;
+    outline-offset: 1px;
+}
+
+.jlpt-exam-nav-item.flagged::after {
+    content: "⚑";
+    position: absolute;
+    top: -7px;
+    right: -4px;
+    color: #fbbf24;
+    font-size: 15px;
+}
+
+.jlpt-exam-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+/* QUESTION */
+
+.jlpt-exam-question-group {
+    color: #fbbf24;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.jlpt-exam-flag {
+    padding: 8px 12px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #1e293b;
+    color: #94a3b8;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.jlpt-exam-flag.active {
+    border-color: #f59e0b;
+    background: #78350f;
+    color: #fbbf24;
+}
+
+.jlpt-exam-context {
+    margin: 15px 0;
+    line-height: 1.9;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+}
+
+.jlpt-exam-question {
+    margin: 15px 0;
+    font-size: clamp(16px, 3vw, 21px);
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.jlpt-exam-answers {
+    display: grid;
+    gap: 11px;
+    margin-top: 20px;
+}
+
+.jlpt-exam-answer {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #475569;
+    border-radius: 12px;
+    background: #1e293b;
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+.jlpt-exam-answer.active {
+    border-color: #fbbf24;
+    background: #78350f;
+}
+
+.jlpt-exam-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.jlpt-exam-navigation button {
+    min-height: 45px;
+    border: 1px solid #475569;
+    border-radius: 11px;
+    background: #1e293b;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* CONFIRMATION */
+
+.jlpt-exam-confirm {
+    position: fixed;
+    inset: 0;
+    z-index: 22000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, .82);
+}
+
+.jlpt-exam-confirm-box {
+    width: min(100%, 420px);
+    padding: 26px;
+    border: 1px solid #475569;
+    border-radius: 17px;
+    background: #172338;
+    color: white;
+    text-align: center;
+}
+
+.jlpt-exam-confirm-box h2 {
+    margin: 0 0 16px;
+    color: #fbbf24;
+}
+
+.jlpt-exam-confirm-box p {
+    white-space: pre-line;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.jlpt-exam-confirm-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.jlpt-exam-confirm-actions button {
+    min-height: 44px;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    background: #334155;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#jlptExamConfirmSubmit {
+    background: #d97706;
+    border-color: #fbbf24;
+    color: #111827;
+}
+
+/* RESULT */
+
+.jlpt-exam-result {
+    text-align: center;
+}
+
+.jlpt-exam-accuracy {
+    margin: 14px 0;
+    font-size: clamp(42px, 10vw, 65px);
+    font-weight: 900;
+    color: #4ade80;
+}
+
+.jlpt-exam-result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #334155;
+    font-size: 13px;
+}
+
+.jlpt-exam-result-item:last-child {
+    border-bottom: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    .jlpt-exam-screen {
+        padding: 16px 12px 35px;
+    }
+
+    .jlpt-exam-card {
+        padding: 15px;
+    }
+
+    .jlpt-exam-heading h1 {
+        font-size: 19px;
+    }
+
+    .jlpt-exam-badge {
+        font-size: 10px;
+    }
+
+    .jlpt-exam-question-navigator {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .jlpt-exam-mondai-btn {
+        min-width: 70px;
+    }
+
+    .jlpt-exam-balloon {
+        padding: 9px;
+    }
+
+    .jlpt-exam-balloon span {
+        display: none;
+    }
+}
+
+.jlpt-exam-review-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.jlpt-exam-review-toolbar button {
+    min-height: 45px;
+    border: 1px solid #475569;
+    border-radius: 11px;
+    background: #1e293b;
+    color: #cbd5e1;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.jlpt-exam-review-toolbar button.active {
+    border-color: #fbbf24;
+    background: #78350f;
+    color: #fde68a;
+}
+
+#jlptExamReviewCounter {
+    margin-left: 5px;
+    color: #fbbf24;
+    font-size: 11px;
+}
+
+.jlpt-exam-review-progress {
+    width: 100%;
+    height: 9px;
+    border-radius: 9px;
+    background: #334155;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#jlptExamReviewProgressBar {
+    height: 100%;
+    width: 0%;
+    background: #f59e0b;
+    transition: width .2s;
+}
+
+#jlptExamReviewStatus {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+#jlptExamReviewStart:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   JLPT EXAM - ANSWER REVIEW
+========================================== */
+
+.jlpt-exam-screen .hidden {
+    display: none !important;
+}
+
+.jlpt-answer-review-filters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+    margin: 18px 0;
+}
+
+.jlpt-answer-review-filters button {
+    min-height: 40px;
+    padding: 7px 4px;
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 9px;
+    color: #cbd5e1;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.jlpt-answer-review-filters button.active {
+    background: #78350f;
+    border-color: #fbbf24;
+    color: #fde68a;
+}
+
+.jlpt-exam-nav-item.review-correct {
+    background: #14532d;
+    border-color: #22c55e;
+    color: #dcfce7;
+}
+
+.jlpt-exam-nav-item.review-wrong {
+    background: #7f1d1d;
+    border-color: #ef4444;
+    color: #fee2e2;
+}
+
+.jlpt-exam-nav-item.review-unanswered {
+    background: #334155;
+    border-color: #64748b;
+}
+
+.jlpt-exam-nav-item.review-current {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+}
+
+.jlpt-answer-review-option {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #475569;
+    border-radius: 11px;
+    background: #1e293b;
+    color: #e2e8f0;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.jlpt-answer-review-option.correct {
+    background: #14532d;
+    border-color: #22c55e;
+    color: #dcfce7;
+}
+
+.jlpt-answer-review-option.wrong {
+    background: #7f1d1d;
+    border-color: #ef4444;
+    color: #fee2e2;
+}
+
+.jlpt-answer-review-option .jlpt-review-tag {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.jlpt-review-status-correct {
+    color: #4ade80;
+}
+
+.jlpt-review-status-wrong {
+    color: #f87171;
+}
+
+.jlpt-review-status-unanswered {
+    color: #cbd5e1;
+}
+
+#jlptAnswerReviewSummary {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+    .jlpt-answer-review-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.jlpt-exam-audio-box {
+    margin: 15px 0;
+}
+
+.jlpt-exam-audio-box audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* JLPT QUESTION FORMATTING */
+
+.jlpt-exam-question strong,
+.jlpt-exam-context strong {
+    font-weight: 800;
+    color: #fbbf24;
+}
+
+.jlpt-exam-question u,
+.jlpt-exam-context u {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.jlpt-exam-question em,
+.jlpt-exam-context em {
+    font-style: italic;
+}
