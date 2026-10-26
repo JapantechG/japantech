@@ -1,6 +1,8 @@
 import { auth } from "./firebase.js";
 import { getRankProgress, RANK_INITIAL_ELO, RANK_SEASON, RANK_RULES } from "./rank-config.js";
+
 import { openLeaderboard } from "./leaderboard.js";
+
 import {
     findRankMatch,
     cancelRankSearch,
@@ -284,7 +286,7 @@ $('rankDeclineButton')?.addEventListener('click', async () => {
 });
 
 
-  $('rankLeaderboardButton')?.addEventListener('click', () => openLeaderboard('rankScreen'));
+  $('rankLeaderboardButton')?.addEventListener('click', () => openLeaderboard('rank'));
   for (const eventName of ['batlingo-auth-state', 'batlingo-profile-updated']) {
     window.addEventListener(eventName, () => {
       if (!$('rankScreen')?.classList.contains('hidden')) renderRank();
