@@ -66,7 +66,12 @@ import { startReview } from "./review.js";
 
 import "./info.js";
 import { initRank, openRank } from "./rank.js";
-import { initLeaderboard } from "./leaderboard.js";
+
+import {
+    initLeaderboard,
+    openLeaderboard
+} from "./leaderboard.js";
+
 import { initRankedGame } from "./ranked-game.js";
 
 import { initJLPTExam } from "./jlpt-exam-ui.js";
