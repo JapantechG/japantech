@@ -109,6 +109,13 @@ export function initHome({ onSelectMode } = {}) {
             );
         }
     });
+
+    document.getElementById("homeLeaderboardBtn")
+    ?.addEventListener("click", () => {
+
+        openLeaderboard("level");
+
+    });
 }
 
 
