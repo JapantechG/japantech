@@ -918,7 +918,119 @@
         </div>
 
     </main>
-
+        <!-- ==================================
+         BATLINGO LEADERBOARD
+    ================================== -->
+    
+    <section
+        id="leaderboardScreen"
+        class="leaderboard-screen hidden"
+        aria-label="Leaderboard"
+    >
+    
+        <div class="leaderboard-container">
+    
+            <!-- HEADER -->
+    
+            <div class="leaderboard-header">
+    
+                <button
+                    id="leaderboardBackBtn"
+                    class="leaderboard-back"
+                    type="button"
+                    aria-label="Back"
+                >
+                    ←
+                </button>
+    
+                <div class="leaderboard-header-title">
+                    <span>🏆</span>
+                    <h1>LEADERBOARD</h1>
+                </div>
+    
+                <div class="leaderboard-season"
+                     id="leaderboardSeason">
+                    GLOBAL
+                </div>
+    
+            </div>
+    
+    
+            <!-- TABS -->
+    
+            <div class="leaderboard-tabs"
+                 role="tablist"
+                 aria-label="Leaderboard categories">
+    
+                <button
+                    class="leaderboard-tab active"
+                    data-tab="level"
+                    role="tab"
+                    type="button"
+                >
+                    ⭐ Level
+                </button>
+    
+                <button
+                    class="leaderboard-tab"
+                    data-tab="pet"
+                    role="tab"
+                    type="button"
+                >
+                    🐾 Pet Level
+                </button>
+    
+                <button
+                    class="leaderboard-tab"
+                    data-tab="rank"
+                    role="tab"
+                    type="button"
+                >
+                    ⚔️ Rank
+                </button>
+    
+            </div>
+    
+    
+            <!-- TOP PLAYERS -->
+    
+            <div
+                id="leaderboardTop"
+                class="leaderboard-top"
+            ></div>
+    
+    
+            <!-- LIST HEADER -->
+    
+            <div class="leaderboard-list-header">
+    
+                <span>POSITION / PLAYER</span>
+    
+                <span id="leaderboardScoreLabel">
+                    LEVEL
+                </span>
+    
+            </div>
+    
+    
+            <!-- RANKING LIST -->
+    
+            <div
+                id="leaderboardList"
+                class="leaderboard-list"
+            ></div>
+    
+    
+            <!-- CURRENT PLAYER -->
+    
+            <div
+                id="leaderboardMyRank"
+                class="leaderboard-my-rank"
+            ></div>
+    
+        </div>
+    
+    </section>
     <!-- =========================================================
      REVIEW SCREEN
      ========================================================= -->
