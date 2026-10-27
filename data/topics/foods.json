@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "word": "食べ物",
+    "reading": "たべもの",
+    "meaning": "Thức ăn"
+  },
+  {
+    "id": 2,
+    "word": "ご飯",
+    "reading": "ごはん",
+    "meaning": "Cơm"
+  },
+  {
+    "id": 3,
+    "word": "おにぎり",
+    "reading": "おにぎり",
+    "meaning": "Cơm nắm"
+  },
+  {
+    "id": 4,
+    "word": "寿司",
+    "reading": "すし",
+    "meaning": "Sushi"
+  },
+  {
+    "id": 5,
+    "word": "刺身",
+    "reading": "さしみ",
+    "meaning": "Sashimi"
+  },
+  {
+    "id": 6,
+    "word": "天ぷら",
+    "reading": "てんぷら",
+    "meaning": "Tempura"
+  },
+  {
+    "id": 7,
+    "word": "ラーメン",
+    "reading": "ラーメン",
+    "meaning": "Mì ramen"
+  },
+  {
+    "id": 8,
+    "word": "うどん",
+    "reading": "うどん",
+    "meaning": "Mì udon"
+  },
+  {
+    "id": 9,
+    "word": "そば",
+    "reading": "そば",
+    "meaning": "Mì soba"
+  },
+  {
+    "id": 10,
+    "word": "焼きそば",
+    "reading": "やきそば",
+    "meaning": "Mì xào Nhật"
+  },
+  {
+    "id": 11,
+    "word": "カレーライス",
+    "reading": "カレーライス",
+    "meaning": "Cơm cà ri"
+  },
+  {
+    "id": 12,
+    "word": "丼",
+    "reading": "どんぶり",
+    "meaning": "Cơm tô"
+  },
+  {
+    "id": 13,
+    "word": "弁当",
+    "reading": "べんとう",
+    "meaning": "Cơm hộp"
+  },
+  {
+    "id": 14,
+    "word": "味噌汁",
+    "reading": "みそしる",
+    "meaning": "Canh miso"
+  },
+  {
+    "id": 15,
+    "word": "豆腐",
+    "reading": "とうふ",
+    "meaning": "Đậu phụ"
+  },
+  {
+    "id": 16,
+    "word": "納豆",
+    "reading": "なっとう",
+    "meaning": "Natto"
+  },
+  {
+    "id": 17,
+    "word": "卵",
+    "reading": "たまご",
+    "meaning": "Trứng"
+  },
+  {
+    "id": 18,
+    "word": "パン",
+    "reading": "パン",
+    "meaning": "Bánh mì"
+  },
+  {
+    "id": 19,
+    "word": "サンドイッチ",
+    "reading": "サンドイッチ",
+    "meaning": "Bánh sandwich"
+  },
+  {
+    "id": 20,
+    "word": "ピザ",
+    "reading": "ピザ",
+    "meaning": "Pizza"
+  },
+  {
+    "id": 21,
+    "word": "ハンバーガー",
+    "reading": "ハンバーガー",
+    "meaning": "Hamburger"
+  },
+  {
+    "id": 22,
+    "word": "餃子",
+    "reading": "ぎょうざ",
+    "meaning": "Sủi cảo"
+  },
+  {
+    "id": 23,
+    "word": "唐揚げ",
+    "reading": "からあげ",
+    "meaning": "Gà chiên kiểu Nhật"
+  },
+  {
+    "id": 24,
+    "word": "焼き鳥",
+    "reading": "やきとり",
+    "meaning": "Thịt gà xiên nướng"
+  },
+  {
+    "id": 25,
+    "word": "お好み焼き",
+    "reading": "おこのみやき",
+    "meaning": "Bánh xèo Nhật"
+  },
+  {
+    "id": 26,
+    "word": "たこ焼き",
+    "reading": "たこやき",
+    "meaning": "Bánh bạch tuộc"
+  },
+  {
+    "id": 27,
+    "word": "焼肉",
+    "reading": "やきにく",
+    "meaning": "Thịt nướng"
+  },
+  {
+    "id": 28,
+    "word": "鍋料理",
+    "reading": "なべりょうり",
+    "meaning": "Món lẩu"
+  }
+]
