@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "word": "動物",
+    "reading": "どうぶつ",
+    "meaning": "Động vật"
+  },
+  {
+    "id": 2,
+    "word": "犬",
+    "reading": "いぬ",
+    "meaning": "Chó"
+  },
+  {
+    "id": 3,
+    "word": "猫",
+    "reading": "ねこ",
+    "meaning": "Mèo"
+  },
+  {
+    "id": 4,
+    "word": "馬",
+    "reading": "うま",
+    "meaning": "Ngựa"
+  },
+  {
+    "id": 5,
+    "word": "牛",
+    "reading": "うし",
+    "meaning": "Bò"
+  },
+  {
+    "id": 6,
+    "word": "豚",
+    "reading": "ぶた",
+    "meaning": "Lợn"
+  },
+  {
+    "id": 7,
+    "word": "羊",
+    "reading": "ひつじ",
+    "meaning": "Cừu"
+  },
+  {
+    "id": 8,
+    "word": "山羊",
+    "reading": "やぎ",
+    "meaning": "Dê"
+  },
+  {
+    "id": 9,
+    "word": "兎",
+    "reading": "うさぎ",
+    "meaning": "Thỏ"
+  },
+  {
+    "id": 10,
+    "word": "鼠",
+    "reading": "ねずみ",
+    "meaning": "Chuột"
+  },
+  {
+    "id": 11,
+    "word": "栗鼠",
+    "reading": "りす",
+    "meaning": "Sóc"
+  },
+  {
+    "id": 12,
+    "word": "熊",
+    "reading": "くま",
+    "meaning": "Gấu"
+  },
+  {
+    "id": 13,
+    "word": "白熊",
+    "reading": "しろくま",
+    "meaning": "Gấu trắng"
+  },
+  {
+    "id": 14,
+    "word": "パンダ",
+    "reading": "パンダ",
+    "meaning": "Gấu trúc"
+  },
+  {
+    "id": 15,
+    "word": "虎",
+    "reading": "とら",
+    "meaning": "Hổ"
+  },
+  {
+    "id": 16,
+    "word": "ライオン",
+    "reading": "ライオン",
+    "meaning": "Sư tử"
+  },
+  {
+    "id": 17,
+    "word": "豹",
+    "reading": "ひょう",
+    "meaning": "Báo đốm"
+  },
+  {
+    "id": 18,
+    "word": "チーター",
+    "reading": "チーター",
+    "meaning": "Báo săn"
+  },
+  {
+    "id": 19,
+    "word": "狼",
+    "reading": "おおかみ",
+    "meaning": "Sói"
+  },
+  {
+    "id": 20,
+    "word": "狐",
+    "reading": "きつね",
+    "meaning": "Cáo"
+  },
+  {
+    "id": 21,
+    "word": "狸",
+    "reading": "たぬき",
+    "meaning": "Lửng chó Nhật"
+  },
+  {
+    "id": 22,
+    "word": "鹿",
+    "reading": "しか",
+    "meaning": "Hươu"
+  },
+  {
+    "id": 23,
+    "word": "猿",
+    "reading": "さる",
+    "meaning": "Khỉ"
+  },
+  {
+    "id": 24,
+    "word": "ゴリラ",
+    "reading": "ゴリラ",
+    "meaning": "Khỉ đột"
+  },
+  {
+    "id": 25,
+    "word": "チンパンジー",
+    "reading": "チンパンジー",
+    "meaning": "Tinh tinh"
+  },
+  {
+    "id": 26,
+    "word": "象",
+    "reading": "ぞう",
+    "meaning": "Voi"
+  },
+  {
+    "id": 27,
+    "word": "キリン",
+    "reading": "キリン",
+    "meaning": "Hươu cao cổ"
+  },
+  {
+    "id": 28,
+    "word": "縞馬",
+    "reading": "しまうま",
+    "meaning": "Ngựa vằn"
+  },
+  {
+    "id": 29,
+    "word": "河馬",
+    "reading": "かば",
+    "meaning": "Hà mã"
+  },
+  {
+    "id": 30,
+    "word": "犀",
+    "reading": "さい",
+    "meaning": "Tê giác"
+  },
+  {
+    "id": 31,
+    "word": "カンガルー",
+    "reading": "カンガルー",
+    "meaning": "Chuột túi"
+  },
+  {
+    "id": 32,
+    "word": "コアラ",
+    "reading": "コアラ",
+    "meaning": "Gấu koala"
+  },
+  {
+    "id": 33,
+    "word": "ラクダ",
+    "reading": "ラクダ",
+    "meaning": "Lạc đà"
+  },
+  {
+    "id": 34,
+    "word": "アルパカ",
+    "reading": "アルパカ",
+    "meaning": "Lạc đà alpaca"
+  },
+  {
+    "id": 35,
+    "word": "ハムスター",
+    "reading": "ハムスター",
+    "meaning": "Chuột hamster"
+  },
+  {
+    "id": 36,
+    "word": "モルモット",
+    "reading": "モルモット",
+    "meaning": "Chuột lang"
+  },
+  {
+    "id": 37,
+    "word": "イノシシ",
+    "reading": "いのしし",
+    "meaning": "Lợn rừng"
+  },
+  {
+    "id": 38,
+    "word": "ハリネズミ",
+    "reading": "ハリネズミ",
+    "meaning": "Nhím gai"
+  },
+  {
+    "id": 39,
+    "word": "コウモリ",
+    "reading": "コウモリ",
+    "meaning": "Dơi"
+  },
+  {
+    "id": 40,
+    "word": "カワウソ",
+    "reading": "カワウソ",
+    "meaning": "Rái cá"
+  },
+  {
+    "id": 41,
+    "word": "アライグマ",
+    "reading": "アライグマ",
+    "meaning": "Gấu mèo"
+  },
+  {
+    "id": 42,
+    "word": "ナマケモノ",
+    "reading": "ナマケモノ",
+    "meaning": "Lười"
+  },
+  {
+    "id": 43,
+    "word": "アリクイ",
+    "reading": "アリクイ",
+    "meaning": "Thú ăn kiến"
+  },
+  {
+    "id": 44,
+    "word": "トナカイ",
+    "reading": "トナカイ",
+    "meaning": "Tuần lộc"
+  }
+]
