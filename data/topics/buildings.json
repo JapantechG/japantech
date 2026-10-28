@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "建物",
+    "reading": "たてもの",
+    "meaning": "Tòa nhà"
+  },
+  {
+    "id": 2,
+    "word": "住宅",
+    "reading": "じゅうたく",
+    "meaning": "Nhà ở"
+  },
+  {
+    "id": 3,
+    "word": "一戸建て",
+    "reading": "いっこだて",
+    "meaning": "Nhà riêng"
+  },
+  {
+    "id": 4,
+    "word": "集合住宅",
+    "reading": "しゅうごうじゅうたく",
+    "meaning": "Nhà ở tập thể"
+  },
+  {
+    "id": 5,
+    "word": "マンション",
+    "reading": "マンション",
+    "meaning": "Chung cư"
+  },
+  {
+    "id": 6,
+    "word": "アパート",
+    "reading": "アパート",
+    "meaning": "Nhà căn hộ cho thuê"
+  },
+  {
+    "id": 7,
+    "word": "高層ビル",
+    "reading": "こうそうビル",
+    "meaning": "Tòa nhà cao tầng"
+  },
+  {
+    "id": 8,
+    "word": "事務所",
+    "reading": "じむしょ",
+    "meaning": "Văn phòng"
+  },
+  {
+    "id": 9,
+    "word": "工場",
+    "reading": "こうじょう",
+    "meaning": "Nhà máy"
+  },
+  {
+    "id": 10,
+    "word": "倉庫",
+    "reading": "そうこ",
+    "meaning": "Kho"
+  },
+  {
+    "id": 11,
+    "word": "病院",
+    "reading": "びょういん",
+    "meaning": "Bệnh viện"
+  },
+  {
+    "id": 12,
+    "word": "学校",
+    "reading": "がっこう",
+    "meaning": "Trường học"
+  },
+  {
+    "id": 13,
+    "word": "体育館",
+    "reading": "たいいくかん",
+    "meaning": "Nhà thể chất"
+  },
+  {
+    "id": 14,
+    "word": "図書館",
+    "reading": "としょかん",
+    "meaning": "Thư viện"
+  },
+  {
+    "id": 15,
+    "word": "劇場",
+    "reading": "げきじょう",
+    "meaning": "Nhà hát"
+  },
+  {
+    "id": 16,
+    "word": "神社",
+    "reading": "じんじゃ",
+    "meaning": "Đền Thần đạo"
+  },
+  {
+    "id": 17,
+    "word": "寺院",
+    "reading": "じいん",
+    "meaning": "Chùa chiền"
+  },
+  {
+    "id": 18,
+    "word": "橋",
+    "reading": "はし",
+    "meaning": "Cầu"
+  },
+  {
+    "id": 19,
+    "word": "塔",
+    "reading": "とう",
+    "meaning": "Tháp"
+  },
+  {
+    "id": 20,
+    "word": "地下街",
+    "reading": "ちかがい",
+    "meaning": "Khu phố mua sắm dưới đất"
+  }
+]
