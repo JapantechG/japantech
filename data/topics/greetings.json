@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "word": "おはよう",
+    "reading": "おはよう",
+    "meaning": "Chào buổi sáng (thân mật)"
+  },
+  {
+    "id": 2,
+    "word": "おはようございます",
+    "reading": "おはようございます",
+    "meaning": "Chào buổi sáng (lịch sự)"
+  },
+  {
+    "id": 3,
+    "word": "こんにちは",
+    "reading": "こんにちは",
+    "meaning": "Xin chào"
+  },
+  {
+    "id": 4,
+    "word": "こんばんは",
+    "reading": "こんばんは",
+    "meaning": "Chào buổi tối"
+  },
+  {
+    "id": 5,
+    "word": "おやすみなさい",
+    "reading": "おやすみなさい",
+    "meaning": "Chúc ngủ ngon"
+  },
+  {
+    "id": 6,
+    "word": "さようなら",
+    "reading": "さようなら",
+    "meaning": "Tạm biệt"
+  },
+  {
+    "id": 7,
+    "word": "またね",
+    "reading": "またね",
+    "meaning": "Hẹn gặp lại"
+  },
+  {
+    "id": 8,
+    "word": "ありがとう",
+    "reading": "ありがとう",
+    "meaning": "Cảm ơn"
+  },
+  {
+    "id": 9,
+    "word": "ありがとうございます",
+    "reading": "ありがとうございます",
+    "meaning": "Xin cảm ơn"
+  },
+  {
+    "id": 10,
+    "word": "すみません",
+    "reading": "すみません",
+    "meaning": "Xin lỗi; làm phiền"
+  },
+  {
+    "id": 11,
+    "word": "ごめんなさい",
+    "reading": "ごめんなさい",
+    "meaning": "Xin lỗi"
+  },
+  {
+    "id": 12,
+    "word": "失礼します",
+    "reading": "しつれいします",
+    "meaning": "Xin phép, xin thất lễ"
+  },
+  {
+    "id": 13,
+    "word": "初めまして",
+    "reading": "はじめまして",
+    "meaning": "Rất vui được gặp lần đầu"
+  },
+  {
+    "id": 14,
+    "word": "よろしくお願いします",
+    "reading": "よろしくおねがいします",
+    "meaning": "Mong được giúp đỡ"
+  },
+  {
+    "id": 15,
+    "word": "お疲れ様です",
+    "reading": "おつかれさまです",
+    "meaning": "Anh/chị vất vả rồi"
+  },
+  {
+    "id": 16,
+    "word": "行ってきます",
+    "reading": "いってきます",
+    "meaning": "Tôi đi đây"
+  },
+  {
+    "id": 17,
+    "word": "行ってらっしゃい",
+    "reading": "いってらっしゃい",
+    "meaning": "Đi cẩn thận nhé"
+  },
+  {
+    "id": 18,
+    "word": "ただいま",
+    "reading": "ただいま",
+    "meaning": "Tôi về rồi"
+  },
+  {
+    "id": 19,
+    "word": "お帰りなさい",
+    "reading": "おかえりなさい",
+    "meaning": "Mừng bạn về"
+  },
+  {
+    "id": 20,
+    "word": "いただきます",
+    "reading": "いただきます",
+    "meaning": "Mời ăn (trước bữa ăn)"
+  },
+  {
+    "id": 21,
+    "word": "ごちそうさまでした",
+    "reading": "ごちそうさまでした",
+    "meaning": "Cảm ơn vì bữa ăn"
+  }
+]
