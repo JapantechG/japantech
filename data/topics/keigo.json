@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "敬語",
+    "reading": "けいご",
+    "meaning": "Kính ngữ"
+  },
+  {
+    "id": 2,
+    "word": "尊敬語",
+    "reading": "そんけいご",
+    "meaning": "Tôn kính ngữ"
+  },
+  {
+    "id": 3,
+    "word": "謙譲語",
+    "reading": "けんじょうご",
+    "meaning": "Khiêm nhường ngữ"
+  },
+  {
+    "id": 4,
+    "word": "丁寧語",
+    "reading": "ていねいご",
+    "meaning": "Thể lịch sự"
+  },
+  {
+    "id": 5,
+    "word": "いらっしゃる",
+    "reading": "いらっしゃる",
+    "meaning": "Đến, đi, ở (tôn kính)"
+  },
+  {
+    "id": 6,
+    "word": "おっしゃる",
+    "reading": "おっしゃる",
+    "meaning": "Nói (tôn kính)"
+  },
+  {
+    "id": 7,
+    "word": "召し上がる",
+    "reading": "めしあがる",
+    "meaning": "Ăn, uống (tôn kính)"
+  },
+  {
+    "id": 8,
+    "word": "ご覧になる",
+    "reading": "ごらんになる",
+    "meaning": "Xem (tôn kính)"
+  },
+  {
+    "id": 9,
+    "word": "なさる",
+    "reading": "なさる",
+    "meaning": "Làm (tôn kính)"
+  },
+  {
+    "id": 10,
+    "word": "くださる",
+    "reading": "くださる",
+    "meaning": "Cho (tôn kính)"
+  },
+  {
+    "id": 11,
+    "word": "伺う",
+    "reading": "うかがう",
+    "meaning": "Hỏi, thăm (khiêm nhường)"
+  },
+  {
+    "id": 12,
+    "word": "申す",
+    "reading": "もうす",
+    "meaning": "Nói (khiêm nhường)"
+  },
+  {
+    "id": 13,
+    "word": "申し上げる",
+    "reading": "もうしあげる",
+    "meaning": "Thưa, trình bày (khiêm nhường)"
+  },
+  {
+    "id": 14,
+    "word": "拝見する",
+    "reading": "はいけんする",
+    "meaning": "Xem (khiêm nhường)"
+  },
+  {
+    "id": 15,
+    "word": "いただく",
+    "reading": "いただく",
+    "meaning": "Nhận, ăn (khiêm nhường)"
+  },
+  {
+    "id": 16,
+    "word": "参る",
+    "reading": "まいる",
+    "meaning": "Đi, đến (khiêm nhường)"
+  },
+  {
+    "id": 17,
+    "word": "存じる",
+    "reading": "ぞんじる",
+    "meaning": "Biết, nghĩ (khiêm nhường)"
+  },
+  {
+    "id": 18,
+    "word": "承る",
+    "reading": "うけたまわる",
+    "meaning": "Tiếp nhận, nghe (khiêm nhường)"
+  },
+  {
+    "id": 19,
+    "word": "恐れ入ります",
+    "reading": "おそれいります",
+    "meaning": "Xin lỗi vì làm phiền"
+  },
+  {
+    "id": 20,
+    "word": "何卒",
+    "reading": "なにとぞ",
+    "meaning": "Kính mong"
+  }
+]
