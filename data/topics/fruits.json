@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "word": "果物",
+    "reading": "くだもの",
+    "meaning": "Trái cây"
+  },
+  {
+    "id": 2,
+    "word": "りんご",
+    "reading": "りんご",
+    "meaning": "Táo"
+  },
+  {
+    "id": 3,
+    "word": "みかん",
+    "reading": "みかん",
+    "meaning": "Quýt"
+  },
+  {
+    "id": 4,
+    "word": "オレンジ",
+    "reading": "オレンジ",
+    "meaning": "Cam"
+  },
+  {
+    "id": 5,
+    "word": "レモン",
+    "reading": "レモン",
+    "meaning": "Chanh vàng"
+  },
+  {
+    "id": 6,
+    "word": "ライム",
+    "reading": "ライム",
+    "meaning": "Chanh xanh"
+  },
+  {
+    "id": 7,
+    "word": "グレープフルーツ",
+    "reading": "グレープフルーツ",
+    "meaning": "Bưởi chùm"
+  },
+  {
+    "id": 8,
+    "word": "ぶどう",
+    "reading": "ぶどう",
+    "meaning": "Nho"
+  },
+  {
+    "id": 9,
+    "word": "マスカット",
+    "reading": "マスカット",
+    "meaning": "Nho Muscat"
+  },
+  {
+    "id": 10,
+    "word": "いちご",
+    "reading": "いちご",
+    "meaning": "Dâu tây"
+  },
+  {
+    "id": 11,
+    "word": "ブルーベリー",
+    "reading": "ブルーベリー",
+    "meaning": "Việt quất"
+  },
+  {
+    "id": 12,
+    "word": "ラズベリー",
+    "reading": "ラズベリー",
+    "meaning": "Mâm xôi đỏ"
+  },
+  {
+    "id": 13,
+    "word": "ブラックベリー",
+    "reading": "ブラックベリー",
+    "meaning": "Mâm xôi đen"
+  },
+  {
+    "id": 14,
+    "word": "さくらんぼ",
+    "reading": "さくらんぼ",
+    "meaning": "Anh đào"
+  },
+  {
+    "id": 15,
+    "word": "桃",
+    "reading": "もも",
+    "meaning": "Đào"
+  },
+  {
+    "id": 16,
+    "word": "すもも",
+    "reading": "すもも",
+    "meaning": "Mận Nhật"
+  },
+  {
+    "id": 17,
+    "word": "梅",
+    "reading": "うめ",
+    "meaning": "Mơ Nhật"
+  },
+  {
+    "id": 18,
+    "word": "梨",
+    "reading": "なし",
+    "meaning": "Lê Nhật"
+  },
+  {
+    "id": 19,
+    "word": "洋梨",
+    "reading": "ようなし",
+    "meaning": "Lê Tây"
+  },
+  {
+    "id": 20,
+    "word": "柿",
+    "reading": "かき",
+    "meaning": "Hồng"
+  },
+  {
+    "id": 21,
+    "word": "栗",
+    "reading": "くり",
+    "meaning": "Hạt dẻ"
+  },
+  {
+    "id": 22,
+    "word": "バナナ",
+    "reading": "バナナ",
+    "meaning": "Chuối"
+  },
+  {
+    "id": 23,
+    "word": "パイナップル",
+    "reading": "パイナップル",
+    "meaning": "Dứa"
+  },
+  {
+    "id": 24,
+    "word": "マンゴー",
+    "reading": "マンゴー",
+    "meaning": "Xoài"
+  },
+  {
+    "id": 25,
+    "word": "パパイヤ",
+    "reading": "パパイヤ",
+    "meaning": "Đu đủ"
+  },
+  {
+    "id": 26,
+    "word": "スイカ",
+    "reading": "スイカ",
+    "meaning": "Dưa hấu"
+  },
+  {
+    "id": 27,
+    "word": "メロン",
+    "reading": "メロン",
+    "meaning": "Dưa lưới"
+  },
+  {
+    "id": 28,
+    "word": "キウイ",
+    "reading": "キウイ",
+    "meaning": "Kiwi"
+  },
+  {
+    "id": 29,
+    "word": "ドラゴンフルーツ",
+    "reading": "ドラゴンフルーツ",
+    "meaning": "Thanh long"
+  },
+  {
+    "id": 30,
+    "word": "ライチ",
+    "reading": "ライチ",
+    "meaning": "Vải"
+  },
+  {
+    "id": 31,
+    "word": "ロンガン",
+    "reading": "ロンガン",
+    "meaning": "Nhãn"
+  },
+  {
+    "id": 32,
+    "word": "ランブータン",
+    "reading": "ランブータン",
+    "meaning": "Chôm chôm"
+  },
+  {
+    "id": 33,
+    "word": "ドリアン",
+    "reading": "ドリアン",
+    "meaning": "Sầu riêng"
+  },
+  {
+    "id": 34,
+    "word": "ジャックフルーツ",
+    "reading": "ジャックフルーツ",
+    "meaning": "Mít"
+  },
+  {
+    "id": 35,
+    "word": "ココナッツ",
+    "reading": "ココナッツ",
+    "meaning": "Dừa"
+  },
+  {
+    "id": 36,
+    "word": "ザクロ",
+    "reading": "ザクロ",
+    "meaning": "Lựu"
+  },
+  {
+    "id": 37,
+    "word": "イチジク",
+    "reading": "イチジク",
+    "meaning": "Sung"
+  },
+  {
+    "id": 38,
+    "word": "アボカド",
+    "reading": "アボカド",
+    "meaning": "Bơ"
+  },
+  {
+    "id": 39,
+    "word": "パッションフルーツ",
+    "reading": "パッションフルーツ",
+    "meaning": "Chanh dây"
+  },
+  {
+    "id": 40,
+    "word": "スターフルーツ",
+    "reading": "スターフルーツ",
+    "meaning": "Khế"
+  },
+  {
+    "id": 41,
+    "word": "びわ",
+    "reading": "びわ",
+    "meaning": "Tỳ bà"
+  },
+  {
+    "id": 42,
+    "word": "ゆず",
+    "reading": "ゆず",
+    "meaning": "Yuzu"
+  },
+  {
+    "id": 43,
+    "word": "かぼす",
+    "reading": "かぼす",
+    "meaning": "Chanh kabosu"
+  },
+  {
+    "id": 44,
+    "word": "すだち",
+    "reading": "すだち",
+    "meaning": "Chanh sudachi"
+  },
+  {
+    "id": 45,
+    "word": "金柑",
+    "reading": "きんかん",
+    "meaning": "Quất vàng"
+  },
+  {
+    "id": 46,
+    "word": "あんず",
+    "reading": "あんず",
+    "meaning": "Mơ"
+  },
+  {
+    "id": 47,
+    "word": "プルーン",
+    "reading": "プルーン",
+    "meaning": "Mận khô"
+  },
+  {
+    "id": 48,
+    "word": "デーツ",
+    "reading": "デーツ",
+    "meaning": "Chà là"
+  }
+]
