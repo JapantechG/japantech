@@ -158,16 +158,7 @@ function getDataFile(config)
 
     if (config.studyMode === "topic" && config.category === "vocabulary") 
         {
-                const files = {
-                    animals:
-                        "data/topics/animals.json",
-
-                    food:
-                        "data/topics/food.json",
-
-                    colors:
-                        "data/topics/colors.json"
-                };
+                const files = Object.fromEntries(topics.map(topic => [topic.id,`data/topics/${topic.id}.json`]));
 
                 return files[config.target] ?? null;
         }
