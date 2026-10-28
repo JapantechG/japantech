@@ -1,0 +1,296 @@
+[
+  {
+    "id": 1,
+    "word": "野菜",
+    "reading": "やさい",
+    "meaning": "Rau củ"
+  },
+  {
+    "id": 2,
+    "word": "キャベツ",
+    "reading": "キャベツ",
+    "meaning": "Bắp cải"
+  },
+  {
+    "id": 3,
+    "word": "白菜",
+    "reading": "はくさい",
+    "meaning": "Cải thảo"
+  },
+  {
+    "id": 4,
+    "word": "レタス",
+    "reading": "レタス",
+    "meaning": "Xà lách"
+  },
+  {
+    "id": 5,
+    "word": "サニーレタス",
+    "reading": "サニーレタス",
+    "meaning": "Xà lách lá đỏ"
+  },
+  {
+    "id": 6,
+    "word": "ほうれん草",
+    "reading": "ほうれんそう",
+    "meaning": "Cải bó xôi"
+  },
+  {
+    "id": 7,
+    "word": "小松菜",
+    "reading": "こまつな",
+    "meaning": "Cải komatsuna"
+  },
+  {
+    "id": 8,
+    "word": "チンゲンサイ",
+    "reading": "チンゲンサイ",
+    "meaning": "Cải thìa"
+  },
+  {
+    "id": 9,
+    "word": "水菜",
+    "reading": "みずな",
+    "meaning": "Rau mizuna"
+  },
+  {
+    "id": 10,
+    "word": "春菊",
+    "reading": "しゅんぎく",
+    "meaning": "Rau cải cúc"
+  },
+  {
+    "id": 11,
+    "word": "大根",
+    "reading": "だいこん",
+    "meaning": "Củ cải trắng"
+  },
+  {
+    "id": 12,
+    "word": "人参",
+    "reading": "にんじん",
+    "meaning": "Cà rốt"
+  },
+  {
+    "id": 13,
+    "word": "じゃがいも",
+    "reading": "じゃがいも",
+    "meaning": "Khoai tây"
+  },
+  {
+    "id": 14,
+    "word": "さつまいも",
+    "reading": "さつまいも",
+    "meaning": "Khoai lang"
+  },
+  {
+    "id": 15,
+    "word": "里芋",
+    "reading": "さといも",
+    "meaning": "Khoai sọ Nhật"
+  },
+  {
+    "id": 16,
+    "word": "長芋",
+    "reading": "ながいも",
+    "meaning": "Khoai mài Nhật"
+  },
+  {
+    "id": 17,
+    "word": "玉ねぎ",
+    "reading": "たまねぎ",
+    "meaning": "Hành tây"
+  },
+  {
+    "id": 18,
+    "word": "長ねぎ",
+    "reading": "ながねぎ",
+    "meaning": "Hành boa rô Nhật"
+  },
+  {
+    "id": 19,
+    "word": "青ねぎ",
+    "reading": "あおねぎ",
+    "meaning": "Hành lá"
+  },
+  {
+    "id": 20,
+    "word": "にんにく",
+    "reading": "にんにく",
+    "meaning": "Tỏi"
+  },
+  {
+    "id": 21,
+    "word": "生姜",
+    "reading": "しょうが",
+    "meaning": "Gừng"
+  },
+  {
+    "id": 22,
+    "word": "きゅうり",
+    "reading": "きゅうり",
+    "meaning": "Dưa chuột"
+  },
+  {
+    "id": 23,
+    "word": "トマト",
+    "reading": "トマト",
+    "meaning": "Cà chua"
+  },
+  {
+    "id": 24,
+    "word": "ミニトマト",
+    "reading": "ミニトマト",
+    "meaning": "Cà chua bi"
+  },
+  {
+    "id": 25,
+    "word": "なす",
+    "reading": "なす",
+    "meaning": "Cà tím"
+  },
+  {
+    "id": 26,
+    "word": "ピーマン",
+    "reading": "ピーマン",
+    "meaning": "Ớt chuông xanh"
+  },
+  {
+    "id": 27,
+    "word": "パプリカ",
+    "reading": "パプリカ",
+    "meaning": "Ớt chuông màu"
+  },
+  {
+    "id": 28,
+    "word": "唐辛子",
+    "reading": "とうがらし",
+    "meaning": "Ớt cay"
+  },
+  {
+    "id": 29,
+    "word": "かぼちゃ",
+    "reading": "かぼちゃ",
+    "meaning": "Bí đỏ"
+  },
+  {
+    "id": 30,
+    "word": "ズッキーニ",
+    "reading": "ズッキーニ",
+    "meaning": "Bí ngòi"
+  },
+  {
+    "id": 31,
+    "word": "ゴーヤ",
+    "reading": "ゴーヤ",
+    "meaning": "Khổ qua"
+  },
+  {
+    "id": 32,
+    "word": "冬瓜",
+    "reading": "とうがん",
+    "meaning": "Bí đao"
+  },
+  {
+    "id": 33,
+    "word": "オクラ",
+    "reading": "オクラ",
+    "meaning": "Đậu bắp"
+  },
+  {
+    "id": 34,
+    "word": "もやし",
+    "reading": "もやし",
+    "meaning": "Giá đỗ"
+  },
+  {
+    "id": 35,
+    "word": "枝豆",
+    "reading": "えだまめ",
+    "meaning": "Đậu nành non"
+  },
+  {
+    "id": 36,
+    "word": "いんげん",
+    "reading": "いんげん",
+    "meaning": "Đậu cô ve"
+  },
+  {
+    "id": 37,
+    "word": "えんどう豆",
+    "reading": "えんどうまめ",
+    "meaning": "Đậu Hà Lan"
+  },
+  {
+    "id": 38,
+    "word": "とうもろこし",
+    "reading": "とうもろこし",
+    "meaning": "Ngô"
+  },
+  {
+    "id": 39,
+    "word": "ブロッコリー",
+    "reading": "ブロッコリー",
+    "meaning": "Bông cải xanh"
+  },
+  {
+    "id": 40,
+    "word": "カリフラワー",
+    "reading": "カリフラワー",
+    "meaning": "Bông cải trắng"
+  },
+  {
+    "id": 41,
+    "word": "アスパラガス",
+    "reading": "アスパラガス",
+    "meaning": "Măng tây"
+  },
+  {
+    "id": 42,
+    "word": "セロリ",
+    "reading": "セロリ",
+    "meaning": "Cần tây"
+  },
+  {
+    "id": 43,
+    "word": "パセリ",
+    "reading": "パセリ",
+    "meaning": "Mùi tây"
+  },
+  {
+    "id": 44,
+    "word": "パクチー",
+    "reading": "パクチー",
+    "meaning": "Rau mùi"
+  },
+  {
+    "id": 45,
+    "word": "バジル",
+    "reading": "バジル",
+    "meaning": "Húng quế Tây"
+  },
+  {
+    "id": 46,
+    "word": "しそ",
+    "reading": "しそ",
+    "meaning": "Tía tô Nhật"
+  },
+  {
+    "id": 47,
+    "word": "れんこん",
+    "reading": "れんこん",
+    "meaning": "Củ sen"
+  },
+  {
+    "id": 48,
+    "word": "ごぼう",
+    "reading": "ごぼう",
+    "meaning": "Ngưu bàng"
+  },
+  {
+    "id": 49,
+    "word": "たけのこ",
+    "reading": "たけのこ",
+    "meaning": "Măng tre"
+  }
+]
