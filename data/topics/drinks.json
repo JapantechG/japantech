@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "飲み物",
+    "reading": "のみもの",
+    "meaning": "Đồ uống"
+  },
+  {
+    "id": 2,
+    "word": "水",
+    "reading": "みず",
+    "meaning": "Nước"
+  },
+  {
+    "id": 3,
+    "word": "お湯",
+    "reading": "おゆ",
+    "meaning": "Nước nóng"
+  },
+  {
+    "id": 4,
+    "word": "お茶",
+    "reading": "おちゃ",
+    "meaning": "Trà"
+  },
+  {
+    "id": 5,
+    "word": "緑茶",
+    "reading": "りょくちゃ",
+    "meaning": "Trà xanh"
+  },
+  {
+    "id": 6,
+    "word": "紅茶",
+    "reading": "こうちゃ",
+    "meaning": "Trà đen"
+  },
+  {
+    "id": 7,
+    "word": "麦茶",
+    "reading": "むぎちゃ",
+    "meaning": "Trà lúa mạch"
+  },
+  {
+    "id": 8,
+    "word": "ウーロン茶",
+    "reading": "ウーロンちゃ",
+    "meaning": "Trà ô long"
+  },
+  {
+    "id": 9,
+    "word": "抹茶",
+    "reading": "まっちゃ",
+    "meaning": "Matcha"
+  },
+  {
+    "id": 10,
+    "word": "コーヒー",
+    "reading": "コーヒー",
+    "meaning": "Cà phê"
+  },
+  {
+    "id": 11,
+    "word": "カフェラテ",
+    "reading": "カフェラテ",
+    "meaning": "Cà phê sữa latte"
+  },
+  {
+    "id": 12,
+    "word": "牛乳",
+    "reading": "ぎゅうにゅう",
+    "meaning": "Sữa bò"
+  },
+  {
+    "id": 13,
+    "word": "豆乳",
+    "reading": "とうにゅう",
+    "meaning": "Sữa đậu nành"
+  },
+  {
+    "id": 14,
+    "word": "ジュース",
+    "reading": "ジュース",
+    "meaning": "Nước ép"
+  },
+  {
+    "id": 15,
+    "word": "炭酸水",
+    "reading": "たんさんすい",
+    "meaning": "Nước có ga"
+  },
+  {
+    "id": 16,
+    "word": "サイダー",
+    "reading": "サイダー",
+    "meaning": "Nước ngọt có ga kiểu Nhật"
+  },
+  {
+    "id": 17,
+    "word": "レモネード",
+    "reading": "レモネード",
+    "meaning": "Nước chanh"
+  },
+  {
+    "id": 18,
+    "word": "ココア",
+    "reading": "ココア",
+    "meaning": "Ca cao"
+  },
+  {
+    "id": 19,
+    "word": "スムージー",
+    "reading": "スムージー",
+    "meaning": "Sinh tố"
+  },
+  {
+    "id": 20,
+    "word": "スポーツドリンク",
+    "reading": "スポーツドリンク",
+    "meaning": "Nước uống thể thao"
+  }
+]
