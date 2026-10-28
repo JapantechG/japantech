@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "病院",
+    "reading": "びょういん",
+    "meaning": "Bệnh viện"
+  },
+  {
+    "id": 2,
+    "word": "診療所",
+    "reading": "しんりょうじょ",
+    "meaning": "Phòng khám"
+  },
+  {
+    "id": 3,
+    "word": "受付",
+    "reading": "うけつけ",
+    "meaning": "Tiếp nhận"
+  },
+  {
+    "id": 4,
+    "word": "診察",
+    "reading": "しんさつ",
+    "meaning": "Khám bệnh"
+  },
+  {
+    "id": 5,
+    "word": "問診",
+    "reading": "もんしん",
+    "meaning": "Hỏi bệnh sử"
+  },
+  {
+    "id": 6,
+    "word": "医師",
+    "reading": "いし",
+    "meaning": "Bác sĩ"
+  },
+  {
+    "id": 7,
+    "word": "看護師",
+    "reading": "かんごし",
+    "meaning": "Điều dưỡng"
+  },
+  {
+    "id": 8,
+    "word": "患者",
+    "reading": "かんじゃ",
+    "meaning": "Bệnh nhân"
+  },
+  {
+    "id": 9,
+    "word": "内科",
+    "reading": "ないか",
+    "meaning": "Nội khoa"
+  },
+  {
+    "id": 10,
+    "word": "外科",
+    "reading": "げか",
+    "meaning": "Ngoại khoa"
+  },
+  {
+    "id": 11,
+    "word": "小児科",
+    "reading": "しょうにか",
+    "meaning": "Nhi khoa"
+  },
+  {
+    "id": 12,
+    "word": "皮膚科",
+    "reading": "ひふか",
+    "meaning": "Da liễu"
+  },
+  {
+    "id": 13,
+    "word": "耳鼻科",
+    "reading": "じびか",
+    "meaning": "Tai mũi họng"
+  },
+  {
+    "id": 14,
+    "word": "眼科",
+    "reading": "がんか",
+    "meaning": "Nhãn khoa"
+  },
+  {
+    "id": 15,
+    "word": "歯科",
+    "reading": "しか",
+    "meaning": "Nha khoa"
+  },
+  {
+    "id": 16,
+    "word": "検査",
+    "reading": "けんさ",
+    "meaning": "Xét nghiệm, kiểm tra"
+  },
+  {
+    "id": 17,
+    "word": "採血",
+    "reading": "さいけつ",
+    "meaning": "Lấy máu"
+  },
+  {
+    "id": 18,
+    "word": "レントゲン",
+    "reading": "レントゲン",
+    "meaning": "Chụp X-quang"
+  },
+  {
+    "id": 19,
+    "word": "処方箋",
+    "reading": "しょほうせん",
+    "meaning": "Đơn thuốc"
+  },
+  {
+    "id": 20,
+    "word": "入院",
+    "reading": "にゅういん",
+    "meaning": "Nhập viện"
+  }
+]
