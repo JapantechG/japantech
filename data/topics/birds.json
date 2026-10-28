@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "word": "鳥",
+    "reading": "とり",
+    "meaning": "Chim"
+  },
+  {
+    "id": 2,
+    "word": "鶏",
+    "reading": "にわとり",
+    "meaning": "Gà"
+  },
+  {
+    "id": 3,
+    "word": "ひよこ",
+    "reading": "ひよこ",
+    "meaning": "Gà con"
+  },
+  {
+    "id": 4,
+    "word": "アヒル",
+    "reading": "アヒル",
+    "meaning": "Vịt nhà"
+  },
+  {
+    "id": 5,
+    "word": "鴨",
+    "reading": "かも",
+    "meaning": "Vịt trời"
+  },
+  {
+    "id": 6,
+    "word": "ガチョウ",
+    "reading": "ガチョウ",
+    "meaning": "Ngỗng"
+  },
+  {
+    "id": 7,
+    "word": "白鳥",
+    "reading": "はくちょう",
+    "meaning": "Thiên nga"
+  },
+  {
+    "id": 8,
+    "word": "鳩",
+    "reading": "はと",
+    "meaning": "Bồ câu"
+  },
+  {
+    "id": 9,
+    "word": "雀",
+    "reading": "すずめ",
+    "meaning": "Sẻ"
+  },
+  {
+    "id": 10,
+    "word": "烏",
+    "reading": "からす",
+    "meaning": "Quạ"
+  },
+  {
+    "id": 11,
+    "word": "鷹",
+    "reading": "たか",
+    "meaning": "Diều hâu"
+  },
+  {
+    "id": 12,
+    "word": "鷲",
+    "reading": "わし",
+    "meaning": "Đại bàng"
+  },
+  {
+    "id": 13,
+    "word": "梟",
+    "reading": "ふくろう",
+    "meaning": "Cú mèo"
+  },
+  {
+    "id": 14,
+    "word": "ミミズク",
+    "reading": "ミミズク",
+    "meaning": "Cú có túm lông tai"
+  },
+  {
+    "id": 15,
+    "word": "燕",
+    "reading": "つばめ",
+    "meaning": "Én"
+  },
+  {
+    "id": 16,
+    "word": "鶴",
+    "reading": "つる",
+    "meaning": "Sếu"
+  },
+  {
+    "id": 17,
+    "word": "ペンギン",
+    "reading": "ペンギン",
+    "meaning": "Chim cánh cụt"
+  },
+  {
+    "id": 18,
+    "word": "ダチョウ",
+    "reading": "ダチョウ",
+    "meaning": "Đà điểu"
+  },
+  {
+    "id": 19,
+    "word": "孔雀",
+    "reading": "くじゃく",
+    "meaning": "Công"
+  },
+  {
+    "id": 20,
+    "word": "鸚鵡",
+    "reading": "おうむ",
+    "meaning": "Vẹt lớn"
+  },
+  {
+    "id": 21,
+    "word": "インコ",
+    "reading": "インコ",
+    "meaning": "Vẹt nhỏ"
+  },
+  {
+    "id": 22,
+    "word": "カナリア",
+    "reading": "カナリア",
+    "meaning": "Hoàng yến"
+  },
+  {
+    "id": 23,
+    "word": "カモメ",
+    "reading": "カモメ",
+    "meaning": "Mòng biển"
+  },
+  {
+    "id": 24,
+    "word": "フラミンゴ",
+    "reading": "フラミンゴ",
+    "meaning": "Hồng hạc"
+  },
+  {
+    "id": 25,
+    "word": "キツツキ",
+    "reading": "キツツキ",
+    "meaning": "Gõ kiến"
+  },
+  {
+    "id": 26,
+    "word": "ウグイス",
+    "reading": "ウグイス",
+    "meaning": "Chim oanh Nhật"
+  },
+  {
+    "id": 27,
+    "word": "カワセミ",
+    "reading": "カワセミ",
+    "meaning": "Bói cá"
+  },
+  {
+    "id": 28,
+    "word": "雲雀",
+    "reading": "ひばり",
+    "meaning": "Sơn ca"
+  },
+  {
+    "id": 29,
+    "word": "七面鳥",
+    "reading": "しちめんちょう",
+    "meaning": "Gà tây"
+  }
+]
