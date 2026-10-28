@@ -4,6 +4,10 @@
     {
       "id": "set01",
       "enabled": true
+    },
+    {
+      "id": "set02",
+      "enabled": true
     }
   ]
 }
