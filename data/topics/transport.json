@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "word": "交通機関",
+    "reading": "こうつうきかん",
+    "meaning": "Phương tiện giao thông"
+  },
+  {
+    "id": 2,
+    "word": "車",
+    "reading": "くるま",
+    "meaning": "Xe ô tô"
+  },
+  {
+    "id": 3,
+    "word": "自動車",
+    "reading": "じどうしゃ",
+    "meaning": "Ô tô"
+  },
+  {
+    "id": 4,
+    "word": "電車",
+    "reading": "でんしゃ",
+    "meaning": "Tàu điện"
+  },
+  {
+    "id": 5,
+    "word": "列車",
+    "reading": "れっしゃ",
+    "meaning": "Đoàn tàu"
+  },
+  {
+    "id": 6,
+    "word": "新幹線",
+    "reading": "しんかんせん",
+    "meaning": "Tàu cao tốc Shinkansen"
+  },
+  {
+    "id": 7,
+    "word": "地下鉄",
+    "reading": "ちかてつ",
+    "meaning": "Tàu điện ngầm"
+  },
+  {
+    "id": 8,
+    "word": "路面電車",
+    "reading": "ろめんでんしゃ",
+    "meaning": "Xe điện mặt đất"
+  },
+  {
+    "id": 9,
+    "word": "バス",
+    "reading": "バス",
+    "meaning": "Xe buýt"
+  },
+  {
+    "id": 10,
+    "word": "タクシー",
+    "reading": "タクシー",
+    "meaning": "Taxi"
+  },
+  {
+    "id": 11,
+    "word": "自転車",
+    "reading": "じてんしゃ",
+    "meaning": "Xe đạp"
+  },
+  {
+    "id": 12,
+    "word": "バイク",
+    "reading": "バイク",
+    "meaning": "Xe máy"
+  },
+  {
+    "id": 13,
+    "word": "オートバイ",
+    "reading": "オートバイ",
+    "meaning": "Mô tô"
+  },
+  {
+    "id": 14,
+    "word": "トラック",
+    "reading": "トラック",
+    "meaning": "Xe tải"
+  },
+  {
+    "id": 15,
+    "word": "軽トラック",
+    "reading": "けいトラック",
+    "meaning": "Xe tải nhỏ"
+  },
+  {
+    "id": 16,
+    "word": "ワゴン車",
+    "reading": "ワゴンしゃ",
+    "meaning": "Xe wagon"
+  },
+  {
+    "id": 17,
+    "word": "救急車",
+    "reading": "きゅうきゅうしゃ",
+    "meaning": "Xe cứu thương"
+  },
+  {
+    "id": 18,
+    "word": "消防車",
+    "reading": "しょうぼうしゃ",
+    "meaning": "Xe cứu hỏa"
+  },
+  {
+    "id": 19,
+    "word": "パトカー",
+    "reading": "パトカー",
+    "meaning": "Xe cảnh sát"
+  },
+  {
+    "id": 20,
+    "word": "飛行機",
+    "reading": "ひこうき",
+    "meaning": "Máy bay"
+  },
+  {
+    "id": 21,
+    "word": "ヘリコプター",
+    "reading": "ヘリコプター",
+    "meaning": "Trực thăng"
+  },
+  {
+    "id": 22,
+    "word": "船",
+    "reading": "ふね",
+    "meaning": "Thuyền, tàu"
+  },
+  {
+    "id": 23,
+    "word": "フェリー",
+    "reading": "フェリー",
+    "meaning": "Phà"
+  },
+  {
+    "id": 24,
+    "word": "ボート",
+    "reading": "ボート",
+    "meaning": "Thuyền nhỏ"
+  },
+  {
+    "id": 25,
+    "word": "ヨット",
+    "reading": "ヨット",
+    "meaning": "Du thuyền buồm"
+  },
+  {
+    "id": 26,
+    "word": "貨物船",
+    "reading": "かもつせん",
+    "meaning": "Tàu chở hàng"
+  },
+  {
+    "id": 27,
+    "word": "潜水艦",
+    "reading": "せんすいかん",
+    "meaning": "Tàu ngầm"
+  },
+  {
+    "id": 28,
+    "word": "ロープウェー",
+    "reading": "ロープウェー",
+    "meaning": "Cáp treo"
+  },
+  {
+    "id": 29,
+    "word": "ケーブルカー",
+    "reading": "ケーブルカー",
+    "meaning": "Tàu cáp kéo"
+  },
+  {
+    "id": 30,
+    "word": "モノレール",
+    "reading": "モノレール",
+    "meaning": "Tàu một ray"
+  }
+]
