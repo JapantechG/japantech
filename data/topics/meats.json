@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "肉",
+    "reading": "にく",
+    "meaning": "Thịt"
+  },
+  {
+    "id": 2,
+    "word": "牛肉",
+    "reading": "ぎゅうにく",
+    "meaning": "Thịt bò"
+  },
+  {
+    "id": 3,
+    "word": "豚肉",
+    "reading": "ぶたにく",
+    "meaning": "Thịt lợn"
+  },
+  {
+    "id": 4,
+    "word": "鶏肉",
+    "reading": "とりにく",
+    "meaning": "Thịt gà"
+  },
+  {
+    "id": 5,
+    "word": "羊肉",
+    "reading": "ようにく",
+    "meaning": "Thịt cừu"
+  },
+  {
+    "id": 6,
+    "word": "馬肉",
+    "reading": "ばにく",
+    "meaning": "Thịt ngựa"
+  },
+  {
+    "id": 7,
+    "word": "鴨肉",
+    "reading": "かもにく",
+    "meaning": "Thịt vịt"
+  },
+  {
+    "id": 8,
+    "word": "ひき肉",
+    "reading": "ひきにく",
+    "meaning": "Thịt xay"
+  },
+  {
+    "id": 9,
+    "word": "薄切り肉",
+    "reading": "うすぎりにく",
+    "meaning": "Thịt thái lát mỏng"
+  },
+  {
+    "id": 10,
+    "word": "骨付き肉",
+    "reading": "ほねつきにく",
+    "meaning": "Thịt có xương"
+  },
+  {
+    "id": 11,
+    "word": "もも肉",
+    "reading": "ももにく",
+    "meaning": "Thịt đùi"
+  },
+  {
+    "id": 12,
+    "word": "胸肉",
+    "reading": "むねにく",
+    "meaning": "Thịt ức"
+  },
+  {
+    "id": 13,
+    "word": "ささみ",
+    "reading": "ささみ",
+    "meaning": "Thịt lườn gà"
+  },
+  {
+    "id": 14,
+    "word": "手羽先",
+    "reading": "てばさき",
+    "meaning": "Đầu cánh gà"
+  },
+  {
+    "id": 15,
+    "word": "豚バラ肉",
+    "reading": "ぶたバラにく",
+    "meaning": "Thịt ba chỉ lợn"
+  },
+  {
+    "id": 16,
+    "word": "ロース",
+    "reading": "ロース",
+    "meaning": "Thịt thăn lưng"
+  },
+  {
+    "id": 17,
+    "word": "ヒレ肉",
+    "reading": "ヒレにく",
+    "meaning": "Thịt phi lê thăn"
+  },
+  {
+    "id": 18,
+    "word": "レバー",
+    "reading": "レバー",
+    "meaning": "Gan"
+  },
+  {
+    "id": 19,
+    "word": "ソーセージ",
+    "reading": "ソーセージ",
+    "meaning": "Xúc xích"
+  },
+  {
+    "id": 20,
+    "word": "ハム",
+    "reading": "ハム",
+    "meaning": "Giăm bông"
+  }
+]
