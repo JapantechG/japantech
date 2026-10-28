@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "生活",
+    "reading": "せいかつ",
+    "meaning": "Sinh hoạt"
+  },
+  {
+    "id": 2,
+    "word": "習慣",
+    "reading": "しゅうかん",
+    "meaning": "Thói quen"
+  },
+  {
+    "id": 3,
+    "word": "早起き",
+    "reading": "はやおき",
+    "meaning": "Dậy sớm"
+  },
+  {
+    "id": 4,
+    "word": "夜更かし",
+    "reading": "よふかし",
+    "meaning": "Thức khuya"
+  },
+  {
+    "id": 5,
+    "word": "寝坊",
+    "reading": "ねぼう",
+    "meaning": "Ngủ quên"
+  },
+  {
+    "id": 6,
+    "word": "朝食",
+    "reading": "ちょうしょく",
+    "meaning": "Bữa sáng"
+  },
+  {
+    "id": 7,
+    "word": "昼食",
+    "reading": "ちゅうしょく",
+    "meaning": "Bữa trưa"
+  },
+  {
+    "id": 8,
+    "word": "夕食",
+    "reading": "ゆうしょく",
+    "meaning": "Bữa tối"
+  },
+  {
+    "id": 9,
+    "word": "間食",
+    "reading": "かんしょく",
+    "meaning": "Ăn vặt"
+  },
+  {
+    "id": 10,
+    "word": "外食",
+    "reading": "がいしょく",
+    "meaning": "Ăn ngoài"
+  },
+  {
+    "id": 11,
+    "word": "自炊",
+    "reading": "じすい",
+    "meaning": "Tự nấu ăn"
+  },
+  {
+    "id": 12,
+    "word": "通勤",
+    "reading": "つうきん",
+    "meaning": "Đi làm hằng ngày"
+  },
+  {
+    "id": 13,
+    "word": "通学",
+    "reading": "つうがく",
+    "meaning": "Đi học hằng ngày"
+  },
+  {
+    "id": 14,
+    "word": "日課",
+    "reading": "にっか",
+    "meaning": "Việc làm thường ngày"
+  },
+  {
+    "id": 15,
+    "word": "掃除",
+    "reading": "そうじ",
+    "meaning": "Dọn vệ sinh"
+  },
+  {
+    "id": 16,
+    "word": "洗濯",
+    "reading": "せんたく",
+    "meaning": "Giặt đồ"
+  },
+  {
+    "id": 17,
+    "word": "入浴",
+    "reading": "にゅうよく",
+    "meaning": "Tắm bồn"
+  },
+  {
+    "id": 18,
+    "word": "就寝",
+    "reading": "しゅうしん",
+    "meaning": "Đi ngủ"
+  },
+  {
+    "id": 19,
+    "word": "起床",
+    "reading": "きしょう",
+    "meaning": "Thức dậy"
+  },
+  {
+    "id": 20,
+    "word": "規則正しい",
+    "reading": "きそくただしい",
+    "meaning": "Điều độ"
+  }
+]
