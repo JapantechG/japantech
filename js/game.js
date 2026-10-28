@@ -158,9 +158,12 @@ function getDataFile(config)
 
     if (config.studyMode === "topic" && config.category === "vocabulary") 
         {
-                const files = Object.fromEntries(topics.map(topic => [topic.id,`data/topics/${topic.id}.json`]));
+                    if (!config.target) 
+                    {
+                        return null;
+                    }
 
-                return files[config.target] ?? null;
+                    return `data/topics/${config.target}.json`;
         }
 
     /*
@@ -230,6 +233,9 @@ if (!dataFile)
 /*
     Load đúng JSON đã được mapping
 */
+console.log("[GAME] Config:", config);
+console.log("[GAME] Loading:", dataFile);
+    
 const response = await fetch(dataFile);
 
 
