@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "word": "文化",
+    "reading": "ぶんか",
+    "meaning": "Văn hóa"
+  },
+  {
+    "id": 2,
+    "word": "伝統",
+    "reading": "でんとう",
+    "meaning": "Truyền thống"
+  },
+  {
+    "id": 3,
+    "word": "着物",
+    "reading": "きもの",
+    "meaning": "Kimono"
+  },
+  {
+    "id": 4,
+    "word": "浴衣",
+    "reading": "ゆかた",
+    "meaning": "Yukata"
+  },
+  {
+    "id": 5,
+    "word": "茶道",
+    "reading": "さどう",
+    "meaning": "Trà đạo"
+  },
+  {
+    "id": 6,
+    "word": "華道",
+    "reading": "かどう",
+    "meaning": "Nghệ thuật cắm hoa"
+  },
+  {
+    "id": 7,
+    "word": "書道",
+    "reading": "しょどう",
+    "meaning": "Thư pháp"
+  },
+  {
+    "id": 8,
+    "word": "折り紙",
+    "reading": "おりがみ",
+    "meaning": "Origami"
+  },
+  {
+    "id": 9,
+    "word": "歌舞伎",
+    "reading": "かぶき",
+    "meaning": "Kabuki"
+  },
+  {
+    "id": 10,
+    "word": "能",
+    "reading": "のう",
+    "meaning": "Kịch Noh"
+  },
+  {
+    "id": 11,
+    "word": "落語",
+    "reading": "らくご",
+    "meaning": "Kể chuyện hài truyền thống"
+  },
+  {
+    "id": 12,
+    "word": "畳",
+    "reading": "たたみ",
+    "meaning": "Chiếu tatami"
+  },
+  {
+    "id": 13,
+    "word": "障子",
+    "reading": "しょうじ",
+    "meaning": "Cửa giấy shoji"
+  },
+  {
+    "id": 14,
+    "word": "襖",
+    "reading": "ふすま",
+    "meaning": "Cửa trượt fusuma"
+  },
+  {
+    "id": 15,
+    "word": "温泉",
+    "reading": "おんせん",
+    "meaning": "Suối nước nóng"
+  },
+  {
+    "id": 16,
+    "word": "神社",
+    "reading": "じんじゃ",
+    "meaning": "Đền Thần đạo"
+  },
+  {
+    "id": 17,
+    "word": "お辞儀",
+    "reading": "おじぎ",
+    "meaning": "Cúi chào"
+  },
+  {
+    "id": 18,
+    "word": "おもてなし",
+    "reading": "おもてなし",
+    "meaning": "Tinh thần tiếp khách chu đáo"
+  },
+  {
+    "id": 19,
+    "word": "侘び寂び",
+    "reading": "わびさび",
+    "meaning": "Thẩm mỹ wabi-sabi"
+  }
+]
