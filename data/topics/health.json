@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "健康",
+    "reading": "けんこう",
+    "meaning": "Sức khỏe"
+  },
+  {
+    "id": 2,
+    "word": "健康診断",
+    "reading": "けんこうしんだん",
+    "meaning": "Khám sức khỏe định kỳ"
+  },
+  {
+    "id": 3,
+    "word": "体調",
+    "reading": "たいちょう",
+    "meaning": "Tình trạng sức khỏe"
+  },
+  {
+    "id": 4,
+    "word": "体温",
+    "reading": "たいおん",
+    "meaning": "Thân nhiệt"
+  },
+  {
+    "id": 5,
+    "word": "血圧",
+    "reading": "けつあつ",
+    "meaning": "Huyết áp"
+  },
+  {
+    "id": 6,
+    "word": "脈拍",
+    "reading": "みゃくはく",
+    "meaning": "Nhịp mạch"
+  },
+  {
+    "id": 7,
+    "word": "体重",
+    "reading": "たいじゅう",
+    "meaning": "Cân nặng"
+  },
+  {
+    "id": 8,
+    "word": "身長",
+    "reading": "しんちょう",
+    "meaning": "Chiều cao"
+  },
+  {
+    "id": 9,
+    "word": "栄養",
+    "reading": "えいよう",
+    "meaning": "Dinh dưỡng"
+  },
+  {
+    "id": 10,
+    "word": "食生活",
+    "reading": "しょくせいかつ",
+    "meaning": "Thói quen ăn uống"
+  },
+  {
+    "id": 11,
+    "word": "睡眠",
+    "reading": "すいみん",
+    "meaning": "Giấc ngủ"
+  },
+  {
+    "id": 12,
+    "word": "休息",
+    "reading": "きゅうそく",
+    "meaning": "Nghỉ ngơi"
+  },
+  {
+    "id": 13,
+    "word": "疲労",
+    "reading": "ひろう",
+    "meaning": "Mệt mỏi"
+  },
+  {
+    "id": 14,
+    "word": "運動不足",
+    "reading": "うんどうぶそく",
+    "meaning": "Thiếu vận động"
+  },
+  {
+    "id": 15,
+    "word": "免疫",
+    "reading": "めんえき",
+    "meaning": "Miễn dịch"
+  },
+  {
+    "id": 16,
+    "word": "予防",
+    "reading": "よぼう",
+    "meaning": "Phòng ngừa"
+  },
+  {
+    "id": 17,
+    "word": "衛生",
+    "reading": "えいせい",
+    "meaning": "Vệ sinh"
+  },
+  {
+    "id": 18,
+    "word": "ストレス",
+    "reading": "ストレス",
+    "meaning": "Căng thẳng"
+  },
+  {
+    "id": 19,
+    "word": "禁煙",
+    "reading": "きんえん",
+    "meaning": "Cai thuốc lá"
+  },
+  {
+    "id": 20,
+    "word": "水分補給",
+    "reading": "すいぶんほきゅう",
+    "meaning": "Bổ sung nước"
+  }
+]
