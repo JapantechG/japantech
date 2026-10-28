@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "顔",
+    "reading": "かお",
+    "meaning": "Mặt"
+  },
+  {
+    "id": 2,
+    "word": "髪",
+    "reading": "かみ",
+    "meaning": "Tóc"
+  },
+  {
+    "id": 3,
+    "word": "額",
+    "reading": "ひたい",
+    "meaning": "Trán"
+  },
+  {
+    "id": 4,
+    "word": "眉毛",
+    "reading": "まゆげ",
+    "meaning": "Lông mày"
+  },
+  {
+    "id": 5,
+    "word": "目",
+    "reading": "め",
+    "meaning": "Mắt"
+  },
+  {
+    "id": 6,
+    "word": "まつげ",
+    "reading": "まつげ",
+    "meaning": "Lông mi"
+  },
+  {
+    "id": 7,
+    "word": "瞳",
+    "reading": "ひとみ",
+    "meaning": "Con ngươi"
+  },
+  {
+    "id": 8,
+    "word": "鼻",
+    "reading": "はな",
+    "meaning": "Mũi"
+  },
+  {
+    "id": 9,
+    "word": "耳",
+    "reading": "みみ",
+    "meaning": "Tai"
+  },
+  {
+    "id": 10,
+    "word": "頬",
+    "reading": "ほお",
+    "meaning": "Má"
+  },
+  {
+    "id": 11,
+    "word": "口",
+    "reading": "くち",
+    "meaning": "Miệng"
+  },
+  {
+    "id": 12,
+    "word": "唇",
+    "reading": "くちびる",
+    "meaning": "Môi"
+  },
+  {
+    "id": 13,
+    "word": "歯",
+    "reading": "は",
+    "meaning": "Răng"
+  },
+  {
+    "id": 14,
+    "word": "舌",
+    "reading": "した",
+    "meaning": "Lưỡi"
+  },
+  {
+    "id": 15,
+    "word": "顎",
+    "reading": "あご",
+    "meaning": "Cằm, hàm"
+  },
+  {
+    "id": 16,
+    "word": "顎髭",
+    "reading": "あごひげ",
+    "meaning": "Râu cằm"
+  },
+  {
+    "id": 17,
+    "word": "えくぼ",
+    "reading": "えくぼ",
+    "meaning": "Má lúm đồng tiền"
+  },
+  {
+    "id": 18,
+    "word": "しわ",
+    "reading": "しわ",
+    "meaning": "Nếp nhăn"
+  },
+  {
+    "id": 19,
+    "word": "ほくろ",
+    "reading": "ほくろ",
+    "meaning": "Nốt ruồi"
+  },
+  {
+    "id": 20,
+    "word": "そばかす",
+    "reading": "そばかす",
+    "meaning": "Tàn nhang"
+  }
+]
