@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "仕事",
+    "reading": "しごと",
+    "meaning": "Công việc"
+  },
+  {
+    "id": 2,
+    "word": "勤務",
+    "reading": "きんむ",
+    "meaning": "Làm việc"
+  },
+  {
+    "id": 3,
+    "word": "出勤",
+    "reading": "しゅっきん",
+    "meaning": "Đi làm"
+  },
+  {
+    "id": 4,
+    "word": "退勤",
+    "reading": "たいきん",
+    "meaning": "Tan làm"
+  },
+  {
+    "id": 5,
+    "word": "残業",
+    "reading": "ざんぎょう",
+    "meaning": "Làm thêm giờ"
+  },
+  {
+    "id": 6,
+    "word": "休憩",
+    "reading": "きゅうけい",
+    "meaning": "Nghỉ giải lao"
+  },
+  {
+    "id": 7,
+    "word": "休日出勤",
+    "reading": "きゅうじつしゅっきん",
+    "meaning": "Đi làm ngày nghỉ"
+  },
+  {
+    "id": 8,
+    "word": "有給休暇",
+    "reading": "ゆうきゅうきゅうか",
+    "meaning": "Nghỉ phép có lương"
+  },
+  {
+    "id": 9,
+    "word": "欠勤",
+    "reading": "けっきん",
+    "meaning": "Nghỉ làm"
+  },
+  {
+    "id": 10,
+    "word": "遅刻",
+    "reading": "ちこく",
+    "meaning": "Đi muộn"
+  },
+  {
+    "id": 11,
+    "word": "早退",
+    "reading": "そうたい",
+    "meaning": "Về sớm"
+  },
+  {
+    "id": 12,
+    "word": "作業",
+    "reading": "さぎょう",
+    "meaning": "Thao tác, công việc"
+  },
+  {
+    "id": 13,
+    "word": "業務",
+    "reading": "ぎょうむ",
+    "meaning": "Nhiệm vụ nghiệp vụ"
+  },
+  {
+    "id": 14,
+    "word": "担当",
+    "reading": "たんとう",
+    "meaning": "Phụ trách"
+  },
+  {
+    "id": 15,
+    "word": "納期",
+    "reading": "のうき",
+    "meaning": "Hạn giao hàng"
+  },
+  {
+    "id": 16,
+    "word": "締め切り",
+    "reading": "しめきり",
+    "meaning": "Hạn chót"
+  },
+  {
+    "id": 17,
+    "word": "進捗",
+    "reading": "しんちょく",
+    "meaning": "Tiến độ"
+  },
+  {
+    "id": 18,
+    "word": "効率",
+    "reading": "こうりつ",
+    "meaning": "Hiệu suất"
+  },
+  {
+    "id": 19,
+    "word": "改善",
+    "reading": "かいぜん",
+    "meaning": "Cải tiến"
+  },
+  {
+    "id": 20,
+    "word": "報告",
+    "reading": "ほうこく",
+    "meaning": "Báo cáo"
+  }
+]
