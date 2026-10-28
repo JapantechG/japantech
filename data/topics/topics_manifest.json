@@ -1,0 +1,802 @@
+[
+  {
+    "order": 1,
+    "select_label": "001 - Màu sắc",
+    "value": "colors",
+    "file": "colors.json",
+    "name_ja": "色",
+    "count": 40
+  },
+  {
+    "order": 2,
+    "select_label": "002 - Trái cây",
+    "value": "fruits",
+    "file": "fruits.json",
+    "name_ja": "果物",
+    "count": 48
+  },
+  {
+    "order": 3,
+    "select_label": "003 - Rau củ",
+    "value": "vegetables",
+    "file": "vegetables.json",
+    "name_ja": "野菜",
+    "count": 49
+  },
+  {
+    "order": 4,
+    "select_label": "004 - Động vật",
+    "value": "animals",
+    "file": "animals.json",
+    "name_ja": "動物",
+    "count": 44
+  },
+  {
+    "order": 5,
+    "select_label": "005 - Các loài chim",
+    "value": "birds",
+    "file": "birds.json",
+    "name_ja": "鳥",
+    "count": 29
+  },
+  {
+    "order": 6,
+    "select_label": "006 - Cá và sinh vật biển",
+    "value": "sea_animals",
+    "file": "sea_animals.json",
+    "name_ja": "魚・海の生き物",
+    "count": 38
+  },
+  {
+    "order": 7,
+    "select_label": "007 - Côn trùng",
+    "value": "insects",
+    "file": "insects.json",
+    "name_ja": "昆虫",
+    "count": 28
+  },
+  {
+    "order": 8,
+    "select_label": "008 - Các loài hoa",
+    "value": "flowers",
+    "file": "flowers.json",
+    "name_ja": "花",
+    "count": 29
+  },
+  {
+    "order": 9,
+    "select_label": "009 - Thực vật",
+    "value": "plants",
+    "file": "plants.json",
+    "name_ja": "植物・木",
+    "count": 30
+  },
+  {
+    "order": 10,
+    "select_label": "010 - Phương tiện giao thông",
+    "value": "transport",
+    "file": "transport.json",
+    "name_ja": "交通機関",
+    "count": 30
+  },
+  {
+    "order": 11,
+    "select_label": "011 - Số đếm",
+    "value": "numbers",
+    "file": "numbers.json",
+    "name_ja": "数字",
+    "count": 20
+  },
+  {
+    "order": 12,
+    "select_label": "012 - Thời gian",
+    "value": "time",
+    "file": "time.json",
+    "name_ja": "時間",
+    "count": 19
+  },
+  {
+    "order": 13,
+    "select_label": "013 - Thứ và ngày tháng",
+    "value": "dates",
+    "file": "dates.json",
+    "name_ja": "曜日・日付",
+    "count": 20
+  },
+  {
+    "order": 14,
+    "select_label": "014 - Các mùa",
+    "value": "seasons",
+    "file": "seasons.json",
+    "name_ja": "季節",
+    "count": 15
+  },
+  {
+    "order": 15,
+    "select_label": "015 - Thời tiết",
+    "value": "weather",
+    "file": "weather.json",
+    "name_ja": "天気",
+    "count": 20
+  },
+  {
+    "order": 16,
+    "select_label": "016 - Hình dạng",
+    "value": "shapes",
+    "file": "shapes.json",
+    "name_ja": "形",
+    "count": 20
+  },
+  {
+    "order": 17,
+    "select_label": "017 - Phương hướng và vị trí",
+    "value": "directions",
+    "file": "directions.json",
+    "name_ja": "方向・位置",
+    "count": 20
+  },
+  {
+    "order": 18,
+    "select_label": "018 - Chào hỏi",
+    "value": "greetings",
+    "file": "greetings.json",
+    "name_ja": "挨拶",
+    "count": 21
+  },
+  {
+    "order": 19,
+    "select_label": "019 - Giới thiệu bản thân",
+    "value": "self_introduction",
+    "file": "self_introduction.json",
+    "name_ja": "自己紹介",
+    "count": 18
+  },
+  {
+    "order": 20,
+    "select_label": "020 - Gia đình",
+    "value": "family",
+    "file": "family.json",
+    "name_ja": "家族",
+    "count": 20
+  },
+  {
+    "order": 21,
+    "select_label": "021 - Bộ phận cơ thể",
+    "value": "body",
+    "file": "body.json",
+    "name_ja": "体",
+    "count": 27
+  },
+  {
+    "order": 22,
+    "select_label": "022 - Khuôn mặt",
+    "value": "face",
+    "file": "face.json",
+    "name_ja": "顔",
+    "count": 20
+  },
+  {
+    "order": 23,
+    "select_label": "023 - Tính cách",
+    "value": "personality",
+    "file": "personality.json",
+    "name_ja": "性格",
+    "count": 20
+  },
+  {
+    "order": 24,
+    "select_label": "024 - Cảm xúc",
+    "value": "emotions",
+    "file": "emotions.json",
+    "name_ja": "感情",
+    "count": 20
+  },
+  {
+    "order": 25,
+    "select_label": "025 - Nghề nghiệp",
+    "value": "jobs",
+    "file": "jobs.json",
+    "name_ja": "職業",
+    "count": 24
+  },
+  {
+    "order": 26,
+    "select_label": "026 - Đồ ăn",
+    "value": "foods",
+    "file": "foods.json",
+    "name_ja": "食べ物",
+    "count": 28
+  },
+  {
+    "order": 27,
+    "select_label": "027 - Đồ uống",
+    "value": "drinks",
+    "file": "drinks.json",
+    "name_ja": "飲み物",
+    "count": 20
+  },
+  {
+    "order": 28,
+    "select_label": "028 - Các loại thịt",
+    "value": "meats",
+    "file": "meats.json",
+    "name_ja": "肉類",
+    "count": 20
+  },
+  {
+    "order": 29,
+    "select_label": "029 - Gia vị",
+    "value": "seasonings",
+    "file": "seasonings.json",
+    "name_ja": "調味料",
+    "count": 20
+  },
+  {
+    "order": 30,
+    "select_label": "030 - Món ăn và nấu ăn",
+    "value": "cooking",
+    "file": "cooking.json",
+    "name_ja": "料理",
+    "count": 20
+  },
+  {
+    "order": 31,
+    "select_label": "031 - Dụng cụ nhà bếp",
+    "value": "kitchen",
+    "file": "kitchen.json",
+    "name_ja": "台所用品",
+    "count": 20
+  },
+  {
+    "order": 32,
+    "select_label": "032 - Đồ nội thất",
+    "value": "furniture",
+    "file": "furniture.json",
+    "name_ja": "家具",
+    "count": 20
+  },
+  {
+    "order": 33,
+    "select_label": "033 - Thiết bị điện gia dụng",
+    "value": "appliances",
+    "file": "appliances.json",
+    "name_ja": "家電",
+    "count": 20
+  },
+  {
+    "order": 34,
+    "select_label": "034 - Các phòng trong nhà",
+    "value": "rooms",
+    "file": "rooms.json",
+    "name_ja": "部屋",
+    "count": 20
+  },
+  {
+    "order": 35,
+    "select_label": "035 - Đồ dùng sinh hoạt",
+    "value": "daily_items",
+    "file": "daily_items.json",
+    "name_ja": "日用品",
+    "count": 20
+  },
+  {
+    "order": 36,
+    "select_label": "036 - Quần áo",
+    "value": "clothes",
+    "file": "clothes.json",
+    "name_ja": "衣服",
+    "count": 20
+  },
+  {
+    "order": 37,
+    "select_label": "037 - Giày dép và phụ kiện",
+    "value": "shoes_accessories",
+    "file": "shoes_accessories.json",
+    "name_ja": "靴・アクセサリー",
+    "count": 20
+  },
+  {
+    "order": 38,
+    "select_label": "038 - Văn phòng phẩm",
+    "value": "stationery",
+    "file": "stationery.json",
+    "name_ja": "文房具",
+    "count": 20
+  },
+  {
+    "order": 39,
+    "select_label": "039 - Trường học",
+    "value": "school",
+    "file": "school.json",
+    "name_ja": "学校",
+    "count": 20
+  },
+  {
+    "order": 40,
+    "select_label": "040 - Môn học",
+    "value": "subjects",
+    "file": "subjects.json",
+    "name_ja": "教科",
+    "count": 20
+  },
+  {
+    "order": 41,
+    "select_label": "041 - Học tập",
+    "value": "studying",
+    "file": "studying.json",
+    "name_ja": "勉強",
+    "count": 20
+  },
+  {
+    "order": 42,
+    "select_label": "042 - Thi cử",
+    "value": "exams",
+    "file": "exams.json",
+    "name_ja": "試験",
+    "count": 19
+  },
+  {
+    "order": 43,
+    "select_label": "043 - Thể thao",
+    "value": "sports",
+    "file": "sports.json",
+    "name_ja": "スポーツ",
+    "count": 20
+  },
+  {
+    "order": 44,
+    "select_label": "044 - Sở thích",
+    "value": "hobbies",
+    "file": "hobbies.json",
+    "name_ja": "趣味",
+    "count": 20
+  },
+  {
+    "order": 45,
+    "select_label": "045 - Âm nhạc",
+    "value": "music",
+    "file": "music.json",
+    "name_ja": "音楽",
+    "count": 20
+  },
+  {
+    "order": 46,
+    "select_label": "046 - Phim ảnh và truyền hình",
+    "value": "movies_tv",
+    "file": "movies_tv.json",
+    "name_ja": "映画・テレビ",
+    "count": 20
+  },
+  {
+    "order": 47,
+    "select_label": "047 - Trò chơi",
+    "value": "games",
+    "file": "games.json",
+    "name_ja": "ゲーム",
+    "count": 20
+  },
+  {
+    "order": 48,
+    "select_label": "048 - Du lịch",
+    "value": "travel",
+    "file": "travel.json",
+    "name_ja": "旅行",
+    "count": 20
+  },
+  {
+    "order": 49,
+    "select_label": "049 - Địa điểm du lịch",
+    "value": "sightseeing",
+    "file": "sightseeing.json",
+    "name_ja": "観光地",
+    "count": 20
+  },
+  {
+    "order": 50,
+    "select_label": "050 - Khách sạn",
+    "value": "hotel",
+    "file": "hotel.json",
+    "name_ja": "ホテル",
+    "count": 20
+  },
+  {
+    "order": 51,
+    "select_label": "051 - Sân bay",
+    "value": "airport",
+    "file": "airport.json",
+    "name_ja": "空港",
+    "count": 20
+  },
+  {
+    "order": 52,
+    "select_label": "052 - Tàu điện và nhà ga",
+    "value": "trains",
+    "file": "trains.json",
+    "name_ja": "電車・駅",
+    "count": 20
+  },
+  {
+    "order": 53,
+    "select_label": "053 - Ô tô và lái xe",
+    "value": "driving",
+    "file": "driving.json",
+    "name_ja": "車・運転",
+    "count": 20
+  },
+  {
+    "order": 54,
+    "select_label": "054 - Đường sá và giao thông",
+    "value": "roads",
+    "file": "roads.json",
+    "name_ja": "道路・交通",
+    "count": 20
+  },
+  {
+    "order": 55,
+    "select_label": "055 - Các loại công trình",
+    "value": "buildings",
+    "file": "buildings.json",
+    "name_ja": "建物",
+    "count": 20
+  },
+  {
+    "order": 56,
+    "select_label": "056 - Địa điểm và cơ sở vật chất",
+    "value": "places",
+    "file": "places.json",
+    "name_ja": "場所・施設",
+    "count": 18
+  },
+  {
+    "order": 57,
+    "select_label": "057 - Các loại cửa hàng",
+    "value": "shops",
+    "file": "shops.json",
+    "name_ja": "店",
+    "count": 19
+  },
+  {
+    "order": 58,
+    "select_label": "058 - Mua sắm",
+    "value": "shopping",
+    "file": "shopping.json",
+    "name_ja": "買い物",
+    "count": 20
+  },
+  {
+    "order": 59,
+    "select_label": "059 - Tiền bạc",
+    "value": "money",
+    "file": "money.json",
+    "name_ja": "お金",
+    "count": 20
+  },
+  {
+    "order": 60,
+    "select_label": "060 - Ngân hàng",
+    "value": "banking",
+    "file": "banking.json",
+    "name_ja": "銀行",
+    "count": 20
+  },
+  {
+    "order": 61,
+    "select_label": "061 - Bệnh tật",
+    "value": "diseases",
+    "file": "diseases.json",
+    "name_ja": "病気",
+    "count": 20
+  },
+  {
+    "order": 62,
+    "select_label": "062 - Triệu chứng",
+    "value": "symptoms",
+    "file": "symptoms.json",
+    "name_ja": "症状",
+    "count": 20
+  },
+  {
+    "order": 63,
+    "select_label": "063 - Bệnh viện",
+    "value": "hospital",
+    "file": "hospital.json",
+    "name_ja": "病院",
+    "count": 20
+  },
+  {
+    "order": 64,
+    "select_label": "064 - Thuốc",
+    "value": "medicine",
+    "file": "medicine.json",
+    "name_ja": "薬",
+    "count": 20
+  },
+  {
+    "order": 65,
+    "select_label": "065 - Sức khỏe",
+    "value": "health",
+    "file": "health.json",
+    "name_ja": "健康",
+    "count": 20
+  },
+  {
+    "order": 66,
+    "select_label": "066 - Vận động",
+    "value": "exercise",
+    "file": "exercise.json",
+    "name_ja": "運動",
+    "count": 20
+  },
+  {
+    "order": 67,
+    "select_label": "067 - Thiên nhiên",
+    "value": "nature",
+    "file": "nature.json",
+    "name_ja": "自然",
+    "count": 20
+  },
+  {
+    "order": 68,
+    "select_label": "068 - Núi, sông và biển",
+    "value": "mountains_rivers",
+    "file": "mountains_rivers.json",
+    "name_ja": "山・川・海",
+    "count": 20
+  },
+  {
+    "order": 69,
+    "select_label": "069 - Địa lý",
+    "value": "geography",
+    "file": "geography.json",
+    "name_ja": "地理",
+    "count": 20
+  },
+  {
+    "order": 70,
+    "select_label": "070 - Thiên tai",
+    "value": "disasters",
+    "file": "disasters.json",
+    "name_ja": "災害",
+    "count": 20
+  },
+  {
+    "order": 71,
+    "select_label": "071 - Quốc gia và quốc tịch",
+    "value": "countries",
+    "file": "countries.json",
+    "name_ja": "国・国籍",
+    "count": 20
+  },
+  {
+    "order": 72,
+    "select_label": "072 - Ngôn ngữ",
+    "value": "languages",
+    "file": "languages.json",
+    "name_ja": "言語",
+    "count": 20
+  },
+  {
+    "order": 73,
+    "select_label": "073 - Văn hóa Nhật Bản",
+    "value": "japanese_culture",
+    "file": "japanese_culture.json",
+    "name_ja": "日本文化",
+    "count": 19
+  },
+  {
+    "order": 74,
+    "select_label": "074 - Lễ hội và sự kiện",
+    "value": "festivals",
+    "file": "festivals.json",
+    "name_ja": "祭り・行事",
+    "count": 18
+  },
+  {
+    "order": 75,
+    "select_label": "075 - Ngày lễ",
+    "value": "holidays",
+    "file": "holidays.json",
+    "name_ja": "祝日",
+    "count": 19
+  },
+  {
+    "order": 76,
+    "select_label": "076 - Công việc",
+    "value": "work",
+    "file": "work.json",
+    "name_ja": "仕事",
+    "count": 20
+  },
+  {
+    "order": 77,
+    "select_label": "077 - Công ty",
+    "value": "company",
+    "file": "company.json",
+    "name_ja": "会社",
+    "count": 20
+  },
+  {
+    "order": 78,
+    "select_label": "078 - Cuộc họp",
+    "value": "meetings",
+    "file": "meetings.json",
+    "name_ja": "会議",
+    "count": 20
+  },
+  {
+    "order": 79,
+    "select_label": "079 - Email công việc",
+    "value": "business_email",
+    "file": "business_email.json",
+    "name_ja": "ビジネスメール",
+    "count": 20
+  },
+  {
+    "order": 80,
+    "select_label": "080 - Kính ngữ",
+    "value": "keigo",
+    "file": "keigo.json",
+    "name_ja": "敬語",
+    "count": 20
+  },
+  {
+    "order": 81,
+    "select_label": "081 - Nhà máy",
+    "value": "factory",
+    "file": "factory.json",
+    "name_ja": "工場",
+    "count": 20
+  },
+  {
+    "order": 82,
+    "select_label": "082 - Máy móc",
+    "value": "machinery",
+    "file": "machinery.json",
+    "name_ja": "機械",
+    "count": 20
+  },
+  {
+    "order": 83,
+    "select_label": "083 - Dụng cụ cơ khí",
+    "value": "tools",
+    "file": "tools.json",
+    "name_ja": "工具",
+    "count": 20
+  },
+  {
+    "order": 84,
+    "select_label": "084 - Thiết kế và bản vẽ",
+    "value": "design_drawings",
+    "file": "design_drawings.json",
+    "name_ja": "設計・図面",
+    "count": 20
+  },
+  {
+    "order": 85,
+    "select_label": "085 - Vật liệu",
+    "value": "materials",
+    "file": "materials.json",
+    "name_ja": "材料",
+    "count": 20
+  },
+  {
+    "order": 86,
+    "select_label": "086 - Máy tính",
+    "value": "computers",
+    "file": "computers.json",
+    "name_ja": "コンピューター",
+    "count": 20
+  },
+  {
+    "order": 87,
+    "select_label": "087 - Internet",
+    "value": "internet",
+    "file": "internet.json",
+    "name_ja": "インターネット",
+    "count": 20
+  },
+  {
+    "order": 88,
+    "select_label": "088 - Điện thoại thông minh",
+    "value": "smartphones",
+    "file": "smartphones.json",
+    "name_ja": "スマートフォン",
+    "count": 20
+  },
+  {
+    "order": 89,
+    "select_label": "089 - Khoa học",
+    "value": "science",
+    "file": "science.json",
+    "name_ja": "科学",
+    "count": 20
+  },
+  {
+    "order": 90,
+    "select_label": "090 - Môi trường",
+    "value": "environment",
+    "file": "environment.json",
+    "name_ja": "環境",
+    "count": 20
+  },
+  {
+    "order": 91,
+    "select_label": "091 - Động tác hằng ngày",
+    "value": "daily_actions",
+    "file": "daily_actions.json",
+    "name_ja": "日常動作",
+    "count": 24
+  },
+  {
+    "order": 92,
+    "select_label": "092 - Thói quen sinh hoạt",
+    "value": "habits",
+    "file": "habits.json",
+    "name_ja": "生活習慣",
+    "count": 20
+  },
+  {
+    "order": 93,
+    "select_label": "093 - Quan hệ con người",
+    "value": "relationships",
+    "file": "relationships.json",
+    "name_ja": "人間関係",
+    "count": 20
+  },
+  {
+    "order": 94,
+    "select_label": "094 - Tình yêu và hôn nhân",
+    "value": "romance",
+    "file": "romance.json",
+    "name_ja": "恋愛・結婚",
+    "count": 20
+  },
+  {
+    "order": 95,
+    "select_label": "095 - Nuôi dạy trẻ",
+    "value": "childcare",
+    "file": "childcare.json",
+    "name_ja": "育児",
+    "count": 20
+  },
+  {
+    "order": 96,
+    "select_label": "096 - Ý kiến và suy nghĩ",
+    "value": "opinions",
+    "file": "opinions.json",
+    "name_ja": "意見・考え",
+    "count": 20
+  },
+  {
+    "order": 97,
+    "select_label": "097 - Nguyên nhân và kết quả",
+    "value": "cause_effect",
+    "file": "cause_effect.json",
+    "name_ja": "原因・結果",
+    "count": 20
+  },
+  {
+    "order": 98,
+    "select_label": "098 - So sánh và mức độ",
+    "value": "comparison",
+    "file": "comparison.json",
+    "name_ja": "比較・程度",
+    "count": 20
+  },
+  {
+    "order": 99,
+    "select_label": "099 - Từ vựng trừu tượng",
+    "value": "abstract_words",
+    "file": "abstract_words.json",
+    "name_ja": "抽象的な言葉",
+    "count": 20
+  },
+  {
+    "order": 100,
+    "select_label": "100 - Xã hội và tin tức",
+    "value": "society_news",
+    "file": "society_news.json",
+    "name_ja": "社会・ニュース",
+    "count": 20
+  }
+]
