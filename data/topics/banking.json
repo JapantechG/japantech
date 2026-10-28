@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "銀行",
+    "reading": "ぎんこう",
+    "meaning": "Ngân hàng"
+  },
+  {
+    "id": 2,
+    "word": "口座",
+    "reading": "こうざ",
+    "meaning": "Tài khoản"
+  },
+  {
+    "id": 3,
+    "word": "普通預金",
+    "reading": "ふつうよきん",
+    "meaning": "Tiền gửi thông thường"
+  },
+  {
+    "id": 4,
+    "word": "定期預金",
+    "reading": "ていきよきん",
+    "meaning": "Tiền gửi kỳ hạn"
+  },
+  {
+    "id": 5,
+    "word": "預金",
+    "reading": "よきん",
+    "meaning": "Tiền gửi"
+  },
+  {
+    "id": 6,
+    "word": "残高",
+    "reading": "ざんだか",
+    "meaning": "Số dư"
+  },
+  {
+    "id": 7,
+    "word": "入金",
+    "reading": "にゅうきん",
+    "meaning": "Nộp tiền"
+  },
+  {
+    "id": 8,
+    "word": "出金",
+    "reading": "しゅっきん",
+    "meaning": "Rút tiền"
+  },
+  {
+    "id": 9,
+    "word": "振込",
+    "reading": "ふりこみ",
+    "meaning": "Chuyển khoản"
+  },
+  {
+    "id": 10,
+    "word": "送金",
+    "reading": "そうきん",
+    "meaning": "Chuyển tiền"
+  },
+  {
+    "id": 11,
+    "word": "引き落とし",
+    "reading": "ひきおとし",
+    "meaning": "Trích nợ tự động"
+  },
+  {
+    "id": 12,
+    "word": "通帳",
+    "reading": "つうちょう",
+    "meaning": "Sổ ngân hàng"
+  },
+  {
+    "id": 13,
+    "word": "キャッシュカード",
+    "reading": "キャッシュカード",
+    "meaning": "Thẻ ATM"
+  },
+  {
+    "id": 14,
+    "word": "暗証番号",
+    "reading": "あんしょうばんごう",
+    "meaning": "Mã PIN"
+  },
+  {
+    "id": 15,
+    "word": "手数料",
+    "reading": "てすうりょう",
+    "meaning": "Phí dịch vụ"
+  },
+  {
+    "id": 16,
+    "word": "金利",
+    "reading": "きんり",
+    "meaning": "Lãi suất"
+  },
+  {
+    "id": 17,
+    "word": "融資",
+    "reading": "ゆうし",
+    "meaning": "Cho vay vốn"
+  },
+  {
+    "id": 18,
+    "word": "借入",
+    "reading": "かりいれ",
+    "meaning": "Khoản vay"
+  },
+  {
+    "id": 19,
+    "word": "返済",
+    "reading": "へんさい",
+    "meaning": "Hoàn trả nợ"
+  },
+  {
+    "id": 20,
+    "word": "為替",
+    "reading": "かわせ",
+    "meaning": "Hối đoái"
+  }
+]
