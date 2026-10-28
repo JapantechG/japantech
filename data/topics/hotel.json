@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "ホテル",
+    "reading": "ホテル",
+    "meaning": "Khách sạn"
+  },
+  {
+    "id": 2,
+    "word": "旅館",
+    "reading": "りょかん",
+    "meaning": "Nhà trọ truyền thống Nhật"
+  },
+  {
+    "id": 3,
+    "word": "民宿",
+    "reading": "みんしゅく",
+    "meaning": "Nhà nghỉ gia đình"
+  },
+  {
+    "id": 4,
+    "word": "宿泊",
+    "reading": "しゅくはく",
+    "meaning": "Lưu trú"
+  },
+  {
+    "id": 5,
+    "word": "予約",
+    "reading": "よやく",
+    "meaning": "Đặt phòng"
+  },
+  {
+    "id": 6,
+    "word": "受付",
+    "reading": "うけつけ",
+    "meaning": "Quầy tiếp nhận"
+  },
+  {
+    "id": 7,
+    "word": "フロント",
+    "reading": "フロント",
+    "meaning": "Quầy lễ tân"
+  },
+  {
+    "id": 8,
+    "word": "客室",
+    "reading": "きゃくしつ",
+    "meaning": "Phòng khách"
+  },
+  {
+    "id": 9,
+    "word": "シングルルーム",
+    "reading": "シングルルーム",
+    "meaning": "Phòng đơn"
+  },
+  {
+    "id": 10,
+    "word": "ツインルーム",
+    "reading": "ツインルーム",
+    "meaning": "Phòng hai giường"
+  },
+  {
+    "id": 11,
+    "word": "ダブルルーム",
+    "reading": "ダブルルーム",
+    "meaning": "Phòng giường đôi"
+  },
+  {
+    "id": 12,
+    "word": "空室",
+    "reading": "くうしつ",
+    "meaning": "Phòng trống"
+  },
+  {
+    "id": 13,
+    "word": "満室",
+    "reading": "まんしつ",
+    "meaning": "Hết phòng"
+  },
+  {
+    "id": 14,
+    "word": "鍵",
+    "reading": "かぎ",
+    "meaning": "Chìa khóa"
+  },
+  {
+    "id": 15,
+    "word": "チェックイン",
+    "reading": "チェックイン",
+    "meaning": "Nhận phòng"
+  },
+  {
+    "id": 16,
+    "word": "チェックアウト",
+    "reading": "チェックアウト",
+    "meaning": "Trả phòng"
+  },
+  {
+    "id": 17,
+    "word": "朝食付き",
+    "reading": "ちょうしょくつき",
+    "meaning": "Có kèm bữa sáng"
+  },
+  {
+    "id": 18,
+    "word": "素泊まり",
+    "reading": "すどまり",
+    "meaning": "Ở không kèm bữa ăn"
+  },
+  {
+    "id": 19,
+    "word": "連泊",
+    "reading": "れんぱく",
+    "meaning": "Ở nhiều đêm liên tiếp"
+  },
+  {
+    "id": 20,
+    "word": "宿泊料金",
+    "reading": "しゅくはくりょうきん",
+    "meaning": "Giá phòng"
+  }
+]
