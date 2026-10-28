@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "病気",
+    "reading": "びょうき",
+    "meaning": "Bệnh"
+  },
+  {
+    "id": 2,
+    "word": "風邪",
+    "reading": "かぜ",
+    "meaning": "Cảm lạnh"
+  },
+  {
+    "id": 3,
+    "word": "インフルエンザ",
+    "reading": "インフルエンザ",
+    "meaning": "Cúm"
+  },
+  {
+    "id": 4,
+    "word": "肺炎",
+    "reading": "はいえん",
+    "meaning": "Viêm phổi"
+  },
+  {
+    "id": 5,
+    "word": "気管支炎",
+    "reading": "きかんしえん",
+    "meaning": "Viêm phế quản"
+  },
+  {
+    "id": 6,
+    "word": "胃炎",
+    "reading": "いえん",
+    "meaning": "Viêm dạ dày"
+  },
+  {
+    "id": 7,
+    "word": "腸炎",
+    "reading": "ちょうえん",
+    "meaning": "Viêm ruột"
+  },
+  {
+    "id": 8,
+    "word": "糖尿病",
+    "reading": "とうにょうびょう",
+    "meaning": "Tiểu đường"
+  },
+  {
+    "id": 9,
+    "word": "高血圧",
+    "reading": "こうけつあつ",
+    "meaning": "Cao huyết áp"
+  },
+  {
+    "id": 10,
+    "word": "低血圧",
+    "reading": "ていけつあつ",
+    "meaning": "Huyết áp thấp"
+  },
+  {
+    "id": 11,
+    "word": "貧血",
+    "reading": "ひんけつ",
+    "meaning": "Thiếu máu"
+  },
+  {
+    "id": 12,
+    "word": "花粉症",
+    "reading": "かふんしょう",
+    "meaning": "Dị ứng phấn hoa"
+  },
+  {
+    "id": 13,
+    "word": "アレルギー",
+    "reading": "アレルギー",
+    "meaning": "Dị ứng"
+  },
+  {
+    "id": 14,
+    "word": "喘息",
+    "reading": "ぜんそく",
+    "meaning": "Hen suyễn"
+  },
+  {
+    "id": 15,
+    "word": "骨折",
+    "reading": "こっせつ",
+    "meaning": "Gãy xương"
+  },
+  {
+    "id": 16,
+    "word": "虫歯",
+    "reading": "むしば",
+    "meaning": "Sâu răng"
+  },
+  {
+    "id": 17,
+    "word": "歯周病",
+    "reading": "ししゅうびょう",
+    "meaning": "Bệnh nha chu"
+  },
+  {
+    "id": 18,
+    "word": "皮膚炎",
+    "reading": "ひふえん",
+    "meaning": "Viêm da"
+  },
+  {
+    "id": 19,
+    "word": "感染症",
+    "reading": "かんせんしょう",
+    "meaning": "Bệnh truyền nhiễm"
+  },
+  {
+    "id": 20,
+    "word": "熱中症",
+    "reading": "ねっちゅうしょう",
+    "meaning": "Sốc nhiệt"
+  }
+]
