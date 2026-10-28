@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "word": "祝日",
+    "reading": "しゅくじつ",
+    "meaning": "Ngày lễ"
+  },
+  {
+    "id": 2,
+    "word": "元日",
+    "reading": "がんじつ",
+    "meaning": "Ngày đầu năm"
+  },
+  {
+    "id": 3,
+    "word": "成人の日",
+    "reading": "せいじんのひ",
+    "meaning": "Ngày trưởng thành"
+  },
+  {
+    "id": 4,
+    "word": "建国記念の日",
+    "reading": "けんこくきねんのひ",
+    "meaning": "Ngày lập quốc"
+  },
+  {
+    "id": 5,
+    "word": "天皇誕生日",
+    "reading": "てんのうたんじょうび",
+    "meaning": "Sinh nhật Thiên hoàng"
+  },
+  {
+    "id": 6,
+    "word": "春分の日",
+    "reading": "しゅんぶんのひ",
+    "meaning": "Ngày xuân phân"
+  },
+  {
+    "id": 7,
+    "word": "昭和の日",
+    "reading": "しょうわのひ",
+    "meaning": "Ngày Showa"
+  },
+  {
+    "id": 8,
+    "word": "憲法記念日",
+    "reading": "けんぽうきねんび",
+    "meaning": "Ngày Hiến pháp"
+  },
+  {
+    "id": 9,
+    "word": "みどりの日",
+    "reading": "みどりのひ",
+    "meaning": "Ngày cây xanh"
+  },
+  {
+    "id": 10,
+    "word": "こどもの日",
+    "reading": "こどものひ",
+    "meaning": "Ngày thiếu nhi"
+  },
+  {
+    "id": 11,
+    "word": "海の日",
+    "reading": "うみのひ",
+    "meaning": "Ngày biển"
+  },
+  {
+    "id": 12,
+    "word": "山の日",
+    "reading": "やまのひ",
+    "meaning": "Ngày núi"
+  },
+  {
+    "id": 13,
+    "word": "敬老の日",
+    "reading": "けいろうのひ",
+    "meaning": "Ngày kính lão"
+  },
+  {
+    "id": 14,
+    "word": "秋分の日",
+    "reading": "しゅうぶんのひ",
+    "meaning": "Ngày thu phân"
+  },
+  {
+    "id": 15,
+    "word": "スポーツの日",
+    "reading": "スポーツのひ",
+    "meaning": "Ngày thể thao"
+  },
+  {
+    "id": 16,
+    "word": "文化の日",
+    "reading": "ぶんかのひ",
+    "meaning": "Ngày văn hóa"
+  },
+  {
+    "id": 17,
+    "word": "勤労感謝の日",
+    "reading": "きんろうかんしゃのひ",
+    "meaning": "Ngày cảm tạ lao động"
+  },
+  {
+    "id": 18,
+    "word": "振替休日",
+    "reading": "ふりかえきゅうじつ",
+    "meaning": "Ngày nghỉ bù"
+  },
+  {
+    "id": 19,
+    "word": "国民の休日",
+    "reading": "こくみんのきゅうじつ",
+    "meaning": "Ngày nghỉ của công dân"
+  }
+]
