@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "word": "時間",
+    "reading": "じかん",
+    "meaning": "Thời gian"
+  },
+  {
+    "id": 2,
+    "word": "時",
+    "reading": "じ",
+    "meaning": "Giờ"
+  },
+  {
+    "id": 3,
+    "word": "分",
+    "reading": "ふん",
+    "meaning": "Phút"
+  },
+  {
+    "id": 4,
+    "word": "秒",
+    "reading": "びょう",
+    "meaning": "Giây"
+  },
+  {
+    "id": 5,
+    "word": "午前",
+    "reading": "ごぜん",
+    "meaning": "Buổi sáng trước 12 giờ"
+  },
+  {
+    "id": 6,
+    "word": "午後",
+    "reading": "ごご",
+    "meaning": "Buổi chiều sau 12 giờ"
+  },
+  {
+    "id": 7,
+    "word": "朝",
+    "reading": "あさ",
+    "meaning": "Buổi sáng"
+  },
+  {
+    "id": 8,
+    "word": "昼",
+    "reading": "ひる",
+    "meaning": "Buổi trưa"
+  },
+  {
+    "id": 9,
+    "word": "夕方",
+    "reading": "ゆうがた",
+    "meaning": "Chiều tối"
+  },
+  {
+    "id": 10,
+    "word": "夜",
+    "reading": "よる",
+    "meaning": "Ban đêm"
+  },
+  {
+    "id": 11,
+    "word": "真夜中",
+    "reading": "まよなか",
+    "meaning": "Nửa đêm"
+  },
+  {
+    "id": 12,
+    "word": "今",
+    "reading": "いま",
+    "meaning": "Bây giờ"
+  },
+  {
+    "id": 13,
+    "word": "先ほど",
+    "reading": "さきほど",
+    "meaning": "Vừa nãy"
+  },
+  {
+    "id": 14,
+    "word": "後で",
+    "reading": "あとで",
+    "meaning": "Lát nữa"
+  },
+  {
+    "id": 15,
+    "word": "早朝",
+    "reading": "そうちょう",
+    "meaning": "Sáng sớm"
+  },
+  {
+    "id": 16,
+    "word": "深夜",
+    "reading": "しんや",
+    "meaning": "Đêm khuya"
+  },
+  {
+    "id": 17,
+    "word": "瞬間",
+    "reading": "しゅんかん",
+    "meaning": "Khoảnh khắc"
+  },
+  {
+    "id": 18,
+    "word": "期間",
+    "reading": "きかん",
+    "meaning": "Khoảng thời gian"
+  },
+  {
+    "id": 19,
+    "word": "締め切り",
+    "reading": "しめきり",
+    "meaning": "Hạn chót"
+  }
+]
