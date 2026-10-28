@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "科学",
+    "reading": "かがく",
+    "meaning": "Khoa học"
+  },
+  {
+    "id": 2,
+    "word": "研究",
+    "reading": "けんきゅう",
+    "meaning": "Nghiên cứu"
+  },
+  {
+    "id": 3,
+    "word": "実験",
+    "reading": "じっけん",
+    "meaning": "Thí nghiệm"
+  },
+  {
+    "id": 4,
+    "word": "観察",
+    "reading": "かんさつ",
+    "meaning": "Quan sát"
+  },
+  {
+    "id": 5,
+    "word": "仮説",
+    "reading": "かせつ",
+    "meaning": "Giả thuyết"
+  },
+  {
+    "id": 6,
+    "word": "理論",
+    "reading": "りろん",
+    "meaning": "Lý thuyết"
+  },
+  {
+    "id": 7,
+    "word": "証拠",
+    "reading": "しょうこ",
+    "meaning": "Bằng chứng"
+  },
+  {
+    "id": 8,
+    "word": "分析",
+    "reading": "ぶんせき",
+    "meaning": "Phân tích"
+  },
+  {
+    "id": 9,
+    "word": "測定",
+    "reading": "そくてい",
+    "meaning": "Đo lường"
+  },
+  {
+    "id": 10,
+    "word": "物質",
+    "reading": "ぶっしつ",
+    "meaning": "Vật chất"
+  },
+  {
+    "id": 11,
+    "word": "原子",
+    "reading": "げんし",
+    "meaning": "Nguyên tử"
+  },
+  {
+    "id": 12,
+    "word": "分子",
+    "reading": "ぶんし",
+    "meaning": "Phân tử"
+  },
+  {
+    "id": 13,
+    "word": "細胞",
+    "reading": "さいぼう",
+    "meaning": "Tế bào"
+  },
+  {
+    "id": 14,
+    "word": "遺伝子",
+    "reading": "いでんし",
+    "meaning": "Gen"
+  },
+  {
+    "id": 15,
+    "word": "重力",
+    "reading": "じゅうりょく",
+    "meaning": "Trọng lực"
+  },
+  {
+    "id": 16,
+    "word": "電流",
+    "reading": "でんりゅう",
+    "meaning": "Dòng điện"
+  },
+  {
+    "id": 17,
+    "word": "磁力",
+    "reading": "じりょく",
+    "meaning": "Lực từ"
+  },
+  {
+    "id": 18,
+    "word": "温度",
+    "reading": "おんど",
+    "meaning": "Nhiệt độ"
+  },
+  {
+    "id": 19,
+    "word": "圧力",
+    "reading": "あつりょく",
+    "meaning": "Áp suất"
+  },
+  {
+    "id": 20,
+    "word": "エネルギー",
+    "reading": "エネルギー",
+    "meaning": "Năng lượng"
+  }
+]
