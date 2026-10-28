@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "零",
+    "reading": "れい",
+    "meaning": "Số không"
+  },
+  {
+    "id": 2,
+    "word": "一",
+    "reading": "いち",
+    "meaning": "Một"
+  },
+  {
+    "id": 3,
+    "word": "二",
+    "reading": "に",
+    "meaning": "Hai"
+  },
+  {
+    "id": 4,
+    "word": "三",
+    "reading": "さん",
+    "meaning": "Ba"
+  },
+  {
+    "id": 5,
+    "word": "四",
+    "reading": "よん",
+    "meaning": "Bốn"
+  },
+  {
+    "id": 6,
+    "word": "五",
+    "reading": "ご",
+    "meaning": "Năm"
+  },
+  {
+    "id": 7,
+    "word": "六",
+    "reading": "ろく",
+    "meaning": "Sáu"
+  },
+  {
+    "id": 8,
+    "word": "七",
+    "reading": "なな",
+    "meaning": "Bảy"
+  },
+  {
+    "id": 9,
+    "word": "八",
+    "reading": "はち",
+    "meaning": "Tám"
+  },
+  {
+    "id": 10,
+    "word": "九",
+    "reading": "きゅう",
+    "meaning": "Chín"
+  },
+  {
+    "id": 11,
+    "word": "十",
+    "reading": "じゅう",
+    "meaning": "Mười"
+  },
+  {
+    "id": 12,
+    "word": "百",
+    "reading": "ひゃく",
+    "meaning": "Một trăm"
+  },
+  {
+    "id": 13,
+    "word": "千",
+    "reading": "せん",
+    "meaning": "Một nghìn"
+  },
+  {
+    "id": 14,
+    "word": "万",
+    "reading": "まん",
+    "meaning": "Mười nghìn"
+  },
+  {
+    "id": 15,
+    "word": "億",
+    "reading": "おく",
+    "meaning": "Một trăm triệu"
+  },
+  {
+    "id": 16,
+    "word": "兆",
+    "reading": "ちょう",
+    "meaning": "Một nghìn tỷ"
+  },
+  {
+    "id": 17,
+    "word": "半分",
+    "reading": "はんぶん",
+    "meaning": "Một nửa"
+  },
+  {
+    "id": 18,
+    "word": "倍",
+    "reading": "ばい",
+    "meaning": "Gấp ... lần"
+  },
+  {
+    "id": 19,
+    "word": "合計",
+    "reading": "ごうけい",
+    "meaning": "Tổng cộng"
+  },
+  {
+    "id": 20,
+    "word": "平均",
+    "reading": "へいきん",
+    "meaning": "Trung bình"
+  }
+]
