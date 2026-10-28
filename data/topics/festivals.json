@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "word": "祭り",
+    "reading": "まつり",
+    "meaning": "Lễ hội"
+  },
+  {
+    "id": 2,
+    "word": "行事",
+    "reading": "ぎょうじ",
+    "meaning": "Sự kiện theo dịp"
+  },
+  {
+    "id": 3,
+    "word": "正月",
+    "reading": "しょうがつ",
+    "meaning": "Tết Nhật"
+  },
+  {
+    "id": 4,
+    "word": "初詣",
+    "reading": "はつもうで",
+    "meaning": "Viếng đền đầu năm"
+  },
+  {
+    "id": 5,
+    "word": "節分",
+    "reading": "せつぶん",
+    "meaning": "Lễ Setsubun"
+  },
+  {
+    "id": 6,
+    "word": "雛祭り",
+    "reading": "ひなまつり",
+    "meaning": "Lễ búp bê"
+  },
+  {
+    "id": 7,
+    "word": "花見",
+    "reading": "はなみ",
+    "meaning": "Ngắm hoa anh đào"
+  },
+  {
+    "id": 8,
+    "word": "七夕",
+    "reading": "たなばた",
+    "meaning": "Lễ Thất Tịch"
+  },
+  {
+    "id": 9,
+    "word": "お盆",
+    "reading": "おぼん",
+    "meaning": "Lễ Obon"
+  },
+  {
+    "id": 10,
+    "word": "盆踊り",
+    "reading": "ぼんおどり",
+    "meaning": "Múa Obon"
+  },
+  {
+    "id": 11,
+    "word": "夏祭り",
+    "reading": "なつまつり",
+    "meaning": "Lễ hội mùa hè"
+  },
+  {
+    "id": 12,
+    "word": "花火大会",
+    "reading": "はなびたいかい",
+    "meaning": "Lễ hội pháo hoa"
+  },
+  {
+    "id": 13,
+    "word": "秋祭り",
+    "reading": "あきまつり",
+    "meaning": "Lễ hội mùa thu"
+  },
+  {
+    "id": 14,
+    "word": "七五三",
+    "reading": "しちごさん",
+    "meaning": "Lễ Shichi-Go-San"
+  },
+  {
+    "id": 15,
+    "word": "成人式",
+    "reading": "せいじんしき",
+    "meaning": "Lễ trưởng thành"
+  },
+  {
+    "id": 16,
+    "word": "大晦日",
+    "reading": "おおみそか",
+    "meaning": "Đêm giao thừa"
+  },
+  {
+    "id": 17,
+    "word": "年越し",
+    "reading": "としこし",
+    "meaning": "Đón năm mới"
+  },
+  {
+    "id": 18,
+    "word": "餅つき",
+    "reading": "もちつき",
+    "meaning": "Giã bánh mochi"
+  }
+]
