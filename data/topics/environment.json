@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "環境",
+    "reading": "かんきょう",
+    "meaning": "Môi trường"
+  },
+  {
+    "id": 2,
+    "word": "環境保護",
+    "reading": "かんきょうほご",
+    "meaning": "Bảo vệ môi trường"
+  },
+  {
+    "id": 3,
+    "word": "地球温暖化",
+    "reading": "ちきゅうおんだんか",
+    "meaning": "Nóng lên toàn cầu"
+  },
+  {
+    "id": 4,
+    "word": "気候変動",
+    "reading": "きこうへんどう",
+    "meaning": "Biến đổi khí hậu"
+  },
+  {
+    "id": 5,
+    "word": "二酸化炭素",
+    "reading": "にさんかたんそ",
+    "meaning": "Khí CO2"
+  },
+  {
+    "id": 6,
+    "word": "排出",
+    "reading": "はいしゅつ",
+    "meaning": "Phát thải"
+  },
+  {
+    "id": 7,
+    "word": "汚染",
+    "reading": "おせん",
+    "meaning": "Ô nhiễm"
+  },
+  {
+    "id": 8,
+    "word": "大気汚染",
+    "reading": "たいきおせん",
+    "meaning": "Ô nhiễm không khí"
+  },
+  {
+    "id": 9,
+    "word": "水質汚染",
+    "reading": "すいしつおせん",
+    "meaning": "Ô nhiễm nước"
+  },
+  {
+    "id": 10,
+    "word": "廃棄物",
+    "reading": "はいきぶつ",
+    "meaning": "Chất thải"
+  },
+  {
+    "id": 11,
+    "word": "ごみ分別",
+    "reading": "ごみぶんべつ",
+    "meaning": "Phân loại rác"
+  },
+  {
+    "id": 12,
+    "word": "再利用",
+    "reading": "さいりよう",
+    "meaning": "Tái sử dụng"
+  },
+  {
+    "id": 13,
+    "word": "再生可能エネルギー",
+    "reading": "さいせいかのうエネルギー",
+    "meaning": "Năng lượng tái tạo"
+  },
+  {
+    "id": 14,
+    "word": "太陽光発電",
+    "reading": "たいようこうはつでん",
+    "meaning": "Điện mặt trời"
+  },
+  {
+    "id": 15,
+    "word": "風力発電",
+    "reading": "ふうりょくはつでん",
+    "meaning": "Điện gió"
+  },
+  {
+    "id": 16,
+    "word": "省エネルギー",
+    "reading": "しょうエネルギー",
+    "meaning": "Tiết kiệm năng lượng"
+  },
+  {
+    "id": 17,
+    "word": "森林破壊",
+    "reading": "しんりんはかい",
+    "meaning": "Phá rừng"
+  },
+  {
+    "id": 18,
+    "word": "生態系",
+    "reading": "せいたいけい",
+    "meaning": "Hệ sinh thái"
+  },
+  {
+    "id": 19,
+    "word": "絶滅危惧種",
+    "reading": "ぜつめつきぐしゅ",
+    "meaning": "Loài có nguy cơ tuyệt chủng"
+  },
+  {
+    "id": 20,
+    "word": "持続可能",
+    "reading": "じぞくかのう",
+    "meaning": "Bền vững"
+  }
+]
