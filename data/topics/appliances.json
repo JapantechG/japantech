@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "家電",
+    "reading": "かでん",
+    "meaning": "Đồ điện gia dụng"
+  },
+  {
+    "id": 2,
+    "word": "冷蔵庫",
+    "reading": "れいぞうこ",
+    "meaning": "Tủ lạnh"
+  },
+  {
+    "id": 3,
+    "word": "冷凍庫",
+    "reading": "れいとうこ",
+    "meaning": "Tủ đông"
+  },
+  {
+    "id": 4,
+    "word": "電子レンジ",
+    "reading": "でんしレンジ",
+    "meaning": "Lò vi sóng"
+  },
+  {
+    "id": 5,
+    "word": "炊飯器",
+    "reading": "すいはんき",
+    "meaning": "Nồi cơm điện"
+  },
+  {
+    "id": 6,
+    "word": "電気ケトル",
+    "reading": "でんきケトル",
+    "meaning": "Ấm điện"
+  },
+  {
+    "id": 7,
+    "word": "オーブン",
+    "reading": "オーブン",
+    "meaning": "Lò nướng"
+  },
+  {
+    "id": 8,
+    "word": "トースター",
+    "reading": "トースター",
+    "meaning": "Máy nướng bánh"
+  },
+  {
+    "id": 9,
+    "word": "洗濯機",
+    "reading": "せんたくき",
+    "meaning": "Máy giặt"
+  },
+  {
+    "id": 10,
+    "word": "乾燥機",
+    "reading": "かんそうき",
+    "meaning": "Máy sấy"
+  },
+  {
+    "id": 11,
+    "word": "掃除機",
+    "reading": "そうじき",
+    "meaning": "Máy hút bụi"
+  },
+  {
+    "id": 12,
+    "word": "エアコン",
+    "reading": "エアコン",
+    "meaning": "Máy điều hòa"
+  },
+  {
+    "id": 13,
+    "word": "扇風機",
+    "reading": "せんぷうき",
+    "meaning": "Quạt điện"
+  },
+  {
+    "id": 14,
+    "word": "空気清浄機",
+    "reading": "くうきせいじょうき",
+    "meaning": "Máy lọc không khí"
+  },
+  {
+    "id": 15,
+    "word": "加湿器",
+    "reading": "かしつき",
+    "meaning": "Máy tạo ẩm"
+  },
+  {
+    "id": 16,
+    "word": "除湿機",
+    "reading": "じょしつき",
+    "meaning": "Máy hút ẩm"
+  },
+  {
+    "id": 17,
+    "word": "テレビ",
+    "reading": "テレビ",
+    "meaning": "Ti vi"
+  },
+  {
+    "id": 18,
+    "word": "ドライヤー",
+    "reading": "ドライヤー",
+    "meaning": "Máy sấy tóc"
+  },
+  {
+    "id": 19,
+    "word": "アイロン",
+    "reading": "アイロン",
+    "meaning": "Bàn là"
+  },
+  {
+    "id": 20,
+    "word": "電気ストーブ",
+    "reading": "でんきストーブ",
+    "meaning": "Máy sưởi điện"
+  }
+]
