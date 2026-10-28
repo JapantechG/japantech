@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "スマートフォン",
+    "reading": "スマートフォン",
+    "meaning": "Điện thoại thông minh"
+  },
+  {
+    "id": 2,
+    "word": "携帯電話",
+    "reading": "けいたいでんわ",
+    "meaning": "Điện thoại di động"
+  },
+  {
+    "id": 3,
+    "word": "画面",
+    "reading": "がめん",
+    "meaning": "Màn hình"
+  },
+  {
+    "id": 4,
+    "word": "タッチパネル",
+    "reading": "タッチパネル",
+    "meaning": "Màn hình cảm ứng"
+  },
+  {
+    "id": 5,
+    "word": "アプリ",
+    "reading": "アプリ",
+    "meaning": "Ứng dụng"
+  },
+  {
+    "id": 6,
+    "word": "通知",
+    "reading": "つうち",
+    "meaning": "Thông báo"
+  },
+  {
+    "id": 7,
+    "word": "着信",
+    "reading": "ちゃくしん",
+    "meaning": "Cuộc gọi đến"
+  },
+  {
+    "id": 8,
+    "word": "発信",
+    "reading": "はっしん",
+    "meaning": "Gọi đi"
+  },
+  {
+    "id": 9,
+    "word": "通話",
+    "reading": "つうわ",
+    "meaning": "Đàm thoại"
+  },
+  {
+    "id": 10,
+    "word": "連絡先",
+    "reading": "れんらくさき",
+    "meaning": "Danh bạ liên lạc"
+  },
+  {
+    "id": 11,
+    "word": "メッセージ",
+    "reading": "メッセージ",
+    "meaning": "Tin nhắn"
+  },
+  {
+    "id": 12,
+    "word": "写真",
+    "reading": "しゃしん",
+    "meaning": "Ảnh"
+  },
+  {
+    "id": 13,
+    "word": "動画",
+    "reading": "どうが",
+    "meaning": "Video"
+  },
+  {
+    "id": 14,
+    "word": "カメラ",
+    "reading": "カメラ",
+    "meaning": "Máy ảnh"
+  },
+  {
+    "id": 15,
+    "word": "充電",
+    "reading": "じゅうでん",
+    "meaning": "Sạc pin"
+  },
+  {
+    "id": 16,
+    "word": "電池残量",
+    "reading": "でんちざんりょう",
+    "meaning": "Dung lượng pin còn lại"
+  },
+  {
+    "id": 17,
+    "word": "機内モード",
+    "reading": "きないモード",
+    "meaning": "Chế độ máy bay"
+  },
+  {
+    "id": 18,
+    "word": "画面ロック",
+    "reading": "がめんロック",
+    "meaning": "Khóa màn hình"
+  },
+  {
+    "id": 19,
+    "word": "位置情報",
+    "reading": "いちじょうほう",
+    "meaning": "Thông tin vị trí"
+  },
+  {
+    "id": 20,
+    "word": "指紋認証",
+    "reading": "しもんにんしょう",
+    "meaning": "Xác thực vân tay"
+  }
+]
