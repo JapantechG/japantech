@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "薬",
+    "reading": "くすり",
+    "meaning": "Thuốc"
+  },
+  {
+    "id": 2,
+    "word": "薬局",
+    "reading": "やっきょく",
+    "meaning": "Hiệu thuốc"
+  },
+  {
+    "id": 3,
+    "word": "処方薬",
+    "reading": "しょほうやく",
+    "meaning": "Thuốc kê đơn"
+  },
+  {
+    "id": 4,
+    "word": "市販薬",
+    "reading": "しはんやく",
+    "meaning": "Thuốc không kê đơn"
+  },
+  {
+    "id": 5,
+    "word": "錠剤",
+    "reading": "じょうざい",
+    "meaning": "Viên nén"
+  },
+  {
+    "id": 6,
+    "word": "カプセル",
+    "reading": "カプセル",
+    "meaning": "Viên nang"
+  },
+  {
+    "id": 7,
+    "word": "粉薬",
+    "reading": "こなぐすり",
+    "meaning": "Thuốc bột"
+  },
+  {
+    "id": 8,
+    "word": "塗り薬",
+    "reading": "ぬりぐすり",
+    "meaning": "Thuốc bôi"
+  },
+  {
+    "id": 9,
+    "word": "目薬",
+    "reading": "めぐすり",
+    "meaning": "Thuốc nhỏ mắt"
+  },
+  {
+    "id": 10,
+    "word": "湿布",
+    "reading": "しっぷ",
+    "meaning": "Miếng dán giảm đau"
+  },
+  {
+    "id": 11,
+    "word": "解熱剤",
+    "reading": "げねつざい",
+    "meaning": "Thuốc hạ sốt"
+  },
+  {
+    "id": 12,
+    "word": "鎮痛剤",
+    "reading": "ちんつうざい",
+    "meaning": "Thuốc giảm đau"
+  },
+  {
+    "id": 13,
+    "word": "抗生物質",
+    "reading": "こうせいぶっしつ",
+    "meaning": "Thuốc kháng sinh"
+  },
+  {
+    "id": 14,
+    "word": "胃薬",
+    "reading": "いぐすり",
+    "meaning": "Thuốc dạ dày"
+  },
+  {
+    "id": 15,
+    "word": "副作用",
+    "reading": "ふくさよう",
+    "meaning": "Tác dụng phụ"
+  },
+  {
+    "id": 16,
+    "word": "服用",
+    "reading": "ふくよう",
+    "meaning": "Uống thuốc"
+  },
+  {
+    "id": 17,
+    "word": "用量",
+    "reading": "ようりょう",
+    "meaning": "Liều lượng"
+  },
+  {
+    "id": 18,
+    "word": "食前",
+    "reading": "しょくぜん",
+    "meaning": "Trước bữa ăn"
+  },
+  {
+    "id": 19,
+    "word": "食後",
+    "reading": "しょくご",
+    "meaning": "Sau bữa ăn"
+  },
+  {
+    "id": 20,
+    "word": "飲み忘れ",
+    "reading": "のみわすれ",
+    "meaning": "Quên uống thuốc"
+  }
+]
