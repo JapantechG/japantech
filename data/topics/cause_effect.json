@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "原因",
+    "reading": "げんいん",
+    "meaning": "Nguyên nhân"
+  },
+  {
+    "id": 2,
+    "word": "理由",
+    "reading": "りゆう",
+    "meaning": "Lý do"
+  },
+  {
+    "id": 3,
+    "word": "要因",
+    "reading": "よういん",
+    "meaning": "Yếu tố nguyên nhân"
+  },
+  {
+    "id": 4,
+    "word": "背景",
+    "reading": "はいけい",
+    "meaning": "Bối cảnh"
+  },
+  {
+    "id": 5,
+    "word": "きっかけ",
+    "reading": "きっかけ",
+    "meaning": "Duyên cớ, cơ hội khởi đầu"
+  },
+  {
+    "id": 6,
+    "word": "結果",
+    "reading": "けっか",
+    "meaning": "Kết quả"
+  },
+  {
+    "id": 7,
+    "word": "影響",
+    "reading": "えいきょう",
+    "meaning": "Ảnh hưởng"
+  },
+  {
+    "id": 8,
+    "word": "効果",
+    "reading": "こうか",
+    "meaning": "Hiệu quả"
+  },
+  {
+    "id": 9,
+    "word": "因果関係",
+    "reading": "いんがかんけい",
+    "meaning": "Quan hệ nhân quả"
+  },
+  {
+    "id": 10,
+    "word": "したがって",
+    "reading": "したがって",
+    "meaning": "Do đó"
+  },
+  {
+    "id": 11,
+    "word": "そのため",
+    "reading": "そのため",
+    "meaning": "Vì vậy"
+  },
+  {
+    "id": 12,
+    "word": "なぜなら",
+    "reading": "なぜなら",
+    "meaning": "Bởi vì"
+  },
+  {
+    "id": 13,
+    "word": "ゆえに",
+    "reading": "ゆえに",
+    "meaning": "Cho nên"
+  },
+  {
+    "id": 14,
+    "word": "結果的に",
+    "reading": "けっかてきに",
+    "meaning": "Rốt cuộc thì"
+  },
+  {
+    "id": 15,
+    "word": "伴う",
+    "reading": "ともなう",
+    "meaning": "Đi kèm, kéo theo"
+  },
+  {
+    "id": 16,
+    "word": "生じる",
+    "reading": "しょうじる",
+    "meaning": "Phát sinh"
+  },
+  {
+    "id": 17,
+    "word": "引き起こす",
+    "reading": "ひきおこす",
+    "meaning": "Gây ra"
+  },
+  {
+    "id": 18,
+    "word": "つながる",
+    "reading": "つながる",
+    "meaning": "Dẫn đến, liên kết"
+  },
+  {
+    "id": 19,
+    "word": "解決",
+    "reading": "かいけつ",
+    "meaning": "Giải quyết"
+  },
+  {
+    "id": 20,
+    "word": "対策",
+    "reading": "たいさく",
+    "meaning": "Biện pháp ứng phó"
+  }
+]
