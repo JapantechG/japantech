@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "社会",
+    "reading": "しゃかい",
+    "meaning": "Xã hội"
+  },
+  {
+    "id": 2,
+    "word": "ニュース",
+    "reading": "ニュース",
+    "meaning": "Tin tức"
+  },
+  {
+    "id": 3,
+    "word": "新聞",
+    "reading": "しんぶん",
+    "meaning": "Báo giấy"
+  },
+  {
+    "id": 4,
+    "word": "報道",
+    "reading": "ほうどう",
+    "meaning": "Đưa tin"
+  },
+  {
+    "id": 5,
+    "word": "記者",
+    "reading": "きしゃ",
+    "meaning": "Phóng viên"
+  },
+  {
+    "id": 6,
+    "word": "取材",
+    "reading": "しゅざい",
+    "meaning": "Thu thập tin bài"
+  },
+  {
+    "id": 7,
+    "word": "記事",
+    "reading": "きじ",
+    "meaning": "Bài báo"
+  },
+  {
+    "id": 8,
+    "word": "見出し",
+    "reading": "みだし",
+    "meaning": "Tiêu đề bài báo"
+  },
+  {
+    "id": 9,
+    "word": "世論",
+    "reading": "せろん",
+    "meaning": "Dư luận"
+  },
+  {
+    "id": 10,
+    "word": "政治",
+    "reading": "せいじ",
+    "meaning": "Chính trị"
+  },
+  {
+    "id": 11,
+    "word": "政府",
+    "reading": "せいふ",
+    "meaning": "Chính phủ"
+  },
+  {
+    "id": 12,
+    "word": "国会",
+    "reading": "こっかい",
+    "meaning": "Quốc hội Nhật"
+  },
+  {
+    "id": 13,
+    "word": "選挙",
+    "reading": "せんきょ",
+    "meaning": "Bầu cử"
+  },
+  {
+    "id": 14,
+    "word": "法律",
+    "reading": "ほうりつ",
+    "meaning": "Pháp luật"
+  },
+  {
+    "id": 15,
+    "word": "経済",
+    "reading": "けいざい",
+    "meaning": "Kinh tế"
+  },
+  {
+    "id": 16,
+    "word": "物価",
+    "reading": "ぶっか",
+    "meaning": "Mức giá hàng hóa"
+  },
+  {
+    "id": 17,
+    "word": "雇用",
+    "reading": "こよう",
+    "meaning": "Việc làm, tuyển dụng"
+  },
+  {
+    "id": 18,
+    "word": "失業",
+    "reading": "しつぎょう",
+    "meaning": "Thất nghiệp"
+  },
+  {
+    "id": 19,
+    "word": "事件",
+    "reading": "じけん",
+    "meaning": "Vụ việc"
+  },
+  {
+    "id": 20,
+    "word": "事故",
+    "reading": "じこ",
+    "meaning": "Tai nạn"
+  }
+]
