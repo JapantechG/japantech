@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "道路",
+    "reading": "どうろ",
+    "meaning": "Đường bộ"
+  },
+  {
+    "id": 2,
+    "word": "交差点",
+    "reading": "こうさてん",
+    "meaning": "Ngã tư, giao lộ"
+  },
+  {
+    "id": 3,
+    "word": "信号",
+    "reading": "しんごう",
+    "meaning": "Đèn tín hiệu"
+  },
+  {
+    "id": 4,
+    "word": "横断歩道",
+    "reading": "おうだんほどう",
+    "meaning": "Vạch qua đường"
+  },
+  {
+    "id": 5,
+    "word": "歩道",
+    "reading": "ほどう",
+    "meaning": "Vỉa hè"
+  },
+  {
+    "id": 6,
+    "word": "車道",
+    "reading": "しゃどう",
+    "meaning": "Lòng đường"
+  },
+  {
+    "id": 7,
+    "word": "高速道路",
+    "reading": "こうそくどうろ",
+    "meaning": "Đường cao tốc"
+  },
+  {
+    "id": 8,
+    "word": "一般道",
+    "reading": "いっぱんどう",
+    "meaning": "Đường thường"
+  },
+  {
+    "id": 9,
+    "word": "一方通行",
+    "reading": "いっぽうつうこう",
+    "meaning": "Đường một chiều"
+  },
+  {
+    "id": 10,
+    "word": "右折",
+    "reading": "うせつ",
+    "meaning": "Rẽ phải"
+  },
+  {
+    "id": 11,
+    "word": "左折",
+    "reading": "させつ",
+    "meaning": "Rẽ trái"
+  },
+  {
+    "id": 12,
+    "word": "直進",
+    "reading": "ちょくしん",
+    "meaning": "Đi thẳng"
+  },
+  {
+    "id": 13,
+    "word": "通行止め",
+    "reading": "つうこうどめ",
+    "meaning": "Cấm lưu thông"
+  },
+  {
+    "id": 14,
+    "word": "工事中",
+    "reading": "こうじちゅう",
+    "meaning": "Đang thi công"
+  },
+  {
+    "id": 15,
+    "word": "渋滞",
+    "reading": "じゅうたい",
+    "meaning": "Kẹt xe"
+  },
+  {
+    "id": 16,
+    "word": "踏切",
+    "reading": "ふみきり",
+    "meaning": "Đường ngang tàu hỏa"
+  },
+  {
+    "id": 17,
+    "word": "歩行者",
+    "reading": "ほこうしゃ",
+    "meaning": "Người đi bộ"
+  },
+  {
+    "id": 18,
+    "word": "標識",
+    "reading": "ひょうしき",
+    "meaning": "Biển báo"
+  },
+  {
+    "id": 19,
+    "word": "駐車禁止",
+    "reading": "ちゅうしゃきんし",
+    "meaning": "Cấm đỗ xe"
+  },
+  {
+    "id": 20,
+    "word": "交通事故",
+    "reading": "こうつうじこ",
+    "meaning": "Tai nạn giao thông"
+  }
+]
