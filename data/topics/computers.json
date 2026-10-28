@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "コンピューター",
+    "reading": "コンピューター",
+    "meaning": "Máy tính"
+  },
+  {
+    "id": 2,
+    "word": "パソコン",
+    "reading": "パソコン",
+    "meaning": "Máy tính cá nhân"
+  },
+  {
+    "id": 3,
+    "word": "ノートパソコン",
+    "reading": "ノートパソコン",
+    "meaning": "Laptop"
+  },
+  {
+    "id": 4,
+    "word": "デスクトップ",
+    "reading": "デスクトップ",
+    "meaning": "Máy tính để bàn"
+  },
+  {
+    "id": 5,
+    "word": "画面",
+    "reading": "がめん",
+    "meaning": "Màn hình"
+  },
+  {
+    "id": 6,
+    "word": "キーボード",
+    "reading": "キーボード",
+    "meaning": "Bàn phím"
+  },
+  {
+    "id": 7,
+    "word": "マウス",
+    "reading": "マウス",
+    "meaning": "Chuột máy tính"
+  },
+  {
+    "id": 8,
+    "word": "プリンター",
+    "reading": "プリンター",
+    "meaning": "Máy in"
+  },
+  {
+    "id": 9,
+    "word": "メモリー",
+    "reading": "メモリー",
+    "meaning": "Bộ nhớ"
+  },
+  {
+    "id": 10,
+    "word": "ハードディスク",
+    "reading": "ハードディスク",
+    "meaning": "Ổ cứng"
+  },
+  {
+    "id": 11,
+    "word": "保存",
+    "reading": "ほぞん",
+    "meaning": "Lưu"
+  },
+  {
+    "id": 12,
+    "word": "削除",
+    "reading": "さくじょ",
+    "meaning": "Xóa"
+  },
+  {
+    "id": 13,
+    "word": "コピー",
+    "reading": "コピー",
+    "meaning": "Sao chép"
+  },
+  {
+    "id": 14,
+    "word": "貼り付け",
+    "reading": "はりつけ",
+    "meaning": "Dán"
+  },
+  {
+    "id": 15,
+    "word": "ファイル",
+    "reading": "ファイル",
+    "meaning": "Tệp"
+  },
+  {
+    "id": 16,
+    "word": "フォルダー",
+    "reading": "フォルダー",
+    "meaning": "Thư mục"
+  },
+  {
+    "id": 17,
+    "word": "設定",
+    "reading": "せってい",
+    "meaning": "Cài đặt"
+  },
+  {
+    "id": 18,
+    "word": "更新",
+    "reading": "こうしん",
+    "meaning": "Cập nhật"
+  },
+  {
+    "id": 19,
+    "word": "再起動",
+    "reading": "さいきどう",
+    "meaning": "Khởi động lại"
+  },
+  {
+    "id": 20,
+    "word": "不具合",
+    "reading": "ふぐあい",
+    "meaning": "Lỗi, trục trặc"
+  }
+]
