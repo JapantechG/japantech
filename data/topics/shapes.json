@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "形",
+    "reading": "かたち",
+    "meaning": "Hình dạng"
+  },
+  {
+    "id": 2,
+    "word": "丸",
+    "reading": "まる",
+    "meaning": "Hình tròn"
+  },
+  {
+    "id": 3,
+    "word": "円",
+    "reading": "えん",
+    "meaning": "Đường tròn"
+  },
+  {
+    "id": 4,
+    "word": "四角",
+    "reading": "しかく",
+    "meaning": "Hình vuông, tứ giác"
+  },
+  {
+    "id": 5,
+    "word": "三角",
+    "reading": "さんかく",
+    "meaning": "Tam giác"
+  },
+  {
+    "id": 6,
+    "word": "長方形",
+    "reading": "ちょうほうけい",
+    "meaning": "Hình chữ nhật"
+  },
+  {
+    "id": 7,
+    "word": "正方形",
+    "reading": "せいほうけい",
+    "meaning": "Hình vuông"
+  },
+  {
+    "id": 8,
+    "word": "楕円",
+    "reading": "だえん",
+    "meaning": "Hình elip"
+  },
+  {
+    "id": 9,
+    "word": "星形",
+    "reading": "ほしがた",
+    "meaning": "Hình ngôi sao"
+  },
+  {
+    "id": 10,
+    "word": "球",
+    "reading": "きゅう",
+    "meaning": "Hình cầu"
+  },
+  {
+    "id": 11,
+    "word": "立方体",
+    "reading": "りっぽうたい",
+    "meaning": "Hình lập phương"
+  },
+  {
+    "id": 12,
+    "word": "円柱",
+    "reading": "えんちゅう",
+    "meaning": "Hình trụ"
+  },
+  {
+    "id": 13,
+    "word": "円錐",
+    "reading": "えんすい",
+    "meaning": "Hình nón"
+  },
+  {
+    "id": 14,
+    "word": "直線",
+    "reading": "ちょくせん",
+    "meaning": "Đường thẳng"
+  },
+  {
+    "id": 15,
+    "word": "曲線",
+    "reading": "きょくせん",
+    "meaning": "Đường cong"
+  },
+  {
+    "id": 16,
+    "word": "角",
+    "reading": "かど",
+    "meaning": "Góc"
+  },
+  {
+    "id": 17,
+    "word": "縁",
+    "reading": "ふち",
+    "meaning": "Rìa, viền"
+  },
+  {
+    "id": 18,
+    "word": "平ら",
+    "reading": "たいら",
+    "meaning": "Phẳng"
+  },
+  {
+    "id": 19,
+    "word": "凸",
+    "reading": "とつ",
+    "meaning": "Lồi"
+  },
+  {
+    "id": 20,
+    "word": "凹",
+    "reading": "おう",
+    "meaning": "Lõm"
+  }
+]
