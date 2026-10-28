@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "勉強",
+    "reading": "べんきょう",
+    "meaning": "Học bài"
+  },
+  {
+    "id": 2,
+    "word": "学習",
+    "reading": "がくしゅう",
+    "meaning": "Học tập"
+  },
+  {
+    "id": 3,
+    "word": "覚える",
+    "reading": "おぼえる",
+    "meaning": "Ghi nhớ"
+  },
+  {
+    "id": 4,
+    "word": "忘れる",
+    "reading": "わすれる",
+    "meaning": "Quên"
+  },
+  {
+    "id": 5,
+    "word": "理解",
+    "reading": "りかい",
+    "meaning": "Hiểu"
+  },
+  {
+    "id": 6,
+    "word": "暗記",
+    "reading": "あんき",
+    "meaning": "Học thuộc"
+  },
+  {
+    "id": 7,
+    "word": "復習",
+    "reading": "ふくしゅう",
+    "meaning": "Ôn tập"
+  },
+  {
+    "id": 8,
+    "word": "予習",
+    "reading": "よしゅう",
+    "meaning": "Chuẩn bị bài trước"
+  },
+  {
+    "id": 9,
+    "word": "練習",
+    "reading": "れんしゅう",
+    "meaning": "Luyện tập"
+  },
+  {
+    "id": 10,
+    "word": "質問",
+    "reading": "しつもん",
+    "meaning": "Câu hỏi"
+  },
+  {
+    "id": 11,
+    "word": "回答",
+    "reading": "かいとう",
+    "meaning": "Trả lời"
+  },
+  {
+    "id": 12,
+    "word": "説明",
+    "reading": "せつめい",
+    "meaning": "Giải thích"
+  },
+  {
+    "id": 13,
+    "word": "例文",
+    "reading": "れいぶん",
+    "meaning": "Câu ví dụ"
+  },
+  {
+    "id": 14,
+    "word": "単語",
+    "reading": "たんご",
+    "meaning": "Từ vựng"
+  },
+  {
+    "id": 15,
+    "word": "文法",
+    "reading": "ぶんぽう",
+    "meaning": "Ngữ pháp"
+  },
+  {
+    "id": 16,
+    "word": "発音",
+    "reading": "はつおん",
+    "meaning": "Phát âm"
+  },
+  {
+    "id": 17,
+    "word": "読解",
+    "reading": "どっかい",
+    "meaning": "Đọc hiểu"
+  },
+  {
+    "id": 18,
+    "word": "聴解",
+    "reading": "ちょうかい",
+    "meaning": "Nghe hiểu"
+  },
+  {
+    "id": 19,
+    "word": "作文",
+    "reading": "さくぶん",
+    "meaning": "Viết văn"
+  },
+  {
+    "id": 20,
+    "word": "辞書",
+    "reading": "じしょ",
+    "meaning": "Từ điển"
+  }
+]
