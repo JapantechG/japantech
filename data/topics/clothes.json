@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "服",
+    "reading": "ふく",
+    "meaning": "Quần áo"
+  },
+  {
+    "id": 2,
+    "word": "衣服",
+    "reading": "いふく",
+    "meaning": "Trang phục"
+  },
+  {
+    "id": 3,
+    "word": "シャツ",
+    "reading": "シャツ",
+    "meaning": "Áo sơ mi"
+  },
+  {
+    "id": 4,
+    "word": "Ｔシャツ",
+    "reading": "ティーシャツ",
+    "meaning": "Áo phông"
+  },
+  {
+    "id": 5,
+    "word": "ブラウス",
+    "reading": "ブラウス",
+    "meaning": "Áo blouse"
+  },
+  {
+    "id": 6,
+    "word": "セーター",
+    "reading": "セーター",
+    "meaning": "Áo len"
+  },
+  {
+    "id": 7,
+    "word": "コート",
+    "reading": "コート",
+    "meaning": "Áo khoác dài"
+  },
+  {
+    "id": 8,
+    "word": "ジャケット",
+    "reading": "ジャケット",
+    "meaning": "Áo khoác"
+  },
+  {
+    "id": 9,
+    "word": "パーカー",
+    "reading": "パーカー",
+    "meaning": "Áo hoodie"
+  },
+  {
+    "id": 10,
+    "word": "ズボン",
+    "reading": "ズボン",
+    "meaning": "Quần dài"
+  },
+  {
+    "id": 11,
+    "word": "ジーンズ",
+    "reading": "ジーンズ",
+    "meaning": "Quần jeans"
+  },
+  {
+    "id": 12,
+    "word": "スカート",
+    "reading": "スカート",
+    "meaning": "Chân váy"
+  },
+  {
+    "id": 13,
+    "word": "ワンピース",
+    "reading": "ワンピース",
+    "meaning": "Váy liền"
+  },
+  {
+    "id": 14,
+    "word": "ドレス",
+    "reading": "ドレス",
+    "meaning": "Đầm"
+  },
+  {
+    "id": 15,
+    "word": "スーツ",
+    "reading": "スーツ",
+    "meaning": "Bộ vest"
+  },
+  {
+    "id": 16,
+    "word": "制服",
+    "reading": "せいふく",
+    "meaning": "Đồng phục"
+  },
+  {
+    "id": 17,
+    "word": "下着",
+    "reading": "したぎ",
+    "meaning": "Đồ lót"
+  },
+  {
+    "id": 18,
+    "word": "靴下",
+    "reading": "くつした",
+    "meaning": "Tất"
+  },
+  {
+    "id": 19,
+    "word": "手袋",
+    "reading": "てぶくろ",
+    "meaning": "Găng tay"
+  },
+  {
+    "id": 20,
+    "word": "マフラー",
+    "reading": "マフラー",
+    "meaning": "Khăn quàng"
+  }
+]
