@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "設計",
+    "reading": "せっけい",
+    "meaning": "Thiết kế"
+  },
+  {
+    "id": 2,
+    "word": "図面",
+    "reading": "ずめん",
+    "meaning": "Bản vẽ"
+  },
+  {
+    "id": 3,
+    "word": "製図",
+    "reading": "せいず",
+    "meaning": "Vẽ kỹ thuật"
+  },
+  {
+    "id": 4,
+    "word": "組立図",
+    "reading": "くみたてず",
+    "meaning": "Bản vẽ lắp"
+  },
+  {
+    "id": 5,
+    "word": "部品図",
+    "reading": "ぶひんず",
+    "meaning": "Bản vẽ chi tiết"
+  },
+  {
+    "id": 6,
+    "word": "寸法",
+    "reading": "すんぽう",
+    "meaning": "Kích thước"
+  },
+  {
+    "id": 7,
+    "word": "公差",
+    "reading": "こうさ",
+    "meaning": "Dung sai"
+  },
+  {
+    "id": 8,
+    "word": "幾何公差",
+    "reading": "きかこうさ",
+    "meaning": "Dung sai hình học"
+  },
+  {
+    "id": 9,
+    "word": "表面粗さ",
+    "reading": "ひょうめんあらさ",
+    "meaning": "Độ nhám bề mặt"
+  },
+  {
+    "id": 10,
+    "word": "断面図",
+    "reading": "だんめんず",
+    "meaning": "Hình cắt"
+  },
+  {
+    "id": 11,
+    "word": "正面図",
+    "reading": "しょうめんず",
+    "meaning": "Hình chiếu đứng"
+  },
+  {
+    "id": 12,
+    "word": "平面図",
+    "reading": "へいめんず",
+    "meaning": "Hình chiếu bằng"
+  },
+  {
+    "id": 13,
+    "word": "側面図",
+    "reading": "そくめんず",
+    "meaning": "Hình chiếu cạnh"
+  },
+  {
+    "id": 14,
+    "word": "投影",
+    "reading": "とうえい",
+    "meaning": "Phép chiếu"
+  },
+  {
+    "id": 15,
+    "word": "尺度",
+    "reading": "しゃくど",
+    "meaning": "Tỷ lệ bản vẽ"
+  },
+  {
+    "id": 16,
+    "word": "基準",
+    "reading": "きじゅん",
+    "meaning": "Chuẩn, tiêu chuẩn"
+  },
+  {
+    "id": 17,
+    "word": "材料",
+    "reading": "ざいりょう",
+    "meaning": "Vật liệu"
+  },
+  {
+    "id": 18,
+    "word": "数量",
+    "reading": "すうりょう",
+    "meaning": "Số lượng"
+  },
+  {
+    "id": 19,
+    "word": "仕様",
+    "reading": "しよう",
+    "meaning": "Thông số kỹ thuật"
+  },
+  {
+    "id": 20,
+    "word": "改訂",
+    "reading": "かいてい",
+    "meaning": "Sửa đổi phiên bản"
+  }
+]
