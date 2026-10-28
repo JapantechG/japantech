@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "word": "植物",
+    "reading": "しょくぶつ",
+    "meaning": "Thực vật"
+  },
+  {
+    "id": 2,
+    "word": "木",
+    "reading": "き",
+    "meaning": "Cây"
+  },
+  {
+    "id": 3,
+    "word": "草",
+    "reading": "くさ",
+    "meaning": "Cỏ"
+  },
+  {
+    "id": 4,
+    "word": "葉",
+    "reading": "は",
+    "meaning": "Lá"
+  },
+  {
+    "id": 5,
+    "word": "枝",
+    "reading": "えだ",
+    "meaning": "Cành"
+  },
+  {
+    "id": 6,
+    "word": "幹",
+    "reading": "みき",
+    "meaning": "Thân cây"
+  },
+  {
+    "id": 7,
+    "word": "根",
+    "reading": "ね",
+    "meaning": "Rễ"
+  },
+  {
+    "id": 8,
+    "word": "種",
+    "reading": "たね",
+    "meaning": "Hạt giống"
+  },
+  {
+    "id": 9,
+    "word": "芽",
+    "reading": "め",
+    "meaning": "Mầm"
+  },
+  {
+    "id": 10,
+    "word": "苗",
+    "reading": "なえ",
+    "meaning": "Cây con"
+  },
+  {
+    "id": 11,
+    "word": "茎",
+    "reading": "くき",
+    "meaning": "Thân thảo"
+  },
+  {
+    "id": 12,
+    "word": "花びら",
+    "reading": "はなびら",
+    "meaning": "Cánh hoa"
+  },
+  {
+    "id": 13,
+    "word": "蕾",
+    "reading": "つぼみ",
+    "meaning": "Nụ hoa"
+  },
+  {
+    "id": 14,
+    "word": "実",
+    "reading": "み",
+    "meaning": "Quả, trái"
+  },
+  {
+    "id": 15,
+    "word": "竹",
+    "reading": "たけ",
+    "meaning": "Tre"
+  },
+  {
+    "id": 16,
+    "word": "松",
+    "reading": "まつ",
+    "meaning": "Thông"
+  },
+  {
+    "id": 17,
+    "word": "杉",
+    "reading": "すぎ",
+    "meaning": "Tuyết tùng Nhật"
+  },
+  {
+    "id": 18,
+    "word": "檜",
+    "reading": "ひのき",
+    "meaning": "Bách Nhật"
+  },
+  {
+    "id": 19,
+    "word": "楓",
+    "reading": "かえで",
+    "meaning": "Phong"
+  },
+  {
+    "id": 20,
+    "word": "銀杏",
+    "reading": "いちょう",
+    "meaning": "Bạch quả"
+  },
+  {
+    "id": 21,
+    "word": "柳",
+    "reading": "やなぎ",
+    "meaning": "Liễu"
+  },
+  {
+    "id": 22,
+    "word": "樫",
+    "reading": "かし",
+    "meaning": "Sồi thường xanh"
+  },
+  {
+    "id": 23,
+    "word": "樹木",
+    "reading": "じゅもく",
+    "meaning": "Cây thân gỗ"
+  },
+  {
+    "id": 24,
+    "word": "森林",
+    "reading": "しんりん",
+    "meaning": "Rừng"
+  },
+  {
+    "id": 25,
+    "word": "雑草",
+    "reading": "ざっそう",
+    "meaning": "Cỏ dại"
+  },
+  {
+    "id": 26,
+    "word": "苔",
+    "reading": "こけ",
+    "meaning": "Rêu"
+  },
+  {
+    "id": 27,
+    "word": "茸",
+    "reading": "きのこ",
+    "meaning": "Nấm"
+  },
+  {
+    "id": 28,
+    "word": "サボテン",
+    "reading": "サボテン",
+    "meaning": "Xương rồng"
+  },
+  {
+    "id": 29,
+    "word": "シダ",
+    "reading": "シダ",
+    "meaning": "Dương xỉ"
+  },
+  {
+    "id": 30,
+    "word": "蔦",
+    "reading": "つた",
+    "meaning": "Dây leo"
+  }
+]
