@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "趣味",
+    "reading": "しゅみ",
+    "meaning": "Sở thích"
+  },
+  {
+    "id": 2,
+    "word": "読書",
+    "reading": "どくしょ",
+    "meaning": "Đọc sách"
+  },
+  {
+    "id": 3,
+    "word": "散歩",
+    "reading": "さんぽ",
+    "meaning": "Đi dạo"
+  },
+  {
+    "id": 4,
+    "word": "旅行",
+    "reading": "りょこう",
+    "meaning": "Du lịch"
+  },
+  {
+    "id": 5,
+    "word": "写真",
+    "reading": "しゃしん",
+    "meaning": "Chụp ảnh"
+  },
+  {
+    "id": 6,
+    "word": "釣り",
+    "reading": "つり",
+    "meaning": "Câu cá"
+  },
+  {
+    "id": 7,
+    "word": "登山",
+    "reading": "とざん",
+    "meaning": "Leo núi"
+  },
+  {
+    "id": 8,
+    "word": "キャンプ",
+    "reading": "キャンプ",
+    "meaning": "Cắm trại"
+  },
+  {
+    "id": 9,
+    "word": "園芸",
+    "reading": "えんげい",
+    "meaning": "Làm vườn"
+  },
+  {
+    "id": 10,
+    "word": "料理",
+    "reading": "りょうり",
+    "meaning": "Nấu ăn"
+  },
+  {
+    "id": 11,
+    "word": "手芸",
+    "reading": "しゅげい",
+    "meaning": "Thủ công"
+  },
+  {
+    "id": 12,
+    "word": "絵画",
+    "reading": "かいが",
+    "meaning": "Hội họa"
+  },
+  {
+    "id": 13,
+    "word": "将棋",
+    "reading": "しょうぎ",
+    "meaning": "Cờ tướng Nhật"
+  },
+  {
+    "id": 14,
+    "word": "囲碁",
+    "reading": "いご",
+    "meaning": "Cờ vây"
+  },
+  {
+    "id": 15,
+    "word": "ゲーム",
+    "reading": "ゲーム",
+    "meaning": "Trò chơi"
+  },
+  {
+    "id": 16,
+    "word": "コレクション",
+    "reading": "コレクション",
+    "meaning": "Sưu tập"
+  },
+  {
+    "id": 17,
+    "word": "模型",
+    "reading": "もけい",
+    "meaning": "Mô hình"
+  },
+  {
+    "id": 18,
+    "word": "編み物",
+    "reading": "あみもの",
+    "meaning": "Đan len"
+  },
+  {
+    "id": 19,
+    "word": "動画鑑賞",
+    "reading": "どうがかんしょう",
+    "meaning": "Xem video"
+  },
+  {
+    "id": 20,
+    "word": "映画鑑賞",
+    "reading": "えいがかんしょう",
+    "meaning": "Xem phim"
+  }
+]
