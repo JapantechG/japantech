@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "ゲーム",
+    "reading": "ゲーム",
+    "meaning": "Trò chơi"
+  },
+  {
+    "id": 2,
+    "word": "対戦",
+    "reading": "たいせん",
+    "meaning": "Đấu đối kháng"
+  },
+  {
+    "id": 3,
+    "word": "協力",
+    "reading": "きょうりょく",
+    "meaning": "Hợp tác"
+  },
+  {
+    "id": 4,
+    "word": "勝利",
+    "reading": "しょうり",
+    "meaning": "Chiến thắng"
+  },
+  {
+    "id": 5,
+    "word": "敗北",
+    "reading": "はいぼく",
+    "meaning": "Thất bại"
+  },
+  {
+    "id": 6,
+    "word": "引き分け",
+    "reading": "ひきわけ",
+    "meaning": "Hòa"
+  },
+  {
+    "id": 7,
+    "word": "得点",
+    "reading": "とくてん",
+    "meaning": "Điểm ghi được"
+  },
+  {
+    "id": 8,
+    "word": "順位",
+    "reading": "じゅんい",
+    "meaning": "Thứ hạng"
+  },
+  {
+    "id": 9,
+    "word": "ランキング",
+    "reading": "ランキング",
+    "meaning": "Bảng xếp hạng"
+  },
+  {
+    "id": 10,
+    "word": "レベル",
+    "reading": "レベル",
+    "meaning": "Cấp độ"
+  },
+  {
+    "id": 11,
+    "word": "経験値",
+    "reading": "けいけんち",
+    "meaning": "Điểm kinh nghiệm"
+  },
+  {
+    "id": 12,
+    "word": "装備",
+    "reading": "そうび",
+    "meaning": "Trang bị"
+  },
+  {
+    "id": 13,
+    "word": "武器",
+    "reading": "ぶき",
+    "meaning": "Vũ khí"
+  },
+  {
+    "id": 14,
+    "word": "防具",
+    "reading": "ぼうぐ",
+    "meaning": "Giáp bảo vệ"
+  },
+  {
+    "id": 15,
+    "word": "仲間",
+    "reading": "なかま",
+    "meaning": "Đồng đội"
+  },
+  {
+    "id": 16,
+    "word": "敵",
+    "reading": "てき",
+    "meaning": "Kẻ địch"
+  },
+  {
+    "id": 17,
+    "word": "復活",
+    "reading": "ふっかつ",
+    "meaning": "Hồi sinh"
+  },
+  {
+    "id": 18,
+    "word": "報酬",
+    "reading": "ほうしゅう",
+    "meaning": "Phần thưởng"
+  },
+  {
+    "id": 19,
+    "word": "任務",
+    "reading": "にんむ",
+    "meaning": "Nhiệm vụ"
+  },
+  {
+    "id": 20,
+    "word": "難易度",
+    "reading": "なんいど",
+    "meaning": "Độ khó"
+  }
+]
