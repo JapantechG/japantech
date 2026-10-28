@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "word": "名前",
+    "reading": "なまえ",
+    "meaning": "Tên"
+  },
+  {
+    "id": 2,
+    "word": "氏名",
+    "reading": "しめい",
+    "meaning": "Họ tên"
+  },
+  {
+    "id": 3,
+    "word": "名字",
+    "reading": "みょうじ",
+    "meaning": "Họ"
+  },
+  {
+    "id": 4,
+    "word": "下の名前",
+    "reading": "したのなまえ",
+    "meaning": "Tên gọi"
+  },
+  {
+    "id": 5,
+    "word": "年齢",
+    "reading": "ねんれい",
+    "meaning": "Tuổi"
+  },
+  {
+    "id": 6,
+    "word": "出身",
+    "reading": "しゅっしん",
+    "meaning": "Quê quán"
+  },
+  {
+    "id": 7,
+    "word": "国籍",
+    "reading": "こくせき",
+    "meaning": "Quốc tịch"
+  },
+  {
+    "id": 8,
+    "word": "住所",
+    "reading": "じゅうしょ",
+    "meaning": "Địa chỉ"
+  },
+  {
+    "id": 9,
+    "word": "職業",
+    "reading": "しょくぎょう",
+    "meaning": "Nghề nghiệp"
+  },
+  {
+    "id": 10,
+    "word": "会社員",
+    "reading": "かいしゃいん",
+    "meaning": "Nhân viên công ty"
+  },
+  {
+    "id": 11,
+    "word": "学生",
+    "reading": "がくせい",
+    "meaning": "Học sinh, sinh viên"
+  },
+  {
+    "id": 12,
+    "word": "趣味",
+    "reading": "しゅみ",
+    "meaning": "Sở thích"
+  },
+  {
+    "id": 13,
+    "word": "特技",
+    "reading": "とくぎ",
+    "meaning": "Sở trường"
+  },
+  {
+    "id": 14,
+    "word": "自己紹介",
+    "reading": "じこしょうかい",
+    "meaning": "Giới thiệu bản thân"
+  },
+  {
+    "id": 15,
+    "word": "生年月日",
+    "reading": "せいねんがっぴ",
+    "meaning": "Ngày tháng năm sinh"
+  },
+  {
+    "id": 16,
+    "word": "独身",
+    "reading": "どくしん",
+    "meaning": "Độc thân"
+  },
+  {
+    "id": 17,
+    "word": "既婚",
+    "reading": "きこん",
+    "meaning": "Đã kết hôn"
+  },
+  {
+    "id": 18,
+    "word": "よろしく",
+    "reading": "よろしく",
+    "meaning": "Rất mong được giúp đỡ (thân mật)"
+  }
+]
