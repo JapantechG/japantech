@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "word": "起きる",
+    "reading": "おきる",
+    "meaning": "Thức dậy"
+  },
+  {
+    "id": 2,
+    "word": "寝る",
+    "reading": "ねる",
+    "meaning": "Ngủ"
+  },
+  {
+    "id": 3,
+    "word": "顔を洗う",
+    "reading": "かおをあらう",
+    "meaning": "Rửa mặt"
+  },
+  {
+    "id": 4,
+    "word": "歯を磨く",
+    "reading": "はをみがく",
+    "meaning": "Đánh răng"
+  },
+  {
+    "id": 5,
+    "word": "着替える",
+    "reading": "きがえる",
+    "meaning": "Thay quần áo"
+  },
+  {
+    "id": 6,
+    "word": "食べる",
+    "reading": "たべる",
+    "meaning": "Ăn"
+  },
+  {
+    "id": 7,
+    "word": "飲む",
+    "reading": "のむ",
+    "meaning": "Uống"
+  },
+  {
+    "id": 8,
+    "word": "歩く",
+    "reading": "あるく",
+    "meaning": "Đi bộ"
+  },
+  {
+    "id": 9,
+    "word": "走る",
+    "reading": "はしる",
+    "meaning": "Chạy"
+  },
+  {
+    "id": 10,
+    "word": "座る",
+    "reading": "すわる",
+    "meaning": "Ngồi"
+  },
+  {
+    "id": 11,
+    "word": "立つ",
+    "reading": "たつ",
+    "meaning": "Đứng"
+  },
+  {
+    "id": 12,
+    "word": "開ける",
+    "reading": "あける",
+    "meaning": "Mở"
+  },
+  {
+    "id": 13,
+    "word": "閉める",
+    "reading": "しめる",
+    "meaning": "Đóng"
+  },
+  {
+    "id": 14,
+    "word": "持つ",
+    "reading": "もつ",
+    "meaning": "Cầm, mang"
+  },
+  {
+    "id": 15,
+    "word": "置く",
+    "reading": "おく",
+    "meaning": "Đặt"
+  },
+  {
+    "id": 16,
+    "word": "取る",
+    "reading": "とる",
+    "meaning": "Lấy"
+  },
+  {
+    "id": 17,
+    "word": "入れる",
+    "reading": "いれる",
+    "meaning": "Cho vào"
+  },
+  {
+    "id": 18,
+    "word": "出す",
+    "reading": "だす",
+    "meaning": "Lấy ra"
+  },
+  {
+    "id": 19,
+    "word": "片付ける",
+    "reading": "かたづける",
+    "meaning": "Dọn dẹp"
+  },
+  {
+    "id": 20,
+    "word": "掃除する",
+    "reading": "そうじする",
+    "meaning": "Lau dọn"
+  },
+  {
+    "id": 21,
+    "word": "洗濯する",
+    "reading": "せんたくする",
+    "meaning": "Giặt đồ"
+  },
+  {
+    "id": 22,
+    "word": "買う",
+    "reading": "かう",
+    "meaning": "Mua"
+  },
+  {
+    "id": 23,
+    "word": "帰る",
+    "reading": "かえる",
+    "meaning": "Trở về"
+  },
+  {
+    "id": 24,
+    "word": "休む",
+    "reading": "やすむ",
+    "meaning": "Nghỉ ngơi"
+  }
+]
