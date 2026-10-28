@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "性格",
+    "reading": "せいかく",
+    "meaning": "Tính cách"
+  },
+  {
+    "id": 2,
+    "word": "優しい",
+    "reading": "やさしい",
+    "meaning": "Hiền, tốt bụng"
+  },
+  {
+    "id": 3,
+    "word": "親切",
+    "reading": "しんせつ",
+    "meaning": "Tử tế"
+  },
+  {
+    "id": 4,
+    "word": "真面目",
+    "reading": "まじめ",
+    "meaning": "Nghiêm túc"
+  },
+  {
+    "id": 5,
+    "word": "明るい",
+    "reading": "あかるい",
+    "meaning": "Vui vẻ"
+  },
+  {
+    "id": 6,
+    "word": "暗い",
+    "reading": "くらい",
+    "meaning": "U ám, khép kín"
+  },
+  {
+    "id": 7,
+    "word": "元気",
+    "reading": "げんき",
+    "meaning": "Năng động, khỏe mạnh"
+  },
+  {
+    "id": 8,
+    "word": "活発",
+    "reading": "かっぱつ",
+    "meaning": "Hoạt bát"
+  },
+  {
+    "id": 9,
+    "word": "静か",
+    "reading": "しずか",
+    "meaning": "Trầm tĩnh"
+  },
+  {
+    "id": 10,
+    "word": "おとなしい",
+    "reading": "おとなしい",
+    "meaning": "Hiền, ít nói"
+  },
+  {
+    "id": 11,
+    "word": "頑固",
+    "reading": "がんこ",
+    "meaning": "Bướng bỉnh"
+  },
+  {
+    "id": 12,
+    "word": "正直",
+    "reading": "しょうじき",
+    "meaning": "Thành thật"
+  },
+  {
+    "id": 13,
+    "word": "素直",
+    "reading": "すなお",
+    "meaning": "Thẳng thắn, dễ bảo"
+  },
+  {
+    "id": 14,
+    "word": "慎重",
+    "reading": "しんちょう",
+    "meaning": "Thận trọng"
+  },
+  {
+    "id": 15,
+    "word": "大胆",
+    "reading": "だいたん",
+    "meaning": "Táo bạo"
+  },
+  {
+    "id": 16,
+    "word": "怠け者",
+    "reading": "なまけもの",
+    "meaning": "Người lười biếng"
+  },
+  {
+    "id": 17,
+    "word": "負けず嫌い",
+    "reading": "まけずぎらい",
+    "meaning": "Hiếu thắng"
+  },
+  {
+    "id": 18,
+    "word": "人見知り",
+    "reading": "ひとみしり",
+    "meaning": "Ngại người lạ"
+  },
+  {
+    "id": 19,
+    "word": "社交的",
+    "reading": "しゃこうてき",
+    "meaning": "Hòa đồng"
+  },
+  {
+    "id": 20,
+    "word": "短気",
+    "reading": "たんき",
+    "meaning": "Nóng tính"
+  }
+]
