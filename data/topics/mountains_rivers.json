@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "山",
+    "reading": "やま",
+    "meaning": "Núi"
+  },
+  {
+    "id": 2,
+    "word": "山脈",
+    "reading": "さんみゃく",
+    "meaning": "Dãy núi"
+  },
+  {
+    "id": 3,
+    "word": "山頂",
+    "reading": "さんちょう",
+    "meaning": "Đỉnh núi"
+  },
+  {
+    "id": 4,
+    "word": "峠",
+    "reading": "とうげ",
+    "meaning": "Đèo"
+  },
+  {
+    "id": 5,
+    "word": "谷",
+    "reading": "たに",
+    "meaning": "Thung lũng"
+  },
+  {
+    "id": 6,
+    "word": "崖",
+    "reading": "がけ",
+    "meaning": "Vách đá"
+  },
+  {
+    "id": 7,
+    "word": "丘",
+    "reading": "おか",
+    "meaning": "Đồi"
+  },
+  {
+    "id": 8,
+    "word": "川",
+    "reading": "かわ",
+    "meaning": "Sông"
+  },
+  {
+    "id": 9,
+    "word": "河口",
+    "reading": "かこう",
+    "meaning": "Cửa sông"
+  },
+  {
+    "id": 10,
+    "word": "上流",
+    "reading": "じょうりゅう",
+    "meaning": "Thượng nguồn"
+  },
+  {
+    "id": 11,
+    "word": "下流",
+    "reading": "かりゅう",
+    "meaning": "Hạ lưu"
+  },
+  {
+    "id": 12,
+    "word": "滝",
+    "reading": "たき",
+    "meaning": "Thác nước"
+  },
+  {
+    "id": 13,
+    "word": "湖",
+    "reading": "みずうみ",
+    "meaning": "Hồ"
+  },
+  {
+    "id": 14,
+    "word": "池",
+    "reading": "いけ",
+    "meaning": "Ao"
+  },
+  {
+    "id": 15,
+    "word": "海",
+    "reading": "うみ",
+    "meaning": "Biển"
+  },
+  {
+    "id": 16,
+    "word": "海岸",
+    "reading": "かいがん",
+    "meaning": "Bờ biển"
+  },
+  {
+    "id": 17,
+    "word": "砂浜",
+    "reading": "すなはま",
+    "meaning": "Bãi cát"
+  },
+  {
+    "id": 18,
+    "word": "島",
+    "reading": "しま",
+    "meaning": "Đảo"
+  },
+  {
+    "id": 19,
+    "word": "半島",
+    "reading": "はんとう",
+    "meaning": "Bán đảo"
+  },
+  {
+    "id": 20,
+    "word": "湾",
+    "reading": "わん",
+    "meaning": "Vịnh"
+  }
+]
