@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "運動",
+    "reading": "うんどう",
+    "meaning": "Vận động"
+  },
+  {
+    "id": 2,
+    "word": "歩く",
+    "reading": "あるく",
+    "meaning": "Đi bộ"
+  },
+  {
+    "id": 3,
+    "word": "走る",
+    "reading": "はしる",
+    "meaning": "Chạy"
+  },
+  {
+    "id": 4,
+    "word": "泳ぐ",
+    "reading": "およぐ",
+    "meaning": "Bơi"
+  },
+  {
+    "id": 5,
+    "word": "跳ぶ",
+    "reading": "とぶ",
+    "meaning": "Nhảy"
+  },
+  {
+    "id": 6,
+    "word": "伸ばす",
+    "reading": "のばす",
+    "meaning": "Duỗi"
+  },
+  {
+    "id": 7,
+    "word": "曲げる",
+    "reading": "まげる",
+    "meaning": "Gập"
+  },
+  {
+    "id": 8,
+    "word": "持ち上げる",
+    "reading": "もちあげる",
+    "meaning": "Nâng lên"
+  },
+  {
+    "id": 9,
+    "word": "筋トレ",
+    "reading": "きんトレ",
+    "meaning": "Tập cơ"
+  },
+  {
+    "id": 10,
+    "word": "腕立て伏せ",
+    "reading": "うでたてふせ",
+    "meaning": "Chống đẩy"
+  },
+  {
+    "id": 11,
+    "word": "腹筋",
+    "reading": "ふっきん",
+    "meaning": "Bài tập bụng"
+  },
+  {
+    "id": 12,
+    "word": "スクワット",
+    "reading": "スクワット",
+    "meaning": "Squat"
+  },
+  {
+    "id": 13,
+    "word": "ストレッチ",
+    "reading": "ストレッチ",
+    "meaning": "Giãn cơ"
+  },
+  {
+    "id": 14,
+    "word": "準備運動",
+    "reading": "じゅんびうんどう",
+    "meaning": "Khởi động"
+  },
+  {
+    "id": 15,
+    "word": "整理運動",
+    "reading": "せいりうんどう",
+    "meaning": "Thả lỏng sau tập"
+  },
+  {
+    "id": 16,
+    "word": "有酸素運動",
+    "reading": "ゆうさんそうんどう",
+    "meaning": "Tập aerobic"
+  },
+  {
+    "id": 17,
+    "word": "持久力",
+    "reading": "じきゅうりょく",
+    "meaning": "Sức bền"
+  },
+  {
+    "id": 18,
+    "word": "柔軟性",
+    "reading": "じゅうなんせい",
+    "meaning": "Độ dẻo dai"
+  },
+  {
+    "id": 19,
+    "word": "姿勢",
+    "reading": "しせい",
+    "meaning": "Tư thế"
+  },
+  {
+    "id": 20,
+    "word": "呼吸",
+    "reading": "こきゅう",
+    "meaning": "Hô hấp"
+  }
+]
