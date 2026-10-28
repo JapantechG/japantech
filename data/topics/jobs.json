@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "word": "職業",
+    "reading": "しょくぎょう",
+    "meaning": "Nghề nghiệp"
+  },
+  {
+    "id": 2,
+    "word": "医者",
+    "reading": "いしゃ",
+    "meaning": "Bác sĩ"
+  },
+  {
+    "id": 3,
+    "word": "看護師",
+    "reading": "かんごし",
+    "meaning": "Điều dưỡng"
+  },
+  {
+    "id": 4,
+    "word": "教師",
+    "reading": "きょうし",
+    "meaning": "Giáo viên"
+  },
+  {
+    "id": 5,
+    "word": "先生",
+    "reading": "せんせい",
+    "meaning": "Thầy, cô"
+  },
+  {
+    "id": 6,
+    "word": "エンジニア",
+    "reading": "エンジニア",
+    "meaning": "Kỹ sư"
+  },
+  {
+    "id": 7,
+    "word": "設計者",
+    "reading": "せっけいしゃ",
+    "meaning": "Người thiết kế"
+  },
+  {
+    "id": 8,
+    "word": "技術者",
+    "reading": "ぎじゅつしゃ",
+    "meaning": "Kỹ thuật viên"
+  },
+  {
+    "id": 9,
+    "word": "研究者",
+    "reading": "けんきゅうしゃ",
+    "meaning": "Nhà nghiên cứu"
+  },
+  {
+    "id": 10,
+    "word": "プログラマー",
+    "reading": "プログラマー",
+    "meaning": "Lập trình viên"
+  },
+  {
+    "id": 11,
+    "word": "営業職",
+    "reading": "えいぎょうしょく",
+    "meaning": "Nhân viên kinh doanh"
+  },
+  {
+    "id": 12,
+    "word": "事務員",
+    "reading": "じむいん",
+    "meaning": "Nhân viên văn phòng"
+  },
+  {
+    "id": 13,
+    "word": "公務員",
+    "reading": "こうむいん",
+    "meaning": "Công chức"
+  },
+  {
+    "id": 14,
+    "word": "警察官",
+    "reading": "けいさつかん",
+    "meaning": "Cảnh sát"
+  },
+  {
+    "id": 15,
+    "word": "消防士",
+    "reading": "しょうぼうし",
+    "meaning": "Lính cứu hỏa"
+  },
+  {
+    "id": 16,
+    "word": "運転手",
+    "reading": "うんてんしゅ",
+    "meaning": "Tài xế"
+  },
+  {
+    "id": 17,
+    "word": "料理人",
+    "reading": "りょうりにん",
+    "meaning": "Đầu bếp"
+  },
+  {
+    "id": 18,
+    "word": "美容師",
+    "reading": "びようし",
+    "meaning": "Thợ làm tóc"
+  },
+  {
+    "id": 19,
+    "word": "農家",
+    "reading": "のうか",
+    "meaning": "Nông dân"
+  },
+  {
+    "id": 20,
+    "word": "建築家",
+    "reading": "けんちくか",
+    "meaning": "Kiến trúc sư"
+  },
+  {
+    "id": 21,
+    "word": "弁護士",
+    "reading": "べんごし",
+    "meaning": "Luật sư"
+  },
+  {
+    "id": 22,
+    "word": "会計士",
+    "reading": "かいけいし",
+    "meaning": "Kế toán viên chuyên nghiệp"
+  },
+  {
+    "id": 23,
+    "word": "通訳",
+    "reading": "つうやく",
+    "meaning": "Phiên dịch nói"
+  },
+  {
+    "id": 24,
+    "word": "翻訳者",
+    "reading": "ほんやくしゃ",
+    "meaning": "Biên dịch viên"
+  }
+]
