@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "調味料",
+    "reading": "ちょうみりょう",
+    "meaning": "Gia vị"
+  },
+  {
+    "id": 2,
+    "word": "塩",
+    "reading": "しお",
+    "meaning": "Muối"
+  },
+  {
+    "id": 3,
+    "word": "砂糖",
+    "reading": "さとう",
+    "meaning": "Đường"
+  },
+  {
+    "id": 4,
+    "word": "醤油",
+    "reading": "しょうゆ",
+    "meaning": "Nước tương"
+  },
+  {
+    "id": 5,
+    "word": "味噌",
+    "reading": "みそ",
+    "meaning": "Miso"
+  },
+  {
+    "id": 6,
+    "word": "酢",
+    "reading": "す",
+    "meaning": "Giấm"
+  },
+  {
+    "id": 7,
+    "word": "胡椒",
+    "reading": "こしょう",
+    "meaning": "Hạt tiêu"
+  },
+  {
+    "id": 8,
+    "word": "唐辛子",
+    "reading": "とうがらし",
+    "meaning": "Ớt"
+  },
+  {
+    "id": 9,
+    "word": "油",
+    "reading": "あぶら",
+    "meaning": "Dầu"
+  },
+  {
+    "id": 10,
+    "word": "ごま油",
+    "reading": "ごまあぶら",
+    "meaning": "Dầu mè"
+  },
+  {
+    "id": 11,
+    "word": "オリーブオイル",
+    "reading": "オリーブオイル",
+    "meaning": "Dầu ô liu"
+  },
+  {
+    "id": 12,
+    "word": "マヨネーズ",
+    "reading": "マヨネーズ",
+    "meaning": "Sốt mayonnaise"
+  },
+  {
+    "id": 13,
+    "word": "ケチャップ",
+    "reading": "ケチャップ",
+    "meaning": "Tương cà"
+  },
+  {
+    "id": 14,
+    "word": "ソース",
+    "reading": "ソース",
+    "meaning": "Nước sốt"
+  },
+  {
+    "id": 15,
+    "word": "出汁",
+    "reading": "だし",
+    "meaning": "Nước dùng dashi"
+  },
+  {
+    "id": 16,
+    "word": "みりん",
+    "reading": "みりん",
+    "meaning": "Rượu nấu ăn ngọt mirin"
+  },
+  {
+    "id": 17,
+    "word": "料理酒",
+    "reading": "りょうりしゅ",
+    "meaning": "Rượu nấu ăn"
+  },
+  {
+    "id": 18,
+    "word": "わさび",
+    "reading": "わさび",
+    "meaning": "Mù tạt Nhật"
+  },
+  {
+    "id": 19,
+    "word": "からし",
+    "reading": "からし",
+    "meaning": "Mù tạt vàng"
+  },
+  {
+    "id": 20,
+    "word": "山椒",
+    "reading": "さんしょう",
+    "meaning": "Tiêu sansho"
+  }
+]
