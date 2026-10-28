@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "件名",
+    "reading": "けんめい",
+    "meaning": "Tiêu đề thư"
+  },
+  {
+    "id": 2,
+    "word": "宛先",
+    "reading": "あてさき",
+    "meaning": "Người nhận"
+  },
+  {
+    "id": 3,
+    "word": "送信",
+    "reading": "そうしん",
+    "meaning": "Gửi"
+  },
+  {
+    "id": 4,
+    "word": "受信",
+    "reading": "じゅしん",
+    "meaning": "Nhận"
+  },
+  {
+    "id": 5,
+    "word": "返信",
+    "reading": "へんしん",
+    "meaning": "Trả lời"
+  },
+  {
+    "id": 6,
+    "word": "転送",
+    "reading": "てんそう",
+    "meaning": "Chuyển tiếp"
+  },
+  {
+    "id": 7,
+    "word": "添付",
+    "reading": "てんぷ",
+    "meaning": "Đính kèm"
+  },
+  {
+    "id": 8,
+    "word": "本文",
+    "reading": "ほんぶん",
+    "meaning": "Nội dung chính"
+  },
+  {
+    "id": 9,
+    "word": "署名",
+    "reading": "しょめい",
+    "meaning": "Chữ ký"
+  },
+  {
+    "id": 10,
+    "word": "お世話になっております",
+    "reading": "おせわになっております",
+    "meaning": "Cảm ơn đã luôn hỗ trợ"
+  },
+  {
+    "id": 11,
+    "word": "ご確認ください",
+    "reading": "ごかくにんください",
+    "meaning": "Xin vui lòng kiểm tra"
+  },
+  {
+    "id": 12,
+    "word": "ご連絡",
+    "reading": "ごれんらく",
+    "meaning": "Liên lạc (kính ngữ)"
+  },
+  {
+    "id": 13,
+    "word": "お手数",
+    "reading": "おてすう",
+    "meaning": "Sự phiền công"
+  },
+  {
+    "id": 14,
+    "word": "恐縮",
+    "reading": "きょうしゅく",
+    "meaning": "Áy náy, ngại phiền"
+  },
+  {
+    "id": 15,
+    "word": "承知しました",
+    "reading": "しょうちしました",
+    "meaning": "Tôi đã hiểu, xin tiếp nhận"
+  },
+  {
+    "id": 16,
+    "word": "かしこまりました",
+    "reading": "かしこまりました",
+    "meaning": "Tôi đã rõ (kính trọng)"
+  },
+  {
+    "id": 17,
+    "word": "ご返信",
+    "reading": "ごへんしん",
+    "meaning": "Hồi âm (kính ngữ)"
+  },
+  {
+    "id": 18,
+    "word": "至急",
+    "reading": "しきゅう",
+    "meaning": "Khẩn cấp"
+  },
+  {
+    "id": 19,
+    "word": "再送",
+    "reading": "さいそう",
+    "meaning": "Gửi lại"
+  },
+  {
+    "id": 20,
+    "word": "下書き",
+    "reading": "したがき",
+    "meaning": "Bản nháp"
+  }
+]
