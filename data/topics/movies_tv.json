@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "映画",
+    "reading": "えいが",
+    "meaning": "Phim điện ảnh"
+  },
+  {
+    "id": 2,
+    "word": "テレビ",
+    "reading": "テレビ",
+    "meaning": "Truyền hình"
+  },
+  {
+    "id": 3,
+    "word": "ドラマ",
+    "reading": "ドラマ",
+    "meaning": "Phim truyền hình"
+  },
+  {
+    "id": 4,
+    "word": "アニメ",
+    "reading": "アニメ",
+    "meaning": "Hoạt hình Nhật"
+  },
+  {
+    "id": 5,
+    "word": "監督",
+    "reading": "かんとく",
+    "meaning": "Đạo diễn"
+  },
+  {
+    "id": 6,
+    "word": "俳優",
+    "reading": "はいゆう",
+    "meaning": "Nam diễn viên"
+  },
+  {
+    "id": 7,
+    "word": "女優",
+    "reading": "じょゆう",
+    "meaning": "Nữ diễn viên"
+  },
+  {
+    "id": 8,
+    "word": "主演",
+    "reading": "しゅえん",
+    "meaning": "Vai chính"
+  },
+  {
+    "id": 9,
+    "word": "脇役",
+    "reading": "わきやく",
+    "meaning": "Vai phụ"
+  },
+  {
+    "id": 10,
+    "word": "字幕",
+    "reading": "じまく",
+    "meaning": "Phụ đề"
+  },
+  {
+    "id": 11,
+    "word": "吹き替え",
+    "reading": "ふきかえ",
+    "meaning": "Lồng tiếng"
+  },
+  {
+    "id": 12,
+    "word": "予告編",
+    "reading": "よこくへん",
+    "meaning": "Trailer"
+  },
+  {
+    "id": 13,
+    "word": "上映",
+    "reading": "じょうえい",
+    "meaning": "Chiếu phim"
+  },
+  {
+    "id": 14,
+    "word": "映画館",
+    "reading": "えいがかん",
+    "meaning": "Rạp phim"
+  },
+  {
+    "id": 15,
+    "word": "番組",
+    "reading": "ばんぐみ",
+    "meaning": "Chương trình"
+  },
+  {
+    "id": 16,
+    "word": "放送",
+    "reading": "ほうそう",
+    "meaning": "Phát sóng"
+  },
+  {
+    "id": 17,
+    "word": "録画",
+    "reading": "ろくが",
+    "meaning": "Ghi hình"
+  },
+  {
+    "id": 18,
+    "word": "視聴",
+    "reading": "しちょう",
+    "meaning": "Xem chương trình"
+  },
+  {
+    "id": 19,
+    "word": "脚本",
+    "reading": "きゃくほん",
+    "meaning": "Kịch bản"
+  },
+  {
+    "id": 20,
+    "word": "結末",
+    "reading": "けつまつ",
+    "meaning": "Đoạn kết"
+  }
+]
