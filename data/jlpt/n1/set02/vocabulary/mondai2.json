@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "question": "厳しい批判を受け、社長は責任を（　）した。",
+    "options": [
+      "強制",
+      "分散",
+      "誇張",
+      "痛感"
+    ],
+    "answer": 4,
+    "explanation": "痛感する：thấm thía sâu sắc."
+  },
+  {
+    "id": 2,
+    "question": "研究成果が実用化へ向けて（　）している。",
+    "options": [
+      "進展",
+      "転換",
+      "衰退",
+      "妥協"
+    ],
+    "answer": 1,
+    "explanation": "進展する：có tiến triển."
+  },
+  {
+    "id": 3,
+    "question": "相手の意図を（　）せずに返事をしてしまった。",
+    "options": [
+      "把握",
+      "譲渡",
+      "連携",
+      "収穫"
+    ],
+    "answer": 1,
+    "explanation": "把握する：nắm bắt chính xác."
+  },
+  {
+    "id": 4,
+    "question": "証拠が不十分で、結論を出すのは（　）だ。",
+    "options": [
+      "温厚",
+      "簡潔",
+      "早計",
+      "雄大"
+    ],
+    "answer": 3,
+    "explanation": "早計：kết luận quá vội."
+  },
+  {
+    "id": 5,
+    "question": "会議では意見の対立が（　）になった。",
+    "options": [
+      "軽率",
+      "緩慢",
+      "頑丈",
+      "顕著"
+    ],
+    "answer": 4,
+    "explanation": "顕著：rõ rệt."
+  },
+  {
+    "id": 6,
+    "question": "古い制度を（　）し、新制度を導入する。",
+    "options": [
+      "喪失",
+      "排除",
+      "拒絶",
+      "廃止"
+    ],
+    "answer": 4,
+    "explanation": "廃止する：bãi bỏ chế độ."
+  },
+  {
+    "id": 7,
+    "question": "提案は現実的な条件を（　）していない。",
+    "options": [
+      "模倣",
+      "考慮",
+      "誇張",
+      "強要"
+    ],
+    "answer": 2,
+    "explanation": "考慮する：cân nhắc."
+  }
+]
