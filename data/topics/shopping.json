@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "買い物",
+    "reading": "かいもの",
+    "meaning": "Mua sắm"
+  },
+  {
+    "id": 2,
+    "word": "商品",
+    "reading": "しょうひん",
+    "meaning": "Hàng hóa"
+  },
+  {
+    "id": 3,
+    "word": "値段",
+    "reading": "ねだん",
+    "meaning": "Giá tiền"
+  },
+  {
+    "id": 4,
+    "word": "価格",
+    "reading": "かかく",
+    "meaning": "Giá cả"
+  },
+  {
+    "id": 5,
+    "word": "定価",
+    "reading": "ていか",
+    "meaning": "Giá niêm yết"
+  },
+  {
+    "id": 6,
+    "word": "割引",
+    "reading": "わりびき",
+    "meaning": "Giảm giá"
+  },
+  {
+    "id": 7,
+    "word": "特売",
+    "reading": "とくばい",
+    "meaning": "Bán giảm giá đặc biệt"
+  },
+  {
+    "id": 8,
+    "word": "セール",
+    "reading": "セール",
+    "meaning": "Đợt giảm giá"
+  },
+  {
+    "id": 9,
+    "word": "試着",
+    "reading": "しちゃく",
+    "meaning": "Thử quần áo"
+  },
+  {
+    "id": 10,
+    "word": "サイズ",
+    "reading": "サイズ",
+    "meaning": "Kích cỡ"
+  },
+  {
+    "id": 11,
+    "word": "在庫",
+    "reading": "ざいこ",
+    "meaning": "Hàng tồn kho"
+  },
+  {
+    "id": 12,
+    "word": "品切れ",
+    "reading": "しなぎれ",
+    "meaning": "Hết hàng"
+  },
+  {
+    "id": 13,
+    "word": "売り切れ",
+    "reading": "うりきれ",
+    "meaning": "Bán hết"
+  },
+  {
+    "id": 14,
+    "word": "注文",
+    "reading": "ちゅうもん",
+    "meaning": "Đặt hàng"
+  },
+  {
+    "id": 15,
+    "word": "レジ",
+    "reading": "レジ",
+    "meaning": "Quầy thu ngân"
+  },
+  {
+    "id": 16,
+    "word": "領収書",
+    "reading": "りょうしゅうしょ",
+    "meaning": "Biên lai"
+  },
+  {
+    "id": 17,
+    "word": "返品",
+    "reading": "へんぴん",
+    "meaning": "Trả hàng"
+  },
+  {
+    "id": 18,
+    "word": "交換",
+    "reading": "こうかん",
+    "meaning": "Đổi hàng"
+  },
+  {
+    "id": 19,
+    "word": "保証",
+    "reading": "ほしょう",
+    "meaning": "Bảo hành"
+  },
+  {
+    "id": 20,
+    "word": "送料",
+    "reading": "そうりょう",
+    "meaning": "Phí vận chuyển"
+  }
+]
