@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "観光地",
+    "reading": "かんこうち",
+    "meaning": "Điểm du lịch"
+  },
+  {
+    "id": 2,
+    "word": "寺",
+    "reading": "てら",
+    "meaning": "Chùa"
+  },
+  {
+    "id": 3,
+    "word": "神社",
+    "reading": "じんじゃ",
+    "meaning": "Đền Thần đạo"
+  },
+  {
+    "id": 4,
+    "word": "城",
+    "reading": "しろ",
+    "meaning": "Lâu đài"
+  },
+  {
+    "id": 5,
+    "word": "博物館",
+    "reading": "はくぶつかん",
+    "meaning": "Bảo tàng"
+  },
+  {
+    "id": 6,
+    "word": "美術館",
+    "reading": "びじゅつかん",
+    "meaning": "Bảo tàng mỹ thuật"
+  },
+  {
+    "id": 7,
+    "word": "動物園",
+    "reading": "どうぶつえん",
+    "meaning": "Vườn thú"
+  },
+  {
+    "id": 8,
+    "word": "水族館",
+    "reading": "すいぞくかん",
+    "meaning": "Thủy cung"
+  },
+  {
+    "id": 9,
+    "word": "公園",
+    "reading": "こうえん",
+    "meaning": "Công viên"
+  },
+  {
+    "id": 10,
+    "word": "遊園地",
+    "reading": "ゆうえんち",
+    "meaning": "Công viên giải trí"
+  },
+  {
+    "id": 11,
+    "word": "温泉",
+    "reading": "おんせん",
+    "meaning": "Suối nước nóng"
+  },
+  {
+    "id": 12,
+    "word": "展望台",
+    "reading": "てんぼうだい",
+    "meaning": "Đài quan sát"
+  },
+  {
+    "id": 13,
+    "word": "海岸",
+    "reading": "かいがん",
+    "meaning": "Bờ biển"
+  },
+  {
+    "id": 14,
+    "word": "山頂",
+    "reading": "さんちょう",
+    "meaning": "Đỉnh núi"
+  },
+  {
+    "id": 15,
+    "word": "滝",
+    "reading": "たき",
+    "meaning": "Thác nước"
+  },
+  {
+    "id": 16,
+    "word": "庭園",
+    "reading": "ていえん",
+    "meaning": "Vườn cảnh"
+  },
+  {
+    "id": 17,
+    "word": "遺跡",
+    "reading": "いせき",
+    "meaning": "Di tích"
+  },
+  {
+    "id": 18,
+    "word": "世界遺産",
+    "reading": "せかいいさん",
+    "meaning": "Di sản thế giới"
+  },
+  {
+    "id": 19,
+    "word": "名勝",
+    "reading": "めいしょう",
+    "meaning": "Danh lam thắng cảnh"
+  },
+  {
+    "id": 20,
+    "word": "商店街",
+    "reading": "しょうてんがい",
+    "meaning": "Phố mua sắm"
+  }
+]
