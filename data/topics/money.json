@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "お金",
+    "reading": "おかね",
+    "meaning": "Tiền"
+  },
+  {
+    "id": 2,
+    "word": "現金",
+    "reading": "げんきん",
+    "meaning": "Tiền mặt"
+  },
+  {
+    "id": 3,
+    "word": "硬貨",
+    "reading": "こうか",
+    "meaning": "Tiền xu"
+  },
+  {
+    "id": 4,
+    "word": "紙幣",
+    "reading": "しへい",
+    "meaning": "Tiền giấy"
+  },
+  {
+    "id": 5,
+    "word": "小銭",
+    "reading": "こぜに",
+    "meaning": "Tiền lẻ"
+  },
+  {
+    "id": 6,
+    "word": "財布",
+    "reading": "さいふ",
+    "meaning": "Ví tiền"
+  },
+  {
+    "id": 7,
+    "word": "支払い",
+    "reading": "しはらい",
+    "meaning": "Thanh toán"
+  },
+  {
+    "id": 8,
+    "word": "お釣り",
+    "reading": "おつり",
+    "meaning": "Tiền thối"
+  },
+  {
+    "id": 9,
+    "word": "両替",
+    "reading": "りょうがえ",
+    "meaning": "Đổi tiền"
+  },
+  {
+    "id": 10,
+    "word": "収入",
+    "reading": "しゅうにゅう",
+    "meaning": "Thu nhập"
+  },
+  {
+    "id": 11,
+    "word": "支出",
+    "reading": "ししゅつ",
+    "meaning": "Chi tiêu"
+  },
+  {
+    "id": 12,
+    "word": "貯金",
+    "reading": "ちょきん",
+    "meaning": "Tiền tiết kiệm"
+  },
+  {
+    "id": 13,
+    "word": "節約",
+    "reading": "せつやく",
+    "meaning": "Tiết kiệm chi tiêu"
+  },
+  {
+    "id": 14,
+    "word": "予算",
+    "reading": "よさん",
+    "meaning": "Ngân sách"
+  },
+  {
+    "id": 15,
+    "word": "借金",
+    "reading": "しゃっきん",
+    "meaning": "Nợ"
+  },
+  {
+    "id": 16,
+    "word": "利息",
+    "reading": "りそく",
+    "meaning": "Tiền lãi"
+  },
+  {
+    "id": 17,
+    "word": "税金",
+    "reading": "ぜいきん",
+    "meaning": "Thuế"
+  },
+  {
+    "id": 18,
+    "word": "消費税",
+    "reading": "しょうひぜい",
+    "meaning": "Thuế tiêu dùng"
+  },
+  {
+    "id": 19,
+    "word": "家計",
+    "reading": "かけい",
+    "meaning": "Tài chính gia đình"
+  },
+  {
+    "id": 20,
+    "word": "家賃",
+    "reading": "やちん",
+    "meaning": "Tiền thuê nhà"
+  }
+]
