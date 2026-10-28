@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "音楽",
+    "reading": "おんがく",
+    "meaning": "Âm nhạc"
+  },
+  {
+    "id": 2,
+    "word": "歌",
+    "reading": "うた",
+    "meaning": "Bài hát"
+  },
+  {
+    "id": 3,
+    "word": "歌手",
+    "reading": "かしゅ",
+    "meaning": "Ca sĩ"
+  },
+  {
+    "id": 4,
+    "word": "作曲",
+    "reading": "さっきょく",
+    "meaning": "Sáng tác nhạc"
+  },
+  {
+    "id": 5,
+    "word": "作詞",
+    "reading": "さくし",
+    "meaning": "Viết lời bài hát"
+  },
+  {
+    "id": 6,
+    "word": "演奏",
+    "reading": "えんそう",
+    "meaning": "Biểu diễn nhạc"
+  },
+  {
+    "id": 7,
+    "word": "楽器",
+    "reading": "がっき",
+    "meaning": "Nhạc cụ"
+  },
+  {
+    "id": 8,
+    "word": "ピアノ",
+    "reading": "ピアノ",
+    "meaning": "Đàn piano"
+  },
+  {
+    "id": 9,
+    "word": "ギター",
+    "reading": "ギター",
+    "meaning": "Đàn guitar"
+  },
+  {
+    "id": 10,
+    "word": "ベース",
+    "reading": "ベース",
+    "meaning": "Đàn bass"
+  },
+  {
+    "id": 11,
+    "word": "ドラム",
+    "reading": "ドラム",
+    "meaning": "Trống"
+  },
+  {
+    "id": 12,
+    "word": "バイオリン",
+    "reading": "バイオリン",
+    "meaning": "Vĩ cầm"
+  },
+  {
+    "id": 13,
+    "word": "フルート",
+    "reading": "フルート",
+    "meaning": "Sáo flute"
+  },
+  {
+    "id": 14,
+    "word": "トランペット",
+    "reading": "トランペット",
+    "meaning": "Kèn trumpet"
+  },
+  {
+    "id": 15,
+    "word": "オーケストラ",
+    "reading": "オーケストラ",
+    "meaning": "Dàn nhạc giao hưởng"
+  },
+  {
+    "id": 16,
+    "word": "コンサート",
+    "reading": "コンサート",
+    "meaning": "Buổi hòa nhạc"
+  },
+  {
+    "id": 17,
+    "word": "メロディー",
+    "reading": "メロディー",
+    "meaning": "Giai điệu"
+  },
+  {
+    "id": 18,
+    "word": "リズム",
+    "reading": "リズム",
+    "meaning": "Nhịp điệu"
+  },
+  {
+    "id": 19,
+    "word": "歌詞",
+    "reading": "かし",
+    "meaning": "Lời bài hát"
+  },
+  {
+    "id": 20,
+    "word": "音符",
+    "reading": "おんぷ",
+    "meaning": "Nốt nhạc"
+  }
+]
