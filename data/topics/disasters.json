@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "災害",
+    "reading": "さいがい",
+    "meaning": "Thiên tai, thảm họa"
+  },
+  {
+    "id": 2,
+    "word": "地震",
+    "reading": "じしん",
+    "meaning": "Động đất"
+  },
+  {
+    "id": 3,
+    "word": "津波",
+    "reading": "つなみ",
+    "meaning": "Sóng thần"
+  },
+  {
+    "id": 4,
+    "word": "台風",
+    "reading": "たいふう",
+    "meaning": "Bão"
+  },
+  {
+    "id": 5,
+    "word": "洪水",
+    "reading": "こうずい",
+    "meaning": "Lũ lụt"
+  },
+  {
+    "id": 6,
+    "word": "浸水",
+    "reading": "しんすい",
+    "meaning": "Ngập nước"
+  },
+  {
+    "id": 7,
+    "word": "土砂崩れ",
+    "reading": "どしゃくずれ",
+    "meaning": "Sạt lở đất"
+  },
+  {
+    "id": 8,
+    "word": "噴火",
+    "reading": "ふんか",
+    "meaning": "Phun trào núi lửa"
+  },
+  {
+    "id": 9,
+    "word": "火災",
+    "reading": "かさい",
+    "meaning": "Hỏa hoạn"
+  },
+  {
+    "id": 10,
+    "word": "竜巻",
+    "reading": "たつまき",
+    "meaning": "Lốc xoáy"
+  },
+  {
+    "id": 11,
+    "word": "猛吹雪",
+    "reading": "もうふぶき",
+    "meaning": "Bão tuyết"
+  },
+  {
+    "id": 12,
+    "word": "避難",
+    "reading": "ひなん",
+    "meaning": "Sơ tán"
+  },
+  {
+    "id": 13,
+    "word": "避難所",
+    "reading": "ひなんじょ",
+    "meaning": "Nơi sơ tán"
+  },
+  {
+    "id": 14,
+    "word": "防災",
+    "reading": "ぼうさい",
+    "meaning": "Phòng chống thiên tai"
+  },
+  {
+    "id": 15,
+    "word": "非常口",
+    "reading": "ひじょうぐち",
+    "meaning": "Lối thoát hiểm"
+  },
+  {
+    "id": 16,
+    "word": "非常食",
+    "reading": "ひじょうしょく",
+    "meaning": "Thực phẩm khẩn cấp"
+  },
+  {
+    "id": 17,
+    "word": "備蓄",
+    "reading": "びちく",
+    "meaning": "Dự trữ"
+  },
+  {
+    "id": 18,
+    "word": "警報",
+    "reading": "けいほう",
+    "meaning": "Cảnh báo"
+  },
+  {
+    "id": 19,
+    "word": "救助",
+    "reading": "きゅうじょ",
+    "meaning": "Cứu hộ"
+  },
+  {
+    "id": 20,
+    "word": "安否確認",
+    "reading": "あんぴかくにん",
+    "meaning": "Xác nhận an toàn"
+  }
+]
