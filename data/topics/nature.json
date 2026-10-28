@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "自然",
+    "reading": "しぜん",
+    "meaning": "Thiên nhiên"
+  },
+  {
+    "id": 2,
+    "word": "空",
+    "reading": "そら",
+    "meaning": "Bầu trời"
+  },
+  {
+    "id": 3,
+    "word": "太陽",
+    "reading": "たいよう",
+    "meaning": "Mặt trời"
+  },
+  {
+    "id": 4,
+    "word": "月",
+    "reading": "つき",
+    "meaning": "Mặt trăng"
+  },
+  {
+    "id": 5,
+    "word": "星",
+    "reading": "ほし",
+    "meaning": "Ngôi sao"
+  },
+  {
+    "id": 6,
+    "word": "雲",
+    "reading": "くも",
+    "meaning": "Mây"
+  },
+  {
+    "id": 7,
+    "word": "風",
+    "reading": "かぜ",
+    "meaning": "Gió"
+  },
+  {
+    "id": 8,
+    "word": "雨",
+    "reading": "あめ",
+    "meaning": "Mưa"
+  },
+  {
+    "id": 9,
+    "word": "雪",
+    "reading": "ゆき",
+    "meaning": "Tuyết"
+  },
+  {
+    "id": 10,
+    "word": "虹",
+    "reading": "にじ",
+    "meaning": "Cầu vồng"
+  },
+  {
+    "id": 11,
+    "word": "大地",
+    "reading": "だいち",
+    "meaning": "Đất đai"
+  },
+  {
+    "id": 12,
+    "word": "土",
+    "reading": "つち",
+    "meaning": "Đất"
+  },
+  {
+    "id": 13,
+    "word": "岩",
+    "reading": "いわ",
+    "meaning": "Đá tảng"
+  },
+  {
+    "id": 14,
+    "word": "砂",
+    "reading": "すな",
+    "meaning": "Cát"
+  },
+  {
+    "id": 15,
+    "word": "森",
+    "reading": "もり",
+    "meaning": "Rừng"
+  },
+  {
+    "id": 16,
+    "word": "草原",
+    "reading": "そうげん",
+    "meaning": "Thảo nguyên"
+  },
+  {
+    "id": 17,
+    "word": "湖",
+    "reading": "みずうみ",
+    "meaning": "Hồ"
+  },
+  {
+    "id": 18,
+    "word": "湿地",
+    "reading": "しっち",
+    "meaning": "Đất ngập nước"
+  },
+  {
+    "id": 19,
+    "word": "洞窟",
+    "reading": "どうくつ",
+    "meaning": "Hang động"
+  },
+  {
+    "id": 20,
+    "word": "滝",
+    "reading": "たき",
+    "meaning": "Thác nước"
+  }
+]
