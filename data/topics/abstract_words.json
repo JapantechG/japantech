@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "概念",
+    "reading": "がいねん",
+    "meaning": "Khái niệm"
+  },
+  {
+    "id": 2,
+    "word": "本質",
+    "reading": "ほんしつ",
+    "meaning": "Bản chất"
+  },
+  {
+    "id": 3,
+    "word": "現象",
+    "reading": "げんしょう",
+    "meaning": "Hiện tượng"
+  },
+  {
+    "id": 4,
+    "word": "存在",
+    "reading": "そんざい",
+    "meaning": "Sự tồn tại"
+  },
+  {
+    "id": 5,
+    "word": "意識",
+    "reading": "いしき",
+    "meaning": "Ý thức"
+  },
+  {
+    "id": 6,
+    "word": "認識",
+    "reading": "にんしき",
+    "meaning": "Nhận thức"
+  },
+  {
+    "id": 7,
+    "word": "価値",
+    "reading": "かち",
+    "meaning": "Giá trị"
+  },
+  {
+    "id": 8,
+    "word": "意義",
+    "reading": "いぎ",
+    "meaning": "Ý nghĩa, tầm quan trọng"
+  },
+  {
+    "id": 9,
+    "word": "目的",
+    "reading": "もくてき",
+    "meaning": "Mục đích"
+  },
+  {
+    "id": 10,
+    "word": "手段",
+    "reading": "しゅだん",
+    "meaning": "Phương tiện, biện pháp"
+  },
+  {
+    "id": 11,
+    "word": "過程",
+    "reading": "かてい",
+    "meaning": "Quá trình"
+  },
+  {
+    "id": 12,
+    "word": "傾向",
+    "reading": "けいこう",
+    "meaning": "Xu hướng"
+  },
+  {
+    "id": 13,
+    "word": "可能性",
+    "reading": "かのうせい",
+    "meaning": "Khả năng"
+  },
+  {
+    "id": 14,
+    "word": "必然",
+    "reading": "ひつぜん",
+    "meaning": "Tính tất yếu"
+  },
+  {
+    "id": 15,
+    "word": "偶然",
+    "reading": "ぐうぜん",
+    "meaning": "Sự tình cờ"
+  },
+  {
+    "id": 16,
+    "word": "矛盾",
+    "reading": "むじゅん",
+    "meaning": "Mâu thuẫn"
+  },
+  {
+    "id": 17,
+    "word": "課題",
+    "reading": "かだい",
+    "meaning": "Vấn đề cần giải quyết"
+  },
+  {
+    "id": 18,
+    "word": "責任",
+    "reading": "せきにん",
+    "meaning": "Trách nhiệm"
+  },
+  {
+    "id": 19,
+    "word": "権利",
+    "reading": "けんり",
+    "meaning": "Quyền lợi"
+  },
+  {
+    "id": 20,
+    "word": "義務",
+    "reading": "ぎむ",
+    "meaning": "Nghĩa vụ"
+  }
+]
