@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "word": "店",
+    "reading": "みせ",
+    "meaning": "Cửa hàng"
+  },
+  {
+    "id": 2,
+    "word": "スーパー",
+    "reading": "スーパー",
+    "meaning": "Siêu thị"
+  },
+  {
+    "id": 3,
+    "word": "コンビニ",
+    "reading": "コンビニ",
+    "meaning": "Cửa hàng tiện lợi"
+  },
+  {
+    "id": 4,
+    "word": "百貨店",
+    "reading": "ひゃっかてん",
+    "meaning": "Bách hóa tổng hợp"
+  },
+  {
+    "id": 5,
+    "word": "デパート",
+    "reading": "デパート",
+    "meaning": "Trung tâm bách hóa"
+  },
+  {
+    "id": 6,
+    "word": "商店街",
+    "reading": "しょうてんがい",
+    "meaning": "Phố mua sắm"
+  },
+  {
+    "id": 7,
+    "word": "八百屋",
+    "reading": "やおや",
+    "meaning": "Tiệm rau quả"
+  },
+  {
+    "id": 8,
+    "word": "魚屋",
+    "reading": "さかなや",
+    "meaning": "Tiệm cá"
+  },
+  {
+    "id": 9,
+    "word": "肉屋",
+    "reading": "にくや",
+    "meaning": "Tiệm thịt"
+  },
+  {
+    "id": 10,
+    "word": "パン屋",
+    "reading": "パンや",
+    "meaning": "Tiệm bánh mì"
+  },
+  {
+    "id": 11,
+    "word": "花屋",
+    "reading": "はなや",
+    "meaning": "Tiệm hoa"
+  },
+  {
+    "id": 12,
+    "word": "本屋",
+    "reading": "ほんや",
+    "meaning": "Hiệu sách"
+  },
+  {
+    "id": 13,
+    "word": "薬局",
+    "reading": "やっきょく",
+    "meaning": "Hiệu thuốc"
+  },
+  {
+    "id": 14,
+    "word": "電器店",
+    "reading": "でんきてん",
+    "meaning": "Cửa hàng đồ điện"
+  },
+  {
+    "id": 15,
+    "word": "家具店",
+    "reading": "かぐてん",
+    "meaning": "Cửa hàng nội thất"
+  },
+  {
+    "id": 16,
+    "word": "靴屋",
+    "reading": "くつや",
+    "meaning": "Tiệm giày"
+  },
+  {
+    "id": 17,
+    "word": "美容院",
+    "reading": "びよういん",
+    "meaning": "Tiệm làm tóc"
+  },
+  {
+    "id": 18,
+    "word": "理髪店",
+    "reading": "りはつてん",
+    "meaning": "Tiệm cắt tóc nam"
+  },
+  {
+    "id": 19,
+    "word": "古着屋",
+    "reading": "ふるぎや",
+    "meaning": "Tiệm quần áo cũ"
+  }
+]
