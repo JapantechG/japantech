@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "word": "試験",
+    "reading": "しけん",
+    "meaning": "Kỳ thi"
+  },
+  {
+    "id": 2,
+    "word": "テスト",
+    "reading": "テスト",
+    "meaning": "Bài kiểm tra"
+  },
+  {
+    "id": 3,
+    "word": "問題",
+    "reading": "もんだい",
+    "meaning": "Câu hỏi, đề bài"
+  },
+  {
+    "id": 4,
+    "word": "設問",
+    "reading": "せつもん",
+    "meaning": "Câu hỏi trong đề"
+  },
+  {
+    "id": 5,
+    "word": "選択肢",
+    "reading": "せんたくし",
+    "meaning": "Phương án lựa chọn"
+  },
+  {
+    "id": 6,
+    "word": "正解",
+    "reading": "せいかい",
+    "meaning": "Đáp án đúng"
+  },
+  {
+    "id": 7,
+    "word": "不正解",
+    "reading": "ふせいかい",
+    "meaning": "Đáp án sai"
+  },
+  {
+    "id": 8,
+    "word": "解答",
+    "reading": "かいとう",
+    "meaning": "Bài trả lời"
+  },
+  {
+    "id": 9,
+    "word": "採点",
+    "reading": "さいてん",
+    "meaning": "Chấm điểm"
+  },
+  {
+    "id": 10,
+    "word": "点数",
+    "reading": "てんすう",
+    "meaning": "Điểm số"
+  },
+  {
+    "id": 11,
+    "word": "満点",
+    "reading": "まんてん",
+    "meaning": "Điểm tối đa"
+  },
+  {
+    "id": 12,
+    "word": "合格",
+    "reading": "ごうかく",
+    "meaning": "Đỗ"
+  },
+  {
+    "id": 13,
+    "word": "不合格",
+    "reading": "ふごうかく",
+    "meaning": "Trượt"
+  },
+  {
+    "id": 14,
+    "word": "成績",
+    "reading": "せいせき",
+    "meaning": "Thành tích học tập"
+  },
+  {
+    "id": 15,
+    "word": "受験",
+    "reading": "じゅけん",
+    "meaning": "Dự thi"
+  },
+  {
+    "id": 16,
+    "word": "受験票",
+    "reading": "じゅけんひょう",
+    "meaning": "Phiếu dự thi"
+  },
+  {
+    "id": 17,
+    "word": "試験会場",
+    "reading": "しけんかいじょう",
+    "meaning": "Địa điểm thi"
+  },
+  {
+    "id": 18,
+    "word": "制限時間",
+    "reading": "せいげんじかん",
+    "meaning": "Thời gian giới hạn"
+  },
+  {
+    "id": 19,
+    "word": "見直し",
+    "reading": "みなおし",
+    "meaning": "Kiểm tra lại"
+  }
+]
