@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "空港",
+    "reading": "くうこう",
+    "meaning": "Sân bay"
+  },
+  {
+    "id": 2,
+    "word": "飛行機",
+    "reading": "ひこうき",
+    "meaning": "Máy bay"
+  },
+  {
+    "id": 3,
+    "word": "航空会社",
+    "reading": "こうくうがいしゃ",
+    "meaning": "Hãng hàng không"
+  },
+  {
+    "id": 4,
+    "word": "航空券",
+    "reading": "こうくうけん",
+    "meaning": "Vé máy bay"
+  },
+  {
+    "id": 5,
+    "word": "搭乗券",
+    "reading": "とうじょうけん",
+    "meaning": "Thẻ lên máy bay"
+  },
+  {
+    "id": 6,
+    "word": "出発口",
+    "reading": "しゅっぱつぐち",
+    "meaning": "Cửa khởi hành"
+  },
+  {
+    "id": 7,
+    "word": "搭乗口",
+    "reading": "とうじょうぐち",
+    "meaning": "Cửa lên máy bay"
+  },
+  {
+    "id": 8,
+    "word": "手荷物",
+    "reading": "てにもつ",
+    "meaning": "Hành lý xách tay"
+  },
+  {
+    "id": 9,
+    "word": "預け荷物",
+    "reading": "あずけにもつ",
+    "meaning": "Hành lý ký gửi"
+  },
+  {
+    "id": 10,
+    "word": "機内",
+    "reading": "きない",
+    "meaning": "Trong máy bay"
+  },
+  {
+    "id": 11,
+    "word": "座席",
+    "reading": "ざせき",
+    "meaning": "Ghế ngồi"
+  },
+  {
+    "id": 12,
+    "word": "窓側",
+    "reading": "まどがわ",
+    "meaning": "Phía cửa sổ"
+  },
+  {
+    "id": 13,
+    "word": "通路側",
+    "reading": "つうろがわ",
+    "meaning": "Phía lối đi"
+  },
+  {
+    "id": 14,
+    "word": "離陸",
+    "reading": "りりく",
+    "meaning": "Cất cánh"
+  },
+  {
+    "id": 15,
+    "word": "着陸",
+    "reading": "ちゃくりく",
+    "meaning": "Hạ cánh"
+  },
+  {
+    "id": 16,
+    "word": "入国審査",
+    "reading": "にゅうこくしんさ",
+    "meaning": "Kiểm tra nhập cảnh"
+  },
+  {
+    "id": 17,
+    "word": "税関",
+    "reading": "ぜいかん",
+    "meaning": "Hải quan"
+  },
+  {
+    "id": 18,
+    "word": "遅延",
+    "reading": "ちえん",
+    "meaning": "Chậm trễ"
+  },
+  {
+    "id": 19,
+    "word": "欠航",
+    "reading": "けっこう",
+    "meaning": "Hủy chuyến bay"
+  },
+  {
+    "id": 20,
+    "word": "乗り継ぎ",
+    "reading": "のりつぎ",
+    "meaning": "Chuyển chuyến"
+  }
+]
