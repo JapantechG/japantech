@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "車",
+    "reading": "くるま",
+    "meaning": "Ô tô"
+  },
+  {
+    "id": 2,
+    "word": "運転",
+    "reading": "うんてん",
+    "meaning": "Lái xe"
+  },
+  {
+    "id": 3,
+    "word": "運転手",
+    "reading": "うんてんしゅ",
+    "meaning": "Tài xế"
+  },
+  {
+    "id": 4,
+    "word": "運転免許証",
+    "reading": "うんてんめんきょしょう",
+    "meaning": "Bằng lái"
+  },
+  {
+    "id": 5,
+    "word": "ハンドル",
+    "reading": "ハンドル",
+    "meaning": "Vô lăng"
+  },
+  {
+    "id": 6,
+    "word": "アクセル",
+    "reading": "アクセル",
+    "meaning": "Chân ga"
+  },
+  {
+    "id": 7,
+    "word": "ブレーキ",
+    "reading": "ブレーキ",
+    "meaning": "Phanh"
+  },
+  {
+    "id": 8,
+    "word": "クラッチ",
+    "reading": "クラッチ",
+    "meaning": "Côn"
+  },
+  {
+    "id": 9,
+    "word": "シートベルト",
+    "reading": "シートベルト",
+    "meaning": "Dây an toàn"
+  },
+  {
+    "id": 10,
+    "word": "バックミラー",
+    "reading": "バックミラー",
+    "meaning": "Gương chiếu hậu"
+  },
+  {
+    "id": 11,
+    "word": "タイヤ",
+    "reading": "タイヤ",
+    "meaning": "Lốp xe"
+  },
+  {
+    "id": 12,
+    "word": "エンジン",
+    "reading": "エンジン",
+    "meaning": "Động cơ"
+  },
+  {
+    "id": 13,
+    "word": "燃料",
+    "reading": "ねんりょう",
+    "meaning": "Nhiên liệu"
+  },
+  {
+    "id": 14,
+    "word": "ガソリン",
+    "reading": "ガソリン",
+    "meaning": "Xăng"
+  },
+  {
+    "id": 15,
+    "word": "駐車",
+    "reading": "ちゅうしゃ",
+    "meaning": "Đỗ xe"
+  },
+  {
+    "id": 16,
+    "word": "車庫",
+    "reading": "しゃこ",
+    "meaning": "Nhà để xe"
+  },
+  {
+    "id": 17,
+    "word": "車検",
+    "reading": "しゃけん",
+    "meaning": "Kiểm định ô tô"
+  },
+  {
+    "id": 18,
+    "word": "渋滞",
+    "reading": "じゅうたい",
+    "meaning": "Ùn tắc"
+  },
+  {
+    "id": 19,
+    "word": "追い越し",
+    "reading": "おいこし",
+    "meaning": "Vượt xe"
+  },
+  {
+    "id": 20,
+    "word": "速度制限",
+    "reading": "そくどせいげん",
+    "meaning": "Giới hạn tốc độ"
+  }
+]
