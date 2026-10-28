@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "家",
+    "reading": "いえ",
+    "meaning": "Nhà"
+  },
+  {
+    "id": 2,
+    "word": "部屋",
+    "reading": "へや",
+    "meaning": "Phòng"
+  },
+  {
+    "id": 3,
+    "word": "玄関",
+    "reading": "げんかん",
+    "meaning": "Lối vào nhà"
+  },
+  {
+    "id": 4,
+    "word": "居間",
+    "reading": "いま",
+    "meaning": "Phòng khách"
+  },
+  {
+    "id": 5,
+    "word": "リビング",
+    "reading": "リビング",
+    "meaning": "Phòng sinh hoạt chung"
+  },
+  {
+    "id": 6,
+    "word": "寝室",
+    "reading": "しんしつ",
+    "meaning": "Phòng ngủ"
+  },
+  {
+    "id": 7,
+    "word": "台所",
+    "reading": "だいどころ",
+    "meaning": "Nhà bếp"
+  },
+  {
+    "id": 8,
+    "word": "キッチン",
+    "reading": "キッチン",
+    "meaning": "Bếp"
+  },
+  {
+    "id": 9,
+    "word": "食堂",
+    "reading": "しょくどう",
+    "meaning": "Phòng ăn"
+  },
+  {
+    "id": 10,
+    "word": "浴室",
+    "reading": "よくしつ",
+    "meaning": "Phòng tắm"
+  },
+  {
+    "id": 11,
+    "word": "風呂場",
+    "reading": "ふろば",
+    "meaning": "Chỗ tắm"
+  },
+  {
+    "id": 12,
+    "word": "トイレ",
+    "reading": "トイレ",
+    "meaning": "Nhà vệ sinh"
+  },
+  {
+    "id": 13,
+    "word": "洗面所",
+    "reading": "せんめんじょ",
+    "meaning": "Khu rửa mặt"
+  },
+  {
+    "id": 14,
+    "word": "廊下",
+    "reading": "ろうか",
+    "meaning": "Hành lang"
+  },
+  {
+    "id": 15,
+    "word": "階段",
+    "reading": "かいだん",
+    "meaning": "Cầu thang"
+  },
+  {
+    "id": 16,
+    "word": "ベランダ",
+    "reading": "ベランダ",
+    "meaning": "Ban công"
+  },
+  {
+    "id": 17,
+    "word": "庭",
+    "reading": "にわ",
+    "meaning": "Sân vườn"
+  },
+  {
+    "id": 18,
+    "word": "屋根裏",
+    "reading": "やねうら",
+    "meaning": "Gác mái"
+  },
+  {
+    "id": 19,
+    "word": "地下室",
+    "reading": "ちかしつ",
+    "meaning": "Tầng hầm"
+  },
+  {
+    "id": 20,
+    "word": "和室",
+    "reading": "わしつ",
+    "meaning": "Phòng kiểu Nhật"
+  }
+]
