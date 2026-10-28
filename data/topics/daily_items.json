@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "日用品",
+    "reading": "にちようひん",
+    "meaning": "Đồ dùng hằng ngày"
+  },
+  {
+    "id": 2,
+    "word": "歯ブラシ",
+    "reading": "はブラシ",
+    "meaning": "Bàn chải đánh răng"
+  },
+  {
+    "id": 3,
+    "word": "歯磨き粉",
+    "reading": "はみがきこ",
+    "meaning": "Kem đánh răng"
+  },
+  {
+    "id": 4,
+    "word": "石鹸",
+    "reading": "せっけん",
+    "meaning": "Xà phòng"
+  },
+  {
+    "id": 5,
+    "word": "シャンプー",
+    "reading": "シャンプー",
+    "meaning": "Dầu gội"
+  },
+  {
+    "id": 6,
+    "word": "リンス",
+    "reading": "リンス",
+    "meaning": "Dầu xả"
+  },
+  {
+    "id": 7,
+    "word": "タオル",
+    "reading": "タオル",
+    "meaning": "Khăn"
+  },
+  {
+    "id": 8,
+    "word": "ティッシュ",
+    "reading": "ティッシュ",
+    "meaning": "Khăn giấy"
+  },
+  {
+    "id": 9,
+    "word": "トイレットペーパー",
+    "reading": "トイレットペーパー",
+    "meaning": "Giấy vệ sinh"
+  },
+  {
+    "id": 10,
+    "word": "洗剤",
+    "reading": "せんざい",
+    "meaning": "Chất tẩy rửa"
+  },
+  {
+    "id": 11,
+    "word": "スポンジ",
+    "reading": "スポンジ",
+    "meaning": "Miếng bọt biển"
+  },
+  {
+    "id": 12,
+    "word": "ゴミ袋",
+    "reading": "ゴミぶくろ",
+    "meaning": "Túi rác"
+  },
+  {
+    "id": 13,
+    "word": "ハンガー",
+    "reading": "ハンガー",
+    "meaning": "Móc treo quần áo"
+  },
+  {
+    "id": 14,
+    "word": "洗濯ばさみ",
+    "reading": "せんたくばさみ",
+    "meaning": "Kẹp phơi đồ"
+  },
+  {
+    "id": 15,
+    "word": "傘",
+    "reading": "かさ",
+    "meaning": "Ô, dù"
+  },
+  {
+    "id": 16,
+    "word": "鍵",
+    "reading": "かぎ",
+    "meaning": "Chìa khóa"
+  },
+  {
+    "id": 17,
+    "word": "時計",
+    "reading": "とけい",
+    "meaning": "Đồng hồ"
+  },
+  {
+    "id": 18,
+    "word": "財布",
+    "reading": "さいふ",
+    "meaning": "Ví"
+  },
+  {
+    "id": 19,
+    "word": "鞄",
+    "reading": "かばん",
+    "meaning": "Túi xách"
+  },
+  {
+    "id": 20,
+    "word": "充電器",
+    "reading": "じゅうでんき",
+    "meaning": "Bộ sạc"
+  }
+]
