@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "料理",
+    "reading": "りょうり",
+    "meaning": "Nấu ăn, món ăn"
+  },
+  {
+    "id": 2,
+    "word": "調理",
+    "reading": "ちょうり",
+    "meaning": "Chế biến món ăn"
+  },
+  {
+    "id": 3,
+    "word": "切る",
+    "reading": "きる",
+    "meaning": "Cắt"
+  },
+  {
+    "id": 4,
+    "word": "刻む",
+    "reading": "きざむ",
+    "meaning": "Băm, thái nhỏ"
+  },
+  {
+    "id": 5,
+    "word": "剥く",
+    "reading": "むく",
+    "meaning": "Gọt vỏ"
+  },
+  {
+    "id": 6,
+    "word": "洗う",
+    "reading": "あらう",
+    "meaning": "Rửa"
+  },
+  {
+    "id": 7,
+    "word": "混ぜる",
+    "reading": "まぜる",
+    "meaning": "Trộn"
+  },
+  {
+    "id": 8,
+    "word": "こねる",
+    "reading": "こねる",
+    "meaning": "Nhào"
+  },
+  {
+    "id": 9,
+    "word": "焼く",
+    "reading": "やく",
+    "meaning": "Nướng, áp chảo"
+  },
+  {
+    "id": 10,
+    "word": "煮る",
+    "reading": "にる",
+    "meaning": "Ninh, nấu"
+  },
+  {
+    "id": 11,
+    "word": "茹でる",
+    "reading": "ゆでる",
+    "meaning": "Luộc"
+  },
+  {
+    "id": 12,
+    "word": "蒸す",
+    "reading": "むす",
+    "meaning": "Hấp"
+  },
+  {
+    "id": 13,
+    "word": "揚げる",
+    "reading": "あげる",
+    "meaning": "Chiên ngập dầu"
+  },
+  {
+    "id": 14,
+    "word": "炒める",
+    "reading": "いためる",
+    "meaning": "Xào"
+  },
+  {
+    "id": 15,
+    "word": "温める",
+    "reading": "あたためる",
+    "meaning": "Hâm nóng"
+  },
+  {
+    "id": 16,
+    "word": "冷やす",
+    "reading": "ひやす",
+    "meaning": "Làm lạnh"
+  },
+  {
+    "id": 17,
+    "word": "味付け",
+    "reading": "あじつけ",
+    "meaning": "Nêm nếm"
+  },
+  {
+    "id": 18,
+    "word": "下ごしらえ",
+    "reading": "したごしらえ",
+    "meaning": "Sơ chế"
+  },
+  {
+    "id": 19,
+    "word": "盛り付け",
+    "reading": "もりつけ",
+    "meaning": "Bày món ăn"
+  },
+  {
+    "id": 20,
+    "word": "レシピ",
+    "reading": "レシピ",
+    "meaning": "Công thức nấu ăn"
+  }
+]
