@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "機械",
+    "reading": "きかい",
+    "meaning": "Máy móc"
+  },
+  {
+    "id": 2,
+    "word": "装置",
+    "reading": "そうち",
+    "meaning": "Thiết bị, máy"
+  },
+  {
+    "id": 3,
+    "word": "モーター",
+    "reading": "モーター",
+    "meaning": "Động cơ"
+  },
+  {
+    "id": 4,
+    "word": "ポンプ",
+    "reading": "ポンプ",
+    "meaning": "Bơm"
+  },
+  {
+    "id": 5,
+    "word": "減速機",
+    "reading": "げんそくき",
+    "meaning": "Hộp giảm tốc"
+  },
+  {
+    "id": 6,
+    "word": "歯車",
+    "reading": "はぐるま",
+    "meaning": "Bánh răng"
+  },
+  {
+    "id": 7,
+    "word": "軸",
+    "reading": "じく",
+    "meaning": "Trục"
+  },
+  {
+    "id": 8,
+    "word": "軸受",
+    "reading": "じくうけ",
+    "meaning": "Ổ trục"
+  },
+  {
+    "id": 9,
+    "word": "ベアリング",
+    "reading": "ベアリング",
+    "meaning": "Vòng bi"
+  },
+  {
+    "id": 10,
+    "word": "ベルト",
+    "reading": "ベルト",
+    "meaning": "Dây đai"
+  },
+  {
+    "id": 11,
+    "word": "プーリー",
+    "reading": "プーリー",
+    "meaning": "Puli"
+  },
+  {
+    "id": 12,
+    "word": "チェーン",
+    "reading": "チェーン",
+    "meaning": "Xích"
+  },
+  {
+    "id": 13,
+    "word": "スプロケット",
+    "reading": "スプロケット",
+    "meaning": "Đĩa xích"
+  },
+  {
+    "id": 14,
+    "word": "シリンダー",
+    "reading": "シリンダー",
+    "meaning": "Xi lanh"
+  },
+  {
+    "id": 15,
+    "word": "バルブ",
+    "reading": "バルブ",
+    "meaning": "Van"
+  },
+  {
+    "id": 16,
+    "word": "配管",
+    "reading": "はいかん",
+    "meaning": "Đường ống"
+  },
+  {
+    "id": 17,
+    "word": "センサー",
+    "reading": "センサー",
+    "meaning": "Cảm biến"
+  },
+  {
+    "id": 18,
+    "word": "制御盤",
+    "reading": "せいぎょばん",
+    "meaning": "Tủ điều khiển"
+  },
+  {
+    "id": 19,
+    "word": "駆動",
+    "reading": "くどう",
+    "meaning": "Truyền động"
+  },
+  {
+    "id": 20,
+    "word": "回転",
+    "reading": "かいてん",
+    "meaning": "Quay"
+  }
+]
