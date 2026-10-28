@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "材料",
+    "reading": "ざいりょう",
+    "meaning": "Vật liệu"
+  },
+  {
+    "id": 2,
+    "word": "金属",
+    "reading": "きんぞく",
+    "meaning": "Kim loại"
+  },
+  {
+    "id": 3,
+    "word": "鉄",
+    "reading": "てつ",
+    "meaning": "Sắt"
+  },
+  {
+    "id": 4,
+    "word": "鋼",
+    "reading": "はがね",
+    "meaning": "Thép"
+  },
+  {
+    "id": 5,
+    "word": "ステンレス",
+    "reading": "ステンレス",
+    "meaning": "Thép không gỉ"
+  },
+  {
+    "id": 6,
+    "word": "アルミニウム",
+    "reading": "アルミニウム",
+    "meaning": "Nhôm"
+  },
+  {
+    "id": 7,
+    "word": "銅",
+    "reading": "どう",
+    "meaning": "Đồng"
+  },
+  {
+    "id": 8,
+    "word": "真鍮",
+    "reading": "しんちゅう",
+    "meaning": "Đồng thau"
+  },
+  {
+    "id": 9,
+    "word": "チタン",
+    "reading": "チタン",
+    "meaning": "Titan"
+  },
+  {
+    "id": 10,
+    "word": "亜鉛",
+    "reading": "あえん",
+    "meaning": "Kẽm"
+  },
+  {
+    "id": 11,
+    "word": "樹脂",
+    "reading": "じゅし",
+    "meaning": "Nhựa"
+  },
+  {
+    "id": 12,
+    "word": "プラスチック",
+    "reading": "プラスチック",
+    "meaning": "Chất dẻo"
+  },
+  {
+    "id": 13,
+    "word": "ゴム",
+    "reading": "ゴム",
+    "meaning": "Cao su"
+  },
+  {
+    "id": 14,
+    "word": "ガラス",
+    "reading": "ガラス",
+    "meaning": "Thủy tinh"
+  },
+  {
+    "id": 15,
+    "word": "セラミックス",
+    "reading": "セラミックス",
+    "meaning": "Gốm kỹ thuật"
+  },
+  {
+    "id": 16,
+    "word": "木材",
+    "reading": "もくざい",
+    "meaning": "Gỗ"
+  },
+  {
+    "id": 17,
+    "word": "合板",
+    "reading": "ごうはん",
+    "meaning": "Ván ép"
+  },
+  {
+    "id": 18,
+    "word": "炭素繊維",
+    "reading": "たんそせんい",
+    "meaning": "Sợi carbon"
+  },
+  {
+    "id": 19,
+    "word": "硬度",
+    "reading": "こうど",
+    "meaning": "Độ cứng"
+  },
+  {
+    "id": 20,
+    "word": "強度",
+    "reading": "きょうど",
+    "meaning": "Độ bền"
+  }
+]
