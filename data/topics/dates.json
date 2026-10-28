@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "月曜日",
+    "reading": "げつようび",
+    "meaning": "Thứ hai"
+  },
+  {
+    "id": 2,
+    "word": "火曜日",
+    "reading": "かようび",
+    "meaning": "Thứ ba"
+  },
+  {
+    "id": 3,
+    "word": "水曜日",
+    "reading": "すいようび",
+    "meaning": "Thứ tư"
+  },
+  {
+    "id": 4,
+    "word": "木曜日",
+    "reading": "もくようび",
+    "meaning": "Thứ năm"
+  },
+  {
+    "id": 5,
+    "word": "金曜日",
+    "reading": "きんようび",
+    "meaning": "Thứ sáu"
+  },
+  {
+    "id": 6,
+    "word": "土曜日",
+    "reading": "どようび",
+    "meaning": "Thứ bảy"
+  },
+  {
+    "id": 7,
+    "word": "日曜日",
+    "reading": "にちようび",
+    "meaning": "Chủ nhật"
+  },
+  {
+    "id": 8,
+    "word": "今日",
+    "reading": "きょう",
+    "meaning": "Hôm nay"
+  },
+  {
+    "id": 9,
+    "word": "昨日",
+    "reading": "きのう",
+    "meaning": "Hôm qua"
+  },
+  {
+    "id": 10,
+    "word": "明日",
+    "reading": "あした",
+    "meaning": "Ngày mai"
+  },
+  {
+    "id": 11,
+    "word": "一昨日",
+    "reading": "おととい",
+    "meaning": "Hôm kia"
+  },
+  {
+    "id": 12,
+    "word": "明後日",
+    "reading": "あさって",
+    "meaning": "Ngày kia"
+  },
+  {
+    "id": 13,
+    "word": "今週",
+    "reading": "こんしゅう",
+    "meaning": "Tuần này"
+  },
+  {
+    "id": 14,
+    "word": "来週",
+    "reading": "らいしゅう",
+    "meaning": "Tuần sau"
+  },
+  {
+    "id": 15,
+    "word": "先週",
+    "reading": "せんしゅう",
+    "meaning": "Tuần trước"
+  },
+  {
+    "id": 16,
+    "word": "今月",
+    "reading": "こんげつ",
+    "meaning": "Tháng này"
+  },
+  {
+    "id": 17,
+    "word": "来月",
+    "reading": "らいげつ",
+    "meaning": "Tháng sau"
+  },
+  {
+    "id": 18,
+    "word": "去年",
+    "reading": "きょねん",
+    "meaning": "Năm ngoái"
+  },
+  {
+    "id": 19,
+    "word": "今年",
+    "reading": "ことし",
+    "meaning": "Năm nay"
+  },
+  {
+    "id": 20,
+    "word": "来年",
+    "reading": "らいねん",
+    "meaning": "Năm tới"
+  }
+]
