@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "会社",
+    "reading": "かいしゃ",
+    "meaning": "Công ty"
+  },
+  {
+    "id": 2,
+    "word": "企業",
+    "reading": "きぎょう",
+    "meaning": "Doanh nghiệp"
+  },
+  {
+    "id": 3,
+    "word": "社員",
+    "reading": "しゃいん",
+    "meaning": "Nhân viên"
+  },
+  {
+    "id": 4,
+    "word": "社長",
+    "reading": "しゃちょう",
+    "meaning": "Giám đốc, chủ tịch công ty"
+  },
+  {
+    "id": 5,
+    "word": "部長",
+    "reading": "ぶちょう",
+    "meaning": "Trưởng bộ phận"
+  },
+  {
+    "id": 6,
+    "word": "課長",
+    "reading": "かちょう",
+    "meaning": "Trưởng phòng"
+  },
+  {
+    "id": 7,
+    "word": "係長",
+    "reading": "かかりちょう",
+    "meaning": "Trưởng nhóm công việc"
+  },
+  {
+    "id": 8,
+    "word": "上司",
+    "reading": "じょうし",
+    "meaning": "Cấp trên"
+  },
+  {
+    "id": 9,
+    "word": "部下",
+    "reading": "ぶか",
+    "meaning": "Cấp dưới"
+  },
+  {
+    "id": 10,
+    "word": "同僚",
+    "reading": "どうりょう",
+    "meaning": "Đồng nghiệp"
+  },
+  {
+    "id": 11,
+    "word": "部署",
+    "reading": "ぶしょ",
+    "meaning": "Bộ phận"
+  },
+  {
+    "id": 12,
+    "word": "人事部",
+    "reading": "じんじぶ",
+    "meaning": "Phòng nhân sự"
+  },
+  {
+    "id": 13,
+    "word": "総務部",
+    "reading": "そうむぶ",
+    "meaning": "Phòng hành chính tổng hợp"
+  },
+  {
+    "id": 14,
+    "word": "経理部",
+    "reading": "けいりぶ",
+    "meaning": "Phòng kế toán"
+  },
+  {
+    "id": 15,
+    "word": "営業部",
+    "reading": "えいぎょうぶ",
+    "meaning": "Phòng kinh doanh"
+  },
+  {
+    "id": 16,
+    "word": "開発部",
+    "reading": "かいはつぶ",
+    "meaning": "Phòng phát triển"
+  },
+  {
+    "id": 17,
+    "word": "本社",
+    "reading": "ほんしゃ",
+    "meaning": "Trụ sở chính"
+  },
+  {
+    "id": 18,
+    "word": "支社",
+    "reading": "ししゃ",
+    "meaning": "Chi nhánh"
+  },
+  {
+    "id": 19,
+    "word": "取引先",
+    "reading": "とりひきさき",
+    "meaning": "Đối tác giao dịch"
+  },
+  {
+    "id": 20,
+    "word": "顧客",
+    "reading": "こきゃく",
+    "meaning": "Khách hàng"
+  }
+]
