@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "家具",
+    "reading": "かぐ",
+    "meaning": "Đồ nội thất"
+  },
+  {
+    "id": 2,
+    "word": "机",
+    "reading": "つくえ",
+    "meaning": "Bàn học, bàn làm việc"
+  },
+  {
+    "id": 3,
+    "word": "椅子",
+    "reading": "いす",
+    "meaning": "Ghế"
+  },
+  {
+    "id": 4,
+    "word": "テーブル",
+    "reading": "テーブル",
+    "meaning": "Bàn"
+  },
+  {
+    "id": 5,
+    "word": "ソファ",
+    "reading": "ソファ",
+    "meaning": "Ghế sofa"
+  },
+  {
+    "id": 6,
+    "word": "ベッド",
+    "reading": "ベッド",
+    "meaning": "Giường"
+  },
+  {
+    "id": 7,
+    "word": "布団",
+    "reading": "ふとん",
+    "meaning": "Chăn nệm kiểu Nhật"
+  },
+  {
+    "id": 8,
+    "word": "枕",
+    "reading": "まくら",
+    "meaning": "Gối"
+  },
+  {
+    "id": 9,
+    "word": "毛布",
+    "reading": "もうふ",
+    "meaning": "Chăn mỏng"
+  },
+  {
+    "id": 10,
+    "word": "棚",
+    "reading": "たな",
+    "meaning": "Kệ"
+  },
+  {
+    "id": 11,
+    "word": "本棚",
+    "reading": "ほんだな",
+    "meaning": "Giá sách"
+  },
+  {
+    "id": 12,
+    "word": "タンス",
+    "reading": "タンス",
+    "meaning": "Tủ quần áo"
+  },
+  {
+    "id": 13,
+    "word": "クローゼット",
+    "reading": "クローゼット",
+    "meaning": "Tủ âm tường"
+  },
+  {
+    "id": 14,
+    "word": "引き出し",
+    "reading": "ひきだし",
+    "meaning": "Ngăn kéo"
+  },
+  {
+    "id": 15,
+    "word": "鏡",
+    "reading": "かがみ",
+    "meaning": "Gương"
+  },
+  {
+    "id": 16,
+    "word": "カーテン",
+    "reading": "カーテン",
+    "meaning": "Rèm"
+  },
+  {
+    "id": 17,
+    "word": "絨毯",
+    "reading": "じゅうたん",
+    "meaning": "Thảm"
+  },
+  {
+    "id": 18,
+    "word": "カーペット",
+    "reading": "カーペット",
+    "meaning": "Thảm trải sàn"
+  },
+  {
+    "id": 19,
+    "word": "照明",
+    "reading": "しょうめい",
+    "meaning": "Đèn chiếu sáng"
+  },
+  {
+    "id": 20,
+    "word": "収納",
+    "reading": "しゅうのう",
+    "meaning": "Chỗ cất đồ"
+  }
+]
