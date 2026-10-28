@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "word": "魚",
+    "reading": "さかな",
+    "meaning": "Cá"
+  },
+  {
+    "id": 2,
+    "word": "鮭",
+    "reading": "さけ",
+    "meaning": "Cá hồi"
+  },
+  {
+    "id": 3,
+    "word": "鮪",
+    "reading": "まぐろ",
+    "meaning": "Cá ngừ"
+  },
+  {
+    "id": 4,
+    "word": "鯖",
+    "reading": "さば",
+    "meaning": "Cá thu"
+  },
+  {
+    "id": 5,
+    "word": "鰯",
+    "reading": "いわし",
+    "meaning": "Cá mòi"
+  },
+  {
+    "id": 6,
+    "word": "鯵",
+    "reading": "あじ",
+    "meaning": "Cá nục Nhật"
+  },
+  {
+    "id": 7,
+    "word": "鯛",
+    "reading": "たい",
+    "meaning": "Cá tráp"
+  },
+  {
+    "id": 8,
+    "word": "鰤",
+    "reading": "ぶり",
+    "meaning": "Cá cam Nhật"
+  },
+  {
+    "id": 9,
+    "word": "鰹",
+    "reading": "かつお",
+    "meaning": "Cá ngừ sọc dưa"
+  },
+  {
+    "id": 10,
+    "word": "秋刀魚",
+    "reading": "さんま",
+    "meaning": "Cá thu đao"
+  },
+  {
+    "id": 11,
+    "word": "鰻",
+    "reading": "うなぎ",
+    "meaning": "Lươn Nhật"
+  },
+  {
+    "id": 12,
+    "word": "穴子",
+    "reading": "あなご",
+    "meaning": "Cá chình biển"
+  },
+  {
+    "id": 13,
+    "word": "鱈",
+    "reading": "たら",
+    "meaning": "Cá tuyết"
+  },
+  {
+    "id": 14,
+    "word": "平目",
+    "reading": "ひらめ",
+    "meaning": "Cá bơn trái"
+  },
+  {
+    "id": 15,
+    "word": "鰈",
+    "reading": "かれい",
+    "meaning": "Cá bơn phải"
+  },
+  {
+    "id": 16,
+    "word": "河豚",
+    "reading": "ふぐ",
+    "meaning": "Cá nóc"
+  },
+  {
+    "id": 17,
+    "word": "鮫",
+    "reading": "さめ",
+    "meaning": "Cá mập"
+  },
+  {
+    "id": 18,
+    "word": "鯨",
+    "reading": "くじら",
+    "meaning": "Cá voi"
+  },
+  {
+    "id": 19,
+    "word": "イルカ",
+    "reading": "イルカ",
+    "meaning": "Cá heo"
+  },
+  {
+    "id": 20,
+    "word": "シャチ",
+    "reading": "シャチ",
+    "meaning": "Cá voi sát thủ"
+  },
+  {
+    "id": 21,
+    "word": "アザラシ",
+    "reading": "アザラシ",
+    "meaning": "Hải cẩu"
+  },
+  {
+    "id": 22,
+    "word": "アシカ",
+    "reading": "アシカ",
+    "meaning": "Sư tử biển"
+  },
+  {
+    "id": 23,
+    "word": "タコ",
+    "reading": "タコ",
+    "meaning": "Bạch tuộc"
+  },
+  {
+    "id": 24,
+    "word": "イカ",
+    "reading": "イカ",
+    "meaning": "Mực ống"
+  },
+  {
+    "id": 25,
+    "word": "海老",
+    "reading": "えび",
+    "meaning": "Tôm"
+  },
+  {
+    "id": 26,
+    "word": "蟹",
+    "reading": "かに",
+    "meaning": "Cua"
+  },
+  {
+    "id": 27,
+    "word": "ロブスター",
+    "reading": "ロブスター",
+    "meaning": "Tôm hùm"
+  },
+  {
+    "id": 28,
+    "word": "貝",
+    "reading": "かい",
+    "meaning": "Động vật có vỏ"
+  },
+  {
+    "id": 29,
+    "word": "蛤",
+    "reading": "はまぐり",
+    "meaning": "Nghêu lớn"
+  },
+  {
+    "id": 30,
+    "word": "浅蜊",
+    "reading": "あさり",
+    "meaning": "Nghêu"
+  },
+  {
+    "id": 31,
+    "word": "牡蠣",
+    "reading": "かき",
+    "meaning": "Hàu"
+  },
+  {
+    "id": 32,
+    "word": "帆立",
+    "reading": "ほたて",
+    "meaning": "Sò điệp"
+  },
+  {
+    "id": 33,
+    "word": "雲丹",
+    "reading": "うに",
+    "meaning": "Nhím biển"
+  },
+  {
+    "id": 34,
+    "word": "海星",
+    "reading": "ひとで",
+    "meaning": "Sao biển"
+  },
+  {
+    "id": 35,
+    "word": "クラゲ",
+    "reading": "クラゲ",
+    "meaning": "Sứa"
+  },
+  {
+    "id": 36,
+    "word": "珊瑚",
+    "reading": "さんご",
+    "meaning": "San hô"
+  },
+  {
+    "id": 37,
+    "word": "海亀",
+    "reading": "うみがめ",
+    "meaning": "Rùa biển"
+  },
+  {
+    "id": 38,
+    "word": "タツノオトシゴ",
+    "reading": "タツノオトシゴ",
+    "meaning": "Cá ngựa"
+  }
+]
