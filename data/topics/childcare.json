@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "育児",
+    "reading": "いくじ",
+    "meaning": "Chăm sóc trẻ"
+  },
+  {
+    "id": 2,
+    "word": "子育て",
+    "reading": "こそだて",
+    "meaning": "Nuôi dạy con"
+  },
+  {
+    "id": 3,
+    "word": "赤ちゃん",
+    "reading": "あかちゃん",
+    "meaning": "Em bé"
+  },
+  {
+    "id": 4,
+    "word": "乳児",
+    "reading": "にゅうじ",
+    "meaning": "Trẻ sơ sinh, bú mẹ"
+  },
+  {
+    "id": 5,
+    "word": "幼児",
+    "reading": "ようじ",
+    "meaning": "Trẻ nhỏ"
+  },
+  {
+    "id": 6,
+    "word": "新生児",
+    "reading": "しんせいじ",
+    "meaning": "Trẻ mới sinh"
+  },
+  {
+    "id": 7,
+    "word": "授乳",
+    "reading": "じゅにゅう",
+    "meaning": "Cho bú"
+  },
+  {
+    "id": 8,
+    "word": "母乳",
+    "reading": "ぼにゅう",
+    "meaning": "Sữa mẹ"
+  },
+  {
+    "id": 9,
+    "word": "粉ミルク",
+    "reading": "こなミルク",
+    "meaning": "Sữa bột"
+  },
+  {
+    "id": 10,
+    "word": "哺乳瓶",
+    "reading": "ほにゅうびん",
+    "meaning": "Bình sữa"
+  },
+  {
+    "id": 11,
+    "word": "おむつ",
+    "reading": "おむつ",
+    "meaning": "Tã"
+  },
+  {
+    "id": 12,
+    "word": "おしりふき",
+    "reading": "おしりふき",
+    "meaning": "Khăn lau cho bé"
+  },
+  {
+    "id": 13,
+    "word": "ベビーカー",
+    "reading": "ベビーカー",
+    "meaning": "Xe đẩy em bé"
+  },
+  {
+    "id": 14,
+    "word": "抱っこ",
+    "reading": "だっこ",
+    "meaning": "Bế em bé"
+  },
+  {
+    "id": 15,
+    "word": "寝かしつけ",
+    "reading": "ねかしつけ",
+    "meaning": "Dỗ ngủ"
+  },
+  {
+    "id": 16,
+    "word": "離乳食",
+    "reading": "りにゅうしょく",
+    "meaning": "Đồ ăn dặm"
+  },
+  {
+    "id": 17,
+    "word": "予防接種",
+    "reading": "よぼうせっしゅ",
+    "meaning": "Tiêm phòng"
+  },
+  {
+    "id": 18,
+    "word": "保育園",
+    "reading": "ほいくえん",
+    "meaning": "Nhà trẻ"
+  },
+  {
+    "id": 19,
+    "word": "幼稚園",
+    "reading": "ようちえん",
+    "meaning": "Trường mẫu giáo"
+  },
+  {
+    "id": 20,
+    "word": "成長",
+    "reading": "せいちょう",
+    "meaning": "Sự phát triển"
+  }
+]
