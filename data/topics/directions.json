@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "上",
+    "reading": "うえ",
+    "meaning": "Trên"
+  },
+  {
+    "id": 2,
+    "word": "下",
+    "reading": "した",
+    "meaning": "Dưới"
+  },
+  {
+    "id": 3,
+    "word": "左",
+    "reading": "ひだり",
+    "meaning": "Trái"
+  },
+  {
+    "id": 4,
+    "word": "右",
+    "reading": "みぎ",
+    "meaning": "Phải"
+  },
+  {
+    "id": 5,
+    "word": "前",
+    "reading": "まえ",
+    "meaning": "Phía trước"
+  },
+  {
+    "id": 6,
+    "word": "後ろ",
+    "reading": "うしろ",
+    "meaning": "Phía sau"
+  },
+  {
+    "id": 7,
+    "word": "中",
+    "reading": "なか",
+    "meaning": "Bên trong"
+  },
+  {
+    "id": 8,
+    "word": "外",
+    "reading": "そと",
+    "meaning": "Bên ngoài"
+  },
+  {
+    "id": 9,
+    "word": "隣",
+    "reading": "となり",
+    "meaning": "Bên cạnh"
+  },
+  {
+    "id": 10,
+    "word": "近く",
+    "reading": "ちかく",
+    "meaning": "Gần"
+  },
+  {
+    "id": 11,
+    "word": "遠く",
+    "reading": "とおく",
+    "meaning": "Xa"
+  },
+  {
+    "id": 12,
+    "word": "東",
+    "reading": "ひがし",
+    "meaning": "Đông"
+  },
+  {
+    "id": 13,
+    "word": "西",
+    "reading": "にし",
+    "meaning": "Tây"
+  },
+  {
+    "id": 14,
+    "word": "南",
+    "reading": "みなみ",
+    "meaning": "Nam"
+  },
+  {
+    "id": 15,
+    "word": "北",
+    "reading": "きた",
+    "meaning": "Bắc"
+  },
+  {
+    "id": 16,
+    "word": "中央",
+    "reading": "ちゅうおう",
+    "meaning": "Trung tâm"
+  },
+  {
+    "id": 17,
+    "word": "端",
+    "reading": "はし",
+    "meaning": "Đầu mút, mép"
+  },
+  {
+    "id": 18,
+    "word": "向かい",
+    "reading": "むかい",
+    "meaning": "Đối diện"
+  },
+  {
+    "id": 19,
+    "word": "奥",
+    "reading": "おく",
+    "meaning": "Phía sâu bên trong"
+  },
+  {
+    "id": 20,
+    "word": "周囲",
+    "reading": "しゅうい",
+    "meaning": "Xung quanh"
+  }
+]
