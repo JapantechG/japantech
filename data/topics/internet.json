@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "インターネット",
+    "reading": "インターネット",
+    "meaning": "Internet"
+  },
+  {
+    "id": 2,
+    "word": "ウェブサイト",
+    "reading": "ウェブサイト",
+    "meaning": "Website"
+  },
+  {
+    "id": 3,
+    "word": "ホームページ",
+    "reading": "ホームページ",
+    "meaning": "Trang web"
+  },
+  {
+    "id": 4,
+    "word": "ブラウザー",
+    "reading": "ブラウザー",
+    "meaning": "Trình duyệt"
+  },
+  {
+    "id": 5,
+    "word": "検索",
+    "reading": "けんさく",
+    "meaning": "Tìm kiếm"
+  },
+  {
+    "id": 6,
+    "word": "検索結果",
+    "reading": "けんさくけっか",
+    "meaning": "Kết quả tìm kiếm"
+  },
+  {
+    "id": 7,
+    "word": "リンク",
+    "reading": "リンク",
+    "meaning": "Liên kết"
+  },
+  {
+    "id": 8,
+    "word": "アドレス",
+    "reading": "アドレス",
+    "meaning": "Địa chỉ"
+  },
+  {
+    "id": 9,
+    "word": "アカウント",
+    "reading": "アカウント",
+    "meaning": "Tài khoản"
+  },
+  {
+    "id": 10,
+    "word": "ログイン",
+    "reading": "ログイン",
+    "meaning": "Đăng nhập"
+  },
+  {
+    "id": 11,
+    "word": "ログアウト",
+    "reading": "ログアウト",
+    "meaning": "Đăng xuất"
+  },
+  {
+    "id": 12,
+    "word": "パスワード",
+    "reading": "パスワード",
+    "meaning": "Mật khẩu"
+  },
+  {
+    "id": 13,
+    "word": "認証",
+    "reading": "にんしょう",
+    "meaning": "Xác thực"
+  },
+  {
+    "id": 14,
+    "word": "登録",
+    "reading": "とうろく",
+    "meaning": "Đăng ký"
+  },
+  {
+    "id": 15,
+    "word": "ダウンロード",
+    "reading": "ダウンロード",
+    "meaning": "Tải xuống"
+  },
+  {
+    "id": 16,
+    "word": "アップロード",
+    "reading": "アップロード",
+    "meaning": "Tải lên"
+  },
+  {
+    "id": 17,
+    "word": "通信",
+    "reading": "つうしん",
+    "meaning": "Truyền thông, kết nối"
+  },
+  {
+    "id": 18,
+    "word": "接続",
+    "reading": "せつぞく",
+    "meaning": "Kết nối"
+  },
+  {
+    "id": 19,
+    "word": "暗号化",
+    "reading": "あんごうか",
+    "meaning": "Mã hóa"
+  },
+  {
+    "id": 20,
+    "word": "個人情報",
+    "reading": "こじんじょうほう",
+    "meaning": "Thông tin cá nhân"
+  }
+]
