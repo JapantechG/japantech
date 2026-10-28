@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "word": "体",
+    "reading": "からだ",
+    "meaning": "Cơ thể"
+  },
+  {
+    "id": 2,
+    "word": "頭",
+    "reading": "あたま",
+    "meaning": "Đầu"
+  },
+  {
+    "id": 3,
+    "word": "首",
+    "reading": "くび",
+    "meaning": "Cổ"
+  },
+  {
+    "id": 4,
+    "word": "肩",
+    "reading": "かた",
+    "meaning": "Vai"
+  },
+  {
+    "id": 5,
+    "word": "腕",
+    "reading": "うで",
+    "meaning": "Cánh tay"
+  },
+  {
+    "id": 6,
+    "word": "肘",
+    "reading": "ひじ",
+    "meaning": "Khuỷu tay"
+  },
+  {
+    "id": 7,
+    "word": "手",
+    "reading": "て",
+    "meaning": "Bàn tay"
+  },
+  {
+    "id": 8,
+    "word": "指",
+    "reading": "ゆび",
+    "meaning": "Ngón tay"
+  },
+  {
+    "id": 9,
+    "word": "爪",
+    "reading": "つめ",
+    "meaning": "Móng"
+  },
+  {
+    "id": 10,
+    "word": "胸",
+    "reading": "むね",
+    "meaning": "Ngực"
+  },
+  {
+    "id": 11,
+    "word": "背中",
+    "reading": "せなか",
+    "meaning": "Lưng"
+  },
+  {
+    "id": 12,
+    "word": "腹",
+    "reading": "はら",
+    "meaning": "Bụng"
+  },
+  {
+    "id": 13,
+    "word": "腰",
+    "reading": "こし",
+    "meaning": "Eo, thắt lưng"
+  },
+  {
+    "id": 14,
+    "word": "尻",
+    "reading": "しり",
+    "meaning": "Mông"
+  },
+  {
+    "id": 15,
+    "word": "足",
+    "reading": "あし",
+    "meaning": "Chân, bàn chân"
+  },
+  {
+    "id": 16,
+    "word": "脚",
+    "reading": "あし",
+    "meaning": "Chân (chi dưới)"
+  },
+  {
+    "id": 17,
+    "word": "膝",
+    "reading": "ひざ",
+    "meaning": "Đầu gối"
+  },
+  {
+    "id": 18,
+    "word": "足首",
+    "reading": "あしくび",
+    "meaning": "Cổ chân"
+  },
+  {
+    "id": 19,
+    "word": "骨",
+    "reading": "ほね",
+    "meaning": "Xương"
+  },
+  {
+    "id": 20,
+    "word": "筋肉",
+    "reading": "きんにく",
+    "meaning": "Cơ bắp"
+  },
+  {
+    "id": 21,
+    "word": "皮膚",
+    "reading": "ひふ",
+    "meaning": "Da"
+  },
+  {
+    "id": 22,
+    "word": "血液",
+    "reading": "けつえき",
+    "meaning": "Máu"
+  },
+  {
+    "id": 23,
+    "word": "心臓",
+    "reading": "しんぞう",
+    "meaning": "Tim"
+  },
+  {
+    "id": 24,
+    "word": "肺",
+    "reading": "はい",
+    "meaning": "Phổi"
+  },
+  {
+    "id": 25,
+    "word": "胃",
+    "reading": "い",
+    "meaning": "Dạ dày"
+  },
+  {
+    "id": 26,
+    "word": "肝臓",
+    "reading": "かんぞう",
+    "meaning": "Gan"
+  },
+  {
+    "id": 27,
+    "word": "腎臓",
+    "reading": "じんぞう",
+    "meaning": "Thận"
+  }
+]
