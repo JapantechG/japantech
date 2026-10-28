@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "word": "季節",
+    "reading": "きせつ",
+    "meaning": "Mùa"
+  },
+  {
+    "id": 2,
+    "word": "春",
+    "reading": "はる",
+    "meaning": "Mùa xuân"
+  },
+  {
+    "id": 3,
+    "word": "夏",
+    "reading": "なつ",
+    "meaning": "Mùa hè"
+  },
+  {
+    "id": 4,
+    "word": "秋",
+    "reading": "あき",
+    "meaning": "Mùa thu"
+  },
+  {
+    "id": 5,
+    "word": "冬",
+    "reading": "ふゆ",
+    "meaning": "Mùa đông"
+  },
+  {
+    "id": 6,
+    "word": "梅雨",
+    "reading": "つゆ",
+    "meaning": "Mùa mưa ở Nhật"
+  },
+  {
+    "id": 7,
+    "word": "乾季",
+    "reading": "かんき",
+    "meaning": "Mùa khô"
+  },
+  {
+    "id": 8,
+    "word": "雨季",
+    "reading": "うき",
+    "meaning": "Mùa mưa"
+  },
+  {
+    "id": 9,
+    "word": "花見",
+    "reading": "はなみ",
+    "meaning": "Ngắm hoa anh đào"
+  },
+  {
+    "id": 10,
+    "word": "紅葉",
+    "reading": "こうよう",
+    "meaning": "Lá đổi màu mùa thu"
+  },
+  {
+    "id": 11,
+    "word": "新緑",
+    "reading": "しんりょく",
+    "meaning": "Màu xanh non đầu mùa"
+  },
+  {
+    "id": 12,
+    "word": "猛暑",
+    "reading": "もうしょ",
+    "meaning": "Nắng nóng gay gắt"
+  },
+  {
+    "id": 13,
+    "word": "残暑",
+    "reading": "ざんしょ",
+    "meaning": "Nóng kéo dài cuối hè"
+  },
+  {
+    "id": 14,
+    "word": "寒波",
+    "reading": "かんぱ",
+    "meaning": "Đợt rét"
+  },
+  {
+    "id": 15,
+    "word": "衣替え",
+    "reading": "ころもがえ",
+    "meaning": "Thay trang phục theo mùa"
+  }
+]
