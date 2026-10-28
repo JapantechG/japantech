@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "word": "昆虫",
+    "reading": "こんちゅう",
+    "meaning": "Côn trùng"
+  },
+  {
+    "id": 2,
+    "word": "蟻",
+    "reading": "あり",
+    "meaning": "Kiến"
+  },
+  {
+    "id": 3,
+    "word": "蜂",
+    "reading": "はち",
+    "meaning": "Ong"
+  },
+  {
+    "id": 4,
+    "word": "蜜蜂",
+    "reading": "みつばち",
+    "meaning": "Ong mật"
+  },
+  {
+    "id": 5,
+    "word": "スズメバチ",
+    "reading": "スズメバチ",
+    "meaning": "Ong vò vẽ"
+  },
+  {
+    "id": 6,
+    "word": "蝶",
+    "reading": "ちょう",
+    "meaning": "Bướm"
+  },
+  {
+    "id": 7,
+    "word": "蛾",
+    "reading": "が",
+    "meaning": "Bướm đêm"
+  },
+  {
+    "id": 8,
+    "word": "蚊",
+    "reading": "か",
+    "meaning": "Muỗi"
+  },
+  {
+    "id": 9,
+    "word": "蝿",
+    "reading": "はえ",
+    "meaning": "Ruồi"
+  },
+  {
+    "id": 10,
+    "word": "ゴキブリ",
+    "reading": "ゴキブリ",
+    "meaning": "Gián"
+  },
+  {
+    "id": 11,
+    "word": "蝉",
+    "reading": "せみ",
+    "meaning": "Ve sầu"
+  },
+  {
+    "id": 12,
+    "word": "蜻蛉",
+    "reading": "とんぼ",
+    "meaning": "Chuồn chuồn"
+  },
+  {
+    "id": 13,
+    "word": "バッタ",
+    "reading": "バッタ",
+    "meaning": "Châu chấu"
+  },
+  {
+    "id": 14,
+    "word": "こおろぎ",
+    "reading": "こおろぎ",
+    "meaning": "Dế"
+  },
+  {
+    "id": 15,
+    "word": "鈴虫",
+    "reading": "すずむし",
+    "meaning": "Dế chuông"
+  },
+  {
+    "id": 16,
+    "word": "蟷螂",
+    "reading": "かまきり",
+    "meaning": "Bọ ngựa"
+  },
+  {
+    "id": 17,
+    "word": "てんとう虫",
+    "reading": "てんとうむし",
+    "meaning": "Bọ rùa"
+  },
+  {
+    "id": 18,
+    "word": "カブトムシ",
+    "reading": "カブトムシ",
+    "meaning": "Bọ cánh cứng sừng"
+  },
+  {
+    "id": 19,
+    "word": "クワガタ",
+    "reading": "クワガタ",
+    "meaning": "Bọ kẹp kìm"
+  },
+  {
+    "id": 20,
+    "word": "蛍",
+    "reading": "ほたる",
+    "meaning": "Đom đóm"
+  },
+  {
+    "id": 21,
+    "word": "毛虫",
+    "reading": "けむし",
+    "meaning": "Sâu róm"
+  },
+  {
+    "id": 22,
+    "word": "芋虫",
+    "reading": "いもむし",
+    "meaning": "Sâu non"
+  },
+  {
+    "id": 23,
+    "word": "幼虫",
+    "reading": "ようちゅう",
+    "meaning": "Ấu trùng"
+  },
+  {
+    "id": 24,
+    "word": "蛹",
+    "reading": "さなぎ",
+    "meaning": "Nhộng"
+  },
+  {
+    "id": 25,
+    "word": "シロアリ",
+    "reading": "シロアリ",
+    "meaning": "Mối"
+  },
+  {
+    "id": 26,
+    "word": "ノミ",
+    "reading": "ノミ",
+    "meaning": "Bọ chét"
+  },
+  {
+    "id": 27,
+    "word": "シラミ",
+    "reading": "シラミ",
+    "meaning": "Chấy"
+  },
+  {
+    "id": 28,
+    "word": "ダニ",
+    "reading": "ダニ",
+    "meaning": "Ve, mạt"
+  }
+]
