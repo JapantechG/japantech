@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "国",
+    "reading": "くに",
+    "meaning": "Quốc gia"
+  },
+  {
+    "id": 2,
+    "word": "国籍",
+    "reading": "こくせき",
+    "meaning": "Quốc tịch"
+  },
+  {
+    "id": 3,
+    "word": "日本",
+    "reading": "にほん",
+    "meaning": "Nhật Bản"
+  },
+  {
+    "id": 4,
+    "word": "ベトナム",
+    "reading": "ベトナム",
+    "meaning": "Việt Nam"
+  },
+  {
+    "id": 5,
+    "word": "中国",
+    "reading": "ちゅうごく",
+    "meaning": "Trung Quốc"
+  },
+  {
+    "id": 6,
+    "word": "韓国",
+    "reading": "かんこく",
+    "meaning": "Hàn Quốc"
+  },
+  {
+    "id": 7,
+    "word": "台湾",
+    "reading": "たいわん",
+    "meaning": "Đài Loan"
+  },
+  {
+    "id": 8,
+    "word": "タイ",
+    "reading": "タイ",
+    "meaning": "Thái Lan"
+  },
+  {
+    "id": 9,
+    "word": "インド",
+    "reading": "インド",
+    "meaning": "Ấn Độ"
+  },
+  {
+    "id": 10,
+    "word": "インドネシア",
+    "reading": "インドネシア",
+    "meaning": "Indonesia"
+  },
+  {
+    "id": 11,
+    "word": "フィリピン",
+    "reading": "フィリピン",
+    "meaning": "Philippines"
+  },
+  {
+    "id": 12,
+    "word": "アメリカ",
+    "reading": "アメリカ",
+    "meaning": "Mỹ"
+  },
+  {
+    "id": 13,
+    "word": "カナダ",
+    "reading": "カナダ",
+    "meaning": "Canada"
+  },
+  {
+    "id": 14,
+    "word": "イギリス",
+    "reading": "イギリス",
+    "meaning": "Anh"
+  },
+  {
+    "id": 15,
+    "word": "フランス",
+    "reading": "フランス",
+    "meaning": "Pháp"
+  },
+  {
+    "id": 16,
+    "word": "ドイツ",
+    "reading": "ドイツ",
+    "meaning": "Đức"
+  },
+  {
+    "id": 17,
+    "word": "イタリア",
+    "reading": "イタリア",
+    "meaning": "Ý"
+  },
+  {
+    "id": 18,
+    "word": "ロシア",
+    "reading": "ロシア",
+    "meaning": "Nga"
+  },
+  {
+    "id": 19,
+    "word": "オーストラリア",
+    "reading": "オーストラリア",
+    "meaning": "Úc"
+  },
+  {
+    "id": 20,
+    "word": "ブラジル",
+    "reading": "ブラジル",
+    "meaning": "Brazil"
+  }
+]
