@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "教科",
+    "reading": "きょうか",
+    "meaning": "Môn học"
+  },
+  {
+    "id": 2,
+    "word": "国語",
+    "reading": "こくご",
+    "meaning": "Môn quốc ngữ Nhật"
+  },
+  {
+    "id": 3,
+    "word": "数学",
+    "reading": "すうがく",
+    "meaning": "Toán học"
+  },
+  {
+    "id": 4,
+    "word": "算数",
+    "reading": "さんすう",
+    "meaning": "Toán số học tiểu học"
+  },
+  {
+    "id": 5,
+    "word": "英語",
+    "reading": "えいご",
+    "meaning": "Tiếng Anh"
+  },
+  {
+    "id": 6,
+    "word": "日本語",
+    "reading": "にほんご",
+    "meaning": "Tiếng Nhật"
+  },
+  {
+    "id": 7,
+    "word": "理科",
+    "reading": "りか",
+    "meaning": "Khoa học tự nhiên"
+  },
+  {
+    "id": 8,
+    "word": "社会",
+    "reading": "しゃかい",
+    "meaning": "Môn xã hội"
+  },
+  {
+    "id": 9,
+    "word": "歴史",
+    "reading": "れきし",
+    "meaning": "Lịch sử"
+  },
+  {
+    "id": 10,
+    "word": "地理",
+    "reading": "ちり",
+    "meaning": "Địa lý"
+  },
+  {
+    "id": 11,
+    "word": "物理",
+    "reading": "ぶつり",
+    "meaning": "Vật lý"
+  },
+  {
+    "id": 12,
+    "word": "化学",
+    "reading": "かがく",
+    "meaning": "Hóa học"
+  },
+  {
+    "id": 13,
+    "word": "生物",
+    "reading": "せいぶつ",
+    "meaning": "Sinh học"
+  },
+  {
+    "id": 14,
+    "word": "美術",
+    "reading": "びじゅつ",
+    "meaning": "Mỹ thuật"
+  },
+  {
+    "id": 15,
+    "word": "音楽",
+    "reading": "おんがく",
+    "meaning": "Âm nhạc"
+  },
+  {
+    "id": 16,
+    "word": "体育",
+    "reading": "たいいく",
+    "meaning": "Thể dục"
+  },
+  {
+    "id": 17,
+    "word": "技術",
+    "reading": "ぎじゅつ",
+    "meaning": "Kỹ thuật"
+  },
+  {
+    "id": 18,
+    "word": "家庭科",
+    "reading": "かていか",
+    "meaning": "Môn công nghệ gia đình"
+  },
+  {
+    "id": 19,
+    "word": "情報",
+    "reading": "じょうほう",
+    "meaning": "Môn tin học"
+  },
+  {
+    "id": 20,
+    "word": "倫理",
+    "reading": "りんり",
+    "meaning": "Đạo đức học"
+  }
+]
