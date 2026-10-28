@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "スポーツ",
+    "reading": "スポーツ",
+    "meaning": "Thể thao"
+  },
+  {
+    "id": 2,
+    "word": "サッカー",
+    "reading": "サッカー",
+    "meaning": "Bóng đá"
+  },
+  {
+    "id": 3,
+    "word": "野球",
+    "reading": "やきゅう",
+    "meaning": "Bóng chày"
+  },
+  {
+    "id": 4,
+    "word": "バスケットボール",
+    "reading": "バスケットボール",
+    "meaning": "Bóng rổ"
+  },
+  {
+    "id": 5,
+    "word": "バレーボール",
+    "reading": "バレーボール",
+    "meaning": "Bóng chuyền"
+  },
+  {
+    "id": 6,
+    "word": "テニス",
+    "reading": "テニス",
+    "meaning": "Quần vợt"
+  },
+  {
+    "id": 7,
+    "word": "卓球",
+    "reading": "たっきゅう",
+    "meaning": "Bóng bàn"
+  },
+  {
+    "id": 8,
+    "word": "バドミントン",
+    "reading": "バドミントン",
+    "meaning": "Cầu lông"
+  },
+  {
+    "id": 9,
+    "word": "水泳",
+    "reading": "すいえい",
+    "meaning": "Bơi lội"
+  },
+  {
+    "id": 10,
+    "word": "陸上競技",
+    "reading": "りくじょうきょうぎ",
+    "meaning": "Điền kinh"
+  },
+  {
+    "id": 11,
+    "word": "マラソン",
+    "reading": "マラソン",
+    "meaning": "Chạy marathon"
+  },
+  {
+    "id": 12,
+    "word": "柔道",
+    "reading": "じゅうどう",
+    "meaning": "Judo"
+  },
+  {
+    "id": 13,
+    "word": "剣道",
+    "reading": "けんどう",
+    "meaning": "Kendo"
+  },
+  {
+    "id": 14,
+    "word": "空手",
+    "reading": "からて",
+    "meaning": "Karate"
+  },
+  {
+    "id": 15,
+    "word": "相撲",
+    "reading": "すもう",
+    "meaning": "Sumo"
+  },
+  {
+    "id": 16,
+    "word": "ボクシング",
+    "reading": "ボクシング",
+    "meaning": "Quyền Anh"
+  },
+  {
+    "id": 17,
+    "word": "体操",
+    "reading": "たいそう",
+    "meaning": "Thể dục dụng cụ"
+  },
+  {
+    "id": 18,
+    "word": "スキー",
+    "reading": "スキー",
+    "meaning": "Trượt tuyết"
+  },
+  {
+    "id": 19,
+    "word": "スケート",
+    "reading": "スケート",
+    "meaning": "Trượt băng"
+  },
+  {
+    "id": 20,
+    "word": "ゴルフ",
+    "reading": "ゴルフ",
+    "meaning": "Golf"
+  }
+]
