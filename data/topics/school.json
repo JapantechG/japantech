@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "学校",
+    "reading": "がっこう",
+    "meaning": "Trường học"
+  },
+  {
+    "id": 2,
+    "word": "小学校",
+    "reading": "しょうがっこう",
+    "meaning": "Trường tiểu học"
+  },
+  {
+    "id": 3,
+    "word": "中学校",
+    "reading": "ちゅうがっこう",
+    "meaning": "Trường trung học cơ sở"
+  },
+  {
+    "id": 4,
+    "word": "高校",
+    "reading": "こうこう",
+    "meaning": "Trường trung học phổ thông"
+  },
+  {
+    "id": 5,
+    "word": "大学",
+    "reading": "だいがく",
+    "meaning": "Đại học"
+  },
+  {
+    "id": 6,
+    "word": "専門学校",
+    "reading": "せんもんがっこう",
+    "meaning": "Trường chuyên môn"
+  },
+  {
+    "id": 7,
+    "word": "教室",
+    "reading": "きょうしつ",
+    "meaning": "Phòng học"
+  },
+  {
+    "id": 8,
+    "word": "体育館",
+    "reading": "たいいくかん",
+    "meaning": "Nhà thể chất"
+  },
+  {
+    "id": 9,
+    "word": "図書館",
+    "reading": "としょかん",
+    "meaning": "Thư viện"
+  },
+  {
+    "id": 10,
+    "word": "校庭",
+    "reading": "こうてい",
+    "meaning": "Sân trường"
+  },
+  {
+    "id": 11,
+    "word": "先生",
+    "reading": "せんせい",
+    "meaning": "Giáo viên"
+  },
+  {
+    "id": 12,
+    "word": "生徒",
+    "reading": "せいと",
+    "meaning": "Học sinh"
+  },
+  {
+    "id": 13,
+    "word": "学生",
+    "reading": "がくせい",
+    "meaning": "Học sinh, sinh viên"
+  },
+  {
+    "id": 14,
+    "word": "校長",
+    "reading": "こうちょう",
+    "meaning": "Hiệu trưởng"
+  },
+  {
+    "id": 15,
+    "word": "担任",
+    "reading": "たんにん",
+    "meaning": "Giáo viên chủ nhiệm"
+  },
+  {
+    "id": 16,
+    "word": "授業",
+    "reading": "じゅぎょう",
+    "meaning": "Tiết học"
+  },
+  {
+    "id": 17,
+    "word": "宿題",
+    "reading": "しゅくだい",
+    "meaning": "Bài tập về nhà"
+  },
+  {
+    "id": 18,
+    "word": "休み時間",
+    "reading": "やすみじかん",
+    "meaning": "Giờ ra chơi"
+  },
+  {
+    "id": 19,
+    "word": "卒業",
+    "reading": "そつぎょう",
+    "meaning": "Tốt nghiệp"
+  },
+  {
+    "id": 20,
+    "word": "入学",
+    "reading": "にゅうがく",
+    "meaning": "Nhập học"
+  }
+]
