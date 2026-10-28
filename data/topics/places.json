@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "word": "場所",
+    "reading": "ばしょ",
+    "meaning": "Địa điểm"
+  },
+  {
+    "id": 2,
+    "word": "施設",
+    "reading": "しせつ",
+    "meaning": "Cơ sở vật chất"
+  },
+  {
+    "id": 3,
+    "word": "公園",
+    "reading": "こうえん",
+    "meaning": "Công viên"
+  },
+  {
+    "id": 4,
+    "word": "広場",
+    "reading": "ひろば",
+    "meaning": "Quảng trường"
+  },
+  {
+    "id": 5,
+    "word": "図書館",
+    "reading": "としょかん",
+    "meaning": "Thư viện"
+  },
+  {
+    "id": 6,
+    "word": "市役所",
+    "reading": "しやくしょ",
+    "meaning": "Tòa thị chính"
+  },
+  {
+    "id": 7,
+    "word": "区役所",
+    "reading": "くやくしょ",
+    "meaning": "Văn phòng hành chính quận"
+  },
+  {
+    "id": 8,
+    "word": "郵便局",
+    "reading": "ゆうびんきょく",
+    "meaning": "Bưu điện"
+  },
+  {
+    "id": 9,
+    "word": "警察署",
+    "reading": "けいさつしょ",
+    "meaning": "Đồn cảnh sát"
+  },
+  {
+    "id": 10,
+    "word": "消防署",
+    "reading": "しょうぼうしょ",
+    "meaning": "Sở cứu hỏa"
+  },
+  {
+    "id": 11,
+    "word": "交番",
+    "reading": "こうばん",
+    "meaning": "Bốt cảnh sát"
+  },
+  {
+    "id": 12,
+    "word": "体育館",
+    "reading": "たいいくかん",
+    "meaning": "Nhà thi đấu"
+  },
+  {
+    "id": 13,
+    "word": "競技場",
+    "reading": "きょうぎじょう",
+    "meaning": "Sân vận động"
+  },
+  {
+    "id": 14,
+    "word": "駐車場",
+    "reading": "ちゅうしゃじょう",
+    "meaning": "Bãi đỗ xe"
+  },
+  {
+    "id": 15,
+    "word": "駐輪場",
+    "reading": "ちゅうりんじょう",
+    "meaning": "Bãi để xe đạp"
+  },
+  {
+    "id": 16,
+    "word": "公衆トイレ",
+    "reading": "こうしゅうトイレ",
+    "meaning": "Nhà vệ sinh công cộng"
+  },
+  {
+    "id": 17,
+    "word": "案内所",
+    "reading": "あんないじょ",
+    "meaning": "Quầy thông tin"
+  },
+  {
+    "id": 18,
+    "word": "集会所",
+    "reading": "しゅうかいじょ",
+    "meaning": "Nhà sinh hoạt cộng đồng"
+  }
+]
