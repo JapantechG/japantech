@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "意見",
+    "reading": "いけん",
+    "meaning": "Ý kiến"
+  },
+  {
+    "id": 2,
+    "word": "考え",
+    "reading": "かんがえ",
+    "meaning": "Suy nghĩ"
+  },
+  {
+    "id": 3,
+    "word": "主張",
+    "reading": "しゅちょう",
+    "meaning": "Quan điểm, chủ trương"
+  },
+  {
+    "id": 4,
+    "word": "賛成",
+    "reading": "さんせい",
+    "meaning": "Tán thành"
+  },
+  {
+    "id": 5,
+    "word": "反対",
+    "reading": "はんたい",
+    "meaning": "Phản đối"
+  },
+  {
+    "id": 6,
+    "word": "同意",
+    "reading": "どうい",
+    "meaning": "Đồng ý"
+  },
+  {
+    "id": 7,
+    "word": "異議",
+    "reading": "いぎ",
+    "meaning": "Ý kiến phản đối"
+  },
+  {
+    "id": 8,
+    "word": "疑問",
+    "reading": "ぎもん",
+    "meaning": "Thắc mắc"
+  },
+  {
+    "id": 9,
+    "word": "提案",
+    "reading": "ていあん",
+    "meaning": "Đề xuất"
+  },
+  {
+    "id": 10,
+    "word": "判断",
+    "reading": "はんだん",
+    "meaning": "Phán đoán"
+  },
+  {
+    "id": 11,
+    "word": "推測",
+    "reading": "すいそく",
+    "meaning": "Suy đoán"
+  },
+  {
+    "id": 12,
+    "word": "予想",
+    "reading": "よそう",
+    "meaning": "Dự đoán"
+  },
+  {
+    "id": 13,
+    "word": "確信",
+    "reading": "かくしん",
+    "meaning": "Tin chắc"
+  },
+  {
+    "id": 14,
+    "word": "根拠",
+    "reading": "こんきょ",
+    "meaning": "Căn cứ"
+  },
+  {
+    "id": 15,
+    "word": "証明",
+    "reading": "しょうめい",
+    "meaning": "Chứng minh"
+  },
+  {
+    "id": 16,
+    "word": "議論",
+    "reading": "ぎろん",
+    "meaning": "Tranh luận"
+  },
+  {
+    "id": 17,
+    "word": "説得",
+    "reading": "せっとく",
+    "meaning": "Thuyết phục"
+  },
+  {
+    "id": 18,
+    "word": "納得",
+    "reading": "なっとく",
+    "meaning": "Chấp nhận vì thấy hợp lý"
+  },
+  {
+    "id": 19,
+    "word": "解釈",
+    "reading": "かいしゃく",
+    "meaning": "Diễn giải"
+  },
+  {
+    "id": 20,
+    "word": "結論",
+    "reading": "けつろん",
+    "meaning": "Kết luận"
+  }
+]
