@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "台所",
+    "reading": "だいどころ",
+    "meaning": "Nhà bếp"
+  },
+  {
+    "id": 2,
+    "word": "包丁",
+    "reading": "ほうちょう",
+    "meaning": "Dao bếp"
+  },
+  {
+    "id": 3,
+    "word": "まな板",
+    "reading": "まないた",
+    "meaning": "Thớt"
+  },
+  {
+    "id": 4,
+    "word": "鍋",
+    "reading": "なべ",
+    "meaning": "Nồi"
+  },
+  {
+    "id": 5,
+    "word": "フライパン",
+    "reading": "フライパン",
+    "meaning": "Chảo"
+  },
+  {
+    "id": 6,
+    "word": "皿",
+    "reading": "さら",
+    "meaning": "Đĩa"
+  },
+  {
+    "id": 7,
+    "word": "茶碗",
+    "reading": "ちゃわん",
+    "meaning": "Bát cơm"
+  },
+  {
+    "id": 8,
+    "word": "お椀",
+    "reading": "おわん",
+    "meaning": "Bát canh"
+  },
+  {
+    "id": 9,
+    "word": "箸",
+    "reading": "はし",
+    "meaning": "Đũa"
+  },
+  {
+    "id": 10,
+    "word": "スプーン",
+    "reading": "スプーン",
+    "meaning": "Thìa"
+  },
+  {
+    "id": 11,
+    "word": "フォーク",
+    "reading": "フォーク",
+    "meaning": "Nĩa"
+  },
+  {
+    "id": 12,
+    "word": "ナイフ",
+    "reading": "ナイフ",
+    "meaning": "Dao"
+  },
+  {
+    "id": 13,
+    "word": "お玉",
+    "reading": "おたま",
+    "meaning": "Muôi"
+  },
+  {
+    "id": 14,
+    "word": "ざる",
+    "reading": "ざる",
+    "meaning": "Rổ lọc"
+  },
+  {
+    "id": 15,
+    "word": "ボウル",
+    "reading": "ボウル",
+    "meaning": "Tô trộn"
+  },
+  {
+    "id": 16,
+    "word": "へら",
+    "reading": "へら",
+    "meaning": "Xẻng lật"
+  },
+  {
+    "id": 17,
+    "word": "泡立て器",
+    "reading": "あわだてき",
+    "meaning": "Phới đánh trứng"
+  },
+  {
+    "id": 18,
+    "word": "計量カップ",
+    "reading": "けいりょうカップ",
+    "meaning": "Cốc đong"
+  },
+  {
+    "id": 19,
+    "word": "やかん",
+    "reading": "やかん",
+    "meaning": "Ấm đun nước"
+  },
+  {
+    "id": 20,
+    "word": "食器",
+    "reading": "しょっき",
+    "meaning": "Bát đĩa, đồ ăn uống"
+  }
+]
