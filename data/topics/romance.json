@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "恋愛",
+    "reading": "れんあい",
+    "meaning": "Tình yêu lứa đôi"
+  },
+  {
+    "id": 2,
+    "word": "恋",
+    "reading": "こい",
+    "meaning": "Tình yêu"
+  },
+  {
+    "id": 3,
+    "word": "愛",
+    "reading": "あい",
+    "meaning": "Tình yêu thương"
+  },
+  {
+    "id": 4,
+    "word": "好き",
+    "reading": "すき",
+    "meaning": "Thích"
+  },
+  {
+    "id": 5,
+    "word": "片思い",
+    "reading": "かたおもい",
+    "meaning": "Yêu đơn phương"
+  },
+  {
+    "id": 6,
+    "word": "両思い",
+    "reading": "りょうおもい",
+    "meaning": "Yêu nhau hai chiều"
+  },
+  {
+    "id": 7,
+    "word": "告白",
+    "reading": "こくはく",
+    "meaning": "Tỏ tình"
+  },
+  {
+    "id": 8,
+    "word": "デート",
+    "reading": "デート",
+    "meaning": "Hẹn hò"
+  },
+  {
+    "id": 9,
+    "word": "恋人",
+    "reading": "こいびと",
+    "meaning": "Người yêu"
+  },
+  {
+    "id": 10,
+    "word": "彼氏",
+    "reading": "かれし",
+    "meaning": "Bạn trai"
+  },
+  {
+    "id": 11,
+    "word": "彼女",
+    "reading": "かのじょ",
+    "meaning": "Bạn gái"
+  },
+  {
+    "id": 12,
+    "word": "婚約",
+    "reading": "こんやく",
+    "meaning": "Đính hôn"
+  },
+  {
+    "id": 13,
+    "word": "結婚",
+    "reading": "けっこん",
+    "meaning": "Kết hôn"
+  },
+  {
+    "id": 14,
+    "word": "結婚式",
+    "reading": "けっこんしき",
+    "meaning": "Lễ cưới"
+  },
+  {
+    "id": 15,
+    "word": "新婚",
+    "reading": "しんこん",
+    "meaning": "Mới cưới"
+  },
+  {
+    "id": 16,
+    "word": "夫婦",
+    "reading": "ふうふ",
+    "meaning": "Vợ chồng"
+  },
+  {
+    "id": 17,
+    "word": "離婚",
+    "reading": "りこん",
+    "meaning": "Ly hôn"
+  },
+  {
+    "id": 18,
+    "word": "失恋",
+    "reading": "しつれん",
+    "meaning": "Thất tình"
+  },
+  {
+    "id": 19,
+    "word": "浮気",
+    "reading": "うわき",
+    "meaning": "Ngoại tình"
+  },
+  {
+    "id": 20,
+    "word": "運命",
+    "reading": "うんめい",
+    "meaning": "Định mệnh"
+  }
+]
