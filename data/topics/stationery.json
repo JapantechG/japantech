@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "文房具",
+    "reading": "ぶんぼうぐ",
+    "meaning": "Văn phòng phẩm"
+  },
+  {
+    "id": 2,
+    "word": "鉛筆",
+    "reading": "えんぴつ",
+    "meaning": "Bút chì"
+  },
+  {
+    "id": 3,
+    "word": "シャープペンシル",
+    "reading": "シャープペンシル",
+    "meaning": "Bút chì kim"
+  },
+  {
+    "id": 4,
+    "word": "ボールペン",
+    "reading": "ボールペン",
+    "meaning": "Bút bi"
+  },
+  {
+    "id": 5,
+    "word": "万年筆",
+    "reading": "まんねんひつ",
+    "meaning": "Bút máy"
+  },
+  {
+    "id": 6,
+    "word": "消しゴム",
+    "reading": "けしゴム",
+    "meaning": "Cục tẩy"
+  },
+  {
+    "id": 7,
+    "word": "定規",
+    "reading": "じょうぎ",
+    "meaning": "Thước thẳng"
+  },
+  {
+    "id": 8,
+    "word": "コンパス",
+    "reading": "コンパス",
+    "meaning": "Compa"
+  },
+  {
+    "id": 9,
+    "word": "分度器",
+    "reading": "ぶんどき",
+    "meaning": "Thước đo góc"
+  },
+  {
+    "id": 10,
+    "word": "ノート",
+    "reading": "ノート",
+    "meaning": "Vở"
+  },
+  {
+    "id": 11,
+    "word": "手帳",
+    "reading": "てちょう",
+    "meaning": "Sổ tay"
+  },
+  {
+    "id": 12,
+    "word": "付箋",
+    "reading": "ふせん",
+    "meaning": "Giấy ghi chú dán"
+  },
+  {
+    "id": 13,
+    "word": "紙",
+    "reading": "かみ",
+    "meaning": "Giấy"
+  },
+  {
+    "id": 14,
+    "word": "封筒",
+    "reading": "ふうとう",
+    "meaning": "Phong bì"
+  },
+  {
+    "id": 15,
+    "word": "はさみ",
+    "reading": "はさみ",
+    "meaning": "Kéo"
+  },
+  {
+    "id": 16,
+    "word": "のり",
+    "reading": "のり",
+    "meaning": "Hồ dán"
+  },
+  {
+    "id": 17,
+    "word": "ホッチキス",
+    "reading": "ホッチキス",
+    "meaning": "Dập ghim"
+  },
+  {
+    "id": 18,
+    "word": "クリップ",
+    "reading": "クリップ",
+    "meaning": "Kẹp giấy"
+  },
+  {
+    "id": 19,
+    "word": "ファイル",
+    "reading": "ファイル",
+    "meaning": "Bìa hồ sơ"
+  },
+  {
+    "id": 20,
+    "word": "蛍光ペン",
+    "reading": "けいこうペン",
+    "meaning": "Bút dạ quang"
+  }
+]
