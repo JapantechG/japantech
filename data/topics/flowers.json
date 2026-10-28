@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "word": "花",
+    "reading": "はな",
+    "meaning": "Hoa"
+  },
+  {
+    "id": 2,
+    "word": "桜",
+    "reading": "さくら",
+    "meaning": "Hoa anh đào"
+  },
+  {
+    "id": 3,
+    "word": "梅",
+    "reading": "うめ",
+    "meaning": "Hoa mơ Nhật"
+  },
+  {
+    "id": 4,
+    "word": "薔薇",
+    "reading": "ばら",
+    "meaning": "Hoa hồng"
+  },
+  {
+    "id": 5,
+    "word": "百合",
+    "reading": "ゆり",
+    "meaning": "Hoa ly"
+  },
+  {
+    "id": 6,
+    "word": "菊",
+    "reading": "きく",
+    "meaning": "Hoa cúc"
+  },
+  {
+    "id": 7,
+    "word": "向日葵",
+    "reading": "ひまわり",
+    "meaning": "Hoa hướng dương"
+  },
+  {
+    "id": 8,
+    "word": "紫陽花",
+    "reading": "あじさい",
+    "meaning": "Hoa cẩm tú cầu"
+  },
+  {
+    "id": 9,
+    "word": "朝顔",
+    "reading": "あさがお",
+    "meaning": "Hoa bìm bìm"
+  },
+  {
+    "id": 10,
+    "word": "椿",
+    "reading": "つばき",
+    "meaning": "Hoa trà"
+  },
+  {
+    "id": 11,
+    "word": "牡丹",
+    "reading": "ぼたん",
+    "meaning": "Hoa mẫu đơn"
+  },
+  {
+    "id": 12,
+    "word": "芍薬",
+    "reading": "しゃくやく",
+    "meaning": "Hoa thược dược Trung Hoa"
+  },
+  {
+    "id": 13,
+    "word": "蘭",
+    "reading": "らん",
+    "meaning": "Hoa lan"
+  },
+  {
+    "id": 14,
+    "word": "チューリップ",
+    "reading": "チューリップ",
+    "meaning": "Hoa tulip"
+  },
+  {
+    "id": 15,
+    "word": "カーネーション",
+    "reading": "カーネーション",
+    "meaning": "Hoa cẩm chướng"
+  },
+  {
+    "id": 16,
+    "word": "コスモス",
+    "reading": "コスモス",
+    "meaning": "Hoa cánh bướm"
+  },
+  {
+    "id": 17,
+    "word": "水仙",
+    "reading": "すいせん",
+    "meaning": "Hoa thủy tiên"
+  },
+  {
+    "id": 18,
+    "word": "蒲公英",
+    "reading": "たんぽぽ",
+    "meaning": "Bồ công anh"
+  },
+  {
+    "id": 19,
+    "word": "菫",
+    "reading": "すみれ",
+    "meaning": "Hoa violet"
+  },
+  {
+    "id": 20,
+    "word": "藤",
+    "reading": "ふじ",
+    "meaning": "Hoa tử đằng"
+  },
+  {
+    "id": 21,
+    "word": "蓮",
+    "reading": "はす",
+    "meaning": "Hoa sen"
+  },
+  {
+    "id": 22,
+    "word": "睡蓮",
+    "reading": "すいれん",
+    "meaning": "Hoa súng"
+  },
+  {
+    "id": 23,
+    "word": "ラベンダー",
+    "reading": "ラベンダー",
+    "meaning": "Hoa oải hương"
+  },
+  {
+    "id": 24,
+    "word": "ジャスミン",
+    "reading": "ジャスミン",
+    "meaning": "Hoa nhài"
+  },
+  {
+    "id": 25,
+    "word": "ハイビスカス",
+    "reading": "ハイビスカス",
+    "meaning": "Hoa dâm bụt"
+  },
+  {
+    "id": 26,
+    "word": "マリーゴールド",
+    "reading": "マリーゴールド",
+    "meaning": "Cúc vạn thọ"
+  },
+  {
+    "id": 27,
+    "word": "彼岸花",
+    "reading": "ひがんばな",
+    "meaning": "Hoa bỉ ngạn"
+  },
+  {
+    "id": 28,
+    "word": "金木犀",
+    "reading": "きんもくせい",
+    "meaning": "Hoa mộc tê"
+  },
+  {
+    "id": 29,
+    "word": "菜の花",
+    "reading": "なのはな",
+    "meaning": "Hoa cải dầu"
+  }
+]
