@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "駅",
+    "reading": "えき",
+    "meaning": "Nhà ga"
+  },
+  {
+    "id": 2,
+    "word": "電車",
+    "reading": "でんしゃ",
+    "meaning": "Tàu điện"
+  },
+  {
+    "id": 3,
+    "word": "列車",
+    "reading": "れっしゃ",
+    "meaning": "Tàu hỏa"
+  },
+  {
+    "id": 4,
+    "word": "新幹線",
+    "reading": "しんかんせん",
+    "meaning": "Tàu Shinkansen"
+  },
+  {
+    "id": 5,
+    "word": "改札",
+    "reading": "かいさつ",
+    "meaning": "Cổng soát vé"
+  },
+  {
+    "id": 6,
+    "word": "切符",
+    "reading": "きっぷ",
+    "meaning": "Vé"
+  },
+  {
+    "id": 7,
+    "word": "定期券",
+    "reading": "ていきけん",
+    "meaning": "Vé tháng"
+  },
+  {
+    "id": 8,
+    "word": "ホーム",
+    "reading": "ホーム",
+    "meaning": "Sân ga"
+  },
+  {
+    "id": 9,
+    "word": "路線",
+    "reading": "ろせん",
+    "meaning": "Tuyến đường"
+  },
+  {
+    "id": 10,
+    "word": "時刻表",
+    "reading": "じこくひょう",
+    "meaning": "Bảng giờ tàu"
+  },
+  {
+    "id": 11,
+    "word": "始発",
+    "reading": "しはつ",
+    "meaning": "Chuyến đầu tiên"
+  },
+  {
+    "id": 12,
+    "word": "終電",
+    "reading": "しゅうでん",
+    "meaning": "Chuyến cuối cùng"
+  },
+  {
+    "id": 13,
+    "word": "各駅停車",
+    "reading": "かくえきていしゃ",
+    "meaning": "Tàu dừng mọi ga"
+  },
+  {
+    "id": 14,
+    "word": "快速",
+    "reading": "かいそく",
+    "meaning": "Tàu nhanh"
+  },
+  {
+    "id": 15,
+    "word": "急行",
+    "reading": "きゅうこう",
+    "meaning": "Tàu tốc hành"
+  },
+  {
+    "id": 16,
+    "word": "特急",
+    "reading": "とっきゅう",
+    "meaning": "Tàu tốc hành đặc biệt"
+  },
+  {
+    "id": 17,
+    "word": "乗り換え",
+    "reading": "のりかえ",
+    "meaning": "Đổi tàu"
+  },
+  {
+    "id": 18,
+    "word": "乗車",
+    "reading": "じょうしゃ",
+    "meaning": "Lên tàu"
+  },
+  {
+    "id": 19,
+    "word": "下車",
+    "reading": "げしゃ",
+    "meaning": "Xuống tàu"
+  },
+  {
+    "id": 20,
+    "word": "遅延",
+    "reading": "ちえん",
+    "meaning": "Tàu chậm"
+  }
+]
