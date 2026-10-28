@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "感情",
+    "reading": "かんじょう",
+    "meaning": "Cảm xúc"
+  },
+  {
+    "id": 2,
+    "word": "嬉しい",
+    "reading": "うれしい",
+    "meaning": "Vui mừng"
+  },
+  {
+    "id": 3,
+    "word": "楽しい",
+    "reading": "たのしい",
+    "meaning": "Vui vẻ, thú vị"
+  },
+  {
+    "id": 4,
+    "word": "悲しい",
+    "reading": "かなしい",
+    "meaning": "Buồn"
+  },
+  {
+    "id": 5,
+    "word": "寂しい",
+    "reading": "さびしい",
+    "meaning": "Cô đơn"
+  },
+  {
+    "id": 6,
+    "word": "怖い",
+    "reading": "こわい",
+    "meaning": "Sợ"
+  },
+  {
+    "id": 7,
+    "word": "恐ろしい",
+    "reading": "おそろしい",
+    "meaning": "Đáng sợ"
+  },
+  {
+    "id": 8,
+    "word": "腹が立つ",
+    "reading": "はらがたつ",
+    "meaning": "Tức giận"
+  },
+  {
+    "id": 9,
+    "word": "悔しい",
+    "reading": "くやしい",
+    "meaning": "Cay cú, tiếc nuối"
+  },
+  {
+    "id": 10,
+    "word": "恥ずかしい",
+    "reading": "はずかしい",
+    "meaning": "Xấu hổ"
+  },
+  {
+    "id": 11,
+    "word": "羨ましい",
+    "reading": "うらやましい",
+    "meaning": "Ghen tị, ngưỡng mộ"
+  },
+  {
+    "id": 12,
+    "word": "心配",
+    "reading": "しんぱい",
+    "meaning": "Lo lắng"
+  },
+  {
+    "id": 13,
+    "word": "安心",
+    "reading": "あんしん",
+    "meaning": "Yên tâm"
+  },
+  {
+    "id": 14,
+    "word": "緊張",
+    "reading": "きんちょう",
+    "meaning": "Căng thẳng"
+  },
+  {
+    "id": 15,
+    "word": "驚く",
+    "reading": "おどろく",
+    "meaning": "Ngạc nhiên"
+  },
+  {
+    "id": 16,
+    "word": "感動",
+    "reading": "かんどう",
+    "meaning": "Xúc động"
+  },
+  {
+    "id": 17,
+    "word": "満足",
+    "reading": "まんぞく",
+    "meaning": "Hài lòng"
+  },
+  {
+    "id": 18,
+    "word": "不満",
+    "reading": "ふまん",
+    "meaning": "Bất mãn"
+  },
+  {
+    "id": 19,
+    "word": "退屈",
+    "reading": "たいくつ",
+    "meaning": "Chán"
+  },
+  {
+    "id": 20,
+    "word": "幸せ",
+    "reading": "しあわせ",
+    "meaning": "Hạnh phúc"
+  }
+]
