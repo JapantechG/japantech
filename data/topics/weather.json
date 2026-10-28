@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "天気",
+    "reading": "てんき",
+    "meaning": "Thời tiết"
+  },
+  {
+    "id": 2,
+    "word": "晴れ",
+    "reading": "はれ",
+    "meaning": "Trời nắng"
+  },
+  {
+    "id": 3,
+    "word": "曇り",
+    "reading": "くもり",
+    "meaning": "Trời nhiều mây"
+  },
+  {
+    "id": 4,
+    "word": "雨",
+    "reading": "あめ",
+    "meaning": "Mưa"
+  },
+  {
+    "id": 5,
+    "word": "雪",
+    "reading": "ゆき",
+    "meaning": "Tuyết"
+  },
+  {
+    "id": 6,
+    "word": "風",
+    "reading": "かぜ",
+    "meaning": "Gió"
+  },
+  {
+    "id": 7,
+    "word": "雷",
+    "reading": "かみなり",
+    "meaning": "Sấm"
+  },
+  {
+    "id": 8,
+    "word": "稲妻",
+    "reading": "いなずま",
+    "meaning": "Tia chớp"
+  },
+  {
+    "id": 9,
+    "word": "台風",
+    "reading": "たいふう",
+    "meaning": "Bão"
+  },
+  {
+    "id": 10,
+    "word": "霧",
+    "reading": "きり",
+    "meaning": "Sương mù"
+  },
+  {
+    "id": 11,
+    "word": "霜",
+    "reading": "しも",
+    "meaning": "Sương giá"
+  },
+  {
+    "id": 12,
+    "word": "湿度",
+    "reading": "しつど",
+    "meaning": "Độ ẩm"
+  },
+  {
+    "id": 13,
+    "word": "気温",
+    "reading": "きおん",
+    "meaning": "Nhiệt độ không khí"
+  },
+  {
+    "id": 14,
+    "word": "最高気温",
+    "reading": "さいこうきおん",
+    "meaning": "Nhiệt độ cao nhất"
+  },
+  {
+    "id": 15,
+    "word": "最低気温",
+    "reading": "さいていきおん",
+    "meaning": "Nhiệt độ thấp nhất"
+  },
+  {
+    "id": 16,
+    "word": "天気予報",
+    "reading": "てんきよほう",
+    "meaning": "Dự báo thời tiết"
+  },
+  {
+    "id": 17,
+    "word": "豪雨",
+    "reading": "ごうう",
+    "meaning": "Mưa lớn"
+  },
+  {
+    "id": 18,
+    "word": "小雨",
+    "reading": "こさめ",
+    "meaning": "Mưa nhỏ"
+  },
+  {
+    "id": 19,
+    "word": "にわか雨",
+    "reading": "にわかあめ",
+    "meaning": "Mưa rào bất chợt"
+  },
+  {
+    "id": 20,
+    "word": "虹",
+    "reading": "にじ",
+    "meaning": "Cầu vồng"
+  }
+]
