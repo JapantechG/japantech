@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "旅行",
+    "reading": "りょこう",
+    "meaning": "Du lịch"
+  },
+  {
+    "id": 2,
+    "word": "観光",
+    "reading": "かんこう",
+    "meaning": "Tham quan"
+  },
+  {
+    "id": 3,
+    "word": "旅程",
+    "reading": "りょてい",
+    "meaning": "Lịch trình chuyến đi"
+  },
+  {
+    "id": 4,
+    "word": "出発",
+    "reading": "しゅっぱつ",
+    "meaning": "Khởi hành"
+  },
+  {
+    "id": 5,
+    "word": "到着",
+    "reading": "とうちゃく",
+    "meaning": "Đến nơi"
+  },
+  {
+    "id": 6,
+    "word": "予約",
+    "reading": "よやく",
+    "meaning": "Đặt trước"
+  },
+  {
+    "id": 7,
+    "word": "切符",
+    "reading": "きっぷ",
+    "meaning": "Vé"
+  },
+  {
+    "id": 8,
+    "word": "乗車券",
+    "reading": "じょうしゃけん",
+    "meaning": "Vé đi tàu xe"
+  },
+  {
+    "id": 9,
+    "word": "パスポート",
+    "reading": "パスポート",
+    "meaning": "Hộ chiếu"
+  },
+  {
+    "id": 10,
+    "word": "ビザ",
+    "reading": "ビザ",
+    "meaning": "Thị thực"
+  },
+  {
+    "id": 11,
+    "word": "荷物",
+    "reading": "にもつ",
+    "meaning": "Hành lý"
+  },
+  {
+    "id": 12,
+    "word": "スーツケース",
+    "reading": "スーツケース",
+    "meaning": "Va li"
+  },
+  {
+    "id": 13,
+    "word": "旅行会社",
+    "reading": "りょこうがいしゃ",
+    "meaning": "Công ty du lịch"
+  },
+  {
+    "id": 14,
+    "word": "日帰り",
+    "reading": "ひがえり",
+    "meaning": "Đi về trong ngày"
+  },
+  {
+    "id": 15,
+    "word": "宿泊",
+    "reading": "しゅくはく",
+    "meaning": "Lưu trú"
+  },
+  {
+    "id": 16,
+    "word": "土産",
+    "reading": "みやげ",
+    "meaning": "Quà lưu niệm"
+  },
+  {
+    "id": 17,
+    "word": "名所",
+    "reading": "めいしょ",
+    "meaning": "Danh thắng"
+  },
+  {
+    "id": 18,
+    "word": "地図",
+    "reading": "ちず",
+    "meaning": "Bản đồ"
+  },
+  {
+    "id": 19,
+    "word": "道案内",
+    "reading": "みちあんない",
+    "meaning": "Chỉ đường"
+  },
+  {
+    "id": 20,
+    "word": "旅費",
+    "reading": "りょひ",
+    "meaning": "Chi phí du lịch"
+  }
+]
