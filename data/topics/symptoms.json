@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "症状",
+    "reading": "しょうじょう",
+    "meaning": "Triệu chứng"
+  },
+  {
+    "id": 2,
+    "word": "熱",
+    "reading": "ねつ",
+    "meaning": "Sốt"
+  },
+  {
+    "id": 3,
+    "word": "発熱",
+    "reading": "はつねつ",
+    "meaning": "Phát sốt"
+  },
+  {
+    "id": 4,
+    "word": "咳",
+    "reading": "せき",
+    "meaning": "Ho"
+  },
+  {
+    "id": 5,
+    "word": "鼻水",
+    "reading": "はなみず",
+    "meaning": "Nước mũi"
+  },
+  {
+    "id": 6,
+    "word": "鼻づまり",
+    "reading": "はなづまり",
+    "meaning": "Nghẹt mũi"
+  },
+  {
+    "id": 7,
+    "word": "喉の痛み",
+    "reading": "のどのいたみ",
+    "meaning": "Đau họng"
+  },
+  {
+    "id": 8,
+    "word": "頭痛",
+    "reading": "ずつう",
+    "meaning": "Đau đầu"
+  },
+  {
+    "id": 9,
+    "word": "腹痛",
+    "reading": "ふくつう",
+    "meaning": "Đau bụng"
+  },
+  {
+    "id": 10,
+    "word": "吐き気",
+    "reading": "はきけ",
+    "meaning": "Buồn nôn"
+  },
+  {
+    "id": 11,
+    "word": "嘔吐",
+    "reading": "おうと",
+    "meaning": "Nôn mửa"
+  },
+  {
+    "id": 12,
+    "word": "下痢",
+    "reading": "げり",
+    "meaning": "Tiêu chảy"
+  },
+  {
+    "id": 13,
+    "word": "便秘",
+    "reading": "べんぴ",
+    "meaning": "Táo bón"
+  },
+  {
+    "id": 14,
+    "word": "めまい",
+    "reading": "めまい",
+    "meaning": "Chóng mặt"
+  },
+  {
+    "id": 15,
+    "word": "息切れ",
+    "reading": "いきぎれ",
+    "meaning": "Khó thở khi gắng sức"
+  },
+  {
+    "id": 16,
+    "word": "動悸",
+    "reading": "どうき",
+    "meaning": "Hồi hộp, tim đập nhanh"
+  },
+  {
+    "id": 17,
+    "word": "むくみ",
+    "reading": "むくみ",
+    "meaning": "Phù nề"
+  },
+  {
+    "id": 18,
+    "word": "かゆみ",
+    "reading": "かゆみ",
+    "meaning": "Ngứa"
+  },
+  {
+    "id": 19,
+    "word": "発疹",
+    "reading": "ほっしん",
+    "meaning": "Phát ban"
+  },
+  {
+    "id": 20,
+    "word": "倦怠感",
+    "reading": "けんたいかん",
+    "meaning": "Cảm giác mệt mỏi"
+  }
+]
