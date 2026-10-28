@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "比較",
+    "reading": "ひかく",
+    "meaning": "So sánh"
+  },
+  {
+    "id": 2,
+    "word": "同じ",
+    "reading": "おなじ",
+    "meaning": "Giống nhau"
+  },
+  {
+    "id": 3,
+    "word": "異なる",
+    "reading": "ことなる",
+    "meaning": "Khác nhau"
+  },
+  {
+    "id": 4,
+    "word": "違い",
+    "reading": "ちがい",
+    "meaning": "Sự khác biệt"
+  },
+  {
+    "id": 5,
+    "word": "類似",
+    "reading": "るいじ",
+    "meaning": "Tương tự"
+  },
+  {
+    "id": 6,
+    "word": "共通",
+    "reading": "きょうつう",
+    "meaning": "Chung"
+  },
+  {
+    "id": 7,
+    "word": "以上",
+    "reading": "いじょう",
+    "meaning": "Từ mức ... trở lên"
+  },
+  {
+    "id": 8,
+    "word": "以下",
+    "reading": "いか",
+    "meaning": "Từ mức ... trở xuống"
+  },
+  {
+    "id": 9,
+    "word": "未満",
+    "reading": "みまん",
+    "meaning": "Chưa tới mức"
+  },
+  {
+    "id": 10,
+    "word": "超える",
+    "reading": "こえる",
+    "meaning": "Vượt quá"
+  },
+  {
+    "id": 11,
+    "word": "最大",
+    "reading": "さいだい",
+    "meaning": "Lớn nhất"
+  },
+  {
+    "id": 12,
+    "word": "最小",
+    "reading": "さいしょう",
+    "meaning": "Nhỏ nhất"
+  },
+  {
+    "id": 13,
+    "word": "最高",
+    "reading": "さいこう",
+    "meaning": "Cao nhất"
+  },
+  {
+    "id": 14,
+    "word": "最低",
+    "reading": "さいてい",
+    "meaning": "Thấp nhất"
+  },
+  {
+    "id": 15,
+    "word": "平均",
+    "reading": "へいきん",
+    "meaning": "Trung bình"
+  },
+  {
+    "id": 16,
+    "word": "大幅",
+    "reading": "おおはば",
+    "meaning": "Mức lớn, đáng kể"
+  },
+  {
+    "id": 17,
+    "word": "わずか",
+    "reading": "わずか",
+    "meaning": "Chỉ một chút"
+  },
+  {
+    "id": 18,
+    "word": "多少",
+    "reading": "たしょう",
+    "meaning": "Ít nhiều"
+  },
+  {
+    "id": 19,
+    "word": "圧倒的",
+    "reading": "あっとうてき",
+    "meaning": "Áp đảo"
+  },
+  {
+    "id": 20,
+    "word": "ほぼ",
+    "reading": "ほぼ",
+    "meaning": "Hầu như"
+  }
+]
