@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "地理",
+    "reading": "ちり",
+    "meaning": "Địa lý"
+  },
+  {
+    "id": 2,
+    "word": "地図",
+    "reading": "ちず",
+    "meaning": "Bản đồ"
+  },
+  {
+    "id": 3,
+    "word": "大陸",
+    "reading": "たいりく",
+    "meaning": "Lục địa"
+  },
+  {
+    "id": 4,
+    "word": "国",
+    "reading": "くに",
+    "meaning": "Quốc gia"
+  },
+  {
+    "id": 5,
+    "word": "国境",
+    "reading": "こっきょう",
+    "meaning": "Biên giới"
+  },
+  {
+    "id": 6,
+    "word": "地域",
+    "reading": "ちいき",
+    "meaning": "Khu vực"
+  },
+  {
+    "id": 7,
+    "word": "地方",
+    "reading": "ちほう",
+    "meaning": "Vùng, địa phương"
+  },
+  {
+    "id": 8,
+    "word": "都道府県",
+    "reading": "とどうふけん",
+    "meaning": "Tỉnh thành ở Nhật"
+  },
+  {
+    "id": 9,
+    "word": "首都",
+    "reading": "しゅと",
+    "meaning": "Thủ đô"
+  },
+  {
+    "id": 10,
+    "word": "都市",
+    "reading": "とし",
+    "meaning": "Đô thị"
+  },
+  {
+    "id": 11,
+    "word": "農村",
+    "reading": "のうそん",
+    "meaning": "Nông thôn"
+  },
+  {
+    "id": 12,
+    "word": "人口",
+    "reading": "じんこう",
+    "meaning": "Dân số"
+  },
+  {
+    "id": 13,
+    "word": "面積",
+    "reading": "めんせき",
+    "meaning": "Diện tích"
+  },
+  {
+    "id": 14,
+    "word": "標高",
+    "reading": "ひょうこう",
+    "meaning": "Độ cao so với mực biển"
+  },
+  {
+    "id": 15,
+    "word": "緯度",
+    "reading": "いど",
+    "meaning": "Vĩ độ"
+  },
+  {
+    "id": 16,
+    "word": "経度",
+    "reading": "けいど",
+    "meaning": "Kinh độ"
+  },
+  {
+    "id": 17,
+    "word": "赤道",
+    "reading": "せきどう",
+    "meaning": "Đường xích đạo"
+  },
+  {
+    "id": 18,
+    "word": "北半球",
+    "reading": "きたはんきゅう",
+    "meaning": "Bắc bán cầu"
+  },
+  {
+    "id": 19,
+    "word": "南半球",
+    "reading": "みなみはんきゅう",
+    "meaning": "Nam bán cầu"
+  },
+  {
+    "id": 20,
+    "word": "時差",
+    "reading": "じさ",
+    "meaning": "Chênh lệch múi giờ"
+  }
+]
