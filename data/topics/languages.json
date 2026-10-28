@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "言語",
+    "reading": "げんご",
+    "meaning": "Ngôn ngữ"
+  },
+  {
+    "id": 2,
+    "word": "日本語",
+    "reading": "にほんご",
+    "meaning": "Tiếng Nhật"
+  },
+  {
+    "id": 3,
+    "word": "ベトナム語",
+    "reading": "ベトナムご",
+    "meaning": "Tiếng Việt"
+  },
+  {
+    "id": 4,
+    "word": "英語",
+    "reading": "えいご",
+    "meaning": "Tiếng Anh"
+  },
+  {
+    "id": 5,
+    "word": "中国語",
+    "reading": "ちゅうごくご",
+    "meaning": "Tiếng Trung"
+  },
+  {
+    "id": 6,
+    "word": "韓国語",
+    "reading": "かんこくご",
+    "meaning": "Tiếng Hàn"
+  },
+  {
+    "id": 7,
+    "word": "フランス語",
+    "reading": "フランスご",
+    "meaning": "Tiếng Pháp"
+  },
+  {
+    "id": 8,
+    "word": "ドイツ語",
+    "reading": "ドイツご",
+    "meaning": "Tiếng Đức"
+  },
+  {
+    "id": 9,
+    "word": "スペイン語",
+    "reading": "スペインご",
+    "meaning": "Tiếng Tây Ban Nha"
+  },
+  {
+    "id": 10,
+    "word": "母語",
+    "reading": "ぼご",
+    "meaning": "Tiếng mẹ đẻ"
+  },
+  {
+    "id": 11,
+    "word": "外国語",
+    "reading": "がいこくご",
+    "meaning": "Ngoại ngữ"
+  },
+  {
+    "id": 12,
+    "word": "方言",
+    "reading": "ほうげん",
+    "meaning": "Phương ngữ"
+  },
+  {
+    "id": 13,
+    "word": "標準語",
+    "reading": "ひょうじゅんご",
+    "meaning": "Ngôn ngữ chuẩn"
+  },
+  {
+    "id": 14,
+    "word": "発音",
+    "reading": "はつおん",
+    "meaning": "Phát âm"
+  },
+  {
+    "id": 15,
+    "word": "アクセント",
+    "reading": "アクセント",
+    "meaning": "Trọng âm"
+  },
+  {
+    "id": 16,
+    "word": "文法",
+    "reading": "ぶんぽう",
+    "meaning": "Ngữ pháp"
+  },
+  {
+    "id": 17,
+    "word": "語彙",
+    "reading": "ごい",
+    "meaning": "Vốn từ vựng"
+  },
+  {
+    "id": 18,
+    "word": "翻訳",
+    "reading": "ほんやく",
+    "meaning": "Biên dịch"
+  },
+  {
+    "id": 19,
+    "word": "通訳",
+    "reading": "つうやく",
+    "meaning": "Phiên dịch nói"
+  },
+  {
+    "id": 20,
+    "word": "会話",
+    "reading": "かいわ",
+    "meaning": "Hội thoại"
+  }
+]
