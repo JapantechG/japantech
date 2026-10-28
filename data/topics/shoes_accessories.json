@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "靴",
+    "reading": "くつ",
+    "meaning": "Giày"
+  },
+  {
+    "id": 2,
+    "word": "運動靴",
+    "reading": "うんどうぐつ",
+    "meaning": "Giày thể thao"
+  },
+  {
+    "id": 3,
+    "word": "スニーカー",
+    "reading": "スニーカー",
+    "meaning": "Giày sneaker"
+  },
+  {
+    "id": 4,
+    "word": "革靴",
+    "reading": "かわぐつ",
+    "meaning": "Giày da"
+  },
+  {
+    "id": 5,
+    "word": "長靴",
+    "reading": "ながぐつ",
+    "meaning": "Ủng"
+  },
+  {
+    "id": 6,
+    "word": "サンダル",
+    "reading": "サンダル",
+    "meaning": "Dép sandal"
+  },
+  {
+    "id": 7,
+    "word": "スリッパ",
+    "reading": "スリッパ",
+    "meaning": "Dép đi trong nhà"
+  },
+  {
+    "id": 8,
+    "word": "ヒール",
+    "reading": "ヒール",
+    "meaning": "Giày cao gót"
+  },
+  {
+    "id": 9,
+    "word": "帽子",
+    "reading": "ぼうし",
+    "meaning": "Mũ"
+  },
+  {
+    "id": 10,
+    "word": "ベルト",
+    "reading": "ベルト",
+    "meaning": "Thắt lưng"
+  },
+  {
+    "id": 11,
+    "word": "眼鏡",
+    "reading": "めがね",
+    "meaning": "Kính mắt"
+  },
+  {
+    "id": 12,
+    "word": "サングラス",
+    "reading": "サングラス",
+    "meaning": "Kính râm"
+  },
+  {
+    "id": 13,
+    "word": "腕時計",
+    "reading": "うでどけい",
+    "meaning": "Đồng hồ đeo tay"
+  },
+  {
+    "id": 14,
+    "word": "指輪",
+    "reading": "ゆびわ",
+    "meaning": "Nhẫn"
+  },
+  {
+    "id": 15,
+    "word": "ネックレス",
+    "reading": "ネックレス",
+    "meaning": "Dây chuyền"
+  },
+  {
+    "id": 16,
+    "word": "イヤリング",
+    "reading": "イヤリング",
+    "meaning": "Hoa tai kẹp"
+  },
+  {
+    "id": 17,
+    "word": "ピアス",
+    "reading": "ピアス",
+    "meaning": "Khuyên tai xỏ"
+  },
+  {
+    "id": 18,
+    "word": "ブレスレット",
+    "reading": "ブレスレット",
+    "meaning": "Vòng tay"
+  },
+  {
+    "id": 19,
+    "word": "ネクタイ",
+    "reading": "ネクタイ",
+    "meaning": "Cà vạt"
+  },
+  {
+    "id": 20,
+    "word": "リュック",
+    "reading": "リュック",
+    "meaning": "Ba lô"
+  }
+]
