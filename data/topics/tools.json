@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "工具",
+    "reading": "こうぐ",
+    "meaning": "Dụng cụ"
+  },
+  {
+    "id": 2,
+    "word": "ドライバー",
+    "reading": "ドライバー",
+    "meaning": "Tua vít"
+  },
+  {
+    "id": 3,
+    "word": "プラスドライバー",
+    "reading": "プラスドライバー",
+    "meaning": "Tua vít chữ thập"
+  },
+  {
+    "id": 4,
+    "word": "マイナスドライバー",
+    "reading": "マイナスドライバー",
+    "meaning": "Tua vít dẹt"
+  },
+  {
+    "id": 5,
+    "word": "レンチ",
+    "reading": "レンチ",
+    "meaning": "Cờ lê"
+  },
+  {
+    "id": 6,
+    "word": "スパナ",
+    "reading": "スパナ",
+    "meaning": "Cờ lê miệng"
+  },
+  {
+    "id": 7,
+    "word": "六角レンチ",
+    "reading": "ろっかくレンチ",
+    "meaning": "Lục giác"
+  },
+  {
+    "id": 8,
+    "word": "トルクレンチ",
+    "reading": "トルクレンチ",
+    "meaning": "Cờ lê lực"
+  },
+  {
+    "id": 9,
+    "word": "ペンチ",
+    "reading": "ペンチ",
+    "meaning": "Kìm"
+  },
+  {
+    "id": 10,
+    "word": "ニッパー",
+    "reading": "ニッパー",
+    "meaning": "Kìm cắt"
+  },
+  {
+    "id": 11,
+    "word": "ハンマー",
+    "reading": "ハンマー",
+    "meaning": "Búa"
+  },
+  {
+    "id": 12,
+    "word": "やすり",
+    "reading": "やすり",
+    "meaning": "Dũa"
+  },
+  {
+    "id": 13,
+    "word": "のこぎり",
+    "reading": "のこぎり",
+    "meaning": "Cưa"
+  },
+  {
+    "id": 14,
+    "word": "ドリル",
+    "reading": "ドリル",
+    "meaning": "Mũi khoan"
+  },
+  {
+    "id": 15,
+    "word": "電動ドリル",
+    "reading": "でんどうドリル",
+    "meaning": "Máy khoan điện"
+  },
+  {
+    "id": 16,
+    "word": "ノギス",
+    "reading": "ノギス",
+    "meaning": "Thước cặp"
+  },
+  {
+    "id": 17,
+    "word": "マイクロメーター",
+    "reading": "マイクロメーター",
+    "meaning": "Panme"
+  },
+  {
+    "id": 18,
+    "word": "巻尺",
+    "reading": "まきじゃく",
+    "meaning": "Thước cuộn"
+  },
+  {
+    "id": 19,
+    "word": "水準器",
+    "reading": "すいじゅんき",
+    "meaning": "Thước thủy"
+  },
+  {
+    "id": 20,
+    "word": "万力",
+    "reading": "まんりき",
+    "meaning": "Ê tô"
+  }
+]
