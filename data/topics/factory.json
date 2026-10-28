@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "word": "工場",
+    "reading": "こうじょう",
+    "meaning": "Nhà máy"
+  },
+  {
+    "id": 2,
+    "word": "製造",
+    "reading": "せいぞう",
+    "meaning": "Sản xuất"
+  },
+  {
+    "id": 3,
+    "word": "生産",
+    "reading": "せいさん",
+    "meaning": "Sản xuất"
+  },
+  {
+    "id": 4,
+    "word": "製品",
+    "reading": "せいひん",
+    "meaning": "Sản phẩm"
+  },
+  {
+    "id": 5,
+    "word": "部品",
+    "reading": "ぶひん",
+    "meaning": "Linh kiện"
+  },
+  {
+    "id": 6,
+    "word": "組立",
+    "reading": "くみたて",
+    "meaning": "Lắp ráp"
+  },
+  {
+    "id": 7,
+    "word": "加工",
+    "reading": "かこう",
+    "meaning": "Gia công"
+  },
+  {
+    "id": 8,
+    "word": "切削",
+    "reading": "せっさく",
+    "meaning": "Cắt gọt"
+  },
+  {
+    "id": 9,
+    "word": "溶接",
+    "reading": "ようせつ",
+    "meaning": "Hàn"
+  },
+  {
+    "id": 10,
+    "word": "検査",
+    "reading": "けんさ",
+    "meaning": "Kiểm tra"
+  },
+  {
+    "id": 11,
+    "word": "品質",
+    "reading": "ひんしつ",
+    "meaning": "Chất lượng"
+  },
+  {
+    "id": 12,
+    "word": "不良品",
+    "reading": "ふりょうひん",
+    "meaning": "Hàng lỗi"
+  },
+  {
+    "id": 13,
+    "word": "工程",
+    "reading": "こうてい",
+    "meaning": "Công đoạn"
+  },
+  {
+    "id": 14,
+    "word": "生産ライン",
+    "reading": "せいさんライン",
+    "meaning": "Dây chuyền sản xuất"
+  },
+  {
+    "id": 15,
+    "word": "設備",
+    "reading": "せつび",
+    "meaning": "Thiết bị"
+  },
+  {
+    "id": 16,
+    "word": "稼働",
+    "reading": "かどう",
+    "meaning": "Vận hành"
+  },
+  {
+    "id": 17,
+    "word": "停止",
+    "reading": "ていし",
+    "meaning": "Dừng"
+  },
+  {
+    "id": 18,
+    "word": "保全",
+    "reading": "ほぜん",
+    "meaning": "Bảo trì, bảo toàn"
+  },
+  {
+    "id": 19,
+    "word": "安全",
+    "reading": "あんぜん",
+    "meaning": "An toàn"
+  },
+  {
+    "id": 20,
+    "word": "作業手順",
+    "reading": "さぎょうてじゅん",
+    "meaning": "Trình tự thao tác"
+  }
+]
