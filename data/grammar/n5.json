@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "grammar": "～です",
+    "reading": "～です",
+    "meaning": "Là; cách nói lịch sự",
+    "examples": [
+      {
+        "sentence": "私は学生です。",
+        "translation": "Tôi là học sinh."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "grammar": "～ではありません",
+    "reading": "～ではありません",
+    "meaning": "Không phải là (lịch sự)",
+    "examples": [
+      {
+        "sentence": "田中さんは先生ではありません。",
+        "translation": "Anh Tanaka không phải là giáo viên."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "grammar": "～でした",
+    "reading": "～でした",
+    "meaning": "Đã là; thì quá khứ lịch sự",
+    "examples": [
+      {
+        "sentence": "昨日は休みでした。",
+        "translation": "Hôm qua là ngày nghỉ."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "grammar": "～ではありませんでした",
+    "reading": "～ではありませんでした",
+    "meaning": "Đã không phải là",
+    "examples": [
+      {
+        "sentence": "昨日は雨ではありませんでした。",
+        "translation": "Hôm qua trời không mưa."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "grammar": "～だ",
+    "reading": "～だ",
+    "meaning": "Là; dạng thông thường",
+    "examples": [
+      {
+        "sentence": "これは私の本だ。",
+        "translation": "Đây là sách của tôi."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "grammar": "～じゃない",
+    "reading": "～じゃない",
+    "meaning": "Không phải là; dạng thông thường",
+    "examples": [
+      {
+        "sentence": "今日は日曜日じゃない。",
+        "translation": "Hôm nay không phải Chủ nhật."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "grammar": "～だった",
+    "reading": "～だった",
+    "meaning": "Đã là; dạng thông thường",
+    "examples": [
+      {
+        "sentence": "子どものころは元気だった。",
+        "translation": "Hồi nhỏ tôi rất khỏe mạnh."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "grammar": "～じゃなかった",
+    "reading": "～じゃなかった",
+    "meaning": "Đã không phải là; dạng thông thường",
+    "examples": [
+      {
+        "sentence": "昨日は暇じゃなかった。",
+        "translation": "Hôm qua tôi không rảnh."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "grammar": "～ます",
+    "reading": "～ます",
+    "meaning": "Đuôi động từ lịch sự",
+    "examples": [
+      {
+        "sentence": "毎朝六時に起きます。",
+        "translation": "Mỗi sáng tôi thức dậy lúc sáu giờ."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "grammar": "～ません",
+    "reading": "～ません",
+    "meaning": "Không làm; phủ định lịch sự",
+    "examples": [
+      {
+        "sentence": "私はコーヒーを飲みません。",
+        "translation": "Tôi không uống cà phê."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "grammar": "～ました",
+    "reading": "～ました",
+    "meaning": "Đã làm; quá khứ lịch sự",
+    "examples": [
+      {
+        "sentence": "昨日映画を見ました。",
+        "translation": "Hôm qua tôi đã xem phim."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "grammar": "～ませんでした",
+    "reading": "～ませんでした",
+    "meaning": "Đã không làm; quá khứ phủ định",
+    "examples": [
+      {
+        "sentence": "昨日は勉強しませんでした。",
+        "translation": "Hôm qua tôi không học."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "grammar": "～ない",
+    "reading": "～ない",
+    "meaning": "Không làm; dạng phủ định thông thường",
+    "examples": [
+      {
+        "sentence": "今日は学校へ行かない。",
+        "translation": "Hôm nay tôi không đến trường."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "grammar": "～た",
+    "reading": "～た",
+    "meaning": "Đã làm; dạng quá khứ thông thường",
+    "examples": [
+      {
+        "sentence": "昨日友達と遊んだ。",
+        "translation": "Hôm qua tôi đã chơi với bạn."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "grammar": "～なかった",
+    "reading": "～なかった",
+    "meaning": "Đã không làm; dạng quá khứ phủ định",
+    "examples": [
+      {
+        "sentence": "朝ご飯を食べなかった。",
+        "translation": "Tôi đã không ăn sáng."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "grammar": "～ている",
+    "reading": "～ている",
+    "meaning": "Đang làm; trạng thái tiếp diễn",
+    "examples": [
+      {
+        "sentence": "今、日本語を勉強しています。",
+        "translation": "Bây giờ tôi đang học tiếng Nhật."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "grammar": "～ていない",
+    "reading": "～ていない",
+    "meaning": "Không đang làm; chưa làm",
+    "examples": [
+      {
+        "sentence": "まだ宿題をしていません。",
+        "translation": "Tôi vẫn chưa làm bài tập."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "grammar": "～てください",
+    "reading": "～てください",
+    "meaning": "Xin hãy làm gì",
+    "examples": [
+      {
+        "sentence": "ここに名前を書いてください。",
+        "translation": "Xin hãy viết tên vào đây."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "grammar": "～ないでください",
+    "reading": "～ないでください",
+    "meaning": "Xin đừng làm gì",
+    "examples": [
+      {
+        "sentence": "ここで写真を撮らないでください。",
+        "translation": "Xin đừng chụp ảnh ở đây."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "grammar": "～てもいい",
+    "reading": "～てもいい",
+    "meaning": "Được phép làm gì",
+    "examples": [
+      {
+        "sentence": "ここに座ってもいいですか。",
+        "translation": "Tôi ngồi đây có được không?"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "grammar": "～てはいけない",
+    "reading": "～てはいけない",
+    "meaning": "Không được phép làm gì",
+    "examples": [
+      {
+        "sentence": "ここでたばこを吸ってはいけません。",
+        "translation": "Không được hút thuốc ở đây."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "grammar": "～なくてもいい",
+    "reading": "～なくてもいい",
+    "meaning": "Không cần phải làm gì",
+    "examples": [
+      {
+        "sentence": "明日は来なくてもいいです。",
+        "translation": "Ngày mai bạn không cần đến."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "grammar": "～なければならない",
+    "reading": "～なければならない",
+    "meaning": "Phải làm gì",
+    "examples": [
+      {
+        "sentence": "毎日薬を飲まなければなりません。",
+        "translation": "Tôi phải uống thuốc mỗi ngày."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "grammar": "～なくてはいけない",
+    "reading": "～なくてはいけない",
+    "meaning": "Phải làm gì",
+    "examples": [
+      {
+        "sentence": "今日は早く帰らなくてはいけません。",
+        "translation": "Hôm nay tôi phải về sớm."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "grammar": "～たい",
+    "reading": "～たい",
+    "meaning": "Muốn làm gì",
+    "examples": [
+      {
+        "sentence": "日本へ旅行に行きたいです。",
+        "translation": "Tôi muốn đi du lịch Nhật Bản."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "grammar": "～たくない",
+    "reading": "～たくない",
+    "meaning": "Không muốn làm gì",
+    "examples": [
+      {
+        "sentence": "今日は外へ出たくないです。",
+        "translation": "Hôm nay tôi không muốn ra ngoài."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "grammar": "～たかった",
+    "reading": "～たかった",
+    "meaning": "Đã muốn làm gì",
+    "examples": [
+      {
+        "sentence": "子どものころ、医者になりたかったです。",
+        "translation": "Hồi nhỏ tôi từng muốn trở thành bác sĩ."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "grammar": "～ましょう",
+    "reading": "～ましょう",
+    "meaning": "Chúng ta hãy cùng làm",
+    "examples": [
+      {
+        "sentence": "一緒に昼ご飯を食べましょう。",
+        "translation": "Chúng ta cùng ăn trưa nhé."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "grammar": "～ましょうか",
+    "reading": "～ましょうか",
+    "meaning": "Đề nghị giúp hoặc rủ làm gì",
+    "examples": [
+      {
+        "sentence": "荷物を持ちましょうか。",
+        "translation": "Để tôi xách hành lý giúp nhé?"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "grammar": "～ませんか",
+    "reading": "～ませんか",
+    "meaning": "Rủ rê một cách lịch sự",
+    "examples": [
+      {
+        "sentence": "一緒に映画を見ませんか。",
+        "translation": "Bạn có muốn xem phim cùng tôi không?"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "grammar": "～つもりだ",
+    "reading": "～つもりだ",
+    "meaning": "Dự định làm gì",
+    "examples": [
+      {
+        "sentence": "来年日本へ行くつもりです。",
+        "translation": "Tôi dự định sang Nhật vào năm sau."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "grammar": "～に行く",
+    "reading": "～にいく",
+    "meaning": "Đi để làm gì",
+    "examples": [
+      {
+        "sentence": "スーパーへ牛乳を買いに行きます。",
+        "translation": "Tôi đến siêu thị mua sữa."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "grammar": "～に来る",
+    "reading": "～にくる",
+    "meaning": "Đến để làm gì",
+    "examples": [
+      {
+        "sentence": "友達が遊びに来ました。",
+        "translation": "Bạn tôi đã đến chơi."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "grammar": "～ことができる",
+    "reading": "～ことができる",
+    "meaning": "Có thể làm gì",
+    "examples": [
+      {
+        "sentence": "私は日本語を少し話すことができます。",
+        "translation": "Tôi có thể nói một ít tiếng Nhật."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "grammar": "～のが好きだ",
+    "reading": "～のがすきだ",
+    "meaning": "Thích làm gì",
+    "examples": [
+      {
+        "sentence": "私は音楽を聞くのが好きです。",
+        "translation": "Tôi thích nghe nhạc."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "grammar": "～のが上手だ",
+    "reading": "～のがじょうずだ",
+    "meaning": "Giỏi làm gì",
+    "examples": [
+      {
+        "sentence": "妹は絵を描くのが上手です。",
+        "translation": "Em gái tôi vẽ rất giỏi."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "grammar": "～のが下手だ",
+    "reading": "～のがへただ",
+    "meaning": "Không giỏi làm gì",
+    "examples": [
+      {
+        "sentence": "私は歌うのが下手です。",
+        "translation": "Tôi hát không hay."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "grammar": "～こと",
+    "reading": "～こと",
+    "meaning": "Danh từ hóa động từ; việc làm gì",
+    "examples": [
+      {
+        "sentence": "本を読むことは楽しいです。",
+        "translation": "Việc đọc sách rất thú vị."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "grammar": "～の",
+    "reading": "～の",
+    "meaning": "Danh từ hóa động từ",
+    "examples": [
+      {
+        "sentence": "泳ぐのは楽しいです。",
+        "translation": "Bơi lội rất vui."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "grammar": "～たことがある",
+    "reading": "～たことがある",
+    "meaning": "Đã từng làm gì",
+    "examples": [
+      {
+        "sentence": "富士山に登ったことがあります。",
+        "translation": "Tôi đã từng leo núi Phú Sĩ."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "grammar": "～たり～たりする",
+    "reading": "～たり～たりする",
+    "meaning": "Làm những việc như... và...",
+    "examples": [
+      {
+        "sentence": "日曜日は掃除したり洗濯したりします。",
+        "translation": "Chủ nhật tôi làm những việc như dọn dẹp và giặt giũ."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "grammar": "～てから",
+    "reading": "～てから",
+    "meaning": "Sau khi làm gì",
+    "examples": [
+      {
+        "sentence": "手を洗ってから食べます。",
+        "translation": "Tôi rửa tay rồi mới ăn."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "grammar": "～る前に",
+    "reading": "～るまえに",
+    "meaning": "Trước khi làm gì",
+    "examples": [
+      {
+        "sentence": "寝る前に歯を磨きます。",
+        "translation": "Tôi đánh răng trước khi ngủ."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "grammar": "～た後で",
+    "reading": "～たあとで",
+    "meaning": "Sau khi đã làm gì",
+    "examples": [
+      {
+        "sentence": "宿題をした後でテレビを見ます。",
+        "translation": "Sau khi làm bài tập, tôi xem ti vi."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "grammar": "～とき",
+    "reading": "～とき",
+    "meaning": "Khi; lúc",
+    "examples": [
+      {
+        "sentence": "暇なとき、本を読みます。",
+        "translation": "Khi rảnh tôi đọc sách."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "grammar": "～ながら",
+    "reading": "～ながら",
+    "meaning": "Vừa làm A vừa làm B",
+    "examples": [
+      {
+        "sentence": "音楽を聞きながら勉強します。",
+        "translation": "Tôi vừa nghe nhạc vừa học."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "grammar": "～から",
+    "reading": "～から",
+    "meaning": "Vì; bởi vì",
+    "examples": [
+      {
+        "sentence": "寒いですから、窓を閉めます。",
+        "translation": "Vì trời lạnh nên tôi đóng cửa sổ."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "grammar": "～ので",
+    "reading": "～ので",
+    "meaning": "Vì; do (giải thích nhẹ nhàng)",
+    "examples": [
+      {
+        "sentence": "雨が降っているので、出かけません。",
+        "translation": "Vì trời đang mưa nên tôi không ra ngoài."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "grammar": "～けど",
+    "reading": "～けど",
+    "meaning": "Nhưng; tuy nhiên",
+    "examples": [
+      {
+        "sentence": "この店は安いけど、おいしいです。",
+        "translation": "Quán này rẻ nhưng ngon."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "grammar": "～が（逆接）",
+    "reading": "～が",
+    "meaning": "Nhưng (nối hai mệnh đề)",
+    "examples": [
+      {
+        "sentence": "日本語は難しいですが、面白いです。",
+        "translation": "Tiếng Nhật khó nhưng thú vị."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "grammar": "～そして",
+    "reading": "～そして",
+    "meaning": "Và rồi; và",
+    "examples": [
+      {
+        "sentence": "朝ご飯を食べました。そして、学校へ行きました。",
+        "translation": "Tôi ăn sáng, sau đó đến trường."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "grammar": "～それから",
+    "reading": "～それから",
+    "meaning": "Sau đó",
+    "examples": [
+      {
+        "sentence": "買い物をしました。それから、家に帰りました。",
+        "translation": "Tôi mua sắm rồi sau đó về nhà."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "grammar": "～でも",
+    "reading": "～でも",
+    "meaning": "Nhưng; tuy nhiên",
+    "examples": [
+      {
+        "sentence": "今日は雨です。でも、出かけます。",
+        "translation": "Hôm nay trời mưa. Nhưng tôi vẫn ra ngoài."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "grammar": "～だから",
+    "reading": "～だから",
+    "meaning": "Vì thế; do đó",
+    "examples": [
+      {
+        "sentence": "今日は日曜日です。だから、学校は休みです。",
+        "translation": "Hôm nay là Chủ nhật. Vì vậy trường nghỉ."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "grammar": "～と（条件）",
+    "reading": "～と",
+    "meaning": "Nếu; cứ hễ... thì (kết quả tự nhiên)",
+    "examples": [
+      {
+        "sentence": "春になると、桜が咲きます。",
+        "translation": "Cứ đến mùa xuân là hoa anh đào nở."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "grammar": "～たら",
+    "reading": "～たら",
+    "meaning": "Nếu; khi đã",
+    "examples": [
+      {
+        "sentence": "時間があったら、映画を見ます。",
+        "translation": "Nếu có thời gian, tôi sẽ xem phim."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "grammar": "～ても",
+    "reading": "～ても",
+    "meaning": "Cho dù; dù có",
+    "examples": [
+      {
+        "sentence": "雨が降っても行きます。",
+        "translation": "Dù trời mưa tôi vẫn đi."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "grammar": "～より",
+    "reading": "～より",
+    "meaning": "Hơn; so với",
+    "examples": [
+      {
+        "sentence": "電車はバスより速いです。",
+        "translation": "Tàu điện nhanh hơn xe buýt."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "grammar": "～のほうが",
+    "reading": "～のほうが",
+    "meaning": "Phía... hơn; ... hơn",
+    "examples": [
+      {
+        "sentence": "犬より猫のほうが好きです。",
+        "translation": "Tôi thích mèo hơn chó."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "grammar": "～ほど～ない",
+    "reading": "～ほど～ない",
+    "meaning": "Không... bằng...",
+    "examples": [
+      {
+        "sentence": "今日は昨日ほど寒くないです。",
+        "translation": "Hôm nay không lạnh bằng hôm qua."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "grammar": "～いちばん",
+    "reading": "～いちばん",
+    "meaning": "Nhất trong nhóm",
+    "examples": [
+      {
+        "sentence": "果物の中でりんごがいちばん好きです。",
+        "translation": "Trong các loại trái cây, tôi thích táo nhất."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "grammar": "～と同じ",
+    "reading": "～とおなじ",
+    "meaning": "Giống như; bằng với",
+    "examples": [
+      {
+        "sentence": "私のかばんは姉のかばんと同じです。",
+        "translation": "Cặp của tôi giống cặp của chị gái."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "grammar": "～くらい／ぐらい",
+    "reading": "～くらい／ぐらい",
+    "meaning": "Khoảng; chừng",
+    "examples": [
+      {
+        "sentence": "駅まで十分ぐらいかかります。",
+        "translation": "Mất khoảng mười phút để đến ga."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "grammar": "～ごろ",
+    "reading": "～ごろ",
+    "meaning": "Khoảng (mốc thời gian)",
+    "examples": [
+      {
+        "sentence": "毎晩十一時ごろ寝ます。",
+        "translation": "Mỗi tối tôi ngủ khoảng 11 giờ."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "grammar": "～だけ",
+    "reading": "～だけ",
+    "meaning": "Chỉ; duy nhất",
+    "examples": [
+      {
+        "sentence": "水だけ飲みました。",
+        "translation": "Tôi chỉ uống nước."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "grammar": "～しか～ない",
+    "reading": "～しか～ない",
+    "meaning": "Chỉ có... (đi với phủ định)",
+    "examples": [
+      {
+        "sentence": "百円しかありません。",
+        "translation": "Tôi chỉ có 100 yên."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "grammar": "～も",
+    "reading": "～も",
+    "meaning": "Cũng; đến tận",
+    "examples": [
+      {
+        "sentence": "私も日本語を勉強しています。",
+        "translation": "Tôi cũng đang học tiếng Nhật."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "grammar": "～は",
+    "reading": "～は",
+    "meaning": "Trợ từ nêu chủ đề",
+    "examples": [
+      {
+        "sentence": "私はベトナム人です。",
+        "translation": "Tôi là người Việt Nam."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "grammar": "～が（主格）",
+    "reading": "～が",
+    "meaning": "Trợ từ đánh dấu chủ ngữ",
+    "examples": [
+      {
+        "sentence": "庭に猫がいます。",
+        "translation": "Có một con mèo ở trong vườn."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "grammar": "～を",
+    "reading": "～を",
+    "meaning": "Trợ từ đánh dấu tân ngữ",
+    "examples": [
+      {
+        "sentence": "毎日新聞を読みます。",
+        "translation": "Tôi đọc báo mỗi ngày."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "grammar": "～に",
+    "reading": "～に",
+    "meaning": "Trợ từ chỉ thời điểm hoặc đích đến",
+    "examples": [
+      {
+        "sentence": "七時に起きます。",
+        "translation": "Tôi thức dậy lúc bảy giờ."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "grammar": "～へ",
+    "reading": "～へ",
+    "meaning": "Trợ từ chỉ hướng đến",
+    "examples": [
+      {
+        "sentence": "学校へ行きます。",
+        "translation": "Tôi đi đến trường."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "grammar": "～で",
+    "reading": "～で",
+    "meaning": "Trợ từ chỉ nơi diễn ra hành động",
+    "examples": [
+      {
+        "sentence": "図書館で勉強します。",
+        "translation": "Tôi học ở thư viện."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "grammar": "～と（共同）",
+    "reading": "～と",
+    "meaning": "Trợ từ chỉ cùng với; và",
+    "examples": [
+      {
+        "sentence": "友達と買い物に行きました。",
+        "translation": "Tôi đi mua sắm cùng bạn."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "grammar": "～から～まで",
+    "reading": "～から～まで",
+    "meaning": "Từ... đến...",
+    "examples": [
+      {
+        "sentence": "仕事は九時から五時までです。",
+        "translation": "Công việc từ chín giờ đến năm giờ."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "grammar": "～や～など",
+    "reading": "～や～など",
+    "meaning": "Liệt kê không đầy đủ: ... và ... v.v.",
+    "examples": [
+      {
+        "sentence": "机の上に本やノートなどがあります。",
+        "translation": "Trên bàn có sách, vở và những thứ khác."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "grammar": "～か～か",
+    "reading": "～か～か",
+    "meaning": "... hay ...",
+    "examples": [
+      {
+        "sentence": "コーヒーかお茶を飲みます。",
+        "translation": "Tôi sẽ uống cà phê hoặc trà."
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "grammar": "～か",
+    "reading": "～か",
+    "meaning": "Trợ từ tạo câu hỏi",
+    "examples": [
+      {
+        "sentence": "これはあなたの傘ですか。",
+        "translation": "Đây là ô của bạn phải không?"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "grammar": "～ね",
+    "reading": "～ね",
+    "meaning": "Nhỉ; nhé (tìm sự đồng tình)",
+    "examples": [
+      {
+        "sentence": "今日は暑いですね。",
+        "translation": "Hôm nay nóng nhỉ."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "grammar": "～よ",
+    "reading": "～よ",
+    "meaning": "Đấy; nhé (nhấn mạnh thông tin)",
+    "examples": [
+      {
+        "sentence": "このケーキはおいしいですよ。",
+        "translation": "Cái bánh này ngon đấy."
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "grammar": "～でしょう",
+    "reading": "～でしょう",
+    "meaning": "Có lẽ; đúng không (lịch sự)",
+    "examples": [
+      {
+        "sentence": "明日は晴れるでしょう。",
+        "translation": "Có lẽ ngày mai trời nắng."
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "grammar": "～だろう",
+    "reading": "～だろう",
+    "meaning": "Có lẽ (dạng thông thường)",
+    "examples": [
+      {
+        "sentence": "明日は雨だろう。",
+        "translation": "Có lẽ ngày mai trời mưa."
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "grammar": "～と思う",
+    "reading": "～とおもう",
+    "meaning": "Nghĩ rằng",
+    "examples": [
+      {
+        "sentence": "彼はもう帰ったと思います。",
+        "translation": "Tôi nghĩ anh ấy đã về rồi."
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "grammar": "～と言う",
+    "reading": "～という",
+    "meaning": "Nói rằng; gọi là",
+    "examples": [
+      {
+        "sentence": "これは日本語で何と言いますか。",
+        "translation": "Cái này tiếng Nhật gọi là gì?"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "grammar": "～てみる",
+    "reading": "～てみる",
+    "meaning": "Thử làm gì",
+    "examples": [
+      {
+        "sentence": "この料理を食べてみます。",
+        "translation": "Tôi sẽ thử ăn món này."
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "grammar": "～てしまう",
+    "reading": "～てしまう",
+    "meaning": "Làm xong; lỡ làm mất",
+    "examples": [
+      {
+        "sentence": "財布を忘れてしまいました。",
+        "translation": "Tôi lỡ quên ví mất rồi."
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "grammar": "～ておく",
+    "reading": "～ておく",
+    "meaning": "Làm trước để chuẩn bị",
+    "examples": [
+      {
+        "sentence": "旅行の前にホテルを予約しておきます。",
+        "translation": "Tôi sẽ đặt khách sạn trước chuyến du lịch."
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "grammar": "～てあげる",
+    "reading": "～てあげる",
+    "meaning": "Làm giúp ai",
+    "examples": [
+      {
+        "sentence": "弟に日本語を教えてあげます。",
+        "translation": "Tôi dạy tiếng Nhật cho em trai."
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "grammar": "～てくれる",
+    "reading": "～てくれる",
+    "meaning": "Ai đó làm giúp mình",
+    "examples": [
+      {
+        "sentence": "友達が宿題を手伝ってくれました。",
+        "translation": "Bạn đã giúp tôi làm bài tập."
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "grammar": "～てもらう",
+    "reading": "～てもらう",
+    "meaning": "Được ai đó làm giúp",
+    "examples": [
+      {
+        "sentence": "先生に作文を直してもらいました。",
+        "translation": "Tôi được thầy cô sửa bài văn cho."
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "grammar": "～ほしい",
+    "reading": "～ほしい",
+    "meaning": "Muốn có thứ gì",
+    "examples": [
+      {
+        "sentence": "新しい自転車がほしいです。",
+        "translation": "Tôi muốn có một chiếc xe đạp mới."
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "grammar": "～がある",
+    "reading": "～がある",
+    "meaning": "Có; tồn tại (đồ vật, sự việc)",
+    "examples": [
+      {
+        "sentence": "公園に大きな木があります。",
+        "translation": "Trong công viên có một cây lớn."
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "grammar": "～がいる",
+    "reading": "～がいる",
+    "meaning": "Có; tồn tại (người, động vật)",
+    "examples": [
+      {
+        "sentence": "教室に学生がいます。",
+        "translation": "Trong lớp có học sinh."
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "grammar": "～になる",
+    "reading": "～になる",
+    "meaning": "Trở nên; trở thành",
+    "examples": [
+      {
+        "sentence": "もうすぐ春になります。",
+        "translation": "Sắp đến mùa xuân rồi."
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "grammar": "～くなる",
+    "reading": "～くなる",
+    "meaning": "Trở nên... (tính từ đuôi い)",
+    "examples": [
+      {
+        "sentence": "だんだん暖かくなりました。",
+        "translation": "Trời đã dần ấm lên."
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "grammar": "～にする",
+    "reading": "～にする",
+    "meaning": "Chọn; quyết định chọn",
+    "examples": [
+      {
+        "sentence": "飲み物はお茶にします。",
+        "translation": "Tôi chọn trà làm đồ uống."
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "grammar": "～くする",
+    "reading": "～くする",
+    "meaning": "Làm cho... hơn (tính từ đuôi い)",
+    "examples": [
+      {
+        "sentence": "テレビの音を小さくしてください。",
+        "translation": "Xin hãy vặn nhỏ tiếng ti vi."
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "grammar": "～すぎる",
+    "reading": "～すぎる",
+    "meaning": "Quá; quá mức",
+    "examples": [
+      {
+        "sentence": "昨日は食べすぎました。",
+        "translation": "Hôm qua tôi ăn quá nhiều."
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "grammar": "～やすい",
+    "reading": "～やすい",
+    "meaning": "Dễ làm gì",
+    "examples": [
+      {
+        "sentence": "この漢字は覚えやすいです。",
+        "translation": "Chữ Hán này dễ nhớ."
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "grammar": "～にくい",
+    "reading": "～にくい",
+    "meaning": "Khó làm gì",
+    "examples": [
+      {
+        "sentence": "このペンは書きにくいです。",
+        "translation": "Cây bút này khó viết."
+      }
+    ]
+  }
+]
