@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "grammar": "～ようにする",
+    "reading": "～ようにする",
+    "meaning": "Cố gắng tạo thói quen làm gì",
+    "examples": [
+      {
+        "sentence": "毎日日本語のニュースを読むようにしています。",
+        "translation": "Tôi cố gắng đọc tin tức tiếng Nhật mỗi ngày."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "grammar": "～ようになる",
+    "reading": "～ようになる",
+    "meaning": "Trở nên có thể; bắt đầu có thói quen",
+    "examples": [
+      {
+        "sentence": "日本に来てから、納豆が食べられるようになりました。",
+        "translation": "Từ khi sang Nhật, tôi đã ăn được natto."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "grammar": "～ことになる",
+    "reading": "～ことになる",
+    "meaning": "Được quyết định là; dẫn đến kết quả",
+    "examples": [
+      {
+        "sentence": "来月から大阪支店で働くことになりました。",
+        "translation": "Tôi đã được quyết định sẽ làm việc tại chi nhánh Osaka từ tháng sau."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "grammar": "～ことにする",
+    "reading": "～ことにする",
+    "meaning": "Tự quyết định làm gì",
+    "examples": [
+      {
+        "sentence": "健康のために、毎朝走ることにしました。",
+        "translation": "Tôi đã quyết định chạy bộ mỗi sáng vì sức khỏe."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "grammar": "～ことになっている",
+    "reading": "～ことになっている",
+    "meaning": "Theo quy định hoặc lịch trình đã định",
+    "examples": [
+      {
+        "sentence": "この図書館では飲食してはいけないことになっています。",
+        "translation": "Theo quy định, không được ăn uống trong thư viện này."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "grammar": "～ことはない",
+    "reading": "～ことはない",
+    "meaning": "Không cần phải làm gì",
+    "examples": [
+      {
+        "sentence": "まだ時間があるから、急ぐことはありません。",
+        "translation": "Vẫn còn thời gian nên không cần vội."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "grammar": "～わけではない",
+    "reading": "～わけではない",
+    "meaning": "Không hẳn là; không có nghĩa là",
+    "examples": [
+      {
+        "sentence": "日本料理が全部好きなわけではありません。",
+        "translation": "Không phải món Nhật nào tôi cũng thích."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "grammar": "～わけがない",
+    "reading": "～わけがない",
+    "meaning": "Không thể nào có chuyện",
+    "examples": [
+      {
+        "sentence": "彼がそんな約束を忘れるわけがありません。",
+        "translation": "Không thể nào anh ấy quên lời hứa như thế."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "grammar": "～わけにはいかない",
+    "reading": "～わけにはいかない",
+    "meaning": "Không thể làm do trách nhiệm hoặc hoàn cảnh",
+    "examples": [
+      {
+        "sentence": "明日は試験だから、遊んでいるわけにはいきません。",
+        "translation": "Ngày mai thi nên tôi không thể cứ chơi được."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "grammar": "～ないわけにはいかない",
+    "reading": "～ないわけにはいかない",
+    "meaning": "Không thể không làm gì",
+    "examples": [
+      {
+        "sentence": "上司に頼まれたので、引き受けないわけにはいきません。",
+        "translation": "Vì cấp trên nhờ nên tôi không thể không nhận."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "grammar": "～はずだ",
+    "reading": "～はずだ",
+    "meaning": "Chắc hẳn; theo lý thì",
+    "examples": [
+      {
+        "sentence": "田中さんはもう駅に着いているはずです。",
+        "translation": "Theo lý thì anh Tanaka đã đến ga rồi."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "grammar": "～はずがない",
+    "reading": "～はずがない",
+    "meaning": "Không thể nào; không có lý nào",
+    "examples": [
+      {
+        "sentence": "鍵をかけたから、誰も入れるはずがありません。",
+        "translation": "Vì tôi đã khóa cửa nên không thể có ai vào được."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "grammar": "～はずだった",
+    "reading": "～はずだった",
+    "meaning": "Đáng lẽ đã dự định; lẽ ra phải",
+    "examples": [
+      {
+        "sentence": "今日は晴れるはずだったのに、雨が降っています。",
+        "translation": "Đáng lẽ hôm nay trời nắng, vậy mà đang mưa."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "grammar": "～に違いない",
+    "reading": "～にちがいない",
+    "meaning": "Chắc chắn là; hẳn là",
+    "examples": [
+      {
+        "sentence": "電気がついているから、誰かいるに違いありません。",
+        "translation": "Đèn đang sáng nên chắc chắn có ai ở đó."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "grammar": "～に決まっている",
+    "reading": "～にきまっている",
+    "meaning": "Chắc chắn là (tin chắc)",
+    "examples": [
+      {
+        "sentence": "あんなに練習したのだから、合格するに決まっています。",
+        "translation": "Đã luyện tập nhiều thế thì chắc chắn sẽ đỗ."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "grammar": "～らしい",
+    "reading": "～らしい",
+    "meaning": "Nghe nói; có vẻ như; đúng chất",
+    "examples": [
+      {
+        "sentence": "天気予報によると、明日は雪が降るらしいです。",
+        "translation": "Theo dự báo thời tiết, nghe nói ngày mai sẽ có tuyết."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "grammar": "～みたいだ",
+    "reading": "～みたいだ",
+    "meaning": "Giống như; có vẻ như",
+    "examples": [
+      {
+        "sentence": "あの雲は魚みたいな形をしています。",
+        "translation": "Đám mây kia có hình dạng giống con cá."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "grammar": "～ようだ",
+    "reading": "～ようだ",
+    "meaning": "Có vẻ như; giống như",
+    "examples": [
+      {
+        "sentence": "外で誰かが話しているようです。",
+        "translation": "Có vẻ như có ai đang nói chuyện ở ngoài."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "grammar": "～っぽい",
+    "reading": "～っぽい",
+    "meaning": "Có vẻ; dễ hay; mang tính chất",
+    "examples": [
+      {
+        "sentence": "この服は少し子どもっぽいですね。",
+        "translation": "Bộ quần áo này hơi trẻ con nhỉ."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "grammar": "～がち",
+    "reading": "～がち",
+    "meaning": "Thường hay có xu hướng không tốt",
+    "examples": [
+      {
+        "sentence": "忙しいと朝ご飯を抜きがちです。",
+        "translation": "Khi bận tôi thường hay bỏ bữa sáng."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "grammar": "～気味",
+    "reading": "～ぎみ",
+    "meaning": "Hơi có dấu hiệu; hơi thiên về",
+    "examples": [
+      {
+        "sentence": "最近、仕事が忙しくて疲れ気味です。",
+        "translation": "Gần đây công việc bận nên tôi hơi mệt."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "grammar": "～だらけ",
+    "reading": "～だらけ",
+    "meaning": "Đầy những thứ không mong muốn",
+    "examples": [
+      {
+        "sentence": "子どもの服は泥だらけでした。",
+        "translation": "Quần áo của đứa bé dính đầy bùn."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "grammar": "～ばかり",
+    "reading": "～ばかり",
+    "meaning": "Toàn; chỉ làm mãi một việc",
+    "examples": [
+      {
+        "sentence": "弟は休みの日にゲームばかりしています。",
+        "translation": "Em trai tôi ngày nghỉ chỉ toàn chơi game."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "grammar": "～ばかりだ",
+    "reading": "～ばかりだ",
+    "meaning": "Ngày càng tiếp tục theo một chiều hướng",
+    "examples": [
+      {
+        "sentence": "物価は上がるばかりです。",
+        "translation": "Giá cả cứ tăng mãi."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "grammar": "～ばかりに",
+    "reading": "～ばかりに",
+    "meaning": "Chỉ vì một nguyên nhân mà nhận kết quả xấu",
+    "examples": [
+      {
+        "sentence": "一言余計なことを言ったばかりに、友達を怒らせてしまいました。",
+        "translation": "Chỉ vì nói thừa một câu mà tôi đã khiến bạn nổi giận."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "grammar": "～たばかり",
+    "reading": "～たばかり",
+    "meaning": "Vừa mới làm gì (cảm nhận chủ quan)",
+    "examples": [
+      {
+        "sentence": "先月入社したばかりなので、まだ仕事に慣れていません。",
+        "translation": "Tôi vừa mới vào công ty tháng trước nên vẫn chưa quen việc."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "grammar": "～ところだ",
+    "reading": "～ところだ",
+    "meaning": "Đúng lúc sắp; đang; vừa làm gì",
+    "examples": [
+      {
+        "sentence": "今から会議を始めるところです。",
+        "translation": "Chúng tôi đang chuẩn bị bắt đầu cuộc họp."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "grammar": "～たところ",
+    "reading": "～たところ",
+    "meaning": "Sau khi thử làm thì phát hiện kết quả",
+    "examples": [
+      {
+        "sentence": "先生に相談したところ、いい方法を教えてくれました。",
+        "translation": "Sau khi hỏi ý kiến thầy, tôi được chỉ cho cách hay."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "grammar": "～ところに",
+    "reading": "～ところに",
+    "meaning": "Đúng lúc đang trong tình huống thì",
+    "examples": [
+      {
+        "sentence": "出かけようとしたところに、友達から電話が来ました。",
+        "translation": "Đúng lúc tôi định ra ngoài thì bạn gọi điện tới."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "grammar": "～ところで",
+    "reading": "～ところで",
+    "meaning": "Dù có làm thì cũng không thay đổi kết quả",
+    "examples": [
+      {
+        "sentence": "今から急いだところで、電車には間に合いません。",
+        "translation": "Giờ có vội cũng không kịp tàu."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "grammar": "～うちに",
+    "reading": "～うちに",
+    "meaning": "Trong khi còn; trước khi trạng thái thay đổi",
+    "examples": [
+      {
+        "sentence": "若いうちにいろいろな経験をしたいです。",
+        "translation": "Tôi muốn trải nghiệm nhiều điều khi còn trẻ."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "grammar": "～間に",
+    "reading": "～あいだに",
+    "meaning": "Trong khoảng thời gian đang diễn ra điều khác",
+    "examples": [
+      {
+        "sentence": "母が買い物に行っている間に、掃除をしました。",
+        "translation": "Trong lúc mẹ đi mua sắm, tôi đã dọn dẹp."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "grammar": "～最中に",
+    "reading": "～さいちゅうに",
+    "meaning": "Đúng giữa lúc đang làm gì",
+    "examples": [
+      {
+        "sentence": "会議の最中に携帯電話が鳴りました。",
+        "translation": "Điện thoại reo đúng lúc cuộc họp đang diễn ra."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "grammar": "～たとたん（に）",
+    "reading": "～たとたん（に）",
+    "meaning": "Ngay khi vừa làm thì xảy ra chuyện bất ngờ",
+    "examples": [
+      {
+        "sentence": "ドアを開けたとたん、猫が飛び出しました。",
+        "translation": "Ngay khi mở cửa, con mèo phóng ra ngoài."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "grammar": "～次第",
+    "reading": "～しだい",
+    "meaning": "Ngay sau khi xong việc sẽ làm tiếp",
+    "examples": [
+      {
+        "sentence": "準備ができ次第、出発します。",
+        "translation": "Ngay khi chuẩn bị xong, chúng tôi sẽ xuất phát."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "grammar": "～ついでに",
+    "reading": "～ついでに",
+    "meaning": "Nhân tiện làm việc gì",
+    "examples": [
+      {
+        "sentence": "郵便局へ行くついでに、切手を買いました。",
+        "translation": "Nhân tiện đến bưu điện, tôi đã mua tem."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "grammar": "～たびに",
+    "reading": "～たびに",
+    "meaning": "Mỗi lần làm gì thì",
+    "examples": [
+      {
+        "sentence": "この歌を聞くたびに、故郷を思い出します。",
+        "translation": "Mỗi lần nghe bài hát này, tôi lại nhớ quê."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "grammar": "～ごとに",
+    "reading": "～ごとに",
+    "meaning": "Cứ mỗi; theo từng",
+    "examples": [
+      {
+        "sentence": "このバスは30分ごとに出発します。",
+        "translation": "Xe buýt này khởi hành cứ mỗi 30 phút."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "grammar": "～おきに",
+    "reading": "～おきに",
+    "meaning": "Cứ cách một khoảng",
+    "examples": [
+      {
+        "sentence": "薬を6時間おきに飲んでください。",
+        "translation": "Hãy uống thuốc cách mỗi sáu tiếng."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "grammar": "～につれて",
+    "reading": "～につれて",
+    "meaning": "Càng thay đổi thì điều khác cũng thay đổi",
+    "examples": [
+      {
+        "sentence": "年を取るにつれて、健康の大切さがわかってきました。",
+        "translation": "Càng có tuổi tôi càng hiểu tầm quan trọng của sức khỏe."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "grammar": "～にしたがって",
+    "reading": "～にしたがって",
+    "meaning": "Cùng với sự thay đổi; theo",
+    "examples": [
+      {
+        "sentence": "気温が上がるにしたがって、アイスの売り上げが増えます。",
+        "translation": "Nhiệt độ càng tăng thì doanh số kem càng tăng."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "grammar": "～とともに",
+    "reading": "～とともに",
+    "meaning": "Cùng với; đồng thời",
+    "examples": [
+      {
+        "sentence": "時代の変化とともに、働き方も変わりました。",
+        "translation": "Cùng với sự thay đổi của thời đại, cách làm việc cũng thay đổi."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "grammar": "～に伴って",
+    "reading": "～にともなって",
+    "meaning": "Kéo theo; đi cùng sự thay đổi",
+    "examples": [
+      {
+        "sentence": "人口の増加に伴って、交通問題が深刻になっています。",
+        "translation": "Kéo theo sự gia tăng dân số, vấn đề giao thông ngày càng nghiêm trọng."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "grammar": "～に応じて",
+    "reading": "～におうじて",
+    "meaning": "Tùy theo; tương ứng với",
+    "examples": [
+      {
+        "sentence": "経験に応じて、給料が決まります。",
+        "translation": "Lương được quyết định tùy theo kinh nghiệm."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "grammar": "～によって",
+    "reading": "～によって",
+    "meaning": "Tùy theo; bởi; bằng phương pháp",
+    "examples": [
+      {
+        "sentence": "国によって生活習慣が違います。",
+        "translation": "Tập quán sinh hoạt khác nhau tùy từng quốc gia."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "grammar": "～によると",
+    "reading": "～によると",
+    "meaning": "Theo nguồn thông tin",
+    "examples": [
+      {
+        "sentence": "ニュースによると、明日は電車が遅れるそうです。",
+        "translation": "Theo tin tức, nghe nói ngày mai tàu sẽ trễ."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "grammar": "～に対して",
+    "reading": "～にたいして",
+    "meaning": "Đối với; trái ngược với",
+    "examples": [
+      {
+        "sentence": "先生は学生の質問に対して丁寧に答えました。",
+        "translation": "Thầy giáo trả lời cẩn thận các câu hỏi của sinh viên."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "grammar": "～にとって",
+    "reading": "～にとって",
+    "meaning": "Đối với ai đó thì",
+    "examples": [
+      {
+        "sentence": "私にとって家族が一番大切です。",
+        "translation": "Đối với tôi, gia đình là quan trọng nhất."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "grammar": "～について",
+    "reading": "～について",
+    "meaning": "Về; liên quan đến chủ đề",
+    "examples": [
+      {
+        "sentence": "日本の文化についてレポートを書きました。",
+        "translation": "Tôi đã viết báo cáo về văn hóa Nhật Bản."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "grammar": "～に関して",
+    "reading": "～にかんして",
+    "meaning": "Liên quan đến; về vấn đề",
+    "examples": [
+      {
+        "sentence": "新しい規則に関して説明があります。",
+        "translation": "Có phần giải thích liên quan đến quy định mới."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "grammar": "～を通して",
+    "reading": "～をとおして",
+    "meaning": "Thông qua; suốt khoảng thời gian",
+    "examples": [
+      {
+        "sentence": "ボランティア活動を通して、多くのことを学びました。",
+        "translation": "Thông qua hoạt động tình nguyện, tôi học được nhiều điều."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "grammar": "～を通じて",
+    "reading": "～をつうじて",
+    "meaning": "Thông qua; xuyên suốt",
+    "examples": [
+      {
+        "sentence": "インターネットを通じて、世界中の人と交流できます。",
+        "translation": "Thông qua Internet, ta có thể giao lưu với mọi người trên thế giới."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "grammar": "～において",
+    "reading": "～において",
+    "meaning": "Tại; trong bối cảnh hoặc lĩnh vực",
+    "examples": [
+      {
+        "sentence": "東京において国際会議が開かれました。",
+        "translation": "Một hội nghị quốc tế đã được tổ chức tại Tokyo."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "grammar": "～における",
+    "reading": "～における",
+    "meaning": "Ở; trong (bổ nghĩa cho danh từ)",
+    "examples": [
+      {
+        "sentence": "現代社会における教育の役割は重要です。",
+        "translation": "Vai trò của giáo dục trong xã hội hiện đại rất quan trọng."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "grammar": "～に比べて",
+    "reading": "～にくらべて",
+    "meaning": "So với",
+    "examples": [
+      {
+        "sentence": "去年に比べて、今年は雨が多いです。",
+        "translation": "So với năm ngoái, năm nay mưa nhiều."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "grammar": "～に反して",
+    "reading": "～にはんして",
+    "meaning": "Trái với; ngược lại với",
+    "examples": [
+      {
+        "sentence": "予想に反して、試験は簡単でした。",
+        "translation": "Trái với dự đoán, bài thi rất dễ."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "grammar": "～反面",
+    "reading": "～はんめん",
+    "meaning": "Mặt khác; trái lại ở một khía cạnh",
+    "examples": [
+      {
+        "sentence": "この仕事は大変な反面、やりがいがあります。",
+        "translation": "Công việc này vất vả nhưng mặt khác rất đáng làm."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "grammar": "～一方で",
+    "reading": "～いっぽうで",
+    "meaning": "Một mặt thì; mặt khác thì",
+    "examples": [
+      {
+        "sentence": "都会は便利な一方で、生活費が高いです。",
+        "translation": "Thành phố tiện lợi nhưng mặt khác chi phí sinh hoạt cao."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "grammar": "～一方だ",
+    "reading": "～いっぽうだ",
+    "meaning": "Càng ngày càng theo một hướng",
+    "examples": [
+      {
+        "sentence": "祖父の体力は弱くなる一方です。",
+        "translation": "Thể lực của ông tôi ngày càng suy yếu."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "grammar": "～かわりに",
+    "reading": "～かわりに",
+    "meaning": "Thay cho; đổi lại",
+    "examples": [
+      {
+        "sentence": "私が料理するかわりに、弟が皿を洗います。",
+        "translation": "Đổi lại việc tôi nấu ăn, em trai tôi rửa bát."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "grammar": "～代わりに",
+    "reading": "～かわりに",
+    "meaning": "Thay thế cho người hay vật",
+    "examples": [
+      {
+        "sentence": "部長の代わりに私が会議に出席しました。",
+        "translation": "Tôi dự họp thay trưởng phòng."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "grammar": "～だけでなく",
+    "reading": "～だけでなく",
+    "meaning": "Không chỉ mà còn",
+    "examples": [
+      {
+        "sentence": "彼は英語だけでなく、中国語も話せます。",
+        "translation": "Anh ấy không chỉ nói tiếng Anh mà còn nói được tiếng Trung."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "grammar": "～ばかりでなく",
+    "reading": "～ばかりでなく",
+    "meaning": "Không những mà còn",
+    "examples": [
+      {
+        "sentence": "この店は安いばかりでなく、味もいいです。",
+        "translation": "Quán này không những rẻ mà còn ngon."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "grammar": "～のみならず",
+    "reading": "～のみならず",
+    "meaning": "Không chỉ mà còn (trang trọng)",
+    "examples": [
+      {
+        "sentence": "この技術は日本のみならず、海外でも使われています。",
+        "translation": "Công nghệ này được dùng không chỉ ở Nhật mà cả nước ngoài."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "grammar": "～はもちろん",
+    "reading": "～はもちろん",
+    "meaning": "Đương nhiên là; chưa kể đến",
+    "examples": [
+      {
+        "sentence": "彼女は日本語はもちろん、韓国語も上手です。",
+        "translation": "Cô ấy giỏi tiếng Nhật là đương nhiên, cả tiếng Hàn cũng giỏi."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "grammar": "～さえ",
+    "reading": "～さえ",
+    "meaning": "Ngay cả; đến cả",
+    "examples": [
+      {
+        "sentence": "忙しくて昼ご飯を食べる時間さえありません。",
+        "translation": "Bận đến mức ngay cả thời gian ăn trưa cũng không có."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "grammar": "～さえ～ば",
+    "reading": "～さえ～ば",
+    "meaning": "Chỉ cần điều kiện tối thiểu thì",
+    "examples": [
+      {
+        "sentence": "時間さえあれば、この本を読みたいです。",
+        "translation": "Chỉ cần có thời gian thì tôi muốn đọc cuốn sách này."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "grammar": "～こそ",
+    "reading": "～こそ",
+    "meaning": "Chính là; nhấn mạnh",
+    "examples": [
+      {
+        "sentence": "今度こそ試験に合格したいです。",
+        "translation": "Lần này nhất định tôi muốn đỗ kỳ thi."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "grammar": "～ほど",
+    "reading": "～ほど",
+    "meaning": "Đến mức; càng ... càng ...",
+    "examples": [
+      {
+        "sentence": "昨日は立てないほど疲れました。",
+        "translation": "Hôm qua tôi mệt đến mức không đứng nổi."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "grammar": "～ほど～ない",
+    "reading": "～ほど～ない",
+    "meaning": "Không bằng; không đến mức",
+    "examples": [
+      {
+        "sentence": "今日は昨日ほど寒くありません。",
+        "translation": "Hôm nay không lạnh bằng hôm qua."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "grammar": "～くらい／ぐらい",
+    "reading": "～くらい／ぐらい",
+    "meaning": "Đến mức; khoảng chừng",
+    "examples": [
+      {
+        "sentence": "泣きたいくらいうれしかったです。",
+        "translation": "Tôi vui đến mức muốn khóc."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "grammar": "～なんか",
+    "reading": "～なんか",
+    "meaning": "Như là; loại như; xem nhẹ",
+    "examples": [
+      {
+        "sentence": "私なんかには難しすぎる問題です。",
+        "translation": "Đối với người như tôi thì bài này quá khó."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "grammar": "～なんて",
+    "reading": "～なんて",
+    "meaning": "Chẳng ngờ; chuyện như thế",
+    "examples": [
+      {
+        "sentence": "彼が会社を辞めるなんて驚きました。",
+        "translation": "Tôi ngạc nhiên vì không ngờ anh ấy lại nghỉ việc."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "grammar": "～など",
+    "reading": "～など",
+    "meaning": "Như là; vân vân; nêu ví dụ",
+    "examples": [
+      {
+        "sentence": "週末は映画を見るなどして過ごします。",
+        "translation": "Cuối tuần tôi dành thời gian cho những việc như xem phim."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "grammar": "～しかない",
+    "reading": "～しかない",
+    "meaning": "Chỉ còn cách; không còn lựa chọn khác",
+    "examples": [
+      {
+        "sentence": "電車が止まったので、歩いて帰るしかありません。",
+        "translation": "Vì tàu dừng chạy nên chỉ còn cách đi bộ về."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "grammar": "～ようがない",
+    "reading": "～ようがない",
+    "meaning": "Không có cách nào để",
+    "examples": [
+      {
+        "sentence": "住所がわからないので、連絡しようがありません。",
+        "translation": "Vì không biết địa chỉ nên không có cách nào liên lạc."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "grammar": "～てしょうがない",
+    "reading": "～てしょうがない",
+    "meaning": "Rất; đến mức không chịu nổi",
+    "examples": [
+      {
+        "sentence": "明日の試験が心配でしょうがありません。",
+        "translation": "Tôi lo lắng về kỳ thi ngày mai vô cùng."
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "grammar": "～てたまらない",
+    "reading": "～てたまらない",
+    "meaning": "Cực kỳ; không thể chịu nổi",
+    "examples": [
+      {
+        "sentence": "歯が痛くてたまりません。",
+        "translation": "Răng đau không chịu nổi."
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "grammar": "～てならない",
+    "reading": "～てならない",
+    "meaning": "Không thể không cảm thấy",
+    "examples": [
+      {
+        "sentence": "彼のことが心配でなりません。",
+        "translation": "Tôi không khỏi lo lắng cho anh ấy."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "grammar": "～ずにはいられない",
+    "reading": "～ずにはいられない",
+    "meaning": "Không thể không làm vì cảm xúc thôi thúc",
+    "examples": [
+      {
+        "sentence": "この写真を見ると、笑わずにはいられません。",
+        "translation": "Cứ xem bức ảnh này là tôi không nhịn được cười."
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "grammar": "～ないことはない",
+    "reading": "～ないことはない",
+    "meaning": "Không phải là không thể",
+    "examples": [
+      {
+        "sentence": "この料理は辛いですが、食べられないことはありません。",
+        "translation": "Món này cay nhưng không phải tôi không ăn được."
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "grammar": "～ということだ",
+    "reading": "～ということだ",
+    "meaning": "Nghe nói rằng; có nghĩa là",
+    "examples": [
+      {
+        "sentence": "先生の話では、明日の授業は休みだということです。",
+        "translation": "Theo lời thầy, nghe nói buổi học ngày mai được nghỉ."
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "grammar": "～とのことだ",
+    "reading": "～とのことだ",
+    "meaning": "Nghe thông báo rằng (trang trọng)",
+    "examples": [
+      {
+        "sentence": "会社からの連絡では、会議は中止になったとのことです。",
+        "translation": "Theo thông báo từ công ty, cuộc họp đã bị hủy."
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "grammar": "～というのは",
+    "reading": "～というのは",
+    "meaning": "Cái gọi là; lý do là",
+    "examples": [
+      {
+        "sentence": "私が遅れたというのは、電車が止まったからです。",
+        "translation": "Lý do tôi đến muộn là vì tàu đã ngừng chạy."
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "grammar": "～といえば",
+    "reading": "～といえば",
+    "meaning": "Nhắc đến; nói về",
+    "examples": [
+      {
+        "sentence": "京都といえば、古いお寺が有名です。",
+        "translation": "Nhắc đến Kyoto thì nổi tiếng với những ngôi chùa cổ."
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "grammar": "～というと",
+    "reading": "～というと",
+    "meaning": "Nói đến thì; ý là",
+    "examples": [
+      {
+        "sentence": "北海道というと、雪を思い浮かべます。",
+        "translation": "Nói đến Hokkaido tôi nghĩ ngay đến tuyết."
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "grammar": "～といっても",
+    "reading": "～といっても",
+    "meaning": "Dù nói là nhưng thực tế",
+    "examples": [
+      {
+        "sentence": "料理ができるといっても、簡単なものだけです。",
+        "translation": "Dù nói là biết nấu ăn nhưng tôi chỉ làm được món đơn giản."
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "grammar": "～としたら",
+    "reading": "～としたら",
+    "meaning": "Giả sử; nếu như",
+    "examples": [
+      {
+        "sentence": "海外で働くとしたら、日本を選びたいです。",
+        "translation": "Nếu làm việc ở nước ngoài, tôi muốn chọn Nhật Bản."
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "grammar": "～とすれば",
+    "reading": "～とすれば",
+    "meaning": "Nếu giả định như vậy thì",
+    "examples": [
+      {
+        "sentence": "それが本当だとすれば、大きな問題です。",
+        "translation": "Nếu điều đó là thật thì là vấn đề lớn."
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "grammar": "～としても",
+    "reading": "～としても",
+    "meaning": "Dù giả sử; ngay cả nếu",
+    "examples": [
+      {
+        "sentence": "失敗したとしても、もう一度挑戦します。",
+        "translation": "Dù có thất bại, tôi vẫn thử lại lần nữa."
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "grammar": "～たとえ～ても",
+    "reading": "～たとえ～ても",
+    "meaning": "Cho dù thì vẫn",
+    "examples": [
+      {
+        "sentence": "たとえ雨が降っても、試合は行われます。",
+        "translation": "Cho dù trời mưa, trận đấu vẫn diễn ra."
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "grammar": "～くせに",
+    "reading": "～くせに",
+    "meaning": "Thế mà; mặc dù (chê trách)",
+    "examples": [
+      {
+        "sentence": "彼は知っているくせに、何も教えてくれません。",
+        "translation": "Anh ta rõ ràng biết mà lại không chỉ cho tôi."
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "grammar": "～にもかかわらず",
+    "reading": "～にもかかわらず",
+    "meaning": "Mặc dù; bất chấp",
+    "examples": [
+      {
+        "sentence": "大雨にもかかわらず、多くの人が集まりました。",
+        "translation": "Mặc dù mưa lớn, nhiều người vẫn tập trung."
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "grammar": "～ものの",
+    "reading": "～ものの",
+    "meaning": "Tuy đã nhưng; dù vậy",
+    "examples": [
+      {
+        "sentence": "新しいパソコンを買ったものの、使い方がわかりません。",
+        "translation": "Tuy đã mua máy tính mới nhưng tôi không biết cách dùng."
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "grammar": "～ながらも",
+    "reading": "～ながらも",
+    "meaning": "Dù trong trạng thái ấy nhưng vẫn",
+    "examples": [
+      {
+        "sentence": "彼は忙しいながらも、毎日勉強しています。",
+        "translation": "Dù bận rộn, anh ấy vẫn học mỗi ngày."
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "grammar": "～おかげで",
+    "reading": "～おかげで",
+    "meaning": "Nhờ vào mà có kết quả tốt",
+    "examples": [
+      {
+        "sentence": "友達のおかげで、無事に引っ越しできました。",
+        "translation": "Nhờ bạn bè tôi đã chuyển nhà suôn sẻ."
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "grammar": "～せいで",
+    "reading": "～せいで",
+    "meaning": "Tại vì nên có kết quả xấu",
+    "examples": [
+      {
+        "sentence": "寝坊したせいで、バスに乗り遅れました。",
+        "translation": "Vì ngủ quên nên tôi đã lỡ xe buýt."
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "grammar": "～ために",
+    "reading": "～ために",
+    "meaning": "Vì nguyên nhân; để thực hiện mục đích",
+    "examples": [
+      {
+        "sentence": "大雪のために、飛行機が欠航しました。",
+        "translation": "Do tuyết lớn, chuyến bay đã bị hủy."
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "grammar": "～ことから",
+    "reading": "～ことから",
+    "meaning": "Từ nguyên do; dựa vào dấu hiệu",
+    "examples": [
+      {
+        "sentence": "この町は桜が多いことから、桜町と呼ばれています。",
+        "translation": "Vì thị trấn này có nhiều hoa anh đào nên được gọi là thị trấn Sakura."
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "grammar": "～わりに",
+    "reading": "～わりに",
+    "meaning": "So với mức độ hay kỳ vọng thì",
+    "examples": [
+      {
+        "sentence": "この店は値段が安いわりに、料理がおいしいです。",
+        "translation": "So với giá rẻ thì món ăn ở quán này khá ngon."
+      }
+    ]
+  }
+]
