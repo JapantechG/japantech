@@ -474,17 +474,63 @@ function submitAnswer(selectedIndex) {
 
     playSfx(correct ? "correct" : "wrong");
 
-    const session = sessionToken;
-    const question = questionToken;
 
-    nextId = setTimeout(() => {
+        /* =============================================================
+        READ JAPANESE AFTER ANSWER
+        ============================================================= */
 
-        if (!isCurrent(session, question)) return;
+        const session = sessionToken;
+        const question = questionToken;
 
-        currentIndex++;
-        showNextQuestion();
+        const continuePractice = () => {
 
-    }, 900);
+            if (!isCurrent(session, question)) {
+                return;
+            }
+
+            currentIndex++;
+
+            showNextQuestion();
+        };
+
+        /* Audio questions do not need to repeat speech */
+
+        if (isSoloAudioMode(config.subMode)) {
+
+            nextId = setTimeout(
+                continuePractice,
+                500
+            );
+
+            return;
+        }
+
+        /* Read the Japanese word before moving on */
+
+        const reading =
+            currentQuestion.reading ??
+            currentQuestion.word ??
+            "";
+
+        /* No text available: move to next question */
+
+        if (!reading) {
+
+            nextId = setTimeout(
+                continuePractice,
+                500
+            );
+
+            return;
+        }
+
+        /* Move to next question when speech completes */
+
+        speakJapanese(
+            reading,
+            continuePractice
+        );
+
 }
 
 /* =============================================================
