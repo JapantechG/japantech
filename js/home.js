@@ -120,6 +120,97 @@ export function initHome({ onSelectMode } = {}) {
 
 
 /* ==========================================
+   HOME - MASCOT IMAGE + EVOLUTION
+========================================== */
+
+function updateHomeMascot(userData = null) {
+
+    const mascotImage =
+        document.getElementById("batHomeMascotImage");
+
+    const mascotFallback =
+        document.getElementById("batHomeMascotFallback");
+
+    if (!mascotImage || !mascotFallback) return;
+
+    const mascotType = userData?.mascot?.id;
+
+    if (mascotType !== "monkey" &&
+        mascotType !== "buffalo") {
+
+        mascotImage.hidden = true;
+        mascotImage.removeAttribute("src");
+
+        mascotFallback.textContent = "🐾";
+        mascotFallback.classList.remove("hidden");
+
+        return;
+    }
+
+    const evolution = Math.min(
+        4,
+        Math.max(
+            0,
+            Math.floor(Number(userData.mascot.evolution) || 0)
+        )
+    );
+
+    const basePath =
+        `assets/mascot/${mascotType}.png`;
+
+    const stagePath = evolution === 0
+        ? basePath
+        : `assets/mascot/${mascotType}-stage-${evolution + 1}.png`;
+
+    const emoji = mascotType === "monkey"
+        ? "🐒"
+        : "🐃";
+
+    const requestId = String(
+        (Number(mascotImage.dataset.requestId) || 0) + 1
+    );
+
+    mascotImage.dataset.requestId = requestId;
+
+    mascotFallback.textContent = emoji;
+    mascotFallback.classList.remove("hidden");
+    mascotImage.hidden = true;
+
+    let triedBase = stagePath === basePath;
+
+    mascotImage.onload = () => {
+
+        if (mascotImage.dataset.requestId !== requestId) {
+            return;
+        }
+
+        mascotImage.hidden = false;
+        mascotFallback.classList.add("hidden");
+    };
+
+    mascotImage.onerror = () => {
+
+        if (mascotImage.dataset.requestId !== requestId) {
+            return;
+        }
+
+        if (!triedBase) {
+            triedBase = true;
+            mascotImage.src = basePath;
+            return;
+        }
+
+        mascotImage.hidden = true;
+        mascotFallback.classList.remove("hidden");
+    };
+
+    mascotImage.src = stagePath;
+}
+
+
+
+
+/* ==========================================
    HOME PLAYER LEVEL / EXP
 ========================================== */
 
@@ -183,6 +274,9 @@ export function updateHomePlayer(userData = null) {
         expFillElement.style.width =
             `${expPercent}%`;
     }
+
+    // Update mascot image
+    updateHomeMascot(userData);
 }
 
 /* ==========================================

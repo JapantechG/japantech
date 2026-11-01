@@ -60,6 +60,13 @@ import {
     cancelMascotFlow
 } from "./mascot.js";
 
+import {
+    initMascotEvolution,
+    openMascotEvolution,
+    closeMascotEvolution,
+    syncMascotEvolution
+} from "./mascot-evolution.js";
+
 import {getReviewCount} from "./user.js";
 
 import { startReview } from "./review.js";
@@ -83,11 +90,31 @@ import { initJLPTExam } from "./jlpt-exam-ui.js";
 initI18n();
 initRank();
 initRankedGame();
-initLeaderboard();
 initMascot();
+initMascotEvolution();
 
 initJLPTExam();
 
+// ==========================================
+// QUICK ACCESS - LEADERBOARD
+// ==========================================
+
+initLeaderboard();
+
+const btnHomeLeaderboard =
+    document.getElementById("batHomeLeaderboard");
+
+if (btnHomeLeaderboard) {
+
+    btnHomeLeaderboard.addEventListener("click", () => {
+
+        console.log("[HOME] Open Leaderboard");
+
+        openLeaderboard("level");
+
+    });
+
+}
 /* =============================================================
    DOM
    ============================================================= */
@@ -305,6 +332,41 @@ document.getElementById("menuCloseButton").addEventListener("click",closeMenu);
 
 menuOverlay.addEventListener("click",closeMenu);
 
+/* ==========================================
+   OPEN MASCOT EVOLUTION
+========================================== */
+
+function handleOpenMascotEvolution() {
+
+    // Login required
+    if (!requireLogin()) return;
+
+    // Close side menu
+    closeMenu();
+
+    // Close user menu
+    homeUserMenu?.classList.add("hidden");
+
+    // Open Mascot profile
+    openMascotEvolution();
+}
+
+/* HOME MASCOT IMAGE */
+
+document.getElementById("batHomeMascotBtn")
+    ?.addEventListener(
+        "click",
+        handleOpenMascotEvolution
+    );
+
+/* SIDE MENU PET */
+
+document.getElementById("menuPetBtn")
+    ?.addEventListener(
+        "click",
+        handleOpenMascotEvolution
+    );
+
 /* =============================================================
    GLOBAL BUTTON CLICK SOUND
 
@@ -382,6 +444,8 @@ updateHomePlayer({
         {
             updateHomePlayer(event.detail.userData);
 
+            syncMascotEvolution(event.detail.userData);
+
             updateReviewBadge();
 
             /* Hide Login */
@@ -418,8 +482,7 @@ updateHomePlayer({
             else 
             {
 
-                updateHomePlayer(null);
-
+                
                 avatar.removeAttribute("src");
 
                 avatar.classList.add("hidden");
@@ -475,6 +538,13 @@ updateHomePlayer({
             homeUserBtn?.classList.add("hidden");
 
             updateHomeReviewCount(0);
+
+            updateHomePlayer(null);
+
+            if (!document.getElementById("mascotEvolutionScreen")
+                    ?.classList.contains("hidden")) {
+                closeMascotEvolution();
+            }
         }
 
     }
@@ -699,9 +769,35 @@ window.addEventListener(
     "batlingo-progress-updated",
     event => {
 
-        updateHomePlayer(event.detail.userData);
+        const userData = event.detail?.userData;
 
+        if (!userData) return;
+
+        updateHomePlayer(userData);
+
+        syncMascotEvolution(userData);
     }
 );
 
 updateHomePlayer(window.currentUserData);
+
+/* ==========================================
+   MASCOT FIRST SELECTION COMPLETED
+========================================== */
+
+document.addEventListener(
+    "batlingo:mascot-ready",
+    event => {
+
+        const mascot = event.detail?.mascot;
+
+        if (!mascot) return;
+
+        const userData = window.currentUserData;
+
+        if (!userData) return;
+
+        updateHomePlayer(userData);
+        syncMascotEvolution(userData);
+    }
+);

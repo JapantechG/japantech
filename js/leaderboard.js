@@ -376,45 +376,56 @@ export function switchLeaderboardTab(type) {
     loadLeaderboard(type);
 }
 
+
 /* ==========================================
    OPEN LEADERBOARD
 ========================================== */
 
-export function openLeaderboard(
-    defaultTab = "level"
-) {
+export function openLeaderboard(defaultTab = "level") {
 
     const screen = getScreen();
+    const setupScreen = document.getElementById("setupScreen");
+    const rankScreen = document.getElementById("rankScreen");
 
     if (!screen) {
-        console.error("Leaderboard screen not found");
+        console.error("[Leaderboard] Screen not found");
         return;
     }
 
-    if (screen.classList.contains("hidden")) {
+    // Xác định màn hình nguồn
+    if (rankScreen &&
+        !rankScreen.classList.contains("hidden")) {
 
-        // Ghi lại màn hình đang hiển thị.
-        previousScreen = document.querySelector(
-            ".rank-screen:not(.hidden), " +
-            ".lobby-screen:not(.hidden), " +
-            ".home-screen:not(.hidden), " +
-            ".bat-home:not(.hidden)"
-        );
+        previousScreen = rankScreen;
+        rankScreen.classList.add("hidden");
 
-        if (previousScreen) {
-            previousScreen.classList.add("hidden");
+    } else {
+
+        // Home nằm bên trong setupScreen
+        previousScreen = setupScreen;
+
+        if (setupScreen) {
+            setupScreen.classList.add("hidden");
         }
     }
 
+    // Hiện Leaderboard
     screen.classList.remove("hidden");
 
+    // Chọn tab
     switchLeaderboardTab(
         ["level", "pet", "rank"].includes(defaultTab)
             ? defaultTab
             : "level"
     );
 
-    window.scrollTo(0, 0);
+    screen.scrollTop = 0;
+
+    console.log("[Leaderboard] Opened", {
+        hidden: screen.classList.contains("hidden"),
+        display: getComputedStyle(screen).display,
+        parent: screen.parentElement?.id
+    });
 }
 
 /* ==========================================
@@ -424,21 +435,24 @@ export function openLeaderboard(
 export function closeLeaderboard() {
 
     const screen = getScreen();
-
-    if (!screen) {
-        return;
-    }
+    if (!screen) return;
 
     ++requestId;
 
+    // Ẩn Leaderboard
     screen.classList.add("hidden");
 
+    // Khôi phục màn hình nguồn
     if (previousScreen) {
         previousScreen.classList.remove("hidden");
     }
 
     previousScreen = null;
+
+    console.log("[Leaderboard] Closed");
 }
+
+
 
 /* ==========================================
    INITIALIZE

@@ -1,0 +1,428 @@
+
+/* ==========================================
+   BATLINGO - MASCOT EVOLUTION
+========================================== */
+
+.mascot-evo-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            #162c50 0%,
+            #080e1c 55%,
+            #060b15 100%
+        );
+    color: #f8fafc;
+    font-family: inherit;
+}
+
+.mascot-evo-screen.hidden {
+    display: none !important;
+}
+
+.mascot-evo-screen * {
+    box-sizing: border-box;
+}
+
+.mascot-evo-container {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 28px 24px 70px;
+}
+
+/* HEADER */
+
+.mascot-evo-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.mascot-evo-header h1 {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.mascot-evo-header span {
+    color: #94a3b8;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.mascot-evo-header-icon {
+    margin-left: auto;
+    font-size: 28px;
+}
+
+.mascot-evo-back {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    background: #172338;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* MASCOT HERO */
+
+.mascot-evo-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 26px 20px 30px;
+    border: 1px solid #294064;
+    border-radius: 24px;
+    background:
+        linear-gradient(145deg, #152743, #0a1425);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.mascot-evo-stage-badge {
+    padding: 7px 16px;
+    border-radius: 30px;
+    color: #fcd34d;
+    background: #3a2b12;
+    border: 1px solid #936e26;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.mascot-evo-image-area {
+    position: relative;
+    width: min(100%, 260px);
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px auto;
+}
+
+.mascot-evo-glow {
+    position: absolute;
+    inset: 24px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(59,130,246,.38),
+        transparent 70%
+    );
+    filter: blur(12px);
+}
+
+#mascotEvoImage {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 20px #0008);
+}
+
+#mascotEvoImage[hidden] {
+    display: none !important;
+}
+
+#mascotEvoFallback {
+    position: relative;
+    z-index: 1;
+    font-size: 125px;
+}
+
+.mascot-evo-hero h2 {
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 5px 0;
+}
+
+.mascot-evo-title {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fbbf24;
+}
+
+.mascot-evo-description {
+    max-width: 500px;
+    color: #aebed3;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 14px auto 0;
+}
+
+/* PANELS */
+
+.mascot-evo-panel {
+    padding: 22px;
+    border: 1px solid #293c58;
+    border-radius: 18px;
+    background: #101d30;
+    margin-bottom: 18px;
+}
+
+.mascot-evo-section-title {
+    color: #f8fafc;
+    font-weight: 850;
+    font-size: 14px;
+    letter-spacing: .7px;
+    margin-bottom: 16px;
+}
+
+/* EXP */
+
+.mascot-evo-progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.mascot-evo-progress-top strong {
+    color: #fbbf24;
+    font-size: 19px;
+}
+
+.mascot-evo-progress-top span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.mascot-evo-exp-track {
+    height: 12px;
+    background: #25344c;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#mascotEvoExpFill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #22d3ee, #3b82f6);
+    transition: width .35s ease;
+}
+
+/* SKILL */
+
+.mascot-evo-skill {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.mascot-evo-skill-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #26365a;
+    font-size: 23px;
+}
+
+.mascot-evo-skill strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.mascot-evo-skill p {
+    color: #a8b8cc;
+    line-height: 1.7;
+    font-size: 13px;
+    margin: 0;
+}
+
+.mascot-evo-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.mascot-evo-traits span {
+    font-size: 12px;
+    color: #cbd5e1;
+    border: 1px solid #334a69;
+    background: #1a2a42;
+    border-radius: 20px;
+    padding: 7px 12px;
+}
+
+/* EVOLUTION */
+
+.mascot-evo-section-hint {
+    color: #94a3b8;
+    font-size: 12px;
+    margin: -6px 0 18px;
+}
+
+.mascot-evo-stages {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 9px;
+    margin-bottom: 22px;
+}
+
+.mascot-evo-stage {
+    min-width: 0;
+    padding: 14px 6px;
+    text-align: center;
+    border: 1px solid #34435d;
+    border-radius: 13px;
+    background: #17243a;
+}
+
+.mascot-evo-stage-icon {
+    font-size: 23px;
+    margin-bottom: 9px;
+}
+
+.mascot-evo-stage strong {
+    display: block;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+}
+
+.mascot-evo-stage small {
+    display: block;
+    color: #94a3b8;
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+.mascot-evo-stage.current {
+    border-color: #fbbf24;
+    background: #3d301b;
+    box-shadow: 0 0 18px #fbbf241c;
+}
+
+.mascot-evo-stage.complete {
+    border-color: #34d399;
+}
+
+.mascot-evo-stage.locked {
+    opacity: .48;
+}
+
+.mascot-evo-next {
+    border-top: 1px solid #30405a;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.mascot-evo-next-info span,
+.mascot-evo-next-info small {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.mascot-evo-next-info strong {
+    display: block;
+    color: #fbbf24;
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+.mascot-evo-evolve-btn {
+    min-width: 145px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+    color: #172033;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.mascot-evo-evolve-btn:disabled {
+    background: #334155;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.mascot-evo-message {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #fbbf24;
+}
+
+.mascot-evo-message:empty {
+    display: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .mascot-evo-container {
+        padding: 18px 12px 50px;
+    }
+
+    .mascot-evo-hero {
+        padding: 20px 12px;
+    }
+
+    .mascot-evo-image-area {
+        height: 205px;
+        width: 205px;
+    }
+
+    #mascotEvoFallback {
+        font-size: 100px;
+    }
+
+    .mascot-evo-panel {
+        padding: 16px 12px;
+    }
+
+    .mascot-evo-stages {
+        gap: 4px;
+    }
+
+    .mascot-evo-stage {
+        padding: 12px 2px;
+    }
+
+    .mascot-evo-stage-icon {
+        font-size: 19px;
+    }
+
+    .mascot-evo-stage strong {
+        font-size: 9px;
+    }
+
+    .mascot-evo-next {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .mascot-evo-evolve-btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #mascotEvoExpFill {
+        transition: none;
+    }
+}

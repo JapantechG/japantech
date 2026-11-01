@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="css/leaderboard.css">
     <link rel="stylesheet" href="css/ranked-game.css">
     <link rel="stylesheet" href="css/mascot.css">
+    <link rel="stylesheet" href="css/mascot-evolution.css">
     <link rel="stylesheet" href="./css/jlpt-exam.css">
 </head>
 
@@ -438,36 +439,12 @@
      NEW HOME SCREEN
 ========================================= -->
 
+
+<!-- =========================================
+     BATLINGO HOME V2
+========================================= -->
+
 <div id="homeScreen" class="bat-home">
-
-    <!-- PLAYER STATUS -->
-    <section class="bat-home-player">
-
-        <div class="bat-home-player-top">
-
-            <div class="bat-home-player-name">
-                <span class="bat-home-player-icon">✦</span>
-                <strong id="batHomePlayerName">PLAYER</strong>
-            </div>
-
-            <span id="batHomePlayerLevel"
-                  class="bat-home-player-level">
-                LV. 1
-            </span>
-
-        </div>
-
-        <div class="bat-home-exp-track">
-            <div id="batHomeExpFill"
-                 class="bat-home-exp-fill"></div>
-        </div>
-
-        <div class="bat-home-exp-bottom">
-            <span>EXP</span>
-            <span id="batHomeExpText">0 / 100</span>
-        </div>
-
-    </section>
 
     <!-- BRAND -->
     <section class="bat-home-brand">
@@ -480,19 +457,74 @@
 
     </section>
 
+    <!-- PLAYER + MASCOT -->
+    <section class="bat-home-player">
+
+        <button
+            id="batHomeMascotBtn"
+            class="bat-home-mascot"
+            type="button"
+            aria-label="Open Mascot">
+
+            <img
+                id="batHomeMascotImage"
+                src=""
+                alt="My Mascot"
+                hidden>
+
+            <span
+                id="batHomeMascotFallback"
+                class="bat-home-mascot-fallback">
+                🐃
+            </span>
+
+        </button>
+
+        <div class="bat-home-player-info">
+
+            <div class="bat-home-player-top">
+
+                <div class="bat-home-player-name">
+                    <strong id="batHomePlayerName">
+                        PLAYER
+                    </strong>
+                </div>
+
+                <span
+                    id="batHomePlayerLevel"
+                    class="bat-home-player-level">
+                    LV. 1
+                </span>
+
+            </div>
+
+            <div class="bat-home-exp-track">
+                <div
+                    id="batHomeExpFill"
+                    class="bat-home-exp-fill">
+                </div>
+            </div>
+
+            <div class="bat-home-exp-bottom">
+                <span>EXP</span>
+                <span id="batHomeExpText">
+                    0 / 100
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- LEARNING LANGUAGE -->
     <section class="bat-home-language">
 
-        <div class="bat-home-label"
-             data-i18n="home.learningLanguage">
-            LEARNING LANGUAGE
-        </div>
-
-        <button id="batHomeLanguageBtn"
-                class="bat-home-language-btn"
-                type="button"
-                aria-expanded="false"
-                aria-controls="batHomeLanguageOptions">
+        <button
+            id="batHomeLanguageBtn"
+            class="bat-home-language-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="batHomeLanguageOptions">
 
             <span class="bat-home-flag">🇯🇵</span>
 
@@ -500,12 +532,15 @@
                 JAPANESE
             </strong>
 
-            <span class="bat-home-language-chevron">⌄</span>
+            <span class="bat-home-language-chevron">
+                ⌄
+            </span>
 
         </button>
 
-        <div id="batHomeLanguageOptions"
-             class="bat-home-language-options hidden">
+        <div
+            id="batHomeLanguageOptions"
+            class="bat-home-language-options hidden">
 
             <div class="bat-home-language-option selected">
                 <span>🇯🇵</span>
@@ -538,13 +573,16 @@
     <!-- GAME MODES -->
     <section class="bat-home-modes">
 
-        <div class="bat-home-label">GAME MODES</div>
+        <div class="bat-home-label">
+            GAME MODES
+        </div>
 
         <div class="bat-home-mode-grid">
 
-            <button class="bat-home-mode-card bat-mode-solo"
-                    data-home-mode="solo"
-                    type="button">
+            <button
+                class="bat-home-mode-card bat-mode-solo"
+                data-home-mode="solo"
+                type="button">
 
                 <span class="bat-home-mode-icon">⚡</span>
                 <strong>SOLO</strong>
@@ -553,9 +591,10 @@
 
             </button>
 
-            <button class="bat-home-mode-card bat-mode-flashcard"
-                    data-home-mode="flashcard"
-                    type="button">
+            <button
+                class="bat-home-mode-card bat-mode-flashcard"
+                data-home-mode="flashcard"
+                type="button">
 
                 <span class="bat-home-mode-icon">▤</span>
                 <strong>FLASHCARD</strong>
@@ -564,9 +603,10 @@
 
             </button>
 
-            <button class="bat-home-mode-card bat-mode-pvp"
-                    data-home-mode="pvp"
-                    type="button">
+            <button
+                class="bat-home-mode-card bat-mode-pvp"
+                data-home-mode="pvp"
+                type="button">
 
                 <span class="bat-home-mode-icon">⚔</span>
                 <strong>1V1 BATTLE</strong>
@@ -575,9 +615,10 @@
 
             </button>
 
-            <button class="bat-home-mode-card bat-mode-rank"
-                    data-home-mode="rank"
-                    type="button">
+            <button
+                class="bat-home-mode-card bat-mode-rank"
+                data-home-mode="rank"
+                type="button">
 
                 <span class="bat-home-mode-icon">🏆</span>
                 <strong>RANKED</strong>
@@ -593,49 +634,58 @@
     <!-- QUICK ACCESS -->
     <section class="bat-home-quick">
 
-        <div class="bat-home-label">QUICK ACCESS</div>
+        <div class="bat-home-label">
+            QUICK ACCESS
+        </div>
 
         <div class="bat-home-quick-grid">
 
-            <button id="batHomeLeaderboard"
-                    class="bat-home-quick-item"
-                    type="button">
+            <button
+                id="batHomeLeaderboard"
+                class="bat-home-quick-item"
+                type="button">
                 <span>🏆</span>
                 <small>LEADERBOARD</small>
             </button>
 
-            <!-- REVIEW -->
-            <button id="batHomeReview"
-                    class="bat-home-quick-item"
-                    type="button">
+            <button
+                id="batHomeReview"
+                class="bat-home-quick-item"
+                type="button">
 
                 <span>↻</span>
-
                 <small>REVIEW</small>
 
-                <span id="batHomeReviewCount"
+                <span
+                    id="batHomeReviewCount"
                     class="bat-home-review-count hidden">
                     0
                 </span>
 
             </button>
 
-            <button id="batHomeFriends"
-                    class="bat-home-quick-item"
-                    type="button"
-                    disabled>
+            <button
+                id="batHomeFriends"
+                class="bat-home-quick-item"
+                type="button"
+                disabled>
+
                 <span>👥</span>
                 <small>FRIENDS</small>
                 <em>SOON</em>
+
             </button>
 
-            <button id="batHomeMore"
-                    class="bat-home-quick-item"
-                    type="button"
-                    disabled>
+            <button
+                id="batHomeMore"
+                class="bat-home-quick-item"
+                type="button"
+                disabled>
+
                 <span>⋯</span>
                 <small>MORE</small>
                 <em>SOON</em>
+
             </button>
 
         </div>
@@ -643,6 +693,7 @@
     </section>
 
 </div>
+
 
         <div id="configScreen" class="setup-container hidden">
             
@@ -1310,26 +1361,6 @@
 </section>
 
 
-    <!-- LEADERBOARD: preview until backend stage -->
-    <section id="leaderboardScreen" class="leaderboard-screen hidden">
-      <div class="leaderboard-container">
-        <header class="leaderboard-header">
-          <button id="leaderboardBackButton" type="button" aria-label="Back to rank">←</button>
-          <h1>🏆 LEADERBOARD</h1>
-          <span>SEASON 01</span>
-        </header>
-        <div class="leaderboard-summary">
-          <span>YOUR RANK</span><strong id="leaderboardMyPosition">—</strong>
-          <span id="leaderboardMyElo">1000 ELO</span>
-        </div>
-        <div class="leaderboard-table">
-          <div class="leaderboard-table-head"><span>#</span><span>PLAYER</span><span>WINS</span><span>ELO</span></div>
-          <div id="leaderboardList"></div>
-        </div>
-        <div id="leaderboardStatus" class="leaderboard-status"></div>
-      </div>
-    </section>
-
     <section id="pvpScreen" class="pvp-screen hidden">
 
         <div class="screen-overlay"></div>
@@ -1646,9 +1677,9 @@
 
         </div>
 
-        <button class="menu-item" type="button">
-            🐵 PET
-        </button>
+        <button id="menuPetBtn" class="menu-item" type="button">
+            🐾 PET
+        </button>   
 
         <button class="menu-item" type="button">
             ⚙ SETTINGS
@@ -2643,6 +2674,151 @@
         </div>
     </div>
 </div>
+
+
+<!-- ==========================================
+     BATLINGO - MASCOT EVOLUTION
+========================================== -->
+
+<section id="mascotEvolutionScreen"
+         class="mascot-evo-screen hidden"
+         aria-label="Mascot Evolution">
+
+    <div class="mascot-evo-container">
+
+        <!-- HEADER -->
+        <header class="mascot-evo-header">
+
+            <button id="mascotEvoBackBtn"
+                    class="mascot-evo-back"
+                    type="button">
+                ←
+            </button>
+
+            <div>
+                <h1>MASCOT</h1>
+                <span>YOUR BATTLE COMPANION</span>
+            </div>
+
+            <div class="mascot-evo-header-icon">🐾</div>
+
+        </header>
+
+        <!-- MAIN MASCOT -->
+        <div class="mascot-evo-hero">
+
+            <span id="mascotEvoStageBadge"
+                  class="mascot-evo-stage-badge">
+                STAGE 1
+            </span>
+
+            <div class="mascot-evo-image-area">
+
+                <div class="mascot-evo-glow"></div>
+
+                <img id="mascotEvoImage"
+                     alt="My Mascot"
+                     hidden>
+
+                <span id="mascotEvoFallback">🐃</span>
+
+            </div>
+
+            <h2 id="mascotEvoName">BUFFALO</h2>
+
+            <div id="mascotEvoTitle"
+                 class="mascot-evo-title">
+                THE IRON WILL
+            </div>
+
+            <p id="mascotEvoDescription"
+               class="mascot-evo-description"></p>
+
+        </div>
+
+        <!-- PLAYER PROGRESS -->
+        <div class="mascot-evo-panel">
+
+            <div class="mascot-evo-section-title">
+                ⭐ PLAYER PROGRESS
+            </div>
+
+            <div class="mascot-evo-progress-top">
+                <strong id="mascotEvoLevel">LV. 1</strong>
+                <span id="mascotEvoExpText">0 / 100 EXP</span>
+            </div>
+
+            <div class="mascot-evo-exp-track">
+                <div id="mascotEvoExpFill"></div>
+            </div>
+
+        </div>
+
+        <!-- SKILL -->
+        <div class="mascot-evo-panel">
+
+            <div class="mascot-evo-section-title">
+                ⚡ SPECIAL ABILITY
+            </div>
+
+            <div class="mascot-evo-skill">
+
+                <div class="mascot-evo-skill-icon">✨</div>
+
+                <div>
+                    <strong id="mascotEvoSkillName"></strong>
+                    <p id="mascotEvoSkillDescription"></p>
+                </div>
+
+            </div>
+
+            <div id="mascotEvoTraits"
+                 class="mascot-evo-traits"></div>
+
+        </div>
+
+        <!-- EVOLUTION PATH -->
+        <div class="mascot-evo-panel">
+
+            <div class="mascot-evo-section-title">
+                ✨ EVOLUTION PATH
+            </div>
+
+            <p class="mascot-evo-section-hint">
+                Reach the required Player Level to evolve.
+            </p>
+
+            <div id="mascotEvoStages"
+                 class="mascot-evo-stages"></div>
+
+            <div class="mascot-evo-next">
+
+                <div class="mascot-evo-next-info">
+                    <span>NEXT EVOLUTION</span>
+                    <strong id="mascotEvoNextName">JUNIOR</strong>
+                    <small id="mascotEvoRequirement">
+                        Required LV. 10
+                    </small>
+                </div>
+
+                <button id="mascotEvoEvolveBtn"
+                        class="mascot-evo-evolve-btn"
+                        type="button"
+                        disabled>
+                    🔒 LOCKED
+                </button>
+
+            </div>
+
+            <div id="mascotEvoMessage"
+                 class="mascot-evo-message"
+                 aria-live="polite"></div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 

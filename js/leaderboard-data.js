@@ -8,7 +8,7 @@ import {
     orderByChild,
     limitToLast,
     get
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
 import { db } from "./firebase.js";
 import { RANK_SEASON } from "./rank-config.js";
