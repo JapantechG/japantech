@@ -975,3 +975,230 @@
         width: min(740px, calc(100% - 36px)) !important;
     }
 }
+
+
+/* ==========================================
+   BATLINGO HOME - MOBILE ALIGNMENT FIX
+========================================== */
+
+@media (max-width: 767px) {
+
+    /* Main screen */
+
+    #setupScreen:has(#homeScreen:not(.hidden)) {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-height: 100dvh !important;
+        height: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow-x: clip !important;
+    }
+
+    /* ======================================
+       TOP HEADER
+    ====================================== */
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    .lobby-header {
+        position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-height: 54px !important;
+        height: auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+        padding: 8px 12px 4px !important;
+
+        transform: none !important;
+        flex-shrink: 0 !important;
+
+        z-index: 100;
+    }
+
+    /* Hide duplicate header logo */
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    .lobby-header .mini-logo {
+        display: none !important;
+    }
+
+    /* Header actions */
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    .lobby-header .home-actions {
+        position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        gap: 5px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    /* Shrink header buttons */
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    .home-actions > button,
+    #setupScreen:has(#homeScreen:not(.hidden))
+    .home-actions > .top-language {
+        min-width: 0;
+        flex-shrink: 1;
+    }
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    .jlpt-exam-balloon {
+        padding: 7px 10px !important;
+        white-space: nowrap;
+    }
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    .jlpt-exam-balloon span {
+        display: none;
+    }
+
+    /* ======================================
+       HOME CONTENT
+    ====================================== */
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    #homeScreen {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 480px !important;
+
+        flex: 0 0 auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-self: center !important;
+        align-items: stretch !important;
+
+        gap: 10px !important;
+
+        margin: 0 auto !important;
+        padding: 7px 14px 18px !important;
+
+        transform: none !important;
+    }
+
+    #homeScreen > section {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Logo */
+
+    #homeScreen .bat-home-brand {
+        text-align: center;
+        padding: 0 0 4px;
+    }
+
+    #homeScreen .bat-home-logo {
+        font-size: 29px;
+    }
+
+    /* Player */
+
+    #homeScreen .bat-home-player {
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #homeScreen .bat-home-mascot {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+    }
+
+    /* Game grid */
+
+    #homeScreen .bat-home-mode-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    #homeScreen .bat-home-mode-card {
+        min-height: 96px;
+        padding: 11px 12px;
+    }
+
+    /* Quick Access */
+
+    #homeScreen .bat-home-quick-grid {
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    #homeScreen .bat-home-quick-item {
+        min-width: 0;
+        min-height: 59px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    #setupScreen:has(#homeScreen:not(.hidden))
+    #homeScreen {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        gap: 8px !important;
+    }
+
+    #homeScreen .bat-home-mode-card {
+        min-height: 85px;
+        padding: 9px;
+    }
+
+    #homeScreen .bat-home-mode-card strong {
+        font-size: 11px;
+    }
+
+    #homeScreen .bat-home-quick-item small {
+        font-size: 7px;
+    }
+}
