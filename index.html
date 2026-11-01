@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/lobby.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/solo-practice.css">
     <link rel="stylesheet" href="css/pvp.css">
     <link rel="stylesheet" href="./css/auth.css">
     <link rel="stylesheet" href="css/flashcard.css">
@@ -712,7 +713,8 @@
                 <div class="bat-config-spacer"></div>
             </div>
 
-            <div class="game-logo">
+            <!-- SOLO MODE: only visible for Solo -->
+             <div class="game-logo">
                 BAT<span>LINGO</span>
             </div>
 
@@ -720,54 +722,23 @@
                 LANGUAGE BATTLE ARENA
             </div>
 
-            <!-- LEARNING LANGUAGE -->
-
-            <div class="selector-section">
-            
-            <div class="selector-label" data-i18n="home.learningLanguage">
-                LEARNING LANGUAGE
-            </div>
-            
-            <div class="selector">
-                <button class="selector-arrow" type="button" disabled>◀</button>
-            
-                <div class="selector-viewport">
-                    <div class="selector-value" data-i18n="home.languageJapanese">
-                        🇯🇵 JAPANESE
-                    </div>
-                </div>
-            
-                <button class="selector-arrow" type="button" disabled>▶</button>
-            </div>
-            
-            </div>
-                
-
-            <!-- BATTLE MODE -->
-
-            <div class="selector-section">
-
-                <div class="selector-label" data-i18n="home.battleMode">
-                    BATTLE MODE
-                </div>
-
-                <div class="selector">
-
-                    <button id="battleModePrev" class="selector-arrow" type="button">
-                        ◀
+            <section id="soloSettings" class="solo-settings hidden" aria-label="Solo game mode">
+                <div class="solo-settings-title">CHOOSE SOLO MODE</div>
+                <div class="solo-type-selector">
+                    <button type="button" class="solo-type-btn active" data-solo-type="survival" aria-pressed="true">
+                        <span class="solo-type-icon">❤️</span>
+                        <strong>SURVIVAL</strong>
+                        <small>3 LIVES · SCORE · EXP</small>
                     </button>
-
-                    <div class="selector-viewport">
-                        <div id="battleModeValue" class="selector-value">
-                            SOLO BATTLE
-                        </div>
-                    </div>
-
-                    <button id="battleModeNext" class="selector-arrow" type="button">
-                        ▶
+                    <button type="button" class="solo-type-btn" data-solo-type="practice" aria-pressed="false">
+                        <span class="solo-type-icon">📖</span>
+                        <strong>PRACTICE</strong>
+                        <small>QUESTIONS · ACCURACY</small>
                     </button>
                 </div>
-            </div>
+                <p class="solo-mode-description" id="soloModeDescription">Survive with 3 lives. Earn score and EXP.</p>
+            </section>
+
 
             <!-- STUDY MODE -->
 
@@ -880,6 +851,22 @@
                 </div>
 
             </div>
+
+            <!-- Solo Practice options: only visible when Practice is selected -->
+            <section id="practiceOptions" class="practice-options hidden" aria-label="Practice settings">
+                <div class="practice-setting-heading"><label for="practiceCountSlider">NUMBER OF QUESTIONS</label><strong id="practiceCountValue">20</strong></div>
+                <div class="practice-presets">
+                    <button type="button" data-practice-count="10">10</button>
+                    <button type="button" data-practice-count="20" class="active">20</button>
+                    <button type="button" data-practice-count="50">50</button>
+                </div>
+                <input id="practiceCountSlider" type="range" min="1" max="100" step="1" value="20">
+                <div class="practice-range-labels"><span>1 QUESTION</span><span>100 QUESTIONS</span></div>
+                <div class="practice-setting-heading"><label for="practiceTimeSlider">TIME PER QUESTION</label><strong id="practiceTimeValue">8s</strong></div>
+                <input id="practiceTimeSlider" type="range" min="1" max="20" step="1" value="8">
+                <div class="practice-range-labels"><span>1 SECOND</span><span>20 SECONDS</span></div>
+                <p class="practice-note">NO LIVES · NO COMBO · NO EXP · TIMEOUT = WRONG</p>
+            </section>
 
             <!-- BATTLE -->
 
@@ -1658,6 +1645,53 @@
 
         </div>
 
+    </section>
+
+    <!-- =========================================
+         SOLO PRACTICE - RESULTS (latest session only)
+    ========================================= -->
+    <section id="practiceResultScreen" class="practice-screen hidden" aria-label="Practice results">
+        <div class="practice-panel">
+            <div class="practice-result-heading">PRACTICE COMPLETE</div>
+            <div class="practice-accuracy"><strong id="practiceAccuracy">0%</strong><span>ACCURACY</span></div>
+            <div class="practice-stats">
+                <button id="practiceCorrectBtn" class="practice-stat correct" type="button"><strong id="practiceCorrect">0</strong><span>CORRECT</span></button>
+                <button id="practiceWrongBtn" class="practice-stat wrong" type="button"><strong id="practiceWrong">0</strong><span>WRONG</span></button>
+                <button id="practiceTimeoutBtn" class="practice-stat timeout" type="button"><strong id="practiceTimeout">0</strong><span>TIMEOUT</span></button>
+            </div>
+            <p id="practiceTotal" class="practice-total">0 / 20 QUESTIONS</p>
+            <button id="practiceReviewAllBtn" class="battle-button" type="button">REVIEW ALL ANSWERS</button>
+            <button id="practiceRetryBtn" class="secondary-button" type="button">RETRY PRACTICE</button>
+            <button id="practiceHomeBtn" class="secondary-button" type="button">BACK TO HOME</button>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SOLO PRACTICE - REVIEW (read only)
+    ========================================= -->
+    <section id="practiceReviewScreen" class="practice-screen hidden" aria-label="Review last practice">
+        <div class="practice-panel">
+            <header class="practice-review-header">
+                <button id="practiceReviewBackBtn" type="button" aria-label="Back to results">←</button>
+                <h2>REVIEW ANSWERS</h2>
+            </header>
+            <div class="practice-review-filters">
+                <button id="practiceReviewAllFilter" class="active" type="button">ALL</button>
+                <button id="practiceReviewWrongFilter" type="button">WRONG ONLY</button>
+            </div>
+            <div id="practiceReviewGrid" class="practice-review-grid"></div>
+            <div class="practice-review-card">
+                <div id="practiceReviewNumber"></div>
+                <div id="practiceReviewQuestion"></div>
+                <div id="practiceReviewReading"></div>
+                <div id="practiceReviewAnswers"></div>
+                <div id="practiceReviewExplanation"></div>
+            </div>
+            <div class="practice-review-navigation">
+                <button id="practiceReviewPrev" type="button">← PREVIOUS</button>
+                <button id="practiceReviewNext" type="button">NEXT →</button>
+            </div>
+        </div>
     </section>
 
     <!-- =====================================================

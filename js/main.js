@@ -301,6 +301,27 @@ document.getElementById("backLobbyButton")
     });
 
 
+/* =============================================================
+   PRACTICE → HOME
+============================================================= */
+
+window.addEventListener(
+    "batlingo-practice-home",
+    () => {
+
+        document.getElementById("practiceResultScreen")
+            ?.classList.add("hidden");
+
+        document.getElementById("practiceReviewScreen")
+            ?.classList.add("hidden");
+
+        showHome();
+
+        playLobbyMusic();
+    }
+);
+
+
 
 /* =============================================================
    MENU

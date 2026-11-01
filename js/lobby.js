@@ -281,6 +281,17 @@ let categoryIndex = 0;
 let subModeIndex = 0;
 
 
+/* =============================================================
+   SOLO SETTINGS STATE
+============================================================= */
+
+let soloType = "survival";
+
+let practiceCount = 20;
+
+let practiceTime = 8;
+
+
 // Set Battle Mode from new Home
 export function selectBattleMode(modeId) {
 
@@ -297,8 +308,11 @@ export function selectBattleMode(modeId) {
 
     // Update the existing selector value as well
     if (battleModeValue) {
-        battleModeValue.textContent = battleModes[index].name;
-    }
+        battleModeValue.textContent =
+            battleModes[index].name;
+        }
+
+    updateSoloSettingsUI();
 
     return true;
 }
@@ -319,6 +333,102 @@ const studyTargetLabel =document.getElementById("studyTargetLabel");
 const categoryValue =document.getElementById("categoryValue");
 
 const subModeValue =document.getElementById("subModeValue");
+
+
+/* =============================================================
+   SOLO SETTINGS UI
+============================================================= */
+
+function updateSoloSettingsUI() {
+
+    const isSolo =
+        battleModes[battleModeIndex].id === "solo";
+
+    const settings =
+        document.getElementById("soloSettings");
+
+    const options =
+        document.getElementById("practiceOptions");
+
+    settings?.classList.toggle("hidden", !isSolo);
+
+    options?.classList.toggle(
+        "hidden",
+        !isSolo || soloType !== "practice"
+    );
+
+    /* SURVIVAL / PRACTICE */
+
+    document.querySelectorAll("[data-solo-type]")
+        .forEach(button => {
+
+            const active =
+                button.dataset.soloType === soloType;
+
+            button.classList.toggle("active", active);
+            button.setAttribute(
+                "aria-pressed",
+                String(active)
+            );
+        });
+
+    /* DESCRIPTION */
+
+    const description =
+        document.getElementById("soloModeDescription");
+
+    if (description) {
+        description.textContent =
+            soloType === "survival"
+                ? "Survive with 3 lives. Earn score and EXP."
+                : "Choose questions and time. Review your accuracy.";
+    }
+
+    /* QUESTION COUNT */
+
+    const countSlider =
+        document.getElementById("practiceCountSlider");
+
+    const countValue =
+        document.getElementById("practiceCountValue");
+
+    if (countSlider) {
+        countSlider.value = practiceCount;
+    }
+
+    if (countValue) {
+        countValue.textContent = practiceCount;
+    }
+
+    /* TIME */
+
+    const timeSlider =
+        document.getElementById("practiceTimeSlider");
+
+    const timeValue =
+        document.getElementById("practiceTimeValue");
+
+    if (timeSlider) {
+        timeSlider.value = practiceTime;
+    }
+
+    if (timeValue) {
+        timeValue.textContent = `${practiceTime}s`;
+    }
+
+    /* PRESET BUTTONS */
+
+    document.querySelectorAll("[data-practice-count]")
+        .forEach(button => {
+
+            const active =
+                Number(button.dataset.practiceCount) ===
+                practiceCount;
+
+            button.classList.toggle("active", active);
+        });
+}
+
 
 /* =============================================================
    SLIDE
@@ -394,6 +504,10 @@ export function resetLobbyConfig() {
     categoryIndex = 0;
     subModeIndex = 0;
 
+    soloType = "survival";
+    practiceCount = 20;
+    practiceTime = 8;
+
     const category = categories[categoryIndex];
 
     studyModeValue.textContent =
@@ -408,6 +522,8 @@ export function resetLobbyConfig() {
 
     subModeValue.textContent =
         subModes[category.id][subModeIndex].name;
+
+    updateSoloSettingsUI();
 }
 
 
@@ -415,23 +531,91 @@ export function resetLobbyConfig() {
    INIT
    ============================================================= */
 export function initLobby({onSolo,onPvp,onFlashcard, onRank}) 
-{
-    /* BATTLE MODE */
-    document.getElementById("battleModeNext").addEventListener("click",() => 
-        {
-                battleModeIndex =moveIndex(battleModeIndex,battleModes.length,"next");
+{   
+    
+        /* =============================================================
+        SOLO SETTINGS EVENTS
+        ============================================================= */
 
-                slideSelector(battleModeValue,battleModes[battleModeIndex].name,"next");
+        /* SELECT SURVIVAL / PRACTICE */
+
+        document.querySelectorAll("[data-solo-type]")
+            .forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    const selected = button.dataset.soloType;
+
+                    if (
+                        selected !== "survival" &&
+                        selected !== "practice"
+                    ) {
+                        return;
+                    }
+
+                    soloType = selected;
+
+                    playSfx("click");
+
+                    updateSoloSettingsUI();
+                });
+            });
+
+        /* QUICK QUESTION COUNT: 10 / 20 / 50 */
+
+        document.querySelectorAll("[data-practice-count]")
+            .forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    practiceCount = Number(
+                        button.dataset.practiceCount
+                    );
+
+                    updateSoloSettingsUI();
+                });
+            });
+
+        /* CUSTOM QUESTION COUNT */
+
+        const practiceCountSlider =
+            document.getElementById("practiceCountSlider");
+
+        practiceCountSlider?.addEventListener(
+            "input",
+            event => {
+
+                practiceCount = Math.max(
+                    1,
+                    Math.min(100, Number(event.target.value))
+                );
+
+                updateSoloSettingsUI();
             }
         );
 
-    document.getElementById("battleModePrev").addEventListener("click",() => 
-        {
-                battleModeIndex =moveIndex(battleModeIndex,battleModes.length,"prev");
+        /* TIME PER QUESTION */
 
-                slideSelector(battleModeValue,battleModes[battleModeIndex].name,"prev");
+        const practiceTimeSlider =
+            document.getElementById("practiceTimeSlider");
+
+        practiceTimeSlider?.addEventListener(
+            "input",
+            event => {
+
+                practiceTime = Math.max(
+                    1,
+                    Math.min(20, Number(event.target.value))
+                );
+
+                updateSoloSettingsUI();
             }
         );
+
+        /* INITIAL UI */
+
+        updateSoloSettingsUI();
+
 
     /* STUDY MODE */
 
@@ -542,14 +726,29 @@ export function initLobby({onSolo,onPvp,onFlashcard, onRank})
 
             };
 
-            /*SOLO*/
+            
+            /* =========================================================
+            SOLO: SURVIVAL / PRACTICE
+            ========================================================= */
 
-            if (config.battleMode === "solo")
-            {
+            if (config.battleMode === "solo") {
+
+                config.soloType = soloType;
+
+                if (soloType === "practice") {
+
+                    config.practiceCount = practiceCount;
+
+                    config.practiceTime = practiceTime;
+                }
+
+                console.log("[SOLO CONFIG]", config);
+
                 onSolo?.(config);
 
                 return;
             }
+
 
             /*1 VS 1*/
 
