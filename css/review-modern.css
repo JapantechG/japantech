@@ -1,0 +1,1083 @@
+
+/* =========================================================
+   BATLINGO - REVIEW MODERN
+   VERSION 3.0
+
+   FEATURES
+   - Stable answer position
+   - Four vertical answer buttons
+   - Reserved feedback space
+   - Reserved action space
+   - Desktop and mobile responsive
+   - No vertical jumping after answering
+========================================================= */
+
+
+/* =========================================================
+   01. REVIEW SCREEN
+========================================================= */
+
+#reviewScreen.review-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    padding:
+        max(14px, env(safe-area-inset-top))
+        16px
+        max(14px, env(safe-area-inset-bottom));
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 20%,
+            rgba(30, 58, 110, 0.3),
+            transparent 65%
+        ),
+        linear-gradient(
+            160deg,
+            #080d17 0%,
+            #101b30 55%,
+            #080d17 100%
+        );
+
+    color: #f8fafc;
+}
+
+#reviewScreen.hidden {
+    display: none !important;
+}
+
+#reviewScreen,
+#reviewScreen * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   02. HEADER
+========================================================= */
+
+#reviewScreen .review-header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 720px;
+
+    min-height: 52px;
+    flex: 0 0 auto;
+
+    margin: 0 auto 14px;
+
+    gap: 14px;
+}
+
+#reviewScreen .review-back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    padding: 0;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    font-family: inherit;
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s,
+        border-color 0.18s;
+}
+
+#reviewScreen .review-back-button:hover {
+    background: #334155;
+    border-color: #64748b;
+}
+
+#reviewScreen .review-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+
+    gap: 4px;
+}
+
+#reviewScreen .review-title {
+    font-size: 20px;
+    font-weight: 850;
+    letter-spacing: 1.5px;
+
+    color: #f8fafc;
+}
+
+#reviewScreen .review-session-info {
+    color: #86efac;
+
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   03. MAIN CARD
+========================================================= */
+
+#reviewScreen .review-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 720px;
+
+    /*
+       Card grows toward the bottom on tall screens.
+       Its child question/answers do NOT grow.
+    */
+
+    flex: 1 0 auto;
+
+    min-height: 0;
+
+    margin: 0 auto;
+    padding: 18px 22px;
+
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 20px;
+
+    background: rgba(15, 23, 42, 0.9);
+
+    box-shadow:
+        0 14px 40px rgba(0, 0, 0, 0.24);
+}
+
+
+/* =========================================================
+   04. QUESTION LEVEL
+========================================================= */
+
+#reviewScreen .review-question-level {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 22px;
+
+    height: 22px;
+
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================================
+   05. STREAK
+========================================================= */
+
+#reviewScreen .review-streak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    align-self: center;
+
+    flex: 0 0 31px;
+
+    min-width: 84px;
+    height: 31px;
+
+    padding: 4px 14px;
+
+    margin: 0;
+
+    border: 1px solid #475569;
+    border-radius: 999px;
+
+    background: #1e293b;
+    color: #fbbf24;
+
+    font-size: 13px;
+    font-weight: 850;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.15s,
+        border-color 0.15s,
+        color 0.15s;
+}
+
+#reviewScreen .review-streak.correct {
+    color: #86efac;
+    border-color: #22c55e;
+    background: #14532d;
+}
+
+#reviewScreen .review-streak.wrong {
+    color: #fca5a5;
+    border-color: #ef4444;
+    background: #450a0a;
+}
+
+#reviewScreen .review-streak.mastered {
+    color: #fde68a;
+    border-color: #f59e0b;
+    background: #713f12;
+}
+
+
+/* =========================================================
+   06. QUESTION
+   FIXED HEIGHT - NO FLEX GROW
+========================================================= */
+
+#reviewScreen .review-question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 108px;
+
+    width: 100%;
+    height: 108px;
+    min-height: 108px;
+
+    margin: 0;
+
+    padding: 10px 8px;
+
+    text-align: center;
+
+    font-size: clamp(27px, 4vw, 42px);
+    font-weight: 800;
+    line-height: 1.35;
+
+    color: #f8fafc;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    overflow-wrap: anywhere;
+    scrollbar-width: thin;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   07. HIRAGANA
+   RESERVE SPACE BEFORE ANSWERING
+========================================================= */
+
+#reviewScreen .review-reading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 30px;
+
+    width: 100%;
+    height: 30px;
+    min-height: 30px;
+
+    padding: 0 8px;
+
+    margin: 0 0 12px;
+
+    text-align: center;
+
+    color: #86efac;
+
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+
+    transition: none;
+}
+
+
+/* =========================================================
+   08. ANSWER AREA
+   ONE COLUMN - FOUR ROWS
+========================================================= */
+
+#reviewScreen .review-answers {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+
+    align-content: start;
+    align-items: stretch;
+
+    flex: 0 0 auto;
+
+    width: 100%;
+
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   09. ANSWER BUTTONS
+========================================================= */
+
+#reviewScreen .review-answer-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 60px;
+
+    margin: 0;
+    padding: 11px 16px;
+
+    border: 2px solid #334155;
+    border-radius: 12px;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.45;
+
+    text-align: left;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+/* =========================================================
+   10. ANSWER NUMBER
+========================================================= */
+
+#reviewScreen .review-answer-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    margin-right: 14px;
+
+    border-radius: 9px;
+
+    background: #334155;
+    color: #cbd5e1;
+
+    font-size: 14px;
+    font-weight: 850;
+}
+
+
+/* =========================================================
+   11. ANSWER TEXT
+========================================================= */
+
+#reviewScreen .review-answer-text {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   12. ANSWER HOVER
+========================================================= */
+
+@media (hover: hover) {
+
+    #reviewScreen
+    .review-answer-button:not(:disabled):hover {
+        background: #293b56;
+        border-color: #60a5fa;
+    }
+}
+
+
+/* =========================================================
+   13. ANSWER CORRECT
+========================================================= */
+
+#reviewScreen .review-answer-button.correct {
+    background: #14532d;
+    border-color: #22c55e;
+    color: #dcfce7;
+}
+
+#reviewScreen
+.review-answer-button.correct
+.review-answer-number {
+    background: #22c55e;
+    color: #052e16;
+}
+
+
+/* =========================================================
+   14. ANSWER WRONG
+========================================================= */
+
+#reviewScreen .review-answer-button.wrong {
+    background: #7f1d1d;
+    border-color: #ef4444;
+    color: #fee2e2;
+}
+
+#reviewScreen
+.review-answer-button.wrong
+.review-answer-number {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   15. ANSWER DISABLED
+========================================================= */
+
+#reviewScreen .review-answer-button:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   16. FEEDBACK AREA
+   FIXED HEIGHT - ALWAYS PRESENT
+
+   Important:
+   Do not use display:none for hidden feedback.
+========================================================= */
+
+#reviewScreen .review-feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    flex: 0 0 142px;
+
+    width: 100%;
+    height: 142px;
+    min-height: 142px;
+    max-height: 142px;
+
+    margin: 12px 0 0;
+    padding: 12px 16px;
+
+    border: 1px solid #475569;
+    border-radius: 13px;
+
+    background: rgba(30, 41, 59, 0.9);
+
+    overflow: hidden;
+
+    /*
+       Visibility changes do not affect layout.
+       This prevents answer position jumping.
+    */
+
+    visibility: visible;
+    opacity: 1;
+
+    transition: none;
+}
+
+
+/* =========================================================
+   17. FEEDBACK CORRECT
+========================================================= */
+
+#reviewScreen .review-feedback.correct {
+    border-color: #22c55e;
+    background: rgba(20, 83, 45, 0.48);
+}
+
+
+/* =========================================================
+   18. FEEDBACK WRONG
+========================================================= */
+
+#reviewScreen .review-feedback.wrong {
+    border-color: #ef4444;
+    background: rgba(127, 29, 29, 0.36);
+}
+
+
+/* =========================================================
+   19. FEEDBACK STATUS
+========================================================= */
+
+#reviewScreen .review-feedback-status {
+    flex: 0 0 auto;
+
+    margin: 0 0 5px;
+
+    text-align: left;
+
+    font-size: 14px;
+    font-weight: 850;
+    line-height: 1.4;
+
+    color: #f8fafc;
+}
+
+#reviewScreen
+.review-feedback.correct
+.review-feedback-status {
+    color: #86efac;
+}
+
+#reviewScreen
+.review-feedback.wrong
+.review-feedback-status {
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   20. FEEDBACK CONTENT
+========================================================= */
+
+#reviewScreen .review-feedback-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    width: 100%;
+    gap: 3px;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+#reviewScreen .review-feedback-word {
+    flex: 0 0 auto;
+
+    max-width: 100%;
+
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    color: #f8fafc;
+
+    overflow-wrap: anywhere;
+}
+
+#reviewScreen .review-feedback-reading {
+    flex: 0 0 auto;
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    color: #86efac;
+
+    overflow-wrap: anywhere;
+}
+
+#reviewScreen .review-feedback-meaning {
+    flex: 1 1 auto;
+
+    width: 100%;
+    min-height: 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #e2e8f0;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   21. ACTION AREA
+   RESERVED BEFORE ANSWERING
+========================================================= */
+
+#reviewScreen .review-actions {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.6fr);
+
+    align-items: stretch;
+
+    flex: 0 0 50px;
+
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+
+    gap: 10px;
+
+    margin: 10px 0 0;
+    padding: 0;
+
+    visibility: visible;
+    opacity: 1;
+
+    transition: none;
+}
+
+
+/* =========================================================
+   22. ACTION BUTTONS
+========================================================= */
+
+#reviewScreen .review-listen-button,
+#reviewScreen .review-next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+
+    padding: 8px 12px;
+
+    border: 0;
+    border-radius: 11px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: background 0.15s;
+}
+
+#reviewScreen .review-listen-button {
+    background: #334155;
+    color: #f8fafc;
+}
+
+#reviewScreen .review-next-button {
+    background: #2563eb;
+    color: #fff;
+}
+
+#reviewScreen .review-listen-button:hover {
+    background: #475569;
+}
+
+#reviewScreen .review-next-button:hover {
+    background: #1d4ed8;
+}
+
+#reviewScreen .review-next-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+
+/* =========================================================
+   23. VISIBILITY HELPERS
+
+   is-concealed:
+   - hidden visually
+   - still occupies layout space
+   - children cannot be interacted with
+
+   is-hidden:
+   - completely removed from visual flow
+   - only used for unavailable listen button
+========================================================= */
+
+#reviewScreen .is-concealed {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#reviewScreen .review-feedback.is-concealed {
+    display: flex;
+}
+
+#reviewScreen .review-actions.is-concealed {
+    display: grid;
+}
+
+#reviewScreen .review-reading.is-concealed {
+    display: flex;
+}
+
+#reviewScreen .is-hidden {
+    display: none;
+}
+
+#reviewScreen
+.review-listen-button.is-hidden
++ .review-next-button {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   24. REVIEW COMPLETE
+========================================================= */
+
+#reviewScreen.review-complete .review-question {
+    font-size: 64px;
+    color: #fbbf24;
+}
+
+#reviewScreen.review-complete .review-reading {
+    color: #86efac;
+    font-size: 18px;
+}
+
+#reviewScreen.review-complete .review-answers {
+    min-height: 0;
+}
+
+
+/* =========================================================
+   25. DESKTOP
+========================================================= */
+
+@media (min-width: 768px) {
+
+    #reviewScreen .review-card {
+        padding: 22px 28px;
+    }
+
+    #reviewScreen .review-header {
+        margin-bottom: 16px;
+    }
+
+    #reviewScreen .review-question {
+        flex-basis: 114px;
+        height: 114px;
+        min-height: 114px;
+
+        font-size: clamp(30px, 3.8vw, 44px);
+    }
+
+    #reviewScreen .review-answers {
+        gap: 11px;
+    }
+
+    #reviewScreen .review-answer-button {
+        min-height: 62px;
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   26. TABLET AND MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    #reviewScreen.review-screen {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #reviewScreen .review-header {
+        min-height: 46px;
+        margin-bottom: 9px;
+        gap: 10px;
+    }
+
+    #reviewScreen .review-back-button {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+    }
+
+    #reviewScreen .review-title {
+        font-size: 18px;
+    }
+
+    #reviewScreen .review-session-info {
+        font-size: 11px;
+    }
+
+    #reviewScreen .review-card {
+        padding: 13px 12px;
+        border-radius: 15px;
+    }
+
+    #reviewScreen .review-question-level {
+        flex-basis: 19px;
+        height: 19px;
+
+        margin-bottom: 5px;
+
+        font-size: 11px;
+    }
+
+    #reviewScreen .review-streak {
+        flex-basis: 28px;
+        height: 28px;
+
+        font-size: 12px;
+    }
+
+    #reviewScreen .review-question {
+        flex-basis: 91px;
+
+        height: 91px;
+        min-height: 91px;
+
+        padding: 8px 6px;
+
+        font-size: clamp(25px, 6.5vw, 35px);
+    }
+
+    #reviewScreen .review-reading {
+        flex-basis: 25px;
+
+        height: 25px;
+        min-height: 25px;
+
+        margin-bottom: 9px;
+
+        font-size: 16px;
+    }
+
+    #reviewScreen .review-answers {
+        gap: 8px;
+    }
+
+    #reviewScreen .review-answer-button {
+        min-height: 53px;
+
+        padding: 9px 11px;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+    }
+
+    #reviewScreen .review-answer-number {
+        flex-basis: 27px;
+
+        width: 27px;
+        height: 27px;
+
+        margin-right: 10px;
+
+        font-size: 12px;
+    }
+
+    #reviewScreen .review-feedback {
+        flex-basis: 125px;
+
+        height: 125px;
+        min-height: 125px;
+        max-height: 125px;
+
+        margin-top: 10px;
+        padding: 9px 11px;
+    }
+
+    #reviewScreen .review-feedback-status {
+        font-size: 13px;
+    }
+
+    #reviewScreen .review-feedback-word {
+        font-size: 19px;
+    }
+
+    #reviewScreen .review-feedback-reading {
+        font-size: 15px;
+    }
+
+    #reviewScreen .review-feedback-meaning {
+        font-size: 13px;
+    }
+
+    #reviewScreen .review-actions {
+        flex-basis: 46px;
+
+        height: 46px;
+        min-height: 46px;
+
+        margin-top: 9px;
+        gap: 8px;
+    }
+
+    #reviewScreen .review-listen-button,
+    #reviewScreen .review-next-button {
+        height: 46px;
+
+        padding: 7px 8px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   27. SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    #reviewScreen .review-card {
+        padding: 11px 9px;
+    }
+
+    #reviewScreen .review-question {
+        flex-basis: 82px;
+        height: 82px;
+        min-height: 82px;
+
+        font-size: 26px;
+    }
+
+    #reviewScreen .review-answer-button {
+        min-height: 49px;
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+
+    #reviewScreen .review-answers {
+        gap: 7px;
+    }
+
+    #reviewScreen .review-feedback {
+        flex-basis: 116px;
+        height: 116px;
+        min-height: 116px;
+        max-height: 116px;
+    }
+
+    #reviewScreen .review-answer-number {
+        margin-right: 8px;
+    }
+}
+
+
+/* =========================================================
+   28. SHORT LANDSCAPE SCREENS
+========================================================= */
+
+@media (max-height: 680px) {
+
+    #reviewScreen .review-card {
+        flex-grow: 0;
+    }
+
+    #reviewScreen .review-question {
+        flex-basis: 78px;
+        height: 78px;
+        min-height: 78px;
+    }
+
+    #reviewScreen .review-answer-button {
+        min-height: 48px;
+    }
+
+    #reviewScreen .review-answers {
+        gap: 7px;
+    }
+
+    #reviewScreen .review-feedback {
+        flex-basis: 112px;
+        height: 112px;
+        min-height: 112px;
+        max-height: 112px;
+    }
+}
+
+
+/* =========================================================
+   29. FOCUS AND ACCESSIBILITY
+========================================================= */
+
+#reviewScreen button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #reviewScreen *,
+    #reviewScreen *::before,
+    #reviewScreen *::after {
+        animation: none;
+        transition: none;
+    }
+}
