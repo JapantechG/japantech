@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "銀行",
     "reading": "ぎんこう",
-    "meaning": "Ngân hàng"
+    "meaning": "Ngân hàng",
+    "meaning_en": "Bank"
   },
   {
     "id": 2,
     "word": "口座",
     "reading": "こうざ",
-    "meaning": "Tài khoản"
+    "meaning": "Tài khoản",
+    "meaning_en": "Bank account"
   },
   {
     "id": 3,
     "word": "普通預金",
     "reading": "ふつうよきん",
-    "meaning": "Tiền gửi thông thường"
+    "meaning": "Tiền gửi thông thường",
+    "meaning_en": "Ordinary savings account"
   },
   {
     "id": 4,
     "word": "定期預金",
     "reading": "ていきよきん",
-    "meaning": "Tiền gửi kỳ hạn"
+    "meaning": "Tiền gửi kỳ hạn",
+    "meaning_en": "Fixed-term deposit"
   },
   {
     "id": 5,
     "word": "預金",
     "reading": "よきん",
-    "meaning": "Tiền gửi"
+    "meaning": "Tiền gửi",
+    "meaning_en": "Bank deposit"
   },
   {
     "id": 6,
     "word": "残高",
     "reading": "ざんだか",
-    "meaning": "Số dư"
+    "meaning": "Số dư",
+    "meaning_en": "Account balance"
   },
   {
     "id": 7,
     "word": "入金",
     "reading": "にゅうきん",
-    "meaning": "Nộp tiền"
+    "meaning": "Nộp tiền",
+    "meaning_en": "Deposit of funds"
   },
   {
     "id": 8,
     "word": "出金",
     "reading": "しゅっきん",
-    "meaning": "Rút tiền"
+    "meaning": "Rút tiền",
+    "meaning_en": "Withdrawal"
   },
   {
     "id": 9,
     "word": "振込",
     "reading": "ふりこみ",
-    "meaning": "Chuyển khoản"
+    "meaning": "Chuyển khoản",
+    "meaning_en": "Bank transfer"
   },
   {
     "id": 10,
     "word": "送金",
     "reading": "そうきん",
-    "meaning": "Chuyển tiền"
+    "meaning": "Chuyển tiền",
+    "meaning_en": "Money remittance"
   },
   {
     "id": 11,
     "word": "引き落とし",
     "reading": "ひきおとし",
-    "meaning": "Trích nợ tự động"
+    "meaning": "Trích nợ tự động",
+    "meaning_en": "Automatic debit"
   },
   {
     "id": 12,
     "word": "通帳",
     "reading": "つうちょう",
-    "meaning": "Sổ ngân hàng"
+    "meaning": "Sổ ngân hàng",
+    "meaning_en": "Bank passbook"
   },
   {
     "id": 13,
     "word": "キャッシュカード",
     "reading": "キャッシュカード",
-    "meaning": "Thẻ ATM"
+    "meaning": "Thẻ ATM",
+    "meaning_en": "ATM card"
   },
   {
     "id": 14,
     "word": "暗証番号",
     "reading": "あんしょうばんごう",
-    "meaning": "Mã PIN"
+    "meaning": "Mã PIN",
+    "meaning_en": "PIN (Personal Identification Number)"
   },
   {
     "id": 15,
     "word": "手数料",
     "reading": "てすうりょう",
-    "meaning": "Phí dịch vụ"
+    "meaning": "Phí dịch vụ",
+    "meaning_en": "Service fee"
   },
   {
     "id": 16,
     "word": "金利",
     "reading": "きんり",
-    "meaning": "Lãi suất"
+    "meaning": "Lãi suất",
+    "meaning_en": "Interest rate"
   },
   {
     "id": 17,
     "word": "融資",
     "reading": "ゆうし",
-    "meaning": "Cho vay vốn"
+    "meaning": "Cho vay vốn",
+    "meaning_en": "Financing, lending"
   },
   {
     "id": 18,
     "word": "借入",
     "reading": "かりいれ",
-    "meaning": "Khoản vay"
+    "meaning": "Khoản vay",
+    "meaning_en": "Borrowing, loan"
   },
   {
     "id": 19,
     "word": "返済",
     "reading": "へんさい",
-    "meaning": "Hoàn trả nợ"
+    "meaning": "Hoàn trả nợ",
+    "meaning_en": "Loan repayment"
   },
   {
     "id": 20,
     "word": "為替",
     "reading": "かわせ",
-    "meaning": "Hối đoái"
+    "meaning": "Hối đoái",
+    "meaning_en": "Foreign exchange"
   }
 ]
