@@ -1,176 +1,206 @@
+
 [
   {
     "id": 1,
     "word": "鳥",
     "reading": "とり",
-    "meaning": "Chim"
+    "meaning": "Chim",
+    "meaning_en": "Bird"
   },
   {
     "id": 2,
     "word": "鶏",
     "reading": "にわとり",
-    "meaning": "Gà"
+    "meaning": "Gà",
+    "meaning_en": "Chicken"
   },
   {
     "id": 3,
     "word": "ひよこ",
     "reading": "ひよこ",
-    "meaning": "Gà con"
+    "meaning": "Gà con",
+    "meaning_en": "Chick"
   },
   {
     "id": 4,
     "word": "アヒル",
     "reading": "アヒル",
-    "meaning": "Vịt nhà"
+    "meaning": "Vịt nhà",
+    "meaning_en": "Domestic duck"
   },
   {
     "id": 5,
     "word": "鴨",
     "reading": "かも",
-    "meaning": "Vịt trời"
+    "meaning": "Vịt trời",
+    "meaning_en": "Wild duck"
   },
   {
     "id": 6,
     "word": "ガチョウ",
     "reading": "ガチョウ",
-    "meaning": "Ngỗng"
+    "meaning": "Ngỗng",
+    "meaning_en": "Goose"
   },
   {
     "id": 7,
     "word": "白鳥",
     "reading": "はくちょう",
-    "meaning": "Thiên nga"
+    "meaning": "Thiên nga",
+    "meaning_en": "Swan"
   },
   {
     "id": 8,
     "word": "鳩",
     "reading": "はと",
-    "meaning": "Bồ câu"
+    "meaning": "Bồ câu",
+    "meaning_en": "Pigeon, dove"
   },
   {
     "id": 9,
     "word": "雀",
     "reading": "すずめ",
-    "meaning": "Sẻ"
+    "meaning": "Sẻ",
+    "meaning_en": "Sparrow"
   },
   {
     "id": 10,
     "word": "烏",
     "reading": "からす",
-    "meaning": "Quạ"
+    "meaning": "Quạ",
+    "meaning_en": "Crow"
   },
   {
     "id": 11,
     "word": "鷹",
     "reading": "たか",
-    "meaning": "Diều hâu"
+    "meaning": "Diều hâu",
+    "meaning_en": "Hawk"
   },
   {
     "id": 12,
     "word": "鷲",
     "reading": "わし",
-    "meaning": "Đại bàng"
+    "meaning": "Đại bàng",
+    "meaning_en": "Eagle"
   },
   {
     "id": 13,
     "word": "梟",
     "reading": "ふくろう",
-    "meaning": "Cú mèo"
+    "meaning": "Cú mèo",
+    "meaning_en": "Owl"
   },
   {
     "id": 14,
     "word": "ミミズク",
     "reading": "ミミズク",
-    "meaning": "Cú có túm lông tai"
+    "meaning": "Cú có túm lông tai",
+    "meaning_en": "Eared owl"
   },
   {
     "id": 15,
     "word": "燕",
     "reading": "つばめ",
-    "meaning": "Én"
+    "meaning": "Én",
+    "meaning_en": "Swallow"
   },
   {
     "id": 16,
     "word": "鶴",
     "reading": "つる",
-    "meaning": "Sếu"
+    "meaning": "Sếu",
+    "meaning_en": "Crane"
   },
   {
     "id": 17,
     "word": "ペンギン",
     "reading": "ペンギン",
-    "meaning": "Chim cánh cụt"
+    "meaning": "Chim cánh cụt",
+    "meaning_en": "Penguin"
   },
   {
     "id": 18,
     "word": "ダチョウ",
     "reading": "ダチョウ",
-    "meaning": "Đà điểu"
+    "meaning": "Đà điểu",
+    "meaning_en": "Ostrich"
   },
   {
     "id": 19,
     "word": "孔雀",
     "reading": "くじゃく",
-    "meaning": "Công"
+    "meaning": "Công",
+    "meaning_en": "Peacock"
   },
   {
     "id": 20,
     "word": "鸚鵡",
     "reading": "おうむ",
-    "meaning": "Vẹt lớn"
+    "meaning": "Vẹt lớn",
+    "meaning_en": "Parrot"
   },
   {
     "id": 21,
     "word": "インコ",
     "reading": "インコ",
-    "meaning": "Vẹt nhỏ"
+    "meaning": "Vẹt nhỏ",
+    "meaning_en": "Parakeet"
   },
   {
     "id": 22,
     "word": "カナリア",
     "reading": "カナリア",
-    "meaning": "Hoàng yến"
+    "meaning": "Hoàng yến",
+    "meaning_en": "Canary"
   },
   {
     "id": 23,
     "word": "カモメ",
     "reading": "カモメ",
-    "meaning": "Mòng biển"
+    "meaning": "Mòng biển",
+    "meaning_en": "Seagull"
   },
   {
     "id": 24,
     "word": "フラミンゴ",
     "reading": "フラミンゴ",
-    "meaning": "Hồng hạc"
+    "meaning": "Hồng hạc",
+    "meaning_en": "Flamingo"
   },
   {
     "id": 25,
     "word": "キツツキ",
     "reading": "キツツキ",
-    "meaning": "Gõ kiến"
+    "meaning": "Gõ kiến",
+    "meaning_en": "Woodpecker"
   },
   {
     "id": 26,
     "word": "ウグイス",
     "reading": "ウグイス",
-    "meaning": "Chim oanh Nhật"
+    "meaning": "Chim oanh Nhật",
+    "meaning_en": "Japanese bush warbler"
   },
   {
     "id": 27,
     "word": "カワセミ",
     "reading": "カワセミ",
-    "meaning": "Bói cá"
+    "meaning": "Bói cá",
+    "meaning_en": "Kingfisher"
   },
   {
     "id": 28,
     "word": "雲雀",
     "reading": "ひばり",
-    "meaning": "Sơn ca"
+    "meaning": "Sơn ca",
+    "meaning_en": "Skylark"
   },
   {
     "id": 29,
     "word": "七面鳥",
     "reading": "しちめんちょう",
-    "meaning": "Gà tây"
+    "meaning": "Gà tây",
+    "meaning_en": "Turkey"
   }
 ]
