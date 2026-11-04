@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "服",
     "reading": "ふく",
-    "meaning": "Quần áo"
+    "meaning": "Quần áo",
+    "meaning_en": "Clothes"
   },
   {
     "id": 2,
     "word": "衣服",
     "reading": "いふく",
-    "meaning": "Trang phục"
+    "meaning": "Trang phục",
+    "meaning_en": "Clothing, garments"
   },
   {
     "id": 3,
     "word": "シャツ",
     "reading": "シャツ",
-    "meaning": "Áo sơ mi"
+    "meaning": "Áo sơ mi",
+    "meaning_en": "Shirt"
   },
   {
     "id": 4,
     "word": "Ｔシャツ",
     "reading": "ティーシャツ",
-    "meaning": "Áo phông"
+    "meaning": "Áo phông",
+    "meaning_en": "T-shirt"
   },
   {
     "id": 5,
     "word": "ブラウス",
     "reading": "ブラウス",
-    "meaning": "Áo blouse"
+    "meaning": "Áo blouse",
+    "meaning_en": "Blouse"
   },
   {
     "id": 6,
     "word": "セーター",
     "reading": "セーター",
-    "meaning": "Áo len"
+    "meaning": "Áo len",
+    "meaning_en": "Sweater"
   },
   {
     "id": 7,
     "word": "コート",
     "reading": "コート",
-    "meaning": "Áo khoác dài"
+    "meaning": "Áo khoác dài",
+    "meaning_en": "Coat"
   },
   {
     "id": 8,
     "word": "ジャケット",
     "reading": "ジャケット",
-    "meaning": "Áo khoác"
+    "meaning": "Áo khoác",
+    "meaning_en": "Jacket"
   },
   {
     "id": 9,
     "word": "パーカー",
     "reading": "パーカー",
-    "meaning": "Áo hoodie"
+    "meaning": "Áo hoodie",
+    "meaning_en": "Hoodie"
   },
   {
     "id": 10,
     "word": "ズボン",
     "reading": "ズボン",
-    "meaning": "Quần dài"
+    "meaning": "Quần dài",
+    "meaning_en": "Pants, trousers"
   },
   {
     "id": 11,
     "word": "ジーンズ",
     "reading": "ジーンズ",
-    "meaning": "Quần jeans"
+    "meaning": "Quần jeans",
+    "meaning_en": "Jeans"
   },
   {
     "id": 12,
     "word": "スカート",
     "reading": "スカート",
-    "meaning": "Chân váy"
+    "meaning": "Chân váy",
+    "meaning_en": "Skirt"
   },
   {
     "id": 13,
     "word": "ワンピース",
     "reading": "ワンピース",
-    "meaning": "Váy liền"
+    "meaning": "Váy liền",
+    "meaning_en": "One-piece dress"
   },
   {
     "id": 14,
     "word": "ドレス",
     "reading": "ドレス",
-    "meaning": "Đầm"
+    "meaning": "Đầm",
+    "meaning_en": "Dress, gown"
   },
   {
     "id": 15,
     "word": "スーツ",
     "reading": "スーツ",
-    "meaning": "Bộ vest"
+    "meaning": "Bộ vest",
+    "meaning_en": "Suit"
   },
   {
     "id": 16,
     "word": "制服",
     "reading": "せいふく",
-    "meaning": "Đồng phục"
+    "meaning": "Đồng phục",
+    "meaning_en": "Uniform"
   },
   {
     "id": 17,
     "word": "下着",
     "reading": "したぎ",
-    "meaning": "Đồ lót"
+    "meaning": "Đồ lót",
+    "meaning_en": "Underwear"
   },
   {
     "id": 18,
     "word": "靴下",
     "reading": "くつした",
-    "meaning": "Tất"
+    "meaning": "Tất",
+    "meaning_en": "Socks"
   },
   {
     "id": 19,
     "word": "手袋",
     "reading": "てぶくろ",
-    "meaning": "Găng tay"
+    "meaning": "Găng tay",
+    "meaning_en": "Gloves"
   },
   {
     "id": 20,
     "word": "マフラー",
     "reading": "マフラー",
-    "meaning": "Khăn quàng"
+    "meaning": "Khăn quàng",
+    "meaning_en": "Scarf"
   }
 ]
