@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "原因",
     "reading": "げんいん",
-    "meaning": "Nguyên nhân"
+    "meaning": "Nguyên nhân",
+    "meaning_en": "Cause"
   },
   {
     "id": 2,
     "word": "理由",
     "reading": "りゆう",
-    "meaning": "Lý do"
+    "meaning": "Lý do",
+    "meaning_en": "Reason"
   },
   {
     "id": 3,
     "word": "要因",
     "reading": "よういん",
-    "meaning": "Yếu tố nguyên nhân"
+    "meaning": "Yếu tố nguyên nhân",
+    "meaning_en": "Contributing factor"
   },
   {
     "id": 4,
     "word": "背景",
     "reading": "はいけい",
-    "meaning": "Bối cảnh"
+    "meaning": "Bối cảnh",
+    "meaning_en": "Background, context"
   },
   {
     "id": 5,
     "word": "きっかけ",
     "reading": "きっかけ",
-    "meaning": "Duyên cớ, cơ hội khởi đầu"
+    "meaning": "Duyên cớ, cơ hội khởi đầu",
+    "meaning_en": "Trigger, starting point"
   },
   {
     "id": 6,
     "word": "結果",
     "reading": "けっか",
-    "meaning": "Kết quả"
+    "meaning": "Kết quả",
+    "meaning_en": "Result, outcome"
   },
   {
     "id": 7,
     "word": "影響",
     "reading": "えいきょう",
-    "meaning": "Ảnh hưởng"
+    "meaning": "Ảnh hưởng",
+    "meaning_en": "Influence, impact"
   },
   {
     "id": 8,
     "word": "効果",
     "reading": "こうか",
-    "meaning": "Hiệu quả"
+    "meaning": "Hiệu quả",
+    "meaning_en": "Effect, effectiveness"
   },
   {
     "id": 9,
     "word": "因果関係",
     "reading": "いんがかんけい",
-    "meaning": "Quan hệ nhân quả"
+    "meaning": "Quan hệ nhân quả",
+    "meaning_en": "Cause-and-effect relationship"
   },
   {
     "id": 10,
     "word": "したがって",
     "reading": "したがって",
-    "meaning": "Do đó"
+    "meaning": "Do đó",
+    "meaning_en": "Therefore, consequently"
   },
   {
     "id": 11,
     "word": "そのため",
     "reading": "そのため",
-    "meaning": "Vì vậy"
+    "meaning": "Vì vậy",
+    "meaning_en": "For that reason, therefore"
   },
   {
     "id": 12,
     "word": "なぜなら",
     "reading": "なぜなら",
-    "meaning": "Bởi vì"
+    "meaning": "Bởi vì",
+    "meaning_en": "Because, the reason is"
   },
   {
     "id": 13,
     "word": "ゆえに",
     "reading": "ゆえに",
-    "meaning": "Cho nên"
+    "meaning": "Cho nên",
+    "meaning_en": "Hence, therefore"
   },
   {
     "id": 14,
     "word": "結果的に",
     "reading": "けっかてきに",
-    "meaning": "Rốt cuộc thì"
+    "meaning": "Rốt cuộc thì",
+    "meaning_en": "As a result, ultimately"
   },
   {
     "id": 15,
     "word": "伴う",
     "reading": "ともなう",
-    "meaning": "Đi kèm, kéo theo"
+    "meaning": "Đi kèm, kéo theo",
+    "meaning_en": "Accompany, entail"
   },
   {
     "id": 16,
     "word": "生じる",
     "reading": "しょうじる",
-    "meaning": "Phát sinh"
+    "meaning": "Phát sinh",
+    "meaning_en": "Arise, occur"
   },
   {
     "id": 17,
     "word": "引き起こす",
     "reading": "ひきおこす",
-    "meaning": "Gây ra"
+    "meaning": "Gây ra",
+    "meaning_en": "Cause, bring about"
   },
   {
     "id": 18,
     "word": "つながる",
     "reading": "つながる",
-    "meaning": "Dẫn đến, liên kết"
+    "meaning": "Dẫn đến, liên kết",
+    "meaning_en": "Lead to, connect"
   },
   {
     "id": 19,
     "word": "解決",
     "reading": "かいけつ",
-    "meaning": "Giải quyết"
+    "meaning": "Giải quyết",
+    "meaning_en": "Solution, resolution"
   },
   {
     "id": 20,
     "word": "対策",
     "reading": "たいさく",
-    "meaning": "Biện pháp ứng phó"
+    "meaning": "Biện pháp ứng phó",
+    "meaning_en": "Countermeasure, preventive measure"
   }
 ]
