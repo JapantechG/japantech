@@ -1,266 +1,311 @@
+
 [
   {
     "id": 1,
     "word": "動物",
     "reading": "どうぶつ",
-    "meaning": "Động vật"
+    "meaning": "Động vật",
+    "meaning_en": "Animal"
   },
   {
     "id": 2,
     "word": "犬",
     "reading": "いぬ",
-    "meaning": "Chó"
+    "meaning": "Chó",
+    "meaning_en": "Dog"
   },
   {
     "id": 3,
     "word": "猫",
     "reading": "ねこ",
-    "meaning": "Mèo"
+    "meaning": "Mèo",
+    "meaning_en": "Cat"
   },
   {
     "id": 4,
     "word": "馬",
     "reading": "うま",
-    "meaning": "Ngựa"
+    "meaning": "Ngựa",
+    "meaning_en": "Horse"
   },
   {
     "id": 5,
     "word": "牛",
     "reading": "うし",
-    "meaning": "Bò"
+    "meaning": "Bò",
+    "meaning_en": "Cow"
   },
   {
     "id": 6,
     "word": "豚",
     "reading": "ぶた",
-    "meaning": "Lợn"
+    "meaning": "Lợn",
+    "meaning_en": "Pig"
   },
   {
     "id": 7,
     "word": "羊",
     "reading": "ひつじ",
-    "meaning": "Cừu"
+    "meaning": "Cừu",
+    "meaning_en": "Sheep"
   },
   {
     "id": 8,
     "word": "山羊",
     "reading": "やぎ",
-    "meaning": "Dê"
+    "meaning": "Dê",
+    "meaning_en": "Goat"
   },
   {
     "id": 9,
     "word": "兎",
     "reading": "うさぎ",
-    "meaning": "Thỏ"
+    "meaning": "Thỏ",
+    "meaning_en": "Rabbit"
   },
   {
     "id": 10,
     "word": "鼠",
     "reading": "ねずみ",
-    "meaning": "Chuột"
+    "meaning": "Chuột",
+    "meaning_en": "Mouse"
   },
   {
     "id": 11,
     "word": "栗鼠",
     "reading": "りす",
-    "meaning": "Sóc"
+    "meaning": "Sóc",
+    "meaning_en": "Squirrel"
   },
   {
     "id": 12,
     "word": "熊",
     "reading": "くま",
-    "meaning": "Gấu"
+    "meaning": "Gấu",
+    "meaning_en": "Bear"
   },
   {
     "id": 13,
     "word": "白熊",
     "reading": "しろくま",
-    "meaning": "Gấu trắng"
+    "meaning": "Gấu trắng",
+    "meaning_en": "Polar bear"
   },
   {
     "id": 14,
     "word": "パンダ",
     "reading": "パンダ",
-    "meaning": "Gấu trúc"
+    "meaning": "Gấu trúc",
+    "meaning_en": "Panda"
   },
   {
     "id": 15,
     "word": "虎",
     "reading": "とら",
-    "meaning": "Hổ"
+    "meaning": "Hổ",
+    "meaning_en": "Tiger"
   },
   {
     "id": 16,
     "word": "ライオン",
     "reading": "ライオン",
-    "meaning": "Sư tử"
+    "meaning": "Sư tử",
+    "meaning_en": "Lion"
   },
   {
     "id": 17,
     "word": "豹",
     "reading": "ひょう",
-    "meaning": "Báo đốm"
+    "meaning": "Báo đốm",
+    "meaning_en": "Leopard"
   },
   {
     "id": 18,
     "word": "チーター",
     "reading": "チーター",
-    "meaning": "Báo săn"
+    "meaning": "Báo săn",
+    "meaning_en": "Cheetah"
   },
   {
     "id": 19,
     "word": "狼",
     "reading": "おおかみ",
-    "meaning": "Sói"
+    "meaning": "Sói",
+    "meaning_en": "Wolf"
   },
   {
     "id": 20,
     "word": "狐",
     "reading": "きつね",
-    "meaning": "Cáo"
+    "meaning": "Cáo",
+    "meaning_en": "Fox"
   },
   {
     "id": 21,
     "word": "狸",
     "reading": "たぬき",
-    "meaning": "Lửng chó Nhật"
+    "meaning": "Lửng chó Nhật",
+    "meaning_en": "Japanese raccoon dog"
   },
   {
     "id": 22,
     "word": "鹿",
     "reading": "しか",
-    "meaning": "Hươu"
+    "meaning": "Hươu",
+    "meaning_en": "Deer"
   },
   {
     "id": 23,
     "word": "猿",
     "reading": "さる",
-    "meaning": "Khỉ"
+    "meaning": "Khỉ",
+    "meaning_en": "Monkey"
   },
   {
     "id": 24,
     "word": "ゴリラ",
     "reading": "ゴリラ",
-    "meaning": "Khỉ đột"
+    "meaning": "Khỉ đột",
+    "meaning_en": "Gorilla"
   },
   {
     "id": 25,
     "word": "チンパンジー",
     "reading": "チンパンジー",
-    "meaning": "Tinh tinh"
+    "meaning": "Tinh tinh",
+    "meaning_en": "Chimpanzee"
   },
   {
     "id": 26,
     "word": "象",
     "reading": "ぞう",
-    "meaning": "Voi"
+    "meaning": "Voi",
+    "meaning_en": "Elephant"
   },
   {
     "id": 27,
     "word": "キリン",
     "reading": "キリン",
-    "meaning": "Hươu cao cổ"
+    "meaning": "Hươu cao cổ",
+    "meaning_en": "Giraffe"
   },
   {
     "id": 28,
     "word": "縞馬",
     "reading": "しまうま",
-    "meaning": "Ngựa vằn"
+    "meaning": "Ngựa vằn",
+    "meaning_en": "Zebra"
   },
   {
     "id": 29,
     "word": "河馬",
     "reading": "かば",
-    "meaning": "Hà mã"
+    "meaning": "Hà mã",
+    "meaning_en": "Hippopotamus"
   },
   {
     "id": 30,
     "word": "犀",
     "reading": "さい",
-    "meaning": "Tê giác"
+    "meaning": "Tê giác",
+    "meaning_en": "Rhinoceros"
   },
   {
     "id": 31,
     "word": "カンガルー",
     "reading": "カンガルー",
-    "meaning": "Chuột túi"
+    "meaning": "Chuột túi",
+    "meaning_en": "Kangaroo"
   },
   {
     "id": 32,
     "word": "コアラ",
     "reading": "コアラ",
-    "meaning": "Gấu koala"
+    "meaning": "Gấu koala",
+    "meaning_en": "Koala"
   },
   {
     "id": 33,
     "word": "ラクダ",
     "reading": "ラクダ",
-    "meaning": "Lạc đà"
+    "meaning": "Lạc đà",
+    "meaning_en": "Camel"
   },
   {
     "id": 34,
     "word": "アルパカ",
     "reading": "アルパカ",
-    "meaning": "Lạc đà alpaca"
+    "meaning": "Lạc đà alpaca",
+    "meaning_en": "Alpaca"
   },
   {
     "id": 35,
     "word": "ハムスター",
     "reading": "ハムスター",
-    "meaning": "Chuột hamster"
+    "meaning": "Chuột hamster",
+    "meaning_en": "Hamster"
   },
   {
     "id": 36,
     "word": "モルモット",
     "reading": "モルモット",
-    "meaning": "Chuột lang"
+    "meaning": "Chuột lang",
+    "meaning_en": "Guinea pig"
   },
   {
     "id": 37,
     "word": "イノシシ",
     "reading": "いのしし",
-    "meaning": "Lợn rừng"
+    "meaning": "Lợn rừng",
+    "meaning_en": "Wild boar"
   },
   {
     "id": 38,
     "word": "ハリネズミ",
     "reading": "ハリネズミ",
-    "meaning": "Nhím gai"
+    "meaning": "Nhím gai",
+    "meaning_en": "Hedgehog"
   },
   {
     "id": 39,
     "word": "コウモリ",
     "reading": "コウモリ",
-    "meaning": "Dơi"
+    "meaning": "Dơi",
+    "meaning_en": "Bat"
   },
   {
     "id": 40,
     "word": "カワウソ",
     "reading": "カワウソ",
-    "meaning": "Rái cá"
+    "meaning": "Rái cá",
+    "meaning_en": "Otter"
   },
   {
     "id": 41,
     "word": "アライグマ",
     "reading": "アライグマ",
-    "meaning": "Gấu mèo"
+    "meaning": "Gấu mèo",
+    "meaning_en": "Raccoon"
   },
   {
     "id": 42,
     "word": "ナマケモノ",
     "reading": "ナマケモノ",
-    "meaning": "Lười"
+    "meaning": "Lười",
+    "meaning_en": "Sloth"
   },
   {
     "id": 43,
     "word": "アリクイ",
     "reading": "アリクイ",
-    "meaning": "Thú ăn kiến"
+    "meaning": "Thú ăn kiến",
+    "meaning_en": "Anteater"
   },
   {
     "id": 44,
     "word": "トナカイ",
     "reading": "トナカイ",
-    "meaning": "Tuần lộc"
+    "meaning": "Tuần lộc",
+    "meaning_en": "Reindeer"
   }
 ]
