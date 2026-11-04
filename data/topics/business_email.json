@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "件名",
     "reading": "けんめい",
-    "meaning": "Tiêu đề thư"
+    "meaning": "Tiêu đề thư",
+    "meaning_en": "Email subject"
   },
   {
     "id": 2,
     "word": "宛先",
     "reading": "あてさき",
-    "meaning": "Người nhận"
+    "meaning": "Người nhận",
+    "meaning_en": "Recipient"
   },
   {
     "id": 3,
     "word": "送信",
     "reading": "そうしん",
-    "meaning": "Gửi"
+    "meaning": "Gửi",
+    "meaning_en": "Send"
   },
   {
     "id": 4,
     "word": "受信",
     "reading": "じゅしん",
-    "meaning": "Nhận"
+    "meaning": "Nhận",
+    "meaning_en": "Receive"
   },
   {
     "id": 5,
     "word": "返信",
     "reading": "へんしん",
-    "meaning": "Trả lời"
+    "meaning": "Trả lời",
+    "meaning_en": "Reply"
   },
   {
     "id": 6,
     "word": "転送",
     "reading": "てんそう",
-    "meaning": "Chuyển tiếp"
+    "meaning": "Chuyển tiếp",
+    "meaning_en": "Forward"
   },
   {
     "id": 7,
     "word": "添付",
     "reading": "てんぷ",
-    "meaning": "Đính kèm"
+    "meaning": "Đính kèm",
+    "meaning_en": "Attachment"
   },
   {
     "id": 8,
     "word": "本文",
     "reading": "ほんぶん",
-    "meaning": "Nội dung chính"
+    "meaning": "Nội dung chính",
+    "meaning_en": "Email body, main text"
   },
   {
     "id": 9,
     "word": "署名",
     "reading": "しょめい",
-    "meaning": "Chữ ký"
+    "meaning": "Chữ ký",
+    "meaning_en": "Signature"
   },
   {
     "id": 10,
     "word": "お世話になっております",
     "reading": "おせわになっております",
-    "meaning": "Cảm ơn đã luôn hỗ trợ"
+    "meaning": "Cảm ơn đã luôn hỗ trợ",
+    "meaning_en": "Thank you for your continued support"
   },
   {
     "id": 11,
     "word": "ご確認ください",
     "reading": "ごかくにんください",
-    "meaning": "Xin vui lòng kiểm tra"
+    "meaning": "Xin vui lòng kiểm tra",
+    "meaning_en": "Please check, please confirm"
   },
   {
     "id": 12,
     "word": "ご連絡",
     "reading": "ごれんらく",
-    "meaning": "Liên lạc (kính ngữ)"
+    "meaning": "Liên lạc (kính ngữ)",
+    "meaning_en": "Contact, communication (polite)"
   },
   {
     "id": 13,
     "word": "お手数",
     "reading": "おてすう",
-    "meaning": "Sự phiền công"
+    "meaning": "Sự phiền công",
+    "meaning_en": "Trouble, inconvenience"
   },
   {
     "id": 14,
     "word": "恐縮",
     "reading": "きょうしゅく",
-    "meaning": "Áy náy, ngại phiền"
+    "meaning": "Áy náy, ngại phiền",
+    "meaning_en": "Feeling obliged, apologetic"
   },
   {
     "id": 15,
     "word": "承知しました",
     "reading": "しょうちしました",
-    "meaning": "Tôi đã hiểu, xin tiếp nhận"
+    "meaning": "Tôi đã hiểu, xin tiếp nhận",
+    "meaning_en": "Understood, acknowledged"
   },
   {
     "id": 16,
     "word": "かしこまりました",
     "reading": "かしこまりました",
-    "meaning": "Tôi đã rõ (kính trọng)"
+    "meaning": "Tôi đã rõ (kính trọng)",
+    "meaning_en": "Certainly, understood (very polite)"
   },
   {
     "id": 17,
     "word": "ご返信",
     "reading": "ごへんしん",
-    "meaning": "Hồi âm (kính ngữ)"
+    "meaning": "Hồi âm (kính ngữ)",
+    "meaning_en": "Reply, response (polite)"
   },
   {
     "id": 18,
     "word": "至急",
     "reading": "しきゅう",
-    "meaning": "Khẩn cấp"
+    "meaning": "Khẩn cấp",
+    "meaning_en": "Urgent, immediately"
   },
   {
     "id": 19,
     "word": "再送",
     "reading": "さいそう",
-    "meaning": "Gửi lại"
+    "meaning": "Gửi lại",
+    "meaning_en": "Resend"
   },
   {
     "id": 20,
     "word": "下書き",
     "reading": "したがき",
-    "meaning": "Bản nháp"
+    "meaning": "Bản nháp",
+    "meaning_en": "Draft"
   }
 ]
