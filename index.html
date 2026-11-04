@@ -1160,6 +1160,52 @@
 
     </div>
 
+    
+<!-- =========================================
+     FLASHCARD FILTERS
+========================================= -->
+
+<div id="flashcardFilters"
+     class="flashcard-filters">
+
+    <button class="flashcard-filter-btn active"
+            data-fc-filter="all"
+            type="button">
+        <strong id="fcCountAll">0</strong>
+        <span>ALL</span>
+    </button>
+
+    <button class="flashcard-filter-btn"
+            data-fc-filter="again"
+            type="button">
+        <strong id="fcCountAgain">0</strong>
+        <span>AGAIN</span>
+    </button>
+
+    <button class="flashcard-filter-btn"
+            data-fc-filter="hard"
+            type="button">
+        <strong id="fcCountHard">0</strong>
+        <span>HARD</span>
+    </button>
+
+    <button class="flashcard-filter-btn"
+            data-fc-filter="good"
+            type="button">
+        <strong id="fcCountGood">0</strong>
+        <span>GOOD</span>
+    </button>
+
+    <button class="flashcard-filter-btn"
+            data-fc-filter="easy"
+            type="button">
+        <strong id="fcCountEasy">0</strong>
+        <span>EASY</span>
+    </button>
+
+</div>
+
+
     <!-- =====================================================
          CARD AREA
          ===================================================== -->
@@ -1253,6 +1299,78 @@
         </div>
 
     </div>
+
+    
+<!-- =========================================
+     FILTER QUIZ
+========================================= -->
+
+<div class="flashcard-quiz-area">
+
+    <div id="flashcardEmptyMessage"
+         class="flashcard-empty-message hidden">
+        No cards in this filter.
+    </div>
+
+    <button id="flashcardCreateQuizBtn"
+            class="flashcard-create-quiz-btn"
+            type="button">
+        🧠 CREATE QUIZ
+    </button>
+
+    <div id="flashcardQuizOptions"
+         class="flashcard-quiz-options hidden">
+
+        <div class="flashcard-quiz-heading">
+            FILTER QUIZ
+        </div>
+
+        <div id="flashcardQuizAvailable"
+             class="flashcard-quiz-available">
+            0 cards available
+        </div>
+
+        <label for="flashcardQuizCount">
+            QUESTIONS
+        </label>
+
+        <select id="flashcardQuizCount">
+            <option value="10">10 Questions</option>
+            <option value="20" selected>20 Questions</option>
+            <option value="50">50 Questions</option>
+            <option value="100">100 Questions</option>
+            <option value="all">All Available</option>
+        </select>
+
+        <label for="flashcardQuizTime">
+            TIME PER QUESTION
+        </label>
+
+        <select id="flashcardQuizTime">
+            <option value="8">8 Seconds</option>
+            <option value="10" selected>10 Seconds</option>
+            <option value="15">15 Seconds</option>
+            <option value="20">20 Seconds</option>
+        </select>
+
+        <div class="flashcard-quiz-actions">
+
+            <button id="flashcardQuizCancelBtn"
+                    type="button">
+                CANCEL
+            </button>
+
+            <button id="flashcardQuizStartBtn"
+                    type="button">
+                START QUIZ
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 </section>
 
