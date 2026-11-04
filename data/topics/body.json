@@ -1,164 +1,192 @@
+
 [
   {
     "id": 1,
     "word": "体",
     "reading": "からだ",
-    "meaning": "Cơ thể"
+    "meaning": "Cơ thể",
+    "meaning_en": "Body"
   },
   {
     "id": 2,
     "word": "頭",
     "reading": "あたま",
-    "meaning": "Đầu"
+    "meaning": "Đầu",
+    "meaning_en": "Head"
   },
   {
     "id": 3,
     "word": "首",
     "reading": "くび",
-    "meaning": "Cổ"
+    "meaning": "Cổ",
+    "meaning_en": "Neck"
   },
   {
     "id": 4,
     "word": "肩",
     "reading": "かた",
-    "meaning": "Vai"
+    "meaning": "Vai",
+    "meaning_en": "Shoulder"
   },
   {
     "id": 5,
     "word": "腕",
     "reading": "うで",
-    "meaning": "Cánh tay"
+    "meaning": "Cánh tay",
+    "meaning_en": "Arm"
   },
   {
     "id": 6,
     "word": "肘",
     "reading": "ひじ",
-    "meaning": "Khuỷu tay"
+    "meaning": "Khuỷu tay",
+    "meaning_en": "Elbow"
   },
   {
     "id": 7,
     "word": "手",
     "reading": "て",
-    "meaning": "Bàn tay"
+    "meaning": "Bàn tay",
+    "meaning_en": "Hand"
   },
   {
     "id": 8,
     "word": "指",
     "reading": "ゆび",
-    "meaning": "Ngón tay"
+    "meaning": "Ngón tay",
+    "meaning_en": "Finger"
   },
   {
     "id": 9,
     "word": "爪",
     "reading": "つめ",
-    "meaning": "Móng"
+    "meaning": "Móng",
+    "meaning_en": "Nail"
   },
   {
     "id": 10,
     "word": "胸",
     "reading": "むね",
-    "meaning": "Ngực"
+    "meaning": "Ngực",
+    "meaning_en": "Chest"
   },
   {
     "id": 11,
     "word": "背中",
     "reading": "せなか",
-    "meaning": "Lưng"
+    "meaning": "Lưng",
+    "meaning_en": "Back"
   },
   {
     "id": 12,
     "word": "腹",
     "reading": "はら",
-    "meaning": "Bụng"
+    "meaning": "Bụng",
+    "meaning_en": "Abdomen, belly"
   },
   {
     "id": 13,
     "word": "腰",
     "reading": "こし",
-    "meaning": "Eo, thắt lưng"
+    "meaning": "Eo, thắt lưng",
+    "meaning_en": "Waist, lower back"
   },
   {
     "id": 14,
     "word": "尻",
     "reading": "しり",
-    "meaning": "Mông"
+    "meaning": "Mông",
+    "meaning_en": "Buttocks"
   },
   {
     "id": 15,
     "word": "足",
     "reading": "あし",
-    "meaning": "Chân, bàn chân"
+    "meaning": "Chân, bàn chân",
+    "meaning_en": "Leg, foot"
   },
   {
     "id": 16,
     "word": "脚",
     "reading": "あし",
-    "meaning": "Chân (chi dưới)"
+    "meaning": "Chân (chi dưới)",
+    "meaning_en": "Leg"
   },
   {
     "id": 17,
     "word": "膝",
     "reading": "ひざ",
-    "meaning": "Đầu gối"
+    "meaning": "Đầu gối",
+    "meaning_en": "Knee"
   },
   {
     "id": 18,
     "word": "足首",
     "reading": "あしくび",
-    "meaning": "Cổ chân"
+    "meaning": "Cổ chân",
+    "meaning_en": "Ankle"
   },
   {
     "id": 19,
     "word": "骨",
     "reading": "ほね",
-    "meaning": "Xương"
+    "meaning": "Xương",
+    "meaning_en": "Bone"
   },
   {
     "id": 20,
     "word": "筋肉",
     "reading": "きんにく",
-    "meaning": "Cơ bắp"
+    "meaning": "Cơ bắp",
+    "meaning_en": "Muscle"
   },
   {
     "id": 21,
     "word": "皮膚",
     "reading": "ひふ",
-    "meaning": "Da"
+    "meaning": "Da",
+    "meaning_en": "Skin"
   },
   {
     "id": 22,
     "word": "血液",
     "reading": "けつえき",
-    "meaning": "Máu"
+    "meaning": "Máu",
+    "meaning_en": "Blood"
   },
   {
     "id": 23,
     "word": "心臓",
     "reading": "しんぞう",
-    "meaning": "Tim"
+    "meaning": "Tim",
+    "meaning_en": "Heart"
   },
   {
     "id": 24,
     "word": "肺",
     "reading": "はい",
-    "meaning": "Phổi"
+    "meaning": "Phổi",
+    "meaning_en": "Lung"
   },
   {
     "id": 25,
     "word": "胃",
     "reading": "い",
-    "meaning": "Dạ dày"
+    "meaning": "Dạ dày",
+    "meaning_en": "Stomach"
   },
   {
     "id": 26,
     "word": "肝臓",
     "reading": "かんぞう",
-    "meaning": "Gan"
+    "meaning": "Gan",
+    "meaning_en": "Liver"
   },
   {
     "id": 27,
     "word": "腎臓",
     "reading": "じんぞう",
-    "meaning": "Thận"
+    "meaning": "Thận",
+    "meaning_en": "Kidney"
   }
 ]
