@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "家電",
     "reading": "かでん",
-    "meaning": "Đồ điện gia dụng"
+    "meaning": "Đồ điện gia dụng",
+    "meaning_en": "Home appliances"
   },
   {
     "id": 2,
     "word": "冷蔵庫",
     "reading": "れいぞうこ",
-    "meaning": "Tủ lạnh"
+    "meaning": "Tủ lạnh",
+    "meaning_en": "Refrigerator"
   },
   {
     "id": 3,
     "word": "冷凍庫",
     "reading": "れいとうこ",
-    "meaning": "Tủ đông"
+    "meaning": "Tủ đông",
+    "meaning_en": "Freezer"
   },
   {
     "id": 4,
     "word": "電子レンジ",
     "reading": "でんしレンジ",
-    "meaning": "Lò vi sóng"
+    "meaning": "Lò vi sóng",
+    "meaning_en": "Microwave oven"
   },
   {
     "id": 5,
     "word": "炊飯器",
     "reading": "すいはんき",
-    "meaning": "Nồi cơm điện"
+    "meaning": "Nồi cơm điện",
+    "meaning_en": "Rice cooker"
   },
   {
     "id": 6,
     "word": "電気ケトル",
     "reading": "でんきケトル",
-    "meaning": "Ấm điện"
+    "meaning": "Ấm điện",
+    "meaning_en": "Electric kettle"
   },
   {
     "id": 7,
     "word": "オーブン",
     "reading": "オーブン",
-    "meaning": "Lò nướng"
+    "meaning": "Lò nướng",
+    "meaning_en": "Oven"
   },
   {
     "id": 8,
     "word": "トースター",
     "reading": "トースター",
-    "meaning": "Máy nướng bánh"
+    "meaning": "Máy nướng bánh",
+    "meaning_en": "Toaster"
   },
   {
     "id": 9,
     "word": "洗濯機",
     "reading": "せんたくき",
-    "meaning": "Máy giặt"
+    "meaning": "Máy giặt",
+    "meaning_en": "Washing machine"
   },
   {
     "id": 10,
     "word": "乾燥機",
     "reading": "かんそうき",
-    "meaning": "Máy sấy"
+    "meaning": "Máy sấy",
+    "meaning_en": "Dryer"
   },
   {
     "id": 11,
     "word": "掃除機",
     "reading": "そうじき",
-    "meaning": "Máy hút bụi"
+    "meaning": "Máy hút bụi",
+    "meaning_en": "Vacuum cleaner"
   },
   {
     "id": 12,
     "word": "エアコン",
     "reading": "エアコン",
-    "meaning": "Máy điều hòa"
+    "meaning": "Máy điều hòa",
+    "meaning_en": "Air conditioner"
   },
   {
     "id": 13,
     "word": "扇風機",
     "reading": "せんぷうき",
-    "meaning": "Quạt điện"
+    "meaning": "Quạt điện",
+    "meaning_en": "Electric fan"
   },
   {
     "id": 14,
     "word": "空気清浄機",
     "reading": "くうきせいじょうき",
-    "meaning": "Máy lọc không khí"
+    "meaning": "Máy lọc không khí",
+    "meaning_en": "Air purifier"
   },
   {
     "id": 15,
     "word": "加湿器",
     "reading": "かしつき",
-    "meaning": "Máy tạo ẩm"
+    "meaning": "Máy tạo ẩm",
+    "meaning_en": "Humidifier"
   },
   {
     "id": 16,
     "word": "除湿機",
     "reading": "じょしつき",
-    "meaning": "Máy hút ẩm"
+    "meaning": "Máy hút ẩm",
+    "meaning_en": "Dehumidifier"
   },
   {
     "id": 17,
     "word": "テレビ",
     "reading": "テレビ",
-    "meaning": "Ti vi"
+    "meaning": "Ti vi",
+    "meaning_en": "Television"
   },
   {
     "id": 18,
     "word": "ドライヤー",
     "reading": "ドライヤー",
-    "meaning": "Máy sấy tóc"
+    "meaning": "Máy sấy tóc",
+    "meaning_en": "Hair dryer"
   },
   {
     "id": 19,
     "word": "アイロン",
     "reading": "アイロン",
-    "meaning": "Bàn là"
+    "meaning": "Bàn là",
+    "meaning_en": "Iron"
   },
   {
     "id": 20,
     "word": "電気ストーブ",
     "reading": "でんきストーブ",
-    "meaning": "Máy sưởi điện"
+    "meaning": "Máy sưởi điện",
+    "meaning_en": "Electric heater"
   }
 ]
