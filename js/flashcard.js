@@ -10,12 +10,15 @@ import {
 }
 from "./question.js";
 
+
 import {
     speakJapanese,
+    speakVietnamese,
+    speakEnglish,
     stopSpeech,
     playSfx
-}
-from "./audio.js";
+} from "./audio.js";
+
 
 
 import {
@@ -50,6 +53,26 @@ let flashcardActive = false;
 let flashcardAutoMode = false;
 
 let flashcardAutoTimer = null;
+
+
+/* =========================================================
+   LISTEN AUTO STATE
+========================================================= */
+
+let flashcardListenAutoActive = false;
+
+let flashcardListenAutoToken = 0;
+
+let flashcardListenAutoTimer = null;
+
+let flashcardListenAutoIndex = 0;
+
+let flashcardListenAutoCards = [];
+
+const LISTEN_RECALL_DELAY = 3000;
+
+const LISTEN_NEXT_DELAY = 1000;
+
 
 let flashcardAutoEndIndex = 0;
 
@@ -288,6 +311,7 @@ function selectFlashcardFilter(filter)
         return;
     }
 
+    stopFlashcardListenAuto();
     stopFlashcardAuto();
 
     flashcardCurrentFilter = filter;
@@ -472,18 +496,20 @@ function showFlashcard()
         tự đọc 1 lần
     */
 
-    if (isAudioMode(flashcardConfig.subMode))
+    if (
+          isAudioMode(flashcardConfig.subMode) &&
+          !flashcardListenAutoActive
+      )
     {
         setTimeout(() =>
             {
-                if (
-                         flashcardActive &&
-                         !flashcardRevealed &&
-                         cardToken === flashcardCardToken
-                     )
-                {
-                    speakJapanese(data.reading);
-                }
+                               if (
+                   flashcardActive &&
+                   !flashcardRevealed &&
+                   !flashcardListenAutoActive
+               ) {
+                   speakJapanese(data.reading);
+               }
             },
             200
         );
@@ -497,6 +523,9 @@ function showFlashcard()
 
 function toggleFlashcard()
 {
+   if (flashcardListenAutoActive) {
+          return;
+      }
     if (!flashcardActive)
     {
         return;
@@ -593,7 +622,10 @@ function toggleFlashcard()
 
 
 function nextFlashcard(rating)
-{
+{   
+   if (flashcardListenAutoActive) {
+          return;
+      }
     if (
         !flashcardActive ||
         !flashcardRevealed ||
@@ -697,6 +729,7 @@ export function closeFlashcard()
     ++flashcardLoadToken;
     ++flashcardCardToken;
 
+    stopFlashcardListenAuto();
     stopFlashcardAuto();
 
     flashcardActive = false;
@@ -879,7 +912,9 @@ document.getElementById("flashcardBackButton")?.addEventListener("click",event =
     );
 
 function startFlashcardAuto()
-{
+{   
+   stopFlashcardListenAuto();
+   
     if (!flashcardActive || flashcardCards.length === 0 || flashcardAutoMode)
     {
         return;
@@ -1095,6 +1130,8 @@ function updateAutoButton()
    ============================================================= */
 
 function swipeNextFlashcard() {
+    if (flashcardListenAutoActive) return;
+   
     if (!flashcardActive || flashcardCards.length === 0) return;
 
     flashcardIndex++;
@@ -1107,6 +1144,8 @@ function swipeNextFlashcard() {
 }
 
 function swipePreviousFlashcard() {
+    if (flashcardListenAutoActive) return;
+   
     if (!flashcardActive || flashcardCards.length === 0) return;
 
     flashcardIndex--;
@@ -1321,6 +1360,7 @@ document.getElementById("flashcardQuizStartBtn")
 
         try {
 
+            stopFlashcardListenAuto();
             await startPractice(quizConfig);
 
         } catch (error) {
@@ -1366,4 +1406,481 @@ export function resumeFlashcardFromQuiz()
 
     return true;
 }
+
+
+/* =========================================================
+   BATLINGO - LISTEN AUTO
+   Shared multilingual audio.js
+========================================================= */
+
+const listenAutoButton =
+    document.getElementById(
+        "flashcardListenAutoButton"
+    );
+
+const listenAutoLanguage =
+    document.getElementById(
+        "flashcardListenLanguage"
+    );
+
+const listenAutoStatus =
+    document.getElementById(
+        "flashcardListenAutoStatus"
+    );
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+function setListenAutoStatus(text)
+{
+    if (listenAutoStatus) {
+        listenAutoStatus.textContent = text;
+    }
+}
+
+/* =========================================================
+   UPDATE BUTTON
+========================================================= */
+
+function updateListenAutoButton()
+{
+    const icon = document.getElementById(
+        "flashcardListenAutoIcon"
+    );
+
+    const text = document.getElementById(
+        "flashcardListenAutoText"
+    );
+
+    listenAutoButton?.classList.toggle(
+        "running",
+        flashcardListenAutoActive
+    );
+
+    if (icon) {
+        icon.textContent = flashcardListenAutoActive
+            ? "■"
+            : "🎧";
+    }
+
+    if (text) {
+        text.textContent = flashcardListenAutoActive
+            ? "STOP LISTEN"
+            : "LISTEN AUTO";
+    }
+
+    if (listenAutoLanguage) {
+        listenAutoLanguage.disabled =
+            flashcardListenAutoActive;
+    }
+}
+
+/* =========================================================
+   GET JAPANESE
+========================================================= */
+
+function getListenJapanese(card)
+{
+    return String(
+        card?.reading ||
+        card?.word ||
+        card?.grammar ||
+        ""
+    ).trim();
+}
+
+/* =========================================================
+   GET MEANING
+========================================================= */
+
+function getListenMeaning(card)
+{
+    const language = listenAutoLanguage?.value || "vi";
+
+    let meaning;
+
+    if (language === "en") {
+
+        meaning =
+            card?.meaning_en ??
+            card?.meaningEn ??
+            card?.translation_en ??
+            card?.translations?.en;
+
+    } else {
+
+        meaning =
+            card?.meaning_vi ??
+            card?.meaningVi ??
+            card?.translations?.vi ??
+            card?.meaning;
+    }
+
+    return typeof meaning === "string"
+        ? meaning.trim()
+        : "";
+}
+
+/* =========================================================
+   CANCELABLE DELAY
+========================================================= */
+
+function listenAutoDelay(milliseconds, callback)
+{
+    clearTimeout(flashcardListenAutoTimer);
+
+    const token = flashcardListenAutoToken;
+
+    flashcardListenAutoTimer = setTimeout(() => {
+
+        flashcardListenAutoTimer = null;
+
+        if (
+            !flashcardListenAutoActive ||
+            token !== flashcardListenAutoToken
+        ) {
+            return;
+        }
+
+        callback();
+
+    }, milliseconds);
+}
+
+/* =========================================================
+   SHOW BACK WITHOUT TRIGGERING OLD AUDIO
+========================================================= */
+
+function showListenAutoBack()
+{
+    if (!flashcardListenAutoActive) return;
+
+    flashcardRevealed = true;
+
+    flashcardFront?.classList.add("hidden");
+
+    flashcardBack?.classList.remove("hidden");
+
+    // Listen không được đánh giá lại Rating.
+    flashcardRating?.classList.add("hidden");
+}
+
+/* =========================================================
+   STOP LISTEN AUTO
+========================================================= */
+
+function stopFlashcardListenAuto()
+{
+    const wasActive = flashcardListenAutoActive;
+
+    flashcardListenAutoActive = false;
+
+    ++flashcardListenAutoToken;
+
+    clearTimeout(flashcardListenAutoTimer);
+
+    flashcardListenAutoTimer = null;
+
+    flashcardListenAutoCards = [];
+
+    if (wasActive) {
+        stopSpeech();
+    }
+
+    updateListenAutoButton();
+
+    if (wasActive) {
+        setListenAutoStatus("LISTEN STOPPED");
+    }
+}
+
+/* =========================================================
+   NEXT LISTEN CARD
+========================================================= */
+
+function nextListenAutoCard()
+{
+    if (!flashcardListenAutoActive) {
+        return;
+    }
+
+    flashcardListenAutoIndex++;
+
+    if (
+        flashcardListenAutoIndex >=
+        flashcardListenAutoCards.length
+    ) {
+        finishFlashcardListenAuto();
+        return;
+    }
+
+    // Cập nhật vị trí trong Flashcard hiện tại.
+    flashcardIndex = flashcardListenAutoIndex;
+
+    runFlashcardListenAuto();
+}
+
+/* =========================================================
+   FINISH
+========================================================= */
+
+function finishFlashcardListenAuto()
+{
+    stopFlashcardListenAuto();
+
+    setListenAutoStatus("LISTEN FINISHED");
+}
+
+/* =========================================================
+   PLAY CURRENT CARD
+========================================================= */
+
+function runFlashcardListenAuto()
+{
+    if (
+        !flashcardListenAutoActive ||
+        !flashcardActive
+    ) {
+        return;
+    }
+
+    const card =
+        flashcardListenAutoCards[
+            flashcardListenAutoIndex
+        ];
+
+    if (!card) {
+        finishFlashcardListenAuto();
+        return;
+    }
+
+   const token = ++flashcardListenAutoToken;
+
+    // showFlashcard render front, back và progress.
+    // Các callback audio cũ phải được vô hiệu hóa
+    // theo điều kiện ở bước 2.4.
+    showFlashcard();
+
+    const japanese = getListenJapanese(card);
+
+    const meaning = getListenMeaning(card);
+
+    setListenAutoStatus(
+        `JAPANESE · ${flashcardListenAutoIndex + 1}` +
+        ` / ${flashcardListenAutoCards.length}`
+    );
+
+    // Không có văn bản Nhật: bỏ qua thẻ.
+    if (!japanese) {
+
+        listenAutoDelay(500, nextListenAutoCard);
+
+        return;
+    }
+
+    /* ===========================================
+       1. JAPANESE
+    =========================================== */
+
+    speakJapanese(japanese, () => {
+
+        if (
+            !flashcardListenAutoActive ||
+            token !== flashcardListenAutoToken
+        ) {
+            return;
+        }
+
+        /* =======================================
+           2. RECALL PAUSE
+        ======================================= */
+
+        setListenAutoStatus(
+            "THINK ABOUT THE MEANING..."
+        );
+
+        listenAutoDelay(
+            LISTEN_RECALL_DELAY,
+            () => {
+
+                if (
+                    !flashcardListenAutoActive ||
+                    token !== flashcardListenAutoToken
+                ) {
+                    return;
+                }
+
+                /* =================================
+                   3. SHOW ANSWER
+                ================================= */
+
+                showListenAutoBack();
+
+                if (!meaning) {
+
+                    setListenAutoStatus(
+                        "MEANING NOT AVAILABLE"
+                    );
+
+                    listenAutoDelay(
+                        LISTEN_NEXT_DELAY,
+                        nextListenAutoCard
+                    );
+
+                    return;
+                }
+
+                const language =
+                    listenAutoLanguage?.value || "vi";
+
+                setListenAutoStatus(
+                    language === "en"
+                        ? "ENGLISH"
+                        : "VIETNAMESE"
+                );
+
+                /* =================================
+                   4. NATIVE LANGUAGE SPEECH
+                ================================= */
+
+                const afterMeaning = () => {
+
+                    if (
+                        !flashcardListenAutoActive ||
+                        token !== flashcardListenAutoToken
+                    ) {
+                        return;
+                    }
+
+                    setListenAutoStatus("NEXT WORD");
+
+                    listenAutoDelay(
+                        LISTEN_NEXT_DELAY,
+                        nextListenAutoCard
+                    );
+                };
+
+                if (language === "en") {
+
+                    speakEnglish(
+                        meaning,
+                        afterMeaning
+                    );
+
+                } else {
+
+                    speakVietnamese(
+                        meaning,
+                        afterMeaning
+                    );
+                }
+            }
+        );
+    });
+}
+
+/* =========================================================
+   START
+========================================================= */
+
+function startFlashcardListenAuto()
+{
+    if (
+        !flashcardActive ||
+        flashcardCards.length === 0 ||
+        flashcardListenAutoActive
+    ) {
+        return;
+    }
+
+    // Ngừng AUTO cũ.
+    stopFlashcardAuto();
+
+    stopSpeech();
+
+    // Lấy snapshot của Filter hiện tại.
+    flashcardListenAutoCards = [
+        ...flashcardCards
+    ];
+
+    const language = listenAutoLanguage?.value || "vi";
+
+    if (language === "en") {
+
+        const hasEnglish =
+            flashcardListenAutoCards.some(card =>
+                Boolean(
+                    card?.meaning_en ??
+                    card?.meaningEn ??
+                    card?.translation_en ??
+                    card?.translations?.en
+                )
+            );
+
+        if (!hasEnglish) {
+
+            alert(
+                "This deck has no English translations. " +
+                "Please add meaning_en to the database."
+            );
+
+            flashcardListenAutoCards = [];
+
+            return;
+        }
+    }
+
+    flashcardListenAutoActive = true;
+
+    ++flashcardListenAutoToken;
+
+    // Bắt đầu lại từ đầu Filter.
+    flashcardListenAutoIndex = 0;
+
+    flashcardIndex = 0;
+
+    updateListenAutoButton();
+
+    runFlashcardListenAuto();
+}
+
+/* =========================================================
+   BUTTON EVENT
+========================================================= */
+
+listenAutoButton?.addEventListener("click", event => {
+
+    event.stopPropagation();
+
+    if (flashcardListenAutoActive) {
+        stopFlashcardListenAuto();
+        return;
+    }
+
+    startFlashcardListenAuto();
+});
+
+/* =========================================================
+   REMEMBER LANGUAGE
+========================================================= */
+
+const savedListenLanguage = localStorage.getItem(
+    "batlingo_listen_language"
+);
+
+if (
+    listenAutoLanguage &&
+    ["vi", "en"].includes(savedListenLanguage)
+) {
+    listenAutoLanguage.value = savedListenLanguage;
+}
+
+listenAutoLanguage?.addEventListener("change", () => {
+
+    localStorage.setItem(
+        "batlingo_listen_language",
+        listenAutoLanguage.value
+    );
+});
 
