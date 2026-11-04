@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "会社",
     "reading": "かいしゃ",
-    "meaning": "Công ty"
+    "meaning": "Công ty",
+    "meaning_en": "Company"
   },
   {
     "id": 2,
     "word": "企業",
     "reading": "きぎょう",
-    "meaning": "Doanh nghiệp"
+    "meaning": "Doanh nghiệp",
+    "meaning_en": "Enterprise, business"
   },
   {
     "id": 3,
     "word": "社員",
     "reading": "しゃいん",
-    "meaning": "Nhân viên"
+    "meaning": "Nhân viên",
+    "meaning_en": "Employee"
   },
   {
     "id": 4,
     "word": "社長",
     "reading": "しゃちょう",
-    "meaning": "Giám đốc, chủ tịch công ty"
+    "meaning": "Giám đốc, chủ tịch công ty",
+    "meaning_en": "Company president"
   },
   {
     "id": 5,
     "word": "部長",
     "reading": "ぶちょう",
-    "meaning": "Trưởng bộ phận"
+    "meaning": "Trưởng bộ phận",
+    "meaning_en": "Department manager"
   },
   {
     "id": 6,
     "word": "課長",
     "reading": "かちょう",
-    "meaning": "Trưởng phòng"
+    "meaning": "Trưởng phòng",
+    "meaning_en": "Section manager"
   },
   {
     "id": 7,
     "word": "係長",
     "reading": "かかりちょう",
-    "meaning": "Trưởng nhóm công việc"
+    "meaning": "Trưởng nhóm công việc",
+    "meaning_en": "Team leader, unit supervisor"
   },
   {
     "id": 8,
     "word": "上司",
     "reading": "じょうし",
-    "meaning": "Cấp trên"
+    "meaning": "Cấp trên",
+    "meaning_en": "Supervisor, superior"
   },
   {
     "id": 9,
     "word": "部下",
     "reading": "ぶか",
-    "meaning": "Cấp dưới"
+    "meaning": "Cấp dưới",
+    "meaning_en": "Subordinate"
   },
   {
     "id": 10,
     "word": "同僚",
     "reading": "どうりょう",
-    "meaning": "Đồng nghiệp"
+    "meaning": "Đồng nghiệp",
+    "meaning_en": "Colleague, coworker"
   },
   {
     "id": 11,
     "word": "部署",
     "reading": "ぶしょ",
-    "meaning": "Bộ phận"
+    "meaning": "Bộ phận",
+    "meaning_en": "Department, division"
   },
   {
     "id": 12,
     "word": "人事部",
     "reading": "じんじぶ",
-    "meaning": "Phòng nhân sự"
+    "meaning": "Phòng nhân sự",
+    "meaning_en": "Human Resources Department"
   },
   {
     "id": 13,
     "word": "総務部",
     "reading": "そうむぶ",
-    "meaning": "Phòng hành chính tổng hợp"
+    "meaning": "Phòng hành chính tổng hợp",
+    "meaning_en": "General Affairs Department"
   },
   {
     "id": 14,
     "word": "経理部",
     "reading": "けいりぶ",
-    "meaning": "Phòng kế toán"
+    "meaning": "Phòng kế toán",
+    "meaning_en": "Accounting Department"
   },
   {
     "id": 15,
     "word": "営業部",
     "reading": "えいぎょうぶ",
-    "meaning": "Phòng kinh doanh"
+    "meaning": "Phòng kinh doanh",
+    "meaning_en": "Sales Department"
   },
   {
     "id": 16,
     "word": "開発部",
     "reading": "かいはつぶ",
-    "meaning": "Phòng phát triển"
+    "meaning": "Phòng phát triển",
+    "meaning_en": "Development Department"
   },
   {
     "id": 17,
     "word": "本社",
     "reading": "ほんしゃ",
-    "meaning": "Trụ sở chính"
+    "meaning": "Trụ sở chính",
+    "meaning_en": "Headquarters, head office"
   },
   {
     "id": 18,
     "word": "支社",
     "reading": "ししゃ",
-    "meaning": "Chi nhánh"
+    "meaning": "Chi nhánh",
+    "meaning_en": "Branch office"
   },
   {
     "id": 19,
     "word": "取引先",
     "reading": "とりひきさき",
-    "meaning": "Đối tác giao dịch"
+    "meaning": "Đối tác giao dịch",
+    "meaning_en": "Business partner, client"
   },
   {
     "id": 20,
     "word": "顧客",
     "reading": "こきゃく",
-    "meaning": "Khách hàng"
+    "meaning": "Khách hàng",
+    "meaning_en": "Customer, client"
   }
 ]
