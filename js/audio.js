@@ -70,121 +70,346 @@ export function stopLobbyMusic()
     sounds.lobby.currentTime = 0;
 }
 
+
 /* =============================================================
-   JAPANESE SPEECH
-   ============================================================= */
+   BATLINGO - MULTI LANGUAGE SPEECH
+   Japanese / Vietnamese / English
+============================================================= */
 
-export function speakJapanese(text,callback = () => {}) 
-{
-    if (!("speechSynthesis" in window)) 
-    {
+/* =============================================================
+   DEFAULT VOICE SETTINGS
+============================================================= */
 
-        setTimeout(callback, 500);
+const SPEECH_CONFIG = {
 
-        return;
+    "ja-JP": {
+        rate: 0.9,
+        pitch: 1,
+        volume: 1
+    },
+
+    "vi-VN": {
+        rate: 0.9,
+        pitch: 1,
+        volume: 1
+    },
+
+    "en-US": {
+        rate: 0.9,
+        pitch: 1,
+        volume: 1
     }
 
-    speechSynthesis.cancel();
+};
 
-    const speech = new SpeechSynthesisUtterance(text);
 
-    speech.lang = "ja-JP";
-    speech.rate = 0.9;
-    speech.pitch = 1;
+/* =============================================================
+   CURRENT SPEECH STATE
+============================================================= */
+
+let activeSpeech = null;
+let speechToken = 0;
+
+
+/* =============================================================
+   GET AVAILABLE VOICE
+============================================================= */
+
+export function getSpeechVoice(language)
+{
+    if (!("speechSynthesis" in window)) {
+        return null;
+    }
 
     const voices = speechSynthesis.getVoices();
 
-    const japaneseVoice = voices.find(voice => voice.lang.toLowerCase().startsWith("ja"));
+    const target = String(language).toLowerCase();
 
-    if (japaneseVoice) 
-    {
-        speech.voice = japaneseVoice;
+    // First: exact locale
+    let voice = voices.find(v =>
+        v.lang.toLowerCase() === target
+    );
+
+    if (voice) {
+        return voice;
     }
-   
-        /* =============================================================
-        SPEECH CALLBACK SAFETY
-         ============================================================= */
-         
-         /*
-             Biến kiểm tra callback đã được chạy hay chưa.
-         
-             false = chưa chạy
-             true  = đã chạy
-         
-             Mục đích:
-             Không cho callback chạy 2 lần.
-         */
-         let finished = false;
-         
-         /*
-             Function dùng chung để kết thúc speech
-             và tiếp tục game.
-         */
-         function finish() 
-         {
-             /*
-                 Nếu callback đã chạy rồi
-                 thì dừng ngay.
-             */
-             if (finished) 
-            {
-                 return;
-             }
-         
-             /*
-                 Đánh dấu đã hoàn thành.
-             */
-             finished = true;
-         
-             /*
-                 Hủy safety timer vì speech
-                 đã kết thúc bình thường hoặc đã báo lỗi.
-             */
-             clearTimeout(safetyTimer);
-         
-             /*
-                 Chạy callback.
-         
-                 Trong game.js callback này
-                 thường là nextQuestion.
-             */
-             callback();
-         }
 
-      /*
-          SAFETY TIMER
-      
-          Nếu sau 3 giây browser vẫn không gọi
-          onend hoặc onerror thì tự gọi finish().
-      
-          Mục đích:
-          tránh game bị treo vô hạn.
-      */
-      const safetyTimer = setTimeout(finish,3000);
-   /*Speech đọc xong bình thường.*/
-    speech.onend = () => {
-           /*Chờ thêm 200ms rồi tiếp tục game.*/
-            setTimeout(finish,200);
-        };
+    // Second: same language
+    const prefix = target.split("-")[0];
 
-   /*Speech gặp lỗi*/
-    speech.onerror =　() => {
-             /* Dù speech lỗi,vẫn tiếp tục game sau 300ms.*/
-            setTimeout(finish,300);
-        };
+    voice = voices.find(v =>
+        v.lang.toLowerCase() === prefix ||
+        v.lang.toLowerCase().startsWith(prefix + "-")
+    );
 
-   /*Bắt đầu đọc.*/
-    speechSynthesis.speak(speech);
+    return voice || null;
 }
 
 
-export function stopSpeech() 
+/* =============================================================
+   CHECK VOICE AVAILABILITY
+============================================================= */
+
+export function hasSpeechVoice(language)
 {
-    if ("speechSynthesis" in window)
-    {
+    return getSpeechVoice(language) !== null;
+}
+
+
+/* =============================================================
+   STOP CURRENT SPEECH
+============================================================= */
+
+export function stopSpeech()
+{
+    ++speechToken;
+
+    const active = activeSpeech;
+    activeSpeech = null;
+
+    if (active) {
+
+        clearTimeout(active.safetyTimer);
+
+        clearTimeout(active.finishTimer);
+
+        active.utterance.onend = null;
+        active.utterance.onerror = null;
+    }
+
+    if ("speechSynthesis" in window) {
         speechSynthesis.cancel();
     }
 }
+
+
+/* =============================================================
+   GENERAL SPEECH FUNCTION
+============================================================= */
+
+export function speakText(
+    text,
+    language = "ja-JP",
+    callback = () => {},
+    options = {}
+)
+{
+    // Stop previous speech and invalidate callbacks.
+    stopSpeech();
+
+    const token = speechToken;
+
+    const value = String(text ?? "").trim();
+
+    const config = SPEECH_CONFIG[language] || {
+        rate: 0.9,
+        pitch: 1,
+        volume: 1
+    };
+
+    const rate = Number(options.rate ?? config.rate);
+    const pitch = Number(options.pitch ?? config.pitch);
+    const volume = Number(options.volume ?? config.volume);
+
+    let finished = false;
+
+    function safeCallback()
+    {
+        if (finished || token !== speechToken) {
+            return;
+        }
+
+        finished = true;
+
+        if (activeSpeech) {
+            clearTimeout(activeSpeech.safetyTimer);
+            clearTimeout(activeSpeech.finishTimer);
+
+            activeSpeech = null;
+        }
+
+        if (typeof callback === "function") {
+            callback();
+        }
+    }
+
+    // Empty text: continue without speaking.
+    if (!value) {
+        queueMicrotask(safeCallback);
+        return;
+    }
+
+    // Browser does not support TTS.
+    if (
+        !("speechSynthesis" in window) ||
+        !("SpeechSynthesisUtterance" in window)
+    ) {
+        setTimeout(safeCallback, 200);
+        return;
+    }
+
+    const speech = new SpeechSynthesisUtterance(value);
+
+    speech.lang = language;
+
+    speech.rate = Number.isFinite(rate)
+        ? Math.max(0.1, Math.min(10, rate))
+        : config.rate;
+
+    speech.pitch = Number.isFinite(pitch)
+        ? Math.max(0, Math.min(2, pitch))
+        : config.pitch;
+
+    speech.volume = Number.isFinite(volume)
+        ? Math.max(0, Math.min(1, volume))
+        : config.volume;
+
+    const voice = getSpeechVoice(language);
+
+    if (voice) {
+        speech.voice = voice;
+    }
+
+    // Estimate a generous timeout for long meanings.
+    const timeout = Math.min(
+        30000,
+        Math.max(5000, value.length * 250)
+    );
+
+    const state = {
+        utterance: speech,
+        safetyTimer: null,
+        finishTimer: null
+    };
+
+    activeSpeech = state;
+
+    function finish()
+    {
+        if (token !== speechToken || finished) {
+            return;
+        }
+
+        clearTimeout(state.safetyTimer);
+
+        state.finishTimer = setTimeout(
+            safeCallback,
+            200
+        );
+    }
+
+    state.safetyTimer = setTimeout(() => {
+
+        if (token !== speechToken || finished) {
+            return;
+        }
+
+        console.warn(
+            "[AUDIO] Speech timeout:",
+            language
+        );
+
+        // Invalidates the pending utterance events.
+        speech.onend = null;
+        speech.onerror = null;
+
+        speechSynthesis.cancel();
+
+        safeCallback();
+
+    }, timeout);
+
+    speech.onend = finish;
+
+    speech.onerror = event => {
+
+        if (
+            event.error === "canceled" ||
+            event.error === "interrupted"
+        ) {
+            return;
+        }
+
+        console.warn(
+            "[AUDIO] Speech error:",
+            event.error
+        );
+
+        finish();
+    };
+
+    try {
+
+        speechSynthesis.speak(speech);
+
+    } catch (error) {
+
+        console.error(
+            "[AUDIO] Speech failed:",
+            error
+        );
+
+        finish();
+    }
+}
+
+
+/* =============================================================
+   JAPANESE
+============================================================= */
+
+export function speakJapanese(
+    text,
+    callback = () => {},
+    options = {}
+)
+{
+    speakText(
+        text,
+        "ja-JP",
+        callback,
+        options
+    );
+}
+
+
+/* =============================================================
+   VIETNAMESE
+============================================================= */
+
+export function speakVietnamese(
+    text,
+    callback = () => {},
+    options = {}
+)
+{
+    speakText(
+        text,
+        "vi-VN",
+        callback,
+        options
+    );
+}
+
+
+/* =============================================================
+   ENGLISH
+============================================================= */
+
+export function speakEnglish(
+    text,
+    callback = () => {},
+    options = {}
+)
+{
+    speakText(
+        text,
+        "en-US",
+        callback,
+        options
+    );
+}
+
 
 export async function logout() 
 {
