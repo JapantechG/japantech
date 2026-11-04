@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "育児",
     "reading": "いくじ",
-    "meaning": "Chăm sóc trẻ"
+    "meaning": "Chăm sóc trẻ",
+    "meaning_en": "Childcare"
   },
   {
     "id": 2,
     "word": "子育て",
     "reading": "こそだて",
-    "meaning": "Nuôi dạy con"
+    "meaning": "Nuôi dạy con",
+    "meaning_en": "Raising children, parenting"
   },
   {
     "id": 3,
     "word": "赤ちゃん",
     "reading": "あかちゃん",
-    "meaning": "Em bé"
+    "meaning": "Em bé",
+    "meaning_en": "Baby"
   },
   {
     "id": 4,
     "word": "乳児",
     "reading": "にゅうじ",
-    "meaning": "Trẻ sơ sinh, bú mẹ"
+    "meaning": "Trẻ sơ sinh, bú mẹ",
+    "meaning_en": "Infant"
   },
   {
     "id": 5,
     "word": "幼児",
     "reading": "ようじ",
-    "meaning": "Trẻ nhỏ"
+    "meaning": "Trẻ nhỏ",
+    "meaning_en": "Young child"
   },
   {
     "id": 6,
     "word": "新生児",
     "reading": "しんせいじ",
-    "meaning": "Trẻ mới sinh"
+    "meaning": "Trẻ mới sinh",
+    "meaning_en": "Newborn"
   },
   {
     "id": 7,
     "word": "授乳",
     "reading": "じゅにゅう",
-    "meaning": "Cho bú"
+    "meaning": "Cho bú",
+    "meaning_en": "Breastfeeding, feeding an infant"
   },
   {
     "id": 8,
     "word": "母乳",
     "reading": "ぼにゅう",
-    "meaning": "Sữa mẹ"
+    "meaning": "Sữa mẹ",
+    "meaning_en": "Breast milk"
   },
   {
     "id": 9,
     "word": "粉ミルク",
     "reading": "こなミルク",
-    "meaning": "Sữa bột"
+    "meaning": "Sữa bột",
+    "meaning_en": "Powdered infant formula"
   },
   {
     "id": 10,
     "word": "哺乳瓶",
     "reading": "ほにゅうびん",
-    "meaning": "Bình sữa"
+    "meaning": "Bình sữa",
+    "meaning_en": "Baby bottle"
   },
   {
     "id": 11,
     "word": "おむつ",
     "reading": "おむつ",
-    "meaning": "Tã"
+    "meaning": "Tã",
+    "meaning_en": "Diaper"
   },
   {
     "id": 12,
     "word": "おしりふき",
     "reading": "おしりふき",
-    "meaning": "Khăn lau cho bé"
+    "meaning": "Khăn lau cho bé",
+    "meaning_en": "Baby wipes"
   },
   {
     "id": 13,
     "word": "ベビーカー",
     "reading": "ベビーカー",
-    "meaning": "Xe đẩy em bé"
+    "meaning": "Xe đẩy em bé",
+    "meaning_en": "Baby stroller"
   },
   {
     "id": 14,
     "word": "抱っこ",
     "reading": "だっこ",
-    "meaning": "Bế em bé"
+    "meaning": "Bế em bé",
+    "meaning_en": "Holding a baby in one's arms"
   },
   {
     "id": 15,
     "word": "寝かしつけ",
     "reading": "ねかしつけ",
-    "meaning": "Dỗ ngủ"
+    "meaning": "Dỗ ngủ",
+    "meaning_en": "Putting a child to sleep"
   },
   {
     "id": 16,
     "word": "離乳食",
     "reading": "りにゅうしょく",
-    "meaning": "Đồ ăn dặm"
+    "meaning": "Đồ ăn dặm",
+    "meaning_en": "Baby food, weaning food"
   },
   {
     "id": 17,
     "word": "予防接種",
     "reading": "よぼうせっしゅ",
-    "meaning": "Tiêm phòng"
+    "meaning": "Tiêm phòng",
+    "meaning_en": "Vaccination"
   },
   {
     "id": 18,
     "word": "保育園",
     "reading": "ほいくえん",
-    "meaning": "Nhà trẻ"
+    "meaning": "Nhà trẻ",
+    "meaning_en": "Daycare center, nursery school"
   },
   {
     "id": 19,
     "word": "幼稚園",
     "reading": "ようちえん",
-    "meaning": "Trường mẫu giáo"
+    "meaning": "Trường mẫu giáo",
+    "meaning_en": "Kindergarten"
   },
   {
     "id": 20,
     "word": "成長",
     "reading": "せいちょう",
-    "meaning": "Sự phát triển"
+    "meaning": "Sự phát triển",
+    "meaning_en": "Growth, development"
   }
 ]
