@@ -1160,3 +1160,155 @@
     }
 }
 
+
+/* =========================================================
+   BATLINGO - FLASHCARD LISTEN AUTO
+========================================================= */
+
+#flashcardScreen .flashcard-playback-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: min(720px, 88vw);
+    min-height: 40px;
+
+    margin: 0 auto 8px;
+    flex-shrink: 0;
+}
+
+/* Existing AUTO */
+#flashcardScreen .flashcard-playback-controls
+.flashcard-auto-button {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+
+    height: 40px;
+    margin: 0;
+}
+
+/* LISTEN + LANGUAGE */
+#flashcardScreen .flashcard-listen-auto-controls {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    flex: 1.4;
+    min-width: 0;
+}
+
+/* LISTEN BUTTON */
+#flashcardScreen .flashcard-listen-auto-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+
+    padding: 0 8px;
+
+    border: 1px solid rgba(56,189,248,.5);
+    border-radius: 20px;
+
+    background: rgba(14,116,144,.3);
+    color: #e0f2fe;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#flashcardScreen .flashcard-listen-auto-button:hover {
+    background: rgba(14,116,144,.5);
+}
+
+#flashcardScreen .flashcard-listen-auto-button.running {
+    border-color: #f87171;
+    background: rgba(185,28,28,.4);
+    color: #fee2e2;
+}
+
+/* VI / EN SELECT */
+#flashcardScreen .flashcard-listen-language {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 40px;
+
+    padding: 0 5px;
+
+    border: 1px solid #475569;
+    border-radius: 12px;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Stable status height */
+#flashcardScreen .flashcard-listen-auto-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: min(720px, 88vw);
+    min-height: 20px;
+    height: 20px;
+
+    margin: 0 auto 4px;
+    flex-shrink: 0;
+
+    color: #93c5fd;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+
+    text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    #flashcardScreen .flashcard-playback-controls {
+        width: 92vw;
+        gap: 6px;
+    }
+
+    #flashcardScreen .flashcard-playback-controls
+    .flashcard-auto-button {
+        height: 38px;
+        font-size: 11px;
+        padding: 0 6px;
+    }
+
+    #flashcardScreen .flashcard-listen-auto-button {
+        height: 38px;
+        font-size: 10px;
+        padding: 0 4px;
+    }
+
+    #flashcardScreen .flashcard-listen-language {
+        flex-basis: 52px;
+        width: 52px;
+        height: 38px;
+        font-size: 11px;
+    }
+
+    #flashcardScreen .flashcard-listen-auto-status {
+        width: 92vw;
+        height: 18px;
+        min-height: 18px;
+        font-size: 9px;
+    }
+}
+
