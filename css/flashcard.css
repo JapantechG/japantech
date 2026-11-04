@@ -930,3 +930,233 @@
         padding-top: 8px;
     }
 }
+
+
+/* =========================================================
+   FLASHCARD - STABLE LAYOUT FIX
+   Rating / Create Quiz no jumping
+========================================================= */
+
+/* Screen */
+#flashcardScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100dvh;
+    min-height: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
+/* Header */
+#flashcardScreen .flashcard-header {
+    flex-shrink: 0;
+    padding-top: 64px;
+}
+
+/* 5 filters */
+#flashcardScreen .flashcard-filters {
+    flex-shrink: 0;
+    width: min(720px, calc(100% - 32px));
+    margin: 12px auto 0;
+}
+
+/* Main container */
+#flashcardScreen .flashcard-container {
+    flex: 0 0 auto;
+
+    width: 100%;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 12px 12px 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+/* AUTO stays above card */
+#flashcardScreen .flashcard-auto-button {
+    flex-shrink: 0;
+    margin: 0 auto 10px;
+}
+
+/* Card navigation */
+#flashcardScreen .flashcard-navigation {
+    flex-shrink: 0;
+    width: 100%;
+    min-height: 0;
+}
+
+/* Card height does not depend on rating visibility */
+#flashcardScreen #flashcard {
+    flex-shrink: 0;
+
+    width: min(720px, 88vw);
+    height: clamp(300px, 46dvh, 490px);
+    min-height: 300px;
+}
+
+/* =========================================================
+   IMPORTANT: RESERVE RATING SPACE
+
+   The .hidden class must NOT remove the
+   rating element from layout.
+========================================================= */
+
+#flashcardScreen #flashcardRating {
+    display: grid !important;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    flex-shrink: 0;
+
+    width: min(720px, 88vw);
+    height: 52px;
+    min-height: 52px;
+
+    gap: 10px;
+    margin: 14px auto 0;
+
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hidden rating keeps its original dimensions */
+#flashcardScreen #flashcardRating.hidden {
+    display: grid !important;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Revealed rating */
+#flashcardScreen #flashcardRating:not(.hidden) {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Buttons cannot change container height */
+#flashcardScreen #flashcardRating
+.flashcard-rate-button {
+    height: 52px;
+    min-height: 52px;
+    width: 100%;
+    margin: 0;
+}
+
+/* =========================================================
+   CREATE QUIZ - FIXED POSITION IN FLOW
+========================================================= */
+
+#flashcardScreen .flashcard-quiz-area {
+    flex-shrink: 0;
+
+    width: min(720px, 88vw);
+
+    margin: 12px auto 20px;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+#flashcardScreen .flashcard-create-quiz-btn {
+    width: 100%;
+    height: 46px;
+    min-height: 46px;
+
+    margin: 0;
+}
+
+/* Quiz options open below the button */
+#flashcardScreen .flashcard-quiz-options {
+    margin-top: 12px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #flashcardScreen .flashcard-header {
+        padding-top: 58px;
+    }
+
+    #flashcardScreen .flashcard-filters {
+        width: calc(100% - 20px);
+        margin-top: 10px;
+    }
+
+    #flashcardScreen .flashcard-container {
+        padding: 10px 10px 0;
+    }
+
+    #flashcardScreen .flashcard-auto-button {
+        margin-bottom: 8px;
+    }
+
+    #flashcardScreen #flashcard {
+        width: 92vw;
+
+        height: clamp(250px, 40dvh, 390px);
+        min-height: 250px;
+    }
+
+    #flashcardScreen #flashcardRating {
+        width: 92vw;
+
+        height: 48px;
+        min-height: 48px;
+
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    #flashcardScreen #flashcardRating
+    .flashcard-rate-button {
+        height: 48px;
+        min-height: 48px;
+
+        font-size: 10px;
+    }
+
+    #flashcardScreen .flashcard-quiz-area {
+        width: 92vw;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    #flashcardScreen .flashcard-create-quiz-btn {
+        height: 44px;
+        min-height: 44px;
+    }
+}
+
+/* =========================================================
+   SHORT SCREENS
+========================================================= */
+
+@media (max-height: 700px) {
+
+    #flashcardScreen #flashcard {
+        height: 260px;
+        min-height: 260px;
+    }
+
+    #flashcardScreen .flashcard-auto-button {
+        margin-bottom: 6px;
+    }
+}
+
