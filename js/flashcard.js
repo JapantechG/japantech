@@ -17,6 +17,20 @@ import {
 }
 from "./audio.js";
 
+
+import {
+    getFlashcardDeckId,
+    loadFlashcardRatings,
+    saveFlashcardRating,
+    getFilteredFlashcardCards,
+    getFlashcardFilterCounts
+} from "./flashcard-rating-data.js";
+
+import {
+    startPractice
+} from "./solo/solo-practice.js";
+
+
 /* =============================================================
    STATE
    ============================================================= */
@@ -40,6 +54,29 @@ let flashcardAutoTimer = null;
 let flashcardAutoEndIndex = 0;
 
 let flashcardAgainCards = [];
+
+
+/* =========================================
+   FLASHCARD FILTER STATE
+========================================= */
+
+let flashcardDeckId = "";
+
+let flashcardRatings = {};
+
+let flashcardCurrentFilter = "all";
+
+let flashcardQuizOpen = false;
+
+// Bảo vệ callback async khi đổi deck.
+let flashcardLoadToken = 0;
+
+// Bảo vệ audio sau khi chuyển card.
+let flashcardCardToken = 0;
+
+// Khóa các lần lưu cùng một card.
+let flashcardRatingLocked = false;
+
 
 let flashcardSwipeStartX = 0;
 let flashcardSwipeStartY = 0;
@@ -81,53 +118,82 @@ const flashcardAutoButton =document.getElementById("flashcardAutoButton");
    INIT
    ============================================================= */
 
+
 export async function initFlashcard(config)
 {
-    flashcardConfig = config;
+    const loadToken = ++flashcardLoadToken;
+
+    stopFlashcardAuto();
+
+    flashcardConfig = {...config};
 
     flashcardIndex = 0;
-
     flashcardRevealed = false;
+    flashcardActive = false;
+    flashcardQuizOpen = false;
+    flashcardRatingLocked = false;
 
-    flashcardActive = true;
+    flashcardCurrentFilter = "all";
+    flashcardDeckId = getFlashcardDeckId(config);
+    flashcardRatings = {};
+    flashcardCards = [];
 
-    flashcardAutoMode = false;
+    ++flashcardCardToken;
 
-    flashcardAutoEndIndex = 0;
+    flashcardScreen?.classList.remove("hidden");
 
-    flashcardAgainCards = [];
+    document.getElementById("flashcardQuizOptions")
+        ?.classList.add("hidden");
 
-    clearTimeout(flashcardAutoTimer);
+    try {
 
-    /*
-        Load database
-    */
+        await loadFlashcardDatabase(config);
 
-    await loadFlashcardDatabase(config);
+        if (loadToken !== flashcardLoadToken) {
+            return;
+        }
 
-    /*
-        Random toàn bộ deck
-    */
+        flashcardRatings = await loadFlashcardRatings(
+            flashcardDeckId
+        );
 
-    flashcardCards = shuffleQuestions(flashcardDatabase);
+        if (loadToken !== flashcardLoadToken) {
+            return;
+        }
 
-    /*
-        Hiện screen
-    */
+        flashcardActive = true;
 
-    flashcardScreen ?.classList.remove("hidden");
+        if (flashcardLevel) {
 
-    /*
-        Level header
-    */
+            flashcardLevel.textContent =
+                `${config.target.toUpperCase()} - ` +
+                `${config.category.toUpperCase()}`;
+        }
 
-    if (flashcardLevel)
-    {
-        flashcardLevel.textContent = `${config.target.toUpperCase()} - ${config.category.toUpperCase()}`;
+        selectFlashcardFilter("all");
+
+        updateAutoButton();
+
+    } catch (error) {
+
+        if (loadToken !== flashcardLoadToken) {
+            return;
+        }
+
+        console.error("[FLASHCARD] Init failed:", error);
+
+        flashcardActive = false;
+
+        alert("Cannot load Flashcard database.");
+
+        closeFlashcard();
+
+        window.dispatchEvent(
+            new Event("batlingo-flashcard-close")
+        );
     }
-
-    showFlashcard();
 }
+
 
 
 /* =============================================================
@@ -170,9 +236,151 @@ async function loadFlashcardDatabase(config)
     console.log("[FLASHCARD] Database loaded:",config.studyMode,config.target,config.category,flashcardDatabase.length);
 }
 
+
+/* =========================================================
+   FILTER COUNTS
+========================================================= */
+
+function updateFlashcardFilterCounts()
+{
+    const counts = getFlashcardFilterCounts(
+        flashcardDatabase,
+        flashcardRatings
+    );
+
+    const ids = {
+        all: "fcCountAll",
+        again: "fcCountAgain",
+        hard: "fcCountHard",
+        good: "fcCountGood",
+        easy: "fcCountEasy"
+    };
+
+    for (const [filter, id] of Object.entries(ids)) {
+
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.textContent = counts[filter] || 0;
+        }
+    }
+}
+
+/* =========================================================
+   SELECT FILTER
+========================================================= */
+
+function selectFlashcardFilter(filter)
+{
+    if (!flashcardConfig || !flashcardActive) {
+        return;
+    }
+
+    const valid = [
+        "all",
+        "again",
+        "hard",
+        "good",
+        "easy"
+    ];
+
+    if (!valid.includes(filter)) {
+        return;
+    }
+
+    stopFlashcardAuto();
+
+    flashcardCurrentFilter = filter;
+
+    flashcardQuizOpen = false;
+
+    document.getElementById("flashcardQuizOptions")
+        ?.classList.add("hidden");
+
+    ++flashcardCardToken;
+
+    const filtered = getFilteredFlashcardCards(
+        flashcardDatabase,
+        flashcardRatings,
+        filter
+    );
+
+    flashcardCards = shuffleQuestions([...filtered]);
+
+    flashcardIndex = 0;
+
+    flashcardRevealed = false;
+    flashcardRatingLocked = false;
+
+    updateFlashcardFilterCounts();
+
+    document.querySelectorAll(
+        "#flashcardFilters [data-fc-filter]"
+    ).forEach(button => {
+
+        const active =
+            button.dataset.fcFilter === filter;
+
+        button.classList.toggle("active", active);
+    });
+
+    const empty = flashcardCards.length === 0;
+
+    document.getElementById("flashcard")
+        ?.classList.toggle("hidden", empty);
+
+    document.getElementById("flashcardRating")
+        ?.classList.add("hidden");
+
+    document.getElementById("flashcardEmptyMessage")
+        ?.classList.toggle("hidden", !empty);
+
+    const quizButton =
+        document.getElementById("flashcardCreateQuizBtn");
+
+    if (quizButton) {
+        quizButton.disabled = empty;
+    }
+
+    if (empty) {
+
+        stopSpeech();
+
+        if (flashcardProgress) {
+            flashcardProgress.textContent = "0 / 0";
+        }
+
+        return;
+    }
+
+    showFlashcard();
+}
+
+/* =========================================================
+   FILTER BUTTON EVENTS
+========================================================= */
+
+document.querySelectorAll(
+    "#flashcardFilters [data-fc-filter]"
+).forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        if (!flashcardActive) {
+            return;
+        }
+
+        selectFlashcardFilter(
+            button.dataset.fcFilter
+        );
+    });
+});
+
+
 /* =============================================================
    SHOW CARD
    ============================================================= */
+
 
 function showFlashcard()
 {
@@ -181,7 +389,14 @@ function showFlashcard()
         return;
     }
 
+    ++flashcardCardToken;
+
+    const cardToken = flashcardCardToken;
+
+    flashcardRatingLocked = false;
+
     stopSpeech();
+
 
     /*
         Nếu hết deck
@@ -261,7 +476,11 @@ function showFlashcard()
     {
         setTimeout(() =>
             {
-                if (flashcardActive && !flashcardRevealed)
+                if (
+                         flashcardActive &&
+                         !flashcardRevealed &&
+                         cardToken === flashcardCardToken
+                     )
                 {
                     speakJapanese(data.reading);
                 }
@@ -372,32 +591,78 @@ function toggleFlashcard()
    NEXT CARD
    ============================================================= */
 
+
 function nextFlashcard(rating)
 {
-    if (!flashcardActive || !flashcardRevealed)
-    {
+    if (
+        !flashcardActive ||
+        !flashcardRevealed ||
+        flashcardAutoMode ||
+        flashcardRatingLocked
+    ) {
         return;
     }
 
-    const currentCard =flashcardCards[flashcardIndex];
+    const currentCard =
+        flashcardCards[flashcardIndex];
 
-    console.log("[FLASHCARD] Rating:",rating,currentCard?.id);
+    if (!currentCard) {
+        return;
+    }
 
-    /*
-        AGAIN:
-        đưa card này xuống cuối deck
-        để lát gặp lại.
-    */
+    if (
+        currentCard.id === undefined ||
+        currentCard.id === null
+    ) {
+        console.warn(
+            "[FLASHCARD] Card has no ID:",
+            currentCard
+        );
+        return;
+    }
 
-    if (rating === "again" && currentCard)
-    {
+    flashcardRatingLocked = true;
+
+    const cardId = String(currentCard.id);
+
+    // Lưu trạng thái cuối cùng.
+    saveFlashcardRating(
+        flashcardDeckId,
+        cardId,
+        rating,
+        flashcardRatings
+    ).catch(error => {
+
+        console.error(
+            "[FLASHCARD] Rating sync failed:",
+            error
+        );
+    });
+
+    // Cập nhật số lượng ngay lập tức.
+    updateFlashcardFilterCounts();
+
+    console.log(
+        "[FLASHCARD] Latest rating:",
+        cardId,
+        rating
+    );
+
+    // Giữ hành vi AGAIN của Flashcard cũ:
+    // từ xuất hiện lại cuối phiên học.
+    if (
+        rating === "again" &&
+        flashcardCurrentFilter === "all"
+    ) {
         flashcardCards.push(currentCard);
     }
 
+    // Trong Filter cụ thể, không thêm bản sao.
     flashcardIndex++;
 
     showFlashcard();
 }
+
 
 
 /* =============================================================
@@ -426,16 +691,28 @@ function replayFlashcardAudio()
    CLOSE
    ============================================================= */
 
+
 export function closeFlashcard()
 {
-    flashcardActive = false;
+    ++flashcardLoadToken;
+    ++flashcardCardToken;
 
+    stopFlashcardAuto();
+
+    flashcardActive = false;
     flashcardRevealed = false;
+    flashcardRatingLocked = false;
+
+    flashcardQuizOpen = false;
 
     stopSpeech();
 
     flashcardScreen?.classList.add("hidden");
+
+    document.getElementById("flashcardQuizOptions")
+        ?.classList.add("hidden");
 }
+
 
 /* =============================================================
    MOBILE SWIPE
@@ -688,13 +965,6 @@ function runFlashcardAuto()
 function autoNextFlashcard() {
     if (!flashcardAutoMode || !flashcardActive) return;
 
-    const currentCard = flashcardCards[flashcardIndex];
-
-    if (currentCard) 
-    {
-        flashcardAgainCards.push(currentCard);
-    }
-
     flashcard.style.transition = "transform 0.2s ease";
     flashcard.style.transform = `translateX(-${window.innerWidth}px) rotate(-15deg)`;
 
@@ -718,6 +988,7 @@ function autoNextFlashcard() {
     }, 200);
 }
 
+
 function finishFlashcardAuto()
 {
     clearTimeout(flashcardAutoTimer);
@@ -728,33 +999,25 @@ function finishFlashcardAuto()
 
     stopSpeech();
 
+    ++flashcardCardToken;
+
     console.log("[FLASHCARD] AUTO FINISHED");
 
-    console.log("[FLASHCARD] AGAIN:",flashcardAgainCards.length);
-
-    /*
-        Sau AUTO:
-        deck tiếp theo chỉ gồm
-        những card được đưa vào AGAIN.
-    */
-
-    flashcardCards = [...flashcardAgainCards];
+    // Không sửa Rating.
+    // Không chuyển deck sang AGAIN.
 
     flashcardIndex = 0;
 
-    /*
-        Không tự chạy lại.
-
-        Chỉ chuẩn bị deck AGAIN.
-    */
-
-    if (flashcardCards.length > 0)
-    {
+    if (
+        flashcardActive &&
+        flashcardCards.length > 0
+    ) {
         showFlashcard();
     }
 
     updateAutoButton();
 }
+
 
 flashcardAutoButton?.addEventListener("click",event =>
         {
@@ -920,3 +1183,187 @@ document.addEventListener("keydown", event => {
         toggleFlashcard();
     }
 });
+
+
+/* =========================================================
+   FLASHCARD FILTER QUIZ
+========================================================= */
+
+function getCurrentFilterCards()
+{
+    return getFilteredFlashcardCards(
+        flashcardDatabase,
+        flashcardRatings,
+        flashcardCurrentFilter
+    ).filter(card =>
+        card.id !== null &&
+        card.id !== undefined
+    );
+}
+
+/* =========================================================
+   OPEN QUIZ OPTIONS
+========================================================= */
+
+document.getElementById("flashcardCreateQuizBtn")
+    ?.addEventListener("click", () => {
+
+        if (!flashcardActive) return;
+
+        stopFlashcardAuto();
+
+        const cards = getCurrentFilterCards();
+
+        if (cards.length === 0) {
+            alert("No cards available.");
+            return;
+        }
+
+        document.getElementById("flashcardQuizAvailable")
+            .textContent =
+                `${cards.length} cards available`;
+
+        document.getElementById("flashcardQuizOptions")
+            ?.classList.remove("hidden");
+    });
+
+/* =========================================================
+   CANCEL QUIZ
+========================================================= */
+
+document.getElementById("flashcardQuizCancelBtn")
+    ?.addEventListener("click", () => {
+
+        document.getElementById("flashcardQuizOptions")
+            ?.classList.add("hidden");
+    });
+
+/* =========================================================
+   START FILTER QUIZ
+========================================================= */
+
+document.getElementById("flashcardQuizStartBtn")
+    ?.addEventListener("click", async () => {
+
+        if (
+            !flashcardActive ||
+            !flashcardConfig ||
+            flashcardQuizOpen
+        ) {
+            return;
+        }
+
+        const cards = getCurrentFilterCards();
+
+        if (cards.length === 0) {
+            alert("This filter has no cards.");
+            return;
+        }
+
+        // Không cho lặp ID.
+        const ids = [
+            ...new Set(
+                cards.map(card => String(card.id))
+            )
+        ];
+
+        const countSelect =
+            document.getElementById("flashcardQuizCount");
+
+        const timeSelect =
+            document.getElementById("flashcardQuizTime");
+
+        const requestedCount =
+            countSelect.value === "all"
+                ? ids.length
+                : Number(countSelect.value);
+
+        const count = Math.min(
+            requestedCount,
+            ids.length,
+            100
+        );
+
+        const time = Number(timeSelect.value) || 10;
+
+        // Snapshot ID tại thời điểm tạo Quiz.
+        const selectedIds = shuffleQuestions([...ids])
+            .slice(0, count);
+
+        const quizConfig = {
+            ...flashcardConfig,
+
+            source: "flashcard",
+
+            soloType: "practice",
+
+            flashcardQuiz: true,
+
+            flashcardFilter: flashcardCurrentFilter,
+
+            flashcardQuizIds: selectedIds,
+
+            practiceCount: selectedIds.length,
+
+            practiceTime: time
+        };
+
+        stopFlashcardAuto();
+
+        stopSpeech();
+
+        flashcardQuizOpen = true;
+        flashcardActive = false;
+
+        ++flashcardCardToken;
+
+        flashcardScreen?.classList.add("hidden");
+
+        try {
+
+            await startPractice(quizConfig);
+
+        } catch (error) {
+
+            console.error(
+                "[FLASHCARD QUIZ] Start failed:",
+                error
+            );
+
+            flashcardQuizOpen = false;
+            flashcardActive = true;
+
+            flashcardScreen?.classList.remove("hidden");
+
+            alert(error.message || "Cannot start quiz.");
+        }
+    });
+
+/* =========================================================
+   RETURN FROM QUIZ
+========================================================= */
+
+export function resumeFlashcardFromQuiz()
+{
+    if (!flashcardConfig) {
+        return false;
+    }
+
+    flashcardQuizOpen = false;
+    flashcardActive = true;
+
+    flashcardScreen?.classList.remove("hidden");
+
+    document.getElementById("flashcardQuizOptions")
+        ?.classList.add("hidden");
+
+    if (flashcardCards.length > 0) {
+        showFlashcard();
+    }
+
+    updateFlashcardFilterCounts();
+    updateAutoButton();
+
+    return true;
+}
+
