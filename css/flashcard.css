@@ -574,3 +574,359 @@
 .flashcard-nav-button:active {
     transform: scale(0.95);
 }
+
+
+/* =========================================================
+   BATLINGO FLASHCARD - FILTERS + QUIZ
+   ADD AT THE END OF flashcard.css
+========================================================= */
+
+/* =========================================================
+   FILTER BAR
+========================================================= */
+
+#flashcardScreen .flashcard-filters {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+
+    width: min(720px, calc(100% - 32px));
+
+    margin: 16px auto 4px;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   FILTER BUTTON
+========================================================= */
+
+#flashcardScreen .flashcard-filter-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    min-width: 0;
+    min-height: 64px;
+    padding: 9px 4px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 13px;
+
+    background: rgba(15,23,42,.86);
+    color: #f8fafc;
+
+    cursor: pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .15s ease;
+}
+
+#flashcardScreen .flashcard-filter-btn strong {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+#flashcardScreen .flashcard-filter-btn span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+#flashcardScreen .flashcard-filter-btn:hover {
+    background: rgba(51,65,85,.95);
+}
+
+#flashcardScreen .flashcard-filter-btn:active {
+    transform: scale(.97);
+}
+
+/* =========================================================
+   FILTER COLORS
+========================================================= */
+
+#flashcardScreen [data-fc-filter="all"] strong {
+    color: #e2e8f0;
+}
+
+#flashcardScreen [data-fc-filter="again"] strong {
+    color: #f87171;
+}
+
+#flashcardScreen [data-fc-filter="hard"] strong {
+    color: #fdba74;
+}
+
+#flashcardScreen [data-fc-filter="good"] strong {
+    color: #86efac;
+}
+
+#flashcardScreen [data-fc-filter="easy"] strong {
+    color: #93c5fd;
+}
+
+#flashcardScreen .flashcard-filter-btn.active {
+    background: rgba(51,65,85,.95);
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 1px rgba(56,189,248,.25);
+}
+
+/* =========================================================
+   EMPTY FILTER
+========================================================= */
+
+#flashcardScreen .flashcard-empty-message {
+    padding: 18px 12px;
+    text-align: center;
+    color: #cbd5e1;
+    font-weight: 700;
+}
+
+#flashcardScreen .flashcard-empty-message.hidden {
+    display: none !important;
+}
+
+#flashcardScreen #flashcard.hidden {
+    display: none !important;
+}
+
+/* =========================================================
+   QUIZ AREA
+========================================================= */
+
+#flashcardScreen .flashcard-quiz-area {
+    width: min(720px, calc(100% - 32px));
+    margin: 12px auto 30px;
+    flex-shrink: 0;
+}
+
+#flashcardScreen .flashcard-create-quiz-btn {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+
+    border: 1px solid rgba(56,189,248,.45);
+    border-radius: 13px;
+
+    background: rgba(14,116,144,.28);
+    color: #e0f2fe;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: background .15s ease;
+}
+
+#flashcardScreen .flashcard-create-quiz-btn:hover {
+    background: rgba(14,116,144,.48);
+}
+
+#flashcardScreen .flashcard-create-quiz-btn:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   QUIZ SETTINGS
+========================================================= */
+
+#flashcardScreen .flashcard-quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 12px;
+    padding: 18px;
+
+    background: rgba(15,23,42,.97);
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    color: #f8fafc;
+}
+
+#flashcardScreen .flashcard-quiz-options.hidden {
+    display: none !important;
+}
+
+#flashcardScreen .flashcard-quiz-heading {
+    font-size: 15px;
+    font-weight: 900;
+    color: #7dd3fc;
+}
+
+#flashcardScreen .flashcard-quiz-available {
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+#flashcardScreen .flashcard-quiz-options label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .7px;
+    color: #94a3b8;
+}
+
+#flashcardScreen .flashcard-quiz-options select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #475569;
+    border-radius: 10px;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    font-size: 13px;
+}
+
+#flashcardScreen .flashcard-quiz-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+#flashcardScreen .flashcard-quiz-actions button {
+    min-height: 43px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+#flashcardQuizCancelBtn {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+#flashcardQuizStartBtn {
+    background: #0284c7;
+    color: white;
+}
+
+/* =========================================================
+   FILTER QUIZ - HIDE BATTLE STATS
+========================================================= */
+
+#gameScreen.flashcard-quiz-mode .game-header,
+#gameScreen.flashcard-quiz-mode #combo {
+    display: none !important;
+}
+
+/* =========================================================
+   COMPACT FLASHCARD LAYOUT
+========================================================= */
+
+#flashcardScreen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+#flashcardScreen.hidden {
+    display: none !important;
+}
+
+#flashcardScreen .flashcard-container {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+/* Card size after adding filter bar */
+
+#flashcardScreen .flashcard {
+    height: clamp(300px, 48dvh, 490px);
+    min-height: 300px;
+}
+
+#flashcardScreen .flashcard-rating {
+    margin-top: 14px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #flashcardScreen .flashcard-header {
+        padding-top: 58px;
+    }
+
+    #flashcardScreen .flashcard-filters {
+        width: calc(100% - 20px);
+        gap: 4px;
+        margin-top: 12px;
+    }
+
+    #flashcardScreen .flashcard-filter-btn {
+        min-height: 57px;
+        padding: 7px 2px;
+        border-radius: 10px;
+    }
+
+    #flashcardScreen .flashcard-filter-btn strong {
+        font-size: 17px;
+    }
+
+    #flashcardScreen .flashcard-filter-btn span {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    #flashcardScreen .flashcard-container {
+        padding: 12px 10px 6px;
+    }
+
+    #flashcardScreen .flashcard {
+        height: clamp(260px, 43dvh, 410px);
+        min-height: 260px;
+    }
+
+    #flashcardScreen .flashcard-rating {
+        width: 100%;
+        gap: 5px;
+        margin-top: 12px;
+    }
+
+    #flashcardScreen .flashcard-quiz-area {
+        width: calc(100% - 20px);
+        margin-top: 8px;
+    }
+
+    #flashcardScreen .flashcard-create-quiz-btn {
+        min-height: 44px;
+    }
+}
+
+/* =========================================================
+   SMALL HEIGHT SCREENS
+========================================================= */
+
+@media (max-height: 700px) {
+
+    #flashcardScreen .flashcard {
+        height: 280px;
+        min-height: 260px;
+    }
+
+    #flashcardScreen .flashcard-container {
+        padding-top: 8px;
+    }
+}
