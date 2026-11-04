@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>BatLingo - Learn Japanese with JLPT Battles & Flashcards</title>
+
+    <meta name="description" content="Learn Japanese with BatLingo through JLPT vocabulary, grammar, flashcards, review, solo battles and online 1v1 challenges.">
+        
+    <!-- =====================================================
+         BROWSER TAB ICON
+    ===================================================== -->
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+
+       <!-- =====================================================
+         IPHONE / IPAD HOME SCREEN ICON
+         ===================================================== -->
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
+
+    <!-- =====================================================
+         MOBILE BROWSER COLOR
+    ===================================================== -->
+
+    <meta name="theme-color" content="#080d17">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/solo-practice.css">
+    <link rel="stylesheet" href="css/pvp.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="css/flashcard.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/rank.css">
+    <link rel="stylesheet" href="css/leaderboard.css">
+    <link rel="stylesheet" href="css/ranked-game.css">
+    <link rel="stylesheet" href="css/mascot.css">
+    <link rel="stylesheet" href="css/mascot-evolution.css">
+    <link rel="stylesheet" href="./css/jlpt-exam.css">
+    <link rel="stylesheet" href="css/review-modern.css">
+</head>
+
+<body>
+  
+    <!-- =====================================================
+         LOBBY
+         ===================================================== -->
+
+    <section id="setupScreen" class="setup-screen">
+
+        <!-- BACKGROUND OVERLAY -->
+        <div class="lobby-overlay"></div>
+
+        <header class="lobby-header">
+
+    <div class="mini-logo">
+        BAT<span>LINGO</span>
+    </div>
+
+
+    <!-- TOP ACTIONS -->
+    <div class="home-actions">
+
+        <!-- MENU -->
+        <button id="menuButton" class="top-action-btn menu-button" type="button" aria-label="Menu">
+            ☰
+        </button>
+
+        <button
+            id="jlptExamHeaderBtn"
+            class="jlpt-exam-balloon"
+            type="button"
+            title="JLPT Exam"
+        >
+            🎓 <span>JLPT EXAM</span>
+        </button>
+
+        <!-- LANGUAGE -->
+        <div class="top-language">
+            <span class="top-language-icon">
+                🌐
+            </span>
+
+            <select id="homeLanguage" class="top-language-select" aria-label="Interface Language">
+
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="vi">Tiếng Việt</option>
+
+            </select>
+
+        </div>
+
+        <!-- LOGIN -->
+        <button id="homeLoginBtn" class="top-action-btn login-button" type="button">
+            <span>♟</span>
+
+            <span data-i18n="home.login">
+                Login
+            </span>
+
+        </button>
+
+        <!-- USER - sau khi login -->
+            <button id="homeUserBtn" class="home-user-btn hidden" type="button">
+            <img class="home-user-avatar hidden" alt="">
+
+            <span class="home-user-avatar-fallback">
+                U
+            </span>
+
+            <span class="home-user-name">
+                User
+            </span>
+        </button>
+
+                    <!-- USER MENU -->
+            <div id="homeUserMenu" class="home-user-menu hidden">
+                <div class="home-user-menu-header">
+
+                    <div id="userMenuAvatar" class="user-menu-avatar">
+                        U
+                    </div>
+
+                    <div class="user-menu-info">
+                        <strong id="userMenuName">
+                            User
+                        </strong>
+
+                        <span id="userMenuEmail">
+                            user@email.com
+                        </span>
+                    </div>
+                </div>
+
+                <div class="home-user-menu-divider"></div>
+
+                <button id="userProfileBtn" class="home-user-menu-item" type="button">
+                    👤
+                    <span data-i18n="menu.profile">PROFILE</span>
+                </button>
+
+                <button id="logoutBtn" class="home-user-menu-item logout" type="button">
+                    ↪
+                    <span data-i18n="menu.logout">LOGOUT</span>
+                </button>
+
+            </div>
+
+    </div>
+
+</header>
+
+<!-- =====================================================
+     PROFILE SCREEN
+===================================================== -->
+
+<section id="profileScreen" class="profile-screen hidden">
+    <div class="profile-container">
+
+        <!-- HEADER -->
+        <div class="profile-header">
+
+            <button id="profileBackBtn" class="profile-back-btn" type="button">
+                ←
+            </button>
+
+            <h1 data-i18n="profile.title">PROFILE</h1>
+
+            <div class="profile-header-space"></div>
+
+        </div>
+
+
+        <!-- PROFILE CARD -->
+        <div class="profile-card">
+
+            <!-- AVATAR -->
+            <div class="profile-avatar-area">
+
+                <div id="profileAvatar" class="profile-avatar">
+                    U
+                </div>
+
+                <button id="profileAvatarEditBtn" class="profile-avatar-edit" type="button">
+                    ✎
+                </button>
+
+            </div>
+
+            <!-- NAME -->
+            <div id="profileDisplayName" class="profile-main-name">
+                Player
+            </div>
+
+            <!-- BATLINGO ID -->
+            <div id="profileBatlingoId" class="profile-batlingo-id">
+                BLG-0000000
+            </div>
+
+            <!-- =====================================================
+                 PLAYER STATUS
+            ===================================================== -->
+            
+            <div class="profile-player-status">
+            
+                <!-- LEVEL / ELO -->
+            
+                <div class="profile-status-top">
+            
+                    <div class="profile-level-box">
+            
+                        <span class="profile-status-label" data-i18n="profile.level">
+                            LEVEL
+                        </span>
+            
+                        <strong id="profileLevel">
+                            1
+                        </strong>
+            
+                    </div>
+            
+                    <div class="profile-elo-box">
+            
+                        <span class="profile-status-label" data-i18n="profile.elo">
+                            ELO
+                        </span>
+            
+                        <strong id="profileElo">
+                            1000
+                        </strong>
+            
+                    </div>
+            
+                </div>
+            
+                <!-- EXP -->
+            
+                <div class="profile-exp-area">
+            
+                    <div class="profile-exp-header">
+            
+                        <span data-i18n="profile.exp">
+                            EXP
+                        </span>
+            
+                        <span id="profileExpText">
+                            0 / 100
+                        </span>
+            
+                    </div>
+            
+                    <div class="profile-exp-bar">
+                        <div id="profileExpFill" class="profile-exp-fill"></div>
+            
+                    </div>
+            
+                </div>
+            
+                <!-- BATTLE STATS -->
+            
+                <div class="profile-stats-grid">
+            
+                    <div class="profile-stat-item">
+            
+                        <span class="profile-stat-value"
+                              id="profileBattles">
+                            0
+                        </span>
+            
+                        <span class="profile-stat-label" data-i18n="profile.battles">
+                            BATTLES
+                        </span>
+            
+                    </div>
+            
+                    <div class="profile-stat-item">
+            
+                        <span class="profile-stat-value"
+                              id="profileWins">
+                            0
+                        </span>
+            
+                        <span class="profile-stat-label" data-i18n="profile.wins">
+                            WINS
+                        </span>
+            
+                    </div>
+            
+                    <div class="profile-stat-item">
+            
+                        <span class="profile-stat-value"
+                              id="profileLosses">
+                            0
+                        </span>
+            
+                        <span class="profile-stat-label" data-i18n="profile.losses">
+                            LOSSES
+                        </span>
+            
+                    </div>
+            
+                    <div class="profile-stat-item">
+            
+                        <span class="profile-stat-value" id="profileWinRate">
+                            --
+                        </span>
+            
+                        <span class="profile-stat-label" data-i18n="profile.winRate">
+                            WIN RATE
+                        </span>
+            
+                    </div>
+            
+                    <div class="profile-stat-item">
+            
+                        <span class="profile-stat-value" id="profileDraws">
+                            0
+                        </span>
+            
+                        <span class="profile-stat-label" data-i18n="profile.draws">
+                            DRAWS
+                        </span>
+            
+                    </div>
+            
+            
+                    <div class="profile-stat-item">
+            
+                        <span class="profile-stat-value" id="profileBestCombo">
+                            0
+                        </span>
+            
+                        <span class="profile-stat-label" data-i18n="profile.bestCombo">
+                            BEST COMBO
+                        </span>
+            
+                    </div>
+            
+                </div>
+            
+            </div>   
+            
+            <div class="profile-divider"></div>
+
+            <!-- DISPLAY NAME -->
+
+            <div class="profile-field">
+
+                <label for="profileNameInput" data-i18n="profile.displayName">
+                    DISPLAY NAME
+                </label>
+
+                <input id="profileNameInput"
+                    type="text"
+                    maxlength="20"
+                    autocomplete="off"
+                    placeholder="Your BatLingo name"
+                >
+
+                <div class="profile-field-info">
+                    <span data-i18n="profile.displayNameHint">Your public player name</span>
+
+                    <span id="profileNameCounter">
+                        0 / 20
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- BIO -->
+
+            <div class="profile-field">
+
+                <label for="profileBioInput" data-i18n="profile.bio">
+                    BIO
+                </label>
+
+                <textarea id="profileBioInput" maxlength="100" placeholder="Tell other players about yourself"
+                    data-i18n-placeholder="profile.bioPlaceholder"></textarea>
+
+                <div class="profile-field-info">
+                    <span></span>
+                    <span id="profileBioCounter">
+                        0 / 100
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="profile-field">
+
+                <label data-i18n="profile.email">
+                    EMAIL
+                </label>
+
+                <div id="profileEmail" class="profile-readonly">
+                    -
+                </div>
+
+            </div>
+
+            <!-- ID -->
+
+            <div class="profile-field">
+
+                <label data-i18n="profile.batlingoId">
+                    BATLINGO ID
+                </label>
+
+                <div id="profileIdReadonly" class="profile-readonly">
+                    BLG-0000000
+                </div>
+
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div id="profileMessage" class="profile-message hidden"></div>
+
+            <!-- SAVE -->
+
+            <button id="profileSaveBtn" class="profile-save-btn" type="button" data-i18n="profile.save">
+                SAVE PROFILE
+            </button>
+
+        </div>
+
+    </div>
+</section>
+        
+<!-- =========================================
+     NEW HOME SCREEN
+========================================= -->
+
+
+<!-- =========================================
+     BATLINGO HOME V2
+========================================= -->
+
+<div id="homeScreen" class="bat-home">
+
+    <!-- BRAND -->
+    <section class="bat-home-brand">
+
+        <div class="bat-home-logo">
+            BAT<span>LINGO</span>
+        </div>
+
+        <p>LANGUAGE BATTLE ARENA</p>
+
+    </section>
+
+    <!-- PLAYER + MASCOT -->
+    <section class="bat-home-player">
+
+        <button
+            id="batHomeMascotBtn"
+            class="bat-home-mascot"
+            type="button"
+            aria-label="Open Mascot">
+
+            <img
+                id="batHomeMascotImage"
+                src=""
+                alt="My Mascot"
+                hidden>
+
+            <span
+                id="batHomeMascotFallback"
+                class="bat-home-mascot-fallback">
+                🐃
+            </span>
+
+        </button>
+
+        <div class="bat-home-player-info">
+
+            <div class="bat-home-player-top">
+
+                <div class="bat-home-player-name">
+                    <strong id="batHomePlayerName">
+                        PLAYER
+                    </strong>
+                </div>
+
+                <span
+                    id="batHomePlayerLevel"
+                    class="bat-home-player-level">
+                    LV. 1
+                </span>
+
+            </div>
+
+            <div class="bat-home-exp-track">
+                <div
+                    id="batHomeExpFill"
+                    class="bat-home-exp-fill">
+                </div>
+            </div>
+
+            <div class="bat-home-exp-bottom">
+                <span>EXP</span>
+                <span id="batHomeExpText">
+                    0 / 100
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LEARNING LANGUAGE -->
+    <section class="bat-home-language">
+
+        <button
+            id="batHomeLanguageBtn"
+            class="bat-home-language-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="batHomeLanguageOptions">
+
+            <span class="bat-home-flag">🇯🇵</span>
+
+            <strong data-i18n="home.languageJapanese">
+                JAPANESE
+            </strong>
+
+            <span class="bat-home-language-chevron">
+                ⌄
+            </span>
+
+        </button>
+
+        <div
+            id="batHomeLanguageOptions"
+            class="bat-home-language-options hidden">
+
+            <div class="bat-home-language-option selected">
+                <span>🇯🇵</span>
+                <strong>JAPANESE</strong>
+                <span class="bat-home-language-check">✓</span>
+            </div>
+
+            <div class="bat-home-language-option unavailable">
+                <span>🇺🇸</span>
+                <strong>ENGLISH</strong>
+                <small>SOON</small>
+            </div>
+
+            <div class="bat-home-language-option unavailable">
+                <span>🇨🇳</span>
+                <strong>CHINESE</strong>
+                <small>SOON</small>
+            </div>
+
+            <div class="bat-home-language-option unavailable">
+                <span>🇻🇳</span>
+                <strong>VIETNAMESE</strong>
+                <small>SOON</small>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GAME MODES -->
+    <section class="bat-home-modes">
+
+        <div class="bat-home-label">
+            GAME MODES
+        </div>
+
+        <div class="bat-home-mode-grid">
+
+            <button
+                class="bat-home-mode-card bat-mode-solo"
+                data-home-mode="solo"
+                type="button">
+
+                <span class="bat-home-mode-icon">⚡</span>
+                <strong>SOLO</strong>
+                <small>Practice & Challenge</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+            <button
+                class="bat-home-mode-card bat-mode-flashcard"
+                data-home-mode="flashcard"
+                type="button">
+
+                <span class="bat-home-mode-icon">▤</span>
+                <strong>FLASHCARD</strong>
+                <small>Learn & Memorize</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+            <button
+                class="bat-home-mode-card bat-mode-pvp"
+                data-home-mode="pvp"
+                type="button">
+
+                <span class="bat-home-mode-icon">⚔</span>
+                <strong>1V1 BATTLE</strong>
+                <small>Challenge Friends</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+            <button
+                class="bat-home-mode-card bat-mode-rank"
+                data-home-mode="rank"
+                type="button">
+
+                <span class="bat-home-mode-icon">🏆</span>
+                <strong>RANKED</strong>
+                <small>Climb the Ranks</small>
+                <span class="bat-home-mode-arrow">↗</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK ACCESS -->
+    <section class="bat-home-quick">
+
+        <div class="bat-home-label">
+            QUICK ACCESS
+        </div>
+
+        <div class="bat-home-quick-grid">
+
+            <button
+                id="batHomeLeaderboard"
+                class="bat-home-quick-item"
+                type="button">
+                <span>🏆</span>
+                <small>LEADERBOARD</small>
+            </button>
+
+            <button
+                id="batHomeReview"
+                class="bat-home-quick-item"
+                type="button">
+
+                <span>↻</span>
+                <small>REVIEW</small>
+
+                <span
+                    id="batHomeReviewCount"
+                    class="bat-home-review-count hidden">
+                    0
+                </span>
+
+            </button>
+
+            <button
+                id="batHomeFriends"
+                class="bat-home-quick-item"
+                type="button"
+                disabled>
+
+                <span>👥</span>
+                <small>FRIENDS</small>
+                <em>SOON</em>
+
+            </button>
+
+            <button
+                id="batHomeMore"
+                class="bat-home-quick-item"
+                type="button"
+                disabled>
+
+                <span>⋯</span>
+                <small>MORE</small>
+                <em>SOON</em>
+
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+        <div id="configScreen" class="setup-container hidden">
+            
+            <div class="bat-config-header">
+                <button id="batConfigBackBtn"
+                        class="bat-config-back"
+                        type="button"
+                        aria-label="Back to Home">
+                    ←
+                </button>
+
+                <span id="batConfigModeTitle">
+                    SOLO BATTLE
+                </span>
+
+                <div class="bat-config-spacer"></div>
+            </div>
+
+            <!-- SOLO MODE: only visible for Solo -->
+             <div class="game-logo">
+                BAT<span>LINGO</span>
+            </div>
+
+            <div class="game-subtitle">
+                LANGUAGE BATTLE ARENA
+            </div>
+
+            <section id="soloSettings" class="solo-settings hidden" aria-label="Solo game mode">
+                <div class="solo-settings-title">CHOOSE SOLO MODE</div>
+                <div class="solo-type-selector">
+                    <button type="button" class="solo-type-btn active" data-solo-type="survival" aria-pressed="true">
+                        <span class="solo-type-icon">❤️</span>
+                        <strong>SURVIVAL</strong>
+                        <small>3 LIVES · SCORE · EXP</small>
+                    </button>
+                    <button type="button" class="solo-type-btn" data-solo-type="practice" aria-pressed="false">
+                        <span class="solo-type-icon">📖</span>
+                        <strong>PRACTICE</strong>
+                        <small>QUESTIONS · ACCURACY</small>
+                    </button>
+                </div>
+                <p class="solo-mode-description" id="soloModeDescription">Survive with 3 lives. Earn score and EXP.</p>
+            </section>
+
+
+            <!-- STUDY MODE -->
+
+            <div class="selector-section">
+
+                <div class="selector-label" data-i18n="home.studyMode">
+                    STUDY MODE
+                </div>
+
+                <div class="selector">
+
+                    <button id="studyModePrev" class="selector-arrow" type="button">
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div id="studyModeValue" class="selector-value">
+                            JLPT
+                        </div>
+                    </div>
+
+                    <button id="studyModeNext" class="selector-arrow" type="button">
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- TARGET -->
+
+            <div class="selector-section">
+
+                <div id="studyTargetLabel" class="selector-label" data-i18n="home.jlptLevel">
+                    JLPT LEVEL
+                </div>
+
+                <div class="selector">
+
+                    <button id="studyTargetPrev" class="selector-arrow" type="button">
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div id="studyTargetValue" class="selector-value level-value">
+                            N1
+                        </div>
+                    </div>
+
+                    <button id="studyTargetNext" class="selector-arrow" type="button">
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- CATEGORY -->
+
+            <div class="selector-section">
+
+                <div class="selector-label" data-i18n="home.category">
+                    CATEGORY
+                </div>
+
+                <div class="selector">
+
+                    <button id="categoryPrev" class="selector-arrow" type="button">
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div id="categoryValue" class="selector-value">
+                            TỪ VỰNG
+                        </div>
+                    </div>
+
+                    <button id="categoryNext" class="selector-arrow" type="button">
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- QUESTION MODE -->
+
+            <div class="selector-section">
+
+                <div class="selector-label" data-i18n="home.questionMode">
+                    QUESTION MODE
+                </div>
+
+                <div class="selector">
+
+                    <button id="subModePrev" class="selector-arrow" type="button">
+                        ◀
+                    </button>
+
+                    <div class="selector-viewport">
+                        <div id="subModeValue" class="selector-value sub-mode-value">
+                            KANJI → MEANING
+                        </div>
+                    </div>
+
+                    <button id="subModeNext" class="selector-arrow" type="button">
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Solo Practice options: only visible when Practice is selected -->
+            <section id="practiceOptions" class="practice-options hidden" aria-label="Practice settings">
+                <div class="practice-setting-heading"><label for="practiceCountSlider">NUMBER OF QUESTIONS</label><strong id="practiceCountValue">20</strong></div>
+                <div class="practice-presets">
+                    <button type="button" data-practice-count="10">10</button>
+                    <button type="button" data-practice-count="20" class="active">20</button>
+                    <button type="button" data-practice-count="50">50</button>
+                </div>
+                <input id="practiceCountSlider" type="range" min="1" max="100" step="1" value="20">
+                <div class="practice-range-labels"><span>1 QUESTION</span><span>100 QUESTIONS</span></div>
+                <div class="practice-setting-heading"><label for="practiceTimeSlider">TIME PER QUESTION</label><strong id="practiceTimeValue">8s</strong></div>
+                <input id="practiceTimeSlider" type="range" min="1" max="20" step="1" value="8">
+                <div class="practice-range-labels"><span>1 SECOND</span><span>20 SECONDS</span></div>
+                <p class="practice-note">NO LIVES · NO COMBO · NO EXP · TIMEOUT = WRONG</p>
+            </section>
+
+            <!-- BATTLE -->
+
+            <button id="battleButton" class="battle-button" type="button">
+                ⚔ <span data-i18n="home.battle">BATTLE</span>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         SOLO GAME
+         ===================================================== -->
+
+    <main id="gameScreen" class="game-screen hidden">
+
+        <div class="game-container">
+
+            <div class="game-header">
+
+                <div id="life" class="life">
+                    ❤️ ❤️ ❤️
+                </div>
+
+                <div class="score-box">
+
+                    <div class="score-label" data-i18n="game.score">
+                        SCORE
+                    </div>
+
+                    <div id="score" class="score">
+                        0
+                    </div>
+
+                    <div class="best-score">
+                        <span data-i18n="game.best">BEST</span>:
+                        <span id="bestScore">0</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="gameModeInfo" class="game-mode-info">
+                     JLPT N1 · VOCABULARY
+            </div>
+
+            <div id="questionNumber" class="question-number">
+                QUESTION 1
+            </div>
+
+            <div id="question" class="question">
+                ---
+            </div>
+
+            <div id="reading" class="reading">
+                ---
+            </div>
+
+            <!-- TIMER -->
+
+            <div class="timer-area">
+
+                <div id="timerText" class="timer-text">
+                    10.0
+                </div>
+
+                <div class="timer-track">
+                    <div id="timerBar" class="timer-bar"></div>
+                </div>
+
+            </div>
+
+            <!-- ANSWERS -->
+
+            <div id="answers" class="answers"></div>
+
+            <div id="combo" class="combo">
+                🔥 COMBO 0
+            </div>
+
+            <div class="keyboard-hint" data-i18n="game.keyboardHint">
+                PRESS 1 · 2 · 3 · 4
+            </div>
+
+        </div>
+
+    </main>
+        <!-- ==================================
+         BATLINGO LEADERBOARD
+    ================================== -->
+    
+    <section
+        id="leaderboardScreen"
+        class="leaderboard-screen hidden"
+        aria-label="Leaderboard"
+    >
+    
+        <div class="leaderboard-container">
+    
+            <!-- HEADER -->
+    
+            <div class="leaderboard-header">
+    
+                <button
+                    id="leaderboardBackBtn"
+                    class="leaderboard-back"
+                    type="button"
+                    aria-label="Back"
+                >
+                    ←
+                </button>
+    
+                <div class="leaderboard-header-title">
+                    <span>🏆</span>
+                    <h1>LEADERBOARD</h1>
+                </div>
+    
+                <div class="leaderboard-season"
+                     id="leaderboardSeason">
+                    GLOBAL
+                </div>
+    
+            </div>
+    
+    
+            <!-- TABS -->
+    
+            <div class="leaderboard-tabs"
+                 role="tablist"
+                 aria-label="Leaderboard categories">
+    
+                <button
+                    class="leaderboard-tab active"
+                    data-tab="level"
+                    role="tab"
+                    type="button"
+                >
+                    ⭐ Level
+                </button>
+    
+                <button
+                    class="leaderboard-tab"
+                    data-tab="pet"
+                    role="tab"
+                    type="button"
+                >
+                    🐾 Pet Level
+                </button>
+    
+                <button
+                    class="leaderboard-tab"
+                    data-tab="rank"
+                    role="tab"
+                    type="button"
+                >
+                    ⚔️ Rank
+                </button>
+    
+            </div>
+    
+    
+            <!-- TOP PLAYERS -->
+    
+            <div
+                id="leaderboardTop"
+                class="leaderboard-top"
+            ></div>
+    
+    
+            <!-- LIST HEADER -->
+    
+            <div class="leaderboard-list-header">
+    
+                <span>POSITION / PLAYER</span>
+    
+                <span id="leaderboardScoreLabel">
+                    LEVEL
+                </span>
+    
+            </div>
+    
+    
+            <!-- RANKING LIST -->
+    
+            <div
+                id="leaderboardList"
+                class="leaderboard-list"
+            ></div>
+    
+    
+            <!-- CURRENT PLAYER -->
+    
+            <div
+                id="leaderboardMyRank"
+                class="leaderboard-my-rank"
+            ></div>
+    
+        </div>
+    
+    </section>
+    <!-- =========================================================
+     REVIEW SCREEN
+     ========================================================= -->
+
+    <section id="reviewScreen" class="review-screen hidden">
+
+        <div class="review-header">
+            <button id="reviewBackButton" class="review-back-button" type="button">←</button>
+
+            <div class="review-header-info">
+                <div class="review-title">REVIEW</div>
+                <div id="reviewSessionInfo" class="review-session-info">10 WORDS</div>
+            </div>
+        </div>
+
+        <div class="review-card">
+
+            <div id="reviewQuestionLevel" class="review-question-level">
+                N1 · VOCABULARY
+            </div>
+
+            <div id="reviewStreak" class="review-streak">
+                0 / 3
+            </div>
+
+            <div id="reviewQuestion" class="review-question">
+                QUESTION
+            </div>
+
+            <div id="reviewReading" class="review-reading"></div>
+
+            <div id="reviewAnswers" class="review-answers"></div>
+
+        </div>
+
+    </section>
+<!-- =========================================================
+     INFO SCREEN
+========================================================= -->
+
+<section id="infoScreen" class="info-screen hidden">
+    <div class="info-container">
+
+        <div class="info-header">
+            <button id="infoBackButton" class="info-back-button" type="button">←</button>
+            <h1 id="infoTitle">ABOUT</h1>
+        </div>
+
+        <div id="infoContent" class="info-content"></div>
+
+        <div class="info-footer">
+            © 2027 BatLingo
+        </div>
+
+    </div>
+</section>
+    <!-- =========================================================
+     FLASHCARD SCREEN
+     ========================================================= -->
+
+<section id="flashcardScreen" class="flashcard-screen hidden">
+    <div class="flashcard-brand">
+    <span class="flashcard-brand-bat">
+        Bat
+    </span>
+    <span class="flashcard-brand-lingo">
+        Lingo
+    </span>
+    </div>
+    <!-- HEADER -->
+    <div class="flashcard-header">
+
+        <button id="flashcardBackButton" class="flashcard-back-button" type="button">
+            ←
+        </button>
+
+        <div class="flashcard-header-info">
+
+            <div id="flashcardLevel" class="flashcard-level">
+                N1 - VOCABULARY
+            </div>
+
+            <div id="flashcardProgress" class="flashcard-progress">
+                1 / 100
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================================
+         CARD AREA
+         ===================================================== -->
+
+    <div class="flashcard-container">
+
+        <button id="flashcardAutoButton" class="flashcard-auto-button" type="button">
+        <span id="flashcardAutoIcon" class="flashcard-auto-icon">
+            ▶
+        </span>
+
+        <span id="flashcardAutoText">
+            AUTO
+        </span>
+        </button>
+
+        <div class="flashcard-navigation">
+            <button id="flashcardPrevButton" class="flashcard-nav-button flashcard-nav-prev" type="button" aria-label="Previous card">
+                ‹
+            </button>
+                
+            <div id="flashcard" class="flashcard">
+    
+                <!-- =========================
+                     FRONT
+                     ========================= -->
+    
+                <div id="flashcardFront" class="flashcard-face flashcard-front">
+    
+                    <div id="flashcardQuestion" class="flashcard-question">
+                        促進
+                    </div>
+    
+                    <div class="flashcard-tap-hint">
+                        TAP TO REVEAL
+                    </div>
+    
+                </div>
+    
+                <!-- =========================
+                     BACK
+                     ========================= -->
+                <div id="flashcardBack" class="flashcard-face flashcard-back hidden">
+    
+                    <button class="flashcard-audio-button" data-flashcard-audio type="button" aria-label="Play audio">
+                        🔊
+                    </button>
+    
+                    <div id="flashcardPrimary" class="flashcard-primary">
+                        そくしん
+                    </div>
+    
+                    <div id="flashcardSecondary" class="flashcard-secondary">
+                        thúc đẩy, xúc tiến
+                    </div>
+    
+    
+                    <div id="flashcardExtra" class="flashcard-extra">
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <button id="flashcardNextButton" class="flashcard-nav-button flashcard-nav-next" type="button" aria-label="Next card">
+                    ›
+            </button>
+        </div>
+
+        <!-- =================================================
+             RATING
+             ================================================= -->
+        <div id="flashcardRating" class="flashcard-rating hidden">
+
+            <button id="flashcardAgain" class="flashcard-rate-button again" type="button">
+                <span>AGAIN</span>
+            </button>
+
+            <button id="flashcardHard" class="flashcard-rate-button hard" type="button">
+                <span>HARD</span>
+            </button>
+
+            <button id="flashcardGood" class="flashcard-rate-button good" type="button">
+                <span>GOOD</span>
+            </button>
+
+            <button id="flashcardEasy" class="flashcard-rate-button easy" type="button">
+                <span>EASY</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =====================================================
+         PVP
+         ===================================================== -->
+    <!-- RANKED LOBBY: stage 1 -->
+    <section id="rankScreen" class="rank-screen hidden">
+      <div class="rank-container">
+        <header class="rank-header">
+          <button id="rankBackButton" class="rank-back" type="button" aria-label="Back to home">←</button>
+          <h1>RANKED BATTLE</h1>
+          <span id="rankSeason" class="rank-season">S01</span>
+        </header>
+        <div class="rank-card">
+          <div id="rankBadge" class="rank-badge">🥈</div>
+          <div id="rankTier" class="rank-tier">SILVER</div>
+          <div id="rankPlayerName" class="rank-muted">PLAYER</div>
+          <div id="rankRating" class="rank-rating">1000</div>
+          <div class="rank-muted">ELO RATING</div>
+          <div class="rank-progress"><div id="rankProgressFill" class="rank-progress-fill"></div></div>
+          <div id="rankProgressLabel" class="rank-muted">1000 / 1200 ELO</div>
+        </div>
+        <div class="rank-stats">
+          <div class="rank-stat"><strong id="rankWins">0</strong><span>WINS</span></div>
+          <div class="rank-stat"><strong id="rankLosses">0</strong><span>LOSSES</span></div>
+          <div class="rank-stat"><strong id="rankWinRate">—</strong><span>WIN RATE</span></div>
+        </div>
+        <div id="rankModeInfo" class="rank-muted">N1 · VOCABULARY</div>
+        <button id="rankFindMatchButton" class="rank-action" type="button">⚔ FIND MATCH</button>
+        <button id="rankLeaderboardButton" class="rank-action rank-secondary" type="button">🏆 LEADERBOARD</button>
+        <div id="rankNotice" class="rank-notice" aria-live="polite"></div>
+      </div>
+      
+    <div id="rankAcceptOverlay" class="rank-accept-overlay hidden">
+        <div class="rank-accept-card">
+            <h2>⚔ MATCH FOUND!</h2>
+
+            <p>Accept the Ranked Battle?</p>
+
+            <div id="rankAcceptTimer" class="rank-accept-timer">
+                5
+            </div>
+
+            <p id="rankAcceptStatus">
+                Waiting for your decision...
+            </p>
+
+            <div class="rank-accept-actions">
+                <button id="rankAcceptButton" type="button">
+                    ✓ ACCEPT
+                </button>
+
+                <button id="rankDeclineButton" type="button">
+                    ✕ CANCEL
+                </button>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    
+<!-- RANKED GAME SCREEN -->
+<section id="rankedGameScreen"
+         class="ranked-game-screen hidden">
+
+    <div class="ranked-game-container">
+
+        <header class="ranked-game-header">
+            <button id="rankedGameBackButton"
+                    type="button">←</button>
+
+            <h2>RANKED BATTLE</h2>
+        </header>
+
+        <div class="ranked-match-status">
+            <h3 id="rankedGameStatus">
+                CONNECTING...
+            </h3>
+
+            <p id="rankedGameMatchId"></p>
+            <p id="rankedGameRole"></p>
+        </div>
+
+        <div id="rankedGameContent"
+             class="ranked-game-content">
+
+            <p>Preparing ranked match...</p>
+
+        </div>
+
+    </div>
+</section>
+
+
+    <section id="pvpScreen" class="pvp-screen hidden">
+
+        <div class="screen-overlay"></div>
+
+        <button id="pvpBackButton" class="back-button" type="button">
+            ←
+        </button>
+
+        <div class="pvp-container">
+
+            <div class="pvp-title" data-i18n="pvp.title">
+                1 VS 1
+            </div>
+
+            <div class="pvp-subtitle" data-i18n="pvp.onlineBattle">
+                ONLINE BATTLE
+            </div>
+
+            <!-- CREATE / JOIN -->
+
+            <div id="roomSelectPanel">
+
+                <button id="createRoomButton" class="create-room-button" type="button" data-i18n="pvp.createRoom">
+                    CREATE ROOM
+                </button>
+
+                <div class="or-divider">
+                    <span></span>
+                    <div>OR</div>
+                    <span></span>
+                </div>
+
+                <div class="room-code-label" data-i18n="pvp.roomCode">
+                    ROOM CODE
+                </div>
+
+                <input id="roomCodeInput" class="room-code-input" type="text" maxlength="4" placeholder="A7K2" autocomplete="off">
+
+                <button id="joinRoomButton" class="join-room-button" type="button" data-i18n="pvp.joinRoom">
+                    JOIN ROOM
+                </button>
+
+            </div>
+
+            <!-- WAITING ROOM -->
+
+            <div id="waitingRoomPanel" class="waiting-room hidden">
+
+                <div class="waiting-label" data-i18n="pvp.roomCode">
+                    ROOM CODE
+                </div>
+
+                <div id="currentRoomCode" class="current-room-code">
+                    ----
+                </div>
+
+                <div class="room-code-help" data-i18n="pvp.sendCode">
+                    SEND THIS CODE TO YOUR FRIEND
+                </div>
+
+                <div class="players-area">
+
+                        <!-- LEFT PLAYER -->
+                        <div class="player-slot">
+
+                            <div id="leftPlayerAvatar" class="player-avatar">
+                                🐵
+                            </div>
+
+                            <div id="leftPlayerName" class="room-player-name">
+                                YOU
+                            </div>
+
+                            <div id="leftPlayerStatus" class="player-status ready">
+                                READY
+                            </div>
+
+                        </div>
+
+                        <div class="room-vs">
+                            VS
+                        </div>
+
+                        <!-- RIGHT PLAYER -->
+                        <div class="player-slot">
+
+                            <div id="rightPlayerAvatar" class="player-avatar waiting">
+                                ?
+                            </div>
+
+                            <div id="rightPlayerName" class="room-player-name">
+                                WAITING...
+                            </div>
+
+                            <div id="rightPlayerStatus" class="player-status">
+                                WAITING
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                <div id="waitingMessage" class="waiting-message">
+                    WAITING FOR PLAYER...
+                </div>
+                <button id="startBattleButton" class="battle-button hidden" type="button">
+                    ⚔ <span data-i18n="pvp.startBattle">START BATTLE</span>
+                </button>
+
+                <button id="leaveRoomButton" class="leave-room-button" type="button" data-i18n="pvp.leaveRoom">
+                    LEAVE ROOM
+                </button>
+
+            </div>
+
+                <!-- PVP GAME -->
+                    <div id="pvpGamePanel" class="hidden">
+                        <div class="pvp-battle-players">
+
+                            <!-- PLAYER 1 / HOST -->
+
+                            <div id="pvpHostCard" class="pvp-battle-player">
+
+                                <div id="pvpHostName" class="pvp-battle-player-name">
+                                    PLAYER 1
+                                </div>
+
+                                <div id="pvpHostState" class="pvp-player-state">
+                                    THINKING...
+                                </div>
+
+                                <div class="pvp-player-score">
+                                    SCORE
+                                    <span id="pvpHostScore">
+                                        0
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="room-vs">
+                                VS
+                            </div>
+
+                            <!-- PLAYER 2 / GUEST -->
+                            <div id="pvpGuestCard" class="pvp-battle-player">
+
+                                <div id="pvpGuestName" class="pvp-battle-player-name">
+                                    PLAYER 2
+                                </div>
+
+                                <div id="pvpGuestState" class="pvp-player-state">
+                                    THINKING...
+                                </div>
+
+                                <div class="pvp-player-score">
+                                    SCORE
+                                    <span id="pvpGuestScore">
+                                        0
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="pvpLevel" class="pvp-level">
+                                N1 - VOCABULARY
+                        </div>
+
+                        <div id="pvpQuestionNumber" class="question-number">
+                            QUESTION 1
+                        </div>
+
+
+                        <div id="pvpQuestion" class="question">
+                            ---
+                        </div>
+
+                        <div id="pvpReading" class="reading">
+                            ---
+                        </div>
+                        
+                        <div class="pvp-timer">
+                        <span id="pvpTimerText">10.0</span>
+                    
+                        <div class="pvp-timer-track">
+                            <div id="pvpTimerBar"></div>
+                        </div>
+                        </div>
+
+
+                        <div id="pvpAnswers" class="answers">
+                        </div>
+
+                    </div>
+
+                    <div id="pvpResultPanel" class="pvp-result-panel hidden">
+
+                            <div class="pvp-result-title">
+                                BATTLE FINISHED
+                            </div>
+
+
+                            <div class="pvp-result-score">
+
+                                <div>
+                                    <span id="pvpFinalHostName">Host</span>
+
+                                    <strong id="pvpFinalHostScore">
+                                        0
+                                    </strong>
+                                </div>
+
+
+                                <div class="room-vs">
+                                    VS
+                                </div>
+
+
+                                <div>
+                                    <span id="pvpFinalGuestName">Guest</span>
+
+                                    <strong id="pvpFinalGuestScore">
+                                        0
+                                    </strong>
+                                </div>
+
+                            </div>
+
+                            <div id="pvpResultMessage" class="pvp-result-message">
+                                ---
+                            </div>
+
+                            <div class="pvp-rematch-area">
+
+                                <button id="pvpRematchButton" class="pvp-rematch-button" type="button" data-i18n="pvp.rematch">
+                                    REMATCH
+                                </button>
+                            
+                                <div id="pvpRematchStatus" class="pvp-rematch-status"></div>
+                            
+                            </div>
+
+                        </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GAME OVER
+         ===================================================== -->
+
+    <section id="gameOverScreen" class="game-over-screen hidden">
+
+        <div class="game-over-card">
+
+            <div class="game-over-title">
+                GAME OVER
+            </div>
+
+            <div class="result-label">
+                SCORE
+            </div>
+
+            <div id="finalScore" class="final-score">
+                0
+            </div>
+
+            <div class="result-row">
+                <span>❓QUESTION</span>
+                <strong id="finalQuestion">0</strong>
+            </div>
+
+            <div class="result-row">
+                <span>🔥MAX COMBO</span>
+                <strong id="finalCombo">0</strong>
+            </div>
+
+            <div class="result-row">
+                <span>✅BEST</span>
+                <strong id="finalBestScore">0</strong>
+            </div>
+
+            <button id="retryButton" class="battle-button" type="button">
+                RETRY
+            </button>
+
+            <button id="backLobbyButton" class="secondary-button" type="button">
+                BACK TO LOBBY
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+         SOLO PRACTICE - RESULTS (latest session only)
+    ========================================= -->
+    <section id="practiceResultScreen" class="practice-screen hidden" aria-label="Practice results">
+        <div class="practice-panel">
+            <div class="practice-result-heading">PRACTICE COMPLETE</div>
+            <div class="practice-accuracy"><strong id="practiceAccuracy">0%</strong><span>ACCURACY</span></div>
+            <div class="practice-stats">
+                <button id="practiceCorrectBtn" class="practice-stat correct" type="button"><strong id="practiceCorrect">0</strong><span>CORRECT</span></button>
+                <button id="practiceWrongBtn" class="practice-stat wrong" type="button"><strong id="practiceWrong">0</strong><span>WRONG</span></button>
+                <button id="practiceTimeoutBtn" class="practice-stat timeout" type="button"><strong id="practiceTimeout">0</strong><span>TIMEOUT</span></button>
+            </div>
+            <p id="practiceTotal" class="practice-total">0 / 20 QUESTIONS</p>
+            <button id="practiceReviewAllBtn" class="battle-button" type="button">REVIEW ALL ANSWERS</button>
+            <button id="practiceRetryBtn" class="secondary-button" type="button">RETRY PRACTICE</button>
+            <button id="practiceHomeBtn" class="secondary-button" type="button">BACK TO HOME</button>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SOLO PRACTICE - REVIEW (read only)
+    ========================================= -->
+    <section id="practiceReviewScreen" class="practice-screen hidden" aria-label="Review last practice">
+        <div class="practice-panel">
+            <header class="practice-review-header">
+                <button id="practiceReviewBackBtn" type="button" aria-label="Back to results">←</button>
+                <h2>REVIEW ANSWERS</h2>
+            </header>
+            <div class="practice-review-filters">
+                <button id="practiceReviewAllFilter" class="active" type="button">ALL</button>
+                <button id="practiceReviewWrongFilter" type="button">WRONG ONLY</button>
+            </div>
+            <div id="practiceReviewGrid" class="practice-review-grid"></div>
+            <div class="practice-review-card">
+                <div id="practiceReviewNumber"></div>
+                <div id="practiceReviewQuestion"></div>
+                <div id="practiceReviewReading"></div>
+                <div id="practiceReviewAnswers"></div>
+                <div id="practiceReviewExplanation"></div>
+            </div>
+            <div class="practice-review-navigation">
+                <button id="practiceReviewPrev" type="button">← PREVIOUS</button>
+                <button id="practiceReviewNext" type="button">NEXT →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         SIDE MENU
+         ===================================================== -->
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <aside id="sideMenu" class="side-menu">
+        <div class="side-menu-header">
+
+            <strong>MENU</strong>
+
+            <button id="menuCloseButton" class="menu-close" type="button">
+                ✕
+            </button>
+
+        </div>
+
+        <button id="menuPetBtn" class="menu-item" type="button">
+            🐾 PET
+        </button>   
+
+        <button class="menu-item" type="button">
+            ⚙ SETTINGS
+        </button>
+
+        <button class="menu-item" type="button">
+            🔊 AUDIO
+        </button>
+
+        <div class="side-menu-divider"></div>
+
+        <div class="side-menu-links">
+            <button id="menuAboutBtn" class="menu-link" type="button">About</button>
+            <button id="menuContactBtn" class="menu-link" type="button">Contact</button>
+            <button id="menuSupportBtn" class="menu-link" type="button">Support</button>
+    
+            <div class="side-menu-link-separator"></div>
+    
+            <button id="menuTermsBtn" class="menu-link" type="button">Terms of Service</button>
+            <button id="menuPrivacyBtn" class="menu-link" type="button">Privacy Policy</button>
+            <button id="menuCommunityBtn" class="menu-link" type="button">Community Guidelines</button>
+        </div>
+    
+        <div class="side-menu-footer">
+            © 2027 BatLingo
+        </div>
+
+    </aside>
+
+    <!-- =========================================
+     AUTH SCREEN
+========================================= -->
+<section id="authScreen" class="screen auth-screen hidden">
+
+    <div class="auth-container">
+
+        <!-- TOP -->
+        <div class="auth-top">
+
+            <button id="authBackBtn" class="auth-back-btn" type="button" aria-label="Back">
+                ←
+            </button>
+
+            <select id="authLanguage" class="auth-language" aria-label="Language">
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+                <option value="vi">Tiếng Việt</option>
+            </select>
+
+        </div>
+
+
+        <!-- BRAND -->
+        <div class="auth-brand">
+
+            <img src="./assets/images/icons/apple-touch-icon.png" class="auth-logo" alt="BatLingo">
+
+            <h1>BatLingo</h1>
+
+            <p>LEARN • BATTLE • WIN</p>
+
+        </div>
+
+
+        <!-- =================================
+             LOGIN PANEL
+        ================================== -->
+        <div
+            id="loginPanel"
+            class="auth-panel">
+
+            <h2 data-i18n="auth.loginTitle">
+                Welcome back
+            </h2>
+
+            <p class="auth-description" data-i18n="auth.loginDescription">
+                Sign in to continue your battle.
+            </p>
+
+
+            <!-- EMAIL -->
+
+            <div class="auth-field">
+                <label for="loginEmail" data-i18n="auth.email">
+                    Email
+                </label>
+
+                <input id="loginEmail" type="email" autocomplete="email"
+                    data-i18n-placeholder="auth.emailPlaceholder"
+                    placeholder="example@email.com">
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="auth-field">
+
+                <label for="loginPassword" data-i18n="auth.password">
+                   Password
+                </label>
+
+                <div class="auth-password-box">
+
+                    <input id="loginPassword" type="password" autocomplete="current-password"
+                        data-i18n-placeholder="auth.passwordPlaceholder"
+                        placeholder="Password">
+
+                    <button class="auth-eye" type="button" data-password-target="loginPassword" aria-label="Show password">
+                        👁
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button id="forgotPasswordBtn" class="auth-link auth-forgot" type="button" data-i18n="auth.forgotPassword">
+                Forgot password?
+            </button>
+
+
+            <!-- ERROR -->
+
+            <div
+                id="loginError"
+                class="auth-message auth-error hidden">
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <button id="emailLoginBtn" class="auth-primary-btn" type="button" data-i18n="auth.login">
+                LOGIN
+            </button>
+
+            <!-- OR -->
+
+            <div class="auth-divider">
+
+                <span></span>
+
+                <p data-i18n="auth.or">
+                    OR
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- GOOGLE -->
+
+            <button id="googleLoginBtn" class="auth-google-btn" type="button">
+
+                <span class="google-logo">G</span>
+
+                <span data-i18n="auth.google">
+                    Continue with Google
+                </span>
+
+            </button>
+
+
+            <!-- SIGN UP -->
+
+            <div class="auth-switch">
+
+                <span data-i18n="auth.noAccount">
+                    Don't have an account?
+                </span>
+
+                <button id="openSignupBtn" class="auth-link" type="button" data-i18n="auth.signup">
+                    Sign up
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             SIGN UP PANEL
+        ================================== -->
+        <div
+            id="signupPanel"
+            class="auth-panel hidden">
+
+            <h2 data-i18n="auth.createAccount">
+                Create account
+            </h2>
+
+            <p class="auth-description" data-i18n="auth.signupDescription">
+                Create your BatLingo account.
+            </p>
+
+
+            <!-- EMAIL -->
+
+            <div class="auth-field">
+
+                <label for="signupEmail" data-i18n="auth.email">
+                    Email
+                </label>
+
+                <input id="signupEmail" type="email" autocomplete="email" placeholder="example@email.com">
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="auth-field">
+
+                <label for="signupPassword" data-i18n="auth.password">
+                    Password
+                </label>
+
+                <div class="auth-password-box">
+
+                    <input id="signupPassword" type="password" autocomplete="new-password">
+
+                    <button class="auth-eye" type="button" data-password-target="signupPassword">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORD RULES -->
+
+            <div class="password-rules">
+
+                <div id="passwordRuleLength" class="password-rule">
+
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleLength">
+                        8–64 characters
+                    </span>
+
+                </div>
+
+
+                <div id="passwordRuleUpper" class="password-rule">
+
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleUpper">
+                        At least 1 uppercase letter
+                    </span>
+
+                </div>
+
+
+                <div id="passwordRuleLower" class="password-rule">
+
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleLower">
+                        At least 1 lowercase letter
+                    </span>
+
+                </div>
+
+                <div id="passwordRuleNumber" class="password-rule">
+                    <span>○</span>
+
+                    <span data-i18n="auth.ruleNumber">
+                        At least 1 number
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="auth-field">
+
+                <label for="signupPasswordConfirm" data-i18n="auth.confirmPassword">
+
+                    Confirm password
+
+                </label>
+
+                <div class="auth-password-box">
+
+                    <input id="signupPasswordConfirm" type="password" autocomplete="new-password">
+
+                    <button class="auth-eye" type="button" data-password-target="signupPasswordConfirm">
+                        👁
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="signupError" class="auth-message auth-error hidden">
+            </div>
+
+
+            <button id="createAccountBtn" class="auth-primary-btn" type="button" data-i18n="auth.createAccount">
+                CREATE ACCOUNT
+            </button>
+
+
+            <div class="auth-switch">
+
+                <span data-i18n="auth.haveAccount">
+                    Already have an account?
+                </span>
+
+                <button id="backLoginBtn" class="auth-link" type="button" data-i18n="auth.login">
+                    Login
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             VERIFY EMAIL
+        ================================== -->
+        <div id="verifyPanel" class="auth-panel auth-center hidden">
+
+            <div class="verify-icon">
+                ✉
+            </div>
+
+            <h2 data-i18n="auth.verifyTitle">
+                Check your email
+            </h2>
+
+            <p data-i18n="auth.verifyDescription">
+                We sent a verification link to:
+            </p>
+
+            <strong id="verifyEmailAddress"></strong>
+
+            <p class="verify-note" data-i18n="auth.verifyNote">
+                Open the email and click the verification link before logging in.
+            </p>
+
+                <button id="resendVerifyBtn" class="auth-resend-btn" type="button">
+                RESEND EMAIL
+                    
+            </button>
+            <button id="verifyBackLoginBtn" class="auth-primary-btn" type="button" data-i18n="auth.backLogin">
+                BACK TO LOGIN
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ==========================================
+     MASCOT FIRST SELECTION - BATLINGO
+========================================== -->
+<section id="mascotScreen"
+         class="mascot-screen hidden"
+         aria-label="Choose your Mascot">
+
+    <div class="mascot-container">
+
+        <!-- HEADER -->
+        <header class="mascot-header">
+            <span class="mascot-subtitle">
+                WELCOME TO BATLINGO
+            </span>
+
+            <h1>CHOOSE YOUR MASCOT</h1>
+
+            <p>
+                Chọn người bạn đồng hành trong
+                hành trình học tập!
+            </p>
+        </header>
+
+        <!-- MASCOT CARDS -->
+        <div class="mascot-selection">
+
+            <!-- MONKEY -->
+            <button type="button"
+                    class="mascot-card monkey"
+                    data-mascot="monkey"
+                    aria-pressed="false">
+
+                <span class="mascot-selected-icon">✓</span>
+
+                <div class="mascot-image-wrapper">
+                    <img class="mascot-image"
+                         alt="Monkey Mascot"
+                         hidden>
+
+                    <span class="mascot-fallback"
+                          aria-hidden="true">🐒</span>
+                </div>
+
+                <span class="mascot-card-name">
+                    MONKEY
+                </span>
+
+                <span class="mascot-card-type">
+                    Linh hoạt • Thông minh
+                </span>
+
+            </button>
+
+            <!-- BUFFALO -->
+            <button type="button"
+                    class="mascot-card buffalo"
+                    data-mascot="buffalo"
+                    aria-pressed="false">
+
+                <span class="mascot-selected-icon">✓</span>
+
+                <div class="mascot-image-wrapper">
+                    <img class="mascot-image"
+                         src="assets/mascot/buffalo.png"
+                         alt="Buffalo Mascot"
+                         hidden>
+
+                    <span class="mascot-fallback"
+                          aria-hidden="true">🐃</span>
+                </div>
+
+                <span class="mascot-card-name">
+                    BUFFALO
+                </span>
+
+                <span class="mascot-card-type">
+                    Mạnh mẽ • Kiên trì
+                </span>
+
+            </button>
+
+        </div>
+
+        <!-- MASCOT INFORMATION -->
+        <div id="mascotDetails"
+             class="mascot-details hidden"
+             aria-live="polite">
+
+            <span id="mascotDetailsTitle"
+                  class="mascot-details-title"></span>
+
+            <h2 id="mascotDetailsName"></h2>
+
+            <p id="mascotDetailsText"
+               class="mascot-description"></p>
+
+            <div id="mascotDetailsTraits"
+                 class="mascot-traits"></div>
+
+            <!-- DEFAULT SKILL -->
+            <div class="mascot-skill-box">
+
+                <span class="mascot-skill-label">
+                    DEFAULT SKILL
+                </span>
+
+                <h3 id="mascotSkillName"></h3>
+
+                <p id="mascotSkillDescription"></p>
+
+                <span class="mascot-skill-note">
+                    Kỹ năng chỉ có hiệu lực
+                    trong chế độ Solo
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- OK -->
+        <button id="mascotOkBtn"
+                class="mascot-ok-btn"
+                type="button"
+                disabled>
+            OK – CONFIRM
+        </button>
+
+        <p class="mascot-footer-note">
+            Mascot khởi đầu chỉ được chọn một lần.
+        </p>
+
+        <p id="mascotMessage"
+           class="mascot-message"
+           role="status"
+           aria-live="polite"></p>
+
+    </div>
+
+    <!-- CONFIRMATION POPUP -->
+    <div id="mascotConfirm"
+         class="mascot-confirm hidden">
+
+        <div class="mascot-confirm-panel"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="mascotConfirmTitle">
+
+            <div id="mascotConfirmIcon"
+                 class="mascot-confirm-icon">★</div>
+
+            <h2 id="mascotConfirmTitle">
+                CONFIRM YOUR MASCOT
+            </h2>
+
+            <p id="mascotConfirmText"></p>
+
+            <p class="mascot-confirm-warning">
+                Sau khi xác nhận, bạn không thể
+                thay đổi Mascot khởi đầu.
+            </p>
+
+            <div class="mascot-confirm-buttons">
+
+                <button id="mascotCancelBtn"
+                        class="mascot-cancel-btn"
+                        type="button">
+                    QUAY LẠI
+                </button>
+
+                <button id="mascotSaveBtn"
+                        class="mascot-save-btn"
+                        type="button">
+                    XÁC NHẬN
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     BATLINGO - JLPT EXAM SCREEN
+========================================== -->
+
+<section id="jlptExamScreen"
+         class="jlpt-exam-screen hidden">
+
+    <div class="jlpt-exam-container">
+
+        <!-- HEADER -->
+        <header class="jlpt-exam-header">
+
+            <button id="jlptExamBack"
+                    class="jlpt-exam-back"
+                    type="button">
+                ←
+            </button>
+
+            <div class="jlpt-exam-heading">
+                <h1>JLPT EXAM</h1>
+                <p>日本語能力試験 · Practice & Test</p>
+            </div>
+
+            <span class="jlpt-exam-badge">EXAM</span>
+        </header>
+
+        <div id="jlptExamReviewToolbar"
+            class="jlpt-exam-review-toolbar">
+
+            <button id="jlptExamOpenPractice"
+                    type="button"
+                    class="active">
+                🎓 EXAM
+            </button>
+
+            <button id="jlptExamOpenReview"
+                    type="button">
+                📖 REVIEW
+                <span id="jlptExamReviewCounter">0/50</span>
+            </button>
+        </div>
+
+        <!-- ==================================
+             CONFIGURATION
+        ================================== -->
+        <div id="jlptExamConfig">
+
+            <!-- MODE -->
+            <div class="jlpt-exam-card">
+                <h2>EXAM MODE</h2>
+
+                <div class="jlpt-exam-mode-select">
+
+                    <label>
+                        <input type="radio"
+                               name="jlptExamType"
+                               value="practice"
+                               checked>
+                        <span>📖 PRACTICE</span>
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="jlptExamType"
+                               value="test">
+                        <span>⏱ TEST</span>
+                    </label>
+                </div>
+
+                <p id="jlptExamModeDescription"
+                   class="jlpt-exam-description">
+                    Practice: luyện tập không giới hạn thời gian.
+                </p>
+            </div>
+
+            <!-- LEVEL -->
+            <div class="jlpt-exam-card">
+                <h2>SELECT LEVEL</h2>
+
+                <div id="jlptExamLevels"
+                     class="jlpt-exam-levels">
+
+                    <button type="button" data-level="N5">N5</button>
+                    <button type="button" data-level="N4">N4</button>
+                    <button type="button" data-level="N3">N3</button>
+                    <button type="button" data-level="N2">N2</button>
+                    <button type="button" data-level="N1">N1</button>
+
+                </div>
+            </div>
+
+            <!-- MONDAI -->
+            <div class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <h2>SELECT MONDAI</h2>
+
+                    <button id="jlptExamToggleAll"
+                            class="jlpt-exam-small-btn"
+                            type="button">
+                        SELECT ALL
+                    </button>
+                </div>
+
+                <div id="jlptExamMondai"></div>
+            </div>
+
+            <!-- SET -->
+            <div class="jlpt-exam-card">
+                <h2>EXAM SET</h2>
+
+                <label class="jlpt-exam-radio">
+                    <input type="radio"
+                           name="jlptExamSetMode"
+                           value="random"
+                           checked>
+                    Random Set
+                </label>
+
+                <label class="jlpt-exam-radio">
+                    <input type="radio"
+                           name="jlptExamSetMode"
+                           value="manual">
+                    Select Set
+                </label>
+
+                <select id="jlptExamSetSelect"
+                        class="jlpt-exam-select"
+                        disabled>
+                </select>
+            </div>
+
+            <!-- SUMMARY -->
+            <div class="jlpt-exam-card">
+                <div class="jlpt-exam-row">
+                    <span>Selected Mondai</span>
+                    <strong id="jlptExamSelectedCount">0</strong>
+                </div>
+
+                <div class="jlpt-exam-row">
+                    <span>Total Questions</span>
+                    <strong id="jlptExamQuestionCount">0</strong>
+                </div>
+            </div>
+
+            <p id="jlptExamConfigMessage"
+               class="jlpt-exam-message"
+               role="status"></p>
+
+            <button id="jlptExamStart"
+                    class="jlpt-exam-primary"
+                    type="button">
+                START EXAM
+            </button>
+        </div>
+
+        <div id="jlptExamReviewScreen"
+            class="hidden">
+
+            <div class="jlpt-exam-card">
+                <h2>WRONG ANSWER REVIEW</h2>
+
+                <p id="jlptExamReviewStatus">
+                    Đang tải danh sách...
+                </p>
+
+                <div class="jlpt-exam-review-progress">
+                    <div id="jlptExamReviewProgressBar"></div>
+                </div>
+
+                <p class="jlpt-exam-description">
+                    Tối đa 50 câu. Mỗi lần ôn tối đa 10 câu.
+                    Đúng 3 lần liên tiếp để xóa câu khỏi danh sách.
+                </p>
+
+                <button id="jlptExamReviewStart"
+                        type="button"
+                        class="jlpt-exam-primary">
+                    START REVIEW
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ==================================
+             PLAYING
+        ================================== -->
+        <div id="jlptExamPlaying" class="hidden">
+
+            <!-- PROGRESS -->
+            <div class="jlpt-exam-card">
+                <div class="jlpt-exam-row">
+                    <strong id="jlptExamPlayingTitle"></strong>
+                    <span id="jlptExamProgress">0 / 0</span>
+                </div>
+
+                <div class="jlpt-exam-progress">
+                    <div id="jlptExamProgressBar"></div>
+                </div>
+
+                <div class="jlpt-exam-row jlpt-exam-timer-row">
+                    <span id="jlptExamTimerLabel">Elapsed</span>
+                    <strong id="jlptExamTimer">00:00</strong>
+                </div>
+            </div>
+
+            <!-- QUESTION NAVIGATOR -->
+            <div class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <h2>QUESTION NAVIGATOR</h2>
+                    <strong id="jlptExamAnswered">0 / 0</strong>
+                </div>
+
+                <div id="jlptExamQuestionNavigator"
+                     class="jlpt-exam-question-navigator">
+                </div>
+
+                <div class="jlpt-exam-legend">
+                    <span>✓ Answered</span>
+                    <span>⚑ Flagged</span>
+                    <span>○ Unanswered</span>
+                </div>
+            </div>
+
+            <!-- QUESTION -->
+            <div class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <span id="jlptExamQuestionGroup"
+                          class="jlpt-exam-question-group"></span>
+
+                    <button id="jlptExamFlag"
+                            class="jlpt-exam-flag"
+                            type="button">
+                        ⚑ FLAG
+                    </button>
+                </div>
+
+                <div id="jlptExamContext"
+                     class="jlpt-exam-context"></div>
+
+                <div id="jlptExamAudioBox"
+                    class="jlpt-exam-audio-box hidden">
+
+                    <audio id="jlptExamAudio"
+                        controls
+                        preload="none">
+                    </audio>
+                </div>
+
+                <div id="jlptExamQuestionText"
+                     class="jlpt-exam-question"></div>
+
+                <div id="jlptExamAnswers"
+                     class="jlpt-exam-answers"></div>
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="jlpt-exam-navigation">
+
+                <button id="jlptExamPrev" type="button">
+                    ← PREV
+                </button>
+
+                <button id="jlptExamNext" type="button">
+                    NEXT →
+                </button>
+            </div>
+
+            <button id="jlptExamSubmit"
+                    class="jlpt-exam-primary"
+                    type="button">
+                SUBMIT EXAM
+            </button>
+        </div>
+
+        <!-- ==================================
+             RESULT
+        ================================== -->
+        <div id="jlptExamResult" class="hidden">
+
+            <div class="jlpt-exam-card jlpt-exam-result">
+
+                <h2>EXAM COMPLETED</h2>
+
+                <div id="jlptExamAccuracy"
+                     class="jlpt-exam-accuracy">0%</div>
+
+                <div id="jlptExamResultSummary"></div>
+            </div>
+
+            <div class="jlpt-exam-card">
+                <h2>MONDAI RESULTS</h2>
+
+                <div id="jlptExamResultDetails"></div>
+            </div>
+            
+            <button
+                id="jlptExamReviewAnswersBtn"
+                class="jlpt-exam-primary"
+                type="button">
+                📖 REVIEW ANSWERS
+            </button>
+
+            <button id="jlptExamRetry"
+                    class="jlpt-exam-primary"
+                    type="button">
+                RETRY
+            </button>
+
+            <button id="jlptExamReturn"
+                    class="jlpt-exam-secondary"
+                    type="button">
+                BACK TO CONFIG
+            </button>
+        </div>
+
+        
+        <!-- ==========================================
+            JLPT EXAM - REVIEW ANSWERS
+        ========================================== -->
+
+        <div id="jlptExamAnswerReview" class="hidden">
+
+            <div class="jlpt-exam-card">
+                <div class="jlpt-exam-row">
+                    <h2>REVIEW ANSWERS</h2>
+                    <span id="jlptAnswerReviewProgress">0 / 0</span>
+                </div>
+
+                <div id="jlptAnswerReviewSummary"></div>
+
+                <div class="jlpt-answer-review-filters">
+                    <button data-review-filter="all"
+                            class="active" type="button">
+                        ALL
+                    </button>
+
+                    <button data-review-filter="correct"
+                            type="button">
+                        CORRECT
+                    </button>
+
+                    <button data-review-filter="wrong"
+                            type="button">
+                        WRONG
+                    </button>
+
+                    <button data-review-filter="unanswered"
+                            type="button">
+                        UNANSWERED
+                    </button>
+                </div>
+
+                <div id="jlptAnswerReviewNavigator"
+                    class="jlpt-exam-question-navigator">
+                </div>
+            </div>
+
+            <div id="jlptAnswerReviewQuestionCard"
+                class="jlpt-exam-card">
+
+                <div class="jlpt-exam-row">
+                    <span id="jlptAnswerReviewGroup"
+                        class="jlpt-exam-question-group"></span>
+
+                    <strong id="jlptAnswerReviewStatus"></strong>
+                </div>
+
+                <div id="jlptAnswerReviewContext"
+                    class="jlpt-exam-context"></div>
+                
+                <div id="jlptAnswerReviewAudioBox"
+                    class="jlpt-exam-audio-box hidden">
+
+                    <audio id="jlptAnswerReviewAudio"
+                        controls
+                        preload="none">
+                    </audio>
+                </div>
+                    
+
+                <div id="jlptAnswerReviewQuestion"
+                    class="jlpt-exam-question"></div>
+
+                <div id="jlptAnswerReviewOptions"
+                    class="jlpt-exam-answers"></div>
+
+                <p id="jlptAnswerReviewExplanation"
+                class="jlpt-exam-description"></p>
+            </div>
+
+            <div class="jlpt-exam-navigation">
+                <button id="jlptAnswerReviewPrev" type="button">
+                    ← PREV
+                </button>
+
+                <button id="jlptAnswerReviewNext" type="button">
+                    NEXT →
+                </button>
+            </div>
+
+            <button id="jlptAnswerReviewBack"
+                    class="jlpt-exam-secondary"
+                    type="button">
+                BACK TO RESULT
+            </button>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ==========================================
+     SUBMIT CONFIRMATION
+========================================== -->
+
+<div id="jlptExamConfirm"
+     class="jlpt-exam-confirm hidden">
+
+    <div class="jlpt-exam-confirm-box"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="jlptExamConfirmTitle">
+
+        <h2 id="jlptExamConfirmTitle">
+            SUBMIT EXAM?
+        </h2>
+
+        <p id="jlptExamConfirmSummary"></p>
+
+        <div class="jlpt-exam-confirm-actions">
+
+            <button id="jlptExamCancelSubmit"
+                    type="button">
+                CANCEL
+            </button>
+
+            <button id="jlptExamConfirmSubmit"
+                    type="button">
+                SUBMIT
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ==========================================
+     BATLINGO - MASCOT EVOLUTION
+========================================== -->
+
+<section id="mascotEvolutionScreen"
+         class="mascot-evo-screen hidden"
+         aria-label="Mascot Evolution">
+
+    <div class="mascot-evo-container">
+
+        <!-- HEADER -->
+        <header class="mascot-evo-header">
+
+            <button id="mascotEvoBackBtn"
+                    class="mascot-evo-back"
+                    type="button">
+                ←
+            </button>
+
+            <div>
+                <h1>MASCOT</h1>
+                <span>YOUR BATTLE COMPANION</span>
+            </div>
+
+            <div class="mascot-evo-header-icon">🐾</div>
+
+        </header>
+
+        <!-- MAIN MASCOT -->
+        <div class="mascot-evo-hero">
+
+            <span id="mascotEvoStageBadge"
+                  class="mascot-evo-stage-badge">
+                STAGE 1
+            </span>
+
+            <div class="mascot-evo-image-area">
+
+                <div class="mascot-evo-glow"></div>
+
+                <img id="mascotEvoImage"
+                     alt="My Mascot"
+                     hidden>
+
+                <span id="mascotEvoFallback">🐃</span>
+
+            </div>
+
+            <h2 id="mascotEvoName">BUFFALO</h2>
+
+            <div id="mascotEvoTitle"
+                 class="mascot-evo-title">
+                THE IRON WILL
+            </div>
+
+            <p id="mascotEvoDescription"
+               class="mascot-evo-description"></p>
+
+        </div>
+
+        <!-- PLAYER PROGRESS -->
+        <div class="mascot-evo-panel">
+
+            <div class="mascot-evo-section-title">
+                ⭐ PLAYER PROGRESS
+            </div>
+
+            <div class="mascot-evo-progress-top">
+                <strong id="mascotEvoLevel">LV. 1</strong>
+                <span id="mascotEvoExpText">0 / 100 EXP</span>
+            </div>
+
+            <div class="mascot-evo-exp-track">
+                <div id="mascotEvoExpFill"></div>
+            </div>
+
+        </div>
+
+        <!-- SKILL -->
+        <div class="mascot-evo-panel">
+
+            <div class="mascot-evo-section-title">
+                ⚡ SPECIAL ABILITY
+            </div>
+
+            <div class="mascot-evo-skill">
+
+                <div class="mascot-evo-skill-icon">✨</div>
+
+                <div>
+                    <strong id="mascotEvoSkillName"></strong>
+                    <p id="mascotEvoSkillDescription"></p>
+                </div>
+
+            </div>
+
+            <div id="mascotEvoTraits"
+                 class="mascot-evo-traits"></div>
+
+        </div>
+
+        <!-- EVOLUTION PATH -->
+        <div class="mascot-evo-panel">
+
+            <div class="mascot-evo-section-title">
+                ✨ EVOLUTION PATH
+            </div>
+
+            <p class="mascot-evo-section-hint">
+                Reach the required Player Level to evolve.
+            </p>
+
+            <div id="mascotEvoStages"
+                 class="mascot-evo-stages"></div>
+
+            <div class="mascot-evo-next">
+
+                <div class="mascot-evo-next-info">
+                    <span>NEXT EVOLUTION</span>
+                    <strong id="mascotEvoNextName">JUNIOR</strong>
+                    <small id="mascotEvoRequirement">
+                        Required LV. 10
+                    </small>
+                </div>
+
+                <button id="mascotEvoEvolveBtn"
+                        class="mascot-evo-evolve-btn"
+                        type="button"
+                        disabled>
+                    🔒 LOCKED
+                </button>
+
+            </div>
+
+            <div id="mascotEvoMessage"
+                 class="mascot-evo-message"
+                 aria-live="polite"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =====================================================
+         AUDIO
+         ===================================================== -->
+    <audio id="lobbyBgm" src="assets/audio/bgm/lobby.mp3" loop></audio>
+
+    <audio id="clickSound" src="assets/audio/sfx/click.mp3"></audio>
+
+    <audio id="slideSound"src="assets/audio/sfx/slide.mp3"></audio>
+
+    <audio id="correctSound" src="assets/audio/sfx/correct.mp3"></audio>
+
+    <audio id="wrongSound" src="assets/audio/sfx/wrong.mp3"></audio>
+
+    <audio id="gameoverSound" src="assets/audio/sfx/gameover.mp3"></audio>
+
+    <script type="module" src="js/main.js"></script>
+
+    <script src="./js/auth-ui.js"></script>
+
+</body>
+
+</html>
