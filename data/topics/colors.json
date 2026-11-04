@@ -1,242 +1,283 @@
+
 [
   {
     "id": 1,
     "word": "色",
     "reading": "いろ",
-    "meaning": "Màu sắc"
+    "meaning": "Màu sắc",
+    "meaning_en": "Color"
   },
   {
     "id": 2,
     "word": "赤",
     "reading": "あか",
-    "meaning": "Màu đỏ"
+    "meaning": "Màu đỏ",
+    "meaning_en": "Red"
   },
   {
     "id": 3,
     "word": "赤色",
     "reading": "あかいろ",
-    "meaning": "Màu đỏ"
+    "meaning": "Màu đỏ",
+    "meaning_en": "Red"
   },
   {
     "id": 4,
     "word": "青",
     "reading": "あお",
-    "meaning": "Màu xanh lam"
+    "meaning": "Màu xanh lam",
+    "meaning_en": "Blue"
   },
   {
     "id": 5,
     "word": "青色",
     "reading": "あおいろ",
-    "meaning": "Màu xanh lam"
+    "meaning": "Màu xanh lam",
+    "meaning_en": "Blue"
   },
   {
     "id": 6,
     "word": "黄色",
     "reading": "きいろ",
-    "meaning": "Màu vàng"
+    "meaning": "Màu vàng",
+    "meaning_en": "Yellow"
   },
   {
     "id": 7,
     "word": "緑",
     "reading": "みどり",
-    "meaning": "Màu xanh lá"
+    "meaning": "Màu xanh lá",
+    "meaning_en": "Green"
   },
   {
     "id": 8,
     "word": "緑色",
     "reading": "みどりいろ",
-    "meaning": "Màu xanh lá"
+    "meaning": "Màu xanh lá",
+    "meaning_en": "Green"
   },
   {
     "id": 9,
     "word": "白",
     "reading": "しろ",
-    "meaning": "Màu trắng"
+    "meaning": "Màu trắng",
+    "meaning_en": "White"
   },
   {
     "id": 10,
     "word": "黒",
     "reading": "くろ",
-    "meaning": "Màu đen"
+    "meaning": "Màu đen",
+    "meaning_en": "Black"
   },
   {
     "id": 11,
     "word": "紫",
     "reading": "むらさき",
-    "meaning": "Màu tím"
+    "meaning": "Màu tím",
+    "meaning_en": "Purple"
   },
   {
     "id": 12,
     "word": "茶色",
     "reading": "ちゃいろ",
-    "meaning": "Màu nâu"
+    "meaning": "Màu nâu",
+    "meaning_en": "Brown"
   },
   {
     "id": 13,
     "word": "桃色",
     "reading": "ももいろ",
-    "meaning": "Màu hồng"
+    "meaning": "Màu hồng",
+    "meaning_en": "Pink"
   },
   {
     "id": 14,
     "word": "ピンク",
     "reading": "ピンク",
-    "meaning": "Màu hồng"
+    "meaning": "Màu hồng",
+    "meaning_en": "Pink"
   },
   {
     "id": 15,
     "word": "オレンジ",
     "reading": "オレンジ",
-    "meaning": "Màu cam"
+    "meaning": "Màu cam",
+    "meaning_en": "Orange"
   },
   {
     "id": 16,
     "word": "橙色",
     "reading": "だいだいいろ",
-    "meaning": "Màu cam"
+    "meaning": "Màu cam",
+    "meaning_en": "Orange"
   },
   {
     "id": 17,
     "word": "灰色",
     "reading": "はいいろ",
-    "meaning": "Màu xám"
+    "meaning": "Màu xám",
+    "meaning_en": "Gray"
   },
   {
     "id": 18,
     "word": "グレー",
     "reading": "グレー",
-    "meaning": "Màu xám"
+    "meaning": "Màu xám",
+    "meaning_en": "Gray"
   },
   {
     "id": 19,
     "word": "金色",
     "reading": "きんいろ",
-    "meaning": "Màu vàng kim"
+    "meaning": "Màu vàng kim",
+    "meaning_en": "Gold"
   },
   {
     "id": 20,
     "word": "銀色",
     "reading": "ぎんいろ",
-    "meaning": "Màu bạc"
+    "meaning": "Màu bạc",
+    "meaning_en": "Silver"
   },
   {
     "id": 21,
     "word": "水色",
     "reading": "みずいろ",
-    "meaning": "Màu xanh da trời nhạt"
+    "meaning": "Màu xanh da trời nhạt",
+    "meaning_en": "Light blue"
   },
   {
     "id": 22,
     "word": "紺色",
     "reading": "こんいろ",
-    "meaning": "Màu xanh navy"
+    "meaning": "Màu xanh navy",
+    "meaning_en": "Navy blue"
   },
   {
     "id": 23,
     "word": "藍色",
     "reading": "あいいろ",
-    "meaning": "Màu chàm"
+    "meaning": "Màu chàm",
+    "meaning_en": "Indigo"
   },
   {
     "id": 24,
     "word": "黄緑",
     "reading": "きみどり",
-    "meaning": "Màu xanh nõn chuối"
+    "meaning": "Màu xanh nõn chuối",
+    "meaning_en": "Yellow-green"
   },
   {
     "id": 25,
     "word": "深緑",
     "reading": "ふかみどり",
-    "meaning": "Màu xanh lục đậm"
+    "meaning": "Màu xanh lục đậm",
+    "meaning_en": "Dark green"
   },
   {
     "id": 26,
     "word": "ベージュ",
     "reading": "ベージュ",
-    "meaning": "Màu be"
+    "meaning": "Màu be",
+    "meaning_en": "Beige"
   },
   {
     "id": 27,
     "word": "クリーム色",
     "reading": "クリームいろ",
-    "meaning": "Màu kem"
+    "meaning": "Màu kem",
+    "meaning_en": "Cream"
   },
   {
     "id": 28,
     "word": "透明",
     "reading": "とうめい",
-    "meaning": "Trong suốt"
+    "meaning": "Trong suốt",
+    "meaning_en": "Transparent"
   },
   {
     "id": 29,
     "word": "無色",
     "reading": "むしょく",
-    "meaning": "Không màu"
+    "meaning": "Không màu",
+    "meaning_en": "Colorless"
   },
   {
     "id": 30,
     "word": "明るい",
     "reading": "あかるい",
-    "meaning": "Sáng"
+    "meaning": "Sáng",
+    "meaning_en": "Bright"
   },
   {
     "id": 31,
     "word": "暗い",
     "reading": "くらい",
-    "meaning": "Tối"
+    "meaning": "Tối",
+    "meaning_en": "Dark"
   },
   {
     "id": 32,
     "word": "濃い",
     "reading": "こい",
-    "meaning": "Đậm màu"
+    "meaning": "Đậm màu",
+    "meaning_en": "Deep, intense (color)"
   },
   {
     "id": 33,
     "word": "薄い",
     "reading": "うすい",
-    "meaning": "Nhạt màu"
+    "meaning": "Nhạt màu",
+    "meaning_en": "Light, pale (color)"
   },
   {
     "id": 34,
     "word": "鮮やか",
     "reading": "あざやか",
-    "meaning": "Rực rỡ"
+    "meaning": "Rực rỡ",
+    "meaning_en": "Vivid, vibrant"
   },
   {
     "id": 35,
     "word": "淡い",
     "reading": "あわい",
-    "meaning": "Nhẹ, nhạt"
+    "meaning": "Nhẹ, nhạt",
+    "meaning_en": "Pale, soft"
   },
   {
     "id": 36,
     "word": "カラフル",
     "reading": "カラフル",
-    "meaning": "Nhiều màu sắc"
+    "meaning": "Nhiều màu sắc",
+    "meaning_en": "Colorful"
   },
   {
     "id": 37,
     "word": "蛍光色",
     "reading": "けいこうしょく",
-    "meaning": "Màu huỳnh quang"
+    "meaning": "Màu huỳnh quang",
+    "meaning_en": "Fluorescent color"
   },
   {
     "id": 38,
     "word": "原色",
     "reading": "げんしょく",
-    "meaning": "Màu nguyên sắc"
+    "meaning": "Màu nguyên sắc",
+    "meaning_en": "Primary color"
   },
   {
     "id": 39,
     "word": "暖色",
     "reading": "だんしょく",
-    "meaning": "Gam màu nóng"
+    "meaning": "Gam màu nóng",
+    "meaning_en": "Warm colors"
   },
   {
     "id": 40,
     "word": "寒色",
     "reading": "かんしょく",
-    "meaning": "Gam màu lạnh"
+    "meaning": "Gam màu lạnh",
+    "meaning_en": "Cool colors"
   }
 ]
