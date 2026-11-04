@@ -42,11 +42,13 @@ import {
     auth
 } from "./firebase.js";
 
+
 import {
     initFlashcard,
-    closeFlashcard
-}
-from "./flashcard.js";
+    closeFlashcard,
+    resumeFlashcardFromQuiz
+} from "./flashcard.js";
+
 
 import {
     openProfile,
@@ -301,13 +303,14 @@ document.getElementById("backLobbyButton")
     });
 
 
-/* =============================================================
-   PRACTICE → HOME
-============================================================= */
+
+/* =====================================================
+   PRACTICE / FLASHCARD QUIZ RETURN
+===================================================== */
 
 window.addEventListener(
     "batlingo-practice-home",
-    () => {
+    event => {
 
         document.getElementById("practiceResultScreen")
             ?.classList.add("hidden");
@@ -315,11 +318,21 @@ window.addEventListener(
         document.getElementById("practiceReviewScreen")
             ?.classList.add("hidden");
 
+        if (event.detail?.source === "flashcard") {
+
+            const restored = resumeFlashcardFromQuiz();
+
+            if (restored) {
+                return;
+            }
+        }
+
         showHome();
 
         playLobbyMusic();
     }
 );
+
 
 
 
