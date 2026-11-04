@@ -93,16 +93,31 @@ function initPractice() {
         }
     );
 
-    byId("practiceHomeBtn")?.addEventListener(
-        "click",
-        () => {
-            stopPractice();
+    
+byId("practiceHomeBtn")?.addEventListener(
+    "click",
+    () => {
 
-            window.dispatchEvent(
-                new Event("batlingo-practice-home")
-            );
-        }
-    );
+        const fromFlashcard =
+            config?.flashcardQuiz === true;
+
+        stopPractice();
+
+        window.dispatchEvent(
+            new CustomEvent(
+                "batlingo-practice-home",
+                {
+                    detail: {
+                        source: fromFlashcard
+                            ? "flashcard"
+                            : "solo"
+                    }
+                }
+            )
+        );
+    }
+);
+
 
     byId("practiceReviewAllBtn")?.addEventListener(
         "click",
@@ -169,6 +184,11 @@ export function stopPractice() {
     gameScreen.classList.add("hidden");
     gameScreen.classList.remove("solo-practice-mode");
 
+   gameScreen.classList.remove("flashcard-quiz-mode");
+
+document.getElementById("practiceResultScreen")
+    ?.classList.remove("flashcard-quiz-result");
+
     byId("practiceResultScreen")
         ?.classList.add("hidden");
 
@@ -211,10 +231,51 @@ export async function startPractice(newConfig) {
     // A new start may have replaced this session.
     if (session !== sessionToken) return;
 
+
+/* =====================================================
+   QUESTION POOL
+
+   Normal Practice:
+       Random toàn bộ database.
+
+   Flashcard Quiz:
+       Chỉ lấy ID được chọn trong filter.
+===================================================== */
+
+if (
+    config.flashcardQuiz === true &&
+    Array.isArray(config.flashcardQuizIds)
+) {
+
+    const selectedIds = new Set(
+        config.flashcardQuizIds.map(id => String(id))
+    );
+
+    const filtered = database.filter(question => {
+
+        if (
+            question.id === undefined ||
+            question.id === null
+        ) {
+            return false;
+        }
+
+        return selectedIds.has(String(question.id));
+    });
+
+    questionPool = createPracticeQuestionPool(
+        filtered,
+        count
+    );
+
+} else {
+
     questionPool = createPracticeQuestionPool(
         database,
         count
     );
+}
+
 
     if (questionPool.length === 0) {
         throw new Error("No practice questions available.");
@@ -229,8 +290,42 @@ export async function startPractice(newConfig) {
     byId("practiceResultScreen")?.classList.add("hidden");
     hidePracticeReview();
 
-    gameScreen.classList.add("solo-practice-mode");
-    gameScreen.classList.remove("hidden");
+
+gameScreen.classList.add("solo-practice-mode");
+
+gameScreen.classList.toggle(
+    "flashcard-quiz-mode",
+    config.flashcardQuiz === true
+);
+
+gameScreen.classList.remove("hidden");
+
+document.getElementById("practiceResultScreen")
+    ?.classList.toggle(
+        "flashcard-quiz-result",
+        config.flashcardQuiz === true
+    );
+
+const retryButton =
+    document.getElementById("practiceRetryBtn");
+
+const homeButton =
+    document.getElementById("practiceHomeBtn");
+
+if (retryButton) {
+    retryButton.textContent =
+        config.flashcardQuiz === true
+            ? "RETRY QUIZ"
+            : "RETRY PRACTICE";
+}
+
+if (homeButton) {
+    homeButton.textContent =
+        config.flashcardQuiz === true
+            ? "BACK TO FLASHCARD"
+            : "BACK TO HOME";
+}
+
 
     showNextQuestion();
 }
@@ -291,8 +386,20 @@ function showNextQuestion() {
         ? `JLPT ${config.target.toUpperCase()}`
         : config.target.toUpperCase();
 
+
+if (config.flashcardQuiz === true) {
+
     modeElement.textContent =
-        `${target} · ${config.category.toUpperCase()} · PRACTICE`;
+        `${target} · ${config.category.toUpperCase()}` +
+        ` · ${config.flashcardFilter.toUpperCase()} QUIZ`;
+
+} else {
+
+    modeElement.textContent =
+        `${target} · ${config.category.toUpperCase()}` +
+        ` · PRACTICE`;
+}
+
 
     numberElement.textContent =
         `QUESTION ${currentIndex + 1} / ${questionPool.length}`;
