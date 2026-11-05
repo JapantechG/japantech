@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "月曜日",
     "reading": "げつようび",
-    "meaning": "Thứ hai"
+    "meaning": "Thứ hai",
+    "meaning_en": "Monday"
   },
   {
     "id": 2,
     "word": "火曜日",
     "reading": "かようび",
-    "meaning": "Thứ ba"
+    "meaning": "Thứ ba",
+    "meaning_en": "Tuesday"
   },
   {
     "id": 3,
     "word": "水曜日",
     "reading": "すいようび",
-    "meaning": "Thứ tư"
+    "meaning": "Thứ tư",
+    "meaning_en": "Wednesday"
   },
   {
     "id": 4,
     "word": "木曜日",
     "reading": "もくようび",
-    "meaning": "Thứ năm"
+    "meaning": "Thứ năm",
+    "meaning_en": "Thursday"
   },
   {
     "id": 5,
     "word": "金曜日",
     "reading": "きんようび",
-    "meaning": "Thứ sáu"
+    "meaning": "Thứ sáu",
+    "meaning_en": "Friday"
   },
   {
     "id": 6,
     "word": "土曜日",
     "reading": "どようび",
-    "meaning": "Thứ bảy"
+    "meaning": "Thứ bảy",
+    "meaning_en": "Saturday"
   },
   {
     "id": 7,
     "word": "日曜日",
     "reading": "にちようび",
-    "meaning": "Chủ nhật"
+    "meaning": "Chủ nhật",
+    "meaning_en": "Sunday"
   },
   {
     "id": 8,
     "word": "今日",
     "reading": "きょう",
-    "meaning": "Hôm nay"
+    "meaning": "Hôm nay",
+    "meaning_en": "Today"
   },
   {
     "id": 9,
     "word": "昨日",
     "reading": "きのう",
-    "meaning": "Hôm qua"
+    "meaning": "Hôm qua",
+    "meaning_en": "Yesterday"
   },
   {
     "id": 10,
     "word": "明日",
     "reading": "あした",
-    "meaning": "Ngày mai"
+    "meaning": "Ngày mai",
+    "meaning_en": "Tomorrow"
   },
   {
     "id": 11,
     "word": "一昨日",
     "reading": "おととい",
-    "meaning": "Hôm kia"
+    "meaning": "Hôm kia",
+    "meaning_en": "The day before yesterday"
   },
   {
     "id": 12,
     "word": "明後日",
     "reading": "あさって",
-    "meaning": "Ngày kia"
+    "meaning": "Ngày kia",
+    "meaning_en": "The day after tomorrow"
   },
   {
     "id": 13,
     "word": "今週",
     "reading": "こんしゅう",
-    "meaning": "Tuần này"
+    "meaning": "Tuần này",
+    "meaning_en": "This week"
   },
   {
     "id": 14,
     "word": "来週",
     "reading": "らいしゅう",
-    "meaning": "Tuần sau"
+    "meaning": "Tuần sau",
+    "meaning_en": "Next week"
   },
   {
     "id": 15,
     "word": "先週",
     "reading": "せんしゅう",
-    "meaning": "Tuần trước"
+    "meaning": "Tuần trước",
+    "meaning_en": "Last week"
   },
   {
     "id": 16,
     "word": "今月",
     "reading": "こんげつ",
-    "meaning": "Tháng này"
+    "meaning": "Tháng này",
+    "meaning_en": "This month"
   },
   {
     "id": 17,
     "word": "来月",
     "reading": "らいげつ",
-    "meaning": "Tháng sau"
+    "meaning": "Tháng sau",
+    "meaning_en": "Next month"
   },
   {
     "id": 18,
     "word": "去年",
     "reading": "きょねん",
-    "meaning": "Năm ngoái"
+    "meaning": "Năm ngoái",
+    "meaning_en": "Last year"
   },
   {
     "id": 19,
     "word": "今年",
     "reading": "ことし",
-    "meaning": "Năm nay"
+    "meaning": "Năm nay",
+    "meaning_en": "This year"
   },
   {
     "id": 20,
     "word": "来年",
     "reading": "らいねん",
-    "meaning": "Năm tới"
+    "meaning": "Năm tới",
+    "meaning_en": "Next year"
   }
 ]
