@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "顔",
     "reading": "かお",
-    "meaning": "Mặt"
+    "meaning": "Mặt",
+    "meaning_en": "Face"
   },
   {
     "id": 2,
     "word": "髪",
     "reading": "かみ",
-    "meaning": "Tóc"
+    "meaning": "Tóc",
+    "meaning_en": "Hair"
   },
   {
     "id": 3,
     "word": "額",
     "reading": "ひたい",
-    "meaning": "Trán"
+    "meaning": "Trán",
+    "meaning_en": "Forehead"
   },
   {
     "id": 4,
     "word": "眉毛",
     "reading": "まゆげ",
-    "meaning": "Lông mày"
+    "meaning": "Lông mày",
+    "meaning_en": "Eyebrow"
   },
   {
     "id": 5,
     "word": "目",
     "reading": "め",
-    "meaning": "Mắt"
+    "meaning": "Mắt",
+    "meaning_en": "Eye"
   },
   {
     "id": 6,
     "word": "まつげ",
     "reading": "まつげ",
-    "meaning": "Lông mi"
+    "meaning": "Lông mi",
+    "meaning_en": "Eyelash"
   },
   {
     "id": 7,
     "word": "瞳",
     "reading": "ひとみ",
-    "meaning": "Con ngươi"
+    "meaning": "Con ngươi",
+    "meaning_en": "Pupil"
   },
   {
     "id": 8,
     "word": "鼻",
     "reading": "はな",
-    "meaning": "Mũi"
+    "meaning": "Mũi",
+    "meaning_en": "Nose"
   },
   {
     "id": 9,
     "word": "耳",
     "reading": "みみ",
-    "meaning": "Tai"
+    "meaning": "Tai",
+    "meaning_en": "Ear"
   },
   {
     "id": 10,
     "word": "頬",
     "reading": "ほお",
-    "meaning": "Má"
+    "meaning": "Má",
+    "meaning_en": "Cheek"
   },
   {
     "id": 11,
     "word": "口",
     "reading": "くち",
-    "meaning": "Miệng"
+    "meaning": "Miệng",
+    "meaning_en": "Mouth"
   },
   {
     "id": 12,
     "word": "唇",
     "reading": "くちびる",
-    "meaning": "Môi"
+    "meaning": "Môi",
+    "meaning_en": "Lips"
   },
   {
     "id": 13,
     "word": "歯",
     "reading": "は",
-    "meaning": "Răng"
+    "meaning": "Răng",
+    "meaning_en": "Tooth"
   },
   {
     "id": 14,
     "word": "舌",
     "reading": "した",
-    "meaning": "Lưỡi"
+    "meaning": "Lưỡi",
+    "meaning_en": "Tongue"
   },
   {
     "id": 15,
     "word": "顎",
     "reading": "あご",
-    "meaning": "Cằm, hàm"
+    "meaning": "Cằm, hàm",
+    "meaning_en": "Chin, jaw"
   },
   {
     "id": 16,
     "word": "顎髭",
     "reading": "あごひげ",
-    "meaning": "Râu cằm"
+    "meaning": "Râu cằm",
+    "meaning_en": "Beard, chin beard"
   },
   {
     "id": 17,
     "word": "えくぼ",
     "reading": "えくぼ",
-    "meaning": "Má lúm đồng tiền"
+    "meaning": "Má lúm đồng tiền",
+    "meaning_en": "Dimple"
   },
   {
     "id": 18,
     "word": "しわ",
     "reading": "しわ",
-    "meaning": "Nếp nhăn"
+    "meaning": "Nếp nhăn",
+    "meaning_en": "Wrinkle"
   },
   {
     "id": 19,
     "word": "ほくろ",
     "reading": "ほくろ",
-    "meaning": "Nốt ruồi"
+    "meaning": "Nốt ruồi",
+    "meaning_en": "Mole, beauty mark"
   },
   {
     "id": 20,
     "word": "そばかす",
     "reading": "そばかす",
-    "meaning": "Tàn nhang"
+    "meaning": "Tàn nhang",
+    "meaning_en": "Freckles"
   }
 ]
