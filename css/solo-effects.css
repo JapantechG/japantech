@@ -1,0 +1,424 @@
+
+/* ==========================================
+   BATLINGO SOLO EFFECTS
+========================================== */
+
+.game-container {
+    position: relative;
+}
+
+/* MASCOT HUD */
+
+.solo-fx-mascot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    margin: 6px auto 9px;
+    max-width: 420px;
+
+    border: 1px solid rgba(125,211,252,.2);
+    background: rgba(9,19,36,.72);
+    border-radius: 14px;
+
+    color: #e2e8f0;
+    min-height: 67px;
+}
+
+.solo-fx-mascot-portrait {
+    width: 53px;
+    height: 53px;
+    flex: 0 0 53px;
+
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.solo-fx-mascot-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 2px 8px rgba(56,189,248,.35)
+    );
+}
+
+.solo-fx-mascot-portrait span {
+    font-size: 32px;
+}
+
+.solo-fx-mascot-info {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.solo-fx-mascot-info strong {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+
+.solo-fx-mascot-info > span {
+    font-size: 11px;
+    color: #93c5fd;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* SKILL PROGRESS */
+
+.solo-fx-skill-track {
+    height: 5px;
+    background: #26384f;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+#soloFxSkillFill {
+    height: 100%;
+    width: 0;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #a78bfa
+    );
+
+    border-radius: inherit;
+    transition: width .3s ease;
+}
+
+.solo-fx-practice {
+    opacity: .9;
+}
+
+/* FULL EFFECT OVERLAY */
+
+.solo-fx-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+
+    display: grid;
+    place-items: center;
+
+    pointer-events: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity .15s ease,
+        visibility .15s ease;
+
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.solo-fx-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* LIGHT BURST */
+
+.solo-fx-burst {
+    position: absolute;
+    inset: -20%;
+
+    background: radial-gradient(
+        circle,
+        rgba(251,191,36,.22),
+        transparent 60%
+    );
+
+    transform: scale(.4);
+    opacity: 0;
+}
+
+.solo-fx-overlay.visible .solo-fx-burst {
+    animation: soloFxBurst 1.05s ease-out both;
+}
+
+/* COMBO CARD */
+
+.solo-fx-card {
+    position: relative;
+    max-width: 94%;
+
+    padding: 16px 26px;
+    text-align: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(17,24,39,.92),
+        rgba(53,35,14,.92)
+    );
+
+    border: 1px solid rgba(251,191,36,.6);
+
+    box-shadow:
+        0 16px 50px rgba(0,0,0,.48),
+        0 0 38px rgba(251,191,36,.16);
+
+    transform: translateY(20px) scale(.65);
+    opacity: 0;
+}
+
+.solo-fx-overlay.visible .solo-fx-card {
+    animation: soloFxPop 1.06s
+        cubic-bezier(.2,1.2,.3,1) both;
+}
+
+.solo-fx-kicker {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #fde68a;
+}
+
+.solo-fx-title {
+    font-size: clamp(27px,6vw,50px);
+    line-height: 1.15;
+
+    font-weight: 1000;
+    letter-spacing: 1px;
+
+    color: #fff0a0;
+
+    text-shadow:
+        0 2px 2px #78350f,
+        0 0 15px #f59e0b;
+}
+
+.solo-fx-subtitle {
+    margin-top: 5px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+/* PERFECT */
+
+.solo-fx-overlay.perfect .solo-fx-card {
+    border-color: #67e8f9;
+
+    background: linear-gradient(
+        135deg,
+        rgba(8,47,73,.95),
+        rgba(17,24,39,.94)
+    );
+}
+
+.solo-fx-overlay.perfect .solo-fx-title {
+    color: #a5f3fc;
+    text-shadow: 0 0 20px #06b6d4;
+}
+
+/* MASCOT SKILL */
+
+.solo-fx-overlay.skill .solo-fx-card {
+    border-color: #86efac;
+
+    background: linear-gradient(
+        135deg,
+        rgba(6,78,59,.96),
+        rgba(15,23,42,.95)
+    );
+}
+
+.solo-fx-overlay.skill .solo-fx-title {
+    color: #bbf7d0;
+    text-shadow: 0 0 20px #22c55e;
+}
+
+/* MASCOT REACTIONS */
+
+.solo-fx-mascot.cheer
+.solo-fx-mascot-portrait {
+    animation: soloMascotCheer .6s ease-out;
+}
+
+.solo-fx-mascot.ouch
+.solo-fx-mascot-portrait {
+    animation: soloMascotOuch .4s ease-in-out;
+}
+
+.solo-fx-mascot.skill-active
+.solo-fx-mascot-portrait {
+    animation: soloMascotSkill .85s ease-out;
+}
+
+/* ==========================================
+   KEYFRAMES
+========================================== */
+
+@keyframes soloFxPop {
+    0% {
+        opacity: 0;
+        transform:
+            translateY(20px)
+            scale(.6)
+            rotate(-5deg);
+    }
+
+    25% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1.13)
+            rotate(2deg);
+    }
+
+    42% {
+        transform: scale(.98);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            scale(1.08)
+            translateY(-7px);
+    }
+}
+
+@keyframes soloFxBurst {
+    0% {
+        opacity: 0;
+        transform: scale(.2) rotate(0);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.6) rotate(30deg);
+    }
+}
+
+@keyframes soloMascotCheer {
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(0);
+    }
+
+    30% {
+        transform:
+            translateY(-12px)
+            rotate(-10deg);
+    }
+
+    60% {
+        transform:
+            translateY(-5px)
+            rotate(9deg);
+    }
+}
+
+@keyframes soloMascotOuch {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform:
+            translateX(-6px)
+            rotate(-8deg);
+    }
+
+    55% {
+        transform:
+            translateX(6px)
+            rotate(7deg);
+    }
+}
+
+@keyframes soloMascotSkill {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    35% {
+        transform:
+            scale(1.27)
+            rotate(-8deg);
+
+        filter:
+            brightness(1.9)
+            drop-shadow(0 0 15px #4ade80);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+
+    .solo-fx-mascot {
+        margin: 4px auto 6px;
+        min-height: 51px;
+        padding: 5px 9px;
+    }
+
+    .solo-fx-mascot-portrait {
+        width: 43px;
+        height: 43px;
+        flex-basis: 43px;
+    }
+
+    .solo-fx-mascot-info strong {
+        font-size: 11px;
+    }
+
+    .solo-fx-mascot-info > span {
+        font-size: 10px;
+    }
+
+    .solo-fx-card {
+        padding: 13px 17px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solo-fx-overlay,
+    .solo-fx-mascot * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .solo-fx-overlay.visible .solo-fx-card {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+    }
+
+    .solo-fx-overlay.visible .solo-fx-burst {
+        display: none;
+    }
+}
