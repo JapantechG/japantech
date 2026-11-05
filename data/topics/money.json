@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "お金",
     "reading": "おかね",
-    "meaning": "Tiền"
+    "meaning": "Tiền",
+    "meaning_en": "Money"
   },
   {
     "id": 2,
     "word": "現金",
     "reading": "げんきん",
-    "meaning": "Tiền mặt"
+    "meaning": "Tiền mặt",
+    "meaning_en": "Cash"
   },
   {
     "id": 3,
     "word": "硬貨",
     "reading": "こうか",
-    "meaning": "Tiền xu"
+    "meaning": "Tiền xu",
+    "meaning_en": "Coin"
   },
   {
     "id": 4,
     "word": "紙幣",
     "reading": "しへい",
-    "meaning": "Tiền giấy"
+    "meaning": "Tiền giấy",
+    "meaning_en": "Banknote, paper money"
   },
   {
     "id": 5,
     "word": "小銭",
     "reading": "こぜに",
-    "meaning": "Tiền lẻ"
+    "meaning": "Tiền lẻ",
+    "meaning_en": "Small change, coins"
   },
   {
     "id": 6,
     "word": "財布",
     "reading": "さいふ",
-    "meaning": "Ví tiền"
+    "meaning": "Ví tiền",
+    "meaning_en": "Wallet"
   },
   {
     "id": 7,
     "word": "支払い",
     "reading": "しはらい",
-    "meaning": "Thanh toán"
+    "meaning": "Thanh toán",
+    "meaning_en": "Payment"
   },
   {
     "id": 8,
     "word": "お釣り",
     "reading": "おつり",
-    "meaning": "Tiền thối"
+    "meaning": "Tiền thối",
+    "meaning_en": "Change (money returned)"
   },
   {
     "id": 9,
     "word": "両替",
     "reading": "りょうがえ",
-    "meaning": "Đổi tiền"
+    "meaning": "Đổi tiền",
+    "meaning_en": "Currency exchange, money changing"
   },
   {
     "id": 10,
     "word": "収入",
     "reading": "しゅうにゅう",
-    "meaning": "Thu nhập"
+    "meaning": "Thu nhập",
+    "meaning_en": "Income"
   },
   {
     "id": 11,
     "word": "支出",
     "reading": "ししゅつ",
-    "meaning": "Chi tiêu"
+    "meaning": "Chi tiêu",
+    "meaning_en": "Expenditure, expenses"
   },
   {
     "id": 12,
     "word": "貯金",
     "reading": "ちょきん",
-    "meaning": "Tiền tiết kiệm"
+    "meaning": "Tiền tiết kiệm",
+    "meaning_en": "Savings"
   },
   {
     "id": 13,
     "word": "節約",
     "reading": "せつやく",
-    "meaning": "Tiết kiệm chi tiêu"
+    "meaning": "Tiết kiệm chi tiêu",
+    "meaning_en": "Saving money, economizing"
   },
   {
     "id": 14,
     "word": "予算",
     "reading": "よさん",
-    "meaning": "Ngân sách"
+    "meaning": "Ngân sách",
+    "meaning_en": "Budget"
   },
   {
     "id": 15,
     "word": "借金",
     "reading": "しゃっきん",
-    "meaning": "Nợ"
+    "meaning": "Nợ",
+    "meaning_en": "Debt"
   },
   {
     "id": 16,
     "word": "利息",
     "reading": "りそく",
-    "meaning": "Tiền lãi"
+    "meaning": "Tiền lãi",
+    "meaning_en": "Interest (on money)"
   },
   {
     "id": 17,
     "word": "税金",
     "reading": "ぜいきん",
-    "meaning": "Thuế"
+    "meaning": "Thuế",
+    "meaning_en": "Tax"
   },
   {
     "id": 18,
     "word": "消費税",
     "reading": "しょうひぜい",
-    "meaning": "Thuế tiêu dùng"
+    "meaning": "Thuế tiêu dùng",
+    "meaning_en": "Consumption tax"
   },
   {
     "id": 19,
     "word": "家計",
     "reading": "かけい",
-    "meaning": "Tài chính gia đình"
+    "meaning": "Tài chính gia đình",
+    "meaning_en": "Household finances"
   },
   {
     "id": 20,
     "word": "家賃",
     "reading": "やちん",
-    "meaning": "Tiền thuê nhà"
+    "meaning": "Tiền thuê nhà",
+    "meaning_en": "Rent"
   }
 ]
