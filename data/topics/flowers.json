@@ -1,176 +1,206 @@
+
 [
   {
     "id": 1,
     "word": "花",
     "reading": "はな",
-    "meaning": "Hoa"
+    "meaning": "Hoa",
+    "meaning_en": "Flower"
   },
   {
     "id": 2,
     "word": "桜",
     "reading": "さくら",
-    "meaning": "Hoa anh đào"
+    "meaning": "Hoa anh đào",
+    "meaning_en": "Cherry blossom"
   },
   {
     "id": 3,
     "word": "梅",
     "reading": "うめ",
-    "meaning": "Hoa mơ Nhật"
+    "meaning": "Hoa mơ Nhật",
+    "meaning_en": "Japanese plum blossom"
   },
   {
     "id": 4,
     "word": "薔薇",
     "reading": "ばら",
-    "meaning": "Hoa hồng"
+    "meaning": "Hoa hồng",
+    "meaning_en": "Rose"
   },
   {
     "id": 5,
     "word": "百合",
     "reading": "ゆり",
-    "meaning": "Hoa ly"
+    "meaning": "Hoa ly",
+    "meaning_en": "Lily"
   },
   {
     "id": 6,
     "word": "菊",
     "reading": "きく",
-    "meaning": "Hoa cúc"
+    "meaning": "Hoa cúc",
+    "meaning_en": "Chrysanthemum"
   },
   {
     "id": 7,
     "word": "向日葵",
     "reading": "ひまわり",
-    "meaning": "Hoa hướng dương"
+    "meaning": "Hoa hướng dương",
+    "meaning_en": "Sunflower"
   },
   {
     "id": 8,
     "word": "紫陽花",
     "reading": "あじさい",
-    "meaning": "Hoa cẩm tú cầu"
+    "meaning": "Hoa cẩm tú cầu",
+    "meaning_en": "Hydrangea"
   },
   {
     "id": 9,
     "word": "朝顔",
     "reading": "あさがお",
-    "meaning": "Hoa bìm bìm"
+    "meaning": "Hoa bìm bìm",
+    "meaning_en": "Morning glory"
   },
   {
     "id": 10,
     "word": "椿",
     "reading": "つばき",
-    "meaning": "Hoa trà"
+    "meaning": "Hoa trà",
+    "meaning_en": "Camellia"
   },
   {
     "id": 11,
     "word": "牡丹",
     "reading": "ぼたん",
-    "meaning": "Hoa mẫu đơn"
+    "meaning": "Hoa mẫu đơn",
+    "meaning_en": "Tree peony"
   },
   {
     "id": 12,
     "word": "芍薬",
     "reading": "しゃくやく",
-    "meaning": "Hoa thược dược Trung Hoa"
+    "meaning": "Hoa thược dược Trung Hoa",
+    "meaning_en": "Chinese peony"
   },
   {
     "id": 13,
     "word": "蘭",
     "reading": "らん",
-    "meaning": "Hoa lan"
+    "meaning": "Hoa lan",
+    "meaning_en": "Orchid"
   },
   {
     "id": 14,
     "word": "チューリップ",
     "reading": "チューリップ",
-    "meaning": "Hoa tulip"
+    "meaning": "Hoa tulip",
+    "meaning_en": "Tulip"
   },
   {
     "id": 15,
     "word": "カーネーション",
     "reading": "カーネーション",
-    "meaning": "Hoa cẩm chướng"
+    "meaning": "Hoa cẩm chướng",
+    "meaning_en": "Carnation"
   },
   {
     "id": 16,
     "word": "コスモス",
     "reading": "コスモス",
-    "meaning": "Hoa cánh bướm"
+    "meaning": "Hoa cánh bướm",
+    "meaning_en": "Cosmos flower"
   },
   {
     "id": 17,
     "word": "水仙",
     "reading": "すいせん",
-    "meaning": "Hoa thủy tiên"
+    "meaning": "Hoa thủy tiên",
+    "meaning_en": "Daffodil, narcissus"
   },
   {
     "id": 18,
     "word": "蒲公英",
     "reading": "たんぽぽ",
-    "meaning": "Bồ công anh"
+    "meaning": "Bồ công anh",
+    "meaning_en": "Dandelion"
   },
   {
     "id": 19,
     "word": "菫",
     "reading": "すみれ",
-    "meaning": "Hoa violet"
+    "meaning": "Hoa violet",
+    "meaning_en": "Violet"
   },
   {
     "id": 20,
     "word": "藤",
     "reading": "ふじ",
-    "meaning": "Hoa tử đằng"
+    "meaning": "Hoa tử đằng",
+    "meaning_en": "Wisteria"
   },
   {
     "id": 21,
     "word": "蓮",
     "reading": "はす",
-    "meaning": "Hoa sen"
+    "meaning": "Hoa sen",
+    "meaning_en": "Lotus"
   },
   {
     "id": 22,
     "word": "睡蓮",
     "reading": "すいれん",
-    "meaning": "Hoa súng"
+    "meaning": "Hoa súng",
+    "meaning_en": "Water lily"
   },
   {
     "id": 23,
     "word": "ラベンダー",
     "reading": "ラベンダー",
-    "meaning": "Hoa oải hương"
+    "meaning": "Hoa oải hương",
+    "meaning_en": "Lavender"
   },
   {
     "id": 24,
     "word": "ジャスミン",
     "reading": "ジャスミン",
-    "meaning": "Hoa nhài"
+    "meaning": "Hoa nhài",
+    "meaning_en": "Jasmine"
   },
   {
     "id": 25,
     "word": "ハイビスカス",
     "reading": "ハイビスカス",
-    "meaning": "Hoa dâm bụt"
+    "meaning": "Hoa dâm bụt",
+    "meaning_en": "Hibiscus"
   },
   {
     "id": 26,
     "word": "マリーゴールド",
     "reading": "マリーゴールド",
-    "meaning": "Cúc vạn thọ"
+    "meaning": "Cúc vạn thọ",
+    "meaning_en": "Marigold"
   },
   {
     "id": 27,
     "word": "彼岸花",
     "reading": "ひがんばな",
-    "meaning": "Hoa bỉ ngạn"
+    "meaning": "Hoa bỉ ngạn",
+    "meaning_en": "Red spider lily"
   },
   {
     "id": 28,
     "word": "金木犀",
     "reading": "きんもくせい",
-    "meaning": "Hoa mộc tê"
+    "meaning": "Hoa mộc tê",
+    "meaning_en": "Sweet osmanthus"
   },
   {
     "id": 29,
     "word": "菜の花",
     "reading": "なのはな",
-    "meaning": "Hoa cải dầu"
+    "meaning": "Hoa cải dầu",
+    "meaning_en": "Rapeseed flower"
   }
 ]
