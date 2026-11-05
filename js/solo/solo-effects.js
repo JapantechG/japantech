@@ -720,17 +720,10 @@ export function showSoloGameOverMascot() {
 
         let triedBase = stage === base;
 
-        image.onload = () => {
-
-            // Ignore image events from an older screen
-            if (image.src !== new URL(
-                image.getAttribute("src"),
-                document.baseURI
-            ).href) return;
-
-            image.hidden = false;
-            emoji.hidden = true;
-        };
+         image.onload = () => {
+             image.hidden = false;
+             emoji.hidden = true;
+         };
 
         image.onerror = () => {
 
