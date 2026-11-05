@@ -19,9 +19,9 @@ import {
 from "./game.js";
 
 import {
-    initPvp
-}
-from "./pvp.js";
+    initPvp,
+    closePvpSocial
+} from "./pvp.js";
 
 import {
     playLobbyMusic,
@@ -285,8 +285,40 @@ initHome({
         const selected = selectBattleMode(modeId);
 
         if (!selected) return;
-
-        // Open existing configuration
+        
+        /* ==========================================
+           1V1 - OPEN ONLINE LOBBY
+        ========================================== */
+        
+        if (modeId === "pvp") {
+        
+            if (!auth.currentUser) {
+        
+                window.BatLingoAuthUI?.open();
+        
+                return;
+            }
+        
+            setupScreen.classList.add("hidden");
+        
+            pvpScreen.classList.remove("hidden");
+        
+            initPvp({
+        
+                studyMode: "jlpt",
+        
+                target: "n5",
+        
+                category: "vocabulary",
+        
+                subMode: "kanji_meaning"
+            });
+        
+            return;
+        }
+        
+        /* OTHER MODES */
+        
         showConfiguration(modeId);
 
     }
@@ -300,7 +332,9 @@ initHome({
 
 
 document.getElementById("pvpBackButton")
-    .addEventListener("click", () => {
+    ?.addEventListener("click", async () => {
+
+        await closePvpSocial();
 
         pvpScreen.classList.add("hidden");
 
