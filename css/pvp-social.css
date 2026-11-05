@@ -1,0 +1,414 @@
+
+/* =========================================================
+   BATLINGO - PVP SOCIAL LOBBY
+========================================================= */
+
+.pvp-screen:not(.battle-mode):not(.result-mode) {
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.pvp-screen:not(.battle-mode):not(.result-mode)
+.pvp-container {
+    width: min(100%, 950px);
+    margin: auto;
+    padding: 18px 0 55px;
+}
+
+/* HEADER */
+
+.pvp-social-head,
+.pvp-social-actions,
+.pvp-room-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pvp-social-head h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fbbf24;
+}
+
+#pvpOnlineCount {
+    color: #86efac;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* CREATE / JOIN */
+
+.pvp-social-actions {
+    margin: 16px 0;
+}
+
+.pvp-social-actions > button,
+.pvp-code-join button,
+.pvp-list-item > button,
+.pvp-room-controls button,
+#pvpToggleSettings,
+#pvpSaveSettings,
+#pvpTransferHost,
+#pvpFriendAction {
+    min-height: 44px;
+    padding: 12px 18px;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    background: #fbbf24;
+    color: #111827;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.pvp-social-actions > button:first-child {
+    flex: 1;
+}
+
+.pvp-code-join {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    min-width: 230px;
+}
+
+.pvp-code-join input,
+.pvp-social-panel input,
+.pvp-social-panel select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px;
+    background: #111827;
+    color: #f8fafc;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.pvp-code-join input:focus,
+.pvp-social-panel input:focus,
+.pvp-social-panel select:focus {
+    border-color: #fbbf24;
+}
+
+.pvp-code-join input {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+/* TABS */
+
+.pvp-social-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0 12px;
+    overflow-x: auto;
+}
+
+.pvp-social-tabs button {
+    flex: 1;
+    padding: 13px 10px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #111827;
+    color: #cbd5e1;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.pvp-social-tabs button.selected {
+    border-color: #fbbf24;
+    background: #334155;
+    color: #fbbf24;
+}
+
+/* ROOM / PLAYER LIST */
+
+.pvp-social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-height: 100px;
+    max-height: 48vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.pvp-list-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 14px;
+    background: rgba(15, 23, 42, .94);
+    border: 1px solid #334155;
+    border-radius: 13px;
+    color: #f8fafc;
+    text-align: left;
+}
+
+.pvp-list-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.pvp-list-item strong {
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.pvp-list-item small {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.pvp-list-item > button {
+    margin-left: auto;
+    padding: 9px 17px;
+}
+
+.pvp-player-row {
+    cursor: pointer;
+    font: inherit;
+}
+
+.pvp-player-row:hover,
+.pvp-list-item:hover {
+    border-color: #fbbf24;
+}
+
+.pvp-mini-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #334155;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.pvp-mini-avatar img,
+.player-avatar img,
+.pvp-profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pvp-online-dot {
+    color: #22c55e;
+}
+
+.pvp-empty {
+    padding: 28px 10px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+/* SETTINGS */
+
+.pvp-social-panel {
+    display: grid;
+    gap: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    background: rgba(15, 23, 42, .97);
+    border: 1px solid #475569;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.pvp-social-panel h3 {
+    margin: 0;
+    color: #fbbf24;
+    font-size: 16px;
+}
+
+.pvp-social-panel label {
+    display: grid;
+    gap: 7px;
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pvp-subtle,
+#pvpTransferHost {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+.pvp-room-controls {
+    margin-bottom: 15px;
+    color: #fbbf24;
+}
+
+#pvpWaitingTitle {
+    font-size: 17px;
+}
+
+#pvpWaitingVisibility {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+#pvpToggleSettings {
+    width: 100%;
+    background: #1e293b;
+    color: #ffffff;
+}
+
+#pvpSocialMessage {
+    min-height: 18px;
+    color: #fca5a5;
+    font-size: 12px;
+}
+
+/* PLAYER AVATAR */
+
+.player-avatar[role="button"] {
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform .2s, border-color .2s;
+}
+
+.player-avatar[role="button"]:hover {
+    transform: scale(1.06);
+    border-color: #fbbf24;
+}
+
+/* PROFILE MODAL */
+
+.pvp-profile-modal {
+    position: fixed;
+    z-index: 20000;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, .78);
+}
+
+.pvp-profile-modal.hidden {
+    display: none !important;
+}
+
+.pvp-profile-card {
+    position: relative;
+    width: min(100%, 390px);
+    padding: 28px 22px;
+    background: #101827;
+    border: 1px solid #475569;
+    border-radius: 20px;
+    color: #f8fafc;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .5);
+}
+
+.pvp-profile-close {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    padding: 5px;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.pvp-profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 86px;
+    height: 86px;
+    margin: 0 auto 12px;
+    background: #334155;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 40px;
+}
+
+.pvp-profile-card h3 {
+    margin: 8px 0;
+    font-size: 21px;
+}
+
+.pvp-profile-card p {
+    color: #cbd5e1;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+#pvpFriendAction {
+    width: 100%;
+}
+
+#pvpFriendFeedback {
+    min-height: 16px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .pvp-screen:not(.battle-mode):not(.result-mode) {
+        padding: 65px 12px 25px;
+    }
+
+    .pvp-screen:not(.battle-mode):not(.result-mode)
+    .pvp-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .pvp-social-head h2 {
+        font-size: 17px;
+    }
+
+    .pvp-social-tabs button {
+        padding: 12px 6px;
+        font-size: 11px;
+    }
+
+    .pvp-code-join {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .pvp-social-actions > button:first-child {
+        flex-basis: 100%;
+    }
+
+    .pvp-list-item {
+        padding: 11px;
+        gap: 9px;
+    }
+
+    .pvp-mini-avatar {
+        width: 39px;
+        height: 39px;
+    }
+
+    .pvp-list-item strong {
+        font-size: 12px;
+    }
+}
