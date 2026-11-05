@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "病院",
     "reading": "びょういん",
-    "meaning": "Bệnh viện"
+    "meaning": "Bệnh viện",
+    "meaning_en": "Hospital"
   },
   {
     "id": 2,
     "word": "診療所",
     "reading": "しんりょうじょ",
-    "meaning": "Phòng khám"
+    "meaning": "Phòng khám",
+    "meaning_en": "Clinic"
   },
   {
     "id": 3,
     "word": "受付",
     "reading": "うけつけ",
-    "meaning": "Tiếp nhận"
+    "meaning": "Tiếp nhận",
+    "meaning_en": "Reception, registration"
   },
   {
     "id": 4,
     "word": "診察",
     "reading": "しんさつ",
-    "meaning": "Khám bệnh"
+    "meaning": "Khám bệnh",
+    "meaning_en": "Medical examination"
   },
   {
     "id": 5,
     "word": "問診",
     "reading": "もんしん",
-    "meaning": "Hỏi bệnh sử"
+    "meaning": "Hỏi bệnh sử",
+    "meaning_en": "Medical interview, history taking"
   },
   {
     "id": 6,
     "word": "医師",
     "reading": "いし",
-    "meaning": "Bác sĩ"
+    "meaning": "Bác sĩ",
+    "meaning_en": "Doctor, physician"
   },
   {
     "id": 7,
     "word": "看護師",
     "reading": "かんごし",
-    "meaning": "Điều dưỡng"
+    "meaning": "Điều dưỡng",
+    "meaning_en": "Nurse"
   },
   {
     "id": 8,
     "word": "患者",
     "reading": "かんじゃ",
-    "meaning": "Bệnh nhân"
+    "meaning": "Bệnh nhân",
+    "meaning_en": "Patient"
   },
   {
     "id": 9,
     "word": "内科",
     "reading": "ないか",
-    "meaning": "Nội khoa"
+    "meaning": "Nội khoa",
+    "meaning_en": "Internal medicine"
   },
   {
     "id": 10,
     "word": "外科",
     "reading": "げか",
-    "meaning": "Ngoại khoa"
+    "meaning": "Ngoại khoa",
+    "meaning_en": "Surgery"
   },
   {
     "id": 11,
     "word": "小児科",
     "reading": "しょうにか",
-    "meaning": "Nhi khoa"
+    "meaning": "Nhi khoa",
+    "meaning_en": "Pediatrics"
   },
   {
     "id": 12,
     "word": "皮膚科",
     "reading": "ひふか",
-    "meaning": "Da liễu"
+    "meaning": "Da liễu",
+    "meaning_en": "Dermatology"
   },
   {
     "id": 13,
     "word": "耳鼻科",
     "reading": "じびか",
-    "meaning": "Tai mũi họng"
+    "meaning": "Tai mũi họng",
+    "meaning_en": "Ear, nose and throat (ENT)"
   },
   {
     "id": 14,
     "word": "眼科",
     "reading": "がんか",
-    "meaning": "Nhãn khoa"
+    "meaning": "Nhãn khoa",
+    "meaning_en": "Ophthalmology"
   },
   {
     "id": 15,
     "word": "歯科",
     "reading": "しか",
-    "meaning": "Nha khoa"
+    "meaning": "Nha khoa",
+    "meaning_en": "Dentistry"
   },
   {
     "id": 16,
     "word": "検査",
     "reading": "けんさ",
-    "meaning": "Xét nghiệm, kiểm tra"
+    "meaning": "Xét nghiệm, kiểm tra",
+    "meaning_en": "Medical test, examination"
   },
   {
     "id": 17,
     "word": "採血",
     "reading": "さいけつ",
-    "meaning": "Lấy máu"
+    "meaning": "Lấy máu",
+    "meaning_en": "Blood collection, blood draw"
   },
   {
     "id": 18,
     "word": "レントゲン",
     "reading": "レントゲン",
-    "meaning": "Chụp X-quang"
+    "meaning": "Chụp X-quang",
+    "meaning_en": "X-ray"
   },
   {
     "id": 19,
     "word": "処方箋",
     "reading": "しょほうせん",
-    "meaning": "Đơn thuốc"
+    "meaning": "Đơn thuốc",
+    "meaning_en": "Prescription"
   },
   {
     "id": 20,
     "word": "入院",
     "reading": "にゅういん",
-    "meaning": "Nhập viện"
+    "meaning": "Nhập viện",
+    "meaning_en": "Hospitalization, hospital admission"
   }
 ]
