@@ -1,0 +1,540 @@
+
+/* =========================================================
+   BATLINGO - FRIENDS SCREEN
+========================================================= */
+
+#friendsScreen.hidden,
+#friendProfilePanel.hidden {
+    display: none !important;
+}
+
+#friendsScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+
+    overflow-y: auto;
+
+    padding: 22px 18px 60px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            140deg,
+            #091429,
+            #101b36 55%,
+            #071222
+        );
+
+    color: #eef5ff;
+}
+
+.friends-shell {
+    width: 100%;
+    max-width: 920px;
+
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.friends-header {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.friends-header-title {
+    min-width: 0;
+}
+
+.friends-header h1 {
+    margin: 0;
+
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.friends-header p {
+    margin: 5px 0 0;
+
+    color: #92a9c8;
+    font-size: 13px;
+}
+
+.friends-back {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    border: 1px solid #344966;
+    border-radius: 13px;
+
+    background: #192c49;
+    color: white;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.friends-card {
+    padding: 22px;
+    margin-bottom: 18px;
+
+    background: rgba(22, 37, 61, .92);
+
+    border: 1px solid #304565;
+    border-radius: 20px;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, .12);
+}
+
+.friends-card h2 {
+    margin: 0 0 13px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+.friends-hint {
+    margin: -5px 0 12px;
+
+    color: #91aac7;
+    font-size: 13px;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.friends-search {
+    display: flex;
+    gap: 10px;
+}
+
+.friends-search input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 14px;
+
+    background: #0c172d;
+    color: white;
+
+    border: 1px solid #4b6182;
+    border-radius: 11px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.friends-search input:focus {
+    border-color: #ffa43a;
+}
+
+.friends-search input::placeholder {
+    color: #7186a5;
+}
+
+#friendsScreen button {
+    cursor: pointer;
+
+    transition:
+        filter .15s,
+        transform .15s;
+}
+
+#friendsScreen button:hover {
+    filter: brightness(1.16);
+}
+
+#friendsScreen button:active {
+    transform: scale(.98);
+}
+
+.friends-search button,
+.friends-row-actions button,
+.friends-search-buttons button {
+    padding: 10px 15px;
+
+    border: 1px solid #456080;
+    border-radius: 10px;
+
+    color: white;
+    background: #263d5d;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+#friendsScreen button.primary {
+    background: #f38c24;
+    border-color: #ffb04f;
+
+    color: #10151f;
+}
+
+.friends-message {
+    min-height: 18px;
+    padding-top: 9px;
+
+    color: #b6cee8;
+    font-size: 12px;
+}
+
+.friends-message.error {
+    color: #ff9191;
+}
+
+.friends-search-buttons {
+    margin-top: 12px;
+    text-align: right;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.friends-tabs {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.friends-tabs button {
+    padding: 14px 6px;
+
+    background: #162841;
+
+    border: 1px solid #344765;
+    border-radius: 13px;
+
+    color: #a7bdd6;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.friends-tabs button.active {
+    background: #253c59;
+    border-color: #f9a140;
+
+    color: white;
+}
+
+.friends-tabs span {
+    display: inline-block;
+
+    margin-left: 4px;
+    padding: 2px 7px;
+
+    border-radius: 50px;
+
+    background: #0d2036;
+    color: #fca548;
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   FRIEND LIST
+========================================================= */
+
+#friendsList {
+    min-height: 90px;
+
+    color: #9fb4ce;
+    font-size: 14px;
+}
+
+.friends-player-row {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 13px 4px;
+
+    border-bottom: 1px solid #30435c;
+}
+
+.friends-player-row:last-child {
+    border-bottom: 0;
+}
+
+.friends-mascot,
+.friends-mascot-fallback {
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+
+    background:
+        radial-gradient(
+            circle,
+            #314b65,
+            #172a43
+        );
+
+    border-radius: 16px;
+}
+
+.friends-mascot-fallback {
+    display: grid;
+    place-items: center;
+
+    font-size: 30px;
+}
+
+.friends-player-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    min-width: 0;
+    gap: 5px;
+}
+
+.friends-player-text strong {
+    color: white;
+
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.friends-player-text small {
+    color: #9fb4ce;
+    font-size: 12px;
+}
+
+.friends-row-actions {
+    display: flex;
+
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+/* =========================================================
+   PUBLIC PROFILE SCREEN
+========================================================= */
+
+#friendProfilePanel {
+    position: fixed;
+
+    z-index: 1102;
+    inset: 0;
+
+    overflow-y: auto;
+
+    padding:
+        38px max(
+            20px,
+            calc((100vw - 720px) / 2)
+        );
+
+    box-sizing: border-box;
+
+    background: #0d1a30;
+    color: white;
+}
+
+.friends-profile-close {
+    float: right;
+
+    padding: 10px 16px;
+
+    border: 1px solid #475c76;
+    border-radius: 12px;
+
+    background: #1a3050;
+    color: white;
+
+    font-size: 18px;
+}
+
+.friends-profile-head {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.friends-profile-head .friends-mascot,
+.friends-profile-head .friends-mascot-fallback {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 24px;
+}
+
+.friends-profile-head h2 {
+    margin: 0 0 6px;
+
+    font-size: 27px;
+    overflow-wrap: anywhere;
+}
+
+.friends-profile-head p {
+    margin: 0;
+
+    color: #a5b9d2;
+}
+
+.friends-bio {
+    margin: 25px 0;
+    padding: 17px;
+
+    background: #192c48;
+    border-radius: 14px;
+
+    color: #cad8e9;
+
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   PLAYER STATISTICS
+========================================================= */
+
+.friends-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.friends-stats > div {
+    padding: 17px 9px;
+
+    background: #1b304f;
+
+    border: 1px solid #344b69;
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.friends-stats strong {
+    display: block;
+
+    color: white;
+    font-size: 23px;
+}
+
+.friends-stats small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #a7b9d2;
+
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+.friends-profile-pet {
+    padding: 18px;
+
+    color: #ffb65b;
+
+    text-align: center;
+    font-weight: 800;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #friendsScreen {
+        padding: 14px 12px 35px;
+    }
+
+    .friends-header {
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .friends-card {
+        padding: 15px 12px;
+        border-radius: 15px;
+    }
+
+    .friends-tabs {
+        gap: 5px;
+    }
+
+    .friends-tabs button {
+        padding: 12px 2px;
+        font-size: 11px;
+    }
+
+    .friends-mascot,
+    .friends-mascot-fallback {
+        width: 51px;
+        height: 51px;
+    }
+
+    .friends-player-row {
+        gap: 9px;
+        flex-wrap: wrap;
+    }
+
+    .friends-row-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .friends-row-actions button {
+        padding: 9px 11px;
+    }
+
+    .friends-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .friends-search button {
+        padding: 10px;
+    }
+
+    .friends-profile-head .friends-mascot,
+    .friends-profile-head .friends-mascot-fallback {
+        width: 92px;
+        height: 92px;
+    }
+
+    .friends-profile-head h2 {
+        font-size: 21px;
+    }
+
+    #friendProfilePanel {
+        padding: 20px 15px 50px;
+    }
+}
