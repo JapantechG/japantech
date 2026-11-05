@@ -644,8 +644,7 @@ function listenRoom()
 
 export function getConnectionInfo() {
 
-    return 
-    {
+    return {
         roomCode,
         playerRole,
         playerId
