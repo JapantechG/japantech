@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "車",
     "reading": "くるま",
-    "meaning": "Ô tô"
+    "meaning": "Ô tô",
+    "meaning_en": "Car"
   },
   {
     "id": 2,
     "word": "運転",
     "reading": "うんてん",
-    "meaning": "Lái xe"
+    "meaning": "Lái xe",
+    "meaning_en": "Driving"
   },
   {
     "id": 3,
     "word": "運転手",
     "reading": "うんてんしゅ",
-    "meaning": "Tài xế"
+    "meaning": "Tài xế",
+    "meaning_en": "Driver"
   },
   {
     "id": 4,
     "word": "運転免許証",
     "reading": "うんてんめんきょしょう",
-    "meaning": "Bằng lái"
+    "meaning": "Bằng lái",
+    "meaning_en": "Driver's license"
   },
   {
     "id": 5,
     "word": "ハンドル",
     "reading": "ハンドル",
-    "meaning": "Vô lăng"
+    "meaning": "Vô lăng",
+    "meaning_en": "Steering wheel"
   },
   {
     "id": 6,
     "word": "アクセル",
     "reading": "アクセル",
-    "meaning": "Chân ga"
+    "meaning": "Chân ga",
+    "meaning_en": "Accelerator pedal"
   },
   {
     "id": 7,
     "word": "ブレーキ",
     "reading": "ブレーキ",
-    "meaning": "Phanh"
+    "meaning": "Phanh",
+    "meaning_en": "Brake"
   },
   {
     "id": 8,
     "word": "クラッチ",
     "reading": "クラッチ",
-    "meaning": "Côn"
+    "meaning": "Côn",
+    "meaning_en": "Clutch"
   },
   {
     "id": 9,
     "word": "シートベルト",
     "reading": "シートベルト",
-    "meaning": "Dây an toàn"
+    "meaning": "Dây an toàn",
+    "meaning_en": "Seat belt"
   },
   {
     "id": 10,
     "word": "バックミラー",
     "reading": "バックミラー",
-    "meaning": "Gương chiếu hậu"
+    "meaning": "Gương chiếu hậu",
+    "meaning_en": "Rearview mirror"
   },
   {
     "id": 11,
     "word": "タイヤ",
     "reading": "タイヤ",
-    "meaning": "Lốp xe"
+    "meaning": "Lốp xe",
+    "meaning_en": "Tire"
   },
   {
     "id": 12,
     "word": "エンジン",
     "reading": "エンジン",
-    "meaning": "Động cơ"
+    "meaning": "Động cơ",
+    "meaning_en": "Engine"
   },
   {
     "id": 13,
     "word": "燃料",
     "reading": "ねんりょう",
-    "meaning": "Nhiên liệu"
+    "meaning": "Nhiên liệu",
+    "meaning_en": "Fuel"
   },
   {
     "id": 14,
     "word": "ガソリン",
     "reading": "ガソリン",
-    "meaning": "Xăng"
+    "meaning": "Xăng",
+    "meaning_en": "Gasoline, petrol"
   },
   {
     "id": 15,
     "word": "駐車",
     "reading": "ちゅうしゃ",
-    "meaning": "Đỗ xe"
+    "meaning": "Đỗ xe",
+    "meaning_en": "Parking"
   },
   {
     "id": 16,
     "word": "車庫",
     "reading": "しゃこ",
-    "meaning": "Nhà để xe"
+    "meaning": "Nhà để xe",
+    "meaning_en": "Garage"
   },
   {
     "id": 17,
     "word": "車検",
     "reading": "しゃけん",
-    "meaning": "Kiểm định ô tô"
+    "meaning": "Kiểm định ô tô",
+    "meaning_en": "Vehicle inspection"
   },
   {
     "id": 18,
     "word": "渋滞",
     "reading": "じゅうたい",
-    "meaning": "Ùn tắc"
+    "meaning": "Ùn tắc",
+    "meaning_en": "Traffic congestion"
   },
   {
     "id": 19,
     "word": "追い越し",
     "reading": "おいこし",
-    "meaning": "Vượt xe"
+    "meaning": "Vượt xe",
+    "meaning_en": "Overtaking"
   },
   {
     "id": 20,
     "word": "速度制限",
     "reading": "そくどせいげん",
-    "meaning": "Giới hạn tốc độ"
+    "meaning": "Giới hạn tốc độ",
+    "meaning_en": "Speed limit"
   }
 ]
