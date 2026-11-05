@@ -607,3 +607,159 @@ export function soloSkillEffect(kind) {
        );
    }
 }
+
+
+/* =====================================================
+   GAME OVER - SAD MASCOT
+===================================================== */
+
+export function showSoloGameOverMascot() {
+
+    const gameOver =
+        document.getElementById("gameOverScreen");
+
+    const card =
+        gameOver?.querySelector(".game-over-card");
+
+    if (!card) return;
+
+    const playerMascot =
+        getMascot();
+
+    let container =
+        document.getElementById(
+            "soloGameOverMascot"
+        );
+
+    if (!container) {
+
+        container = document.createElement("div");
+
+        container.id = "soloGameOverMascot";
+        container.className =
+            "solo-gameover-mascot";
+
+        container.innerHTML = `
+            <div class="solo-gameover-mascot-image">
+                <img id="soloGameOverMascotImg"
+                     alt="Sad Mascot" hidden>
+
+                <span id="soloGameOverMascotEmoji">
+                    🐾
+                </span>
+            </div>
+
+            <div class="solo-gameover-mascot-message">
+                <strong>
+                    DON'T GIVE UP!
+                </strong>
+
+                <span>
+                    Your Mascot is waiting
+                    for another battle.
+                </span>
+            </div>
+        `;
+
+        const title =
+            card.querySelector(".game-over-title");
+
+        if (title) {
+
+            title.insertAdjacentElement(
+                "afterend",
+                container
+            );
+
+        } else {
+
+            card.prepend(container);
+        }
+    }
+
+    const image =
+        document.getElementById(
+            "soloGameOverMascotImg"
+        );
+
+    const emoji =
+        document.getElementById(
+            "soloGameOverMascotEmoji"
+        );
+
+    const kind = playerMascot?.id;
+
+    // Reset previous animation
+    container.classList.remove("sad-active");
+
+    if (kind === "monkey" ||
+        kind === "buffalo") {
+
+        emoji.textContent =
+            kind === "monkey" ? "🐒" : "🐃";
+
+        emoji.hidden = false;
+        image.hidden = true;
+
+        const evolution = Math.max(
+            0,
+            Math.min(
+                4,
+                Math.floor(
+                    Number(playerMascot.evolution) || 0
+                )
+            )
+        );
+
+        const base =
+            `assets/mascot/${kind}.png`;
+
+        const stage = evolution
+            ? `assets/mascot/${kind}-stage-${evolution + 1}.png`
+            : base;
+
+        let triedBase = stage === base;
+
+        image.onload = () => {
+
+            // Ignore image events from an older screen
+            if (image.src !== new URL(
+                image.getAttribute("src"),
+                document.baseURI
+            ).href) return;
+
+            image.hidden = false;
+            emoji.hidden = true;
+        };
+
+        image.onerror = () => {
+
+            if (!triedBase) {
+
+                triedBase = true;
+                image.src = base;
+
+            } else {
+
+                image.hidden = true;
+                emoji.hidden = false;
+            }
+        };
+
+        image.src = stage;
+
+    } else {
+
+        image.hidden = true;
+        image.removeAttribute("src");
+
+        emoji.textContent = "🐾";
+        emoji.hidden = false;
+    }
+
+    // Force animation restart
+    void container.offsetWidth;
+
+    container.classList.add("sad-active");
+}
+
