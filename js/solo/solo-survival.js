@@ -19,6 +19,15 @@ import {
     getSurvivalQuestionTime
 } from "./solo-core.js";
 
+import {
+    startSoloEffects,
+    stopSoloEffects,
+    getSoloMascotId,
+    updateSoloSkill,
+    soloCorrectEffect,
+    soloWrongEffect,
+    soloSkillEffect
+} from "./solo-effects.js";
 
 /* =============================================================
    STATE
@@ -59,6 +68,8 @@ let timer = null;
 let timeLeft = 0;
 
 let questionTime = 10;
+
+let mascotShield = false;
 
 
 /* =============================================================
@@ -149,6 +160,12 @@ export async function startSurvival(config)
 
     stopTimer();
 
+    // Initialize Mascot effects
+    startSoloEffects("survival");
+    
+    // Reset Monkey shield
+    mascotShield = false;
+
     lives = 3;
 
     score = 0;
@@ -177,6 +194,8 @@ export async function startSurvival(config)
         }
         catch (error) {
             gameActive = false;
+
+            stopSoloEffects();
 
             console.error(
                 "[SURVIVAL] Database error:",
@@ -214,8 +233,56 @@ function nextQuestion()
     answerLocked = false;
 
     questionCount++;
-
-    currentQuestion = questions[Math.floor(Math.random()*questions.length)];
+    
+    /* ==========================================
+       MASCOT SKILL SYSTEM
+    ========================================== */
+    
+    // Number of completed questions
+    const completedRounds = questionCount - 1;
+    
+    const mascotType = getSoloMascotId();
+    
+    /* MONKEY - SHIELD EVERY 20 ROUNDS */
+    
+    if (
+        mascotType === "monkey" &&
+        completedRounds > 0 &&
+        completedRounds % 20 === 0 &&
+        !mascotShield
+    ) {
+    
+        mascotShield = true;
+    
+        soloSkillEffect("shield");
+    }
+    
+    /* BUFFALO - HEAL EVERY 30 ROUNDS */
+    
+    if (
+        mascotType === "buffalo" &&
+        completedRounds > 0 &&
+        completedRounds % 30 === 0 &&
+        lives < 3
+    ) {
+    
+        lives++;
+    
+        soloSkillEffect("heal");
+    }
+    
+    /* UPDATE SKILL HUD */
+    
+    updateSoloSkill(
+        completedRounds,
+        mascotShield
+    );
+    
+    /* CONTINUE CURRENT QUESTION */
+    
+    currentQuestion = questions[
+        Math.floor(Math.random() * questions.length)
+    ];
 
 /* =========================================================
    GRAMMAR SENTENCE
@@ -391,9 +458,24 @@ function selectAnswer(button,selectedAnswer)
         }
 
         score += calculateScore();
-
+        
+        /* ==========================================
+           COMBO + PERFECT ANIMATION
+        ========================================== */
+        
+        soloCorrectEffect({
+        
+            combo: combo,
+        
+            perfect:
+                currentConfig.subMode !== "grammar_sentence" &&
+                questionTime > 0 &&
+                timeLeft / questionTime >= 0.7
+        
+        });
+        
         showReading();
-
+        
         updateHUD();
 
         if (isSoloAudioMode(currentConfig.subMode)) 
@@ -421,8 +503,40 @@ function selectAnswer(button,selectedAnswer)
 
     saveWrongQuestion(currentQuestion.id,currentConfig,"solo").catch(error => {console.error("[REVIEW] Save wrong failed:", error);});
     
-    lives--;
-
+    /* ==========================================
+       MONKEY SHIELD PROTECTION
+    ========================================== */
+    
+    const blockedByMascot =
+        getSoloMascotId() === "monkey" &&
+        mascotShield;
+    
+    if (blockedByMascot) {
+    
+        // Consume shield, do not lose HP
+        mascotShield = false;
+    
+    } else {
+    
+        // Normal HP loss
+        lives--;
+    }
+    
+    /* WRONG ANSWER ANIMATION */
+    
+    soloWrongEffect({
+        protectedByMascot: blockedByMascot
+    });
+    
+    /* UPDATE SKILL PROGRESS */
+    
+    updateSoloSkill(
+        questionCount,
+        mascotShield
+    );
+    
+    /* RESET COMBO */
+    
     combo = 0;
 
     showReading();
@@ -517,7 +631,8 @@ function stopTimer()
 }
 
 export function stopSurvival()
-{
+{    
+    stopSoloEffects();
     gameActive = false;
     answerLocked = true;
 
@@ -558,8 +673,28 @@ function handleTimeout()
 
     saveWrongQuestion(currentQuestion.id,currentConfig,"solo").catch(error => {console.error("[REVIEW] Save timeout failed:", error);});
     
-    lives--;
-
+    const blockedByMascot =
+        getSoloMascotId() === "monkey" &&
+        mascotShield;
+    
+    if (blockedByMascot) {
+    
+        mascotShield = false;
+    
+    } else {
+    
+        lives--;
+    }
+    
+    soloWrongEffect({
+        protectedByMascot: blockedByMascot
+    });
+    
+    updateSoloSkill(
+        questionCount,
+        mascotShield
+    );
+    
     combo = 0;
 
     updateHUD();
@@ -716,6 +851,7 @@ function endGame()
     stopSpeech();
 
     playSfx("gameover");
+    stopSoloEffects();
 
 /* =========================================================
    SAVE SOLO RESULT
