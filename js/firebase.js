@@ -102,194 +102,431 @@ function createPlayerId()
 // để tránh người chơi nhập nhầm
 // ============================================================
 
-function generateRoomCode(length = 4) 
-{
-    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+function generateRoomCode(length = 6) {
+
+    const chars =
+        "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+    const random = new Uint32Array(length);
+
+    crypto.getRandomValues(random);
 
     let code = "";
 
-    for (let i = 0; i < length; i++) 
-    {
-        const index = Math.floor(Math.random() * chars.length);
+    for (let i = 0; i < length; i++) {
 
-        code += chars[index];
+        code += chars[
+            random[i] % chars.length
+        ];
     }
 
     return code;
 }
 
+function getPvpPlayer() {
 
-// ============================================================
-// CREATE ROOM
-// ============================================================
+    const user = auth.currentUser;
 
-export async function createRoom(playerName) 
-{
-    playerName = playerName.trim();
-
-    if (!playerName) 
-    {
-        throw new Error("PLAYER_NAME_EMPTY");
+    if (!user) {
+        throw new Error("LOGIN_REQUIRED");
     }
 
-    playerId = createPlayerId();
+    const data = window.currentUserData || {};
 
-    // ----------------------------------------
-    // Tạo room code chưa tồn tại
-    // ----------------------------------------
+    return {
 
-    let code;
-    let roomRef;
+        uid: user.uid,
 
-    while (true) 
-    {
-        code = generateRoomCode();
+        id: user.uid,
 
-        roomRef = ref(db,`rooms/${code}`);
+        name:
+            data.profile?.displayName ||
+            user.displayName ||
+            "Player",
 
-        const snapshot = await get(roomRef);
+        photoURL:
+            data.profile?.photoURL ||
+            user.photoURL ||
+            "",
 
+        batlingoId:
+            data.profile?.batlingoId || "",
 
-        if (!snapshot.exists()) 
-        {
-            break;
-        }
-    }
+        level:
+            Number(data.progress?.level) || 1,
 
-    // ----------------------------------------
-    // Tạo room trên Firebase
-    // ----------------------------------------
-
-    await set(roomRef,
-        {
-            status: "waiting",
-
-            createdAt: Date.now(),
-
-            host: {
-                id: playerId,
-                name: playerName,
-                connected: true
-            },
-
-            guest: null
-        }
-    );
-
-    roomCode = code;
-
-    playerRole = "host";
-
-    // ----------------------------------------
-    // HOST mất kết nối -> xóa ROOM
-    // ----------------------------------------
-
-    const roomDisconnectRef = ref(db, `rooms/${roomCode}`);
-    
-    await onDisconnect(roomDisconnectRef).remove();
-
-    // ----------------------------------------
-    // Bắt đầu theo dõi room
-    // ----------------------------------------
-
-    listenRoom();
-
-
-    console.log("[BatLingo] Room created:",roomCode);
-
-    return roomCode;
+        connected: true
+    };
 }
 
-// ============================================================
-// JOIN ROOM
-// ============================================================
 
-export async function joinRoom(code,playerName) 
-{
-    code = code.trim().toUpperCase();
+function normalizeRoomSettings(options = {}) {
 
-    playerName = playerName.trim();
+    const levels = [
+        "n5", "n4", "n3", "n2", "n1"
+    ];
 
-    if (!code) 
-    {
-        throw new Error("ROOM_CODE_EMPTY");
+    const modes = [
+        "kanji_meaning",
+        "kanji_hiragana",
+        "hiragana_meaning",
+        "meaning_kanji",
+        "audio_meaning",
+        "audio_hiragana",
+        "audio_kanji"
+    ];
+
+    const counts = [10, 20, 30, 50];
+
+    return {
+
+        level: levels.includes(options.level)
+            ? options.level
+            : "n5",
+
+        category: "vocabulary",
+
+        mode: modes.includes(options.mode)
+            ? options.mode
+            : "kanji_meaning",
+
+        count: counts.includes(Number(options.count))
+            ? Number(options.count)
+            : 20
+    };
+}
+
+/* =========================================================
+   CONNECT TO ROOM
+========================================================= */
+
+async function connectPvpRoom(code) {
+
+    const user = auth.currentUser;
+
+    if (!user) {
+        throw new Error("LOGIN_REQUIRED");
     }
 
-    if (!playerName) 
-    {
-        throw new Error("PLAYER_NAME_EMPTY");
-    }
-
-    const roomRef = ref(db,`rooms/${code}`);
-
-    // ----------------------------------------
-    // Đọc room
-    // ----------------------------------------
-
-    const snapshot = await get(roomRef);
-
-
-    // Room không tồn tại
-    if (!snapshot.exists()) 
-    {
-        throw new Error("ROOM_NOT_FOUND");
-    }
-
+    const snapshot = await get(
+        ref(db, `rooms/${code}`)
+    );
 
     const room = snapshot.val();
 
-    // Room đã có người thứ 2
-    if (room.guest?.connected === true) 
-    {
-        throw new Error("ROOM_FULL");
+    if (!room) {
+        throw new Error("ROOM_NOT_FOUND");
     }
 
-    // ----------------------------------------
-    // Tạo player
-    // ----------------------------------------
+    const role =
+        room.host?.uid === user.uid
+            ? "host"
+            : room.guest?.uid === user.uid
+                ? "guest"
+                : null;
 
-    playerId = createPlayerId();
-
-    // ----------------------------------------
-    // Add guest
-    // ----------------------------------------
-
-    await update(roomRef,
-        {
-            guest: 
-            {
-                id: playerId,
-                name: playerName,
-                connected: true
-            },
-
-            status: "connected"
-        }
-    );
+    if (!role) {
+        throw new Error("NOT_ROOM_MEMBER");
+    }
 
     roomCode = code;
+    playerId = user.uid;
+    playerRole = role;
 
-    playerRole = "guest";
+    const presenceRef = ref(
+        db,
+        `rooms/${code}/${role}/connected`
+    );
 
-    // ----------------------------------------
-    // GUEST mất kết nối -> connected = false
-    // ----------------------------------------
-    
-    const connectedRef = ref(db, `rooms/${roomCode}/guest/connected`);
-    
-    await onDisconnect(connectedRef).set(false);
-    
-    // ----------------------------------------
-    // Listen room
-    // ----------------------------------------
+    await onDisconnect(presenceRef).set(false);
 
     listenRoom();
-
-    console.log("[BatLingo] Joined room:",roomCode);
-
-    return roomCode;
 }
 
+
+/* =========================================================
+   CREATE ROOM
+========================================================= */
+
+export async function createRoom(
+    playerName,
+    options = {}
+) {
+
+    const player = getPvpPlayer();
+
+    if (playerName) {
+
+        player.name = String(playerName)
+            .trim()
+            .slice(0, 20);
+    }
+
+    const settings =
+        normalizeRoomSettings(options);
+
+    for (let attempt = 0; attempt < 30; attempt++) {
+
+        const code = generateRoomCode(6);
+
+        const roomRef = ref(
+            db,
+            `rooms/${code}`
+        );
+
+        const result = await runTransaction(
+            roomRef,
+            current => {
+
+                if (current !== null) {
+                    return;
+                }
+
+                return {
+
+                    status: "waiting",
+
+                    createdAt: Date.now(),
+
+                    visibility:
+                        options.visibility === "public"
+                            ? "public"
+                            : "private",
+
+                    name: String(
+                        options.name ||
+                        `${player.name}'s Room`
+                    ).slice(0, 32),
+
+                    settings,
+
+                    host: player,
+
+                    guest: null
+                };
+            },
+            { applyLocally: false }
+        );
+
+        if (result.committed) {
+
+            await connectPvpRoom(code);
+
+            console.log(
+                "[PVP] Created room:",
+                code
+            );
+
+            return code;
+        }
+    }
+
+    throw new Error("ROOM_CREATE_FAILED");
+}
+
+
+/* =========================================================
+   JOIN ROOM
+========================================================= */
+
+export async function joinRoom(
+    code,
+    playerName
+) {
+
+    code = String(code || "")
+        .trim()
+        .toUpperCase();
+
+    if (!/^[A-HJ-NP-Z2-9]{4,6}$/.test(code)) {
+        throw new Error("ROOM_CODE_INVALID");
+    }
+
+    const player = getPvpPlayer();
+
+    if (playerName) {
+
+        player.name = String(playerName)
+            .trim()
+            .slice(0, 20);
+    }
+
+    const roomRef = ref(
+        db,
+        `rooms/${code}`
+    );
+
+    const result = await runTransaction(
+        roomRef,
+        room => {
+
+            if (!room) {
+                return;
+            }
+
+            if (
+                room.status !== "waiting" &&
+                room.status !== "connected"
+            ) {
+                return;
+            }
+
+            if (!room.host?.connected) {
+                return;
+            }
+
+            if (room.host.uid === player.uid) {
+                return;
+            }
+
+            if (
+                room.guest?.connected &&
+                room.guest.uid !== player.uid
+            ) {
+                return;
+            }
+
+            room.guest = player;
+            room.status = "connected";
+
+            return room;
+        },
+        { applyLocally: false }
+    );
+
+    if (!result.committed) {
+
+        const snapshot = await get(roomRef);
+
+        throw new Error(
+            snapshot.exists()
+                ? "ROOM_FULL"
+                : "ROOM_NOT_FOUND"
+        );
+    }
+
+    await connectPvpRoom(code);
+
+    console.log(
+        "[PVP] Joined room:",
+        code
+    );
+
+    return code;
+}
+
+
+/* =========================================================
+   UPDATE ROOM SETTINGS
+========================================================= */
+
+export async function updateRoomSettings(
+    options = {}
+) {
+
+    if (!roomCode || playerRole !== "host") {
+        throw new Error("HOST_ONLY");
+    }
+
+    const settings =
+        normalizeRoomSettings(options);
+
+    const result = await runTransaction(
+        ref(db, `rooms/${roomCode}`),
+        room => {
+
+            if (!room) {
+                return;
+            }
+
+            if (
+                room.host?.uid !==
+                auth.currentUser?.uid
+            ) {
+                return;
+            }
+
+            if (
+                room.status !== "waiting" &&
+                room.status !== "connected"
+            ) {
+                return;
+            }
+
+            room.name = String(
+                options.name || "JLPT BATTLE"
+            ).slice(0, 32);
+
+            room.visibility =
+                options.visibility === "public"
+                    ? "public"
+                    : "private";
+
+            room.settings = settings;
+
+            return room;
+        },
+        { applyLocally: false }
+    );
+
+    if (!result.committed) {
+        throw new Error("ROOM_SETTINGS_FAILED");
+    }
+}
+
+
+/* =========================================================
+   TRANSFER HOST
+========================================================= */
+
+export async function transferRoomHost() {
+
+    if (!roomCode || playerRole !== "host") {
+        throw new Error("HOST_ONLY");
+    }
+
+    const result = await runTransaction(
+        ref(db, `rooms/${roomCode}`),
+        room => {
+
+            if (!room) {
+                return;
+            }
+
+            if (
+                room.host?.uid !==
+                auth.currentUser?.uid
+            ) {
+                return;
+            }
+
+            if (!room.guest?.connected) {
+                return;
+            }
+
+            if (
+                room.status !== "waiting" &&
+                room.status !== "connected"
+            ) {
+                return;
+            }
+
+            const oldHost = room.host;
+
+            room.host = room.guest;
+            room.guest = oldHost;
+
+            room.rematch = null;
+
+            return room;
+        },
+        { applyLocally: false }
+    );
+
+    if (!result.committed) {
+        throw new Error("HOST_TRANSFER_FAILED");
+    }
+}
 // ============================================================
 // LISTEN ROOM
 //
@@ -338,6 +575,46 @@ function listenRoom()
                 }
 
                 const room = snapshot.val();
+
+                const uid = auth.currentUser?.uid;
+
+                const newRole =
+                    room.host?.uid === uid
+                        ? "host"
+                        : room.guest?.uid === uid
+                            ? "guest"
+                            : null;
+                
+                if (!newRole) {
+                
+                    resetRoomConnection();
+                
+                    return;
+                }
+                
+                if (playerRole !== newRole) {
+                
+                    const oldRole = playerRole;
+                
+                    if (oldRole) {
+                
+                        onDisconnect(
+                            ref(
+                                db,
+                                `rooms/${roomCode}/${oldRole}/connected`
+                            )
+                        ).cancel().catch(console.error);
+                    }
+                
+                    playerRole = newRole;
+                
+                    onDisconnect(
+                        ref(
+                            db,
+                            `rooms/${roomCode}/${newRole}/connected`
+                        )
+                    ).set(false).catch(console.error);
+                }
 
                 console.log("[BatLingo] Room update:",room);
 
@@ -502,28 +779,77 @@ export async function finishRoomGame(hostScore,guestScore)
     );
 }
 
-export async function leaveRoom()
-{
-    if (!roomCode || !playerRole) 
-    {
+export async function leaveRoom() {
+
+    if (!roomCode || !playerRole) {
         return;
     }
 
-    const currentRoomCode = roomCode;
-    const currentRole = playerRole;
+    const code = roomCode;
+    const role = playerRole;
+    const uid = auth.currentUser?.uid;
 
-    if (currentRole === "host") 
-    {
-        await remove(ref(db, `rooms/${currentRoomCode}`));
+    const presenceRef = ref(
+        db,
+        `rooms/${code}/${role}/connected`
+    );
+
+    await onDisconnect(presenceRef).cancel();
+
+    try {
+
+        await runTransaction(
+            ref(db, `rooms/${code}`),
+            room => {
+
+                if (!room) {
+                    return;
+                }
+
+                if (
+                    role === "host" &&
+                    room.host?.uid === uid
+                ) {
+
+                    if (room.guest?.connected) {
+
+                        room.host = room.guest;
+                        room.guest = null;
+
+                        room.status = "waiting";
+                        room.match = null;
+                        room.rematch = null;
+
+                        return room;
+                    }
+
+                    return null;
+                }
+
+                if (
+                    role === "guest" &&
+                    room.guest?.uid === uid
+                ) {
+
+                    room.guest = null;
+                    room.status = "waiting";
+
+                    room.match = null;
+                    room.rematch = null;
+
+                    return room;
+                }
+
+                return;
+            },
+            { applyLocally: false }
+        );
+
+    } finally {
+
+        resetRoomConnection();
     }
-    else if (currentRole === "guest") 
-    {
-        await update(ref(db, `rooms/${currentRoomCode}`), {"guest/connected": false,status: "waiting"});
-    }
-    
-    resetRoomConnection();
 }
-
 export function resetRoomConnection()
 {
 
