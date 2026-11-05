@@ -1712,7 +1712,12 @@ async function startPvpRematch()
 
         /* Random bộ 20 câu mới*/
 
-        const questionIds = createQuestionIds(database,20);
+        const questionIds = createQuestionIds(
+            database,
+            currentPvpRoom?.settings?.count ||
+            oldMatch.questionIds?.length ||
+            20
+        );
 
         const questions = createPvpQuestions(database,questionIds);
 
