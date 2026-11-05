@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="./css/auth.css">
     <link rel="stylesheet" href="css/flashcard.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/friends.css">
     <link rel="stylesheet" href="css/rank.css">
     <link rel="stylesheet" href="css/leaderboard.css">
     <link rel="stylesheet" href="css/ranked-game.css">
@@ -669,13 +670,11 @@
             <button
                 id="batHomeFriends"
                 class="bat-home-quick-item"
-                type="button"
-                disabled>
-
+                type="button">
+            
                 <span>👥</span>
                 <small>FRIENDS</small>
-                <em>SOON</em>
-
+            
             </button>
 
             <button
@@ -3014,7 +3013,138 @@
 
 </section>
 
+<!-- =====================================================
+     BATLINGO FRIENDS SCREEN
+===================================================== -->
 
+<section
+    id="friendsScreen"
+    class="friends-screen hidden">
+
+    <div class="friends-shell">
+
+        <!-- HEADER -->
+
+        <header class="friends-header">
+
+            <button
+                id="friendsBackBtn"
+                class="friends-back"
+                type="button">
+                ←
+            </button>
+
+            <div class="friends-header-title">
+
+                <h1>👥 FRIENDS</h1>
+
+                <p>
+                    Connect with other BatLingo players
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- SEARCH PLAYER -->
+
+        <section class="friends-card">
+
+            <h2>🔎 FIND PLAYER</h2>
+
+            <p class="friends-hint">
+                Search by BatLingo ID
+            </p>
+
+            <div class="friends-search">
+
+                <input
+                    id="friendsSearchInput"
+                    type="text"
+                    maxlength="30"
+                    autocomplete="off"
+                    placeholder="BLG-0000001">
+
+                <button
+                    id="friendsSearchBtn"
+                    class="primary"
+                    type="button">
+
+                    SEARCH
+
+                </button>
+
+            </div>
+
+            <div
+                id="friendsMessage"
+                class="friends-message"
+                role="status">
+            </div>
+
+            <div id="friendsSearchResult"></div>
+
+        </section>
+
+
+        <!-- TABS -->
+
+        <nav class="friends-tabs">
+
+            <button
+                type="button"
+                class="active"
+                data-friends-tab="friends">
+
+                FRIENDS
+
+                <span id="friendsCount">0</span>
+
+            </button>
+
+            <button
+                type="button"
+                data-friends-tab="requests">
+
+                REQUESTS
+
+                <span id="friendsRequestCount">0</span>
+
+            </button>
+
+            <button
+                type="button"
+                data-friends-tab="sent">
+
+                SENT
+
+                <span id="friendsSentCount">0</span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- PLAYER LIST -->
+
+        <section class="friends-card">
+
+            <div id="friendsList"></div>
+
+        </section>
+
+    </div>
+
+
+    <!-- FRIEND PUBLIC PROFILE -->
+
+    <aside
+        id="friendProfilePanel"
+        class="hidden">
+    </aside>
+
+</section>
 
     <!-- =====================================================
          AUDIO
