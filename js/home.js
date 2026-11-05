@@ -156,7 +156,7 @@ function updateHomeMascot(userData = null) {
     );
 
     const basePath =
-        `assets/mascot/${mascotType}.png`;
+        `assets/mascot/${mascotType}.webp`;
 
     const stagePath = evolution === 0
         ? basePath
