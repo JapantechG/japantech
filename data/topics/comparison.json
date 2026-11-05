@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "比較",
     "reading": "ひかく",
-    "meaning": "So sánh"
+    "meaning": "So sánh",
+    "meaning_en": "Comparison"
   },
   {
     "id": 2,
     "word": "同じ",
     "reading": "おなじ",
-    "meaning": "Giống nhau"
+    "meaning": "Giống nhau",
+    "meaning_en": "Same, identical"
   },
   {
     "id": 3,
     "word": "異なる",
     "reading": "ことなる",
-    "meaning": "Khác nhau"
+    "meaning": "Khác nhau",
+    "meaning_en": "Differ, be different"
   },
   {
     "id": 4,
     "word": "違い",
     "reading": "ちがい",
-    "meaning": "Sự khác biệt"
+    "meaning": "Sự khác biệt",
+    "meaning_en": "Difference"
   },
   {
     "id": 5,
     "word": "類似",
     "reading": "るいじ",
-    "meaning": "Tương tự"
+    "meaning": "Tương tự",
+    "meaning_en": "Similarity, resemblance"
   },
   {
     "id": 6,
     "word": "共通",
     "reading": "きょうつう",
-    "meaning": "Chung"
+    "meaning": "Chung",
+    "meaning_en": "Common, shared"
   },
   {
     "id": 7,
     "word": "以上",
     "reading": "いじょう",
-    "meaning": "Từ mức ... trở lên"
+    "meaning": "Từ mức ... trở lên",
+    "meaning_en": "At least, or more"
   },
   {
     "id": 8,
     "word": "以下",
     "reading": "いか",
-    "meaning": "Từ mức ... trở xuống"
+    "meaning": "Từ mức ... trở xuống",
+    "meaning_en": "At most, or less"
   },
   {
     "id": 9,
     "word": "未満",
     "reading": "みまん",
-    "meaning": "Chưa tới mức"
+    "meaning": "Chưa tới mức",
+    "meaning_en": "Less than, below"
   },
   {
     "id": 10,
     "word": "超える",
     "reading": "こえる",
-    "meaning": "Vượt quá"
+    "meaning": "Vượt quá",
+    "meaning_en": "Exceed, surpass"
   },
   {
     "id": 11,
     "word": "最大",
     "reading": "さいだい",
-    "meaning": "Lớn nhất"
+    "meaning": "Lớn nhất",
+    "meaning_en": "Maximum, largest"
   },
   {
     "id": 12,
     "word": "最小",
     "reading": "さいしょう",
-    "meaning": "Nhỏ nhất"
+    "meaning": "Nhỏ nhất",
+    "meaning_en": "Minimum, smallest"
   },
   {
     "id": 13,
     "word": "最高",
     "reading": "さいこう",
-    "meaning": "Cao nhất"
+    "meaning": "Cao nhất",
+    "meaning_en": "Highest, best"
   },
   {
     "id": 14,
     "word": "最低",
     "reading": "さいてい",
-    "meaning": "Thấp nhất"
+    "meaning": "Thấp nhất",
+    "meaning_en": "Lowest, worst"
   },
   {
     "id": 15,
     "word": "平均",
     "reading": "へいきん",
-    "meaning": "Trung bình"
+    "meaning": "Trung bình",
+    "meaning_en": "Average"
   },
   {
     "id": 16,
     "word": "大幅",
     "reading": "おおはば",
-    "meaning": "Mức lớn, đáng kể"
+    "meaning": "Mức lớn, đáng kể",
+    "meaning_en": "Large extent, significant"
   },
   {
     "id": 17,
     "word": "わずか",
     "reading": "わずか",
-    "meaning": "Chỉ một chút"
+    "meaning": "Chỉ một chút",
+    "meaning_en": "Slight, only a little"
   },
   {
     "id": 18,
     "word": "多少",
     "reading": "たしょう",
-    "meaning": "Ít nhiều"
+    "meaning": "Ít nhiều",
+    "meaning_en": "Somewhat, more or less"
   },
   {
     "id": 19,
     "word": "圧倒的",
     "reading": "あっとうてき",
-    "meaning": "Áp đảo"
+    "meaning": "Áp đảo",
+    "meaning_en": "Overwhelming, dominant"
   },
   {
     "id": 20,
     "word": "ほぼ",
     "reading": "ほぼ",
-    "meaning": "Hầu như"
+    "meaning": "Hầu như",
+    "meaning_en": "Almost, nearly"
   }
 ]
