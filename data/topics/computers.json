@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "コンピューター",
     "reading": "コンピューター",
-    "meaning": "Máy tính"
+    "meaning": "Máy tính",
+    "meaning_en": "Computer"
   },
   {
     "id": 2,
     "word": "パソコン",
     "reading": "パソコン",
-    "meaning": "Máy tính cá nhân"
+    "meaning": "Máy tính cá nhân",
+    "meaning_en": "Personal computer"
   },
   {
     "id": 3,
     "word": "ノートパソコン",
     "reading": "ノートパソコン",
-    "meaning": "Laptop"
+    "meaning": "Laptop",
+    "meaning_en": "Laptop computer"
   },
   {
     "id": 4,
     "word": "デスクトップ",
     "reading": "デスクトップ",
-    "meaning": "Máy tính để bàn"
+    "meaning": "Máy tính để bàn",
+    "meaning_en": "Desktop computer"
   },
   {
     "id": 5,
     "word": "画面",
     "reading": "がめん",
-    "meaning": "Màn hình"
+    "meaning": "Màn hình",
+    "meaning_en": "Screen, display"
   },
   {
     "id": 6,
     "word": "キーボード",
     "reading": "キーボード",
-    "meaning": "Bàn phím"
+    "meaning": "Bàn phím",
+    "meaning_en": "Keyboard"
   },
   {
     "id": 7,
     "word": "マウス",
     "reading": "マウス",
-    "meaning": "Chuột máy tính"
+    "meaning": "Chuột máy tính",
+    "meaning_en": "Computer mouse"
   },
   {
     "id": 8,
     "word": "プリンター",
     "reading": "プリンター",
-    "meaning": "Máy in"
+    "meaning": "Máy in",
+    "meaning_en": "Printer"
   },
   {
     "id": 9,
     "word": "メモリー",
     "reading": "メモリー",
-    "meaning": "Bộ nhớ"
+    "meaning": "Bộ nhớ",
+    "meaning_en": "Memory"
   },
   {
     "id": 10,
     "word": "ハードディスク",
     "reading": "ハードディスク",
-    "meaning": "Ổ cứng"
+    "meaning": "Ổ cứng",
+    "meaning_en": "Hard disk drive"
   },
   {
     "id": 11,
     "word": "保存",
     "reading": "ほぞん",
-    "meaning": "Lưu"
+    "meaning": "Lưu",
+    "meaning_en": "Save"
   },
   {
     "id": 12,
     "word": "削除",
     "reading": "さくじょ",
-    "meaning": "Xóa"
+    "meaning": "Xóa",
+    "meaning_en": "Delete"
   },
   {
     "id": 13,
     "word": "コピー",
     "reading": "コピー",
-    "meaning": "Sao chép"
+    "meaning": "Sao chép",
+    "meaning_en": "Copy"
   },
   {
     "id": 14,
     "word": "貼り付け",
     "reading": "はりつけ",
-    "meaning": "Dán"
+    "meaning": "Dán",
+    "meaning_en": "Paste"
   },
   {
     "id": 15,
     "word": "ファイル",
     "reading": "ファイル",
-    "meaning": "Tệp"
+    "meaning": "Tệp",
+    "meaning_en": "File"
   },
   {
     "id": 16,
     "word": "フォルダー",
     "reading": "フォルダー",
-    "meaning": "Thư mục"
+    "meaning": "Thư mục",
+    "meaning_en": "Folder"
   },
   {
     "id": 17,
     "word": "設定",
     "reading": "せってい",
-    "meaning": "Cài đặt"
+    "meaning": "Cài đặt",
+    "meaning_en": "Settings, configuration"
   },
   {
     "id": 18,
     "word": "更新",
     "reading": "こうしん",
-    "meaning": "Cập nhật"
+    "meaning": "Cập nhật",
+    "meaning_en": "Update"
   },
   {
     "id": 19,
     "word": "再起動",
     "reading": "さいきどう",
-    "meaning": "Khởi động lại"
+    "meaning": "Khởi động lại",
+    "meaning_en": "Restart, reboot"
   },
   {
     "id": 20,
     "word": "不具合",
     "reading": "ふぐあい",
-    "meaning": "Lỗi, trục trặc"
+    "meaning": "Lỗi, trục trặc",
+    "meaning_en": "Malfunction, software issue"
   }
 ]
