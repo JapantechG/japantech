@@ -529,7 +529,7 @@
             rgba(4, 8, 20, 0.72),
             rgba(4, 8, 20, 0.82)
         ),
-        url("../assets/images/backgrounds/flashcard-bg.png");
+        url("../assets/images/backgrounds/flashcard-bg.webp");
 
     background-size: cover;
     background-position: center;
