@@ -16,6 +16,17 @@ const MILESTONES = new Map([
 ]);
 
 let overlayTimer = null;
+const SOLO_FX_DURATION = {
+    perfect: 2200,
+    comboSmall: 3000,
+    comboLarge: 3500,
+    comboLegend: 4000,
+    skill: 2800
+};
+
+// Prevent low-priority effects from replacing combos
+let activeEffectPriority = 0;
+
 let lastImageRequest = 0;
 
 let enabled = false;
@@ -229,6 +240,7 @@ export function startSoloEffects(
     if (!ensureUI()) return;
 
     clearTimeout(overlayTimer);
+   activeEffectPriority = 0;
 
     enabled = true;
     mode = type;
@@ -274,6 +286,7 @@ export function stopSoloEffects() {
     enabled = false;
 
     clearTimeout(overlayTimer);
+   activeEffectPriority = 0;
 
     $("soloFxOverlay")?.classList.remove(
         "visible",
@@ -392,18 +405,33 @@ function animateMascot(className) {
    ANIMATED BANNER
 ===================================================== */
 
+
 function banner(
     title,
     subtitle,
     variant,
-    kicker = "BATLINGO"
+    kicker = "BATLINGO",
+    duration = 2200,
+    priority = 1
 ) {
 
     if (!enabled || !ensureUI()) return;
 
     const overlay = $("soloFxOverlay");
 
+    if (!overlay) return;
+
+    // Do not overwrite a more important effect
+    if (
+        overlay.classList.contains("visible") &&
+        priority < activeEffectPriority
+    ) {
+        return;
+    }
+
     clearTimeout(overlayTimer);
+
+    activeEffectPriority = priority;
 
     overlay.classList.remove(
         "visible",
@@ -417,6 +445,12 @@ function banner(
     $("soloFxSubtitle").textContent = subtitle;
     $("soloFxKicker").textContent = kicker;
 
+    // CSS animation follows display duration
+    overlay.style.setProperty(
+        "--solo-fx-duration",
+        `${duration}ms`
+    );
+
     void overlay.offsetWidth;
 
     overlay.classList.add(
@@ -428,12 +462,17 @@ function banner(
 
         overlay.classList.remove("visible");
 
-    }, 1120);
+        activeEffectPriority = 0;
+        overlayTimer = null;
+
+    }, duration);
 }
+
 
 /* =====================================================
    CORRECT ANSWER EFFECT
 ===================================================== */
+
 
 export function soloCorrectEffect({
     combo = 0,
@@ -462,11 +501,27 @@ export function soloCorrectEffect({
 
         if (milestone) {
 
+            let duration =
+                SOLO_FX_DURATION.comboSmall;
+
+            if (combo >= 100) {
+
+                duration =
+                    SOLO_FX_DURATION.comboLegend;
+
+            } else if (combo >= 30) {
+
+                duration =
+                    SOLO_FX_DURATION.comboLarge;
+            }
+
             banner(
                 milestone[0],
                 milestone[1],
                 "combo",
-                "🔥 STREAK MILESTONE"
+                "🔥 STREAK MILESTONE",
+                duration,
+                3
             );
 
             return;
@@ -479,10 +534,13 @@ export function soloCorrectEffect({
             "PERFECT!",
             "LIGHTNING FAST",
             "perfect",
-            "✨ GREAT ANSWER"
+            "✨ GREAT ANSWER",
+            SOLO_FX_DURATION.perfect,
+            1
         );
     }
 }
+
 
 /* =====================================================
    WRONG ANSWER EFFECT
@@ -500,18 +558,20 @@ export function soloWrongEffect({
 
         animateMascot("skill-active");
 
-        banner(
-            "SHIELD SAVED!",
-            "NO HP LOST",
-            "skill",
-            "🐒 MONKEY SKILL"
-        );
-
-    } else {
-
-        animateMascot("ouch");
-    }
-}
+   banner(
+       "SHIELD SAVED!",
+       "NO HP LOST",
+       "skill",
+       "🐒 MONKEY SKILL",
+       SOLO_FX_DURATION.skill,
+       2
+   );
+   
+       } else {
+   
+           animateMascot("ouch");
+       }
+   }
 
 /* =====================================================
    SKILL ACTIVATION EFFECT
@@ -523,23 +583,27 @@ export function soloSkillEffect(kind) {
 
     animateMascot("skill-active");
 
-    if (kind === "heal") {
-
-        banner(
-            "+1 HP",
-            "IRON WILL ACTIVATED",
-            "skill",
-            "🐃 BUFFALO SKILL"
-        );
-    }
-
-    if (kind === "shield") {
-
-        banner(
-            "SHIELD READY",
-            "NEXT WRONG ANSWER IS BLOCKED",
-            "skill",
-            "🐒 MONKEY SKILL"
-        );
-    }
+   if (kind === "heal") {
+   
+       banner(
+           "+1 HP",
+           "IRON WILL ACTIVATED",
+           "skill",
+           "🐃 BUFFALO SKILL",
+           SOLO_FX_DURATION.skill,
+           2
+       );
+   }
+   
+   if (kind === "shield") {
+   
+       banner(
+           "SHIELD READY",
+           "NEXT WRONG ANSWER IS BLOCKED",
+           "skill",
+           "🐒 MONKEY SKILL",
+           SOLO_FX_DURATION.skill,
+           2
+       );
+   }
 }
