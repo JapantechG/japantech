@@ -144,7 +144,9 @@
 }
 
 .solo-fx-overlay.visible .solo-fx-burst {
-    animation: soloFxBurst 1.05s ease-out both;
+    animation: soloFxBurst
+        var(--solo-fx-duration, 2200ms)
+        ease-out both;
 }
 
 /* COMBO CARD */
@@ -175,7 +177,8 @@
 }
 
 .solo-fx-overlay.visible .solo-fx-card {
-    animation: soloFxPop 1.06s
+    animation: soloFxPop
+        var(--solo-fx-duration, 2200ms)
         cubic-bezier(.2,1.2,.3,1) both;
 }
 
@@ -263,39 +266,57 @@
    KEYFRAMES
 ========================================== */
 
+
 @keyframes soloFxPop {
+
     0% {
         opacity: 0;
         transform:
-            translateY(20px)
-            scale(.6)
-            rotate(-5deg);
+            translateY(25px)
+            scale(.65)
+            rotate(-4deg);
+    }
+
+    10% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1.15)
+            rotate(2deg);
+    }
+
+    18% {
+        opacity: 1;
+        transform: scale(.98);
     }
 
     25% {
         opacity: 1;
-        transform:
-            translateY(0)
-            scale(1.13)
-            rotate(2deg);
+        transform: scale(1);
     }
 
-    42% {
-        transform: scale(.98);
-    }
+    /* Hold for reading */
 
-    75% {
+    80% {
         opacity: 1;
         transform: scale(1);
+    }
+
+    92% {
+        opacity: 1;
+        transform:
+            scale(1.04)
+            translateY(-4px);
     }
 
     100% {
         opacity: 0;
         transform:
             scale(1.08)
-            translateY(-7px);
+            translateY(-10px);
     }
 }
+
 
 @keyframes soloFxBurst {
     0% {
