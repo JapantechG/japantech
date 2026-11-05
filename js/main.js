@@ -81,6 +81,15 @@ import {
     openLeaderboard
 } from "./leaderboard.js";
 
+/* ==========================================
+   FRIENDS SYSTEM
+========================================== */
+
+import {
+    initFriends,
+    openFriends
+} from "./friends.js";
+
 import { initRankedGame } from "./ranked-game.js";
 
 import { initJLPTExam } from "./jlpt-exam-ui.js";
@@ -97,11 +106,25 @@ initMascotEvolution();
 
 initJLPTExam();
 
+initFriends();
+
 // ==========================================
 // QUICK ACCESS - LEADERBOARD
 // ==========================================
 
 initLeaderboard();
+
+/* ==========================================
+   HOME - OPEN FRIENDS
+========================================== */
+
+document.getElementById("batHomeFriends")
+    ?.addEventListener("click", () => {
+
+        console.log("[HOME] Open Friends");
+
+        openFriends();
+    });
 
 const btnHomeLeaderboard =
     document.getElementById("batHomeLeaderboard");
