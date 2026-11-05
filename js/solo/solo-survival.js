@@ -26,7 +26,8 @@ import {
     updateSoloSkill,
     soloCorrectEffect,
     soloWrongEffect,
-    soloSkillEffect
+    soloSkillEffect,
+    showSoloGameOverMascot
 } from "./solo-effects.js";
 
 /* =============================================================
@@ -891,6 +892,9 @@ saveSoloResult({
     const gameOverScreen = document.getElementById("gameOverScreen");
 
     gameOverScreen.classList.remove("hidden");
+
+    // Display sad Mascot on Game Over screen
+    showSoloGameOverMascot();
 
     document.getElementById("finalScore").textContent = score;
 
