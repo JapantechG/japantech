@@ -45,7 +45,7 @@ export const MASCOT_CONFIG = Object.freeze({
             interval: 20
         },
 
-        image: "assets/mascot/monkey.png",
+        image: "assets/mascot/monkey.webp",
         emoji: "🐒"
     },
 
@@ -76,7 +76,7 @@ export const MASCOT_CONFIG = Object.freeze({
             interval: 30
         },
 
-        image: "assets/mascot/buffalo.png",
+        image: "assets/mascot/buffalo.webp",
         emoji: "🐃"
     }
 });
