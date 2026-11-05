@@ -17,7 +17,7 @@
         max(25px, env(safe-area-inset-bottom));
 
     background-image:
-        url("../assets/images/backgrounds/lobby-bg.png");
+        url("../assets/images/backgrounds/lobby-bg-desktop.webp");
 
     background-size: cover;
     background-position: center;
