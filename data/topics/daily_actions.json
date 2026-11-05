@@ -1,146 +1,171 @@
+
 [
   {
     "id": 1,
     "word": "起きる",
     "reading": "おきる",
-    "meaning": "Thức dậy"
+    "meaning": "Thức dậy",
+    "meaning_en": "Wake up, get up"
   },
   {
     "id": 2,
     "word": "寝る",
     "reading": "ねる",
-    "meaning": "Ngủ"
+    "meaning": "Ngủ",
+    "meaning_en": "Sleep, go to bed"
   },
   {
     "id": 3,
     "word": "顔を洗う",
     "reading": "かおをあらう",
-    "meaning": "Rửa mặt"
+    "meaning": "Rửa mặt",
+    "meaning_en": "Wash one's face"
   },
   {
     "id": 4,
     "word": "歯を磨く",
     "reading": "はをみがく",
-    "meaning": "Đánh răng"
+    "meaning": "Đánh răng",
+    "meaning_en": "Brush one's teeth"
   },
   {
     "id": 5,
     "word": "着替える",
     "reading": "きがえる",
-    "meaning": "Thay quần áo"
+    "meaning": "Thay quần áo",
+    "meaning_en": "Change clothes"
   },
   {
     "id": 6,
     "word": "食べる",
     "reading": "たべる",
-    "meaning": "Ăn"
+    "meaning": "Ăn",
+    "meaning_en": "Eat"
   },
   {
     "id": 7,
     "word": "飲む",
     "reading": "のむ",
-    "meaning": "Uống"
+    "meaning": "Uống",
+    "meaning_en": "Drink"
   },
   {
     "id": 8,
     "word": "歩く",
     "reading": "あるく",
-    "meaning": "Đi bộ"
+    "meaning": "Đi bộ",
+    "meaning_en": "Walk"
   },
   {
     "id": 9,
     "word": "走る",
     "reading": "はしる",
-    "meaning": "Chạy"
+    "meaning": "Chạy",
+    "meaning_en": "Run"
   },
   {
     "id": 10,
     "word": "座る",
     "reading": "すわる",
-    "meaning": "Ngồi"
+    "meaning": "Ngồi",
+    "meaning_en": "Sit down"
   },
   {
     "id": 11,
     "word": "立つ",
     "reading": "たつ",
-    "meaning": "Đứng"
+    "meaning": "Đứng",
+    "meaning_en": "Stand up"
   },
   {
     "id": 12,
     "word": "開ける",
     "reading": "あける",
-    "meaning": "Mở"
+    "meaning": "Mở",
+    "meaning_en": "Open"
   },
   {
     "id": 13,
     "word": "閉める",
     "reading": "しめる",
-    "meaning": "Đóng"
+    "meaning": "Đóng",
+    "meaning_en": "Close, shut"
   },
   {
     "id": 14,
     "word": "持つ",
     "reading": "もつ",
-    "meaning": "Cầm, mang"
+    "meaning": "Cầm, mang",
+    "meaning_en": "Hold, carry"
   },
   {
     "id": 15,
     "word": "置く",
     "reading": "おく",
-    "meaning": "Đặt"
+    "meaning": "Đặt",
+    "meaning_en": "Put, place"
   },
   {
     "id": 16,
     "word": "取る",
     "reading": "とる",
-    "meaning": "Lấy"
+    "meaning": "Lấy",
+    "meaning_en": "Take, pick up"
   },
   {
     "id": 17,
     "word": "入れる",
     "reading": "いれる",
-    "meaning": "Cho vào"
+    "meaning": "Cho vào",
+    "meaning_en": "Put in, insert"
   },
   {
     "id": 18,
     "word": "出す",
     "reading": "だす",
-    "meaning": "Lấy ra"
+    "meaning": "Lấy ra",
+    "meaning_en": "Take out"
   },
   {
     "id": 19,
     "word": "片付ける",
     "reading": "かたづける",
-    "meaning": "Dọn dẹp"
+    "meaning": "Dọn dẹp",
+    "meaning_en": "Tidy up, put away"
   },
   {
     "id": 20,
     "word": "掃除する",
     "reading": "そうじする",
-    "meaning": "Lau dọn"
+    "meaning": "Lau dọn",
+    "meaning_en": "Clean"
   },
   {
     "id": 21,
     "word": "洗濯する",
     "reading": "せんたくする",
-    "meaning": "Giặt đồ"
+    "meaning": "Giặt đồ",
+    "meaning_en": "Do the laundry"
   },
   {
     "id": 22,
     "word": "買う",
     "reading": "かう",
-    "meaning": "Mua"
+    "meaning": "Mua",
+    "meaning_en": "Buy"
   },
   {
     "id": 23,
     "word": "帰る",
     "reading": "かえる",
-    "meaning": "Trở về"
+    "meaning": "Trở về",
+    "meaning_en": "Return, go home"
   },
   {
     "id": 24,
     "word": "休む",
     "reading": "やすむ",
-    "meaning": "Nghỉ ngơi"
+    "meaning": "Nghỉ ngơi",
+    "meaning_en": "Rest, take a break"
   }
 ]
