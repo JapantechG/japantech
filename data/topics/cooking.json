@@ -1,122 +1,143 @@
+
 [
   {
     "id": 1,
     "word": "料理",
     "reading": "りょうり",
-    "meaning": "Nấu ăn, món ăn"
+    "meaning": "Nấu ăn, món ăn",
+    "meaning_en": "Cooking, dish"
   },
   {
     "id": 2,
     "word": "調理",
     "reading": "ちょうり",
-    "meaning": "Chế biến món ăn"
+    "meaning": "Chế biến món ăn",
+    "meaning_en": "Food preparation, cooking"
   },
   {
     "id": 3,
     "word": "切る",
     "reading": "きる",
-    "meaning": "Cắt"
+    "meaning": "Cắt",
+    "meaning_en": "Cut"
   },
   {
     "id": 4,
     "word": "刻む",
     "reading": "きざむ",
-    "meaning": "Băm, thái nhỏ"
+    "meaning": "Băm, thái nhỏ",
+    "meaning_en": "Chop, mince"
   },
   {
     "id": 5,
     "word": "剥く",
     "reading": "むく",
-    "meaning": "Gọt vỏ"
+    "meaning": "Gọt vỏ",
+    "meaning_en": "Peel"
   },
   {
     "id": 6,
     "word": "洗う",
     "reading": "あらう",
-    "meaning": "Rửa"
+    "meaning": "Rửa",
+    "meaning_en": "Wash"
   },
   {
     "id": 7,
     "word": "混ぜる",
     "reading": "まぜる",
-    "meaning": "Trộn"
+    "meaning": "Trộn",
+    "meaning_en": "Mix, stir"
   },
   {
     "id": 8,
     "word": "こねる",
     "reading": "こねる",
-    "meaning": "Nhào"
+    "meaning": "Nhào",
+    "meaning_en": "Knead"
   },
   {
     "id": 9,
     "word": "焼く",
     "reading": "やく",
-    "meaning": "Nướng, áp chảo"
+    "meaning": "Nướng, áp chảo",
+    "meaning_en": "Grill, bake, pan-fry"
   },
   {
     "id": 10,
     "word": "煮る",
     "reading": "にる",
-    "meaning": "Ninh, nấu"
+    "meaning": "Ninh, nấu",
+    "meaning_en": "Simmer, stew"
   },
   {
     "id": 11,
     "word": "茹でる",
     "reading": "ゆでる",
-    "meaning": "Luộc"
+    "meaning": "Luộc",
+    "meaning_en": "Boil"
   },
   {
     "id": 12,
     "word": "蒸す",
     "reading": "むす",
-    "meaning": "Hấp"
+    "meaning": "Hấp",
+    "meaning_en": "Steam"
   },
   {
     "id": 13,
     "word": "揚げる",
     "reading": "あげる",
-    "meaning": "Chiên ngập dầu"
+    "meaning": "Chiên ngập dầu",
+    "meaning_en": "Deep-fry"
   },
   {
     "id": 14,
     "word": "炒める",
     "reading": "いためる",
-    "meaning": "Xào"
+    "meaning": "Xào",
+    "meaning_en": "Stir-fry, sauté"
   },
   {
     "id": 15,
     "word": "温める",
     "reading": "あたためる",
-    "meaning": "Hâm nóng"
+    "meaning": "Hâm nóng",
+    "meaning_en": "Heat up, reheat"
   },
   {
     "id": 16,
     "word": "冷やす",
     "reading": "ひやす",
-    "meaning": "Làm lạnh"
+    "meaning": "Làm lạnh",
+    "meaning_en": "Cool, chill"
   },
   {
     "id": 17,
     "word": "味付け",
     "reading": "あじつけ",
-    "meaning": "Nêm nếm"
+    "meaning": "Nêm nếm",
+    "meaning_en": "Seasoning, flavoring"
   },
   {
     "id": 18,
     "word": "下ごしらえ",
     "reading": "したごしらえ",
-    "meaning": "Sơ chế"
+    "meaning": "Sơ chế",
+    "meaning_en": "Ingredient preparation"
   },
   {
     "id": 19,
     "word": "盛り付け",
     "reading": "もりつけ",
-    "meaning": "Bày món ăn"
+    "meaning": "Bày món ăn",
+    "meaning_en": "Plating, food presentation"
   },
   {
     "id": 20,
     "word": "レシピ",
     "reading": "レシピ",
-    "meaning": "Công thức nấu ăn"
+    "meaning": "Công thức nấu ăn",
+    "meaning_en": "Recipe"
   }
 ]
