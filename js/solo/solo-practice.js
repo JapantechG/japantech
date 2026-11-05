@@ -26,6 +26,13 @@ import {
     hidePracticeReview
 } from "./solo-practice-review.js";
 
+import {
+    startSoloEffects,
+    stopSoloEffects,
+    soloCorrectEffect,
+    soloWrongEffect
+} from "./solo-effects.js";
+
 /* =============================================================
    STATE
 ============================================================= */
@@ -40,6 +47,7 @@ let currentChoices = [];
 let correctAnswer = null;
 
 let results = [];
+let practiceCombo = 0;
 let active = false;
 let locked = false;
 
@@ -170,7 +178,7 @@ function isCurrent(session, question) {
 ============================================================= */
 
 export function stopPractice() {
-
+    stopSoloEffects();
     ++sessionToken;
     ++questionToken;
 
@@ -281,10 +289,17 @@ if (
         throw new Error("No practice questions available.");
     }
 
-    currentIndex = 0;
-    results = [];
-    active = true;
-    locked = false;
+   currentIndex = 0;
+   results = [];
+   
+   // Reset Practice combo
+   practiceCombo = 0;
+   
+   // Initialize Mascot effects
+   startSoloEffects("practice");
+   
+   active = true;
+   locked = false;
 
     byId("gameOverScreen")?.classList.add("hidden");
     byId("practiceResultScreen")?.classList.add("hidden");
@@ -581,6 +596,31 @@ function submitAnswer(selectedIndex) {
 
     playSfx(correct ? "correct" : "wrong");
 
+         /* ==========================================
+         PRACTICE COMBO ANIMATION
+      ========================================== */
+      
+      if (correct) {
+      
+          practiceCombo++;
+      
+          soloCorrectEffect({
+      
+              combo: practiceCombo,
+      
+              perfect:
+                  duration > 0 &&
+                  remaining / duration >= 0.7
+      
+          });
+      
+      } else {
+      
+          practiceCombo = 0;
+      
+          soloWrongEffect();
+      }
+
 
         /* =============================================================
         READ JAPANESE AFTER ANSWER
@@ -692,7 +732,14 @@ function completePractice() {
 
     questionElement.onclick = null;
 
-    gameScreen.classList.add("hidden");
-
-    showPracticeResults(results, questionPool.length);
+   gameScreen.classList.add("hidden");
+   
+   // Stop animations
+   stopSoloEffects();
+   
+   // Show results
+   showPracticeResults(
+       results,
+       questionPool.length
+   );
 }
