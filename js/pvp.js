@@ -17,11 +17,24 @@ import {
     resetRoomConnection
 } from "./firebase.js";
 
+import {
+    initPvpSocial,
+    enterPvpSocial,
+    leavePvpSocial,
+    getNewRoomSettings,
+    onPvpSocialRoomUpdate,
+    onPvpSocialReset
+} from "./pvp-social.js";
+
 import { saveWrongQuestion } from "./user.js";
+
+initPvpSocial();
 
 /* =============================================================
    PVP STATE
    ============================================================= */
+
+
 let pvpDatabase = [];
 
 let currentConfig = null;
@@ -712,15 +725,20 @@ function createPvpQuestions(database,questionIds)
    INIT
    ============================================================= */
 
-export function initPvp(
-    config
-) {
+export function initPvp(config) {
 
-    currentConfig =
-        config;
+    currentConfig = config;
 
+    initPvpSocial();
 
     resetPvpScreen();
+
+    enterPvpSocial().catch(error => {
+        console.error(
+            "[PVP] Lobby initialization:",
+            error
+        );
+    });
 }
 /* =============================================================
    FIREBASE ROOM UPDATE
@@ -749,9 +767,14 @@ window.addEventListener("batlingo-room-update",event =>
         if (pvpFinalGuestName) pvpFinalGuestName.textContent = guestName;
 
         currentPvpRoom = room;
-
-        currentPlayerRole =playerRole;
-
+        
+        currentPlayerRole = playerRole;
+        
+        onPvpSocialRoomUpdate(
+            room,
+            playerRole
+        );
+        
         updateStartBattleButton();
 
         const opponentConnected = playerRole === "host" ? room.guest?.connected === true : room.host?.connected === true;
@@ -784,7 +807,7 @@ window.addEventListener("batlingo-room-update",event =>
 
             // LEFT = YOU
 
-            leftPlayerAvatar.textContent = "🐵";
+            
 
             leftPlayerAvatar.classList.remove("waiting");
 
@@ -799,7 +822,7 @@ window.addEventListener("batlingo-room-update",event =>
 
             if (room.guest?.connected === true) 
             {
-                rightPlayerAvatar.textContent = "🐃";
+                
 
                 rightPlayerAvatar.classList.remove("waiting");
 
@@ -814,7 +837,7 @@ window.addEventListener("batlingo-room-update",event =>
             }
             else {
 
-                rightPlayerAvatar.textContent = "?";
+                
 
                 rightPlayerAvatar.classList.add("waiting");
 
@@ -840,7 +863,7 @@ window.addEventListener("batlingo-room-update",event =>
 
             // LEFT = HOST
 
-            leftPlayerAvatar.textContent = "🐵";
+            
 
             leftPlayerAvatar.classList.remove("waiting");
 
@@ -853,7 +876,7 @@ window.addEventListener("batlingo-room-update",event =>
 
             // RIGHT = YOU
 
-            rightPlayerAvatar.textContent = "🐃";
+            
 
             rightPlayerAvatar.classList.remove("waiting");
 
@@ -1185,11 +1208,16 @@ document.getElementById("createRoomButton").addEventListener("click",async () =>
 
                 console.log("[PVP] Creating Firebase room...");
 
-                const roomCode = await createRoom(playerName);
+                const roomCode = await createRoom(
+                        playerName,
+                        getNewRoomSettings()
+                    );
 
                 console.log("[PVP] Room created:",roomCode);
 
                 openWaitingRoom(roomCode);
+
+                document.getElementById("pvpCreateDialog")?.classList.add("hidden");
 
             }
             catch (error) {
@@ -1222,7 +1250,7 @@ document.getElementById("joinRoomButton").addEventListener("click",async () => {
             const code = input.value.trim().toUpperCase();
 
 
-            if (code.length !== 4)
+            if (code.length < 4 || code.length > 6)
             {
                 input.focus();
                 return;
@@ -1349,7 +1377,9 @@ function resetPvpScreen() {
     updatePvpTimer();
     
     waitingRoomPanel.classList.add("hidden");
-
+    
+    onPvpSocialReset();
+    
     roomSelectPanel.classList.remove("hidden");
 
        /* Reset START button */
@@ -1452,9 +1482,22 @@ startBattleButton.addEventListener("click",async () =>
                 }
             console.log("[PVP] FULL currentConfig:",currentConfig);
 
-            const level = currentConfig.target;
-            const category = currentConfig.category;  
-            const mode = currentConfig.subMode;
+            const settings =
+                currentPvpRoom?.settings || {};
+            
+            const level =
+                settings.level ||
+                currentConfig?.target ||
+                "n5";
+            
+            const category =
+                settings.category ||
+                "vocabulary";
+            
+            const mode =
+                settings.mode ||
+                currentConfig?.subMode ||
+                "kanji_meaning";
 
             console.log("[PVP] Config:",{level,category,mode});
             /*
@@ -1467,7 +1510,7 @@ startBattleButton.addEventListener("click",async () =>
                 HOST random 20 câu hỏi
             */
 
-            const questionIds = createQuestionIds(database,20);
+            const questionIds = createQuestionIds(database,settings.count || 20);
 
             console.log("[PVP] Question IDs:",questionIds);
 
@@ -1816,4 +1859,27 @@ async function handlePvpTimeout()
     {
         console.error("[PVP] Timeout submit error:", error);
     }
+}
+
+/* =========================================================
+   CLOSE PVP SOCIAL LOBBY
+========================================================= */
+
+export async function closePvpSocial() {
+
+    try {
+
+        await leaveRoom();
+
+    } catch (error) {
+
+        console.warn(
+            "[PVP] Leave room:",
+            error
+        );
+    }
+
+    await leavePvpSocial();
+
+    resetPvpScreen();
 }
