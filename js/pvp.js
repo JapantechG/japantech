@@ -811,9 +811,9 @@ window.addEventListener("batlingo-room-update",event =>
 
             leftPlayerAvatar.classList.remove("waiting");
 
-            leftPlayerName.textContent = "YOU";
+            leftPlayerName.textContent = room.host?.name || "HOST";
 
-            leftPlayerStatus.textContent = "READY";
+            leftPlayerStatus.textContent = room.host?.connected ? "READY" : "OFFLINE";
 
             leftPlayerStatus.classList.add("ready");
 
@@ -826,9 +826,9 @@ window.addEventListener("batlingo-room-update",event =>
 
                 rightPlayerAvatar.classList.remove("waiting");
 
-                rightPlayerName.textContent = room.guest.name;
+                rightPlayerName.textContent = room.guest?.name || "WAITING...";
 
-                rightPlayerStatus.textContent = "READY";
+                rightPlayerStatus.textContent = room.guest?.connected ? "READY" : "WAITING";
 
                 rightPlayerStatus.classList.add("ready");
 
@@ -841,9 +841,9 @@ window.addEventListener("batlingo-room-update",event =>
 
                 rightPlayerAvatar.classList.add("waiting");
 
-                rightPlayerName.textContent = "WAITING...";
+                rightPlayerName.textContent = room.guest?.name || "WAITING...";
 
-                rightPlayerStatus.textContent = "WAITING";
+                rightPlayerStatus.textContent = room.guest?.connected ? "READY" : "WAITING";
 
                 rightPlayerStatus.classList.remove("ready");
 
@@ -867,9 +867,9 @@ window.addEventListener("batlingo-room-update",event =>
 
             leftPlayerAvatar.classList.remove("waiting");
 
-            leftPlayerName.textContent = room.host.name;
+            leftPlayerName.textContent = room.host?.name || "HOST";
 
-            leftPlayerStatus.textContent = "READY";
+            leftPlayerStatus.textContent = room.host?.connected ? "READY" : "OFFLINE";
 
             leftPlayerStatus.classList.add("ready");
 
@@ -880,9 +880,9 @@ window.addEventListener("batlingo-room-update",event =>
 
             rightPlayerAvatar.classList.remove("waiting");
 
-            rightPlayerName.textContent = "YOU";
+            rightPlayerName.textContent = room.guest?.name || "WAITING...";
 
-            rightPlayerStatus.textContent = "READY";
+            rightPlayerStatus.textContent = room.guest?.connected ? "READY" : "WAITING";
 
             rightPlayerStatus.classList.add("ready");
 
