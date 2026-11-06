@@ -779,3 +779,5 @@ export function initLobby({onSolo,onPvp,onFlashcard, onRank})
         }
     );
 }
+/* Shared by Solo and PvP */
+export { topics };
