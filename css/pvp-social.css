@@ -654,3 +654,56 @@
         gap: 5px;
     }
 }
+/* ==========================================
+   PVP EMOJI PICKER
+========================================== */
+
+.pvp-emoji-picker {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    z-index: 100;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+
+    width: 216px;
+    padding: 10px;
+
+    background: #101827;
+    border: 1px solid #475569;
+    border-radius: 14px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .5);
+}
+
+.pvp-emoji-picker.hidden {
+    display: none !important;
+}
+
+.pvp-emoji-option {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    background: #1e293b;
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+.pvp-emoji-option:hover {
+    background: #334155;
+    border-color: #fbbf24;
+}
+
+.pvp-reaction-display {
+    min-height: 42px;
+    text-align: center;
+    font-size: 29px;
+    letter-spacing: 12px;
+}
