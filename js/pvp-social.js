@@ -207,9 +207,23 @@ export function initPvpSocial() {
             </label>
 
             <label>
-                JLPT LEVEL
-                <select id="pvpCreateLevel">
-                    ${levelOptions()}
+                STUDY MODE
+            
+                <select id="pvpCreateStudyMode">
+                    <option value="jlpt">🎓 JLPT</option>
+                    <option value="topic">📚 CHỦ ĐỀ</option>
+                </select>
+            </label>
+            
+            <label>
+                <span id="pvpCreateTargetLabel">JLPT LEVEL</span>
+            
+                <select id="pvpCreateTarget">
+                    <option value="n5">N5</option>
+                    <option value="n4">N4</option>
+                    <option value="n3">N3</option>
+                    <option value="n2">N2</option>
+                    <option value="n1">N1</option>
                 </select>
             </label>
 
@@ -315,10 +329,18 @@ export function initPvpSocial() {
             </label>
 
             <label>
-                JLPT LEVEL
-                <select id="pvpEditLevel">
-                    ${levelOptions()}
+                STUDY MODE
+            
+                <select id="pvpEditStudyMode">
+                    <option value="jlpt">🎓 JLPT</option>
+                    <option value="topic">📚 CHỦ ĐỀ</option>
                 </select>
+            </label>
+            
+            <label>
+                <span id="pvpEditTargetLabel">JLPT LEVEL</span>
+            
+                <select id="pvpEditTarget"></select>
             </label>
 
             <label>
@@ -405,6 +427,19 @@ function bindSocialEvents() {
         }
     };
 
+        document.getElementById("pvpCreateStudyMode")
+        .addEventListener("change", () => {
+            updatePvpStudyTarget("pvpCreate");
+        });
+    
+    document.getElementById("pvpEditStudyMode")
+        .addEventListener("change", () => {
+            updatePvpStudyTarget("pvpEdit");
+        });
+    
+    updatePvpStudyTarget("pvpCreate");
+    updatePvpStudyTarget("pvpEdit");
+
     document.querySelectorAll("[data-pvp-tab]")
         .forEach(button => {
 
@@ -459,14 +494,41 @@ function bindSocialEvents() {
 
         try {
 
-            await updateRoomSettings({
+await updateRoomSettings({
 
-                name: $("pvpEditName").value.trim(),
-                visibility: $("pvpEditVisibility").value,
-                level: $("pvpEditLevel").value,
-                mode: $("pvpEditMode").value,
-                count: Number($("pvpEditCount").value)
-            });
+    name: document.getElementById(
+        "pvpEditName"
+    ).value.trim(),
+
+    visibility: document.getElementById(
+        "pvpEditVisibility"
+    ).value,
+
+    studyMode: document.getElementById(
+        "pvpEditStudyMode"
+    ).value,
+
+    target: document.getElementById(
+        "pvpEditTarget"
+    ).value,
+
+    level:
+        document.getElementById("pvpEditStudyMode").value === "jlpt"
+            ? document.getElementById("pvpEditTarget").value
+            : "n5",
+
+    category: "vocabulary",
+
+    mode: document.getElementById(
+        "pvpEditMode"
+    ).value,
+
+    count: Number(
+        document.getElementById(
+            "pvpEditCount"
+        ).value
+    )
+});
 
             $("pvpSettingsPanel").classList.add("hidden");
 
@@ -881,25 +943,45 @@ async function renderRequests(snapshot) {
 
 export function getNewRoomSettings() {
 
+    const studyMode =
+        document.getElementById(
+            "pvpCreateStudyMode"
+        ).value;
+
+    const target =
+        document.getElementById(
+            "pvpCreateTarget"
+        ).value;
+
     return {
 
         name:
-            $("pvpRoomName")?.value.trim() ||
-            `${currentPlayer().name}'s Room`,
+            document.getElementById("pvpRoomName")
+                .value.trim() || "JLPT BATTLE",
 
         visibility:
-            $("pvpVisibility")?.value || "public",
+            document.getElementById("pvpVisibility")
+                .value,
 
-        level:
-            $("pvpCreateLevel")?.value || "n5",
+        studyMode,
+
+        target,
+
+        // Keep level for compatibility.
+        level: studyMode === "jlpt" ? target : "n5",
 
         category: "vocabulary",
 
         mode:
-            $("pvpCreateMode")?.value || "kanji_meaning",
+            document.getElementById("pvpCreateMode")
+                .value,
 
         count:
-            Number($("pvpQuestionCount")?.value) || 20
+            Number(
+                document.getElementById(
+                    "pvpQuestionCount"
+                ).value
+            )
     };
 }
 
@@ -943,6 +1025,27 @@ export function onPvpSocialRoomUpdate(
 
         $("pvpEditLevel").value =
             settings.level || "n5";
+
+        const settings = room.settings || {};
+
+const studyMode = settings.studyMode || "jlpt";
+
+const target =
+    settings.target ||
+    settings.level ||
+    "n5";
+
+const studySelect =
+    document.getElementById("pvpEditStudyMode");
+
+studySelect.value = studyMode;
+
+updatePvpStudyTarget("pvpEdit");
+
+const targetSelect =
+    document.getElementById("pvpEditTarget");
+
+targetSelect.value = target;
 
         $("pvpEditMode").value =
             settings.mode || "kanji_meaning";
