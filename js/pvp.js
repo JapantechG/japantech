@@ -133,22 +133,46 @@ const pvpGuestName = document.getElementById("pvpGuestName");
 const pvpFinalHostName = document.getElementById("pvpFinalHostName");
 const pvpFinalGuestName = document.getElementById("pvpFinalGuestName");
 
-async function loadPvpDatabase(level) 
-{
-    const file = `data/${level.toLowerCase()}.json`;
+let pvpDatabaseKey = "";
+
+async function loadPvpDatabase(
+    target,
+    studyMode = "jlpt"
+) {
+
+    const validTarget = String(target || "")
+        .toLowerCase();
+
+    if (!/^[a-z][a-z0-9_]{0,50}$/.test(validTarget)) {
+        throw new Error("INVALID_DATABASE_TARGET");
+    }
+
+    const key = `${studyMode}:${validTarget}`;
+
+    if (pvpDatabaseKey === key && pvpDatabase.length) {
+        return pvpDatabase;
+    }
+
+    const file = studyMode === "topic"
+        ? `data/topics/${validTarget}.json`
+        : `data/${validTarget}.json`;
 
     const response = await fetch(file);
 
-    if (!response.ok) 
-    {
-        throw new Error("DATABASE_LOAD_FAILED");
+    if (!response.ok) {
+        throw new Error(
+            `DATABASE_LOAD_FAILED: ${file}`
+        );
     }
 
+    const data = await response.json();
 
-    pvpDatabase = await response.json();
+    if (!Array.isArray(data) || data.length < 4) {
+        throw new Error("INVALID_PVP_DATABASE");
+    }
 
-
-    console.log("[PVP] Database loaded:",level,pvpDatabase.length);
+    pvpDatabase = data;
+    pvpDatabaseKey = key;
 
     return pvpDatabase;
 }
@@ -1144,12 +1168,10 @@ async function startPvpMatch(room)
         Load đúng database
     */
 
-    if (pvpDatabase.length === 0) 
-    {
-
-        await loadPvpDatabase(match.level);
-
-    }
+        await loadPvpDatabase(
+            match.target || match.level,
+            match.studyMode || "jlpt"
+        );
 
         /*
         Score
@@ -1441,6 +1463,8 @@ function resetPvpScreen() {
 
     pvpDatabase = [];
 
+    pvpDatabaseKey = "";
+
        /*
         Reset score UI
     */
@@ -1500,29 +1524,25 @@ startBattleButton.addEventListener("click",async () =>
                 }
             console.log("[PVP] FULL currentConfig:",currentConfig);
 
-            const settings =
-                currentPvpRoom?.settings || {};
+            const settings = currentPvpRoom?.settings || {};
             
-            const level =
+            const studyMode = settings.studyMode || "jlpt";
+            
+            const target =
+                settings.target ||
                 settings.level ||
-                currentConfig?.target ||
                 "n5";
             
-            const category =
-                settings.category ||
-                "vocabulary";
+            const category = "vocabulary";
             
             const mode =
                 settings.mode ||
-                currentConfig?.subMode ||
                 "kanji_meaning";
-
-            console.log("[PVP] Config:",{level,category,mode});
-            /*
-                Load database
-            */
-
-            const database = await loadPvpDatabase(level);
+            
+            const database = await loadPvpDatabase(
+                target,
+                studyMode
+            );
 
             /*
                 HOST random 20 câu hỏi
@@ -1540,23 +1560,22 @@ startBattleButton.addEventListener("click",async () =>
                 Gửi match lên Firebase
             */
 
-            await startRoomGame(
-                {
-                    level:
-                        level,
-
-                    category:
-                        category,
-
-                    mode:
-                        mode,
-
-                    questionIds:
-                        questionIds,
-                    questions:
-                        questions
-                }
-            );
+            await startRoomGame({
+            
+                studyMode,
+            
+                target,
+            
+                level: target,
+            
+                category,
+            
+                mode,
+            
+                questionIds,
+            
+                questions
+            });
 
                 /*await startRoomGame();*/
 
@@ -1726,7 +1745,10 @@ async function startPvpRematch()
 
         /*Load đúng database*/
 
-        const database = await loadPvpDatabase(oldMatch.level);
+        const database = await loadPvpDatabase(
+            oldMatch.target || oldMatch.level,
+            oldMatch.studyMode || "jlpt"
+        );
 
         /* Random bộ 20 câu mới*/
 
