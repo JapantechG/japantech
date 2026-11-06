@@ -430,6 +430,7 @@ export function initPvpSocial() {
     document.body.appendChild(modal);
 
     bindSocialEvents();
+    initPvpEmoji();
 }
 
 /* =========================================================
@@ -1430,4 +1431,78 @@ function updatePvpStudyTarget(prefix) {
                 ? "JLPT LEVEL"
                 : "TOPIC";
     }
+}
+
+/* ==========================================
+   PVP ROOM EMOJI REACTIONS
+========================================== */
+
+const PVP_EMOJIS = [
+    "😀", "😂", "😍", "😎",
+    "😢", "😡", "🔥", "👍",
+    "👏", "💪", "❤️", "🎉"
+];
+
+function initPvpEmoji() {
+
+    const button = document.getElementById(
+        "pvpEmojiButton"
+    );
+
+    const picker = document.getElementById(
+        "pvpEmojiPicker"
+    );
+
+    if (!button || !picker) return;
+
+    picker.innerHTML = PVP_EMOJIS.map(emoji => `
+        <button type="button"
+                class="pvp-emoji-option"
+                data-pvp-emoji="${emoji}">
+            ${emoji}
+        </button>
+    `).join("");
+
+    button.onclick = () => {
+        picker.classList.toggle("hidden");
+    };
+
+    picker.querySelectorAll("[data-pvp-emoji]")
+        .forEach(item => {
+
+            item.onclick = async () => {
+
+                const emoji = item.dataset.pvpEmoji;
+
+                if (!PVP_EMOJIS.includes(emoji)) return;
+
+                const code = getConnectionInfo().roomCode;
+                const uid = auth.currentUser?.uid;
+
+                if (!code || !uid) return;
+
+                try {
+
+                    await set(
+                        ref(
+                            db,
+                            `rooms/${code}/reactions/${uid}`
+                        ),
+                        {
+                            emoji,
+                            at: Date.now()
+                        }
+                    );
+
+                    picker.classList.add("hidden");
+
+                } catch (error) {
+
+                    console.error(
+                        "[PVP] Emoji error:",
+                        error
+                    );
+                }
+            };
+        });
 }
