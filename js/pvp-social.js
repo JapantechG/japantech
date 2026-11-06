@@ -334,13 +334,6 @@ export function initPvpSocial() {
             ROOM
         </div>
 
-        <div class="pvp-room-settings-actions">
-            <button id="pvpToggleSettings"
-                    type="button">
-                ⚙ ROOM SETTINGS
-            </button>
-        </div>
-
         <div id="pvpSettingsPanel"
              class="pvp-social-panel hidden">
 
@@ -1080,152 +1073,210 @@ export function getNewRoomSettings() {
     };
 }
 
-export function onPvpSocialRoomUpdate(
-    room,
-    role
-) {
 
-    const inviteSection = document.getElementById(
-    "pvpInviteSection"
-    );
-    
+/* =========================================================
+   PVP WAITING ROOM - REALTIME UPDATE
+========================================================= */
+
+export function onPvpSocialRoomUpdate(room, role) {
+
+    if (!room) return;
+
+    currentRoom = room;
+
+    const settings = room.settings || {};
+
+    const $ = id => document.getElementById(id);
+
+    /* =====================================
+       ROOM INFORMATION
+    ===================================== */
+
+    if ($("pvpWaitingTitle")) {
+        $("pvpWaitingTitle").textContent =
+            room.name || "1V1 BATTLE";
+    }
+
+    if ($("pvpWaitingVisibility")) {
+        $("pvpWaitingVisibility").textContent =
+            room.visibility === "private"
+                ? "🔒 PRIVATE"
+                : "🌐 PUBLIC";
+    }
+
+    /* =====================================
+       HOST PERMISSIONS
+    ===================================== */
+
+    const isHost = role === "host";
+
+    const canEdit =
+        isHost &&
+        ["waiting", "connected"].includes(room.status);
+
+    const settingsButton = $("pvpToggleSettings");
+    const settingsPanel = $("pvpSettingsPanel");
+
+    if (settingsButton) {
+        settingsButton.classList.toggle(
+            "hidden",
+            !canEdit
+        );
+    }
+
+    if (!canEdit) {
+        settingsPanel?.classList.add("hidden");
+    }
+
+    /* =====================================
+       UPDATE SETTINGS
+       Do not overwrite while editing
+    ===================================== */
+
+    if (
+        settingsPanel &&
+        settingsPanel.classList.contains("hidden")
+    ) {
+
+        const studyMode =
+            settings.studyMode || "jlpt";
+
+        const target =
+            settings.target ||
+            settings.level ||
+            "n5";
+
+        if ($("pvpEditName")) {
+            $("pvpEditName").value =
+                room.name || "";
+        }
+
+        if ($("pvpEditVisibility")) {
+            $("pvpEditVisibility").value =
+                room.visibility || "private";
+        }
+
+        const studySelect = $("pvpEditStudyMode");
+
+        if (studySelect) {
+            studySelect.value = studyMode;
+
+            updatePvpStudyTarget("pvpEdit");
+        }
+
+        const targetSelect = $("pvpEditTarget");
+
+        if (targetSelect) {
+            targetSelect.value = target;
+        }
+
+        if ($("pvpEditMode")) {
+            $("pvpEditMode").value =
+                settings.mode || "kanji_meaning";
+        }
+
+        if ($("pvpEditCount")) {
+            $("pvpEditCount").value =
+                String(settings.count || 20);
+        }
+    }
+
+    /* =====================================
+       TRANSFER HOST
+    ===================================== */
+
+    if ($("pvpTransferHost")) {
+
+        $("pvpTransferHost").disabled =
+            !isHost ||
+            !room.guest?.connected ||
+            !canEdit;
+    }
+
+    /* =====================================
+       INVITE PLAYERS
+    ===================================== */
+
+    const inviteSection = $("pvpInviteSection");
+
+    const canInvite =
+        isHost &&
+        room.host?.connected === true &&
+        !room.guest?.connected &&
+        ["waiting", "connected"].includes(room.status);
+
     if (inviteSection) {
-    
-        const canInvite =
-            role === "host" &&
-            !room.guest?.connected &&
-            ["waiting", "connected"].includes(room.status);
-    
+
         inviteSection.classList.toggle(
             "hidden",
             !canInvite
         );
     }
 
-    const joinedCode = getConnectionInfo().roomCode;
-    const myUid = auth.currentUser?.uid;
-    
-    if (joinedCode && myUid) {
-    
-        remove(
-            ref(
-                db,
-                `pvpInvites/${myUid}/${joinedCode}`
-            )
-        ).catch(console.warn);
+    if (!canInvite) {
+        $("pvpInvitePanel")?.classList.add("hidden");
     }
 
-    const reactions = room.reactions || {};
+    /* =====================================
+       PLAYER AVATARS
+    ===================================== */
 
-    const hostReaction =
-        reactions[room.host?.uid]?.emoji || "";
-    
-    const guestReaction =
-        reactions[room.guest?.uid]?.emoji || "";
-    
-    const reactionDisplay = document.getElementById(
-        "pvpReactionDisplay"
-    );
-    
-    if (reactionDisplay) {
-    
-        reactionDisplay.textContent = [
-            hostReaction,
-            guestReaction
-        ].filter(Boolean).join("  ");
-    }
-
-    currentRoom = room;
-
-    const settings = room?.settings || {};
-
-    $("pvpWaitingTitle").textContent =
-        room?.name || "ROOM";
-
-    $("pvpWaitingVisibility").textContent =
-        room?.visibility === "private"
-            ? "🔒 PRIVATE"
-            : "🌐 PUBLIC";
-
-    const isHost = role === "host";
-    const canEdit = isHost &&
-        ["waiting", "connected"].includes(room.status);
-
-    $("pvpToggleSettings").classList.toggle(
-        "hidden",
-        !canEdit
-    );
-
-    if (!canEdit) {
-        $("pvpSettingsPanel").classList.add("hidden");
-    }
-
-    // Avoid overwriting fields while host is editing.
-    if ($("pvpSettingsPanel").classList.contains("hidden")) {
-
-        $("pvpEditName").value = room?.name || "";
-
-        $("pvpEditVisibility").value =
-            room?.visibility || "private";
-
-        $("pvpEditLevel").value =
-            settings.level || "n5";
-
-        const settings = room.settings || {};
-
-const studyMode = settings.studyMode || "jlpt";
-
-const target =
-    settings.target ||
-    settings.level ||
-    "n5";
-
-const studySelect =
-    document.getElementById("pvpEditStudyMode");
-
-studySelect.value = studyMode;
-
-updatePvpStudyTarget("pvpEdit");
-
-const targetSelect =
-    document.getElementById("pvpEditTarget");
-
-targetSelect.value = target;
-
-        $("pvpEditMode").value =
-            settings.mode || "kanji_meaning";
-
-        $("pvpEditCount").value =
-            String(settings.count || 20);
-    }
-
-    $("pvpTransferHost").disabled =
-        !room?.guest?.connected;
-
-    const avatars = [
-        ["leftPlayerAvatar", room?.host],
-        ["rightPlayerAvatar", room?.guest]
+    const players = [
+        ["leftPlayerAvatar", room.host],
+        ["rightPlayerAvatar", room.guest]
     ];
 
-    avatars.forEach(([id, player]) => {
+    players.forEach(([elementId, player]) => {
 
-        const element = $(id);
+        const element = $(elementId);
 
-        if (player?.connected) {
+        if (!element) return;
+
+        if (player?.uid) {
 
             element.innerHTML = avatarHTML(player);
 
             element.title =
-                `View ${player.name}'s profile`;
+                player.name ||
+                player.displayName ||
+                "Player";
+
+            element.classList.toggle(
+                "waiting",
+                player.connected !== true
+            );
 
         } else {
 
             element.textContent = "?";
 
             element.title = "Waiting for player";
+
+            element.classList.add("waiting");
         }
     });
+
+    /* =====================================
+       REACTIONS
+    ===================================== */
+
+    const reactions = room.reactions || {};
+
+    const hostEmoji =
+        reactions[room.host?.uid]?.emoji || "";
+
+    const guestEmoji =
+        reactions[room.guest?.uid]?.emoji || "";
+
+    if ($("pvpReactionDisplay")) {
+
+        $("pvpReactionDisplay").textContent =
+            [hostEmoji, guestEmoji]
+                .filter(Boolean)
+                .join("  ");
+    }
 }
+
 
 export function onPvpSocialReset() {
 
