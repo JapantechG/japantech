@@ -162,11 +162,9 @@ function getPvpPlayer() {
 
 function normalizeRoomSettings(options = {}) {
 
-    const levels = [
-        "n5", "n4", "n3", "n2", "n1"
-    ];
+    const levels = ["n5", "n4", "n3", "n2", "n1"];
 
-    const modes = [
+    const allowedModes = [
         "kanji_meaning",
         "kanji_hiragana",
         "hiragana_meaning",
@@ -176,23 +174,54 @@ function normalizeRoomSettings(options = {}) {
         "audio_kanji"
     ];
 
-    const counts = [10, 20, 30, 50];
+    const studyMode =
+        options.studyMode === "topic"
+            ? "topic"
+            : "jlpt";
+
+    const selectedTarget = String(
+        options.target ||
+        options.level ||
+        "n5"
+    ).toLowerCase();
+
+    let target;
+
+    if (studyMode === "jlpt") {
+
+        target = levels.includes(selectedTarget)
+            ? selectedTarget
+            : "n5";
+
+    } else {
+
+        if (!/^[a-z][a-z0-9_]{0,50}$/.test(selectedTarget)) {
+            throw new Error("INVALID_TOPIC");
+        }
+
+        target = selectedTarget;
+    }
 
     return {
 
-        level: levels.includes(options.level)
-            ? options.level
+        studyMode,
+
+        target,
+
+        level: studyMode === "jlpt"
+            ? target
             : "n5",
 
         category: "vocabulary",
 
-        mode: modes.includes(options.mode)
+        mode: allowedModes.includes(options.mode)
             ? options.mode
             : "kanji_meaning",
 
-        count: counts.includes(Number(options.count))
-            ? Number(options.count)
-            : 20
+        count: [10, 20, 30, 50]
+            .includes(Number(options.count))
+                ? Number(options.count)
+                : 20
     };
 }
 
