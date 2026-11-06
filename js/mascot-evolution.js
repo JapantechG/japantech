@@ -48,7 +48,7 @@ function getImagePath(type, evolution) {
         return MASCOT_CONFIG[type].image;
     }
 
-    return `assets/mascot/${type}-stage-${evolution + 1}.png`;
+    return `assets/mascot/${type}-stage-${evolution + 1}.webp`;
 }
 
 /* ==========================================
