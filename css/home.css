@@ -1202,3 +1202,340 @@
         font-size: 7px;
     }
 }
+
+
+/* ==========================================
+   BATLINGO HOME - COMPACT RESPONSIVE
+   5 GAME MODES / SINGLE VIEWPORT
+========================================== */
+
+#setupScreen:has(#homeScreen:not(.hidden)) {
+    box-sizing: border-box;
+    height: 100dvh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#setupScreen:has(#homeScreen:not(.hidden))
+> .lobby-header {
+    flex: 0 0 auto;
+}
+
+/* HOME MAIN */
+
+#homeScreen.bat-home:not(.hidden) {
+    box-sizing: border-box;
+
+    width: min(calc(100% - 24px), 760px);
+    max-width: 760px;
+
+    margin: 0 auto !important;
+    padding: 6px 0
+        max(8px, env(safe-area-inset-bottom))
+        !important;
+
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    max-height: none !important;
+
+    display: grid !important;
+    grid-template-rows:
+        auto
+        auto
+        auto
+        minmax(0, 1fr)
+        auto;
+
+    gap: clamp(5px, 1dvh, 10px);
+    align-content: stretch;
+}
+
+/* REMOVE EXCESSIVE SPACING */
+
+#homeScreen .bat-home-brand,
+#homeScreen .bat-home-player,
+#homeScreen .bat-home-language,
+#homeScreen .bat-home-modes,
+#homeScreen .bat-home-quick {
+    min-width: 0;
+    min-height: 0;
+    margin: 0 !important;
+}
+
+/* LOGO */
+
+#homeScreen .bat-home-brand {
+    text-align: center;
+}
+
+#homeScreen .bat-home-logo {
+    font-size: clamp(24px, 4dvh, 38px);
+    line-height: 1.05;
+}
+
+#homeScreen .bat-home-brand p {
+    margin: 2px 0 0;
+    font-size: clamp(8px, 1.3dvh, 11px);
+}
+
+/* PLAYER */
+
+#homeScreen .bat-home-player {
+    padding: clamp(8px, 1.3dvh, 12px)
+        !important;
+}
+
+#homeScreen .bat-home-mascot {
+    width: clamp(48px, 8dvh, 72px);
+    height: clamp(48px, 8dvh, 72px);
+}
+
+#homeScreen .bat-home-mascot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* LANGUAGE */
+
+#homeScreen .bat-home-language-btn {
+    min-height: 0;
+    padding:
+        clamp(7px, 1.1dvh, 11px)
+        12px !important;
+}
+
+/* SECTION TITLE */
+
+#homeScreen .bat-home-label {
+    margin: 0 !important;
+    font-size: clamp(9px, 1.5dvh, 12px);
+    line-height: 1.3;
+}
+
+/* GAME MODES */
+
+#homeScreen .bat-home-modes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* 2 COLUMNS / 3 ROWS */
+
+#homeScreen .bat-home-mode-grid {
+    flex: 1 1 0;
+    min-height: 0;
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr))
+        !important;
+
+    grid-template-rows:
+        1fr
+        1fr
+        0.72fr;
+
+    gap: clamp(6px, 1dvh, 10px)
+        !important;
+
+    margin: 0 !important;
+}
+
+/* NORMAL GAME CARD */
+
+#homeScreen .bat-home-mode-card {
+    box-sizing: border-box;
+    position: relative;
+
+    min-width: 0;
+    min-height: 0 !important;
+
+    height: 100% !important;
+    margin: 0 !important;
+
+    padding:
+        clamp(7px, 1.4dvh, 14px)
+        !important;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 3px;
+    overflow: hidden;
+
+    text-align: left;
+}
+
+#homeScreen .bat-home-mode-icon {
+    font-size: clamp(18px, 3dvh, 28px);
+    line-height: 1;
+}
+
+#homeScreen .bat-home-mode-card strong {
+    font-size: clamp(12px, 1.9dvh, 17px);
+    line-height: 1.1;
+}
+
+#homeScreen .bat-home-mode-card small {
+    font-size: clamp(9px, 1.25dvh, 12px);
+    line-height: 1.1;
+}
+
+#homeScreen .bat-home-mode-arrow {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+}
+
+/* ==========================================
+   FIFTH MODE - JLPT EXAM
+========================================== */
+
+#homeScreen .bat-home-mode-card.bat-mode-exam {
+    grid-column: 1 / -1 !important;
+    grid-row: 3;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: clamp(10px, 2vw, 18px);
+
+    padding-inline:
+        clamp(13px, 3vw, 22px)
+        !important;
+
+    border:
+        1px solid rgba(251, 191, 36, .68);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(120, 53, 15, .95),
+            rgba(36, 26, 45, .96)
+        );
+
+    color: #fff7ed;
+
+    cursor: pointer;
+}
+
+#homeScreen .bat-mode-exam
+.bat-home-mode-icon {
+    font-size: clamp(24px, 4dvh, 36px);
+}
+
+#homeScreen .bat-home-exam-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+#homeScreen .bat-mode-exam
+.bat-home-mode-arrow {
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+}
+
+#homeScreen .bat-mode-exam:hover {
+    border-color: #fde68a;
+    filter: brightness(1.1);
+}
+
+/* ==========================================
+   QUICK ACCESS
+========================================== */
+
+#homeScreen .bat-home-quick {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#homeScreen .bat-home-quick-grid {
+    margin: 0 !important;
+    gap: clamp(5px, 1vw, 10px)
+        !important;
+}
+
+#homeScreen .bat-home-quick-item {
+    min-height: 0 !important;
+
+    padding:
+        clamp(5px, 1dvh, 10px)
+        2px !important;
+}
+
+#homeScreen .bat-home-quick-item
+> span:first-child {
+    font-size: clamp(17px, 2.7dvh, 24px);
+}
+
+#homeScreen .bat-home-quick-item small {
+    font-size: clamp(8px, 1.2dvh, 11px);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    #homeScreen.bat-home:not(.hidden) {
+        width: calc(100% - 20px);
+        gap: 6px;
+        padding-top: 4px !important;
+    }
+
+    #homeScreen .bat-home-mode-card {
+        padding: 8px 10px !important;
+    }
+
+    #homeScreen .bat-home-mode-card small {
+        letter-spacing: 0;
+    }
+
+    #homeScreen .bat-home-mode-arrow {
+        right: 7px;
+        top: 7px;
+    }
+}
+
+/* ==========================================
+   SHORT HEIGHT SAFETY
+========================================== */
+
+@media (max-height: 620px) {
+
+    #setupScreen:has(#homeScreen:not(.hidden)) {
+        overflow-y: auto;
+        height: auto;
+        min-height: 100dvh;
+    }
+
+    #homeScreen.bat-home:not(.hidden) {
+        flex: none;
+        min-height: 520px;
+    }
+
+    #homeScreen .bat-home-mode-grid {
+        grid-template-rows:
+            minmax(80px, 1fr)
+            minmax(80px, 1fr)
+            minmax(56px, .72fr);
+    }
+}
+
