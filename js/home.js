@@ -160,7 +160,7 @@ function updateHomeMascot(userData = null) {
 
     const stagePath = evolution === 0
         ? basePath
-        : `assets/mascot/${mascotType}-stage-${evolution + 1}.png`;
+        : `assets/mascot/${mascotType}-stage-${evolution + 1}.webp`;
 
     const emoji = mascotType === "monkey"
         ? "🐒"
