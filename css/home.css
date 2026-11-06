@@ -1684,3 +1684,210 @@
 }
 
 
+/* ==========================================
+   BATLINGO - LEARNING LANGUAGE ROW
+========================================== */
+
+#homeScreen .bat-home-language {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+}
+
+#homeScreen .bat-home-language-label {
+    flex: 0 0 auto;
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+}
+
+#homeScreen .bat-home-language-btn {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    max-width: 300px;
+    min-height: 48px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+#homeScreen .bat-home-language-btn strong {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+}
+
+#homeScreen .bat-home-language-chevron {
+    margin-left: auto;
+}
+
+#homeScreen .bat-home-language-options {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    left: auto;
+    width: min(300px, 100%);
+    z-index: 100;
+}
+
+/* ==========================================
+   MOBILE - LEARNING LANGUAGE
+========================================== */
+
+@media (max-width: 600px) {
+
+    #homeScreen .bat-home-language {
+        gap: 8px;
+    }
+
+    #homeScreen .bat-home-language-label {
+        font-size: 10px;
+        letter-spacing: .4px;
+    }
+
+    #homeScreen .bat-home-language-btn {
+        max-width: 200px;
+        min-height: 44px;
+        padding: 8px 10px;
+        gap: 5px;
+    }
+
+    #homeScreen .bat-home-language-btn strong {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   MOBILE - HEADER RIGHT ALIGN
+========================================== */
+
+@media (max-width: 768px) {
+
+    #setupScreen > .lobby-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding:
+            calc(10px + env(safe-area-inset-top))
+            calc(12px + env(safe-area-inset-right))
+            8px 12px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0;
+        transform: none;
+        z-index: 1000;
+    }
+
+    #setupScreen > .lobby-header .mini-logo {
+        display: none;
+    }
+
+    #setupScreen > .lobby-header .home-actions {
+        position: relative;
+        inset: auto;
+        width: auto;
+        max-width: 100%;
+        margin: 0 0 0 auto;
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+        flex-wrap: nowrap;
+        transform: none;
+    }
+
+    #setupScreen .home-actions #menuButton {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        margin: 0;
+    }
+
+    #setupScreen .home-actions .top-language {
+        flex: 0 1 auto;
+        min-width: 0;
+        margin: 0;
+    }
+
+    #setupScreen .home-actions .top-language-select {
+        max-width: 110px;
+        min-width: 0;
+        font-size: 12px;
+    }
+
+    #setupScreen .home-actions #homeUserBtn,
+    #setupScreen .home-actions #homeLoginBtn {
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 125px;
+        margin: 0;
+    }
+
+    #setupScreen .home-actions .home-user-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* JLPT Exam da co o Game Modes */
+    #setupScreen .home-actions #jlptExamHeaderBtn {
+        display: none;
+    }
+
+    /* Khong de hidden elements chiem cho */
+    #setupScreen .home-actions .hidden {
+        display: none !important;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    #setupScreen > .lobby-header .home-actions {
+        gap: 4px;
+    }
+
+    #setupScreen .home-actions .top-language-select {
+        max-width: 92px;
+        font-size: 11px;
+    }
+
+    #setupScreen .home-actions #homeUserBtn {
+        max-width: 90px;
+    }
+
+    #homeScreen .bat-home-language-label {
+        font-size: 9px;
+    }
+
+    #homeScreen .bat-home-language-btn {
+        max-width: 155px;
+    }
+}
+
