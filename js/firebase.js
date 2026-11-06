@@ -936,6 +936,139 @@ export function resetRoomConnection()
 
 }
 
+
+/* =========================================================
+   START PVP REMATCH - ATOMIC TRANSACTION
+========================================================= */
+
+export async function startRoomRematch(matchData) {
+
+    const code = roomCode;
+    const uid = auth.currentUser?.uid;
+
+    if (!code || !uid) {
+        throw new Error("ROOM_NOT_CONNECTED");
+    }
+
+    if (playerRole !== "host") {
+        throw new Error("REMATCH_HOST_ONLY");
+    }
+
+    if (
+        !Array.isArray(matchData.questionIds) ||
+        !Array.isArray(matchData.questions) ||
+        matchData.questionIds.length === 0 ||
+        matchData.questions.length === 0
+    ) {
+        throw new Error("REMATCH_QUESTIONS_INVALID");
+    }
+
+    // Tạo ID trước transaction để retry vẫn dùng
+    // cùng một ID trận đấu.
+    const newMatchId =
+        `${Date.now()}_${uid.slice(0, 8)}`;
+
+    const newMatch = {
+
+        matchId: newMatchId,
+
+        studyMode: matchData.studyMode || "jlpt",
+
+        target: matchData.target || matchData.level,
+
+        level: matchData.level,
+
+        category: matchData.category,
+
+        mode: matchData.mode,
+
+        questionIds: matchData.questionIds,
+
+        questions: matchData.questions,
+
+        currentQuestion: 0,
+
+        hostScore: 0,
+
+        guestScore: 0
+    };
+
+    const result = await runTransaction(
+        ref(db, `rooms/${code}`),
+
+        room => {
+
+            if (!room) {
+                return;
+            }
+
+            // Chỉ Host thật trong Firebase được bắt đầu
+            if (room.host?.uid !== uid) {
+                return;
+            }
+
+            // Chỉ cho Rematch sau khi trận cũ kết thúc
+            if (room.status !== "finished") {
+                return;
+            }
+
+            // Cả hai phải vẫn kết nối
+            if (
+                room.host?.connected !== true ||
+                room.guest?.connected !== true
+            ) {
+                return;
+            }
+
+            // Cả hai đã đồng ý đấu lại
+            if (
+                room.rematch?.host !== true ||
+                room.rematch?.guest !== true
+            ) {
+                return;
+            }
+
+            // Một transaction cập nhật tất cả trạng thái
+            room.match = newMatch;
+
+            room.status = "playing";
+
+            room.startedAt = Date.now();
+
+            room.finishedAt = null;
+
+            room.rematch = null;
+
+            return room;
+        },
+
+        {
+            applyLocally: false
+        }
+    );
+
+    if (!result.committed) {
+
+        console.warn(
+            "[PVP REMATCH] Transaction rejected:",
+            result.snapshot.val()
+        );
+
+        throw new Error("REMATCH_TRANSACTION_REJECTED");
+    }
+
+    console.log(
+        "[PVP REMATCH] Started successfully:",
+        {
+            roomCode: code,
+            matchId: newMatchId
+        }
+    );
+
+    return newMatchId;
+}
+
+
 export async function requestRematch()
 {
     if (!roomCode || !playerRole) 
