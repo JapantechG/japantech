@@ -3,6 +3,7 @@ import {
     auth,
     db,
     transferRoomHost,
+    getConnectionInfo,
     updateRoomSettings
 } from "./firebase.js";
 
