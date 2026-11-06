@@ -942,7 +942,11 @@ async function renderFriends(snapshot) {
 
                 <div class="pvp-list-info">
                     <strong>
-                        ${escapeHTML(player.name || "Player")}
+                       ${escapeHTML(
+                            player.displayName ||
+                            player.name ||
+                            "Player"
+                        )}
                     </strong>
 
                     <small>
@@ -1007,7 +1011,11 @@ async function renderRequests(snapshot) {
 
                 <div class="pvp-list-info">
                     <strong>
-                        ${escapeHTML(player.name || "Player")}
+                        ${escapeHTML(
+                            player.displayName ||
+                            player.name ||
+                            "Player"
+                        )}
                     </strong>
 
                     <small>ACCEPT FRIEND REQUEST</small>
@@ -1695,16 +1703,29 @@ function pvpInviteNotice(message) {
 
 async function loadPvpInvitePlayers(type = "online") {
 
-    const container = document.getElementById(
-        "pvpInviteList"
-    );
+    const container =
+        document.getElementById("pvpInviteList");
 
     const myUid = auth.currentUser?.uid;
+
     const code = pvpInviteCode();
 
-    if (!myUid || !code || !room) return;
+    const room = currentRoom;
+
+    if (!container) return;
+
+    if (!myUid || !code || !room) {
+
+        container.textContent =
+            "Room is not ready.";
+
+        return;
+    }
 
     container.textContent = "Loading players...";
+
+    // Giữ nguyên phần try/catch
+    // và logic lấy danh sách phía dưới.
 
     try {
 
@@ -1849,6 +1870,8 @@ async function sendPvpInvite(receiverUid) {
     const senderUid = auth.currentUser?.uid;
 
     const code = pvpInviteCode();
+
+    const room = currentRoom;
 
     if (!senderUid || !receiverUid || !code) {
         throw new Error("INVALID_INVITE");
