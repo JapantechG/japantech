@@ -1022,6 +1022,26 @@ export function onPvpSocialRoomUpdate(
     role
 ) {
 
+    const reactions = room.reactions || {};
+
+    const hostReaction =
+        reactions[room.host?.uid]?.emoji || "";
+    
+    const guestReaction =
+        reactions[room.guest?.uid]?.emoji || "";
+    
+    const reactionDisplay = document.getElementById(
+        "pvpReactionDisplay"
+    );
+    
+    if (reactionDisplay) {
+    
+        reactionDisplay.textContent = [
+            hostReaction,
+            guestReaction
+        ].filter(Boolean).join("  ");
+    }
+
     currentRoom = room;
 
     const settings = room?.settings || {};
