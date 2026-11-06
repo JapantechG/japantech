@@ -9,6 +9,7 @@ import {
     createRoom,
     joinRoom,
     startRoomGame,
+    startRoomRematch,
     submitRoomAnswer,
     nextRoomQuestion,
     finishRoomGame,
@@ -16,7 +17,6 @@ import {
     leaveRoom,
     resetRoomConnection
 } from "./firebase.js";
-
 import {
     initPvpSocial,
     enterPvpSocial,
@@ -971,13 +971,25 @@ window.addEventListener("batlingo-room-update",event =>
 
                 /* HOST ĐÃ BẤM START*/
 
-                if (room.status === "playing" && room.match) 
-                {
-
-                    console.log("[PVP] GAME START!");
-
-                    startPvpMatch(room);
-
+                if (room.status === "playing" && room.match) {
+                
+                    console.log("[PVP] GAME START!", {
+                        role: playerRole,
+                        matchId: room.match.matchId,
+                        studyMode: room.match.studyMode,
+                        target: room.match.target
+                    });
+                
+                    startPvpMatch(room).catch(error => {
+                
+                        console.error(
+                            "[PVP] Failed to render match:",
+                            error
+                        );
+                
+                        pvpRematchStatus.textContent =
+                            "MATCH LOAD ERROR: " + error.message;
+                    });
                 }
             }
         );
@@ -1695,19 +1707,37 @@ function updateRematchState(room)
     const guestAccepted = room.rematch?.guest === true;
 
 
-    if (hostAccepted && guestAccepted) 
-    {
-        pvpRematchStatus.textContent = "BOTH PLAYERS READY";
-
-           /*Chỉ HOST tạo trận mới*/
-        
-            if (currentPlayerRole === "host" && !rematchStarting) 
-            {
-                rematchStarting = true;
-        
-                startPvpRematch();
-            }
-
+    if (hostAccepted && guestAccepted) {
+    
+        console.log("[PVP REMATCH] Both accepted:", {
+            role: currentPlayerRole,
+            roomStatus: room.status,
+            hostConnected: room.host?.connected,
+            guestConnected: room.guest?.connected,
+            rematchStarting
+        });
+    
+        pvpRematchButton.disabled = true;
+    
+        if (
+            currentPlayerRole === "host" &&
+            room.status === "finished" &&
+            !rematchStarting
+        ) {
+    
+            rematchStarting = true;
+    
+            pvpRematchStatus.textContent =
+                "STARTING NEW MATCH...";
+    
+            startPvpRematch();
+    
+        } else {
+    
+            pvpRematchStatus.textContent =
+                "BOTH PLAYERS READY";
+        }
+    
         return;
     }
 
@@ -1745,83 +1775,149 @@ function updateRematchState(room)
     }
 }
 
-async function startPvpRematch()
-{
-    try 
-    {
-        console.log("[PVP] Starting rematch...");
 
-        /*
-            Dùng lại config của trận vừa chơi
-        */
+/* =========================================================
+   PVP - START REMATCH
+========================================================= */
 
-        const oldMatch = currentPvpRoom?.match;
+async function startPvpRematch() {
+
+    try {
+
+        console.log("[PVP REMATCH] Preparing...");
+
+        pvpRematchStatus.textContent =
+            "STARTING NEW MATCH...";
+
+        const room = currentPvpRoom;
+
+        if (!room) {
+            throw new Error("ROOM_NOT_FOUND");
+        }
+
+        if (currentPlayerRole !== "host") {
+            throw new Error("HOST_ONLY");
+        }
+
+        if (
+            room.rematch?.host !== true ||
+            room.rematch?.guest !== true
+        ) {
+            throw new Error("PLAYERS_NOT_READY");
+        }
+
+        const oldMatch = room.match;
 
         if (!oldMatch) {
-
             throw new Error("MATCH_NOT_FOUND");
         }
 
-        /*Load đúng database*/
+        /* =====================================
+           KEEP PREVIOUS CONFIG
+        ===================================== */
+
+        const studyMode =
+            oldMatch.studyMode ||
+            room.settings?.studyMode ||
+            "jlpt";
+
+        const target =
+            oldMatch.target ||
+            room.settings?.target ||
+            oldMatch.level ||
+            "n5";
+
+        const category =
+            oldMatch.category ||
+            "vocabulary";
+
+        const mode =
+            oldMatch.mode ||
+            "kanji_meaning";
+
+        const count =
+            oldMatch.questionIds?.length ||
+            room.settings?.count ||
+            20;
+
+        /* =====================================
+           LOAD DATABASE
+        ===================================== */
 
         const database = await loadPvpDatabase(
-            oldMatch.target || oldMatch.level,
-            oldMatch.studyMode || "jlpt"
+            target,
+            studyMode
         );
 
-        /* Random bộ 20 câu mới*/
+        /* =====================================
+           GENERATE NEW QUESTIONS
+        ===================================== */
 
         const questionIds = createQuestionIds(
             database,
-            currentPvpRoom?.settings?.count ||
-            oldMatch.questionIds?.length ||
-            20
+            count
         );
 
-        const questions = createPvpQuestions(database,questionIds);
-
-        /*
-            Tạo MATCH mới trong cùng ROOM
-        */
-
-        await startRoomGame(
-            {    
-
-                studyMode: matchData.studyMode || "jlpt",
-
-                target: matchData.target || matchData.level,
-                
-                level:
-                    oldMatch.level,
-
-                category:
-                    oldMatch.category,
-
-                mode:
-                    oldMatch.mode,
-
-                questionIds:
-                    questionIds,
-
-                questions:
-                    questions
-            }
+        const questions = createPvpQuestions(
+            database,
+            questionIds
         );
 
-        console.log("[PVP] Rematch started.");
+        if (
+            questionIds.length === 0 ||
+            questions.length !== questionIds.length
+        ) {
+            throw new Error("REMATCH_DATABASE_INVALID");
+        }
 
-    }
-    catch (error) 
-    {
-        console.error("[PVP] Rematch start error:",error);
+        console.log(
+            "[PVP REMATCH] New questions:",
+            questionIds.length
+        );
 
-        /*Cho phép thử lại nếu start lỗi*/
+        /* =====================================
+           START ATOMIC REMATCH
+        ===================================== */
+
+        await startRoomRematch({
+
+            studyMode,
+
+            target,
+
+            level: target,
+
+            category,
+
+            mode,
+
+            questionIds,
+
+            questions
+        });
+
+        console.log(
+            "[PVP REMATCH] Firebase committed"
+        );
+
+        // Không gọi startPvpMatch() thủ công.
+        // Room listener sẽ nhận status = playing
+        // và tự bắt đầu trên cả Host và Guest.
+
+    } catch (error) {
+
+        console.error(
+            "[PVP REMATCH] Failed:",
+            error
+        );
 
         rematchStarting = false;
 
-        pvpRematchStatus.textContent = "REMATCH START ERROR";
+        pvpRematchStatus.textContent =
+            "REMATCH ERROR: " + error.message;
     }
 }
+
 
 function startPvpTimer()
 {    
