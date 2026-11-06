@@ -568,27 +568,15 @@ export async function enterPvpSocial() {
             since: Date.now()
         });
 
-        await set(
-            ref(db, `publicProfiles/${me.uid}`),
-            {
-                ...me,
-                elo: Number(
-                    window.currentUserData?.rating?.elo
-                ) || 1000,
-                pvpGames: Number(
-                    window.currentUserData?.stats?.pvpGames
-                ) || 0,
-                wins: Number(
-                    window.currentUserData?.stats?.wins
-                ) || 0
-            }
-        );
-
+        // Không ghi đè publicProfiles.
+        // Profile được quản lý bởi hệ thống
+        // user / friends hiện tại.
+        
         subscribe("rooms", renderPublicRooms);
         subscribe("pvpPresence", renderOnlinePlayers);
 
         subscribe(
-            `friendships/${me.uid}`,
+            `friends/${me.uid}`,
             renderFriends
         );
 
@@ -771,7 +759,7 @@ async function renderFriends(snapshot) {
     const friends = snapshot.val() || {};
 
     const ids = Object.keys(friends)
-        .filter(id => friends[id] === true);
+        .filter(id => friends[id] != null);
 
     const profiles = await Promise.all(
         ids.map(async id => {
@@ -1034,7 +1022,7 @@ export async function openPvpPlayerProfile(uid) {
                 ${avatarHTML(player)}
             </div>
 
-            <h3>${escapeHTML(player.name)}</h3>
+            <h3>${escapeHTML(player.displayName || player.name || "Player")}</h3>
 
             <p>${escapeHTML(player.batlingoId)}</p>
 
@@ -1044,7 +1032,7 @@ export async function openPvpPlayerProfile(uid) {
             </p>
 
             <p>
-                Battles ${Number(player.pvpGames) || 0}
+                Battles ${Number(player.battles) || 0}
                 · Wins ${Number(player.wins) || 0}
             </p>
         `;
