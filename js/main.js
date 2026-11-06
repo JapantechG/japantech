@@ -278,52 +278,95 @@ initHome({
 
     onSelectMode: (modeId) => {
 
-        // Reset study configuration
-        resetLobbyConfig();
+        console.log("[HOME] SELECT:", modeId);
 
-        // Keep original battle mode logic
-        const selected = selectBattleMode(modeId);
-
-        if (!selected) return;
-        
-        /* ==========================================
+        /* =====================================
            1V1 - OPEN ONLINE LOBBY
-        ========================================== */
-        
+        ===================================== */
+
         if (modeId === "pvp") {
-        
-            if (!auth.currentUser) {
-        
-                window.BatLingoAuthUI?.open();
-        
+
+            if (!requireLogin()) {
                 return;
             }
-        
+
+            console.log("[HOME] OPEN PVP");
+
+            document.getElementById("homeScreen")
+                ?.classList.add("hidden");
+
+            document.getElementById("configScreen")
+                ?.classList.add("hidden");
+
             setupScreen.classList.add("hidden");
-        
+
             pvpScreen.classList.remove("hidden");
-        
-            initPvp({
-        
-                studyMode: "jlpt",
-        
-                target: "n5",
-        
-                category: "vocabulary",
-        
-                subMode: "kanji_meaning"
-            });
-        
+
+            try {
+
+                initPvp({
+                    studyMode: "jlpt",
+                    target: "n5",
+                    category: "vocabulary",
+                    subMode: "kanji_meaning"
+                });
+
+            } catch (error) {
+
+                console.error(
+                    "[HOME] PVP ERROR:",
+                    error
+                );
+
+                pvpScreen.classList.add("hidden");
+
+                showHome();
+            }
+
             return;
         }
-        
-        /* OTHER MODES */
-        
+
+        /* =====================================
+           OTHER MODES
+        ===================================== */
+
+        if (![
+            "solo",
+            "flashcard",
+            "rank"
+        ].includes(modeId)) {
+
+            console.warn(
+                "[HOME] Unknown mode:",
+                modeId
+            );
+
+            return;
+        }
+
+        /* Hide PVP when selecting other modes */
+
+        pvpScreen.classList.add("hidden");
+
+        resetLobbyConfig();
+
+        const selected = selectBattleMode(modeId);
+
+        if (!selected) {
+            return;
+        }
+
+        console.log(
+            "[HOME] OPEN CONFIG:",
+            modeId
+        );
+
         showConfiguration(modeId);
 
     }
 
 });
+
 
 
 /* =============================================================
