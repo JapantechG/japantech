@@ -6,6 +6,8 @@ import {
     updateRoomSettings
 } from "./firebase.js";
 
+import { topics } from "./lobby.js";
+
 import {
     ref,
     get,
@@ -1235,5 +1237,64 @@ async function friendAction() {
     } finally {
 
         button.disabled = false;
+    }
+}
+
+/* ==========================================
+   PVP STUDY MODE SELECTOR
+========================================== */
+
+function createStudyModeOptions() {
+    return `
+        <option value="jlpt">🎓 JLPT</option>
+        <option value="topic">📚 CHỦ ĐỀ</option>
+    `;
+}
+
+function createTargetOptions(studyMode) {
+
+    if (studyMode === "topic") {
+
+        return topics.map(topic => `
+            <option value="${topic.id}">
+                ${escapeHTML(topic.name)}
+            </option>
+        `).join("");
+    }
+
+    return ["n5", "n4", "n3", "n2", "n1"]
+        .map(level => `
+            <option value="${level}">
+                ${level.toUpperCase()}
+            </option>
+        `).join("");
+}
+
+function updatePvpStudyTarget(prefix) {
+
+    const studyMode = document.getElementById(
+        `${prefix}StudyMode`
+    );
+
+    const target = document.getElementById(
+        `${prefix}Target`
+    );
+
+    const label = document.getElementById(
+        `${prefix}TargetLabel`
+    );
+
+    if (!studyMode || !target) return;
+
+    const type = studyMode.value;
+
+    target.innerHTML = createTargetOptions(type);
+
+    if (label) {
+
+        label.textContent =
+            type === "jlpt"
+                ? "JLPT LEVEL"
+                : "TOPIC";
     }
 }
