@@ -24,6 +24,7 @@ const $ = id => document.getElementById(id);
 
 let initialized = false;
 let lobbyActive = false;
+let activePvpTab = "rooms";
 let listeners = [];
 let currentRoom = null;
 let selectedProfileUid = null;
@@ -408,6 +409,7 @@ function bindSocialEvents() {
             button.onclick = () => {
 
                 const selected = button.dataset.pvpTab;
+                activePvpTab = selected;
 
                 document.querySelectorAll("[data-pvp-tab]")
                     .forEach(item =>
@@ -1043,47 +1045,93 @@ export async function openPvpPlayerProfile(uid) {
             return;
         }
 
+        
+/* =========================================================
+   CHECK FRIEND STATUS
+========================================================= */
+
         const [friendSnap, requestSnap, sentSnap] =
             await Promise.all([
-
+        
+                // Bạn bè hiện tại
                 get(ref(
                     db,
-                    `friendships/${mine}/${uid}`
+                    `friends/${mine}/${uid}`
                 )),
-
+        
+                // Lời mời nhận được
                 get(ref(
                     db,
                     `friendRequests/${mine}/${uid}`
                 )),
-
+        
+                // Lời mời đã gửi
                 get(ref(
                     db,
-                    `friendRequests/${uid}/${mine}`
+                    `sentFriendRequests/${mine}/${uid}`
                 ))
             ]);
-
-        button.classList.remove("hidden");
-
-        if (friendSnap.val() === true) {
-
-            button.textContent = "✓ FRIEND";
+        
+        const isFriend = friendSnap.exists();
+        
+        const hasReceivedRequest = requestSnap.exists();
+        
+        const hasSentRequest = sentSnap.exists();
+        
+        /* FRIENDS TAB OR ALREADY FRIEND */
+        
+        if (activePvpTab === "friends" || isFriend) {
+        
+            button.classList.add("hidden");
+        
             button.dataset.action = "friend";
-
-        } else if (requestSnap.exists()) {
-
-            button.textContent = "✓ ACCEPT FRIEND";
-            button.dataset.action = "accept";
-
-        } else if (sentSnap.exists()) {
-
-            button.textContent = "REQUEST SENT";
-            button.dataset.action = "sent";
-
-        } else {
-
-            button.textContent = "＋ ADD FRIEND";
-            button.dataset.action = "request";
+        
+            button.disabled = true;
+        
         }
+        
+        /* INCOMING REQUEST */
+        
+        else if (hasReceivedRequest) {
+        
+            button.classList.remove("hidden");
+        
+            button.textContent = "✓ ACCEPT FRIEND";
+        
+            button.dataset.action = "accept";
+        
+            button.disabled = false;
+        
+        }
+        
+        /* REQUEST ALREADY SENT */
+        
+        else if (hasSentRequest) {
+        
+            button.classList.remove("hidden");
+        
+            button.textContent = "✓ REQUEST SENT";
+        
+            button.dataset.action = "sent";
+        
+            button.disabled = true;
+        
+        }
+        
+        /* NOT FRIENDS */
+        
+        else {
+        
+            button.classList.remove("hidden");
+        
+            button.textContent = "＋ ADD FRIEND";
+        
+            button.dataset.action = "request";
+        
+            button.disabled = false;
+        
+        }
+
 
     } catch (error) {
 
@@ -1107,6 +1155,17 @@ async function friendAction() {
 
     const button = $("pvpFriendAction");
     const action = button.dataset.action;
+
+    if (button.disabled) {
+        return;
+    }
+    
+    if (
+        action === "friend" ||
+        action === "sent"
+    ) {
+        return;
+    }
 
     if (action === "friend" || action === "sent") {
         return;
@@ -1133,6 +1192,22 @@ async function friendAction() {
             button.dataset.action = "friend";
 
         } else {
+
+            const existingRequest = await get(
+                ref(
+                    db,
+                    `sentFriendRequests/${mine}/${to}`
+                )
+            );
+            
+            if (existingRequest.exists()) {
+            
+                button.textContent = "✓ REQUEST SENT";
+            
+                button.dataset.action = "sent";
+            
+                return;
+            }
 
             await set(
                 ref(
