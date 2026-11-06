@@ -22,7 +22,7 @@
             rgba(5, 10, 20, 0.78),
             rgba(5, 10, 20, 0.92)
         ),
-        url("../assets/images/backgrounds/game-bg.png");
+        url("../assets/images/backgrounds/game-bg.webp");
 
     background-size: cover;
 
