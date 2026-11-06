@@ -290,17 +290,47 @@ export function initPvpSocial() {
         "afterbegin",
         `
         <div class="pvp-room-controls">
-            <strong id="pvpWaitingTitle">
-                ROOM
-            </strong>
-
-            <span id="pvpWaitingVisibility">
-                PUBLIC
-            </span>
-
-            <button id="pvpCopyCode" type="button">
-                ⧉ COPY CODE
-            </button>
+        
+            <div class="pvp-room-toolbar-left">
+        
+                <button
+                    id="pvpEmojiButton"
+                    class="pvp-toolbar-icon"
+                    type="button"
+                    title="Send emoji">
+                    😊
+                </button>
+        
+                <div id="pvpEmojiPicker"
+                     class="pvp-emoji-picker hidden"></div>
+        
+            </div>
+        
+            <div class="pvp-room-toolbar-right">
+        
+                <span id="pvpWaitingVisibility"></span>
+        
+                <button
+                    id="pvpCopyCode"
+                    class="pvp-toolbar-small"
+                    type="button">
+                    <span>⧉</span> COPY CODE
+                </button>
+        
+                <button
+                    id="pvpToggleSettings"
+                    class="pvp-toolbar-icon"
+                    type="button"
+                    title="Room Settings">
+                    ⚙
+                </button>
+        
+            </div>
+        
+        </div>
+        
+        <div id="pvpWaitingTitle" class="pvp-room-title">
+            ROOM
         </div>
 
         <div class="pvp-room-settings-actions">
