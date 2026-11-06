@@ -402,6 +402,58 @@ export function initPvpSocial() {
         `
     );
 
+    const inviteSection = `
+    <div id="pvpInviteSection"
+         class="pvp-invite-section hidden">
+
+        <button id="pvpInviteToggle"
+                type="button"
+                class="pvp-invite-main-btn">
+            👥 INVITE PLAYERS
+        </button>
+
+        <div id="pvpInvitePanel"
+             class="pvp-social-panel hidden">
+
+            <h3>INVITE PLAYERS</h3>
+
+            <div class="pvp-invite-tabs">
+                <button id="pvpInviteOnlineTab"
+                        class="active"
+                        type="button">
+                    🟢 ONLINE
+                </button>
+
+                <button id="pvpInviteFriendsTab"
+                        type="button">
+                    🤝 FRIENDS
+                </button>
+            </div>
+
+            <div id="pvpInviteList"></div>
+
+            <p id="pvpInviteMessage"></p>
+
+        </div>
+    </div>
+`;
+
+document.getElementById("waitingMessage")
+    .insertAdjacentHTML(
+        "beforebegin",
+        inviteSection
+    );
+
+    document.getElementById("roomSelectPanel")
+    .insertAdjacentHTML(
+        "afterbegin",
+        `
+        <div id="pvpIncomingInvites"
+             class="pvp-incoming-invites hidden">
+        </div>
+        `
+    );
+
     const modal = document.createElement("div");
 
     modal.id = "pvpProfileModal";
@@ -432,6 +484,7 @@ export function initPvpSocial() {
 
     bindSocialEvents();
     initPvpEmoji();
+    initPvpInviteEvents();
 }
 
 /* =========================================================
@@ -682,6 +735,16 @@ export async function enterPvpSocial() {
             `friendRequests/${me.uid}`,
             renderRequests
         );
+
+        const inviteUnsubscribe = onValue(
+            ref(
+                db,
+                `pvpInvites/${me.uid}`
+            ),
+            renderPvpIncomingInvites
+        );
+        
+        listeners.push(inviteUnsubscribe);    
 
     } catch (error) {
 
@@ -1021,6 +1084,36 @@ export function onPvpSocialRoomUpdate(
     room,
     role
 ) {
+
+    const inviteSection = document.getElementById(
+    "pvpInviteSection"
+    );
+    
+    if (inviteSection) {
+    
+        const canInvite =
+            role === "host" &&
+            !room.guest?.connected &&
+            ["waiting", "connected"].includes(room.status);
+    
+        inviteSection.classList.toggle(
+            "hidden",
+            !canInvite
+        );
+    }
+
+    const joinedCode = getConnectionInfo().roomCode;
+    const myUid = auth.currentUser?.uid;
+    
+    if (joinedCode && myUid) {
+    
+        remove(
+            ref(
+                db,
+                `pvpInvites/${myUid}/${joinedCode}`
+            )
+        ).catch(console.warn);
+    }
 
     const reactions = room.reactions || {};
 
@@ -1527,3 +1620,354 @@ function initPvpEmoji() {
             };
         });
 }
+
+
+/* ==========================================
+   1V1 ROOM INVITATIONS
+========================================== */
+
+let inviteBusy = false;
+
+function pvpInviteCode() {
+
+    return getConnectionInfo().roomCode;
+}
+
+function pvpInviteNotice(message) {
+
+    const el = document.getElementById(
+        "pvpInviteMessage"
+    );
+
+    if (el) el.textContent = message;
+}
+
+async function loadPvpInvitePlayers(type = "online") {
+
+    const container = document.getElementById(
+        "pvpInviteList"
+    );
+
+    const myUid = auth.currentUser?.uid;
+    const code = pvpInviteCode();
+
+    if (!myUid || !code || !room) return;
+
+    container.textContent = "Loading players...";
+
+    try {
+
+        let playerIds = [];
+
+        if (type === "online") {
+
+            const snap = await get(
+                ref(db, "pvpPresence")
+            );
+
+            const players = Object.values(
+                snap.val() || {}
+            );
+
+            playerIds = players
+                .filter(p =>
+                    p.online === true &&
+                    p.uid !== myUid &&
+                    p.uid !== room.guest?.uid
+                )
+                .map(p => p.uid);
+
+        } else {
+
+            // Use BatLingo's existing Friends database.
+            const snap = await get(
+                ref(db, `friends/${myUid}`)
+            );
+
+            playerIds = Object.keys(
+                snap.val() || {}
+            ).filter(uid => uid !== myUid);
+        }
+
+        playerIds = [...new Set(playerIds)]
+            .slice(0, 50);
+
+        const profiles = await Promise.all(
+            playerIds.map(async uid => {
+
+                const [profileSnap, presenceSnap] =
+                    await Promise.all([
+
+                        get(ref(
+                            db,
+                            `publicProfiles/${uid}`
+                        )),
+
+                        get(ref(
+                            db,
+                            `pvpPresence/${uid}`
+                        ))
+                    ]);
+
+                const profile = profileSnap.val() || {};
+                const presence = presenceSnap.val() || {};
+
+                return {
+
+                    uid,
+
+                    name:
+                        profile.displayName ||
+                        presence.name ||
+                        "Player",
+
+                    level:
+                        Number(profile.level) ||
+                        Number(presence.level) ||
+                        1,
+
+                    online: presence.online === true
+                };
+            })
+        );
+
+        container.innerHTML = profiles.length
+            ? profiles.map(player => `
+                <div class="pvp-list-item">
+
+                    <div class="pvp-list-info">
+
+                        <strong>
+                            ${escapeHTML(player.name)}
+                        </strong>
+
+                        <small>
+                            LV. ${player.level}
+                            · ${player.online
+                                ? "🟢 ONLINE"
+                                : "OFFLINE"}
+                        </small>
+
+                    </div>
+
+                    <button type="button"
+                            data-pvp-invite="${escapeHTML(player.uid)}">
+                        INVITE
+                    </button>
+
+                </div>
+            `).join("")
+            : `<p class="pvp-empty">
+                No players available.
+               </p>`;
+
+        container
+            .querySelectorAll("[data-pvp-invite]")
+            .forEach(button => {
+
+                button.onclick = async () => {
+
+                    const uid =
+                        button.dataset.pvpInvite;
+
+                    button.disabled = true;
+
+                    try {
+
+                        await sendPvpInvite(uid);
+
+                        button.textContent = "✓ SENT";
+
+                    } catch (error) {
+
+                        button.disabled = false;
+
+                        pvpInviteNotice(error.message);
+                    }
+                };
+            });
+
+    } catch (error) {
+
+        container.textContent = error.message;
+    }
+}
+
+async function sendPvpInvite(receiverUid) {
+
+    const senderUid = auth.currentUser?.uid;
+
+    const code = pvpInviteCode();
+
+    if (!senderUid || !receiverUid || !code) {
+        throw new Error("INVALID_INVITE");
+    }
+
+    if (
+        !room ||
+        room.host?.uid !== senderUid ||
+        room.guest?.connected
+    ) {
+        throw new Error("ROOM_NOT_AVAILABLE");
+    }
+
+    const inviteRef = ref(
+        db,
+        `pvpInvites/${receiverUid}/${code}`
+    );
+
+    const existing = await get(inviteRef);
+
+    if (existing.exists()) {
+        throw new Error("INVITE_ALREADY_SENT");
+    }
+
+    await set(inviteRef, {
+
+        roomCode: code,
+
+        fromUid: senderUid,
+
+        fromName:
+            window.currentUserData?.profile?.displayName ||
+            auth.currentUser?.displayName ||
+            "Player",
+
+        roomName: room.name || "1V1 BATTLE",
+
+        createdAt: Date.now()
+    });
+}
+
+/* ==========================================
+   RECEIVE INVITES
+========================================== */
+
+function renderPvpIncomingInvites(snapshot) {
+
+    const container = document.getElementById(
+        "pvpIncomingInvites"
+    );
+
+    if (!container) return;
+
+    const invites = Object.entries(
+        snapshot.val() || {}
+    );
+
+    container.classList.toggle(
+        "hidden",
+        invites.length === 0
+    );
+
+    container.innerHTML = invites.map(
+        ([code, invite]) => `
+
+            <div class="pvp-invite-notification">
+
+                <strong>⚔ 1V1 INVITATION</strong>
+
+                <p>
+                    ${escapeHTML(invite.fromName)}
+                    invited you to
+                    ${escapeHTML(invite.roomName)}
+                </p>
+
+                <div class="pvp-invite-actions">
+
+                    <button type="button"
+                            data-invite-decline="${escapeHTML(code)}">
+                        DECLINE
+                    </button>
+
+                    <button type="button"
+                            data-invite-accept="${escapeHTML(code)}">
+                        ✓ ACCEPT
+                    </button>
+
+                </div>
+
+            </div>
+        `
+    ).join("");
+
+    container
+        .querySelectorAll("[data-invite-decline]")
+        .forEach(button => {
+
+            button.onclick = async () => {
+
+                const code = button.dataset.inviteDecline;
+
+                await remove(
+                    ref(
+                        db,
+                        `pvpInvites/${auth.currentUser.uid}/${code}`
+                    )
+                );
+            };
+        });
+
+    container
+        .querySelectorAll("[data-invite-accept]")
+        .forEach(button => {
+
+            button.onclick = async () => {
+
+                if (inviteBusy) return;
+
+                inviteBusy = true;
+                button.disabled = true;
+
+                const code = button.dataset.inviteAccept;
+
+                // Existing PvP Join Room listener handles
+                // joining and opening the waiting room.
+                const input = document.getElementById(
+                    "roomCodeInput"
+                );
+
+                input.value = code;
+
+                document.getElementById(
+                    "joinRoomButton"
+                ).click();
+
+                // The room update handler will remove
+                // the accepted invitation on success.
+                inviteBusy = false;
+            };
+        });
+}
+
+/* ==========================================
+   INVITE UI EVENTS
+========================================== */
+
+function initPvpInviteEvents() {
+
+    const toggle = document.getElementById(
+        "pvpInviteToggle"
+    );
+
+    toggle.onclick = () => {
+
+        document.getElementById("pvpInvitePanel")
+            .classList.toggle("hidden");
+
+        loadPvpInvitePlayers("online");
+    };
+
+    document.getElementById("pvpInviteOnlineTab")
+        .onclick = () => {
+
+            loadPvpInvitePlayers("online");
+        };
+
+    document.getElementById("pvpInviteFriendsTab")
+        .onclick = () => {
+
+            loadPvpInvitePlayers("friends");
+        };
+}
+
