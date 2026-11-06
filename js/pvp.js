@@ -725,7 +725,10 @@ function createPvpQuestions(database,questionIds)
    INIT
    ============================================================= */
 
+
 export function initPvp(config) {
+
+    console.log("[PVP] INIT START");
 
     currentConfig = config;
 
@@ -733,13 +736,28 @@ export function initPvp(config) {
 
     resetPvpScreen();
 
-    enterPvpSocial().catch(error => {
-        console.error(
-            "[PVP] Lobby initialization:",
-            error
-        );
-    });
+    console.log("[PVP] UI READY");
+
+    enterPvpSocial()
+        .then(() => {
+
+            console.log("[PVP] LOBBY CONNECTED");
+
+        })
+        .catch(error => {
+
+            console.error(
+                "[PVP] LOBBY ERROR:",
+                error
+            );
+
+            alert(
+                "Unable to connect to 1V1 Lobby: " +
+                error.message
+            );
+        });
 }
+
 /* =============================================================
    FIREBASE ROOM UPDATE
    ============================================================= */
