@@ -190,10 +190,10 @@ function showImage() {
     );
 
     const base =
-        `assets/mascot/${kind}.png`;
+        `assets/mascot/${kind}.webp`;
 
     const evolved = evolution
-        ? `assets/mascot/${kind}-stage-${evolution + 1}.png`
+        ? `assets/mascot/${kind}-stage-${evolution + 1}.webp`
         : base;
 
     let triedBase = evolved === base;
@@ -712,10 +712,10 @@ export function showSoloGameOverMascot() {
         );
 
         const base =
-            `assets/mascot/${kind}.png`;
+            `assets/mascot/${kind}.webp`;
 
         const stage = evolution
-            ? `assets/mascot/${kind}-stage-${evolution + 1}.png`
+            ? `assets/mascot/${kind}-stage-${evolution + 1}.webp`
             : base;
 
         let triedBase = stage === base;
