@@ -18,7 +18,7 @@
         max(30px,env(safe-area-inset-bottom));
 
     background-image:
-        url("../assets/images/backgrounds/room-bg.jpg");
+        url("../assets/images/backgrounds/room-bg.webp");
 
     background-size: cover;
     background-position: center;
