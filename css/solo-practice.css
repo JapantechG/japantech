@@ -41,25 +41,6 @@
     min-width: 0;
 }
 
-/*
-   Allow the configuration to expand vertically.
-   Do not scale the screen when Practice opens.
-*/
-
-#setupScreen:has(#configScreen:not(.hidden)) {
-    height: auto;
-    min-height: 100dvh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-#setupScreen:has(#configScreen:not(.hidden))
-#configScreen {
-    height: auto;
-    max-height: none;
-    transform: none;
-}
-
 
 /* ============================================================
    03. SOLO MODE SETTINGS
