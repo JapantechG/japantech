@@ -816,6 +816,25 @@ window.addEventListener("batlingo-room-update",event =>
             room,
             playerRole
         );
+
+        /* ==========================================
+           ENSURE BOTH CLIENTS SEE WAITING ROOM
+        ========================================== */
+        
+        if (
+            (playerRole === "host" || playerRole === "guest") &&
+            (
+                room.status === "waiting" ||
+                room.status === "connected"
+            )
+        ) {
+        
+            roomSelectPanel.classList.add("hidden");
+        
+            waitingRoomPanel.classList.remove("hidden");
+        
+            currentRoomCode.textContent = roomCode;
+        }
         
         updateStartBattleButton();
 
