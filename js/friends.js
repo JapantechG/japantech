@@ -353,8 +353,8 @@ function getMascotHTML(profile) {
     );
 
     const path = evolution === 0
-        ? `assets/mascot/${mascot}.png`
-        : `assets/mascot/${mascot}-stage-${evolution + 1}.png`;
+        ? `assets/mascot/${mascot}.webp`
+        : `assets/mascot/${mascot}-stage-${evolution + 1}.webp`;
 
     return `
         <img
