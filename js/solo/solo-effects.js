@@ -17,11 +17,11 @@ const MILESTONES = new Map([
 
 let overlayTimer = null;
 const SOLO_FX_DURATION = {
-    perfect: 1800,
-    comboSmall: 1800,
-    comboLarge: 1800,
-    comboLegend: 1800,
-    skill: 1800
+    perfect: 1650,
+    comboSmall: 1650,
+    comboLarge: 1650,
+    comboLegend: 1650,
+    skill: 2000
 };
 
 // Prevent low-priority effects from replacing combos
