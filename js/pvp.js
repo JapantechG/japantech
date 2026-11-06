@@ -1785,7 +1785,12 @@ async function startPvpRematch()
         */
 
         await startRoomGame(
-            {
+            {    
+
+                studyMode: matchData.studyMode || "jlpt",
+
+                target: matchData.target || matchData.level,
+                
                 level:
                     oldMatch.level,
 
