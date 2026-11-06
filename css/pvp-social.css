@@ -707,3 +707,112 @@
     font-size: 29px;
     letter-spacing: 12px;
 }
+
+/* ==========================================
+   PVP INVITE SYSTEM
+========================================== */
+
+.pvp-invite-section {
+    margin: 14px 0 20px;
+}
+
+.pvp-invite-main-btn {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px;
+
+    border: 1px solid #fbbf24;
+    border-radius: 12px;
+
+    background: rgba(251, 191, 36, .10);
+    color: #fbbf24;
+
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.pvp-invite-main-btn:hover {
+    background: rgba(251, 191, 36, .20);
+}
+
+.pvp-invite-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.pvp-invite-tabs button {
+    padding: 12px;
+    border: 1px solid #475569;
+    border-radius: 10px;
+
+    background: #1e293b;
+    color: #f8fafc;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+#pvpInviteList {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.pvp-incoming-invites {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pvp-invite-notification {
+    padding: 18px;
+    border: 1px solid #fbbf24;
+    border-radius: 14px;
+
+    background: #172338;
+    color: #fff;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .3);
+}
+
+.pvp-invite-notification > strong {
+    color: #fbbf24;
+    font-size: 14px;
+}
+
+.pvp-invite-notification p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.pvp-invite-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.pvp-invite-actions button {
+    padding: 12px;
+    min-height: 44px;
+
+    border: 1px solid #475569;
+    border-radius: 10px;
+
+    background: #334155;
+    color: #fff;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.pvp-invite-actions button:last-child {
+    background: #fbbf24;
+    border-color: #fbbf24;
+    color: #111827;
+}
