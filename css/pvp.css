@@ -672,7 +672,7 @@
             rgba(3, 7, 18, 0.72),
             rgba(3, 7, 18, 0.88)
         ),
-        url("../assets/images/backgrounds/pvp-battle-bg.png");
+        url("../assets/images/backgrounds/pvp-battle-bg.webp");
 
     background-size: cover;
     background-position: center;
@@ -690,7 +690,7 @@
             rgba(3, 7, 18, 0.55),
             rgba(3, 7, 18, 0.88)
         ),
-        url("../assets/images/backgrounds/pvp-result-bg.png");
+        url("../assets/images/backgrounds/pvp-result-bg.webp");
 
     background-size: cover;
     background-position: center;
