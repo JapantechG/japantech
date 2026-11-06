@@ -123,7 +123,12 @@ function generateRoomCode(length = 6) {
     return code;
 }
 
-function getPvpPlayer() {
+
+/* =========================================================
+   GET PVP PLAYER PROFILE
+========================================================= */
+
+async function getPvpPlayer() {
 
     const user = auth.currentUser;
 
@@ -131,7 +136,51 @@ function getPvpPlayer() {
         throw new Error("LOGIN_REQUIRED");
     }
 
-    const data = window.currentUserData || {};
+    const local = window.currentUserData || {};
+
+    let publicProfile = {};
+
+    try {
+
+        const snapshot = await get(
+            ref(db, `publicProfiles/${user.uid}`)
+        );
+
+        publicProfile = snapshot.val() || {};
+
+    } catch (error) {
+
+        console.warn(
+            "[PVP] Public profile unavailable:",
+            error
+        );
+    }
+
+    const localProfile = local.profile || {};
+
+    const name =
+        publicProfile.displayName ||
+        localProfile.displayName ||
+        user.displayName ||
+        user.email?.split("@")[0] ||
+        "Player";
+
+    const photoURL =
+        publicProfile.photoURL ||
+        localProfile.photoURL ||
+        user.photoURL ||
+        "";
+
+    const batlingoId =
+        publicProfile.batlingoId ||
+        localProfile.batlingoId ||
+        "";
+
+    const level =
+        Number(publicProfile.level) ||
+        Number(local.progress?.level) ||
+        Number(local.level) ||
+        1;
 
     return {
 
@@ -139,25 +188,18 @@ function getPvpPlayer() {
 
         id: user.uid,
 
-        name:
-            data.profile?.displayName ||
-            user.displayName ||
-            "Player",
+        name: String(name).slice(0, 20),
 
-        photoURL:
-            data.profile?.photoURL ||
-            user.photoURL ||
-            "",
+        photoURL,
 
-        batlingoId:
-            data.profile?.batlingoId || "",
+        batlingoId,
 
-        level:
-            Number(data.progress?.level) || 1,
+        level,
 
         connected: true
     };
 }
+
 
 
 function normalizeRoomSettings(options = {}) {
@@ -282,14 +324,7 @@ export async function createRoom(
     options = {}
 ) {
 
-    const player = getPvpPlayer();
-
-    if (playerName) {
-
-        player.name = String(playerName)
-            .trim()
-            .slice(0, 20);
-    }
+    const player = await getPvpPlayer();
 
     const settings =
         normalizeRoomSettings(options);
@@ -371,14 +406,7 @@ export async function joinRoom(
         throw new Error("ROOM_CODE_INVALID");
     }
 
-    const player = getPvpPlayer();
-
-    if (playerName) {
-
-        player.name = String(playerName)
-            .trim()
-            .slice(0, 20);
-    }
+    const player = await getPvpPlayer();
 
     const roomRef = ref(
         db,
