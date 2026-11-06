@@ -728,6 +728,10 @@ export async function startRoomGame(matchData)
         {   
             matchId: Date.now(),
 
+            studyMode: matchData.studyMode || "jlpt",
+
+            target: matchData.target || matchData.level,
+
             level: matchData.level,
 
             category: matchData.category,
