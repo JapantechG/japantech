@@ -1,9 +1,9 @@
+
 import {
     playSfx,
     speakJapanese,
     stopSpeech
-}
-from "./audio.js";
+} from "./audio.js";
 
 import {
     createRoom,
@@ -18,6 +18,7 @@ import {
     recoverInterruptedPvpRoom,
     resetRoomConnection
 } from "./firebase.js";
+
 import {
     initPvpSocial,
     enterPvpSocial,
@@ -32,119 +33,158 @@ import { saveWrongQuestion } from "./user.js";
 
 initPvpSocial();
 
-/* =============================================================
+/* =========================================================
    PVP STATE
-   ============================================================= */
+========================================================= */
 
 let pvpDisconnectRecoveryTimer = null;
+let pvpNextQuestionTimer = null;
+let pvpRevealSpeechTimer = null;
+let pvpMatchLoadVersion = 0;
 
 let pvpDatabase = [];
+let pvpDatabaseKey = "";
 
 let currentConfig = null;
-
 let currentPvpRoom = null;
-
-let displayedQuestionIndex = -1;
-
-let answerLocked = false;
-
-let revealStarted = false;
-
 let currentPlayerRole = null;
-
 let currentMatchId = null;
 
-let rematchStarting = false;
+let displayedQuestionIndex = -1;
+let answerLocked = false;
+let revealStarted = false;
 
+let rematchStarting = false;
 let opponentDisconnected = false;
 
 let pvpTimer = null;
-
 let pvpTimeLeft = 10;
 
 const PVP_QUESTION_TIME = 10;
 
-/* =============================================================
-   DOM
-   ============================================================= */
+/* =========================================================
+   DOM ELEMENTS
+========================================================= */
 
-const roomSelectPanel = document.getElementById("roomSelectPanel");
+const roomSelectPanel =
+    document.getElementById("roomSelectPanel");
 
-const waitingRoomPanel = document.getElementById("waitingRoomPanel");
+const waitingRoomPanel =
+    document.getElementById("waitingRoomPanel");
 
-const currentRoomCode = document.getElementById("currentRoomCode");
+const currentRoomCode =
+    document.getElementById("currentRoomCode");
 
-const leftPlayerAvatar = document.getElementById("leftPlayerAvatar");
+const leftPlayerAvatar =
+    document.getElementById("leftPlayerAvatar");
 
-const leftPlayerName = document.getElementById("leftPlayerName");
+const leftPlayerName =
+    document.getElementById("leftPlayerName");
 
-const leftPlayerStatus = document.getElementById("leftPlayerStatus");
+const leftPlayerStatus =
+    document.getElementById("leftPlayerStatus");
 
-const rightPlayerAvatar =document.getElementById("rightPlayerAvatar");
+const rightPlayerAvatar =
+    document.getElementById("rightPlayerAvatar");
 
-const rightPlayerName = document.getElementById("rightPlayerName");
+const rightPlayerName =
+    document.getElementById("rightPlayerName");
 
-const rightPlayerStatus = document.getElementById("rightPlayerStatus");
+const rightPlayerStatus =
+    document.getElementById("rightPlayerStatus");
 
-const waitingMessage = document.getElementById("waitingMessage");
+const waitingMessage =
+    document.getElementById("waitingMessage");
 
-const startBattleButton = document.getElementById("startBattleButton");
+const startBattleButton =
+    document.getElementById("startBattleButton");
 
-const pvpGamePanel = document.getElementById("pvpGamePanel");
+const pvpGamePanel =
+    document.getElementById("pvpGamePanel");
 
-const pvpQuestionNumber = document.getElementById("pvpQuestionNumber");
+const pvpQuestionNumber =
+    document.getElementById("pvpQuestionNumber");
 
-const pvpQuestion = document.getElementById("pvpQuestion");
+const pvpQuestion =
+    document.getElementById("pvpQuestion");
 
-const pvpReading = document.getElementById("pvpReading");
+const pvpReading =
+    document.getElementById("pvpReading");
 
-const pvpAnswers = document.getElementById("pvpAnswers");
+const pvpAnswers =
+    document.getElementById("pvpAnswers");
 
-const pvpHostCard = document.getElementById("pvpHostCard");
+const pvpHostCard =
+    document.getElementById("pvpHostCard");
 
-const pvpGuestCard = document.getElementById("pvpGuestCard");
+const pvpGuestCard =
+    document.getElementById("pvpGuestCard");
 
-const pvpHostState = document.getElementById("pvpHostState");
+const pvpHostState =
+    document.getElementById("pvpHostState");
 
-const pvpGuestState = document.getElementById("pvpGuestState");
+const pvpGuestState =
+    document.getElementById("pvpGuestState");
 
-const pvpHostScore = document.getElementById("pvpHostScore");
+const pvpHostScore =
+    document.getElementById("pvpHostScore");
 
-const pvpGuestScore = document.getElementById("pvpGuestScore");
+const pvpGuestScore =
+    document.getElementById("pvpGuestScore");
 
-const pvpResultPanel = document.getElementById("pvpResultPanel");
+const pvpResultPanel =
+    document.getElementById("pvpResultPanel");
 
-const pvpFinalHostScore = document.getElementById("pvpFinalHostScore");
+const pvpFinalHostScore =
+    document.getElementById("pvpFinalHostScore");
 
-const pvpFinalGuestScore = document.getElementById("pvpFinalGuestScore");
+const pvpFinalGuestScore =
+    document.getElementById("pvpFinalGuestScore");
 
-const pvpResultMessage = document.getElementById("pvpResultMessage");
+const pvpResultMessage =
+    document.getElementById("pvpResultMessage");
 
-const pvpScreen = document.getElementById("pvpScreen");
+const pvpScreen =
+    document.getElementById("pvpScreen");
 
-const pvpLevel = document.getElementById("pvpLevel");
+const pvpLevel =
+    document.getElementById("pvpLevel");
 
-const pvpRematchButton = document.getElementById("pvpRematchButton");
+const pvpRematchButton =
+    document.getElementById("pvpRematchButton");
 
-const pvpRematchStatus = document.getElementById("pvpRematchStatus");
+const pvpRematchStatus =
+    document.getElementById("pvpRematchStatus");
 
-const pvpTimerText = document.getElementById("pvpTimerText");
+const pvpTimerText =
+    document.getElementById("pvpTimerText");
 
-const pvpTimerBar = document.getElementById("pvpTimerBar");
-const pvpHostName = document.getElementById("pvpHostName");
-const pvpGuestName = document.getElementById("pvpGuestName");
-const pvpFinalHostName = document.getElementById("pvpFinalHostName");
-const pvpFinalGuestName = document.getElementById("pvpFinalGuestName");
+const pvpTimerBar =
+    document.getElementById("pvpTimerBar");
 
-let pvpDatabaseKey = "";
+const pvpHostName =
+    document.getElementById("pvpHostName");
+
+const pvpGuestName =
+    document.getElementById("pvpGuestName");
+
+const pvpFinalHostName =
+    document.getElementById("pvpFinalHostName");
+
+const pvpFinalGuestName =
+    document.getElementById("pvpFinalGuestName");
+
+/* =========================================================
+   LOAD PVP DATABASE
+========================================================= */
 
 async function loadPvpDatabase(
     target,
     studyMode = "jlpt"
 ) {
 
-    const validTarget = String(target || "")
-        .toLowerCase();
+    const validTarget =
+        String(target || "").toLowerCase();
 
     if (!/^[a-z][a-z0-9_]{0,50}$/.test(validTarget)) {
         throw new Error("INVALID_DATABASE_TARGET");
@@ -152,7 +192,10 @@ async function loadPvpDatabase(
 
     const key = `${studyMode}:${validTarget}`;
 
-    if (pvpDatabaseKey === key && pvpDatabase.length) {
+    if (
+        pvpDatabaseKey === key &&
+        pvpDatabase.length
+    ) {
         return pvpDatabase;
     }
 
@@ -170,7 +213,10 @@ async function loadPvpDatabase(
 
     const data = await response.json();
 
-    if (!Array.isArray(data) || data.length < 4) {
+    if (
+        !Array.isArray(data) ||
+        data.length < 4
+    ) {
         throw new Error("INVALID_PVP_DATABASE");
     }
 
@@ -180,42 +226,53 @@ async function loadPvpDatabase(
     return pvpDatabase;
 }
 
-function createQuestionIds(database,count = 20) 
-{
-    const ids =database.map(item => item.id);
-    /*Fisher-Yates shuffle*/
-    for (let i = ids.length - 1;i > 0;i--) 
-    {
-        const j = Math.floor(Math.random()*(i + 1));
+/* =========================================================
+   RANDOM QUESTION IDS
+========================================================= */
 
+function createQuestionIds(
+    database,
+    count = 20
+) {
 
-        [ids[i],ids[j]] =[ids[j],ids[i]];
+    const ids = database.map(item => item.id);
 
+    for (let i = ids.length - 1; i > 0; i--) {
+
+        const j = Math.floor(
+            Math.random() * (i + 1)
+        );
+
+        [ids[i], ids[j]] = [ids[j], ids[i]];
     }
 
-
-    return ids.slice(0,Math.min(count,ids.length)
+    return ids.slice(
+        0,
+        Math.min(count, ids.length)
     );
 }
-/* =============================================================
-   PVP MODE
-   ============================================================= */
 
-function isPvpAudioMode(mode) 
-{
-    return (mode === "audio_hiragana" || mode === "audio_meaning" || mode === "audio_kanji");
+/* =========================================================
+   PVP QUESTION MODE
+========================================================= */
+
+function isPvpAudioMode(mode) {
+
+    return (
+        mode === "audio_hiragana" ||
+        mode === "audio_meaning" ||
+        mode === "audio_kanji"
+    );
 }
 
+function getPvpAnswerField(mode) {
 
-function getPvpAnswerField(mode) 
-{
+    switch (mode) {
 
-    switch (mode) 
-    {
         case "kanji_hiragana":
         case "audio_hiragana":
             return "reading";
-            
+
         case "meaning_kanji":
         case "audio_kanji":
             return "word";
@@ -225,216 +282,175 @@ function getPvpAnswerField(mode)
     }
 }
 
+/* =========================================================
+   DISPLAY QUESTION CONTENT
+========================================================= */
 
-function showPvpQuestionContent(data,mode) 
-{
-
-    /*Xóa click của câu trước*/
+function showPvpQuestionContent(data, mode) {
 
     pvpQuestion.onclick = null;
 
+    switch (mode) {
 
-    switch (mode) 
-    {
         case "kanji_hiragana":
 
             pvpQuestion.textContent = data.word;
-
             break;
-
 
         case "hiragana_meaning":
 
             pvpQuestion.textContent = data.reading;
-
             break;
-
 
         case "meaning_kanji":
 
             pvpQuestion.textContent = data.meaning;
-
             break;
-
 
         case "audio_hiragana":
         case "audio_meaning":
         case "audio_kanji":
 
-            /*
-                Audio mode:
-                chỉ hiện loa
-            */
-
             pvpQuestion.textContent = "🔊";
 
-            /*
-                Click loa để nghe lại
-            */
+            pvpQuestion.onclick = () => {
 
-            pvpQuestion.onclick =() => 
-                {
-                    if (answerLocked) 
-                    {
-                        return;
-                    }
+                if (answerLocked) return;
 
+                speakJapanese(data.reading);
+            };
 
+            setTimeout(() => {
+
+                if (
+                    !answerLocked &&
+                    currentPvpRoom?.status === "playing" &&
+                    !pvpGamePanel.classList.contains("hidden")
+                ) {
                     speakJapanese(data.reading);
-                };
+                }
 
-
-            /*
-                Tự đọc 1 lần
-            */
-
-            setTimeout(() => 
-                {
-
-                    if (!answerLocked) 
-                    {
-                        speakJapanese(data.reading);
-                    }
-
-                },
-                200
-            );
+            }, 200);
 
             break;
 
         default:
 
             pvpQuestion.textContent = data.word;
-
             break;
     }
 }
-function showPvpQuestion(match) 
-{
-        stopSpeech();
-    
-        pvpHostCard.classList.remove("locked","correct","wrong");
 
-        pvpGuestCard.classList.remove("locked","correct","wrong");
+/* =========================================================
+   SHOW PVP QUESTION
+========================================================= */
 
-        pvpHostState.textContent ="THINKING...";
+function showPvpQuestion(match) {
 
-        pvpGuestState.textContent = "THINKING...";
+    stopSpeech();
 
-        pvpAnswers.innerHTML ="";
+    pvpHostCard.classList.remove(
+        "locked",
+        "correct",
+        "wrong"
+    );
 
-        pvpLevel.textContent = `${match.level.toUpperCase()} - ${match.category.toUpperCase()}`;
+    pvpGuestCard.classList.remove(
+        "locked",
+        "correct",
+        "wrong"
+    );
 
-        const index = match.currentQuestion || 0;
+    pvpHostState.textContent = "THINKING...";
+    pvpGuestState.textContent = "THINKING...";
 
-        const questionId = match.questionIds[index];
+    pvpAnswers.innerHTML = "";
 
-         const data = getQuestionById(questionId);
+    const target =
+        match.target || match.level || "n5";
 
+    pvpLevel.textContent =
+        `${String(target).toUpperCase()} - ` +
+        `${String(match.category || "vocabulary").toUpperCase()}`;
 
-    if (!data) 
-        {
-            console.error("[PVP] Question not found:",questionId);
+    const index = match.currentQuestion || 0;
+    const questionId = match.questionIds[index];
 
-            return;
-        }
+    const data = getQuestionById(questionId);
 
+    if (!data) {
+        console.error(
+            "[PVP] Question not found:",
+            questionId
+        );
+        return;
+    }
 
-    /*
-        Chuyển Waiting Room
-        → Game
-    */
+    showPvpPanel("battle");
 
-    waitingRoomPanel.classList.add("hidden");
-
-    pvpGamePanel.classList.remove("hidden");
-
-
-    /*
-        Question number
-    */
-
-    pvpQuestionNumber.textContent = `QUESTION ${index + 1}`;
+    pvpQuestionNumber.textContent =
+        `QUESTION ${index + 1}`;
 
     const mode = match.mode;
-    
-    
-        /*
-            Không hiện reading sẵn.
-            Nếu KANJI → HIRAGANA sẽ lộ đáp án.
-        */
-        
-        pvpReadingShownFor = null;
 
-        pvpReading.textContent = "";
-        
-        pvpReading.classList.remove("show");
-        
-        /*Render question theo mode HOST đã chọn*/
-        
-    showPvpQuestionContent(data,mode);
+    // Do not reveal hiragana before both answers.
+    pvpReadingShownFor = null;
 
-    console.log("[PVP] Showing question:",data);
+    pvpReading.textContent = "";
+    pvpReading.classList.remove("show");
 
-   /*Lấy thông tin 4 đáp án*/
+    showPvpQuestionContent(data, mode);
 
-const questionData = match.questions[index];
+    const questionData = match.questions[index];
 
-if (!questionData) 
-{
-    console.error("[PVP] Question data not found:",index);
-
-    return;
-}
-
-/*Clear đáp án cũ*/
-
-pvpAnswers.innerHTML = "";
-
-/*
-    Render 4 đáp án
-*/
-const answerField =getPvpAnswerField(mode);
-
-questionData.optionIds.forEach((optionId,optionIndex) => 
-    {
-
-        const option =getQuestionById(optionId);
-
-        if (!option) 
-        {
-            return;
-        }
-
-        const button = document.createElement("button");
-
-        button.className = "answer-button";
-
-        button.type = "button";
-
-        button.dataset.optionId = optionId;
-
-        button.textContent = option[answerField];
-
-        button.dataset.answerLabel =["A", "B", "C", "D"][optionIndex];
-
-         /*
-            Click answer
-        */
-
-        button.addEventListener("click",() => {selectPvpAnswer(optionId,button);});
-
-        pvpAnswers.appendChild(button);
-
-     }
+    if (!questionData) {
+        console.error(
+            "[PVP] Question data not found:",
+            index
         );
+        return;
+    }
 
-    /*
-    Mỗi câu PvP = 10 giây
-    */
+    pvpAnswers.innerHTML = "";
+
+    const answerField = getPvpAnswerField(mode);
+
+    questionData.optionIds.forEach(
+        (optionId, optionIndex) => {
+
+            const option = getQuestionById(optionId);
+
+            if (!option) return;
+
+            const button =
+                document.createElement("button");
+
+            button.className = "answer-button";
+            button.type = "button";
+
+            button.dataset.optionId = optionId;
+
+            button.dataset.answerLabel =
+                ["1", "2", "3", "4"][optionIndex];
+
+            button.textContent =
+                option[answerField] || "";
+
+            button.addEventListener(
+                "click",
+                () => {
+                    selectPvpAnswer(
+                        optionId,
+                        button
+                    );
+                }
+            );
+
+            pvpAnswers.appendChild(button);
+        }
+    );
 
     startPvpTimer();
-
 }
 
 
@@ -444,9 +460,7 @@ questionData.optionIds.forEach((optionId,optionIndex) =>
 
 let pvpReadingShownFor = null;
 
-function showPvpAnswerReading({
-    speak = true
-} = {}) {
+function showPvpAnswerReading() {
 
     const match = currentPvpRoom?.match;
 
@@ -456,9 +470,12 @@ function showPvpAnswerReading({
         match.currentQuestion || 0
     );
 
-    const questionId = match.questionIds?.[index];
+    const questionId =
+        match.questionIds?.[index];
 
-    const question = getQuestionById(questionId);
+    const question = getQuestionById(
+        questionId
+    );
 
     if (!question) return;
 
@@ -466,375 +483,618 @@ function showPvpAnswerReading({
         question.reading || ""
     ).trim();
 
-    if (!reading) return;
+    const key =
+        `${match.matchId}:${index}`;
 
-    /* Prevent duplicate speech for same question */
-
-    const key = `${match.matchId}:${index}`;
-
+    // Only reveal once per question.
     if (pvpReadingShownFor === key) {
         return;
     }
 
     pvpReadingShownFor = key;
 
-    /* Show hiragana */
+    /* =====================================
+       DISPLAY HIRAGANA
+    ===================================== */
 
     pvpReading.textContent = reading;
 
-    pvpReading.classList.add("show");
-
-    /* Speak Japanese word */
-
-    if (
-        speak &&
-        !isPvpAudioMode(match.mode)
-    ) {
-
-        stopSpeech();
-
-        speakJapanese(reading);
+    if (reading) {
+        pvpReading.classList.add("show");
     }
+
+    /* =====================================
+       PRONOUNCE AFTER BOTH ANSWERED
+    ===================================== */
+
+    if (!reading) return;
+
+    stopSpeech();
+
+    speakJapanese(reading);
 }
 
 
-async function selectPvpAnswer(optionId,selectedButton) 
-    {
+/* =========================================================
+   PVP - PLAYER SELECTS ANSWER
+========================================================= */
 
-    if (answerLocked || !currentPvpRoom) 
-    {
+async function selectPvpAnswer(
+    optionId,
+    selectedButton
+) {
+
+    if (
+        answerLocked ||
+        revealStarted ||
+        !currentPvpRoom ||
+        currentPvpRoom.status !== "playing"
+    ) {
         return;
     }
-
 
     const match = currentPvpRoom.match;
 
+    if (!match) return;
 
-    const questionIndex = match.currentQuestion || 0;
+    const questionIndex =
+        match.currentQuestion || 0;
 
+    const matchId = match.matchId;
 
-    /*
-        Khóa local ngay lập tức
-    */
+    /* =====================================
+       LOCK ANSWER LOCALLY
+    ===================================== */
 
-    answerLocked =true;
-
-    playSfx("click");
+    answerLocked = true;
 
     stopPvpTimer();
 
-    const buttons = pvpAnswers.querySelectorAll(".answer-button");
+    playSfx("click");
 
+    const buttons =
+        pvpAnswers.querySelectorAll(
+            ".answer-button"
+        );
 
-    buttons.forEach(button => 
-        {
-            button.disabled =true;
+    buttons.forEach(button => {
 
-            button.classList.add("locked");
-        }
-    );
+        button.disabled = true;
 
-
-    selectedButton.classList.add("selected");
-
-    /* Show reading and pronounce the Japanese word */
-    
-    showPvpAnswerReading({
-        speak: true
+        button.classList.add("locked");
     });
 
+    // Only show selected state.
+    // No reading or correct/wrong yet.
+    selectedButton.classList.add("selected");
 
-    /*
-        Gửi Firebase
-    */
+    /* =====================================
+       SUBMIT TO FIREBASE
+    ===================================== */
 
     try {
-    
-        await submitRoomAnswer(questionIndex, optionId);
-    
-        showPvpAnswerReading({
-            speak: true
-        });
 
-    }
-    catch (error) {
+        await submitRoomAnswer(
+            questionIndex,
+            optionId
+        );
 
-        console.error("[PVP] Submit answer error:",error);
-
-        /*
-            Nếu Firebase lỗi
-            cho phép chọn lại
-        */
-
-        answerLocked = false;
-
-        buttons.forEach(button => 
+        console.log(
+            "[PVP] Answer submitted:",
             {
-                button.classList.remove("locked");
+                role: currentPlayerRole,
+                questionIndex,
+                optionId
             }
         );
 
-        selectedButton.classList.remove("selected");
+        // Do not call showPvpAnswerReading().
+        // Firebase room update will reveal only
+        // when BOTH players have answered.
+
+    } catch (error) {
+
+        console.error(
+            "[PVP] Submit answer failed:",
+            error
+        );
+
+        // Do not unlock an obsolete question.
+        if (
+            currentPvpRoom?.status !== "playing" ||
+            currentPvpRoom.match?.matchId !== matchId ||
+            Number(
+                currentPvpRoom.match?.currentQuestion || 0
+            ) !== questionIndex
+        ) {
+            return;
+        }
+
+        answerLocked = false;
+
+        buttons.forEach(button => {
+
+            button.disabled = false;
+
+            button.classList.remove("locked");
+        });
+
+        selectedButton.classList.remove(
+            "selected"
+        );
+
+        startPvpTimer();
     }
 }
 
-function updatePvpAnswerState(room) 
-{
 
-    const match = room.match;
+/* =========================================================
+   PVP - UPDATE BOTH PLAYERS' ANSWER STATES
+========================================================= */
 
-    const questionIndex = match.currentQuestion || 0;
+function updatePvpAnswerState(room) {
 
-    const answers = match.answers?.[questionIndex] || {};
-
-    const hostAnswer = answers.host;
-
-    const guestAnswer = answers.guest;
-
-    /*
-        PLAYER 1 / HOST
-    */
-
-    if (hostAnswer) 
-    {
-        pvpHostState.textContent = "LOCKED";
-
-        pvpHostCard.classList.add("locked");
-    }
-    else if (room.host?.connected !== true) 
-    {
-        pvpHostState.textContent = "DISCONNECTED";
-        pvpHostCard.classList.remove("locked");
-    }
-    else 
-    {
-        pvpHostState.textContent = "THINKING...";
-    }
-
-    /*
-        PLAYER 2 / GUEST
-    */
-    if (guestAnswer) 
-    {
-        pvpGuestState.textContent = "LOCKED";
-
-        pvpGuestCard.classList.add("locked");
-    }
-    else if (room.guest?.connected !== true) 
-    {
-        pvpGuestState.textContent = "DISCONNECTED";
-        pvpGuestCard.classList.remove("locked");
-    }
-    else 
-    {
-        pvpGuestState.textContent = "THINKING...";
-    }
-
-    /*
-        Chưa đủ 2 người
-        => tuyệt đối chưa reveal
-    */
-
-    if (!hostAnswer || !guestAnswer) 
-    {
+    if (
+        !room ||
+        room.status !== "playing" ||
+        !room.match
+    ) {
         return;
     }
 
-    /*
-        Cả 2 đã trả lời
-    */
+    const match = room.match;
 
-    revealPvpAnswers(room,hostAnswer,guestAnswer);
+    const questionIndex =
+        match.currentQuestion || 0;
+
+    const answers =
+        match.answers?.[questionIndex] || {};
+
+    const hostAnswer = answers.host;
+    const guestAnswer = answers.guest;
+
+    /* =====================================
+       HOST STATUS
+    ===================================== */
+
+    if (hostAnswer) {
+
+        pvpHostState.textContent = "LOCKED";
+
+        pvpHostCard.classList.add("locked");
+
+    } else if (room.host?.connected !== true) {
+
+        pvpHostState.textContent =
+            "DISCONNECTED";
+
+        pvpHostCard.classList.remove(
+            "locked"
+        );
+
+    } else {
+
+        pvpHostState.textContent =
+            "THINKING...";
+
+        pvpHostCard.classList.remove(
+            "locked"
+        );
+    }
+
+    /* =====================================
+       GUEST STATUS
+    ===================================== */
+
+    if (guestAnswer) {
+
+        pvpGuestState.textContent = "LOCKED";
+
+        pvpGuestCard.classList.add("locked");
+
+    } else if (room.guest?.connected !== true) {
+
+        pvpGuestState.textContent =
+            "DISCONNECTED";
+
+        pvpGuestCard.classList.remove(
+            "locked"
+        );
+
+    } else {
+
+        pvpGuestState.textContent =
+            "THINKING...";
+
+        pvpGuestCard.classList.remove(
+            "locked"
+        );
+    }
+
+    /* =====================================
+       RESTORE MY ANSWER LOCK
+       Useful after reconnecting.
+    ===================================== */
+
+    const myAnswer =
+        currentPlayerRole === "host"
+            ? hostAnswer
+            : guestAnswer;
+
+    if (myAnswer) {
+
+        answerLocked = true;
+
+        stopPvpTimer();
+
+        pvpAnswers
+            .querySelectorAll(".answer-button")
+            .forEach(button => {
+
+                button.disabled = true;
+                button.classList.add("locked");
+
+                if (
+                    String(button.dataset.optionId) ===
+                    String(myAnswer.optionId)
+                ) {
+                    button.classList.add(
+                        "selected"
+                    );
+                }
+            });
+    }
+
+    /* =====================================
+       WAIT FOR BOTH PLAYERS
+    ===================================== */
+
+    if (!hostAnswer || !guestAnswer) {
+
+        // Absolutely no answer reveal here.
+        // No hiragana.
+        // No correct/wrong sound.
+        // No pronunciation.
+
+        return;
+    }
+
+    /* =====================================
+       BOTH PLAYERS HAVE ANSWERED
+    ===================================== */
+
+    revealPvpAnswers(
+        room,
+        hostAnswer,
+        guestAnswer
+    );
 }
 
-function savePvpWrongQuestion(match, questionIndex) 
-{
-    const questionId = match.questionIds?.[questionIndex];
 
-    if (questionId === undefined || questionId === null)
-    {
-        console.warn("[REVIEW] PvP question ID not found.");
+/* =========================================================
+   PVP - SAVE WRONG QUESTION
+========================================================= */
+
+function savePvpWrongQuestion(
+    match,
+    questionIndex
+) {
+
+    const questionId =
+        match.questionIds?.[questionIndex];
+
+    if (
+        questionId === undefined ||
+        questionId === null
+    ) {
         return;
     }
 
     const config = {
-        studyMode: currentConfig?.studyMode || "jlpt",
-        target: match.level,
-        category: match.category,
-        subMode: match.mode
+
+        studyMode:
+            match.studyMode ||
+            currentConfig?.studyMode ||
+            "jlpt",
+
+        target:
+            match.target ||
+            match.level ||
+            "n5",
+
+        category:
+            match.category ||
+            "vocabulary",
+
+        subMode:
+            match.mode ||
+            "kanji_meaning"
     };
 
-    saveWrongQuestion(questionId, config, "pvp").catch(error => console.error("[REVIEW] Save PvP wrong failed:", error));
+    saveWrongQuestion(
+        questionId,
+        config,
+        "pvp"
+    ).catch(error => {
+
+        console.error(
+            "[PVP REVIEW] Save wrong failed:",
+            error
+        );
+    });
 }
 
-function revealPvpAnswers(room,hostAnswer,guestAnswer) 
-{
 
-    if (revealStarted) 
-    {
+/* =========================================================
+   PVP - REVEAL ANSWERS
+   ONLY AFTER BOTH PLAYERS ANSWERED
+========================================================= */
+
+function revealPvpAnswers(
+    room,
+    hostAnswer,
+    guestAnswer
+) {
+
+    if (revealStarted) return;
+
+    if (
+        !hostAnswer ||
+        !guestAnswer ||
+        !room?.match ||
+        room.status !== "playing"
+    ) {
         return;
     }
 
     revealStarted = true;
 
-    /* Reveal reading if this player timed out */
+    answerLocked = true;
 
-    showPvpAnswerReading({
-        speak: false
-    });
+    stopPvpTimer();
 
     const match = room.match;
 
-    const questionIndex = match.currentQuestion || 0;
+    const questionIndex =
+        match.currentQuestion || 0;
 
-    const questionData =match.questions[questionIndex];
+    const questionData =
+        match.questions?.[questionIndex];
 
-    const correctOptionId =questionData.questionId;
+    if (!questionData) {
 
-    const hostCorrect =String(hostAnswer.optionId)===String(correctOptionId);
+        console.error(
+            "[PVP] Missing question data"
+        );
 
-    const guestCorrect =String(guestAnswer.optionId)===String(correctOptionId);
-
-    const myCorrect =currentPlayerRole === "host" ? hostCorrect : guestCorrect;
-
-    const myAnswer = currentPlayerRole === "host" ? hostAnswer : guestAnswer;
-    
-    if (myCorrect) 
-    {
-        playSfx("correct");
+        return;
     }
-    else 
-    {
-        playSfx("wrong");
-                
-        if (myAnswer.optionId !== "TIMEOUT") 
-        {
-            savePvpWrongQuestion(match, questionIndex);
-        }
-     }
 
-    /*
-        Player cards
-    */
+    const correctOptionId =
+        questionData.questionId;
 
-    pvpHostCard.classList.remove("locked");
+    /* =====================================
+       CALCULATE CORRECT / WRONG
+    ===================================== */
 
-    pvpGuestCard.classList.remove("locked");
+    const hostCorrect =
+        String(hostAnswer.optionId) ===
+        String(correctOptionId);
 
-    pvpHostCard.classList.add(hostCorrect ? "correct" : "wrong");
+    const guestCorrect =
+        String(guestAnswer.optionId) ===
+        String(correctOptionId);
 
-    pvpGuestCard.classList.add(guestCorrect ? "correct" : "wrong");
+    const myCorrect =
+        currentPlayerRole === "host"
+            ? hostCorrect
+            : guestCorrect;
 
-    pvpHostState.textContent = hostCorrect ? "CORRECT" : "WRONG";
+    const myAnswer =
+        currentPlayerRole === "host"
+            ? hostAnswer
+            : guestAnswer;
 
-    pvpGuestState.textContent = guestCorrect ? "CORRECT" : "WRONG";
+    /* =====================================
+       DISPLAY CORRECT / WRONG STATES
+    ===================================== */
 
-    /*
-        Reveal buttons
-    */
-
-    const buttons = pvpAnswers.querySelectorAll(".answer-button");
-
-    /*const myAnswer = currentPlayerRole === "host" ? hostAnswer : guestAnswer;*/
-
-    buttons.forEach(button => 
-        {
-            const optionId = button.dataset.optionId;
-            /* Bỏ trạng thái vàng*/
-            button.classList.remove("selected");
-
-            /*Đáp án đúng -> XANH */
-
-            if (String(optionId) === String(correctOptionId)) 
-            {
-                button.classList.add("correct-answer");
-            }
-
-            /*
-                Đáp án người hiện tại chọn sai -> ĐỎ
-            */
-
-            if (myAnswer && String(optionId) === String(myAnswer.optionId) && String(optionId) !== String(correctOptionId)) 
-            {
-                button.classList.add("wrong-answer");
-            }
-
-        }
+    pvpHostCard.classList.remove(
+        "locked",
+        "correct",
+        "wrong"
     );
 
+    pvpGuestCard.classList.remove(
+        "locked",
+        "correct",
+        "wrong"
+    );
 
-    /*
-        Host chịu trách nhiệm
-        tính score + chuyển câu
-    */
+    pvpHostCard.classList.add(
+        hostCorrect ? "correct" : "wrong"
+    );
 
-    scheduleNextPvpQuestion(room,hostCorrect,guestCorrect);
-}
+    pvpGuestCard.classList.add(
+        guestCorrect ? "correct" : "wrong"
+    );
 
-function createPvpQuestions(database,questionIds) 
-{
+    pvpHostState.textContent =
+        hostCorrect ? "CORRECT" : "WRONG";
 
-    return questionIds.map(questionId => 
-        {
-            const question =database.find(item => String(item.id) === String(questionId));
+    pvpGuestState.textContent =
+        guestCorrect ? "CORRECT" : "WRONG";
 
-            if (!question) 
-            {
-                return null;
-            }
+    /* =====================================
+       REVEAL ANSWER BUTTONS
+    ===================================== */
 
-            /*
-                Lấy 3 đáp án sai
-            */
+    const buttons =
+        pvpAnswers.querySelectorAll(
+            ".answer-button"
+        );
 
-            const wrongAnswers = database.filter(item => String(item.id) !== String(questionId)).sort(() => Math.random() - 0.5).slice(0,3);
+    buttons.forEach(button => {
 
-            /*
-                Đáp án đúng + 3 sai
-            */
+        button.disabled = true;
 
-            const options =[question,...wrongAnswers];
+        button.classList.remove(
+            "selected",
+            "locked"
+        );
 
-            /*
-                Shuffle 4 đáp án
-            */
+        const optionId =
+            button.dataset.optionId;
 
-            for (let i = options.length - 1;i > 0;i--) 
-            {
-                const j =Math.floor(Math.random()*(i + 1));
+        const isCorrectAnswer =
+            String(optionId) ===
+            String(correctOptionId);
 
-                [
-                    options[i],
-                    options[j]
-                ] =
-                [
-                    options[j],
-                    options[i]
-                ];
+        const isMyWrongAnswer =
+            myAnswer &&
+            String(optionId) ===
+                String(myAnswer.optionId) &&
+            !isCorrectAnswer;
 
-            }
+        if (isCorrectAnswer) {
 
-
-            return {
-
-                questionId:
-                    question.id,
-
-                optionIds:
-                    options.map(
-                        item =>
-                            item.id
-                    )
-            };
-
+            button.classList.add(
+                "correct-answer"
+            );
         }
-    )
-    .filter(Boolean);
-}
-/* =============================================================
-   INIT
-   ============================================================= */
 
+        if (isMyWrongAnswer) {
+
+            button.classList.add(
+                "wrong-answer"
+            );
+        }
+    });
+
+    /* =====================================
+       PLAY CORRECT / WRONG SOUND
+    ===================================== */
+
+    playSfx(
+        myCorrect ? "correct" : "wrong"
+    );
+
+    /* =====================================
+       SAVE WRONG ANSWER
+       Only once, after reveal.
+    ===================================== */
+
+    if (!myCorrect) {
+
+        savePvpWrongQuestion(
+            match,
+            questionIndex
+        );
+    }
+
+    /* =====================================
+       REVEAL HIRAGANA AND PRONUNCIATION
+    ===================================== */
+
+    if (pvpRevealSpeechTimer) {
+
+        clearTimeout(pvpRevealSpeechTimer);
+    }
+
+    const revealedMatchId = match.matchId;
+    const revealedIndex = questionIndex;
+
+    pvpRevealSpeechTimer = setTimeout(() => {
+
+        pvpRevealSpeechTimer = null;
+
+        // Do not speak if the match was closed
+        // or has advanced to another question.
+        if (
+            currentPvpRoom?.status !== "playing" ||
+            currentPvpRoom.match?.matchId !==
+                revealedMatchId ||
+            Number(
+                currentPvpRoom.match?.currentQuestion || 0
+            ) !== revealedIndex ||
+            !revealStarted
+        ) {
+            return;
+        }
+
+        showPvpAnswerReading();
+
+    }, 350);
+
+    /* =====================================
+       HOST ADVANCES TO NEXT QUESTION
+    ===================================== */
+
+    if (currentPlayerRole === "host") {
+
+        scheduleNextPvpQuestion(
+            room,
+            hostCorrect,
+            guestCorrect
+        );
+    }
+}
+
+
+/* =========================================================
+   PVP - CREATE SHARED QUESTIONS
+========================================================= */
+
+function createPvpQuestions(database, questionIds) {
+
+    return questionIds.map(questionId => {
+
+        const question = database.find(item =>
+            String(item.id) === String(questionId)
+        );
+
+        if (!question) {
+            return null;
+        }
+
+        /* Select three wrong answers */
+
+        const wrongAnswers = database
+            .filter(item =>
+                String(item.id) !== String(questionId)
+            )
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3);
+
+        const options = [
+            question,
+            ...wrongAnswers
+        ];
+
+        /* Shuffle answers */
+
+        for (let i = options.length - 1; i > 0; i--) {
+
+            const j = Math.floor(
+                Math.random() * (i + 1)
+            );
+
+            [options[i], options[j]] =
+                [options[j], options[i]];
+        }
+
+        return {
+            questionId: question.id,
+            optionIds: options.map(item => item.id)
+        };
+
+    }).filter(Boolean);
+}
+
+
+/* =========================================================
+   PVP - INITIALIZE
+========================================================= */
 
 export function initPvp(config) {
 
@@ -846,18 +1106,18 @@ export function initPvp(config) {
 
     resetPvpScreen();
 
-    console.log("[PVP] UI READY");
-
     enterPvpSocial()
         .then(() => {
 
-            console.log("[PVP] LOBBY CONNECTED");
+            console.log(
+                "[PVP] SOCIAL LOBBY CONNECTED"
+            );
 
         })
         .catch(error => {
 
             console.error(
-                "[PVP] LOBBY ERROR:",
+                "[PVP] SOCIAL LOBBY ERROR:",
                 error
             );
 
@@ -868,290 +1128,489 @@ export function initPvp(config) {
         });
 }
 
-/* =============================================================
-   FIREBASE ROOM UPDATE
-   ============================================================= */
 
-window.addEventListener("batlingo-room-update",event => 
-    {
+/* =========================================================
+   PVP - CANCEL ALL PENDING TIMERS
+========================================================= */
 
-        const {roomCode,playerRole,room} = event.detail;
+function cancelPvpPendingTimers() {
 
-        console.log("[PVP DEBUG]", {
-                roomCode,
-                playerRole,
-                host: room?.host,
-                guest: room?.guest,
-                status: room?.status
-                });
+    if (pvpDisconnectRecoveryTimer !== null) {
 
-        const hostName = room.host?.name || "Host";
-        const guestName = room.guest?.name || "Guest";
+        clearTimeout(pvpDisconnectRecoveryTimer);
 
-        if (pvpHostName) pvpHostName.textContent = hostName;
-        if (pvpGuestName) pvpGuestName.textContent = guestName;
-    
-        if (pvpFinalHostName) pvpFinalHostName.textContent = hostName;
-        if (pvpFinalGuestName) pvpFinalGuestName.textContent = guestName;
+        pvpDisconnectRecoveryTimer = null;
+    }
+
+    if (pvpNextQuestionTimer !== null) {
+
+        clearTimeout(pvpNextQuestionTimer);
+
+        pvpNextQuestionTimer = null;
+    }
+
+    if (pvpRevealSpeechTimer !== null) {
+
+        clearTimeout(pvpRevealSpeechTimer);
+
+        pvpRevealSpeechTimer = null;
+    }
+
+    stopPvpTimer();
+
+    stopSpeech();
+}
+
+
+/* =========================================================
+   PVP - HANDLE OPPONENT DISCONNECTION
+========================================================= */
+
+function handlePvpOpponentDisconnected(
+    roomCode,
+    playerRole,
+    room
+) {
+
+    const opponentConnected =
+        playerRole === "host"
+            ? room.guest?.connected === true
+            : room.host?.connected === true;
+
+    /* Cancel previous recovery timer */
+
+    if (pvpDisconnectRecoveryTimer !== null) {
+
+        clearTimeout(pvpDisconnectRecoveryTimer);
+
+        pvpDisconnectRecoveryTimer = null;
+    }
+
+    if (
+        room.status !== "playing" ||
+        !room.match
+    ) {
+        opponentDisconnected = false;
+        return;
+    }
+
+    opponentDisconnected = !opponentConnected;
+
+    if (opponentConnected) return;
+
+    console.warn(
+        "[PVP] Opponent disconnected:",
+        roomCode
+    );
+
+    /* Stop answering while opponent is absent */
+
+    stopPvpTimer();
+    stopSpeech();
+
+    answerLocked = true;
+
+    pvpAnswers
+        .querySelectorAll(".answer-button")
+        .forEach(button => {
+            button.disabled = true;
+        });
+
+    const opponentState =
+        playerRole === "host"
+            ? pvpGuestState
+            : pvpHostState;
+
+    opponentState.textContent = "DISCONNECTED";
+
+    /*
+       Wait 3 seconds for reconnect.
+
+       If reconnect fails, Firebase recovery
+       returns the room to waiting status.
+    */
+
+    const expectedMatchId = room.match.matchId;
+
+    pvpDisconnectRecoveryTimer = setTimeout(
+        async () => {
+
+            pvpDisconnectRecoveryTimer = null;
+
+            const latestRoom = currentPvpRoom;
+
+            if (
+                !latestRoom ||
+                latestRoom.status !== "playing" ||
+                latestRoom.match?.matchId !==
+                    expectedMatchId
+            ) {
+                return;
+            }
+
+            const stillDisconnected =
+                currentPlayerRole === "host"
+                    ? latestRoom.guest?.connected !== true
+                    : latestRoom.host?.connected !== true;
+
+            if (!stillDisconnected) return;
+
+            try {
+
+                console.log(
+                    "[PVP] Recovering interrupted room..."
+                );
+
+                await recoverInterruptedPvpRoom();
+
+            } catch (error) {
+
+                console.error(
+                    "[PVP] Room recovery failed:",
+                    error
+                );
+            }
+
+        },
+        3000
+    );
+}
+
+
+/* =========================================================
+   PVP - UPDATE WAITING ROOM PLAYERS
+========================================================= */
+
+function updatePvpWaitingPlayers(room, role) {
+
+    const host = room.host || null;
+    const guest = room.guest || null;
+
+    /* HOST: LEFT */
+
+    leftPlayerName.textContent =
+        host?.name || "HOST";
+
+    leftPlayerStatus.textContent =
+        host?.connected === true
+            ? "READY"
+            : "OFFLINE";
+
+    leftPlayerStatus.classList.toggle(
+        "ready",
+        host?.connected === true
+    );
+
+    leftPlayerAvatar.classList.toggle(
+        "waiting",
+        host?.connected !== true
+    );
+
+    /* GUEST: RIGHT */
+
+    rightPlayerName.textContent =
+        guest?.name || "WAITING...";
+
+    rightPlayerStatus.textContent =
+        guest?.connected === true
+            ? "READY"
+            : "WAITING";
+
+    rightPlayerStatus.classList.toggle(
+        "ready",
+        guest?.connected === true
+    );
+
+    rightPlayerAvatar.classList.toggle(
+        "waiting",
+        guest?.connected !== true
+    );
+
+    /* WAITING STATUS */
+
+    const bothConnected =
+        host?.connected === true &&
+        guest?.connected === true;
+
+    if (bothConnected) {
+
+        waitingMessage.textContent =
+            role === "host"
+                ? "OPPONENT READY"
+                : "WAITING FOR HOST...";
+
+    } else if (
+        role === "guest" &&
+        host?.connected !== true
+    ) {
+
+        waitingMessage.textContent =
+            "HOST DISCONNECTED";
+
+    } else {
+
+        waitingMessage.textContent =
+            "WAITING FOR PLAYER...";
+    }
+}
+
+
+/* =========================================================
+   PVP - FIREBASE ROOM REALTIME LISTENER
+========================================================= */
+
+window.addEventListener(
+    "batlingo-room-update",
+    event => {
+
+        const {
+            roomCode,
+            playerRole,
+            room
+        } = event.detail || {};
+
+        if (!room || !roomCode || !playerRole) {
+            return;
+        }
+
+        /*
+           Ignore room updates after leaving PvP.
+           Firebase room listener should be stopped
+           by leaveRoom/resetRoomConnection.
+        */
+
+        if (pvpScreen.classList.contains("hidden")) {
+            return;
+        }
+
+        console.log("[PVP] ROOM UPDATE:", {
+            roomCode,
+            playerRole,
+            status: room.status,
+            hostConnected: room.host?.connected,
+            guestConnected: room.guest?.connected
+        });
+
+        const previousRoom = currentPvpRoom;
+
+        const wasPlaying =
+            previousRoom?.status === "playing" ||
+            pvpScreen.classList.contains(
+                "battle-mode"
+            ) ||
+            currentMatchId !== null;
+
+        /* =====================================
+           UPDATE LOCAL ROOM STATE
+        ===================================== */
 
         currentPvpRoom = room;
-        
         currentPlayerRole = playerRole;
-        
+
+        const hostName =
+            room.host?.name || "HOST";
+
+        const guestName =
+            room.guest?.name || "GUEST";
+
+        if (pvpHostName) {
+            pvpHostName.textContent = hostName;
+        }
+
+        if (pvpGuestName) {
+            pvpGuestName.textContent = guestName;
+        }
+
+        if (pvpFinalHostName) {
+            pvpFinalHostName.textContent = hostName;
+        }
+
+        if (pvpFinalGuestName) {
+            pvpFinalGuestName.textContent = guestName;
+        }
+
+        /* =====================================
+           SOCIAL + AVATAR UPDATE
+        ===================================== */
+
         onPvpSocialRoomUpdate(
             room,
             playerRole
         );
 
-        /* ==========================================
-           ENSURE BOTH CLIENTS SEE WAITING ROOM
-        ========================================== */
-        
-        if (
-            (playerRole === "host" || playerRole === "guest") &&
-            (
-                room.status === "waiting" ||
-                room.status === "connected"
-            )
-        ) {
-        
-            roomSelectPanel.classList.add("hidden");
-        
-            waitingRoomPanel.classList.remove("hidden");
-        
-            currentRoomCode.textContent = roomCode;
-        }
-        
+        updatePvpWaitingPlayers(
+            room,
+            playerRole
+        );
+
         updateStartBattleButton();
 
-                /* ==========================================
-           ROOM RETURNED TO WAITING
-        ========================================== */
-        
+        /* =====================================
+           WAITING OR CONNECTED
+        ===================================== */
+
         if (
             room.status === "waiting" ||
             room.status === "connected"
         ) {
-        
-            const wasPlaying =
-                currentMatchId !== null ||
-                pvpScreen.classList.contains("battle-mode") ||
-                pvpScreen.classList.contains("result-mode");
-        
+
+            /*
+               Stop old battle rendering.
+
+               Increment loading version to invalidate
+               any pending async database load.
+            */
+
+            pvpMatchLoadVersion++;
+
             if (wasPlaying) {
+
                 clearPvpBattleState();
+
+            } else {
+
+                cancelPvpPendingTimers();
             }
-        
+
             showPvpPanel("waiting");
-        
-            currentRoomCode.textContent = roomCode;
+
+            currentRoomCode.textContent =
+                roomCode;
+
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
+
+            return;
         }
 
-        const opponentConnected = playerRole === "host" ? room.guest?.connected === true : room.host?.connected === true;
+        /* =====================================
+           PLAYING
+        ===================================== */
 
-        if (pvpDisconnectRecoveryTimer) {
-        
-            clearTimeout(pvpDisconnectRecoveryTimer);
-            pvpDisconnectRecoveryTimer = null;
-        }
-        
-        if (room.status === "playing" && room.match) {
-        
-            opponentDisconnected = !opponentConnected;
-        
-            if (!opponentConnected) {
-        
-                pvpDisconnectRecoveryTimer = setTimeout(
-                    async () => {
-        
-                        pvpDisconnectRecoveryTimer = null;
-        
-                        try {
-        
-                            await recoverInterruptedPvpRoom();
-        
-                        } catch (error) {
-        
-                            console.error(
-                                "[PVP] Recover room failed:",
-                                error
-                            );
-                        }
-        
-                    },
-                    3000
-                );
-            }
-        }
+        if (
+            room.status === "playing" &&
+            room.match
+        ) {
 
-        console.log("[PVP] Room:",room);
+            /*
+               Detect opponent disconnection.
+            */
 
-        console.log("[PVP] Role:",playerRole);
+            handlePvpOpponentDisconnected(
+                roomCode,
+                playerRole,
+                room
+            );
 
-        if (room.status === "finished") 
-            {
+            if (opponentDisconnected) {
 
-                showPvpResult(room);
+                /*
+                   Keep current game screen while
+                   reconnection is being checked.
 
-                updateRematchState(room);
+                   Do not process additional answers.
+                */
 
                 return;
             }
 
-        /* =====================================================
-           HOST VIEW
-           ===================================================== */
+            /*
+               Firebase match data is authoritative.
+               Both clients display the same match.
+            */
 
-        if (playerRole === "host") 
-        {
+            startPvpMatch(room)
+                .catch(error => {
 
-            // LEFT = YOU
+                    console.error(
+                        "[PVP] Match start error:",
+                        error
+                    );
 
-            
+                    pvpRematchStatus.textContent =
+                        "MATCH ERROR: " +
+                        error.message;
+                });
 
-            leftPlayerAvatar.classList.remove("waiting");
-
-            leftPlayerName.textContent = room.host?.name || "HOST";
-
-            leftPlayerStatus.textContent = room.host?.connected ? "READY" : "OFFLINE";
-
-            leftPlayerStatus.classList.add("ready");
-
-
-            // RIGHT = GUEST
-
-            if (room.guest?.connected === true) 
-            {
-                
-
-                rightPlayerAvatar.classList.remove("waiting");
-
-                rightPlayerName.textContent = room.guest?.name || "WAITING...";
-
-                rightPlayerStatus.textContent = room.guest?.connected ? "READY" : "WAITING";
-
-                rightPlayerStatus.classList.add("ready");
-
-                waitingMessage.textContent = "OPPONENT CONNECTED";
-
-            }
-            else {
-
-                
-
-                rightPlayerAvatar.classList.add("waiting");
-
-                rightPlayerName.textContent = room.guest?.name || "WAITING...";
-
-                rightPlayerStatus.textContent = room.guest?.connected ? "READY" : "WAITING";
-
-                rightPlayerStatus.classList.remove("ready");
-
-                waitingMessage.textContent = "WAITING FOR PLAYER...";
-
-            }
-
+            return;
         }
 
+        /* =====================================
+           FINISHED
+        ===================================== */
 
-        /* =====================================================
-           GUEST VIEW
-           ===================================================== */
+        if (room.status === "finished") {
 
-        if (playerRole === "guest") 
-        {
+            cancelPvpPendingTimers();
 
-            // LEFT = HOST
+            pvpMatchLoadVersion++;
 
-            
+            showPvpResult(room);
 
-            leftPlayerAvatar.classList.remove("waiting");
+            updateRematchState(room);
 
-            leftPlayerName.textContent = room.host?.name || "HOST";
-
-            leftPlayerStatus.textContent = room.host?.connected ? "READY" : "OFFLINE";
-
-            leftPlayerStatus.classList.add("ready");
-
-
-            // RIGHT = YOU
-
-            
-
-            rightPlayerAvatar.classList.remove("waiting");
-
-            rightPlayerName.textContent = room.guest?.name || "WAITING...";
-
-            rightPlayerStatus.textContent = room.guest?.connected ? "READY" : "WAITING";
-
-            rightPlayerStatus.classList.add("ready");
-
-            waitingMessage.textContent = "OPPONENT CONNECTED";
-
+            return;
         }
 
-
-                /* =========================================
-        BOTH PLAYERS CONNECTED
-        ========================================= */
-
-        if (
-            room.host?.connected === true &&
-            room.guest?.connected === true
-        ) {
-            console.log("[PVP] Both players connected.");
-            console.log(room.host.name, "VS", room.guest.name);
-
-            waitingMessage.textContent =
-                playerRole === "host"
-                    ? "OPPONENT READY"
-                    : "WAITING FOR HOST...";
-        }
-
-                /* HOST ĐÃ BẤM START*/
-
-                if (room.status === "playing" && room.match) {
-                
-                    console.log("[PVP] GAME START!", {
-                        role: playerRole,
-                        matchId: room.match.matchId,
-                        studyMode: room.match.studyMode,
-                        target: room.match.target
-                    });
-                
-                    startPvpMatch(room).catch(error => {
-                
-                        console.error(
-                            "[PVP] Failed to render match:",
-                            error
-                        );
-                
-                        pvpRematchStatus.textContent =
-                            "MATCH LOAD ERROR: " + error.message;
-                    });
-                }
-            }
+        console.warn(
+            "[PVP] Unknown room status:",
+            room.status
         );
+    }
+);
+
+
+/* =========================================================
+   PVP - ROOM DELETED
+========================================================= */
+
+window.addEventListener(
+    "batlingo-room-deleted",
+    event => {
+
+        const { roomCode } =
+            event.detail || {};
+
+        console.warn(
+            "[PVP] Room deleted:",
+            roomCode
+        );
+
+        cancelPvpPendingTimers();
+
+        pvpMatchLoadVersion++;
+
+        resetRoomConnection();
+
+        resetPvpScreen();
+
+        // Return to lobby without old battle UI.
+        showPvpPanel("lobby");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "instant"
+        });
+    }
+);
+
+
+/* =========================================================
+   PVP - GET CURRENT PLAYER ROLE
+========================================================= */
 
 function getCurrentPlayerRole() {
 
     return currentPlayerRole;
 }
 
-window.addEventListener("batlingo-room-deleted", event => 
-{
-    const { playerRole } = event.detail;
 
-    if (playerRole !== "guest") return;
-
-    stopPvpTimer();
-    stopSpeech();
-
-    alert("Host đã rời phòng.");
-
-    resetRoomConnection();
-    resetPvpScreen();
-});
+/* =========================================================
+   PVP - SCHEDULE NEXT QUESTION
+   ONLY HOST CAN ADVANCE
+========================================================= */
 
 function scheduleNextPvpQuestion(
     room,
@@ -1159,119 +1618,94 @@ function scheduleNextPvpQuestion(
     guestCorrect
 ) {
 
-    /*
-        CHỈ HOST chuyển câu
-    */
-
-    if (
-        currentPlayerRole !== "host"
-    ) {
-
+    if (currentPlayerRole !== "host") {
         return;
-
     }
-
-
-    const match =
-        room.match;
-
-
-    const currentIndex =
-        match.currentQuestion || 0;
-
-
-    let hostScore =
-        match.hostScore || 0;
-
-
-    let guestScore =
-        match.guestScore || 0;
-
-
-    /*
-        Tạm thời:
-        đúng = +100
-    */
 
     if (
-        hostCorrect
+        !room?.match ||
+        room.status !== "playing"
     ) {
-
-        hostScore +=
-            100;
-
+        return;
     }
 
-
-    if (
-        guestCorrect
-    ) {
-
-        guestScore +=
-            100;
-
+    // Prevent scheduling the same question twice.
+    if (pvpNextQuestionTimer !== null) {
+        return;
     }
 
+    const match = room.match;
 
-    /*
-        Hiển thị score ngay
-    */
+    const matchId = match.matchId;
+
+    const currentIndex = Number(
+        match.currentQuestion || 0
+    );
+
+    const hostScore =
+        Number(match.hostScore || 0) +
+        (hostCorrect ? 100 : 0);
+
+    const guestScore =
+        Number(match.guestScore || 0) +
+        (guestCorrect ? 100 : 0);
+
+    /* =====================================
+       DISPLAY UPDATED SCORES
+    ===================================== */
 
     pvpHostScore.textContent =
-        hostScore;
-
+        String(hostScore);
 
     pvpGuestScore.textContent =
-        guestScore;
+        String(guestScore);
 
+    /* =====================================
+       SHOW ANSWER RESULT FOR 1.5 SECONDS
+    ===================================== */
 
-    /*
-        Chờ 1.5 giây để xem kết quả
-    */
-
-    setTimeout(
+    pvpNextQuestionTimer = setTimeout(
         async () => {
 
-            const nextIndex =
-                currentIndex + 1;
+            pvpNextQuestionTimer = null;
 
+            const latestRoom = currentPvpRoom;
 
-            /*
-                Hết 20 câu
-            */
-
+            // Do not advance an obsolete match.
             if (
-                nextIndex >=
-                match.questions.length
+                !latestRoom ||
+                latestRoom.status !== "playing" ||
+                latestRoom.match?.matchId !== matchId ||
+                Number(
+                    latestRoom.match?.currentQuestion || 0
+                ) !== currentIndex ||
+                currentPlayerRole !== "host" ||
+                latestRoom.host?.connected !== true ||
+                latestRoom.guest?.connected !== true
             ) {
+                return;
+            }
 
-                console.log(
-                    "[PVP] MATCH FINISHED"
-                );
+            const nextIndex = currentIndex + 1;
 
             try {
+
+                if (
+                    nextIndex >=
+                    match.questions.length
+                ) {
+
+                    console.log(
+                        "[PVP] MATCH FINISHED"
+                    );
 
                     await finishRoomGame(
                         hostScore,
                         guestScore
                     );
 
+                    return;
                 }
-                catch (error) {
-
-                    console.error(
-                        "[PVP] Finish error:",
-                        error
-                    );
-
-                }
-
-                return;
-
-            }
-
-
-            try {
 
                 await nextRoomQuestion(
                     nextIndex,
@@ -1279,14 +1713,17 @@ function scheduleNextPvpQuestion(
                     guestScore
                 );
 
-            }
-            catch (error) {
-
-                console.error(
-                    "[PVP] Next question error:",
-                    error
+                console.log(
+                    "[PVP] NEXT QUESTION:",
+                    nextIndex + 1
                 );
 
+            } catch (error) {
+
+                console.error(
+                    "[PVP] Advance question failed:",
+                    error
+                );
             }
 
         },
@@ -1294,237 +1731,356 @@ function scheduleNextPvpQuestion(
     );
 }
 
-async function startPvpMatch(room) 
-{
-    pvpScreen.classList.remove("result-mode");
 
-    pvpScreen.classList.add("battle-mode");
+/* =========================================================
+   PVP - LOAD AND START MATCH
+========================================================= */
+
+async function startPvpMatch(room) {
+
+    if (
+        !room?.match ||
+        room.status !== "playing"
+    ) {
+        return;
+    }
 
     const match = room.match;
 
-    /*Phát hiện trận mới*/
+    const matchId = match.matchId;
 
-            if (currentMatchId !== match.matchId)
-            {
+    const loadVersion =
+        ++pvpMatchLoadVersion;
 
-                currentMatchId = match.matchId;
+    const isNewMatch =
+        currentMatchId !== matchId;
 
-                displayedQuestionIndex =-1;
+    /* =====================================
+       INITIALIZE NEW MATCH
+    ===================================== */
 
-                answerLocked =false;
+    if (isNewMatch) {
 
-                revealStarted =false;
+        cancelPvpPendingTimers();
 
-                rematchStarting = false;
+        currentMatchId = matchId;
 
-                opponentDisconnected = false;
+        displayedQuestionIndex = -1;
 
-                pvpRematchButton.disabled = false;
-            
-                pvpRematchStatus.textContent = "";
+        answerLocked = false;
 
-                /*Ẩn result cũ*/
+        revealStarted = false;
 
-                pvpResultPanel.classList.add("hidden");
+        rematchStarting = false;
 
-                /*Hiện battle*/
+        opponentDisconnected = false;
 
-                pvpGamePanel.classList.remove("hidden");
+        pvpReadingShownFor = null;
 
-            }
+        pvpReading.textContent = "";
 
+        pvpReading.classList.remove("show");
 
-    /*
-        Load đúng database
-    */
+        pvpRematchButton.disabled = false;
 
-        await loadPvpDatabase(
-            match.target || match.level,
-            match.studyMode || "jlpt"
+        pvpRematchStatus.textContent = "";
+
+        pvpAnswers.innerHTML = "";
+    }
+
+    /* =====================================
+       LOAD CORRECT DATABASE
+    ===================================== */
+
+    await loadPvpDatabase(
+        match.target || match.level,
+        match.studyMode || "jlpt"
+    );
+
+    /* =====================================
+       PREVENT STALE ASYNC RENDERING
+    ===================================== */
+
+    if (
+        loadVersion !== pvpMatchLoadVersion ||
+        currentPvpRoom?.status !== "playing" ||
+        currentPvpRoom.match?.matchId !== matchId ||
+        opponentDisconnected
+    ) {
+
+        console.log(
+            "[PVP] Ignoring obsolete match load"
         );
 
-        /*
-        Score
-    */
+        return;
+    }
 
-    pvpHostScore.textContent =  match.hostScore || 0;
+    /* =====================================
+       SHOW BATTLE SCREEN
+    ===================================== */
 
+    showPvpPanel("battle");
 
-    pvpGuestScore.textContent = match.guestScore || 0;
+    /* =====================================
+       UPDATE SCORES
+    ===================================== */
 
-      /*
-        Hiển thị câu
-    */
+    pvpHostScore.textContent =
+        String(match.hostScore || 0);
 
-    const questionIndex = match.currentQuestion || 0;
+    pvpGuestScore.textContent =
+        String(match.guestScore || 0);
 
-        if (displayedQuestionIndex !== questionIndex) 
-            {
+    /* =====================================
+       QUESTION INDEX
+    ===================================== */
 
-                displayedQuestionIndex = questionIndex;
+    const questionIndex = Number(
+        match.currentQuestion || 0
+    );
 
-                answerLocked = false;
+    if (
+        displayedQuestionIndex !== questionIndex
+    ) {
 
-                revealStarted = false;
+        // Stop timers and speech from old question.
+        if (pvpNextQuestionTimer !== null) {
 
-                showPvpQuestion(match);
+            clearTimeout(pvpNextQuestionTimer);
+            pvpNextQuestionTimer = null;
+        }
 
-            }
-    
-    /* Update trạng thái answer*/
+        if (pvpRevealSpeechTimer !== null) {
+
+            clearTimeout(pvpRevealSpeechTimer);
+            pvpRevealSpeechTimer = null;
+        }
+
+        stopPvpTimer();
+        stopSpeech();
+
+        displayedQuestionIndex = questionIndex;
+
+        answerLocked = false;
+
+        revealStarted = false;
+
+        showPvpQuestion(match);
+    }
+
+    /* =====================================
+       UPDATE HOST/GUEST ANSWERS
+       Reveal only after BOTH answered
+    ===================================== */
 
     updatePvpAnswerState(room);
-
-
-    console.log("[PVP] Match:",match);
-
-
-    console.log("[PVP] Shared questions:",match.questionIds);
-
-
-    /*
-        Hiển thị câu hiện tại
-    */
-
-    /*showPvpQuestion(match);*/
 }
 
-function getQuestionById(
-    id
-) {
+
+/* =========================================================
+   PVP - FIND QUESTION BY ID
+========================================================= */
+
+function getQuestionById(id) {
 
     return pvpDatabase.find(
         item =>
-            String(item.id)
-            ===
-            String(id)
+            String(item.id) === String(id)
     );
-
 }
 
-/* =============================================================
-   CREATE ROOM
-   ============================================================= */
 
-document.getElementById("createRoomButton").addEventListener("click",async () => 
-    {
+/* =========================================================
+   PVP - CREATE ROOM BUTTON
+========================================================= */
 
-            console.log("[PVP] Create button clicked");
+document.getElementById("createRoomButton")
+    .addEventListener("click", async () => {
+
+        const button =
+            document.getElementById(
+                "createRoomButton"
+            );
+
+        if (button.disabled) return;
+
+        button.disabled = true;
+
+        try {
+
+            const playerName =
+                window.currentUserData?.profile
+                    ?.displayName ||
+                "Player";
+
+            const settings =
+                getNewRoomSettings();
+
+            console.log(
+                "[PVP] Creating room:",
+                settings
+            );
+
+            const code = await createRoom(
+                playerName,
+                settings
+            );
+
+            console.log(
+                "[PVP] Room created:",
+                code
+            );
+
+            openWaitingRoom(code);
+
+            document.getElementById(
+                "pvpCreateDialog"
+            )?.classList.add("hidden");
+
+        } catch (error) {
+
+            console.error(
+                "[PVP] Create room failed:",
+                error
+            );
+
+            alert(
+                "Create room error: " +
+                error.message
+            );
+
+        } finally {
+
+            button.disabled = false;
+        }
+    });
 
 
-            try {
+/* =========================================================
+   PVP - JOIN ROOM BUTTON
+========================================================= */
 
-                const playerName = window.currentUserData?.profile?.displayName || window.currentUser?.displayName || "Player";
+document.getElementById("joinRoomButton")
+    .addEventListener("click", async () => {
 
-                console.log("[PVP] Creating Firebase room...");
+        const input =
+            document.getElementById(
+                "roomCodeInput"
+            );
 
-                const roomCode = await createRoom(
-                        playerName,
-                        getNewRoomSettings()
+        const button =
+            document.getElementById(
+                "joinRoomButton"
+            );
+
+        if (button.disabled) return;
+
+        const code = String(
+            input.value || ""
+        )
+            .trim()
+            .toUpperCase();
+
+        if (
+            !/^[A-HJ-NP-Z2-9]{4,6}$/.test(code)
+        ) {
+
+            alert("Invalid Room Code.");
+
+            input.focus();
+
+            return;
+        }
+
+        button.disabled = true;
+
+        try {
+
+            const playerName =
+                window.currentUserData?.profile
+                    ?.displayName ||
+                "Player";
+
+            console.log(
+                "[PVP] Joining room:",
+                code
+            );
+
+            await joinRoom(
+                code,
+                playerName
+            );
+
+            // Clear accepted invitation if any.
+            await clearAcceptedPvpInvite(code);
+
+            openWaitingRoom(code);
+
+            console.log(
+                "[PVP] Joined room:",
+                code
+            );
+
+        } catch (error) {
+
+            console.error(
+                "[PVP] Join room failed:",
+                error
+            );
+
+            switch (error.message) {
+
+                case "ROOM_NOT_FOUND":
+
+                    alert(
+                        "Không tìm thấy phòng."
                     );
+                    break;
 
-                console.log("[PVP] Room created:",roomCode);
+                case "ROOM_FULL":
 
-                openWaitingRoom(roomCode);
+                    alert(
+                        "Phòng đã đủ người."
+                    );
+                    break;
 
-                document.getElementById("pvpCreateDialog")?.classList.add("hidden");
+                case "LOGIN_REQUIRED":
 
+                    alert(
+                        "Vui lòng đăng nhập."
+                    );
+                    break;
+
+                default:
+
+                    alert(
+                        "Không thể vào phòng: " +
+                        error.message
+                    );
+                    break;
             }
-            catch (error) {
 
-                console.error(
-                    "[PVP] Create room error:",
-                    error
-                );
+        } finally {
 
-
-                alert(
-                    "Create room error: "
-                    + error.message
-                );
-
-            }
-
+            button.disabled = false;
         }
-    );
+    });
 
 
-/* =============================================================
-   JOIN ROOM
-   ============================================================= */
+/* =========================================================
+   PVP - UPDATE START BUTTON
+========================================================= */
 
-document.getElementById("joinRoomButton").addEventListener("click",async () => {
-
-            const input = document.getElementById("roomCodeInput");
-
-            const code = input.value.trim().toUpperCase();
-
-
-            if (code.length < 4 || code.length > 6)
-            {
-                input.focus();
-                return;
-            }
-
-
-            try {
-
-                const playerName = window.currentUserData?.profile?.displayName || window.currentUser?.displayName || "Player";
-
-                console.log("[PVP] Joining room:",code);
-
-
-                await joinRoom(code, playerName);
-                
-                await clearAcceptedPvpInvite(code);
-                
-                openWaitingRoom(code);
-
-                console.log("[PVP] Joined:",code);
-
-            }
-            catch (error) {
-
-                console.error("[PVP] Join error:",error);
-
-                switch (error.message)
-                {
-
-                    case "ROOM_NOT_FOUND":
-
-                        alert("Không tìm thấy phòng.");
-
-                        break;
-
-                    case "ROOM_FULL":
-
-                        alert("Phòng đã đủ người.");
-
-                        break;
-
-                    default:
-
-                        alert("Không thể vào phòng: " + error.message);
-
-                        break;
-                }
-
-            }
-
-        }
-    );
-
-/* =============================================================
-   OPEN WAITING ROOM
-   ============================================================= */
 function updateStartBattleButton() {
 
     const room = currentPvpRoom;
 
     const canStart =
         currentPlayerRole === "host" &&
-        (room?.status === "waiting" ||
-         room?.status === "connected") &&
+        (
+            room?.status === "waiting" ||
+            room?.status === "connected"
+        ) &&
         room.host?.connected === true &&
         room.guest?.connected === true;
 
@@ -1534,205 +2090,257 @@ function updateStartBattleButton() {
         "hidden",
         !canStart
     );
-
-    console.log("[PVP] START BUTTON:", {
-        role: currentPlayerRole,
-        status: room?.status,
-        hostConnected: room?.host?.connected,
-        guestConnected: room?.guest?.connected,
-        canStart
-    });
 }
+
+
+/* =========================================================
+   PVP - OPEN WAITING ROOM
+========================================================= */
 
 function openWaitingRoom(roomCode) {
 
     showPvpPanel("waiting");
 
-    currentRoomCode.textContent = roomCode;
+    currentRoomCode.textContent =
+        roomCode;
 
     updateStartBattleButton();
+
+    /*
+       Return to top.
+       Avoid seeing old scroll position.
+    */
+
+    pvpScreen.scrollTop = 0;
 }
 
 
-/* =============================================================
-   LEAVE
-   ============================================================= */
+/* =========================================================
+   PVP - LEAVE ROOM BUTTON
+========================================================= */
 
-document.getElementById("leaveRoomButton").addEventListener("click",async () => 
-    {
-        try 
-        {
+document.getElementById("leaveRoomButton")
+    .addEventListener("click", async () => {
+
+        const button =
+            document.getElementById(
+                "leaveRoomButton"
+            );
+
+        if (button.disabled) return;
+
+        button.disabled = true;
+
+        try {
+
+            // Cancel all previous battle tasks.
+            cancelPvpPendingTimers();
+
+            pvpMatchLoadVersion++;
+
             await leaveRoom();
-        }
-        catch (error) 
-        {
-            console.error("[PVP] Leave room error:", error);
+
+            console.log(
+                "[PVP] Left room successfully"
+            );
+
+        } catch (error) {
+
+            console.error(
+                "[PVP] Leave room failed:",
+                error
+            );
+
             resetRoomConnection();
+
+        } finally {
+
+            resetPvpScreen();
+
+            button.disabled = false;
         }
-        
-        resetPvpScreen();
-    }
-    );
+    });
 
 
 /* =========================================================
-   PVP SCREEN STATE MANAGER
+   PVP - SCREEN PANEL MANAGER
 ========================================================= */
 
 function showPvpPanel(panel) {
 
-    // Hide all main panels first.
+    /* Hide all main panels */
+
     roomSelectPanel.classList.add("hidden");
+
     waitingRoomPanel.classList.add("hidden");
+
     pvpGamePanel.classList.add("hidden");
+
     pvpResultPanel.classList.add("hidden");
 
-    // Remove previous screen modes.
+    /* Remove old background modes */
+
     pvpScreen.classList.remove(
         "battle-mode",
         "result-mode"
     );
 
+    /* Display selected panel */
+
     switch (panel) {
 
         case "lobby":
-            roomSelectPanel.classList.remove("hidden");
+
+            roomSelectPanel.classList.remove(
+                "hidden"
+            );
             break;
 
         case "waiting":
-            waitingRoomPanel.classList.remove("hidden");
+
+            waitingRoomPanel.classList.remove(
+                "hidden"
+            );
             break;
 
         case "battle":
-            pvpGamePanel.classList.remove("hidden");
-            pvpScreen.classList.add("battle-mode");
+
+            pvpGamePanel.classList.remove(
+                "hidden"
+            );
+
+            pvpScreen.classList.add(
+                "battle-mode"
+            );
             break;
 
         case "result":
-            pvpResultPanel.classList.remove("hidden");
-            pvpScreen.classList.add("result-mode");
+
+            pvpResultPanel.classList.remove(
+                "hidden"
+            );
+
+            pvpScreen.classList.add(
+                "result-mode"
+            );
             break;
     }
 }
 
-/* Clear old battle state without leaving the room */
+
+/* =========================================================
+   PVP - CLEAR OLD BATTLE
+   WITHOUT LEAVING ROOM
+========================================================= */
+
 function clearPvpBattleState() {
-    
-    if (pvpDisconnectRecoveryTimer) {
-        clearTimeout(pvpDisconnectRecoveryTimer);
-        pvpDisconnectRecoveryTimer = null;
-    }
-    
-    stopPvpTimer();
-    stopSpeech();
 
-    pvpReadingShownFor = null;
+    cancelPvpPendingTimers();
 
-    pvpReading.textContent = "";
-    
-    pvpReading.classList.remove("show");
+    pvpMatchLoadVersion++;
 
     answerLocked = false;
+
     revealStarted = false;
 
     displayedQuestionIndex = -1;
+
     currentMatchId = null;
 
     rematchStarting = false;
+
     opponentDisconnected = false;
-
-    pvpAnswers.innerHTML = "";
-    pvpQuestion.textContent = "---";
-    pvpReading.textContent = "";
-
-    pvpHostScore.textContent = "0";
-    pvpGuestScore.textContent = "0";
-
-    pvpTimeLeft = PVP_QUESTION_TIME;
-    updatePvpTimer();
-}
-
-
-/* =============================================================
-   RESET
-   ============================================================= */
-
-function resetPvpScreen() {
-    stopPvpTimer();
-    stopSpeech();
 
     pvpReadingShownFor = null;
 
+    /* =====================================
+       CLEAR QUESTION
+    ===================================== */
+
+    pvpQuestion.textContent = "---";
+
+    pvpQuestion.onclick = null;
+
     pvpReading.textContent = "";
-    
+
     pvpReading.classList.remove("show");
-    
+
+    pvpAnswers.innerHTML = "";
+
+    /* =====================================
+       RESET PLAYER STATES
+    ===================================== */
+
+    pvpHostCard.classList.remove(
+        "locked",
+        "correct",
+        "wrong"
+    );
+
+    pvpGuestCard.classList.remove(
+        "locked",
+        "correct",
+        "wrong"
+    );
+
+    pvpHostState.textContent = "THINKING...";
+
+    pvpGuestState.textContent = "THINKING...";
+
+    /* =====================================
+       RESET SCORES
+    ===================================== */
+
+    pvpHostScore.textContent = "0";
+
+    pvpGuestScore.textContent = "0";
+
+    /* =====================================
+       RESET TIMER
+    ===================================== */
+
     pvpTimeLeft = PVP_QUESTION_TIME;
-    
+
     updatePvpTimer();
-    
-    waitingRoomPanel.classList.add("hidden");
-    
-    onPvpSocialReset();
 
-    showPvpPanel("lobby");
-    
-    roomSelectPanel.classList.remove("hidden");
-
-       /* Reset START button */
-
-    startBattleButton.disabled = false;
-
-    startBattleButton.classList.add("hidden");
-
-    rematchStarting = false;
-
-    opponentDisconnected = false;
-
-    pvpRematchButton.disabled = false;
-        
-    pvpRematchStatus.textContent = "";
-
-     /* Battle screen */
+    /* =====================================
+       HIDE OLD BATTLE PANELS
+    ===================================== */
 
     pvpGamePanel.classList.add("hidden");
 
-    /*Result screen*/
-
     pvpResultPanel.classList.add("hidden");
 
-    currentRoomCode.textContent = "----";
+    pvpScreen.classList.remove(
+        "battle-mode",
+        "result-mode"
+    );
+}
 
-    /* Reset PVP state */
+
+/* =========================================================
+   PVP - RESET EVERYTHING TO LOBBY
+========================================================= */
+
+function resetPvpScreen() {
+
+    clearPvpBattleState();
 
     currentPvpRoom = null;
+
     currentPlayerRole = null;
+
     currentMatchId = null;
 
-    displayedQuestionIndex = -1;
-
-    answerLocked = false;
-    revealStarted = false;
-
-     /*
-        Reset database cache
-    */
+    currentConfig = currentConfig || null;
 
     pvpDatabase = [];
 
     pvpDatabaseKey = "";
 
-       /*
-        Reset score UI
-    */
-
-    pvpHostScore.textContent = "0";
-
-    pvpGuestScore.textContent = "0";
-
-      /*
-        Reset result
-    */
+    /* =====================================
+       RESET RESULT
+    ===================================== */
 
     pvpFinalHostScore.textContent = "0";
 
@@ -1740,263 +2348,475 @@ function resetPvpScreen() {
 
     pvpResultMessage.textContent = "---";
 
-       /*
-        Reset background
-    */
+    pvpRematchButton.disabled = false;
 
-    pvpScreen.classList.remove("battle-mode","result-mode");
+    pvpRematchStatus.textContent = "";
 
+    /* =====================================
+       RESET ROOM CODE
+    ===================================== */
 
-    document.getElementById("roomCodeInput").value ="";
+    currentRoomCode.textContent = "----";
+
+    const roomCodeInput =
+        document.getElementById(
+            "roomCodeInput"
+        );
+
+    if (roomCodeInput) {
+        roomCodeInput.value = "";
+    }
+
+    /* =====================================
+       RESET SOCIAL UI
+    ===================================== */
+
+    onPvpSocialReset();
+
+    startBattleButton.disabled = true;
+
+    startBattleButton.classList.add(
+        "hidden"
+    );
+
+    /* =====================================
+       SHOW LOBBY ONLY
+    ===================================== */
+
+    showPvpPanel("lobby");
+
+    pvpScreen.scrollTop = 0;
 }
 
-startBattleButton.addEventListener("click",async () => 
-    {
 
-            try {
-                    /* Guest phải còn online trước khi START */
-                    if (!currentPvpRoom?.guest || currentPvpRoom.guest.connected !== true) 
-                    {
-                        startBattleButton.disabled = true;
-                        startBattleButton.classList.add("hidden");
-                        waitingMessage.textContent = "OPPONENT DISCONNECTED";
-                        return;
-                    }
+/* =========================================================
+   PVP - START BATTLE BUTTON
+========================================================= */
 
-                    displayedQuestionIndex =-1;
+startBattleButton.addEventListener(
+    "click",
+    async () => {
 
-                    answerLocked =false;
+        if (startBattleButton.disabled) {
+            return;
+        }
 
-                    revealStarted =false;
+        const room = currentPvpRoom;
 
-                startBattleButton.disabled = true;
+        if (
+            !room ||
+            currentPlayerRole !== "host"
+        ) {
+            return;
+        }
 
-                /*
-                    Lấy config đã chọn từ Lobby
-                */
+        if (
+            !["waiting", "connected"].includes(
+                room.status
+            )
+        ) {
+            return;
+        }
 
-                if (!currentConfig) 
-                {
-                    throw new Error("PVP_CONFIG_NOT_FOUND");
-                }
-            console.log("[PVP] FULL currentConfig:",currentConfig);
+        if (
+            room.host?.connected !== true ||
+            room.guest?.connected !== true
+        ) {
 
-            const settings = currentPvpRoom?.settings || {};
-            
-            const studyMode = settings.studyMode || "jlpt";
-            
+            waitingMessage.textContent =
+                "OPPONENT NOT CONNECTED";
+
+            updateStartBattleButton();
+
+            return;
+        }
+
+        startBattleButton.disabled = true;
+
+        waitingMessage.textContent =
+            "PREPARING BATTLE...";
+
+        try {
+
+            const settings =
+                room.settings || {};
+
+            const studyMode =
+                settings.studyMode || "jlpt";
+
             const target =
                 settings.target ||
                 settings.level ||
                 "n5";
-            
-            const category = "vocabulary";
-            
+
+            const category =
+                settings.category ||
+                "vocabulary";
+
             const mode =
                 settings.mode ||
                 "kanji_meaning";
-            
-            const database = await loadPvpDatabase(
-                target,
-                studyMode
+
+            const count = Math.max(
+                1,
+                Math.min(
+                    100,
+                    Number(settings.count) || 20
+                )
             );
 
-            /*
-                HOST random 20 câu hỏi
-            */
+            /* =====================================
+               LOAD DATABASE
+            ===================================== */
 
-            const questionIds = createQuestionIds(database,settings.count || 20);
+            const database =
+                await loadPvpDatabase(
+                    target,
+                    studyMode
+                );
 
-            console.log("[PVP] Question IDs:",questionIds);
+            /* =====================================
+               CREATE SHARED QUESTIONS
+            ===================================== */
 
-            const questions = createPvpQuestions(database,questionIds);
+            const questionIds =
+                createQuestionIds(
+                    database,
+                    count
+                );
 
-            console.log("[PVP] Questions:",questions);
+            const questions =
+                createPvpQuestions(
+                    database,
+                    questionIds
+                );
 
-            /*
-                Gửi match lên Firebase
-            */
+            if (
+                questionIds.length === 0 ||
+                questions.length !==
+                    questionIds.length
+            ) {
+
+                throw new Error(
+                    "PVP_QUESTIONS_INVALID"
+                );
+            }
+
+            /* =====================================
+               VERIFY ROOM STILL READY
+            ===================================== */
+
+            const latestRoom =
+                currentPvpRoom;
+
+            if (
+                !latestRoom ||
+                !["waiting", "connected"].includes(
+                    latestRoom.status
+                ) ||
+                latestRoom.host?.connected !== true ||
+                latestRoom.guest?.connected !== true
+            ) {
+
+                throw new Error(
+                    "ROOM_NOT_READY"
+                );
+            }
+
+            /* =====================================
+               START MATCH VIA FIREBASE
+            ===================================== */
 
             await startRoomGame({
-            
+
                 studyMode,
-            
+
                 target,
-            
+
                 level: target,
-            
+
                 category,
-            
+
                 mode,
-            
+
                 questionIds,
-            
+
                 questions
             });
 
-                /*await startRoomGame();*/
+            console.log(
+                "[PVP] Battle created successfully"
+            );
 
-            }
-            catch (error) 
-            {
-                console.error("[PVP] Start error:",error);
+            /*
+               Do not call startPvpMatch() here.
 
-                startBattleButton.disabled = false;
-            }
+               Firebase room listener starts the
+               same match for both players.
+            */
 
-        }
-    );
+        } catch (error) {
 
-function showPvpResult(room) 
-{
-    stopPvpTimer();
-    stopSpeech();
-    
-    const hostScore = room.match?.hostScore || 0;
+            console.error(
+                "[PVP] Start Battle failed:",
+                error
+            );
 
-    const guestScore = room.match?.guestScore || 0;
+            waitingMessage.textContent =
+                "START ERROR: " +
+                error.message;
 
-    const hostName = room.host?.name || "Host";
-    const guestName = room.guest?.name || "Guest";
-
-    pvpGamePanel.classList.add("hidden");
-
-    pvpResultPanel.classList.remove("hidden");
-
-    /*Background result*/
-
-    pvpScreen.classList.remove("battle-mode");
-
-    pvpScreen.classList.add("result-mode");
-
-    pvpFinalHostScore.textContent = hostScore;
-
-    pvpFinalGuestScore.textContent = guestScore;
-
-    /*Player cards*/
-
-    const playerCards =pvpResultPanel.querySelectorAll(".pvp-result-score > div:not(.room-vs)");
-
-    playerCards.forEach(card => card.classList.remove("winner"));
-
-    if (hostScore > guestScore) 
-    {
-
-        pvpResultMessage.textContent = `${hostName} WIN`;
-
-        playerCards[0]?.classList.add("winner");
-
-    }
-    else if (guestScore > hostScore) 
-    {
-
-        pvpResultMessage.textContent = `${guestName} WIN`;
-
-        playerCards[1]?.classList.add("winner");
-
-    }
-    else 
-    {
-
-        pvpResultMessage.textContent = "DRAW";
-
-    }
-}
-
-pvpRematchButton.addEventListener("click",async () => 
-    {
-        try {
-
-            pvpRematchButton.disabled = true;
-
-            pvpRematchStatus.textContent ="WAITING FOR OPPONENT...";
-
-            await requestRematch();
-
-        }
-        catch (error) 
-        {
-
-            console.error("[PVP] Rematch error:",error);
-
-            pvpRematchButton.disabled = false;
-
-            pvpRematchStatus.textContent = "REMATCH ERROR";
+            updateStartBattleButton();
         }
     }
 );
 
-function updateRematchState(room)
-{
-    const hostAccepted = room.rematch?.host === true;
 
-    const guestAccepted = room.rematch?.guest === true;
+/* =========================================================
+   PVP - SHOW FINAL RESULT
+========================================================= */
 
+function showPvpResult(room) {
 
-    if (hostAccepted && guestAccepted) {
-    
-        console.log("[PVP REMATCH] Both accepted:", {
-            role: currentPlayerRole,
-            roomStatus: room.status,
-            hostConnected: room.host?.connected,
-            guestConnected: room.guest?.connected,
-            rematchStarting
-        });
-    
-        pvpRematchButton.disabled = true;
-    
-        if (
-            currentPlayerRole === "host" &&
-            room.status === "finished" &&
-            !rematchStarting
-        ) {
-    
-            rematchStarting = true;
-    
-            pvpRematchStatus.textContent =
-                "STARTING NEW MATCH...";
-    
-            startPvpRematch();
-    
-        } else {
-    
-            pvpRematchStatus.textContent =
-                "BOTH PLAYERS READY";
-        }
-    
+    cancelPvpPendingTimers();
+
+    if (!room?.match) {
         return;
     }
 
+    const match = room.match;
 
-    if (currentPlayerRole === "host") 
-    {
+    const hostScore =
+        Number(match.hostScore) || 0;
+
+    const guestScore =
+        Number(match.guestScore) || 0;
+
+    const hostName =
+        room.host?.name || "HOST";
+
+    const guestName =
+        room.guest?.name || "GUEST";
+
+    /* =====================================
+       SWITCH TO RESULT SCREEN
+    ===================================== */
+
+    showPvpPanel("result");
+
+    /* =====================================
+       PLAYER NAMES AND SCORES
+    ===================================== */
+
+    if (pvpFinalHostName) {
+        pvpFinalHostName.textContent =
+            hostName;
+    }
+
+    if (pvpFinalGuestName) {
+        pvpFinalGuestName.textContent =
+            guestName;
+    }
+
+    pvpFinalHostScore.textContent =
+        String(hostScore);
+
+    pvpFinalGuestScore.textContent =
+        String(guestScore);
+
+    /* =====================================
+       RESET WINNER EFFECT
+    ===================================== */
+
+    const playerCards =
+        pvpResultPanel.querySelectorAll(
+            ".pvp-result-score > div:not(.room-vs)"
+        );
+
+    playerCards.forEach(card => {
+
+        card.classList.remove("winner");
+    });
+
+    /* =====================================
+       DETERMINE WINNER
+    ===================================== */
+
+    if (hostScore > guestScore) {
+
+        pvpResultMessage.textContent =
+            `${hostName} WIN`;
+
+        playerCards[0]?.classList.add(
+            "winner"
+        );
+
+    } else if (guestScore > hostScore) {
+
+        pvpResultMessage.textContent =
+            `${guestName} WIN`;
+
+        playerCards[1]?.classList.add(
+            "winner"
+        );
+
+    } else {
+
+        pvpResultMessage.textContent =
+            "DRAW";
+    }
+
+    console.log(
+        "[PVP] MATCH RESULT:",
+        {
+            hostScore,
+            guestScore
+        }
+    );
+}
+
+
+/* =========================================================
+   PVP - REMATCH BUTTON
+========================================================= */
+
+pvpRematchButton.addEventListener(
+    "click",
+    async () => {
+
+        if (
+            pvpRematchButton.disabled ||
+            !currentPvpRoom ||
+            currentPvpRoom.status !== "finished"
+        ) {
+            return;
+        }
+
+        pvpRematchButton.disabled = true;
+
+        pvpRematchStatus.textContent =
+            "WAITING FOR OPPONENT...";
+
+        try {
+
+            await requestRematch();
+
+            console.log(
+                "[PVP] Rematch requested"
+            );
+
+        } catch (error) {
+
+            console.error(
+                "[PVP] Rematch request failed:",
+                error
+            );
+
+            pvpRematchButton.disabled = false;
+
+            pvpRematchStatus.textContent =
+                "REMATCH ERROR: " +
+                error.message;
+        }
+    }
+);
+
+
+/* =========================================================
+   PVP - UPDATE REMATCH STATE
+========================================================= */
+
+function updateRematchState(room) {
+
+    if (
+        !room ||
+        room.status !== "finished"
+    ) {
+        return;
+    }
+
+    const hostAccepted =
+        room.rematch?.host === true;
+
+    const guestAccepted =
+        room.rematch?.guest === true;
+
+    /* =====================================
+       BOTH PLAYERS ACCEPTED
+    ===================================== */
+
+    if (hostAccepted && guestAccepted) {
+
+        pvpRematchButton.disabled = true;
+
+        if (
+            currentPlayerRole === "host" &&
+            !rematchStarting
+        ) {
+
+            rematchStarting = true;
+
+            pvpRematchStatus.textContent =
+                "STARTING NEW MATCH...";
+
+            startPvpRematch();
+
+        } else {
+
+            pvpRematchStatus.textContent =
+                "BOTH PLAYERS READY";
+        }
+
+        return;
+    }
+
+    /* =====================================
+       HOST STATE
+    ===================================== */
+
+    if (currentPlayerRole === "host") {
+
         if (hostAccepted) {
 
             pvpRematchButton.disabled = true;
 
-            pvpRematchStatus.textContent = "WAITING FOR OPPONENT...";
-        }
-        else {
+            pvpRematchStatus.textContent =
+                "WAITING FOR OPPONENT...";
+
+        } else {
 
             pvpRematchButton.disabled = false;
 
-            pvpRematchStatus.textContent = guestAccepted ? "OPPONENT WANTS A REMATCH" : "";
+            pvpRematchStatus.textContent =
+                guestAccepted
+                    ? "OPPONENT WANTS A REMATCH"
+                    : "";
         }
 
+        return;
     }
-    else 
-    {
-        if (guestAccepted) 
-        {
+
+    /* =====================================
+       GUEST STATE
+    ===================================== */
+
+    if (currentPlayerRole === "guest") {
+
+        if (guestAccepted) {
+
             pvpRematchButton.disabled = true;
 
-            pvpRematchStatus.textContent = "WAITING FOR OPPONENT...";
-        }
-        else 
-        {
+            pvpRematchStatus.textContent =
+                "WAITING FOR OPPONENT...";
+
+        } else {
+
             pvpRematchButton.disabled = false;
 
-            pvpRematchStatus.textContent = hostAccepted ? "OPPONENT WANTS A REMATCH" : "";
+            pvpRematchStatus.textContent =
+                hostAccepted
+                    ? "OPPONENT WANTS A REMATCH"
+                    : "";
         }
     }
 }
@@ -2010,11 +2830,6 @@ async function startPvpRematch() {
 
     try {
 
-        console.log("[PVP REMATCH] Preparing...");
-
-        pvpRematchStatus.textContent =
-            "STARTING NEW MATCH...";
-
         const room = currentPvpRoom;
 
         if (!room) {
@@ -2023,6 +2838,17 @@ async function startPvpRematch() {
 
         if (currentPlayerRole !== "host") {
             throw new Error("HOST_ONLY");
+        }
+
+        if (room.status !== "finished") {
+            throw new Error("MATCH_NOT_FINISHED");
+        }
+
+        if (
+            room.host?.connected !== true ||
+            room.guest?.connected !== true
+        ) {
+            throw new Error("OPPONENT_DISCONNECTED");
         }
 
         if (
@@ -2039,7 +2865,7 @@ async function startPvpRematch() {
         }
 
         /* =====================================
-           KEEP PREVIOUS CONFIG
+           KEEP PREVIOUS MATCH CONFIG
         ===================================== */
 
         const studyMode =
@@ -2067,42 +2893,39 @@ async function startPvpRematch() {
             20;
 
         /* =====================================
-           LOAD DATABASE
-        ===================================== */
-
-        const database = await loadPvpDatabase(
-            target,
-            studyMode
-        );
-
-        /* =====================================
            GENERATE NEW QUESTIONS
         ===================================== */
 
-        const questionIds = createQuestionIds(
-            database,
-            count
-        );
+        const database =
+            await loadPvpDatabase(
+                target,
+                studyMode
+            );
 
-        const questions = createPvpQuestions(
-            database,
-            questionIds
-        );
+        const questionIds =
+            createQuestionIds(
+                database,
+                count
+            );
+
+        const questions =
+            createPvpQuestions(
+                database,
+                questionIds
+            );
 
         if (
             questionIds.length === 0 ||
-            questions.length !== questionIds.length
+            questions.length !==
+                questionIds.length
         ) {
-            throw new Error("REMATCH_DATABASE_INVALID");
+            throw new Error(
+                "REMATCH_QUESTIONS_INVALID"
+            );
         }
 
-        console.log(
-            "[PVP REMATCH] New questions:",
-            questionIds.length
-        );
-
         /* =====================================
-           START ATOMIC REMATCH
+           FIREBASE ATOMIC REMATCH
         ===================================== */
 
         await startRoomRematch({
@@ -2123,140 +2946,266 @@ async function startPvpRematch() {
         });
 
         console.log(
-            "[PVP REMATCH] Firebase committed"
+            "[PVP] Rematch started successfully"
         );
 
-        // Không gọi startPvpMatch() thủ công.
-        // Room listener sẽ nhận status = playing
-        // và tự bắt đầu trên cả Host và Guest.
+        /*
+           Firebase listener will switch both
+           players into the new battle.
+        */
 
     } catch (error) {
 
         console.error(
-            "[PVP REMATCH] Failed:",
+            "[PVP] Start Rematch failed:",
             error
         );
 
         rematchStarting = false;
 
         pvpRematchStatus.textContent =
-            "REMATCH ERROR: " + error.message;
+            "REMATCH ERROR: " +
+            error.message;
     }
 }
 
 
-function startPvpTimer()
-{    
-     /*Dừng timer câu trước nếu còn*/
+/* =========================================================
+   PVP - START QUESTION TIMER
+========================================================= */
+
+function startPvpTimer() {
+
     stopPvpTimer();
 
-     /*Reset mỗi câu về 10 giây*/
     pvpTimeLeft = PVP_QUESTION_TIME;
 
     updatePvpTimer();
 
-    pvpTimer = setInterval(() => 
-        {
-                pvpTimeLeft -= 0.1;
+    const expectedMatchId =
+        currentPvpRoom?.match?.matchId;
 
-                if (pvpTimeLeft <= 0) 
-                {
-                    pvpTimeLeft = 0;
-
-                    updatePvpTimer();
-
-                    stopPvpTimer();
-
-                    handlePvpTimeout();
-
-                    return;
-                }
-
-
-                updatePvpTimer();
-
-            },
-            100
+    const expectedQuestion =
+        Number(
+            currentPvpRoom?.match
+                ?.currentQuestion || 0
         );
+
+    pvpTimer = setInterval(() => {
+
+        /* =====================================
+           STOP OBSOLETE TIMER
+        ===================================== */
+
+        if (
+            !currentPvpRoom ||
+            currentPvpRoom.status !== "playing" ||
+            currentPvpRoom.match?.matchId !==
+                expectedMatchId ||
+            Number(
+                currentPvpRoom.match
+                    ?.currentQuestion || 0
+            ) !== expectedQuestion ||
+            answerLocked ||
+            revealStarted ||
+            opponentDisconnected
+        ) {
+
+            stopPvpTimer();
+
+            return;
+        }
+
+        /* =====================================
+           COUNT DOWN
+        ===================================== */
+
+        pvpTimeLeft = Math.max(
+            0,
+            pvpTimeLeft - 0.1
+        );
+
+        updatePvpTimer();
+
+        if (pvpTimeLeft <= 0) {
+
+            stopPvpTimer();
+
+            handlePvpTimeout();
+        }
+
+    }, 100);
 }
 
 
-function stopPvpTimer()
-{
-    if (!pvpTimer) 
-    {
+/* =========================================================
+   PVP - STOP TIMER
+========================================================= */
+
+function stopPvpTimer() {
+
+    if (pvpTimer !== null) {
+
+        clearInterval(pvpTimer);
+
+        pvpTimer = null;
+    }
+}
+
+
+/* =========================================================
+   PVP - UPDATE TIMER UI
+========================================================= */
+
+function updatePvpTimer() {
+
+    if (pvpTimerText) {
+
+        pvpTimerText.textContent =
+            pvpTimeLeft.toFixed(1);
+    }
+
+    if (pvpTimerBar) {
+
+        const percent = Math.max(
+            0,
+            Math.min(
+                100,
+                pvpTimeLeft /
+                    PVP_QUESTION_TIME * 100
+            )
+        );
+
+        pvpTimerBar.style.width =
+            `${percent}%`;
+    }
+}
+
+
+/* =========================================================
+   PVP - HANDLE QUESTION TIMEOUT
+========================================================= */
+
+async function handlePvpTimeout() {
+
+    if (
+        answerLocked ||
+        revealStarted ||
+        opponentDisconnected ||
+        currentPvpRoom?.status !== "playing" ||
+        !currentPvpRoom?.match
+    ) {
         return;
     }
 
-    clearInterval(pvpTimer);
+    const match = currentPvpRoom.match;
 
-    pvpTimer = null;
-}
+    const matchId = match.matchId;
 
+    const questionIndex =
+        Number(
+            match.currentQuestion || 0
+        );
 
-function updatePvpTimer()
-{
-    pvpTimerText.textContent = pvpTimeLeft.toFixed(1);
-
-    const percent = Math.max(0,(pvpTimeLeft/PVP_QUESTION_TIME)*100);
-
-    pvpTimerBar.style.width =`${percent}%`;
-}
-
-async function handlePvpTimeout()
-{
-    if (answerLocked || !currentPvpRoom?.match) 
-    {
-        return;
-    }
+    /* =====================================
+       LOCK ANSWER
+    ===================================== */
 
     answerLocked = true;
 
+    stopPvpTimer();
+
     stopSpeech();
 
+    pvpAnswers
+        .querySelectorAll(".answer-button")
+        .forEach(button => {
 
-    console.log("[PVP] Answer timeout");
-
-    /*
-        Khóa 4 đáp án
-    */
-
-    const buttons =pvpAnswers.querySelectorAll("button");
-
-    buttons.forEach(button => 
-        {
             button.disabled = true;
-        }
+
+            button.classList.add("locked");
+        });
+
+    const ownState =
+        currentPlayerRole === "host"
+            ? pvpHostState
+            : pvpGuestState;
+
+    ownState.textContent = "TIMEOUT";
+
+    console.log(
+        "[PVP] Answer timeout:",
+        questionIndex
     );
 
+    /* =====================================
+       SEND TIMEOUT TO FIREBASE
 
-    /*
-        Gửi TIMEOUT như một answer.
-        optionId = null
-    */
+       Do not reveal correct answer here.
+       Wait until both players have submitted.
+    ===================================== */
 
-    try 
-    {
-        const match = currentPvpRoom.match;
-        const questionIndex = match.currentQuestion || 0;
-    
-        await submitRoomAnswer(questionIndex, "TIMEOUT");
-    
-        savePvpWrongQuestion(match, questionIndex);
-    
-        console.log("[REVIEW] PvP timeout saved:",match.questionIds[questionIndex]);
-    }
-    catch (error) 
-    {
-        console.error("[PVP] Timeout submit error:", error);
+    try {
+
+        await submitRoomAnswer(
+            questionIndex,
+            "TIMEOUT"
+        );
+
+        console.log(
+            "[PVP] Timeout submitted"
+        );
+
+    } catch (error) {
+
+        console.error(
+            "[PVP] Timeout submit failed:",
+            error
+        );
+
+        /*
+           Do not re-enable old answers if
+           match has changed or room was closed.
+        */
+
+        if (
+            currentPvpRoom?.status !== "playing" ||
+            currentPvpRoom.match?.matchId !==
+                matchId ||
+            Number(
+                currentPvpRoom.match
+                    ?.currentQuestion || 0
+            ) !== questionIndex
+        ) {
+            return;
+        }
+
+        /*
+           Keep answer locked.
+           A production version can add
+           Firebase submission retry.
+        */
     }
 }
 
+
 /* =========================================================
-   CLOSE PVP SOCIAL LOBBY
+   PVP - CLOSE SOCIAL LOBBY
 ========================================================= */
 
 export async function closePvpSocial() {
+
+    /* =====================================
+       STOP ALL PVP TASKS
+    ===================================== */
+
+    cancelPvpPendingTimers();
+
+    pvpMatchLoadVersion++;
+
+    /* =====================================
+       LEAVE FIREBASE ROOM
+    ===================================== */
 
     try {
 
@@ -2265,12 +3214,39 @@ export async function closePvpSocial() {
     } catch (error) {
 
         console.warn(
-            "[PVP] Leave room:",
+            "[PVP] Leave room failed:",
+            error
+        );
+
+        resetRoomConnection();
+    }
+
+    /* =====================================
+       REMOVE PVP PRESENCE
+    ===================================== */
+
+    try {
+
+        await leavePvpSocial();
+
+    } catch (error) {
+
+        console.warn(
+            "[PVP] Leave social lobby failed:",
             error
         );
     }
 
-    await leavePvpSocial();
+    /* =====================================
+       RESET SCREEN
+    ===================================== */
 
     resetPvpScreen();
+
+    console.log(
+        "[PVP] Social lobby closed"
+    );
 }
+
+
+
