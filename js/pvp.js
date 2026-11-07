@@ -24,6 +24,7 @@ import {
     leavePvpSocial,
     getNewRoomSettings,
     onPvpSocialRoomUpdate,
+    clearAcceptedPvpInvite,
     onPvpSocialReset
 } from "./pvp-social.js";
 
@@ -1473,8 +1474,10 @@ document.getElementById("joinRoomButton").addEventListener("click",async () => {
                 console.log("[PVP] Joining room:",code);
 
 
-                await joinRoom(code,playerName);
-
+                await joinRoom(code, playerName);
+                
+                await clearAcceptedPvpInvite(code);
+                
                 openWaitingRoom(code);
 
                 console.log("[PVP] Joined:",code);
