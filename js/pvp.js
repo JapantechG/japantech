@@ -15,6 +15,7 @@ import {
     finishRoomGame,
     requestRematch,
     leaveRoom,
+    recoverInterruptedPvpRoom,
     resetRoomConnection
 } from "./firebase.js";
 import {
@@ -34,6 +35,7 @@ initPvpSocial();
    PVP STATE
    ============================================================= */
 
+let pvpDisconnectRecoveryTimer = null;
 
 let pvpDatabase = [];
 
@@ -863,9 +865,39 @@ window.addEventListener("batlingo-room-update",event =>
 
         const opponentConnected = playerRole === "host" ? room.guest?.connected === true : room.host?.connected === true;
 
-        if (room.status === "playing" && room.match) 
-        {
+        if (pvpDisconnectRecoveryTimer) {
+        
+            clearTimeout(pvpDisconnectRecoveryTimer);
+            pvpDisconnectRecoveryTimer = null;
+        }
+        
+        if (room.status === "playing" && room.match) {
+        
             opponentDisconnected = !opponentConnected;
+        
+            if (!opponentConnected) {
+        
+                pvpDisconnectRecoveryTimer = setTimeout(
+                    async () => {
+        
+                        pvpDisconnectRecoveryTimer = null;
+        
+                        try {
+        
+                            await recoverInterruptedPvpRoom();
+        
+                        } catch (error) {
+        
+                            console.error(
+                                "[PVP] Recover room failed:",
+                                error
+                            );
+                        }
+        
+                    },
+                    3000
+                );
+            }
         }
 
         console.log("[PVP] Room:",room);
@@ -1499,7 +1531,12 @@ function showPvpPanel(panel) {
 
 /* Clear old battle state without leaving the room */
 function clearPvpBattleState() {
-
+    
+    if (pvpDisconnectRecoveryTimer) {
+        clearTimeout(pvpDisconnectRecoveryTimer);
+        pvpDisconnectRecoveryTimer = null;
+    }
+    
     stopPvpTimer();
     stopSpeech();
 
