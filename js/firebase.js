@@ -839,6 +839,71 @@ export async function finishRoomGame(hostScore,guestScore)
     );
 }
 
+
+/* =========================================================
+   RECOVER INTERRUPTED PVP ROOM
+========================================================= */
+
+export async function recoverInterruptedPvpRoom() {
+
+    const code = roomCode;
+    const uid = auth.currentUser?.uid;
+
+    if (!code || !uid) return false;
+
+    const result = await runTransaction(
+        ref(db, `rooms/${code}`),
+        room => {
+
+            if (!room || room.status !== "playing") {
+                return;
+            }
+
+            const isHost = room.host?.uid === uid;
+            const isGuest = room.guest?.uid === uid;
+
+            if (!isHost && !isGuest) return;
+
+            if (isHost) {
+
+                // Guest has disconnected.
+                if (
+                    room.host?.connected !== true ||
+                    room.guest?.connected !== false
+                ) {
+                    return;
+                }
+
+                room.guest = null;
+
+            } else {
+
+                // Host has disconnected.
+                if (
+                    room.guest?.connected !== true ||
+                    room.host?.connected !== false
+                ) {
+                    return;
+                }
+
+                room.host = room.guest;
+                room.guest = null;
+            }
+
+            room.status = "waiting";
+            room.match = null;
+            room.rematch = null;
+            room.finishedAt = null;
+
+            return room;
+        },
+        { applyLocally: false }
+    );
+
+    return result.committed;
+}
+
+
 export async function leaveRoom() {
 
     if (!roomCode || !playerRole) {
