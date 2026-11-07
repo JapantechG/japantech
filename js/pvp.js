@@ -838,6 +838,29 @@ window.addEventListener("batlingo-room-update",event =>
         
         updateStartBattleButton();
 
+                /* ==========================================
+           ROOM RETURNED TO WAITING
+        ========================================== */
+        
+        if (
+            room.status === "waiting" ||
+            room.status === "connected"
+        ) {
+        
+            const wasPlaying =
+                currentMatchId !== null ||
+                pvpScreen.classList.contains("battle-mode") ||
+                pvpScreen.classList.contains("result-mode");
+        
+            if (wasPlaying) {
+                clearPvpBattleState();
+            }
+        
+            showPvpPanel("waiting");
+        
+            currentRoomCode.textContent = roomCode;
+        }
+
         const opponentConnected = playerRole === "host" ? room.guest?.connected === true : room.host?.connected === true;
 
         if (room.status === "playing" && room.match) 
@@ -1405,8 +1428,7 @@ function updateStartBattleButton() {
 
 function openWaitingRoom(roomCode) {
 
-    roomSelectPanel.classList.add("hidden");
-    waitingRoomPanel.classList.remove("hidden");
+    showPvpPanel("waiting");
 
     currentRoomCode.textContent = roomCode;
 
@@ -1435,6 +1457,73 @@ document.getElementById("leaveRoomButton").addEventListener("click",async () =>
     );
 
 
+/* =========================================================
+   PVP SCREEN STATE MANAGER
+========================================================= */
+
+function showPvpPanel(panel) {
+
+    // Hide all main panels first.
+    roomSelectPanel.classList.add("hidden");
+    waitingRoomPanel.classList.add("hidden");
+    pvpGamePanel.classList.add("hidden");
+    pvpResultPanel.classList.add("hidden");
+
+    // Remove previous screen modes.
+    pvpScreen.classList.remove(
+        "battle-mode",
+        "result-mode"
+    );
+
+    switch (panel) {
+
+        case "lobby":
+            roomSelectPanel.classList.remove("hidden");
+            break;
+
+        case "waiting":
+            waitingRoomPanel.classList.remove("hidden");
+            break;
+
+        case "battle":
+            pvpGamePanel.classList.remove("hidden");
+            pvpScreen.classList.add("battle-mode");
+            break;
+
+        case "result":
+            pvpResultPanel.classList.remove("hidden");
+            pvpScreen.classList.add("result-mode");
+            break;
+    }
+}
+
+/* Clear old battle state without leaving the room */
+function clearPvpBattleState() {
+
+    stopPvpTimer();
+    stopSpeech();
+
+    answerLocked = false;
+    revealStarted = false;
+
+    displayedQuestionIndex = -1;
+    currentMatchId = null;
+
+    rematchStarting = false;
+    opponentDisconnected = false;
+
+    pvpAnswers.innerHTML = "";
+    pvpQuestion.textContent = "---";
+    pvpReading.textContent = "";
+
+    pvpHostScore.textContent = "0";
+    pvpGuestScore.textContent = "0";
+
+    pvpTimeLeft = PVP_QUESTION_TIME;
+    updatePvpTimer();
+}
+
+
 /* =============================================================
    RESET
    ============================================================= */
@@ -1450,6 +1539,8 @@ function resetPvpScreen() {
     waitingRoomPanel.classList.add("hidden");
     
     onPvpSocialReset();
+
+    showPvpPanel("lobby");
     
     roomSelectPanel.classList.remove("hidden");
 
