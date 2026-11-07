@@ -26,6 +26,41 @@ import {
 
 const $ = id => document.getElementById(id);
 
+
+/* =========================================================
+   REMOVE ACCEPTED PVP INVITATION
+========================================================= */
+
+export async function clearAcceptedPvpInvite(code) {
+
+    const uid = auth.currentUser?.uid;
+
+    if (!uid || !code) return;
+
+    try {
+
+        await remove(
+            ref(
+                db,
+                `pvpInvites/${uid}/${code}`
+            )
+        );
+
+        console.log(
+            "[PVP] Invitation removed:",
+            code
+        );
+
+    } catch (error) {
+
+        console.warn(
+            "[PVP] Invitation cleanup failed:",
+            error
+        );
+    }
+}
+
+
 let initialized = false;
 let lobbyActive = false;
 let activePvpTab = "rooms";
@@ -2213,33 +2248,4 @@ function initPvpInviteEvents() {
 
             loadPvpInvitePlayers("friends");
         };
-}
-
-
-/* =========================================================
-   REMOVE ACCEPTED ROOM INVITATION
-========================================================= */
-
-export async function clearAcceptedPvpInvite(code) {
-
-    const uid = auth.currentUser?.uid;
-
-    if (!uid || !code) return;
-
-    try {
-
-        await remove(
-            ref(
-                db,
-                `pvpInvites/${uid}/${code}`
-            )
-        );
-
-    } catch (error) {
-
-        console.warn(
-            "[PVP] Could not clear invitation:",
-            error
-        );
-    }
 }
