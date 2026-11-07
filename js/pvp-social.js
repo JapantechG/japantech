@@ -1686,8 +1686,6 @@ function initPvpEmoji() {
    1V1 ROOM INVITATIONS
 ========================================== */
 
-let inviteBusy = false;
-
 function pvpInviteCode() {
 
     return getConnectionInfo().roomCode;
