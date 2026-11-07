@@ -1920,51 +1920,139 @@ async function sendPvpInvite(receiverUid) {
 
 function renderPvpIncomingInvites(snapshot) {
 
-    const container = document.getElementById(
-        "pvpIncomingInvites"
-    );
+/* =========================================================
+   PVP INVITATIONS - ACCEPT / DECLINE / CLEANUP
+========================================================= */
 
-    if (!container) return;
+let pvpInviteRenderId = 0;
+let pvpAcceptBusy = false;
 
-    const invites = Object.entries(
+async function renderPvpIncomingInvites(snapshot) {
+
+    const container = $("pvpIncomingInvites");
+    const uid = auth.currentUser?.uid;
+
+    if (!container || !uid) return;
+
+    const renderId = ++pvpInviteRenderId;
+
+    const entries = Object.entries(
         snapshot.val() || {}
     );
 
+    const validInvites = [];
+
+    // Validate invitations against current room state.
+    for (const [code, invite] of entries.slice(0, 50)) {
+
+        if (!invite) continue;
+
+        if (!/^[A-HJ-NP-Z2-9]{6}$/.test(code)) {
+            continue;
+        }
+
+        try {
+
+            const roomSnap = await get(
+                ref(db, `rooms/${code}`)
+            );
+
+            const room = roomSnap.val();
+
+            const alreadyJoined =
+                room?.host?.uid === uid ||
+                room?.guest?.uid === uid;
+
+            const expired =
+                Date.now() -
+                Number(invite.createdAt || 0) >
+                10 * 60 * 1000;
+
+            const available =
+                room &&
+                room.host?.uid === invite.fromUid &&
+                room.host?.connected === true &&
+                !room.guest?.connected &&
+                ["waiting", "connected"].includes(
+                    room.status
+                );
+
+            if (
+                alreadyJoined ||
+                expired ||
+                !available
+            ) {
+
+                await remove(
+                    ref(
+                        db,
+                        `pvpInvites/${uid}/${code}`
+                    )
+                );
+
+                continue;
+            }
+
+            validInvites.push({
+                code,
+                invite
+            });
+
+        } catch (error) {
+
+            console.warn(
+                "[PVP] Invite validation failed:",
+                code,
+                error
+            );
+        }
+    }
+
+    // Avoid an older async callback overwriting newer UI.
+    if (renderId !== pvpInviteRenderId) {
+        return;
+    }
+
     container.classList.toggle(
         "hidden",
-        invites.length === 0
+        validInvites.length === 0
     );
 
-    container.innerHTML = invites.map(
-        ([code, invite]) => `
+    container.innerHTML = validInvites.map(
+        ({code, invite}) => `
 
-            <div class="pvp-invite-notification">
+        <div class="pvp-invite-notification">
 
-                <strong>⚔ 1V1 INVITATION</strong>
+            <strong>⚔ 1V1 INVITATION</strong>
 
-                <p>
-                    ${escapeHTML(invite.fromName)}
-                    invited you to
-                    ${escapeHTML(invite.roomName)}
-                </p>
+            <p>
+                ${escapeHTML(invite.fromName || "Player")}
+                invited you to
+                ${escapeHTML(invite.roomName || "1V1 BATTLE")}
+            </p>
 
-                <div class="pvp-invite-actions">
+            <div class="pvp-invite-actions">
 
-                    <button type="button"
-                            data-invite-decline="${escapeHTML(code)}">
-                        DECLINE
-                    </button>
+                <button
+                    type="button"
+                    data-invite-decline="${escapeHTML(code)}">
+                    DECLINE
+                </button>
 
-                    <button type="button"
-                            data-invite-accept="${escapeHTML(code)}">
-                        ✓ ACCEPT
-                    </button>
-
-                </div>
+                <button
+                    type="button"
+                    data-invite-accept="${escapeHTML(code)}">
+                    ✓ ACCEPT
+                </button>
 
             </div>
-        `
-    ).join("");
+
+        </div>
+    `).join("");
+
+    /* =====================================
+       DECLINE
+    ===================================== */
 
     container
         .querySelectorAll("[data-invite-decline]")
@@ -1972,16 +2060,37 @@ function renderPvpIncomingInvites(snapshot) {
 
             button.onclick = async () => {
 
-                const code = button.dataset.inviteDecline;
+                if (button.disabled) return;
 
-                await remove(
-                    ref(
-                        db,
-                        `pvpInvites/${auth.currentUser.uid}/${code}`
-                    )
-                );
+                button.disabled = true;
+
+                const code =
+                    button.dataset.inviteDecline;
+
+                try {
+
+                    await remove(
+                        ref(
+                            db,
+                            `pvpInvites/${uid}/${code}`
+                        )
+                    );
+
+                } catch (error) {
+
+                    console.error(
+                        "[PVP] Decline failed:",
+                        error
+                    );
+
+                    button.disabled = false;
+                }
             };
         });
+
+    /* =====================================
+       ACCEPT
+    ===================================== */
 
     container
         .querySelectorAll("[data-invite-accept]")
@@ -1989,32 +2098,94 @@ function renderPvpIncomingInvites(snapshot) {
 
             button.onclick = async () => {
 
-                if (inviteBusy) return;
+                if (button.disabled || pvpAcceptBusy) {
+                    return;
+                }
 
-                inviteBusy = true;
+                const code =
+                    button.dataset.inviteAccept;
+
+                pvpAcceptBusy = true;
+
                 button.disabled = true;
+                button.textContent = "JOINING...";
 
-                const code = button.dataset.inviteAccept;
+                let joined = false;
 
-                // Existing PvP Join Room listener handles
-                // joining and opening the waiting room.
-                const input = document.getElementById(
-                    "roomCodeInput"
-                );
+                try {
 
-                input.value = code;
+                    // Join Firebase room directly.
+                    await joinRoom(code);
 
-                document.getElementById(
-                    "joinRoomButton"
-                ).click();
+                    joined = true;
 
-                // The room update handler will remove
-                // the accepted invitation on success.
-                inviteBusy = false;
+                    console.log(
+                        "[PVP] Invitation accepted:",
+                        code
+                    );
+
+                    // Remove invitation AFTER successful join.
+                    await remove(
+                        ref(
+                            db,
+                            `pvpInvites/${uid}/${code}`
+                        )
+                    );
+
+                } catch (error) {
+
+                    console.error(
+                        "[PVP] Accept failed:",
+                        error
+                    );
+
+                    if (!joined) {
+
+                        button.disabled = false;
+                        button.textContent = "✓ ACCEPT";
+
+                        alert(
+                            "Cannot join room: " +
+                            error.message
+                        );
+
+                        return;
+
+                    } else {
+
+                        // Joined successfully, but cleanup failed.
+                        // Do not attempt to join a second time.
+                        console.warn(
+                            "[PVP] Joined, invite cleanup pending:",
+                            error
+                        );
+                    }
+
+                } finally {
+
+                    pvpAcceptBusy = false;
+                }
+
+                // Show waiting room on successful join.
+                $("roomSelectPanel")
+                    ?.classList.add("hidden");
+
+                $("waitingRoomPanel")
+                    ?.classList.remove("hidden");
+
+                if ($("currentRoomCode")) {
+                    $("currentRoomCode").textContent =
+                        code;
+                }
+
+                // Hide old invite UI immediately.
+                container.classList.add("hidden");
+                container.innerHTML = "";
             };
         });
 }
 
+    
 /* ==========================================
    INVITE UI EVENTS
 ========================================== */
@@ -2046,3 +2217,31 @@ function initPvpInviteEvents() {
         };
 }
 
+
+/* =========================================================
+   REMOVE ACCEPTED ROOM INVITATION
+========================================================= */
+
+export async function clearAcceptedPvpInvite(code) {
+
+    const uid = auth.currentUser?.uid;
+
+    if (!uid || !code) return;
+
+    try {
+
+        await remove(
+            ref(
+                db,
+                `pvpInvites/${uid}/${code}`
+            )
+        );
+
+    } catch (error) {
+
+        console.warn(
+            "[PVP] Could not clear invitation:",
+            error
+        );
+    }
+}
