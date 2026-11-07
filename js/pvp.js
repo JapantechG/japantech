@@ -363,7 +363,11 @@ function showPvpQuestion(match)
             Nếu KANJI → HIRAGANA sẽ lộ đáp án.
         */
         
+        pvpReadingShownFor = null;
+
         pvpReading.textContent = "";
+        
+        pvpReading.classList.remove("show");
         
         /*Render question theo mode HOST đã chọn*/
         
@@ -411,6 +415,8 @@ questionData.optionIds.forEach((optionId,optionIndex) =>
 
         button.textContent = option[answerField];
 
+        button.dataset.answerLabel =["A", "B", "C", "D"][optionIndex];
+
          /*
             Click answer
         */
@@ -429,6 +435,67 @@ questionData.optionIds.forEach((optionId,optionIndex) =>
     startPvpTimer();
 
 }
+
+
+/* =========================================================
+   PVP - READING AND PRONUNCIATION
+========================================================= */
+
+let pvpReadingShownFor = null;
+
+function showPvpAnswerReading({
+    speak = true
+} = {}) {
+
+    const match = currentPvpRoom?.match;
+
+    if (!match) return;
+
+    const index = Number(
+        match.currentQuestion || 0
+    );
+
+    const questionId = match.questionIds?.[index];
+
+    const question = getQuestionById(questionId);
+
+    if (!question) return;
+
+    const reading = String(
+        question.reading || ""
+    ).trim();
+
+    if (!reading) return;
+
+    /* Prevent duplicate speech for same question */
+
+    const key = `${match.matchId}:${index}`;
+
+    if (pvpReadingShownFor === key) {
+        return;
+    }
+
+    pvpReadingShownFor = key;
+
+    /* Show hiragana */
+
+    pvpReading.textContent = reading;
+
+    pvpReading.classList.add("show");
+
+    /* Speak Japanese word */
+
+    if (
+        speak &&
+        !isPvpAudioMode(match.mode)
+    ) {
+
+        stopSpeech();
+
+        speakJapanese(reading);
+    }
+}
+
 
 async function selectPvpAnswer(optionId,selectedButton) 
     {
@@ -469,14 +536,24 @@ async function selectPvpAnswer(optionId,selectedButton)
 
     selectedButton.classList.add("selected");
 
+    /* Show reading and pronounce the Japanese word */
+    
+    showPvpAnswerReading({
+        speak: true
+    });
+
 
     /*
         Gửi Firebase
     */
 
     try {
-
-        await submitRoomAnswer(questionIndex,optionId);
+    
+        await submitRoomAnswer(questionIndex, optionId);
+    
+        showPvpAnswerReading({
+            speak: true
+        });
 
     }
     catch (error) {
@@ -598,6 +675,12 @@ function revealPvpAnswers(room,hostAnswer,guestAnswer)
     }
 
     revealStarted = true;
+
+    /* Reveal reading if this player timed out */
+
+    showPvpAnswerReading({
+        speak: false
+    });
 
     const match = room.match;
 
@@ -1540,6 +1623,12 @@ function clearPvpBattleState() {
     stopPvpTimer();
     stopSpeech();
 
+    pvpReadingShownFor = null;
+
+    pvpReading.textContent = "";
+    
+    pvpReading.classList.remove("show");
+
     answerLocked = false;
     revealStarted = false;
 
@@ -1568,6 +1657,12 @@ function clearPvpBattleState() {
 function resetPvpScreen() {
     stopPvpTimer();
     stopSpeech();
+
+    pvpReadingShownFor = null;
+
+    pvpReading.textContent = "";
+    
+    pvpReading.classList.remove("show");
     
     pvpTimeLeft = PVP_QUESTION_TIME;
     
