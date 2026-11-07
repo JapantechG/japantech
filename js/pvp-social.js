@@ -1947,11 +1947,7 @@ async function sendPvpInvite(receiverUid) {
     });
 }
 
-/* ==========================================
-   RECEIVE INVITES
-========================================== */
 
-function renderPvpIncomingInvites(snapshot) {
 
 /* =========================================================
    PVP INVITATIONS - ACCEPT / DECLINE / CLEANUP
