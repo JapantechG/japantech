@@ -1706,3 +1706,626 @@
     display: none !important;
 }
 
+/* =========================================================
+   BATLINGO PVP RESULT V2
+   VICTORY / DEFEAT / DRAW / REMATCH
+========================================================= */
+
+/* RESULT SCREEN */
+
+#pvpScreen.result-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100dvh;
+    padding: 22px 12px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#pvpScreen.result-mode .pvp-container {
+    width: min(100%, 820px) !important;
+    max-width: 820px !important;
+
+    margin: auto;
+}
+
+#pvpScreen.result-mode .pvp-title {
+    font-size: clamp(27px, 4vw, 42px);
+    line-height: 1.1;
+    margin: 0;
+}
+
+#pvpScreen.result-mode .pvp-subtitle {
+    margin: 3px 0 14px;
+    font-size: 10px;
+}
+
+#pvpScreen.result-mode #pvpResultPanel {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: clamp(16px, 3vw, 28px);
+
+    overflow: hidden;
+    border: 1px solid rgba(148,163,184,.22);
+    border-radius: 24px;
+
+    background: linear-gradient(
+        160deg,
+        rgba(15,23,42,.97),
+        rgba(8,15,32,.96)
+    );
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.32),
+        inset 0 1px rgba(255,255,255,.06);
+}
+
+/* OUTCOME BACKGROUND */
+
+#pvpResultPanel[data-outcome="victory"] {
+    border-color: rgba(251,191,36,.65);
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(234,179,8,.20),
+            transparent 65%
+        ),
+        #0c1427;
+}
+
+#pvpResultPanel[data-outcome="defeat"] {
+    border-color: rgba(129,140,248,.38);
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(99,102,241,.17),
+            transparent 65%
+        ),
+        #0c1427;
+}
+
+#pvpResultPanel[data-outcome="draw"] {
+    border-color: rgba(56,189,248,.45);
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(56,189,248,.16),
+            transparent 65%
+        ),
+        #0c1427;
+}
+
+/* OUTCOME TITLE */
+
+#pvpScreen.result-mode .pvp-result-title {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 4px;
+
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.15;
+    font-weight: 950;
+    letter-spacing: 2px;
+}
+
+#pvpResultPanel[data-outcome="victory"]
+.pvp-result-title {
+    color: #fde68a;
+    text-shadow: 0 0 30px rgba(251,191,36,.55);
+}
+
+#pvpResultPanel[data-outcome="defeat"]
+.pvp-result-title {
+    color: #c7d2fe;
+    text-shadow: 0 0 25px rgba(129,140,248,.35);
+}
+
+#pvpResultPanel[data-outcome="draw"]
+.pvp-result-title {
+    color: #a5f3fc;
+}
+
+.pvp-result-subtitle {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 22px;
+
+    color: #b9c5d8;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+
+/* SCORE CARDS */
+
+#pvpScreen.result-mode .pvp-result-score {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        44px
+        minmax(0, 1fr);
+
+    align-items: stretch;
+    gap: 12px;
+}
+
+#pvpScreen.result-mode
+.pvp-result-score > div:not(.room-vs) {
+    position: relative;
+    min-width: 0;
+
+    padding: 22px 12px 18px;
+
+    border: 1px solid #334155;
+    border-radius: 18px;
+
+    background: rgba(15,23,42,.84);
+
+    transform: none;
+    box-shadow: none;
+}
+
+#pvpScreen.result-mode .pvp-result-score span {
+    overflow-wrap: anywhere;
+    font-size: clamp(11px, 1.6vw, 15px);
+    letter-spacing: .8px;
+    margin: 0 0 12px;
+}
+
+#pvpScreen.result-mode .pvp-result-score strong {
+    font-size: clamp(30px, 6vw, 56px);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+#pvpScreen.result-mode .pvp-result-score .room-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    color: #64748b;
+    font-style: italic;
+}
+
+#pvpScreen.result-mode
+.pvp-result-score > div:not(.room-vs)::after {
+    content: attr(data-rank);
+
+    display: block;
+    margin-top: 13px;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+}
+
+#pvpScreen.result-mode .pvp-result-score > .winner {
+    border-color: #fbbf24 !important;
+
+    background:
+        linear-gradient(
+            155deg,
+            rgba(161,98,7,.30),
+            rgba(15,23,42,.88)
+        ) !important;
+
+    box-shadow:
+        0 0 28px rgba(251,191,36,.18) !important;
+}
+
+#pvpScreen.result-mode .pvp-result-score > .winner strong,
+#pvpScreen.result-mode .pvp-result-score > .winner::after {
+    color: #fbbf24;
+}
+
+#pvpScreen.result-mode .pvp-result-score > .loser {
+    opacity: .78;
+}
+
+/* RESULT MESSAGE */
+
+#pvpScreen.result-mode .pvp-result-message {
+    position: relative;
+    z-index: 2;
+
+    margin: 16px 0 0;
+    padding: 0;
+
+    font-size: clamp(17px, 3vw, 23px);
+    letter-spacing: 2px;
+}
+
+#pvpResultPanel[data-outcome="defeat"]
+.pvp-result-message {
+    color: #c7d2fe;
+    text-shadow: none;
+}
+
+.pvp-score-detail {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 8px;
+
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .7px;
+}
+
+/* REMATCH CARD */
+
+#pvpScreen.result-mode .pvp-rematch-area {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 22px;
+    padding: 18px;
+
+    border: 1px solid #334155;
+    border-radius: 18px;
+
+    background: rgba(15,23,42,.83);
+}
+
+.pvp-rematch-heading {
+    color: #f8fafc;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+}
+
+.pvp-rematch-readiness {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.pvp-rematch-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-width: 0;
+    min-height: 38px;
+    padding: 8px 5px;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    color: #94a3b8;
+    background: #172338;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.pvp-rematch-player.is-ready {
+    color: #86efac;
+    border-color: rgba(74,222,128,.55);
+    background: rgba(22,101,52,.24);
+}
+
+.pvp-rematch-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    background: #64748b;
+}
+
+.pvp-rematch-player.is-ready .pvp-rematch-dot {
+    background: #4ade80;
+    box-shadow: 0 0 10px rgba(74,222,128,.7);
+}
+
+/* REMATCH BUTTON */
+
+#pvpScreen.result-mode .pvp-rematch-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 54px;
+    margin: 0;
+
+    border: 0;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(110deg, #fbbf24, #f97316);
+
+    color: #111827;
+    font-size: 16px;
+    font-weight: 950;
+    letter-spacing: 1.2px;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 22px rgba(249,115,22,.24);
+
+    transition:
+        transform .2s ease,
+        filter .2s ease,
+        box-shadow .2s ease;
+}
+
+#pvpScreen.result-mode .pvp-rematch-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    filter: brightness(1.09);
+    box-shadow: 0 10px 28px rgba(249,115,22,.38);
+}
+
+#pvpScreen.result-mode .pvp-rematch-button:active:not(:disabled) {
+    transform: scale(.98);
+}
+
+#pvpScreen.result-mode .pvp-rematch-button:disabled {
+    opacity: 1;
+    cursor: default;
+
+    color: #86efac;
+    background: #17452f;
+    border: 1px solid rgba(74,222,128,.45);
+    box-shadow: none;
+}
+
+#pvpScreen.result-mode .pvp-rematch-status {
+    margin-top: 12px;
+    min-height: 18px;
+
+    color: #94a3b8;
+    font-size: 12px;
+    opacity: 1;
+}
+
+#pvpRematchStatus[data-state="invited"] {
+    color: #fbbf24;
+}
+
+#pvpRematchStatus[data-state="ready"] {
+    color: #4ade80;
+}
+
+/* ANIMATIONS */
+
+.pvp-result-animate .pvp-result-title {
+    animation: batResultEntrance .65s both;
+}
+
+.pvp-result-animate .pvp-result-score {
+    animation: batResultEntrance .75s .12s both;
+}
+
+.pvp-result-animate .pvp-rematch-area {
+    animation: batResultEntrance .65s .3s both;
+}
+
+#pvpResultPanel[data-outcome="victory"].pvp-result-animate
+.winner {
+    animation: batWinnerGlow 2.2s ease-in-out infinite;
+}
+
+/* Effects stay behind the content */
+
+.pvp-result-effects {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.pvp-result-effects i {
+    position: absolute;
+    top: -15px;
+    left: calc(4% + var(--i) * 6%);
+
+    width: 7px;
+    height: 15px;
+
+    background: #fbbf24;
+    border-radius: 2px;
+    opacity: 0;
+}
+
+#pvpResultPanel[data-outcome="victory"]
+.pvp-result-animate .pvp-result-effects i {
+    background: hsl(
+        calc(22 + var(--i) * 15) 95% 65%
+    );
+
+    animation: batConfetti 3.4s
+        calc(var(--i) * .12s) ease-in forwards;
+}
+
+#pvpResultPanel[data-outcome="defeat"]
+.pvp-result-animate .pvp-result-effects i {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+
+    background: #818cf8;
+
+    animation: batDefeatSpark 3.2s
+        calc(var(--i) * .16s) ease-out forwards;
+}
+
+#pvpResultPanel[data-outcome="draw"]
+.pvp-result-animate .pvp-result-effects i {
+    display: none;
+}
+
+@keyframes batResultEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes batWinnerGlow {
+    0%, 100% {
+        box-shadow: 0 0 16px rgba(251,191,36,.20);
+    }
+    50% {
+        box-shadow: 0 0 36px rgba(251,191,36,.50);
+    }
+}
+
+@keyframes batConfetti {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) rotate(0);
+    }
+    12% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(470px) rotate(650deg);
+    }
+}
+
+@keyframes batDefeatSpark {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(.3);
+    }
+    25% {
+        opacity: .65;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(350px) scale(1.5);
+    }
+}
+
+/* MOBILE RESULT */
+
+@media (max-width: 600px) {
+
+    #pvpScreen.result-mode {
+        padding:
+            max(8px, env(safe-area-inset-top))
+            9px
+            max(8px, env(safe-area-inset-bottom));
+    }
+
+    #pvpScreen.result-mode .pvp-container {
+        width: 100% !important;
+    }
+
+    #pvpScreen.result-mode .pvp-title {
+        font-size: 25px;
+    }
+
+    #pvpScreen.result-mode .pvp-subtitle {
+        margin-bottom: 8px;
+    }
+
+    #pvpScreen.result-mode #pvpResultPanel {
+        padding: 18px 12px;
+        border-radius: 17px;
+    }
+
+    #pvpScreen.result-mode .pvp-result-title {
+        font-size: 32px;
+    }
+
+    .pvp-result-subtitle {
+        margin-bottom: 13px;
+        font-size: 11px;
+    }
+
+    #pvpScreen.result-mode .pvp-result-score {
+        grid-template-columns: minmax(0,1fr) 22px minmax(0,1fr);
+        gap: 5px;
+    }
+
+    #pvpScreen.result-mode
+    .pvp-result-score > div:not(.room-vs) {
+        padding: 15px 5px 12px;
+        border-radius: 11px;
+    }
+
+    #pvpScreen.result-mode .pvp-result-score span {
+        font-size: 11px;
+    }
+
+    #pvpScreen.result-mode .pvp-result-score strong {
+        font-size: 29px;
+    }
+
+    #pvpScreen.result-mode .pvp-result-score .room-vs {
+        font-size: 14px;
+    }
+
+    #pvpScreen.result-mode .pvp-rematch-area {
+        margin-top: 14px;
+        padding: 12px;
+    }
+
+    .pvp-rematch-heading {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .pvp-rematch-readiness {
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .pvp-rematch-player {
+        font-size: 9px;
+        min-height: 34px;
+        gap: 4px;
+    }
+
+    #pvpScreen.result-mode .pvp-rematch-button {
+        min-height: 48px;
+        font-size: 14px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    #pvpResultPanel *,
+    #pvpResultPanel *::before,
+    #pvpResultPanel *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* NEVER SHOW INACTIVE PANELS */
+
+#pvpScreen #pvpResultPanel.hidden {
+    display: none !important;
+}
+
