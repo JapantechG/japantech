@@ -8,6 +8,10 @@ import {
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
+import {
+    syncLeaderboardProfile
+} from "./leaderboard-data.js";
+
 // IMPORTANT:
 // Firebase SDK version must match firebase.js.
 
@@ -393,6 +397,15 @@ function finishMascotSelection(uid, mascot) {
 
     window.currentUserData ??= {};
     window.currentUserData.mascot = mascot;
+
+    syncLeaderboardProfile(window.currentUserData)
+    .catch(error => {
+
+        console.warn(
+            "[Leaderboard] Mascot sync:",
+            error
+        );
+    });
 
     const pending = pendingSelection;
     pendingSelection = null;
