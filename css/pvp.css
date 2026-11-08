@@ -2714,3 +2714,59 @@
 #pvpScreen #pvpResultPanel.hidden {
     display: none !important;
 }
+
+/* =========================================================
+   PVP REMATCH - READY ANIMATION
+========================================================= */
+
+#pvpScreen.result-mode .pvp-rematch-player {
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+}
+
+#pvpScreen.result-mode .pvp-rematch-player.is-ready {
+    color: #86efac;
+    background: rgba(22, 101, 52, .30);
+    border-color: #4ade80;
+    box-shadow:
+        0 0 18px rgba(74, 222, 128, .18),
+        inset 0 0 12px rgba(74, 222, 128, .06);
+    animation: batRematchReady .45s ease-out;
+}
+
+#pvpScreen.result-mode
+.pvp-rematch-player.is-ready .pvp-rematch-dot {
+    background: #4ade80;
+    box-shadow: 0 0 12px #4ade80;
+}
+
+#pvpRematchStatus[data-state="waiting"] {
+    color: #fbbf24;
+}
+
+#pvpRematchStatus[data-state="error"] {
+    color: #fb7185;
+}
+
+@keyframes batRematchReady {
+    0% {
+        transform: scale(.94);
+        filter: brightness(1.5);
+    }
+    65% {
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #pvpScreen.result-mode .pvp-rematch-player.is-ready {
+        animation: none;
+    }
+}
