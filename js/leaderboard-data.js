@@ -33,92 +33,125 @@ function safeNumber(value, fallback = 0) {
    SYNC CURRENT USER TO LEADERBOARD
 ========================================== */
 
+
 export async function syncLeaderboardProfile(
-    userData = window.currentUserData
+    data = window.currentUserData
 ) {
     const uid = auth.currentUser?.uid;
 
-    if (!uid || !userData?.profile?.batlingoId) {
+    if (!uid || !data?.profile?.batlingoId) {
         return;
     }
 
-    const profile = userData.profile;
-    const progress = userData.progress || {};
-    const rating = userData.rating || {};
-    const mascot = userData.mascot || {};
-    const stats = userData.stats || {};
+    const p = data.profile;
+    const m = data.mascot || {};
+    const s = data.stats || {};
+    const progress = data.progress || {};
+    const rating = data.rating || {};
 
-    const mascotId = ["buffalo", "monkey"].includes(
-        mascot.id
-    ) ? mascot.id : "";
+    const mascotId =
+        m.id === "buffalo" || m.id === "monkey"
+            ? m.id
+            : "";
 
-    const evolution = Math.max(
-        0,
-        safeNumber(mascot.evolution, 0)
+    const evolution = Math.min(
+        4,
+        Math.max(0, Number(m.evolution) || 0)
     );
 
-    const mascotLevel = mascotId
-        ? Math.max(
-            1,
-            safeNumber(mascot.level, evolution + 1)
-        )
+    const petLevel = mascotId
+        ? Math.max(1, Number(m.level) || evolution + 1)
         : 0;
 
-    const player = {
+    const name = String(
+        p.displayName || "Player"
+    ).slice(0, 20);
+
+    const createdAt =
+        Number(p.createdAt) || Date.now();
+
+    const level = Math.max(
+        1,
+        Number(progress.level) || 1
+    );
+
+    const elo = Number.isFinite(Number(rating.elo))
+        ? Number(rating.elo)
+        : 1000;
+
+    const wins = Number(s.wins) || 0;
+    const losses = Number(s.losses) || 0;
+    const draws = Number(s.draws) || 0;
+    const battles = Number(s.totalGames) || 0;
+    const bestCombo = Number(s.bestCombo) || 0;
+
+    // Public profile matches existing Firebase Rules.
+    // Do not put leaderboard-only fields here.
+    const publicProfile = {
+        batlingoId: p.batlingoId,
+        displayName: name,
+        bio: String(p.bio || "").slice(0, 100),
+        photoURL: p.photoURL || "",
+        level,
+        elo,
+        battles,
+        wins,
+        losses,
+        draws,
+        bestCombo,
+        mascot: mascotId,
+        evolution,
+        updatedAt: Date.now()
+    };
+
+    // Leaderboard has its own schema.
+    const leaderboardPlayer = {
         uid,
+        name,
+        displayName: name,
+        batlingoId: p.batlingoId,
+        photoURL: p.photoURL || "",
 
-        name: String(
-            profile.displayName || "Player"
-        ).slice(0, 20),
-
-        displayName: String(
-            profile.displayName || "Player"
-        ).slice(0, 20),
-
-        batlingoId: profile.batlingoId,
-
-        photoURL: profile.photoURL || "",
-
-        bio: String(
-            profile.bio || ""
-        ).slice(0, 100),
-
-        createdAt: safeNumber(
-            profile.createdAt,
-            Number.MAX_SAFE_INTEGER
-        ),
+        createdAt,
 
         mascot: mascotId,
-        mascotLevel,
+        mascotLevel: petLevel,
         mascotEvolution: evolution,
 
-        level: Math.max(
-            1,
-            safeNumber(progress.level, 1)
-        ),
+        level,
+        exp: Number(progress.totalExp) || 0,
+        elo,
 
-        exp: safeNumber(progress.totalExp, 0),
-
-        elo: safeNumber(rating.elo, 1000),
-
-        wins: safeNumber(stats.wins),
-        losses: safeNumber(stats.losses),
-        battles: safeNumber(stats.totalGames)
+        wins,
+        losses,
+        draws,
+        battles
     };
 
     const updates = {
-        [`publicProfiles/${uid}`]: player,
+        [`publicProfiles/${uid}`]: publicProfile,
 
-        [`leaderboards/level/${uid}`]: player,
+        [`leaderboards/level/${uid}`]:
+            leaderboardPlayer,
 
-        [`leaderboards/rank/${RANK_SEASON}/${uid}`]: player,
+        [`leaderboards/rank/${RANK_SEASON}/${uid}`]:
+            leaderboardPlayer,
 
         [`leaderboards/pet/${uid}`]:
-            mascotId ? player : null
+            mascotId ? leaderboardPlayer : null
     };
 
     await update(ref(db), updates);
+
+    console.log(
+        "[Leaderboard] Synced:",
+        uid,
+        "Level:", level,
+        "ELO:", elo,
+        "Pet:", mascotId
+    );
 }
+
 
 /* ==========================================
    DATABASE PATH
