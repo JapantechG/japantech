@@ -2082,3 +2082,291 @@
         margin: 5px 0;
     }
 }
+
+/* =========================================================
+   BATLINGO WAITING ROOM - CSS ONLY FIX V4
+   No JavaScript / HTML changes
+========================================================= */
+
+/* ROOM CODE - BOTH DESKTOP AND MOBILE */
+
+#pvpScreen.waiting-mode #waitingRoomPanel {
+    display: flex;
+    flex-direction: column;
+}
+
+#pvpScreen.waiting-mode #currentRoomCode {
+    display: block !important;
+    order: 1;
+
+    width: 100%;
+    height: auto;
+
+    margin: 2px auto 0;
+    padding: 0;
+
+    color: #fbbf24;
+    font-size: clamp(29px, 4vw, 43px);
+    font-weight: 950;
+    line-height: 1.15;
+    letter-spacing: .12em;
+    text-align: center;
+
+    text-shadow: 0 0 18px rgba(251,191,36,.22);
+}
+
+/* Define ordering of waiting room elements */
+
+#pvpScreen.waiting-mode .pvp-room-controls {
+    order: 0;
+}
+
+#pvpScreen.waiting-mode #pvpWaitingTitle {
+    order: 2;
+    margin: 0 0 3px;
+    text-align: center;
+}
+
+#pvpScreen.waiting-mode #pvpWaitingConfig {
+    order: 3;
+}
+
+#pvpScreen.waiting-mode .pvp-room-settings-actions {
+    order: 4;
+}
+
+#pvpScreen.waiting-mode #pvpSettingsPanel {
+    order: 5;
+}
+
+#pvpScreen.waiting-mode #pvpReactionDisplay {
+    order: 6;
+}
+
+#pvpScreen.waiting-mode .players-area {
+    order: 7;
+}
+
+#pvpScreen.waiting-mode #pvpInviteSection {
+    order: 8;
+}
+
+#pvpScreen.waiting-mode #waitingMessage {
+    order: 9;
+}
+
+#pvpScreen.waiting-mode #startBattleButton {
+    order: 10;
+}
+
+#pvpScreen.waiting-mode #leaveRoomButton {
+    order: 11;
+}
+
+/* Remove redundant room-code descriptions */
+
+#pvpScreen.waiting-mode .waiting-label,
+#pvpScreen.waiting-mode .room-code-help {
+    display: none !important;
+}
+
+/* =========================================================
+   BATTLE SETTINGS - TITLE AND VISIBILITY
+========================================================= */
+
+#pvpScreen.waiting-mode #pvpWaitingConfig {
+    position: relative;
+}
+
+/* Keep PUBLIC/PRIVATE visually next to the heading,
+   regardless of whether it is inside the heading
+   or the previously created visibility grid item. */
+
+#pvpScreen.waiting-mode
+#pvpWaitingConfig .pvp-config-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    gap: 12px;
+    margin-bottom: 9px;
+    padding-right: 115px;
+
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+/* Visibility positioned at right of header */
+
+#pvpScreen.waiting-mode #pvpConfigVisibility {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+
+    display: inline-flex !important;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    color: #86efac;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+/* Hide old visibility cell label, without hiding
+   the actual PUBLIC/PRIVATE text */
+
+#pvpScreen.waiting-mode #pvpConfigVisibilityItem {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#pvpScreen.waiting-mode
+#pvpConfigVisibilityItem > small {
+    display: none !important;
+}
+
+/* Settings remain 2 columns */
+
+#pvpScreen.waiting-mode .pvp-config-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 9px 14px;
+}
+
+/* Redundant PUBLIC/PRIVATE beside Copy Code */
+
+#pvpScreen #pvpWaitingVisibility {
+    display: none !important;
+}
+
+/* =========================================================
+   DESKTOP - SCROLL FIX
+========================================================= */
+
+@media (min-width: 901px) {
+
+    #pvpScreen.waiting-mode {
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+
+        height: 100dvh;
+        min-height: 100dvh;
+
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+
+        padding: 10px 20px 18px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-container {
+        display: flex;
+        flex-direction: column;
+
+        flex: 0 0 auto;
+
+        width: min(100%, 950px) !important;
+        max-width: 950px !important;
+
+        height: auto !important;
+        min-height: 0;
+        max-height: none !important;
+
+        margin: 0 auto !important;
+        padding: 0 10px 16px !important;
+    }
+
+    #pvpScreen.waiting-mode .pvp-title {
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.1;
+    }
+
+    #pvpScreen.waiting-mode .pvp-subtitle {
+        margin: 2px 0 7px;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    #pvpScreen.waiting-mode #waitingRoomPanel {
+        margin: 0;
+        padding: 12px 20px;
+        gap: 8px;
+    }
+
+    /* Expanded panels scroll internally */
+
+    #pvpScreen.waiting-mode #pvpSettingsPanel {
+        max-height: min(48dvh, 410px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    #pvpScreen.waiting-mode #pvpInvitePanel {
+        max-height: min(38dvh, 310px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    #pvpScreen.waiting-mode #startBattleButton {
+        margin-top: 4px;
+    }
+
+    #pvpScreen.waiting-mode #leaveRoomButton {
+        margin-top: 5px;
+    }
+}
+
+/* =========================================================
+   MOBILE - PRESERVE COMPACT LAYOUT
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #pvpScreen.waiting-mode #currentRoomCode {
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin: 1px auto 0;
+    }
+
+    #pvpScreen.waiting-mode #waitingRoomPanel {
+        gap: 5px;
+    }
+
+    #pvpScreen.waiting-mode
+    #pvpWaitingConfig .pvp-config-heading {
+        font-size: 11px;
+        padding-right: 90px;
+        gap: 6px;
+    }
+
+    #pvpScreen.waiting-mode #pvpConfigVisibility {
+        top: 9px;
+        right: 10px;
+        font-size: 10px;
+    }
+
+    #pvpScreen.waiting-mode #pvpWaitingConfig {
+        margin: 4px 0;
+    }
+}
+
+/* Preserve hidden panels */
+
+#pvpScreen #pvpSettingsPanel.hidden,
+#pvpScreen #pvpInvitePanel.hidden,
+#pvpScreen #waitingRoomPanel.hidden {
+    display: none !important;
+}
