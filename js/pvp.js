@@ -2186,7 +2186,8 @@ function showPvpPanel(panel) {
 
     pvpScreen.classList.remove(
         "battle-mode",
-        "result-mode"
+        "result-mode",
+        "waiting-mode"
     );
 
     /* Display selected panel */
@@ -2202,9 +2203,10 @@ function showPvpPanel(panel) {
 
         case "waiting":
 
-            waitingRoomPanel.classList.remove(
-                "hidden"
-            );
+            waitingRoomPanel.classList.remove("hidden");
+        
+            pvpScreen.classList.add("waiting-mode");
+        
             break;
 
         case "battle":
