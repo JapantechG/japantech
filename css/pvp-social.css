@@ -2370,3 +2370,196 @@
 #pvpScreen #waitingRoomPanel.hidden {
     display: none !important;
 }
+
+/* =========================================================
+   BATLINGO PVP WAITING DESKTOP - FIX V5
+
+   1. Background always dark
+   2. Full Room Settings
+   3. No nested scrolling in Settings
+   4. Invite remains compact
+   5. Desktop only
+========================================================= */
+
+@media (min-width: 901px) {
+
+    /* ==========================================
+       MAIN WAITING SCREEN
+    ========================================== */
+
+    #pvpScreen.waiting-mode {
+        position: relative;
+
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+
+        width: 100%;
+        height: 100dvh;
+        min-height: 100dvh;
+
+        padding: 10px 20px 24px;
+
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+
+        background-color: #050b18;
+
+        overscroll-behavior-y: contain;
+    }
+
+    /* ==========================================
+       FIXED BACKGROUND OVERLAY
+
+       Fixed overlay covers whole viewport,
+       including when Waiting Room scrolls.
+    ========================================== */
+
+    #pvpScreen.waiting-mode::before {
+        content: "";
+
+        position: fixed;
+        inset: 0;
+
+        z-index: 0;
+        pointer-events: none;
+
+        background:
+            linear-gradient(
+                rgba(3, 7, 18, .78),
+                rgba(3, 7, 18, .90)
+            ),
+            url("../assets/images/backgrounds/room-bg.webp")
+            center / cover no-repeat;
+    }
+
+    /* Ensure the content stays above background */
+
+    #pvpScreen.waiting-mode .pvp-container {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        flex: 0 0 auto;
+
+        width: min(100%, 950px) !important;
+        max-width: 950px !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 0 auto !important;
+        padding: 0 10px 18px !important;
+
+        overflow: visible !important;
+    }
+
+    /* ==========================================
+       FULL ROOM SETTINGS
+    ========================================== */
+
+    #pvpScreen.waiting-mode #pvpSettingsPanel {
+        display: grid;
+
+        width: 100%;
+        height: auto !important;
+
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 5px 0;
+        padding: 15px 18px;
+
+        overflow: visible !important;
+
+        gap: 10px;
+        border-radius: 13px;
+    }
+
+    /* Keep form text comfortable */
+
+    #pvpScreen.waiting-mode #pvpSettingsPanel label {
+        font-size: 12px;
+        line-height: 1.25;
+        gap: 5px;
+    }
+
+    #pvpScreen.waiting-mode #pvpSettingsPanel input,
+    #pvpScreen.waiting-mode #pvpSettingsPanel select {
+        min-height: 40px;
+        height: 40px;
+
+        padding: 7px 11px;
+        font-size: 13px;
+    }
+
+    /* ==========================================
+       INVITE FRIENDS
+
+       Keep list scrollable when many users
+       instead of expanding indefinitely.
+    ========================================== */
+
+    #pvpScreen.waiting-mode #pvpInvitePanel {
+        width: 100%;
+        height: auto !important;
+
+        max-height: none !important;
+        overflow: visible !important;
+
+        margin: 6px 0 0;
+        padding: 11px 14px;
+    }
+
+    #pvpScreen.waiting-mode #pvpInviteList {
+        max-height: 200px;
+        min-height: 0;
+
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    /* ==========================================
+       WAITING CARD
+    ========================================== */
+
+    #pvpScreen.waiting-mode #waitingRoomPanel {
+        width: 100%;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        overflow: visible !important;
+
+        margin: 0;
+        padding: 12px 20px 15px;
+
+        gap: 8px;
+    }
+
+    /* Buttons spacing */
+
+    #pvpScreen.waiting-mode #startBattleButton {
+        margin-top: 5px;
+    }
+
+    #pvpScreen.waiting-mode #leaveRoomButton {
+        margin-top: 5px;
+    }
+}
+
+/* ==========================================
+   HIDDEN STATES
+   Must override display:grid
+========================================== */
+
+#pvpScreen #pvpSettingsPanel.hidden,
+#pvpScreen #pvpInvitePanel.hidden,
+#pvpScreen #waitingRoomPanel.hidden {
+    display: none !important;
+}
