@@ -2304,9 +2304,10 @@ async function renderPvpIncomingInvites(snapshot) {
 }
 
     
-/* ==========================================
-   INVITE UI EVENTS
-========================================== */
+
+/* =========================================================
+   PVP INVITE - TAB SELECTION FIX
+========================================================= */
 
 function initPvpInviteEvents() {
 
@@ -2314,23 +2315,56 @@ function initPvpInviteEvents() {
         "pvpInviteToggle"
     );
 
+    const panel = document.getElementById(
+        "pvpInvitePanel"
+    );
+
+    const onlineTab = document.getElementById(
+        "pvpInviteOnlineTab"
+    );
+
+    const friendsTab = document.getElementById(
+        "pvpInviteFriendsTab"
+    );
+
+    function selectInviteTab(type) {
+
+        const isOnline = type === "online";
+
+        onlineTab.classList.toggle("active", isOnline);
+        friendsTab.classList.toggle("active", !isOnline);
+
+        onlineTab.setAttribute(
+            "aria-selected",
+            String(isOnline)
+        );
+
+        friendsTab.setAttribute(
+            "aria-selected",
+            String(!isOnline)
+        );
+
+        loadPvpInvitePlayers(type);
+    }
+
     toggle.onclick = () => {
 
-        document.getElementById("pvpInvitePanel")
-            .classList.toggle("hidden");
+        const isOpening =
+            panel.classList.contains("hidden");
 
-        loadPvpInvitePlayers("online");
+        panel.classList.toggle("hidden");
+
+        if (isOpening) {
+            selectInviteTab("online");
+        }
     };
 
-    document.getElementById("pvpInviteOnlineTab")
-        .onclick = () => {
+    onlineTab.onclick = () => {
+        selectInviteTab("online");
+    };
 
-            loadPvpInvitePlayers("online");
-        };
-
-    document.getElementById("pvpInviteFriendsTab")
-        .onclick = () => {
-
-            loadPvpInvitePlayers("friends");
-        };
+    friendsTab.onclick = () => {
+        selectInviteTab("friends");
+    };
 }
+
