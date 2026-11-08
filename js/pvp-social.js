@@ -1611,13 +1611,18 @@ async function friendAction() {
 
         if (action === "accept") {
 
-            await update(ref(db), {
-
-                [`friends/${mine}/${to}`]: true,
-                [`friends/${to}/${mine}`]: true,
             
-                [`friendships/${mine}/${to}`]: true,
-                [`friendships/${to}/${mine}`]: true,
+            const now = Date.now();
+            
+            await update(ref(db), {
+            
+                [`friends/${mine}/${to}`]: {
+                    since: now
+                },
+            
+                [`friends/${to}/${mine}`]: {
+                    since: now
+                },
             
                 [`friendRequests/${mine}/${to}`]: null,
                 [`friendRequests/${to}/${mine}`]: null,
@@ -1625,6 +1630,7 @@ async function friendAction() {
                 [`sentFriendRequests/${mine}/${to}`]: null,
                 [`sentFriendRequests/${to}/${mine}`]: null
             });
+
 
             button.textContent = "✓ FRIEND";
             button.dataset.action = "friend";
@@ -1647,15 +1653,22 @@ async function friendAction() {
                 return;
             }
 
+            
+            const now = Date.now();
+            
             await update(ref(db), {
-
+            
                 [`friendRequests/${to}/${mine}`]: {
                     from: mine,
-                    createdAt: Date.now()
+                    createdAt: now
                 },
             
-                [`sentFriendRequests/${mine}/${to}`]: true
+                [`sentFriendRequests/${mine}/${to}`]: {
+                    to,
+                    createdAt: now
+                }
             });
+
 
             button.textContent = "REQUEST SENT";
             button.dataset.action = "sent";
