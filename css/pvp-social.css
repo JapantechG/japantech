@@ -1263,3 +1263,466 @@
     }
 }
 
+
+/* =========================================================
+   BATLINGO PVP WAITING ROOM V2
+   MOBILE COMPACT + CONFIG + EMOJI
+========================================================= */
+
+/* CONFIG CARD - ALL DEVICES */
+
+#pvpWaitingConfig {
+    margin: 10px 0 12px;
+    padding: 12px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    background: rgba(30,41,59,.8);
+    text-align: left;
+}
+
+.pvp-config-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 900;
+    color: #fbbf24;
+}
+
+#pvpConfigVisibility {
+    color: #86efac;
+    font-size: 10px;
+}
+
+.pvp-config-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 10px 12px;
+}
+
+.pvp-config-item {
+    min-width: 0;
+}
+
+.pvp-config-item small {
+    display: block;
+    margin-bottom: 4px;
+    color: #94a3b8;
+    font-size: 9px;
+    letter-spacing: .5px;
+}
+
+.pvp-config-item strong {
+    display: block;
+    color: #f8fafc;
+    font-size: 12px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+/* EMOJI POPUP - ALL DEVICES */
+
+#pvpScreen .pvp-room-toolbar-left {
+    position: relative;
+    z-index: 30;
+}
+
+#pvpScreen #pvpEmojiPicker {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 0;
+    right: auto;
+    z-index: 100;
+
+    width: 216px;
+    padding: 9px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+
+    border-radius: 13px;
+    background: #101827;
+    border: 1px solid #475569;
+
+    box-shadow: 0 12px 28px rgba(0,0,0,.45);
+}
+
+#pvpScreen #pvpEmojiPicker.hidden {
+    display: none !important;
+}
+
+#pvpScreen #pvpEmojiPicker .pvp-emoji-option {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    height: 40px !important;
+    min-width: 0 !important;
+    min-height: 40px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family:
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        sans-serif;
+    font-size: 23px !important;
+    font-weight: 400;
+    line-height: 1 !important;
+    text-align: center;
+
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #1e293b;
+
+    cursor: pointer;
+    transform: none;
+}
+
+#pvpScreen #pvpEmojiPicker .pvp-emoji-option:hover {
+    background: #334155;
+    border-color: #fbbf24;
+}
+
+/* =========================================================
+   MOBILE WAITING ROOM
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* VIEWPORT */
+
+    #pvpScreen.waiting-mode {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 100dvh;
+
+        padding:
+            max(7px, env(safe-area-inset-top))
+            8px
+            max(7px, env(safe-area-inset-bottom));
+
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    #pvpScreen.waiting-mode *,
+    #pvpScreen.waiting-mode *::before,
+    #pvpScreen.waiting-mode *::after {
+        box-sizing: border-box;
+    }
+
+    /* MAIN CONTAINER */
+
+    #pvpScreen.waiting-mode .pvp-container {
+        display: flex;
+        flex-direction: column;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        margin: 0 auto;
+        padding: 0 2px 6px;
+
+        gap: 0;
+    }
+
+    /* BACK BUTTON */
+
+    #pvpScreen.waiting-mode #pvpBackButton {
+        position: absolute;
+
+        top: max(7px, env(safe-area-inset-top));
+        left: 9px;
+
+        width: 34px;
+        height: 34px;
+
+        padding: 0;
+        border-radius: 9px;
+        font-size: 17px;
+    }
+
+    /* TOP HEADER */
+
+    #pvpScreen.waiting-mode .pvp-title {
+        margin: 0;
+        padding: 2px 0 0;
+
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 2px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-subtitle {
+        margin: 0 0 8px;
+
+        font-size: 9px;
+        line-height: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    /* WAITING PANEL */
+
+    #pvpScreen.waiting-mode #waitingRoomPanel {
+        width: 100%;
+
+        margin: 0;
+        padding: 11px 12px 12px;
+
+        border-radius: 15px;
+        overflow: visible;
+    }
+
+    /* TOP TOOLBAR */
+
+    #pvpScreen.waiting-mode .pvp-room-controls {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        margin: 0 0 5px;
+        gap: 5px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-room-toolbar-left,
+    #pvpScreen.waiting-mode .pvp-room-toolbar-right {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-toolbar-icon,
+    #pvpScreen.waiting-mode #pvpToggleSettings {
+        flex: 0 0 33px;
+
+        width: 33px;
+        min-width: 33px;
+        height: 33px;
+        min-height: 33px;
+
+        padding: 0;
+        border-radius: 9px;
+        font-size: 18px;
+    }
+
+    #pvpScreen.waiting-mode #pvpCopyCode {
+        height: 33px;
+        min-height: 33px;
+        padding: 0 8px;
+        font-size: 10px;
+        letter-spacing: 0;
+        white-space: nowrap;
+    }
+
+    #pvpScreen.waiting-mode #pvpWaitingVisibility {
+        display: none;
+    }
+
+    /* ROOM TITLE */
+
+    #pvpScreen.waiting-mode #pvpWaitingTitle {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 900;
+    }
+
+    /* HIDE OLD LARGE ROOM CODE
+       Copy Code button remains available */
+
+    #pvpScreen.waiting-mode .waiting-label,
+    #pvpScreen.waiting-mode #currentRoomCode,
+    #pvpScreen.waiting-mode .room-code-help {
+        display: none !important;
+    }
+
+    /* COMPACT CONFIG */
+
+    #pvpScreen.waiting-mode #pvpWaitingConfig {
+        margin: 8px 0;
+        padding: 9px 10px;
+        border-radius: 10px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-config-heading {
+        margin-bottom: 7px;
+        font-size: 10px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-config-grid {
+        gap: 7px 10px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-config-item small {
+        margin-bottom: 2px;
+        font-size: 8px;
+    }
+
+    #pvpScreen.waiting-mode .pvp-config-item strong {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+
+    /* PLAYER AVATARS */
+
+    #pvpScreen.waiting-mode .players-area {
+        display: grid;
+        grid-template-columns:
+            minmax(0,1fr)
+            35px
+            minmax(0,1fr);
+
+        align-items: center;
+
+        margin: 5px 0;
+        gap: 4px;
+    }
+
+    #pvpScreen.waiting-mode .player-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 56px;
+        height: 56px;
+
+        margin: 0 auto 4px;
+        padding: 0;
+
+        font-size: 26px;
+        border-radius: 50%;
+    }
+
+    #pvpScreen.waiting-mode .room-player-name {
+        font-size: 12px;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    #pvpScreen.waiting-mode .player-status {
+        margin-top: 3px;
+        font-size: 9px;
+    }
+
+    #pvpScreen.waiting-mode .room-vs {
+        font-size: 16px;
+    }
+
+    /* EMOJI REACTION DISPLAY */
+
+    #pvpScreen.waiting-mode #pvpReactionDisplay {
+        min-height: 0;
+        margin: 2px 0;
+        padding: 0;
+
+        font-size: 24px;
+        letter-spacing: 5px;
+        line-height: 1.15;
+    }
+
+    #pvpScreen.waiting-mode #pvpReactionDisplay:empty {
+        display: none;
+    }
+
+    /* WAITING MESSAGE */
+
+    #pvpScreen.waiting-mode #waitingMessage {
+        margin: 7px 0;
+        font-size: 10px;
+        line-height: 1.3;
+        letter-spacing: 1px;
+    }
+
+    /* INVITE PLAYERS */
+
+    #pvpScreen.waiting-mode #pvpInviteSection {
+        margin: 5px 0;
+    }
+
+    #pvpScreen.waiting-mode #pvpInviteToggle {
+        min-height: 35px;
+        padding: 7px 11px;
+        font-size: 11px;
+    }
+
+    /* START + LEAVE BUTTONS */
+
+    #pvpScreen.waiting-mode #startBattleButton {
+        width: 100%;
+        min-height: 43px;
+        height: 43px;
+
+        margin: 6px 0 0;
+        padding: 8px 12px;
+
+        font-size: 13px;
+        letter-spacing: 1px;
+        border-radius: 10px;
+    }
+
+    #pvpScreen.waiting-mode #leaveRoomButton {
+        width: 100%;
+        min-height: 38px;
+        height: 38px;
+
+        margin: 6px 0 0;
+        padding: 7px 12px;
+
+        font-size: 12px;
+        border-radius: 9px;
+    }
+
+    /* EMOJI POPUP POSITION */
+
+    #pvpScreen.waiting-mode #pvpEmojiPicker {
+        left: 0;
+        top: calc(100% + 6px);
+        width: min(216px, calc(100vw - 35px));
+    }
+}
+
+/* SHORT MOBILE PHONES */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    #pvpScreen.waiting-mode .pvp-subtitle {
+        margin-bottom: 4px;
+    }
+
+    #pvpScreen.waiting-mode #waitingRoomPanel {
+        padding: 8px 10px;
+    }
+
+    #pvpScreen.waiting-mode .player-avatar {
+        width: 46px;
+        height: 46px;
+        font-size: 23px;
+    }
+
+    #pvpScreen.waiting-mode #pvpWaitingConfig {
+        padding: 7px 9px;
+    }
+
+    #pvpScreen.waiting-mode .players-area {
+        margin: 3px 0;
+    }
+}
+
+/* HIDDEN PANEL SAFETY */
+
+#pvpScreen #waitingRoomPanel.hidden {
+    display: none !important;
+}
