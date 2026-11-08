@@ -23,6 +23,10 @@ import {
     applyExp
 }
 from "./progression.js";
+
+import {
+    syncLeaderboardProfile
+} from "./leaderboard-data.js";
 /* =========================================================
    USER SCHEMA
 ========================================================= */
@@ -454,7 +458,17 @@ export async function ensureUserProfile(user) {
             // Mascot intentionally does not exist yet.
             // mascot.js will handle first-time selection.
 
-            return result.snapshot.val();
+            const freshUserData = result.snapshot.val();
+
+            await syncLeaderboardProfile(freshUserData)
+                .catch(error => {
+                    console.warn(
+                        "[Leaderboard] New user sync:",
+                        error
+                    );
+                });
+            
+            return freshUserData;
         }
 
         // Another request may have created the user.
@@ -525,11 +539,19 @@ export async function ensureUserProfile(user) {
     }
 
     console.log(
-        "[USER] Loaded:",
-        userData.profile.batlingoId
-    );
-
-    return userData;
+          "[USER] Loaded:",
+          userData.profile.batlingoId
+      );
+      
+      await syncLeaderboardProfile(userData)
+          .catch(error => {
+              console.warn(
+                  "[Leaderboard] Login sync:",
+                  error
+              );
+          });
+      
+      return userData;
 }
 
 
@@ -606,6 +628,15 @@ export async function updateUserProfile({displayName,bio})
 
         window.currentUserData.system.lastUpdatedAt =now;
     }
+
+   await syncLeaderboardProfile(window.currentUserData)
+    .catch(error => {
+
+        console.warn(
+            "[Leaderboard] Profile sync:",
+            error
+        );
+    });
 
     return {
         displayName:
@@ -737,6 +768,15 @@ export async function saveSoloResult({score,questions,correct,wrong,bestCombo})
     ===================================================== */
 
     window.currentUserData = newUserData;
+
+   await syncLeaderboardProfile(newUserData)
+    .catch(error => {
+
+        console.warn(
+            "[Leaderboard] Solo sync:",
+            error
+        );
+    });
 
     
         /* ==========================================
