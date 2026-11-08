@@ -72,6 +72,18 @@ let questionTime = 10;
 
 let mascotShield = false;
 
+/* ==========================================
+   ANSWER REVIEW DELAY
+========================================== */
+
+const SOLO_REVIEW_DELAY = {
+    correct: 1500,
+    wrong: 2300,
+    timeout: 3000
+};
+
+let answerDelayTimer = null;
+let answerDelayToken = 0;
 
 /* =============================================================
    DOM
@@ -152,6 +164,10 @@ function updateGameModeInfo()
 export async function startSurvival(config)
 {
     currentConfig =config;
+
+    ++answerDelayToken;
+    clearTimeout(answerDelayTimer);
+    answerDelayTimer = null;
 
     gameScreen.classList.remove("solo-practice-mode");
 
@@ -421,6 +437,72 @@ function renderAnswers(choices)
     );
 }
 
+
+/* =============================================================
+   WAIT FOR ANSWER REVIEW BEFORE NEXT QUESTION
+============================================================= */
+
+function scheduleSurvivalNext(callback, delayMs) {
+
+    clearTimeout(answerDelayTimer);
+
+    const token = ++answerDelayToken;
+    const startedAt = performance.now();
+
+    const finish = () => {
+
+        if (!gameActive || token !== answerDelayToken) {
+            return;
+        }
+
+        const elapsed = performance.now() - startedAt;
+
+        const remaining = Math.max(
+            0,
+            delayMs - elapsed
+        );
+
+        clearTimeout(answerDelayTimer);
+
+        answerDelayTimer = setTimeout(() => {
+
+            answerDelayTimer = null;
+
+            if (!gameActive || token !== answerDelayToken) {
+                return;
+            }
+
+            callback();
+
+        }, remaining);
+    };
+
+    const reading =
+        currentQuestion?.reading ??
+        currentQuestion?.word ??
+        "";
+
+    // Audio question: no need to repeat Japanese speech.
+    if (
+        isSoloAudioMode(currentConfig.subMode) ||
+        !reading
+    ) {
+        finish();
+        return;
+    }
+
+    // Move only when BOTH conditions are satisfied:
+    // 1. Speech has finished
+    // 2. Minimum review duration has passed
+    try {
+        speakJapanese(reading, finish);
+    } catch (error) {
+        console.warn("[SURVIVAL] Speech:", error);
+        finish();
+    }
+}
+
+
 /* =============================================================
    SELECT ANSWER
    ============================================================= */
@@ -479,14 +561,11 @@ function selectAnswer(button,selectedAnswer)
         
         updateHUD();
 
-        if (isSoloAudioMode(currentConfig.subMode)) 
-        {
-                setTimeout(nextQuestion,500);
-        }
-        else
-        {
-            speakJapanese(currentQuestion.reading,nextQuestion);
-        }
+        scheduleSurvivalNext(
+            nextQuestion,
+            SOLO_REVIEW_DELAY.correct
+        );
+        
         return;
     }
 
@@ -555,14 +634,10 @@ function selectAnswer(button,selectedAnswer)
             nextQuestion();
         };
         
-        if (isSoloAudioMode(currentConfig.subMode)) 
-        {
-            setTimeout(continueGame,500);
-        }
-        else 
-        {
-            speakJapanese(currentQuestion.reading,continueGame);
-        }
+        scheduleSurvivalNext(
+            continueGame,
+            SOLO_REVIEW_DELAY.wrong
+        );
 }
 
 /* =============================================================
@@ -633,6 +708,11 @@ function stopTimer()
 
 export function stopSurvival()
 {    
+
+    ++answerDelayToken;
+    clearTimeout(answerDelayTimer);
+    answerDelayTimer = null;
+    
     stopSoloEffects();
     gameActive = false;
     answerLocked = true;
@@ -710,14 +790,10 @@ function handleTimeout()
             nextQuestion();
         };
         
-        if (isSoloAudioMode(currentConfig.subMode)) 
-        {
-            setTimeout(continueGame,500);
-        }
-        else 
-        {
-            speakJapanese(currentQuestion.reading,continueGame);
-        }
+        scheduleSurvivalNext(
+            continueGame,
+            SOLO_REVIEW_DELAY.timeout
+        );
 }
 
 /* =============================================================
