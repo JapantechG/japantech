@@ -4,7 +4,15 @@
 
 import { auth } from "./firebase.js";
 import { RANK_SEASON } from "./rank-config.js";
-import { getLeaderboard } from "./leaderboard-data.js";
+
+import {
+    getLeaderboard,
+    syncLeaderboardProfile
+} from "./leaderboard-data.js";
+
+import {
+    openPvpPlayerProfile
+} from "./pvp-social.js";
 
 /* ==========================================
    STATE
@@ -49,6 +57,10 @@ function getScore(player, type) {
 
     if (type === "rank") {
         return `${player.elo} ELO`;
+    }
+
+    if (type === "pet") {
+        return `Pet Lv. ${player.mascotLevel}`;
     }
 
     return `Lv. ${player.level}`;
@@ -109,11 +121,52 @@ function createPlayerRow(player, type, isTop = false) {
         getPositionIcon(player.position)
     );
 
-    const avatar = createElement(
-        "div",
-        "leaderboard-avatar",
-        getMascotIcon(player.mascot)
-    );
+       const avatar = createElement(
+       "div",
+       "leaderboard-avatar",
+       getMascotIcon(player.mascot)
+   );
+   
+   if (
+       player.mascot === "buffalo" ||
+       player.mascot === "monkey"
+   ) {
+   
+       const img = document.createElement("img");
+   
+       const stage = Math.max(
+           1,
+           Math.min(
+               5,
+               player.mascotEvolution + 1
+           )
+       );
+   
+       const basePath =
+           `assets/mascot/${player.mascot}.png`;
+   
+       img.src = stage === 1
+           ? basePath
+           : `assets/mascot/${player.mascot}-stage-${stage}.png`;
+   
+       img.alt = player.mascot;
+       img.loading = "lazy";
+   
+       img.onerror = () => {
+   
+           if (img.dataset.fallback) {
+               img.remove();
+               avatar.textContent =
+                   getMascotIcon(player.mascot);
+               return;
+           }
+   
+           img.dataset.fallback = "1";
+           img.src = basePath;
+       };
+   
+       avatar.replaceChildren(img);
+   }
 
     const info = createElement(
         "div",
@@ -132,13 +185,18 @@ function createPlayerRow(player, type, isTop = false) {
         );
     }
 
-    const description = createElement(
-        "div",
-        "leaderboard-player-description",
-        type === "rank"
-            ? `${player.wins}W / ${player.losses}L`
-            : `EXP ${player.exp.toLocaleString()}`
-    );
+      const description = createElement(
+          "div",
+          "leaderboard-player-description",
+      
+          type === "rank"
+              ? `Lv.${player.level} · ${player.wins}W / ${player.losses}L`
+      
+              : type === "pet"
+                  ? `Lv.${player.level} · Pet Stage ${player.mascotEvolution + 1}`
+      
+                  : `EXP ${player.exp.toLocaleString()} · ELO ${player.elo}`
+      );
 
     const score = createElement(
         "div",
@@ -154,6 +212,44 @@ function createPlayerRow(player, type, isTop = false) {
         info,
         score
     );
+      
+         /* ==========================================
+         CLICK PLAYER -> PUBLIC PROFILE
+      ========================================== */
+      
+      row.classList.add("leaderboard-clickable");
+      
+      row.setAttribute("role", "button");
+      row.setAttribute("tabindex", "0");
+      
+      row.setAttribute(
+          "aria-label",
+          `View ${player.name}'s profile`
+      );
+      
+      const openPlayer = () => {
+      
+          openPvpPlayerProfile(player.uid)
+              .catch(error => {
+                  console.error(
+                      "[Leaderboard] Open profile:",
+                      error
+                  );
+              });
+      };
+      
+      row.addEventListener("click", openPlayer);
+      
+      row.addEventListener("keydown", event => {
+      
+          if (
+              event.key === "Enter" ||
+              event.key === " "
+          ) {
+              event.preventDefault();
+              openPlayer();
+          }
+      });
 
     return row;
 }
@@ -327,6 +423,13 @@ async function loadLeaderboard(type) {
             players = cached.players;
         } else {
 
+            await syncLeaderboardProfile().catch(error => {
+                console.warn(
+                    "[Leaderboard] Sync failed:",
+                    error
+                );
+            });
+            
             players = await getLeaderboard(type, 100);
 
             cache.set(type, {
@@ -392,25 +495,33 @@ export function openLeaderboard(defaultTab = "level") {
         return;
     }
 
-    // Xác định màn hình nguồn
-    if (rankScreen &&
-        !rankScreen.classList.contains("hidden")) {
-
-        previousScreen = rankScreen;
-        rankScreen.classList.add("hidden");
-
-    } else {
-
-        // Home nằm bên trong setupScreen
-        previousScreen = setupScreen;
-
-        if (setupScreen) {
-            setupScreen.classList.add("hidden");
-        }
-    }
-
-    // Hiện Leaderboard
-    screen.classList.remove("hidden");
+          // Xác định màn hình nguồn
+          if (rankScreen &&
+              !rankScreen.classList.contains("hidden")) {
+      
+              previousScreen = rankScreen;
+              rankScreen.classList.add("hidden");
+      
+          } else {
+      
+              // Home nằm bên trong setupScreen
+              previousScreen = setupScreen;
+      
+              if (setupScreen) {
+                  setupScreen.classList.add("hidden");
+              }
+          }
+      
+          // Hiện Leaderboard
+          screen.classList.remove("hidden");
+      
+         syncLeaderboardProfile().catch(error => {
+      
+          console.warn(
+              "[Leaderboard] Sync:",
+              error
+          );
+      });
 
     // Chọn tab
     switchLeaderboardTab(
