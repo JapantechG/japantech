@@ -54,6 +54,12 @@ let locked = false;
 let duration = 8;
 let deadline = 0;
 
+const PRACTICE_REVIEW_DELAY = {
+    correct: 2500,
+    wrong: ,
+    timeout: 3500
+};
+
 let timerId = null;
 let nextId = null;
 let speechId = null;
@@ -621,62 +627,89 @@ function submitAnswer(selectedIndex) {
           soloWrongEffect();
       }
 
-
-        /* =============================================================
-        READ JAPANESE AFTER ANSWER
-        ============================================================= */
-
-        const session = sessionToken;
-        const question = questionToken;
-
-        const continuePractice = () => {
-
-            if (!isCurrent(session, question)) {
-                return;
-            }
-
-            currentIndex++;
-
-            showNextQuestion();
-        };
-
-        /* Audio questions do not need to repeat speech */
-
-        if (isSoloAudioMode(config.subMode)) {
-
-            nextId = setTimeout(
-                continuePractice,
-                500
-            );
-
-            return;
-        }
-
-        /* Read the Japanese word before moving on */
-
-        const reading =
-            currentQuestion.reading ??
-            currentQuestion.word ??
-            "";
-
-        /* No text available: move to next question */
-
-        if (!reading) {
-
-            nextId = setTimeout(
-                continuePractice,
-                500
-            );
-
-            return;
-        }
-
-        /* Move to next question when speech completes */
-
-        speakJapanese(
-            reading,
-            continuePractice
-        );
+      
+      /* =============================================================
+         READ ANSWER + WAIT BEFORE NEXT QUESTION
+      ============================================================= */
+      
+      const session = sessionToken;
+      const question = questionToken;
+      
+      const reviewDelay = timedOut
+          ? PRACTICE_REVIEW_DELAY.timeout
+          : correct
+              ? PRACTICE_REVIEW_DELAY.correct
+              : PRACTICE_REVIEW_DELAY.wrong;
+      
+      const reviewStartedAt = performance.now();
+      
+      const continuePractice = () => {
+      
+          if (!isCurrent(session, question)) {
+              return;
+          }
+      
+          // Cancel any pending transition.
+          clearTimeout(nextId);
+      
+          // Ensure the answer remains visible long enough.
+          const elapsed =
+              performance.now() - reviewStartedAt;
+      
+          const remainingDelay = Math.max(
+              0,
+              reviewDelay - elapsed
+          );
+      
+          nextId = setTimeout(() => {
+      
+              nextId = null;
+      
+              if (!isCurrent(session, question)) {
+                  return;
+              }
+      
+              currentIndex++;
+      
+              showNextQuestion();
+      
+          }, remainingDelay);
+      };
+      
+      /* Audio questions already played speech */
+      
+      if (isSoloAudioMode(config.subMode)) {
+      
+          continuePractice();
+          return;
+      }
+      
+      /* Read Japanese answer */
+      
+      const reading =
+          currentQuestion.reading ??
+          currentQuestion.word ??
+          "";
+      
+      if (!reading) {
+      
+          continuePractice();
+          return;
+      }
+      
+      try {
+      
+          speakJapanese(
+              reading,
+              continuePractice
+          );
+      
+      } catch (error) {
+      
+          console.warn("[PRACTICE] Speech:", error);
+      
+          continuePractice();
+      }
 
 }
 
