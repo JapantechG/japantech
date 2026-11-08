@@ -2577,24 +2577,121 @@ startBattleButton.addEventListener(
 
 
 /* =========================================================
-   PVP - SHOW FINAL RESULT
+   PVP RESULT - EXTRA UI
+   Create once, without editing index.html
+========================================================= */
+
+function ensurePvpResultUI() {
+
+    const panel = pvpResultPanel;
+
+    if (!panel) return;
+
+    if (!panel.querySelector(".pvp-result-effects")) {
+
+        const effects = document.createElement("div");
+
+        effects.className = "pvp-result-effects";
+        effects.setAttribute("aria-hidden", "true");
+
+        for (let i = 0; i < 16; i++) {
+
+            const particle = document.createElement("i");
+
+            particle.style.setProperty("--i", i);
+
+            effects.appendChild(particle);
+        }
+
+        panel.prepend(effects);
+    }
+
+    if (!panel.querySelector(".pvp-result-subtitle")) {
+
+        const subtitle = document.createElement("div");
+
+        subtitle.className = "pvp-result-subtitle";
+
+        const title = panel.querySelector(
+            ".pvp-result-title"
+        );
+
+        title?.insertAdjacentElement(
+            "afterend",
+            subtitle
+        );
+    }
+
+    const rematchArea = panel.querySelector(
+        ".pvp-rematch-area"
+    );
+
+    if (!rematchArea) return;
+
+    if (!rematchArea.querySelector(".pvp-rematch-heading")) {
+
+        const heading = document.createElement("div");
+
+        heading.className = "pvp-rematch-heading";
+
+        heading.textContent = "⚔ PLAY AGAIN?";
+
+        rematchArea.prepend(heading);
+    }
+
+    if (!rematchArea.querySelector(".pvp-rematch-readiness")) {
+
+        const readiness = document.createElement("div");
+
+        readiness.className = "pvp-rematch-readiness";
+
+        readiness.innerHTML = `
+            <div class="pvp-rematch-player"
+                 id="pvpRematchHostState">
+                <span class="pvp-rematch-dot"></span>
+                <span>HOST · WAITING</span>
+            </div>
+
+            <div class="pvp-rematch-player"
+                 id="pvpRematchGuestState">
+                <span class="pvp-rematch-dot"></span>
+                <span>GUEST · WAITING</span>
+            </div>
+        `;
+
+        const button = rematchArea.querySelector(
+            "#pvpRematchButton"
+        );
+
+        button?.insertAdjacentElement(
+            "beforebegin",
+            readiness
+        );
+    }
+}
+
+
+/* =========================================================
+   PVP RESULT - VICTORY / DEFEAT / DRAW
 ========================================================= */
 
 function showPvpResult(room) {
 
+    if (!room?.match) return;
+
     cancelPvpPendingTimers();
 
-    if (!room?.match) {
-        return;
-    }
+    ensurePvpResultUI();
 
     const match = room.match;
 
-    const hostScore =
-        Number(match.hostScore) || 0;
+    const hostScore = Number(
+        match.hostScore || 0
+    );
 
-    const guestScore =
-        Number(match.guestScore) || 0;
+    const guestScore = Number(
+        match.guestScore || 0
+    );
 
     const hostName =
         room.host?.name || "HOST";
@@ -2602,142 +2699,227 @@ function showPvpResult(room) {
     const guestName =
         room.guest?.name || "GUEST";
 
+    const hostWon = hostScore > guestScore;
+    const guestWon = guestScore > hostScore;
+    const isDraw = hostScore === guestScore;
+
+    const iAmHost = currentPlayerRole === "host";
+
+    const myScore = iAmHost
+        ? hostScore
+        : guestScore;
+
+    const opponentScore = iAmHost
+        ? guestScore
+        : hostScore;
+
+    const myName = iAmHost
+        ? hostName
+        : guestName;
+
+    const iWon = !isDraw && (
+        (iAmHost && hostWon) ||
+        (!iAmHost && guestWon)
+    );
+
+    const outcome = isDraw
+        ? "draw"
+        : iWon
+            ? "victory"
+            : "defeat";
+
     /* =====================================
-       SWITCH TO RESULT SCREEN
+       SCREEN TRANSITION
     ===================================== */
 
     showPvpPanel("result");
 
-    /* =====================================
-       PLAYER NAMES AND SCORES
-    ===================================== */
+    pvpFinalHostName.textContent = hostName;
+    pvpFinalGuestName.textContent = guestName;
 
-    if (pvpFinalHostName) {
-        pvpFinalHostName.textContent =
-            hostName;
-    }
-
-    if (pvpFinalGuestName) {
-        pvpFinalGuestName.textContent =
-            guestName;
-    }
-
-    pvpFinalHostScore.textContent =
-        String(hostScore);
-
-    pvpFinalGuestScore.textContent =
-        String(guestScore);
+    pvpFinalHostScore.textContent = hostScore;
+    pvpFinalGuestScore.textContent = guestScore;
 
     /* =====================================
-       RESET WINNER EFFECT
+       PLAYER CARDS
     ===================================== */
 
-    const playerCards =
-        pvpResultPanel.querySelectorAll(
-            ".pvp-result-score > div:not(.room-vs)"
+    const cards = pvpResultPanel.querySelectorAll(
+        ".pvp-result-score > div:not(.room-vs)"
+    );
+
+    cards.forEach(card => {
+
+        card.classList.remove(
+            "winner",
+            "loser"
         );
 
-    playerCards.forEach(card => {
-
-        card.classList.remove("winner");
+        card.removeAttribute("data-rank");
     });
 
+    if (hostWon) {
+
+        cards[0]?.classList.add("winner");
+        cards[1]?.classList.add("loser");
+
+        cards[0]?.setAttribute(
+            "data-rank",
+            "WINNER"
+        );
+
+        cards[1]?.setAttribute(
+            "data-rank",
+            "RUNNER-UP"
+        );
+    }
+
+    if (guestWon) {
+
+        cards[1]?.classList.add("winner");
+        cards[0]?.classList.add("loser");
+
+        cards[1]?.setAttribute(
+            "data-rank",
+            "WINNER"
+        );
+
+        cards[0]?.setAttribute(
+            "data-rank",
+            "RUNNER-UP"
+        );
+    }
+
+    if (isDraw) {
+
+        cards.forEach(card => {
+            card.setAttribute("data-rank", "DRAW");
+        });
+    }
+
     /* =====================================
-       DETERMINE WINNER
+       OUTCOME MESSAGE
     ===================================== */
 
-    if (hostScore > guestScore) {
+    const title = pvpResultPanel.querySelector(
+        ".pvp-result-title"
+    );
+
+    const subtitle = pvpResultPanel.querySelector(
+        ".pvp-result-subtitle"
+    );
+
+    if (outcome === "victory") {
+
+        if (title) {
+            title.textContent = "🏆 VICTORY!";
+        }
 
         pvpResultMessage.textContent =
-            `${hostName} WIN`;
+            "YOU WIN";
 
-        playerCards[0]?.classList.add(
-            "winner"
-        );
+        if (subtitle) {
+            subtitle.textContent =
+                "Outstanding performance!";
+        }
 
-    } else if (guestScore > hostScore) {
+    } else if (outcome === "defeat") {
+
+        if (title) {
+            title.textContent = "⚔ DEFEAT";
+        }
 
         pvpResultMessage.textContent =
-            `${guestName} WIN`;
+            "GOOD FIGHT";
 
-        playerCards[1]?.classList.add(
-            "winner"
-        );
+        if (subtitle) {
+            subtitle.textContent =
+                "A new challenge awaits.";
+        }
 
     } else {
 
+        if (title) {
+            title.textContent = "🤝 DRAW!";
+        }
+
         pvpResultMessage.textContent =
-            "DRAW";
+            "EVENLY MATCHED";
+
+        if (subtitle) {
+            subtitle.textContent =
+                "An incredibly close battle!";
+        }
     }
 
-    console.log(
-        "[PVP] MATCH RESULT:",
-        {
-            hostScore,
-            guestScore
-        }
+    /* =====================================
+       SCORE DIFFERENCE
+    ===================================== */
+
+    let scoreDetail = pvpResultPanel.querySelector(
+        ".pvp-score-detail"
     );
+
+    if (!scoreDetail) {
+
+        scoreDetail = document.createElement("div");
+
+        scoreDetail.className = "pvp-score-detail";
+
+        pvpResultMessage.insertAdjacentElement(
+            "afterend",
+            scoreDetail
+        );
+    }
+
+    scoreDetail.textContent =
+        `YOUR SCORE ${myScore}  ·  ` +
+        `OPPONENT ${opponentScore}`;
+
+    /* =====================================
+       ANIMATION ONCE PER FINISHED MATCH
+    ===================================== */
+
+    const resultKey = String(
+        match.matchId ||
+        `${hostScore}-${guestScore}`
+    ) + ":" + currentPlayerRole;
+
+    const oldKey =
+        pvpResultPanel.dataset.resultKey;
+
+    pvpResultPanel.dataset.outcome = outcome;
+
+    if (oldKey !== resultKey) {
+
+        pvpResultPanel.dataset.resultKey =
+            resultKey;
+
+        pvpResultPanel.classList.remove(
+            "pvp-result-animate"
+        );
+
+        void pvpResultPanel.offsetWidth;
+
+        pvpResultPanel.classList.add(
+            "pvp-result-animate"
+        );
+    }
 }
 
 
-/* =========================================================
-   PVP - REMATCH BUTTON
-========================================================= */
-
-pvpRematchButton.addEventListener(
-    "click",
-    async () => {
-
-        if (
-            pvpRematchButton.disabled ||
-            !currentPvpRoom ||
-            currentPvpRoom.status !== "finished"
-        ) {
-            return;
-        }
-
-        pvpRematchButton.disabled = true;
-
-        pvpRematchStatus.textContent =
-            "WAITING FOR OPPONENT...";
-
-        try {
-
-            await requestRematch();
-
-            console.log(
-                "[PVP] Rematch requested"
-            );
-
-        } catch (error) {
-
-            console.error(
-                "[PVP] Rematch request failed:",
-                error
-            );
-
-            pvpRematchButton.disabled = false;
-
-            pvpRematchStatus.textContent =
-                "REMATCH ERROR: " +
-                error.message;
-        }
-    }
-);
-
 
 /* =========================================================
-   PVP - UPDATE REMATCH STATE
+   PVP - BEAUTIFUL REMATCH STATUS
 ========================================================= */
 
 function updateRematchState(room) {
 
-    if (
-        !room ||
-        room.status !== "finished"
-    ) {
+    if (!room || room.status !== "finished") {
         return;
     }
+
+    ensurePvpResultUI();
 
     const hostAccepted =
         room.rematch?.host === true;
@@ -2745,85 +2927,143 @@ function updateRematchState(room) {
     const guestAccepted =
         room.rematch?.guest === true;
 
+    const bothAccepted =
+        hostAccepted && guestAccepted;
+
+    const iAmHost =
+        currentPlayerRole === "host";
+
+    const myAccepted =
+        iAmHost ? hostAccepted : guestAccepted;
+
+    const opponentAccepted =
+        iAmHost ? guestAccepted : hostAccepted;
+
+    const hostElement = document.getElementById(
+        "pvpRematchHostState"
+    );
+
+    const guestElement = document.getElementById(
+        "pvpRematchGuestState"
+    );
+
     /* =====================================
-       BOTH PLAYERS ACCEPTED
+       PLAYER READY INDICATORS
     ===================================== */
 
-    if (hostAccepted && guestAccepted) {
+    function updatePlayer(element, label, ready) {
+
+        if (!element) return;
+
+        element.classList.toggle(
+            "is-ready",
+            ready
+        );
+
+        const text = element.querySelector(
+            "span:last-child"
+        );
+
+        if (text) {
+
+            text.textContent = ready
+                ? `${label} · READY ✓`
+                : `${label} · WAITING`;
+        }
+    }
+
+    updatePlayer(
+        hostElement,
+        "HOST",
+        hostAccepted
+    );
+
+    updatePlayer(
+        guestElement,
+        "GUEST",
+        guestAccepted
+    );
+
+    /* =====================================
+       BOTH READY
+    ===================================== */
+
+    if (bothAccepted) {
 
         pvpRematchButton.disabled = true;
 
+        pvpRematchButton.textContent =
+            "⚔ STARTING BATTLE...";
+
+        pvpRematchStatus.textContent =
+            "Both players are ready!";
+
+        pvpRematchStatus.dataset.state =
+            "ready";
+
         if (
-            currentPlayerRole === "host" &&
+            iAmHost &&
             !rematchStarting
         ) {
 
             rematchStarting = true;
 
-            pvpRematchStatus.textContent =
-                "STARTING NEW MATCH...";
-
             startPvpRematch();
-
-        } else {
-
-            pvpRematchStatus.textContent =
-                "BOTH PLAYERS READY";
         }
 
         return;
     }
 
     /* =====================================
-       HOST STATE
+       I ALREADY ACCEPTED
     ===================================== */
 
-    if (currentPlayerRole === "host") {
+    if (myAccepted) {
 
-        if (hostAccepted) {
+        pvpRematchButton.disabled = true;
 
-            pvpRematchButton.disabled = true;
+        pvpRematchButton.textContent =
+            "✓ YOU ARE READY";
 
-            pvpRematchStatus.textContent =
-                "WAITING FOR OPPONENT...";
+        pvpRematchStatus.textContent =
+            "Waiting for opponent...";
 
-        } else {
-
-            pvpRematchButton.disabled = false;
-
-            pvpRematchStatus.textContent =
-                guestAccepted
-                    ? "OPPONENT WANTS A REMATCH"
-                    : "";
-        }
+        pvpRematchStatus.dataset.state =
+            "waiting";
 
         return;
     }
 
     /* =====================================
-       GUEST STATE
+       OPPONENT INVITED ME TO REMATCH
     ===================================== */
 
-    if (currentPlayerRole === "guest") {
+    pvpRematchButton.disabled = false;
 
-        if (guestAccepted) {
+    if (opponentAccepted) {
 
-            pvpRematchButton.disabled = true;
+        pvpRematchButton.textContent =
+            "⚔ ACCEPT REMATCH";
 
-            pvpRematchStatus.textContent =
-                "WAITING FOR OPPONENT...";
+        pvpRematchStatus.textContent =
+            "Your opponent wants another battle!";
 
-        } else {
+        pvpRematchStatus.dataset.state =
+            "invited";
 
-            pvpRematchButton.disabled = false;
+    } else {
 
-            pvpRematchStatus.textContent =
-                hostAccepted
-                    ? "OPPONENT WANTS A REMATCH"
-                    : "";
-        }
+        pvpRematchButton.textContent =
+            "↻ REMATCH";
+
+        pvpRematchStatus.textContent =
+            "Challenge your opponent again";
+
+        pvpRematchStatus.dataset.state =
+            "idle";
     }
 }
+
 
 
 /* =========================================================
