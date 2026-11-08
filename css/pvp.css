@@ -2994,3 +2994,191 @@
 #pvpScreen #pvpGamePanel.hidden {
     display: none !important;
 }
+
+
+/* =========================================================
+   BATLINGO PVP - QUESTION UI FIX V7
+
+   1. Restore answer labels 1 2 3 4
+   2. Bigger mobile question font
+   3. Keep desktop layout unchanged
+========================================================= */
+
+
+/* =========================================================
+   ANSWER LABELS - ALL DEVICES
+========================================================= */
+
+#pvpScreen.battle-mode
+#pvpAnswers .answer-button::before {
+
+    content: attr(data-answer-label) !important;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    margin-right: 13px;
+
+    border-radius: 9px;
+
+    background: #334155;
+    color: #fbbf24;
+
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1;
+
+    text-align: center;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Selected */
+
+#pvpScreen.battle-mode
+#pvpAnswers .answer-button.selected::before {
+    background: #92400e;
+    color: #fef3c7;
+}
+
+/* Correct answer */
+
+#pvpScreen.battle-mode
+#pvpAnswers .answer-button.correct-answer::before {
+    background: #166534;
+    color: #bbf7d0;
+}
+
+/* Wrong answer */
+
+#pvpScreen.battle-mode
+#pvpAnswers .answer-button.wrong-answer::before {
+    background: #991b1b;
+    color: #fecaca;
+}
+
+
+/* =========================================================
+   MOBILE QUESTION - BIGGER TEXT
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Question text */
+
+    #pvpScreen.battle-mode #pvpQuestion {
+        font-size: clamp(26px, 7vw, 36px) !important;
+
+        font-weight: 850;
+        line-height: 1.35;
+
+        padding: 10px 12px;
+
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    /* Make question area a little taller */
+
+    #pvpScreen.battle-mode #pvpGamePanel {
+        grid-template-rows:
+            auto
+            auto
+            auto
+            minmax(105px, 1.35fr)
+            minmax(18px, auto)
+            auto
+            minmax(0, 2.15fr);
+    }
+
+    /* Answers remain compact */
+
+    #pvpScreen.battle-mode #pvpAnswers {
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+
+        gap: 5px !important;
+    }
+
+    #pvpScreen.battle-mode
+    #pvpAnswers .answer-button {
+        min-width: 0;
+        min-height: 0;
+
+        padding: 6px 9px;
+
+        font-size: clamp(12px, 3.5vw, 15px);
+        line-height: 1.3;
+
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    /* Mobile answer number */
+
+    #pvpScreen.battle-mode
+    #pvpAnswers .answer-button::before {
+        flex: 0 0 27px;
+
+        width: 27px;
+        height: 27px;
+
+        margin-right: 9px;
+
+        font-size: 12px;
+        border-radius: 7px;
+    }
+}
+
+
+/* =========================================================
+   SHORT MOBILE - LESS THAN 700PX HEIGHT
+========================================================= */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    #pvpScreen.battle-mode #pvpGamePanel {
+        grid-template-rows:
+            auto
+            auto
+            auto
+            minmax(85px, 1.2fr)
+            minmax(16px, auto)
+            auto
+            minmax(0, 2fr);
+
+        gap: 3px;
+    }
+
+    #pvpScreen.battle-mode #pvpQuestion {
+        font-size: clamp(22px, 6vw, 29px) !important;
+
+        padding: 6px 9px;
+        line-height: 1.25;
+    }
+
+    #pvpScreen.battle-mode
+    #pvpAnswers .answer-button {
+        padding: 4px 7px;
+        font-size: 12px;
+    }
+
+    #pvpScreen.battle-mode
+    #pvpAnswers .answer-button::before {
+        flex-basis: 24px;
+
+        width: 24px;
+        height: 24px;
+
+        margin-right: 7px;
+        font-size: 11px;
+    }
+}
+
