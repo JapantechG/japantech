@@ -1514,7 +1514,7 @@ export async function openPvpPlayerProfile(uid) {
         
         /* FRIENDS TAB OR ALREADY FRIEND */
         
-        if (activePvpTab === "friends" || isFriend) {
+        if (isFriend) {
         
             button.classList.add("hidden");
         
@@ -1613,13 +1613,17 @@ async function friendAction() {
 
             await update(ref(db), {
 
+                [`friends/${mine}/${to}`]: true,
+                [`friends/${to}/${mine}`]: true,
+            
                 [`friendships/${mine}/${to}`]: true,
-
                 [`friendships/${to}/${mine}`]: true,
-
+            
                 [`friendRequests/${mine}/${to}`]: null,
-
-                [`friendRequests/${to}/${mine}`]: null
+                [`friendRequests/${to}/${mine}`]: null,
+            
+                [`sentFriendRequests/${mine}/${to}`]: null,
+                [`sentFriendRequests/${to}/${mine}`]: null
             });
 
             button.textContent = "✓ FRIEND";
@@ -1643,16 +1647,15 @@ async function friendAction() {
                 return;
             }
 
-            await set(
-                ref(
-                    db,
-                    `friendRequests/${to}/${mine}`
-                ),
-                {
+            await update(ref(db), {
+
+                [`friendRequests/${to}/${mine}`]: {
                     from: mine,
                     createdAt: Date.now()
-                }
-            );
+                },
+            
+                [`sentFriendRequests/${mine}/${to}`]: true
+            });
 
             button.textContent = "REQUEST SENT";
             button.dataset.action = "sent";
