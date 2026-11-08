@@ -1134,16 +1134,186 @@ export async function startRoomRematch(matchData) {
 }
 
 
-export async function requestRematch()
-{
-    if (!roomCode || !playerRole) 
-    {
-        return;
+
+/* =========================================================
+   FIREBASE - REQUEST REMATCH
+========================================================= */
+
+export async function requestRematch() {
+
+    const code = roomCode;
+    const role = playerRole;
+    const uid = auth.currentUser?.uid;
+
+    if (!code || !uid || !["host", "guest"].includes(role)) {
+        throw new Error("ROOM_CONNECTION_REQUIRED");
     }
 
-    const rematchRef = ref(db,`rooms/${roomCode}/rematch/${playerRole}`);
+    const result = await runTransaction(
+        ref(db, `rooms/${code}`),
+        room => {
 
-    await set(rematchRef,true);
+            if (!room || room.status !== "finished") {
+                return;
+            }
 
-    console.log("[Firebase] Rematch accepted:",playerRole);
+            if (room[role]?.uid !== uid) {
+                return;
+            }
+
+            if (
+                room.host?.connected !== true ||
+                room.guest?.connected !== true
+            ) {
+                return;
+            }
+
+            if (!room.rematch) {
+                room.rematch = {};
+            }
+
+            room.rematch[role] = true;
+
+            return room;
+        },
+        { applyLocally: false }
+    );
+
+    if (!result.committed) {
+        throw new Error("REMATCH_NOT_AVAILABLE");
+    }
+
+    console.log(
+        "[Firebase] Rematch READY:",
+        role
+    );
+
+    return true;
+}
+
+
+/* =========================================================
+   FIREBASE - START PVP REMATCH
+   Host only, atomic room transaction
+========================================================= */
+
+export async function startRoomRematch(matchData) {
+
+    const uid = auth.currentUser?.uid;
+    const code = roomCode;
+
+    if (!uid || !code || playerRole !== "host") {
+        throw new Error("HOST_ONLY");
+    }
+
+    if (
+        !Array.isArray(matchData.questionIds) ||
+        !Array.isArray(matchData.questions) ||
+        !matchData.questionIds.length ||
+        matchData.questionIds.length !==
+            matchData.questions.length
+    ) {
+        throw new Error("INVALID_REMATCH_QUESTIONS");
+    }
+
+    const roomRef = ref(db, `rooms/${code}`);
+
+    const newMatchId =
+        typeof crypto.randomUUID === "function"
+            ? crypto.randomUUID()
+            : `${Date.now()}-${Math.random()}`;
+
+    const result = await runTransaction(
+        roomRef,
+        room => {
+
+            if (!room) return;
+
+            if (room.status !== "finished") {
+                return;
+            }
+
+            if (room.host?.uid !== uid) {
+                return;
+            }
+
+            if (
+                room.host?.connected !== true ||
+                room.guest?.connected !== true
+            ) {
+                return;
+            }
+
+            if (
+                room.rematch?.host !== true ||
+                room.rematch?.guest !== true
+            ) {
+                return;
+            }
+
+            /*
+               Replace the entire match object.
+               Old scores, questions and answers
+               must not survive the rematch.
+            */
+
+            room.match = {
+
+                matchId: newMatchId,
+
+                studyMode:
+                    matchData.studyMode || "jlpt",
+
+                target:
+                    matchData.target ||
+                    matchData.level ||
+                    "n5",
+
+                level:
+                    matchData.level ||
+                    matchData.target ||
+                    "n5",
+
+                category:
+                    matchData.category || "vocabulary",
+
+                mode:
+                    matchData.mode || "kanji_meaning",
+
+                questionIds: matchData.questionIds,
+
+                questions: matchData.questions,
+
+                currentQuestion: 0,
+
+                hostScore: 0,
+
+                guestScore: 0
+            };
+
+            room.status = "playing";
+            room.startedAt = Date.now();
+            room.finishedAt = null;
+
+            // Remove previous READY votes.
+            room.rematch = null;
+
+            return room;
+        },
+        { applyLocally: false }
+    );
+
+    if (!result.committed) {
+
+        throw new Error(
+            "REMATCH_TRANSACTION_REJECTED"
+        );
+    }
+
+    console.log(
+        "[Firebase] Rematch started:",
+        newMatchId
+    );
+
+    return result.snapshot.val()?.match;
 }
