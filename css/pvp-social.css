@@ -2563,3 +2563,116 @@
 #pvpScreen #waitingRoomPanel.hidden {
     display: none !important;
 }
+
+/* =========================================================
+   BATLINGO PVP - INVITE TYPOGRAPHY V6
+   Unified font sizes for Invite Players
+========================================================= */
+
+/* Main Invite Players button */
+
+#pvpScreen.waiting-mode .pvp-invite-main-btn,
+#pvpScreen.waiting-mode #pvpInviteToggle {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: .4px;
+}
+
+/* Invite panel title */
+
+#pvpScreen.waiting-mode #pvpInvitePanel h3 {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: .4px;
+}
+
+/* ONLINE / FRIENDS tabs */
+
+#pvpScreen.waiting-mode .pvp-invite-tabs {
+    gap: 7px;
+    margin: 0 0 8px;
+}
+
+#pvpScreen.waiting-mode .pvp-invite-tabs button {
+    min-width: 0;
+    min-height: 34px;
+
+    padding: 6px 10px;
+
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: .3px;
+
+    border-radius: 9px;
+}
+
+/* Player list */
+
+#pvpScreen.waiting-mode #pvpInviteList {
+    gap: 6px;
+}
+
+#pvpScreen.waiting-mode #pvpInviteList .pvp-list-item {
+    padding: 8px 10px;
+    gap: 9px;
+}
+
+#pvpScreen.waiting-mode #pvpInviteList .pvp-list-item strong {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+#pvpScreen.waiting-mode #pvpInviteList .pvp-list-item small {
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+/* INVITE buttons inside player list */
+
+#pvpScreen.waiting-mode #pvpInviteList .pvp-list-item > button {
+    min-height: 32px;
+
+    padding: 6px 11px;
+
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Status / message */
+
+#pvpScreen.waiting-mode #pvpInvitePanel .pvp-empty,
+#pvpScreen.waiting-mode #pvpInviteMessage {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #pvpScreen.waiting-mode .pvp-invite-tabs button {
+        min-height: 34px;
+        padding: 6px 7px;
+        font-size: 11px;
+    }
+
+    #pvpScreen.waiting-mode #pvpInvitePanel h3 {
+        font-size: 12px;
+    }
+
+    #pvpScreen.waiting-mode #pvpInviteList .pvp-list-item strong {
+        font-size: 11px;
+    }
+
+    #pvpScreen.waiting-mode #pvpInviteList .pvp-list-item > button {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+}
