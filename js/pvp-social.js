@@ -370,6 +370,41 @@ export function initPvpSocial() {
             ROOM
         </div>
 
+        
+        <div id="pvpWaitingConfig"
+             class="pvp-waiting-config">
+        
+            <div class="pvp-config-heading">
+                <span>⚔ BATTLE SETTINGS</span>
+                <span id="pvpConfigVisibility">PUBLIC</span>
+            </div>
+        
+            <div class="pvp-config-grid">
+        
+                <div class="pvp-config-item">
+                    <small>STUDY MODE</small>
+                    <strong id="pvpConfigStudy">JLPT</strong>
+                </div>
+        
+                <div class="pvp-config-item">
+                    <small>LEVEL / TOPIC</small>
+                    <strong id="pvpConfigTarget">N5</strong>
+                </div>
+        
+                <div class="pvp-config-item">
+                    <small>QUESTION MODE</small>
+                    <strong id="pvpConfigMode">Kanji → Meaning</strong>
+                </div>
+        
+                <div class="pvp-config-item">
+                    <small>QUESTIONS</small>
+                    <strong id="pvpConfigCount">20</strong>
+                </div>
+        
+            </div>
+        </div>
+
+
         <div id="pvpSettingsPanel"
              class="pvp-social-panel hidden">
 
@@ -1129,6 +1164,60 @@ export function onPvpSocialRoomUpdate(room, role) {
     currentRoom = room;
 
     const settings = room.settings || {};
+
+    
+    /* ==========================================
+       WAITING ROOM - CONFIG INFORMATION
+    ========================================== */
+    
+    const studyMode = settings.studyMode || "jlpt";
+    
+    const target =
+        settings.target ||
+        settings.level ||
+        "n5";
+    
+    const mode = settings.mode || "kanji_meaning";
+    
+    const modeName =
+        modes.find(item => item[0] === mode)?.[1] ||
+        mode;
+    
+    const setConfigText = (id, value) => {
+    
+        const element = document.getElementById(id);
+    
+        if (element) {
+            element.textContent = value;
+        }
+    };
+    
+    setConfigText(
+        "pvpConfigStudy",
+        studyMode === "topic" ? "TOPIC" : "JLPT"
+    );
+    
+    setConfigText(
+        "pvpConfigTarget",
+        studyMode === "topic"
+            ? topics.find(item => item.id === target)?.name || target
+            : String(target).toUpperCase()
+    );
+    
+    setConfigText("pvpConfigMode", modeName);
+    
+    setConfigText(
+        "pvpConfigCount",
+        String(settings.count || 20)
+    );
+    
+    setConfigText(
+        "pvpConfigVisibility",
+        room.visibility === "private"
+            ? "🔒 PRIVATE"
+            : "🌐 PUBLIC"
+    );
+
 
     const $ = id => document.getElementById(id);
 
