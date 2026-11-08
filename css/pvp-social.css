@@ -1980,3 +1980,21 @@
 #pvpScreen .pvp-incoming-invites.hidden {
     display: none !important;
 }
+
+/* INVITE - SELECTED TAB */
+
+#pvpScreen.waiting-mode
+.pvp-invite-tabs button.active {
+    border-color: #fbbf24;
+    background: rgba(251, 191, 36, 0.12);
+    color: #fbbf24;
+}
+
+/* UNSELECTED TAB */
+
+#pvpScreen.waiting-mode
+.pvp-invite-tabs button:not(.active) {
+    border-color: #475569;
+    background: #1e293b;
+    color: #cbd5e1;
+}
