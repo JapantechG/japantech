@@ -54,10 +54,14 @@ let locked = false;
 let duration = 8;
 let deadline = 0;
 
+/* ==========================================
+   PRACTICE - ANSWER REVIEW DELAY
+========================================== */
+
 const PRACTICE_REVIEW_DELAY = {
-    correct: 2500,
-    wrong: ,
-    timeout: 3500
+    correct: 2000,  
+    wrong: 2500,    
+    timeout: 3000   
 };
 
 let timerId = null;
