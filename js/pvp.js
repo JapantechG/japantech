@@ -388,8 +388,12 @@ function showPvpQuestion(match) {
 
     showPvpPanel("battle");
 
+    const totalQuestions = match.questions?.length
+    || match.questionIds?.length
+    || 20;
+
     pvpQuestionNumber.textContent =
-        `QUESTION ${index + 1}`;
+    `QUESTION ${index + 1} / ${totalQuestions}`;
 
     const mode = match.mode;
 
