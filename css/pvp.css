@@ -933,3 +933,164 @@
     background: currentColor;
     transition: width 0.1s linear;
 }
+
+/* =========================================================
+   BATLINGO PVP - WIDE BATTLE LAYOUT
+========================================================= */
+
+/* Chỉ áp dụng khi đang trả lời câu hỏi */
+
+#pvpScreen.battle-mode {
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 100dvh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Container chính: bỏ giới hạn 520px */
+
+#pvpScreen.battle-mode .pvp-container {
+    width: min(100%, 1100px) !important;
+    max-width: 1100px !important;
+
+    margin: 0 auto;
+    padding: 18px 24px 40px;
+}
+
+/* Khung câu hỏi */
+
+#pvpScreen.battle-mode #pvpGamePanel {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 16px auto;
+    padding: 24px 32px;
+}
+
+/* Khung Host / Guest */
+
+#pvpScreen.battle-mode .pvp-battle-players {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        60px
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#pvpScreen.battle-mode .pvp-battle-player {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+
+    padding: 16px 24px;
+}
+
+/* Câu hỏi lớn hơn */
+
+#pvpScreen.battle-mode #pvpQuestion {
+    width: 100%;
+    max-width: none;
+
+    padding: 24px 20px;
+    margin: 14px auto;
+
+    font-size: clamp(30px, 4vw, 48px);
+}
+
+/* Hiragana */
+
+#pvpScreen.battle-mode #pvpReading {
+    width: 100%;
+    max-width: none;
+}
+
+/* 4 đáp án, 4 hàng ngang toàn chiều rộng */
+
+#pvpScreen.battle-mode #pvpAnswers {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    gap: 12px;
+    margin: 18px auto 0;
+}
+
+#pvpScreen.battle-mode #pvpAnswers .answer-button {
+    width: 100%;
+    min-height: 72px;
+    padding: 14px 20px;
+
+    font-size: clamp(16px, 1.8vw, 20px);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    #pvpScreen.battle-mode .pvp-container {
+        padding: 14px 12px 28px;
+    }
+
+    #pvpScreen.battle-mode #pvpGamePanel {
+        padding: 20px 16px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #pvpScreen.battle-mode {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #pvpScreen.battle-mode .pvp-container {
+        padding: 10px 0 24px;
+    }
+
+    #pvpScreen.battle-mode #pvpGamePanel {
+        padding: 14px 10px;
+    }
+
+    #pvpScreen.battle-mode .pvp-battle-players {
+        grid-template-columns:
+            minmax(0, 1fr)
+            28px
+            minmax(0, 1fr);
+
+        gap: 6px;
+    }
+
+    #pvpScreen.battle-mode .pvp-battle-player {
+        padding: 10px 6px;
+    }
+
+    #pvpScreen.battle-mode #pvpQuestion {
+        padding: 16px 10px;
+        font-size: clamp(26px, 7vw, 36px);
+    }
+
+    #pvpScreen.battle-mode #pvpAnswers {
+        gap: 9px;
+        margin-top: 12px;
+    }
+
+    #pvpScreen.battle-mode #pvpAnswers .answer-button {
+        min-height: 62px;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
