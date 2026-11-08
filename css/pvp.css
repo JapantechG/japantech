@@ -1363,3 +1363,346 @@
 #pvpScreen #pvpResultPanel.hidden {
     display: none !important;
 }
+
+
+/* =========================================================
+   BATLINGO PVP - MOBILE ONE SCREEN BATTLE V4
+   Only mobile, desktop unchanged
+========================================================= */
+
+@media (max-width: 600px) {
+
+    #pvpScreen.battle-mode {
+        position: relative;
+        display: flex;
+
+        width: 100%;
+        height: 100dvh;
+        min-height: 0;
+
+        padding:
+            max(8px, env(safe-area-inset-top))
+            8px
+            max(6px, env(safe-area-inset-bottom));
+
+        align-items: stretch;
+        justify-content: flex-start;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    /* Main layout */
+
+    #pvpScreen.battle-mode .pvp-container {
+        display: flex;
+        flex-direction: column;
+
+        flex: 1 1 auto;
+
+        width: 100% !important;
+        max-width: none !important;
+        height: 100%;
+        min-height: 0;
+
+        margin: 0 auto;
+        padding: 0 3px;
+        gap: 3px;
+
+        justify-content: flex-start;
+    }
+
+    /* Compact heading */
+
+    #pvpScreen.battle-mode .pvp-title {
+        margin: 0;
+        padding: 0;
+
+        font-size: 21px;
+        line-height: 1.05;
+        letter-spacing: 2px;
+    }
+
+    #pvpScreen.battle-mode .pvp-subtitle {
+        margin: 0 0 3px;
+        padding: 0;
+
+        font-size: 9px;
+        line-height: 1.1;
+        letter-spacing: 2px;
+    }
+
+    /* Back button smaller */
+
+    #pvpScreen.battle-mode #pvpBackButton {
+        top: max(5px, env(safe-area-inset-top));
+        left: 8px;
+
+        width: 31px;
+        height: 31px;
+
+        border-radius: 9px;
+        font-size: 16px;
+    }
+
+    /* Battle panel */
+
+    #pvpScreen.battle-mode #pvpGamePanel {
+        display: flex;
+        flex-direction: column;
+
+        flex: 1 1 auto;
+
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 0;
+
+        margin: 0;
+        padding: 8px 10px;
+
+        gap: clamp(3px, 0.7dvh, 7px);
+
+        justify-content: space-between;
+
+        border-radius: 14px;
+    }
+
+    /* Host / Guest */
+
+    #pvpScreen.battle-mode .pvp-battle-players {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            24px
+            minmax(0, 1fr);
+
+        align-items: center;
+
+        gap: 5px;
+        margin: 0;
+
+        flex-shrink: 0;
+    }
+
+    #pvpScreen.battle-mode .pvp-battle-player {
+        width: 100%;
+        min-width: 0;
+
+        padding: 5px 5px;
+
+        border-width: 1px;
+        border-radius: 9px;
+    }
+
+    #pvpScreen.battle-mode .pvp-battle-player-name {
+        font-size: 12px;
+        line-height: 1.1;
+        letter-spacing: 0;
+
+        overflow-wrap: anywhere;
+    }
+
+    #pvpScreen.battle-mode .pvp-player-state {
+        margin-top: 2px;
+
+        font-size: 9px;
+        line-height: 1.1;
+    }
+
+    #pvpScreen.battle-mode .pvp-player-score {
+        margin-top: 3px;
+
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    #pvpScreen.battle-mode .pvp-player-score span {
+        margin-left: 4px;
+        font-size: 16px;
+    }
+
+    #pvpScreen.battle-mode .room-vs {
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+
+    /* Level and question number */
+
+    #pvpScreen.battle-mode #pvpLevel {
+        min-width: 0;
+        width: fit-content;
+        height: 22px;
+
+        margin: 0 auto;
+        padding: 0 10px;
+
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    #pvpScreen.battle-mode #pvpQuestionNumber {
+        margin: 0;
+
+        font-size: 12px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+    }
+
+    /* Question */
+
+    #pvpScreen.battle-mode #pvpQuestion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 1 1 auto;
+
+        width: 100%;
+        min-height: 58px;
+
+        margin: 0;
+        padding: 8px 10px;
+
+        font-size: clamp(23px, 6.5vw, 32px);
+        line-height: 1.25;
+
+        overflow-wrap: anywhere;
+        border-radius: 11px;
+    }
+
+    /* Hiragana space stays reserved */
+
+    #pvpScreen.battle-mode #pvpReading {
+        flex-shrink: 0;
+
+        min-height: 20px;
+        margin: 0;
+
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    /* Timer */
+
+    #pvpScreen.battle-mode .pvp-timer {
+        flex-shrink: 0;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #pvpScreen.battle-mode #pvpTimerText {
+        font-size: 15px;
+        line-height: 1.15;
+    }
+
+    #pvpScreen.battle-mode .pvp-timer-track {
+        height: 5px;
+        margin: 3px 0 0;
+    }
+
+    /* Four answers, four rows */
+
+    #pvpScreen.battle-mode #pvpAnswers {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        flex-shrink: 0;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        margin: 0;
+        gap: 6px !important;
+    }
+
+    #pvpScreen.battle-mode #pvpAnswers .answer-button {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        min-width: 0;
+        min-height: clamp(43px, 6.5dvh, 54px);
+
+        margin: 0;
+        padding: 7px 10px;
+
+        border-width: 1px;
+        border-radius: 9px;
+
+        font-size: clamp(13px, 3.7vw, 15px);
+        line-height: 1.25;
+
+        overflow-wrap: anywhere;
+    }
+
+    #pvpScreen.battle-mode #pvpAnswers .answer-button::before {
+        flex: 0 0 27px;
+
+        width: 27px;
+        height: 27px;
+
+        margin-right: 9px;
+
+        font-size: 12px;
+        border-radius: 7px;
+    }
+}
+
+/* Short phones: iPhone SE and landscape-like heights */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    #pvpScreen.battle-mode .pvp-title {
+        font-size: 18px;
+    }
+
+    #pvpScreen.battle-mode .pvp-subtitle {
+        font-size: 8px;
+        margin-bottom: 0;
+    }
+
+    #pvpScreen.battle-mode #pvpGamePanel {
+        padding: 5px 8px;
+        gap: 2px;
+    }
+
+    #pvpScreen.battle-mode .pvp-battle-player {
+        padding: 3px;
+    }
+
+    #pvpScreen.battle-mode #pvpQuestion {
+        min-height: 45px;
+        font-size: 22px;
+        padding: 5px 8px;
+    }
+
+    #pvpScreen.battle-mode #pvpAnswers {
+        gap: 4px !important;
+    }
+
+    #pvpScreen.battle-mode #pvpAnswers .answer-button {
+        min-height: 39px;
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+
+    #pvpScreen.battle-mode #pvpAnswers .answer-button::before {
+        flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Always hide inactive PvP panels */
+
+#pvpScreen #roomSelectPanel.hidden,
+#pvpScreen #waitingRoomPanel.hidden,
+#pvpScreen #pvpGamePanel.hidden,
+#pvpScreen #pvpResultPanel.hidden {
+    display: none !important;
+}
+
