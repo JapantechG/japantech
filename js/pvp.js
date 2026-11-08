@@ -3065,6 +3065,113 @@ function updateRematchState(room) {
 }
 
 
+/* =========================================================
+   PVP REMATCH - BUTTON EVENT
+   Register only once
+========================================================= */
+
+let pvpRematchSubmitting = false;
+
+pvpRematchButton.addEventListener("click", async () => {
+
+    if (pvpRematchSubmitting) return;
+
+    const room = currentPvpRoom;
+    const role = currentPlayerRole;
+
+    if (
+        !room ||
+        room.status !== "finished" ||
+        !["host", "guest"].includes(role)
+    ) {
+        console.warn("[PVP] Rematch not available");
+        return;
+    }
+
+    if (room.rematch?.[role] === true) {
+        return;
+    }
+
+    if (
+        room.host?.connected !== true ||
+        room.guest?.connected !== true
+    ) {
+        pvpRematchStatus.textContent =
+            "Opponent is disconnected.";
+        pvpRematchStatus.dataset.state = "error";
+        return;
+    }
+
+    pvpRematchSubmitting = true;
+    pvpRematchButton.disabled = true;
+    pvpRematchButton.textContent = "⏳ SENDING...";
+
+    try {
+
+        await requestRematch();
+
+        console.log(
+            "[PVP] Rematch accepted:",
+            role
+        );
+
+        /*
+           This is optimistic UI.
+           Firebase realtime update remains
+           the authoritative source of READY.
+        */
+
+        const readyElement = document.getElementById(
+            role === "host"
+                ? "pvpRematchHostState"
+                : "pvpRematchGuestState"
+        );
+
+        if (readyElement) {
+            readyElement.classList.add("is-ready");
+
+            const label = readyElement.querySelector(
+                "span:last-child"
+            );
+
+            if (label) {
+                label.textContent =
+                    `${role.toUpperCase()} · READY ✓`;
+            }
+        }
+
+        pvpRematchButton.textContent =
+            "✓ YOU ARE READY";
+
+        pvpRematchStatus.textContent =
+            "Waiting for opponent...";
+
+        pvpRematchStatus.dataset.state =
+            "waiting";
+
+    } catch (error) {
+
+        console.error(
+            "[PVP] Rematch failed:",
+            error
+        );
+
+        pvpRematchButton.disabled = false;
+        pvpRematchButton.textContent =
+            "↻ TRY REMATCH AGAIN";
+
+        pvpRematchStatus.textContent =
+            "REMATCH ERROR: " + error.message;
+
+        pvpRematchStatus.dataset.state = "error";
+
+    } finally {
+
+        pvpRematchSubmitting = false;
+    }
+});
+
+
 
 /* =========================================================
    PVP - START REMATCH
