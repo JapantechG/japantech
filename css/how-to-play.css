@@ -1,0 +1,571 @@
+
+/* =========================================================
+   BATLINGO - HOW TO PLAY CSS
+========================================================= */
+
+body.htp-open {
+    overflow: hidden !important;
+}
+
+.htp-overlay.hidden,
+.htp-overlay .hidden {
+    display: none !important;
+}
+
+.htp-overlay,
+.htp-overlay * {
+    box-sizing: border-box;
+}
+
+/* OVERLAY */
+
+.htp-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 30000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(10px, 2vw, 24px);
+
+    background: rgba(2, 6, 23, .86);
+    backdrop-filter: blur(10px);
+
+    color: #f8fafc;
+}
+
+/* MAIN PANEL */
+
+.htp-panel {
+    display: flex;
+    flex-direction: column;
+
+    width: min(100%, 1000px);
+    max-height: calc(100dvh - 24px);
+    min-height: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #45536b;
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #172238,
+            #0d1524 74%
+        );
+
+    box-shadow: 0 24px 90px rgba(0,0,0,.65);
+}
+
+/* HEADER */
+
+.htp-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    min-height: 62px;
+    padding: 14px 26px 8px;
+}
+
+.htp-brand {
+    font-size: 19px;
+    font-weight: 950;
+    letter-spacing: 2px;
+
+    color: #fbbf24;
+}
+
+.htp-header-label {
+    flex: 1;
+
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.htp-skip {
+    border: 1px solid #475569;
+    border-radius: 10px;
+
+    padding: 9px 12px;
+
+    background: #19253b;
+    color: #e2e8f0;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* PROGRESS BAR */
+
+.htp-progress {
+    display: flex;
+    gap: 5px;
+
+    padding: 6px 26px 15px;
+}
+
+.htp-progress-step {
+    flex: 1;
+
+    height: 5px;
+    min-width: 0;
+
+    border: none;
+    border-radius: 99px;
+    padding: 0;
+
+    background: #334155;
+
+    cursor: pointer;
+
+    transition: background .15s;
+}
+
+.htp-progress-step.is-done {
+    background: #fbbf24;
+}
+
+/* MAIN CONTENT */
+
+.htp-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, .9fr);
+
+    align-items: center;
+    gap: 24px;
+
+    min-height: 0;
+    overflow-y: auto;
+
+    padding: 10px 26px 24px;
+}
+
+/* TEXT AREA */
+
+.htp-copy {
+    min-width: 0;
+    align-self: center;
+}
+
+.htp-tag {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border: 1px solid #a8792a;
+    border-radius: 8px;
+
+    background: rgba(251,191,36,.1);
+    color: #fbbf24;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.htp-title {
+    margin: 13px 0 9px;
+
+    color: white;
+
+    font-size: clamp(23px, 3vw, 35px);
+    line-height: 1.15;
+}
+
+.htp-subtitle {
+    margin: 0 0 16px;
+
+    color: #b6c6d9;
+
+    font-size: clamp(13px, 1.5vw, 16px);
+    line-height: 1.55;
+}
+
+/* FEATURES */
+
+.htp-list {
+    list-style: none;
+
+    display: grid;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.htp-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    color: #edf2fa;
+
+    font-size: clamp(12px, 1.25vw, 15px);
+    line-height: 1.48;
+}
+
+.htp-check {
+    flex: 0 0 21px;
+
+    display: grid;
+    place-items: center;
+
+    width: 21px;
+    height: 21px;
+
+    margin-top: 1px;
+
+    border-radius: 50%;
+
+    background: rgba(34,197,94,.14);
+    color: #86efac;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.htp-point {
+    overflow-wrap: anywhere;
+}
+
+/* TIP */
+
+.htp-tip {
+    margin: 18px 0 0;
+    padding: 12px;
+
+    border-left: 3px solid #fbbf24;
+    border-radius: 0 10px 10px 0;
+
+    background: rgba(251,191,36,.07);
+
+    color: #facc75;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* IMAGE AREA */
+
+.htp-media {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    min-width: 0;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border: 1px solid #3a4c66;
+    border-radius: 17px;
+
+    background:
+        radial-gradient(
+            circle at 45% 35%,
+            #304567,
+            #0b1324 70%
+        );
+}
+
+.htp-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: none;
+}
+
+.htp-image.ready {
+    display: block;
+}
+
+/* FALLBACK WHEN IMAGE IS MISSING */
+
+.htp-image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 11px;
+
+    max-width: 100%;
+    padding: 18px;
+
+    text-align: center;
+
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.htp-placeholder-icon {
+    font-size: clamp(55px, 7vw, 86px);
+
+    filter:
+        drop-shadow(0 8px 10px rgba(0,0,0,.5));
+}
+
+.htp-image-placeholder strong {
+    color: #f8fafc;
+
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.htp-image-path {
+    max-width: 100%;
+
+    color: #fbbf24;
+
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+
+.htp-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 14px 26px 20px;
+
+    border-top: 1px solid #293a52;
+
+    background: #0d1728;
+}
+
+.htp-counter {
+    color: #94a3b8;
+
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.htp-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.htp-btn {
+    min-height: 45px;
+    padding: 10px 16px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+.htp-primary {
+    border: 1px solid #ffcb5e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fbbf24,
+            #f59e0b
+        );
+
+    color: #1e293b;
+}
+
+.htp-secondary {
+    border: 1px solid #475569;
+
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+.htp-btn:hover,
+.htp-skip:hover {
+    filter: brightness(1.12);
+}
+
+.htp-overlay button:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 680px) {
+
+    .htp-overlay {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .htp-panel {
+        width: 100%;
+        height: 100dvh;
+        max-height: 100dvh;
+
+        border: none;
+        border-radius: 0;
+    }
+
+    .htp-header {
+        min-height: 54px;
+        padding: 10px 16px 6px;
+        gap: 8px;
+    }
+
+    .htp-brand {
+        font-size: 17px;
+    }
+
+    .htp-header-label {
+        font-size: 10px;
+        letter-spacing: .5px;
+    }
+
+    .htp-progress {
+        padding: 8px 16px 10px;
+    }
+
+    .htp-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        justify-content: flex-end;
+
+        gap: 13px;
+
+        padding: 8px 16px 18px;
+
+        overscroll-behavior: contain;
+    }
+
+    .htp-media {
+        aspect-ratio: 16 / 8.2;
+
+        flex: 0 0 auto;
+        max-height: 220px;
+    }
+
+    .htp-placeholder-icon {
+        font-size: 47px;
+    }
+
+    .htp-image-placeholder {
+        gap: 3px;
+    }
+
+    .htp-image-placeholder strong {
+        font-size: 11px;
+    }
+
+    .htp-copy {
+        align-self: stretch;
+    }
+
+    .htp-title {
+        font-size: 23px;
+        margin: 9px 0 5px;
+    }
+
+    .htp-subtitle {
+        font-size: 13px;
+        margin: 0 0 12px;
+    }
+
+    .htp-list {
+        gap: 9px;
+    }
+
+    .htp-list li {
+        font-size: 13px;
+        line-height: 1.43;
+    }
+
+    .htp-tip {
+        font-size: 12px;
+        margin-top: 13px;
+        padding: 9px 10px;
+    }
+
+    .htp-footer {
+        padding:
+            11px 16px
+            max(15px, env(safe-area-inset-bottom));
+
+        gap: 6px;
+    }
+
+    .htp-btn {
+        min-height: 43px;
+
+        padding: 9px 11px;
+
+        font-size: 12px;
+    }
+
+    .htp-actions {
+        gap: 6px;
+    }
+
+    .htp-counter {
+        font-size: 10px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 370px) {
+
+    .htp-media {
+        max-height: 160px;
+    }
+
+    .htp-header-label {
+        display: none;
+    }
+
+    .htp-btn {
+        font-size: 11px;
+        padding: 8px 9px;
+    }
+
+    .htp-title {
+        font-size: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .htp-progress-step {
+        transition: none;
+    }
+
+}
