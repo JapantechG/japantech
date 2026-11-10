@@ -1,23 +1,41 @@
 
 /* ============================================================
-   BATLINGO - DAILY MISSION V4
+   BATLINGO DAILY MISSION V4.1
 
-   01. Config
-   02. Helper
-   03. Load Vocabulary theo ID
-   04. Firebase / Streak
-   05. Mục tiêu và chọn bộ từ
-   06. Tạo nhóm tối đa 10 từ
-   07. Flashcard
-   08. Review / Question Engine
-   09. Quiz / Summary
-   10. Dashboard / Clear History
-   11. Render Learning
-   12. Render Main UI
-   13. Initialize
+   01. Firebase / Configuration
+   02. Helpers / Vocabulary
+   03. Daily Streak / Firebase Save
+   04. Goal / Source Selection
+   05. Batch / Flashcard / Review / Quiz
+   06. Learning UI
+   07. Dashboard / History
+   08. Focus UI / Rendering
+   09. Initialization
+
+   TIMEZONE: Asia/Ho_Chi_Minh
+   GOAL: 5 - 100 words
+   BATCH: Maximum 10 words
+
+   Vocabulary order:
+       ID 1 -> ID 2 -> ID 3 -> ...
+
+   Quiz:
+       Random question mode and answer positions
 ============================================================ */
 
-import { auth, db } from './firebase.js';
+
+/* ============================================================
+   01. FIREBASE IMPORTS
+============================================================ */
+
+import {
+    auth,
+    db
+} from './firebase.js';
+
+import {
+    onAuthStateChanged
+} from 'https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js';
 
 import {
     ref,
@@ -27,16 +45,16 @@ import {
 
 
 /* ============================================================
-   01. CONFIG
+   02. CONFIGURATION
 ============================================================ */
 
 const $ = id => document.getElementById(id);
 
-const TIMEZONE = 'Asia/Ho_Chi_Minh';
+const TZ = 'Asia/Ho_Chi_Minh';
 
 const MIN_GOAL = 5;
 const MAX_GOAL = 100;
-const BATCH_SIZE = 10;
+const BATCH = 10;
 
 const MODES = [
     'kanji_meaning',
@@ -48,7 +66,7 @@ const MODES = [
     'audio_kanji'
 ];
 
-const MODE_LABELS = {
+const LABEL = {
     kanji_meaning: 'Kanji → Nghĩa',
     kanji_hiragana: 'Kanji → Hiragana',
     hiragana_meaning: 'Hiragana → Nghĩa',
@@ -58,97 +76,107 @@ const MODE_LABELS = {
     audio_kanji: 'Nghe → Kanji'
 };
 
-const ANSWER_FIELD = {
-    kanji_meaning: 'meaning',
-    kanji_hiragana: 'reading',
-    hiragana_meaning: 'meaning',
-    meaning_kanji: 'word',
-    audio_meaning: 'meaning',
-    audio_hiragana: 'reading',
-    audio_kanji: 'word'
+const FIELD = {
+    kanji_meaning: ['word', 'meaning'],
+    kanji_hiragana: ['word', 'reading'],
+    hiragana_meaning: ['reading', 'meaning'],
+    meaning_kanji: ['meaning', 'word'],
+    audio_meaning: ['reading', 'meaning'],
+    audio_hiragana: ['reading', 'reading'],
+    audio_kanji: ['reading', 'word']
 };
 
 
 /* ============================================================
-   02. STATE
+   03. STATE
 ============================================================ */
 
-let currentUid = '';
-let unsubscribeUser = null;
+let offset = 0;
+let uid = '';
 
-let databaseOffset = 0;
-let data = {};
+let stopUser = null;
+let state = {};
 
-let loadedKey = '';
-let vocabulary = [];
-let loadVersion = 0;
-
-let inProgress = false;
 let initialized = false;
+let busy = false;
 
-let activeTab = 'mission';
+let words = [];
+let loadedSource = '';
+let loadSeq = 0;
 
-let filterSource = 'all';
-let searchText = '';
+let question = null;
+let questionSig = '';
+let revealed = false;
 
-let cardRevealed = false;
-let cachedQuestion = null;
-let cachedQuestionKey = '';
+let tab = 'learn';
 
-let lastVietnamDate = '';
+let dashboardFilter = 'all';
+let dashboardSearch = '';
+
+let lastDate = '';
+let lastError = '';
+
+/* Sau khi lưu mục tiêu:
+   Ẩn form để dành không gian học. */
+
+let setupCollapsed = false;
 
 
 /* ============================================================
-   03. HELPERS
+   04. HELPER FUNCTIONS
 ============================================================ */
 
-const text = value =>
+const clean = value =>
     String(value ?? '').trim();
+
+const safeTarget = value =>
+    /^[a-z][a-z0-9_]{0,50}$/.test(value);
 
 const sourceKey = (type, target) =>
     `${type}_${target}`;
 
-const keyForId = id =>
-    encodeURIComponent(String(id)).replace(/\./g, '%2E');
+const wordKey = id =>
+    encodeURIComponent(String(id))
+        .replace(/\./g, '%2E');
 
-const numericSort = new Intl.Collator('en', {
+const idOrder = new Intl.Collator('en', {
     numeric: true,
     sensitivity: 'base'
 });
 
-const sortIds = (a, b) =>
-    numericSort.compare(String(a), String(b));
+const compareIds = (a, b) =>
+    idOrder.compare(String(a), String(b));
 
-const validTarget = value =>
-    /^[a-z][a-z0-9_]{0,50}$/.test(value);
-
-const clampGoal = value =>
-    Math.min(
-        MAX_GOAL,
-        Math.max(
-            MIN_GOAL,
+const clamp = value =>
+    Math.max(
+        MIN_GOAL,
+        Math.min(
+            MAX_GOAL,
             Math.floor(Number(value) || MIN_GOAL)
         )
     );
 
 
-/* ------------------------------------------------------------
-   RANDOM: Chỉ dùng để random QUIZ / ANSWERS
+/* Random chỉ dùng cho Quiz, không dùng chọn từ. */
 
-   KHÔNG dùng hàm này để chọn danh sách từ học.
------------------------------------------------------------- */
-
-function randomize(items) {
+function shuffle(items) {
 
     const result = [...items];
 
-    for (let i = result.length - 1; i > 0; i--) {
+    for (
+        let i = result.length - 1;
+        i > 0;
+        i--
+    ) {
 
         const j = Math.floor(
             Math.random() * (i + 1)
         );
 
-        [result[i], result[j]] = [
+        [
+            result[i],
+            result[j]
+        ] = [
             result[j],
             result[i]
         ];
@@ -158,256 +186,149 @@ function randomize(items) {
 }
 
 
-/* ------------------------------------------------------------
-   DATE: Luôn dùng giờ Việt Nam
------------------------------------------------------------- */
+/* ============================================================
+   05. VIETNAM DATE
+============================================================ */
 
-function vietnamDate() {
+function today() {
 
-    const parts = new Intl.DateTimeFormat('en-US', {
-        timeZone: TIMEZONE,
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-    }).formatToParts(
-        new Date(Date.now() + databaseOffset)
+    const parts = new Intl.DateTimeFormat(
+        'en-US',
+        {
+            timeZone: TZ,
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        }
+    ).formatToParts(
+        new Date(Date.now() + offset)
     );
 
     const p = Object.fromEntries(
-        parts.map(value => [value.type, value.value])
+        parts.map(x => [x.type, x.value])
     );
 
     return `${p.year}-${p.month}-${p.day}`;
 }
 
 
-function previousDate(date) {
+function yday(date) {
 
-    const value = new Date(
+    const d = new Date(
         `${date}T00:00:00Z`
     );
 
-    value.setUTCDate(
-        value.getUTCDate() - 1
+    d.setUTCDate(
+        d.getUTCDate() - 1
     );
 
-    return value.toISOString().slice(0, 10);
-}
-
-
-/* ------------------------------------------------------------
-   Lấy dữ liệu ngày hiện tại
------------------------------------------------------------- */
-
-function currentDay() {
-    return data.days?.[vietnamDate()] || {};
-}
-
-function currentMission() {
-    return currentDay().mission || null;
-}
-
-function currentWord(id) {
-    return vocabulary.find(
-        word => word.id === String(id)
-    );
-}
-
-function allLearned() {
-    return data.learned || {};
-}
-
-
-/* ------------------------------------------------------------
-   Đếm số từ đã hoàn thành trong ngày
-
-   Cộng tất cả các bộ từ:
-   JLPT N5 + JLPT N4 + Topic...
------------------------------------------------------------- */
-
-function completedCount(day) {
-
-    return Object.values(
-        day.completed || {}
-    ).reduce(
-        (total, group) =>
-            total + Object.keys(group || {}).length,
-        0
-    );
-}
-
-
-function remainingGoal(day, profile) {
-
-    return Math.max(
-        0,
-        clampGoal(profile.goal) - completedCount(day)
-    );
-}
-
-
-/* ------------------------------------------------------------
-   STATUS MESSAGE
------------------------------------------------------------- */
-
-function notify(message, isError = false) {
-
-    const label = $('dailyMessage');
-
-    if (!label) return;
-
-    label.textContent = message;
-    label.classList.toggle('error', isError);
-}
-
-
-/* ------------------------------------------------------------
-   Reset UI state của câu hỏi hiện tại
------------------------------------------------------------- */
-
-function resetQuestion() {
-
-    cachedQuestion = null;
-    cachedQuestionKey = '';
-
-    cardRevealed = false;
-}
-
-
-/* ------------------------------------------------------------
-   ĐỌC TIẾNG NHẬT
------------------------------------------------------------- */
-
-function sayJapanese(word) {
-
-    if (!word || !window.speechSynthesis) {
-        return;
-    }
-
-    speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(
-        word.reading || word.word
-    );
-
-    utterance.lang = 'ja-JP';
-    utterance.rate = 0.85;
-
-    speechSynthesis.speak(utterance);
-}
-
-
-/* ------------------------------------------------------------
-   Tạo HTML Element an toàn
------------------------------------------------------------- */
-
-function element(tag, className = '', value) {
-
-    const result = document.createElement(tag);
-
-    if (className) {
-        result.className = className;
-    }
-
-    if (value !== undefined) {
-        result.textContent = value;
-    }
-
-    return result;
-}
-
-
-function action(
-    label,
-    callback,
-    className = 'daily-button daily-wide'
-) {
-
-    const button = element(
-        'button',
-        className,
-        label
-    );
-
-    button.type = 'button';
-    button.disabled = inProgress;
-
-    button.addEventListener(
-        'click',
-        callback
-    );
-
-    return button;
+    return d.toISOString().slice(0, 10);
 }
 
 
 /* ============================================================
-   04. LOAD VOCABULARY
-
-   JLPT:
-   data/n5.json
-   data/n4.json
-   ...
-   data/n1.json
-
-   TOPIC:
-   data/topics/animals.json
-   data/topics/colors.json
-   ...
+   06. DATA HELPERS
 ============================================================ */
 
-async function loadVocabulary(type, target) {
+const day = () =>
+    state.days?.[today()] || {};
+
+const mission = () =>
+    day().mission || null;
+
+const learned = () =>
+    state.learned || {};
+
+const completeMap = d =>
+    d.completed || {};
+
+const dayCompleted = d =>
+    Object.values(
+        completeMap(d)
+    ).reduce(
+        (n, group) =>
+            n + Object.keys(group || {}).length,
+        0
+    );
+
+const remaining = (d, s) =>
+    Math.max(
+        0,
+        clamp(s.goal) - dayCompleted(d)
+    );
+
+const getWord = id =>
+    words.find(
+        x => String(x.id) === String(id)
+    );
+
+
+/* ============================================================
+   07. STATUS
+============================================================ */
+
+function message(value = '', error = false) {
+
+    lastError = error ? value : '';
+
+    const e = $('dailyMessage');
+
+    if (!e) return;
+
+    e.textContent = value;
+
+    e.classList.toggle(
+        'error',
+        error
+    );
+}
+
+
+/* ============================================================
+   08. JAPANESE TEXT-TO-SPEECH
+
+   Chạy trực tiếp khi người dùng bấm đáp án.
+============================================================ */
+
+function speak(item) {
 
     if (
-        !['jlpt', 'topic'].includes(type) ||
-        !validTarget(target) ||
-        (type === 'jlpt' && !/^n[1-5]$/.test(target))
+        !('speechSynthesis' in window) ||
+        !item
     ) {
-        throw new Error(
-            'Nguồn từ vựng không hợp lệ.'
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            item.reading || item.word
         );
-    }
 
-    const key = sourceKey(type, target);
+    utterance.lang = 'ja-JP';
+    utterance.rate = 0.85;
 
-    // Sử dụng cache nếu đúng bộ từ đang mở.
-    if (
-        loadedKey === key &&
-        vocabulary.length
-    ) {
-        return vocabulary;
-    }
+    window.speechSynthesis.speak(
+        utterance
+    );
+}
 
-    const version = ++loadVersion;
 
-    const url = type === 'jlpt'
-        ? `data/${target}.json`
-        : `data/topics/${target}.json`;
+/* ============================================================
+   09. NORMALIZE VOCABULARY
+============================================================ */
 
-    const response = await fetch(url);
-
-    if (!response.ok) {
-        throw new Error(
-            `Không tải được ${url}`
-        );
-    }
-
-    const json = await response.json();
-
-    if (!Array.isArray(json)) {
-        throw new Error(
-            'Database phải là mảng JSON.'
-        );
-    }
+function normalize(raw) {
 
     const seen = new Set();
 
-    const list = json.map(item => ({
+    return raw.map(item => ({
 
-        id: text(item.id),
-        word: text(item.word),
-        reading: text(item.reading),
-        meaning: text(item.meaning)
+        id: clean(item.id),
+        word: clean(item.word),
+        reading: clean(item.reading),
+        meaning: clean(item.meaning)
 
     })).filter(item => {
 
@@ -425,32 +346,82 @@ async function loadVocabulary(type, target) {
 
         return true;
     });
+}
 
-    /* ========================================================
-       QUAN TRỌNG
 
-       Sắp xếp từ theo ID tăng dần.
+/* ============================================================
+   10. LOAD WORDS
 
-       ID 1 → ID 2 → ID 3 → ...
+   JLPT: data/n5.json ... data/n1.json
+   TOPIC: data/topics/{target}.json
 
-       Không random danh sách từ.
-    ======================================================== */
+   QUAN TRỌNG:
+   Danh sách từ luôn theo ID tăng dần.
+============================================================ */
 
-    list.sort(
-        (a, b) => sortIds(a.id, b.id)
+async function loadWords(type, target) {
+
+    if (
+        !['jlpt', 'topic'].includes(type) ||
+        !safeTarget(target) ||
+        (
+            type === 'jlpt' &&
+            !/^n[1-5]$/.test(target)
+        )
+    ) {
+        throw Error('Bộ từ không hợp lệ.');
+    }
+
+    const key = sourceKey(
+        type,
+        target
     );
 
-    // Quiz cần tối thiểu 4 lựa chọn phân biệt.
-    if (list.length < 4) {
-        throw new Error(
-            'Bộ từ cần ít nhất 4 từ để tạo Quiz.'
+    if (
+        key === loadedSource &&
+        words.length
+    ) {
+        return words;
+    }
+
+    const request = ++loadSeq;
+
+    const url = type === 'topic'
+        ? `data/topics/${target}.json`
+        : `data/${target}.json`;
+
+    const res = await fetch(url);
+
+    if (!res.ok) {
+        throw Error(
+            'Không tải được bộ từ ' + target
         );
     }
 
-    if (version === loadVersion) {
+    const raw = await res.json();
 
-        vocabulary = list;
-        loadedKey = key;
+    if (!Array.isArray(raw)) {
+        throw Error(
+            'Database không phải mảng.'
+        );
+    }
+
+    /* KHÔNG random. */
+
+    const list = normalize(raw).sort(
+        (a, b) => compareIds(a.id, b.id)
+    );
+
+    if (list.length < 4) {
+        throw Error(
+            'Bộ từ cần ít nhất 4 từ hợp lệ để tạo Quiz 4 lựa chọn.'
+        );
+    }
+
+    if (request === loadSeq) {
+
+        words = list;
+        loadedSource = key;
     }
 
     return list;
@@ -458,779 +429,71 @@ async function loadVocabulary(type, target) {
 
 
 /* ============================================================
-   05. DANH SÁCH TỪ CHƯA HỌC
+   11. QUESTION ENGINE
 
-   - Bỏ qua những từ đã hoàn thành.
-   - Bắt đầu từ ID nhỏ nhất chưa học.
-   - Không random.
-   - Nếu chỉ còn 2 từ thì trả về đúng 2 từ.
-============================================================ */
+   REVIEW:
+       Kanji -> Meaning
 
-function availableWordIds(
-    list,
-    profile,
-    day,
-    type,
-    target
-) {
-
-    const key = sourceKey(type, target);
-
-    const previouslyLearned =
-        profile.learned?.[key] || {};
-
-    const completedToday =
-        day.completed?.[key] || {};
-
-    return list.filter(word => {
-
-        const id = keyForId(word.id);
-
-        return (
-            !previouslyLearned[id] &&
-            !completedToday[id]
-        );
-
-    }).map(word => word.id);
-}
-
-
-/* ============================================================
-   06. FIREBASE / DAILY STREAK
-============================================================ */
-
-/* ------------------------------------------------------------
-   Điểm danh tự động
-
-   Chỉ điểm danh khi đủ số từ mục tiêu.
-
-   Đã điểm danh ngày hôm nay:
-   Không tăng lần thứ hai.
------------------------------------------------------------- */
-
-function updateStreak(profile, date) {
-
-    const day = profile.days?.[date];
-
-    if (
-        !day ||
-        day.checked ||
-        completedCount(day) < clampGoal(profile.goal)
-    ) {
-        return;
-    }
-
-    day.checked = true;
-    day.missionDone = true;
-
-    const yesterday = previousDate(date);
-
-    profile.streak =
-        profile.lastCheckin === yesterday
-
-            ? (Number(profile.streak) || 0) + 1
-
-            : 1;
-
-    profile.lastCheckin = date;
-}
-
-
-/* ------------------------------------------------------------
-   Số streak để hiển thị
-
-   Nếu hôm qua đã điểm danh:
-   Vẫn giữ streak.
-
-   Nếu bỏ lỡ nhiều hơn một ngày:
-   Hiển thị 0.
------------------------------------------------------------- */
-
-function visibleStreak() {
-
-    const last = data.lastCheckin;
-    const today = vietnamDate();
-
-    if (
-        last === today ||
-        last === previousDate(today)
-    ) {
-        return Number(data.streak) || 0;
-    }
-
-    return 0;
-}
-
-
-/* ------------------------------------------------------------
-   FIREBASE TRANSACTION
-
-   Sử dụng một nút:
-   dailyProgress/{uid}
-
-   Đảm bảo thao tác ghi cho từng tài khoản
-   không ghi đè nhầm tiến độ của máy khác.
------------------------------------------------------------- */
-
-async function save(change) {
-
-    const uid = auth.currentUser?.uid;
-
-    if (!uid || inProgress) {
-        return false;
-    }
-
-    inProgress = true;
-
-    render();
-
-    const date = vietnamDate();
-
-    try {
-
-        const databaseRef = ref(
-            db,
-            `dailyProgress/${uid}`
-        );
-
-        const result = await runTransaction(
-            databaseRef,
-            raw => {
-
-                const profile =
-                    raw && typeof raw === 'object'
-                        ? raw
-                        : {};
-
-                profile.goal = clampGoal(
-                    profile.goal
-                );
-
-                profile.days ||= {};
-                profile.learned ||= {};
-
-                profile.days[date] ||= {};
-
-                const day = profile.days[date];
-
-                day.completed ||= {};
-
-                // Gọi chức năng cần lưu.
-                change(profile, day, date);
-
-                // Kiểm tra điều kiện điểm danh.
-                updateStreak(profile, date);
-
-                return profile;
-
-            },
-            {
-                applyLocally: false
-            }
-        );
-
-        if (
-            result.committed &&
-            auth.currentUser?.uid === uid
-        ) {
-
-            data = result.snapshot.val() || {};
-        }
-
-        return result.committed;
-
-    } catch (error) {
-
-        console.error('[DAILY]', error);
-
-        notify(
-            `Firebase: ${error.message}`,
-            true
-        );
-
-        return false;
-
-    } finally {
-
-        inProgress = false;
-
-        render();
-    }
-}
-
-
-/* ============================================================
-   07. JLPT / TOPIC SELECT
-============================================================ */
-
-async function refreshTargets(selected = '') {
-
-    const type =
-        $('dailyStudyMode')?.value || 'jlpt';
-
-    const target = $('dailyTarget');
-
-    if (!target) return;
-
-    if (type === 'jlpt') {
-
-        const levels = [
-            'n5', 'n4', 'n3', 'n2', 'n1'
-        ];
-
-        target.replaceChildren(
-            ...levels.map(level =>
-                new Option(
-                    level.toUpperCase(),
-                    level
-                )
-            )
-        );
-
-    } else {
-
-        // Lấy danh sách topic từ lobby.js.
-        const module = await import('./lobby.js');
-
-        const topics = module.topics || [];
-
-        target.replaceChildren(
-            ...topics.map(topic =>
-                new Option(
-                    topic.name,
-                    topic.id
-                )
-            )
-        );
-    }
-
-    if (
-        [...target.options].some(
-            option => option.value === selected
-        )
-    ) {
-        target.value = selected;
-    }
-}
-
-
-/* ============================================================
-   08. START / CHANGE GOAL / CHANGE SOURCE
-
-   Người học có thể:
-
-   - Đổi mục tiêu 5–100.
-   - Đổi JLPT N1–N5.
-   - Đổi chủ đề.
-   - Giữ lịch sử từ đã hoàn thành.
-   - Tạm lưu bài học của bộ cũ.
-============================================================ */
-
-async function startMission() {
-
-    if (inProgress) return;
-
-    const type =
-        $('dailyStudyMode')?.value || 'jlpt';
-
-    const target =
-        $('dailyTarget')?.value || 'n5';
-
-    const goal = Number(
-        $('dailyGoalInput')?.value
-    );
-
-    if (
-        !Number.isInteger(goal) ||
-        goal < MIN_GOAL ||
-        goal > MAX_GOAL
-    ) {
-
-        notify(
-            'Chỉ tiêu phải là số nguyên từ 5 đến 100.',
-            true
-        );
-
-        return;
-    }
-
-    const old = currentMission();
-
-    const changingSource =
-        old &&
-        (
-            old.type !== type ||
-            old.target !== target
-        );
-
-    if (
-        changingSource &&
-        !confirm(
-            'Đổi bộ từ? Tiến độ bộ đang học sẽ được lưu để tiếp tục sau.'
-        )
-    ) {
-        return;
-    }
-
-    try {
-
-        notify('Đang tải bộ từ...');
-
-        const list = await loadVocabulary(
-            type,
-            target
-        );
-
-        const ids = availableWordIds(
-            list,
-            data,
-            currentDay(),
-            type,
-            target
-        );
-
-        const changed = await save(
-            (profile, day) => {
-
-                profile.goal = goal;
-
-                day.pausedMissions ||= {};
-
-                const chosen = sourceKey(
-                    type,
-                    target
-                );
-
-                const same =
-                    day.mission?.type === type &&
-                    day.mission?.target === target;
-
-                /* ----------------------------------------
-                   Nếu đang học bộ A và đổi sang B,
-                   tạm lưu tiến độ bộ A.
-                ----------------------------------------- */
-
-                if (
-                    !same &&
-                    day.mission
-                ) {
-
-                    const previousKey = sourceKey(
-                        day.mission.type,
-                        day.mission.target
-                    );
-
-                    day.pausedMissions[previousKey] =
-                        day.mission;
-                }
-
-                /* ----------------------------------------
-                   Khôi phục tiến độ cũ nếu có.
-                ----------------------------------------- */
-
-                const previous = same
-                    ? day.mission
-                    : day.pausedMissions[chosen];
-
-                const m = previous || {
-
-                    type,
-                    target,
-
-                    stage: 'between',
-
-                    batch: [],
-                    cursor: 0,
-
-                    review: {},
-                    quizResults: {},
-
-                    feedback: null,
-                    summary: null,
-
-                    round: 0
-
-                };
-
-                m.type = type;
-                m.target = target;
-                m.goal = goal;
-
-                /* ----------------------------------------
-                   Hàng chờ được tạo theo thứ tự ID.
-                   Không chèn lại từ đang nằm trong batch.
-                ----------------------------------------- */
-
-                m.queue = ids.filter(
-                    id => !m.batch?.includes(id)
-                );
-
-                /* ----------------------------------------
-                   Nếu đủ mục tiêu thì hoàn thành ngày.
-                ----------------------------------------- */
-
-                if (
-                    remainingGoal(day, profile) <= 0
-                ) {
-
-                    m.stage = 'done';
-                    m.batch = [];
-
-                } else if (
-                    ['done', 'exhausted'].includes(m.stage)
-                ) {
-
-                    m.stage = 'between';
-                    m.batch = [];
-                }
-
-                day.mission = m;
-
-                delete day.pausedMissions[chosen];
-            }
-        );
-
-        if (!changed) return;
-
-        resetQuestion();
-
-        await prepareBatch();
-
-    } catch (error) {
-
-        notify(
-            error.message,
-            true
-        );
-    }
-}
-
-
-/* ============================================================
-   09. PREPARE BATCH
-
-   Ví dụ còn 25 từ:
-
-   Batch 1: 10
-   Batch 2: 10
-   Batch 3: 5
-
-   Nếu chỉ còn 2 từ:
-   Batch = 2
-
-   Không ép đủ 10 từ.
-============================================================ */
-
-async function prepareBatch() {
-
-    const m = currentMission();
-
-    if (
-        !m ||
-        inProgress ||
-        m.batch?.length ||
-        !['between', 'exhausted'].includes(m.stage)
-    ) {
-        return;
-    }
-
-    await save((profile, day) => {
-
-        const x = day.mission;
-
-        if (
-            !x ||
-            x.batch?.length
-        ) {
-            return;
-        }
-
-        const key = sourceKey(
-            x.type,
-            x.target
-        );
-
-        const completed =
-            day.completed?.[key] || {};
-
-        /* ----------------------------------------
-           Loại từ đã hoàn thành.
-        ----------------------------------------- */
-
-        x.queue = (
-            x.queue || []
-        ).filter(
-            id => !completed[keyForId(id)]
-        );
-
-        /* ----------------------------------------
-           Chỉ lấy tối đa 10 từ.
-
-           Danh sách queue đã có thứ tự ID.
-        ----------------------------------------- */
-
-        x.batch = x.queue.slice(
-            0,
-            Math.min(
-                BATCH_SIZE,
-                remainingGoal(day, profile)
-            )
-        );
-
-        x.cursor = 0;
-
-        x.review = {};
-        x.quizResults = {};
-
-        x.feedback = null;
-        x.summary = null;
-
-        x.stage = x.batch.length
-            ? 'flashcard'
-            : 'exhausted';
-    });
-}
-
-
-/* ============================================================
-   10. ENSURE SOURCE
-============================================================ */
-
-async function ensureSourceLoaded() {
-
-    const m = currentMission();
-
-    if (
-        !m ||
-        m.stage === 'done'
-    ) {
-        return;
-    }
-
-    if (
-        loadedKey === sourceKey(m.type, m.target) &&
-        vocabulary.length
-    ) {
-        return;
-    }
-
-    try {
-
-        await loadVocabulary(
-            m.type,
-            m.target
-        );
-
-        render();
-
-    } catch (error) {
-
-        notify(
-            error.message,
-            true
-        );
-    }
-}
-
-
-/* ============================================================
-   11. FLASHCARD
-
-   Người học:
-
-   1. Xem Kanji.
-   2. Hiện Hiragana và nghĩa.
-   3. Bấm đã thuộc.
-   4. Chuyển từ tiếp theo.
-
-   Khi tất cả đã thuộc → REVIEW.
-============================================================ */
-
-async function confirmFlashcard() {
-
-    const m = currentMission();
-
-    if (
-        !m ||
-        m.stage !== 'flashcard' ||
-        !cardRevealed
-    ) {
-        return;
-    }
-
-    resetQuestion();
-
-    await save((profile, day) => {
-
-        const x = day.mission;
-
-        if (
-            x.stage !== 'flashcard'
-        ) {
-            return;
-        }
-
-        x.cursor++;
-
-        /* ----------------------------------------
-           Khi học xong batch Flashcard,
-           chuyển sang Review.
-        ----------------------------------------- */
-
-        if (
-            x.cursor >= x.batch.length
-        ) {
-
-            x.stage = 'review';
-            x.cursor = 0;
-
-            x.review = {};
-        }
-    });
-}
-
-
-
-/* ============================================================
-   FIND NEXT REVIEW WORD
-
-   Ví dụ:
-   ID 1: 3/3 → Bỏ qua
-   ID 2: 1/3 → Tiếp tục
-   ID 3: 2/3 → Tiếp tục
-
-   Khi tất cả đạt 3/3 → trả về -1.
-============================================================ */
-
-function nextReviewPosition(m, cursor) {
-
-    const batch = m.batch || [];
-
-    if (!batch.length) {
-        return -1;
-    }
-
-    for (let i = 1; i <= batch.length; i++) {
-
-        const index =
-            (cursor + i) % batch.length;
-
-        const id = String(batch[index]);
-
-        const correctCount =
-            Number(m.review?.[id]) || 0;
-
-        if (correctCount < 3) {
-            return index;
-        }
-    }
-
-    return -1;
-}
-
-
-/* ============================================================
-   13. QUESTION ENGINE
-
-   Review:
-     Kanji → Meaning
-
-   Quiz:
-     Random 7 modes.
+   QUIZ:
+       7 chế độ ngẫu nhiên.
 
    Đáp án:
-     Random thứ tự.
-
-   Từ học:
-     Không random.
+       4 lựa chọn, vị trí ngẫu nhiên.
 ============================================================ */
 
-function buildQuestion(word, stage) {
+function makeQuestion(word, stage) {
 
     if (!word) return null;
 
-    const modes =
+    const candidates =
         stage === 'review'
-
             ? ['kanji_meaning']
+            : shuffle(MODES);
 
-            : randomize(MODES);
+    for (const mode of candidates) {
 
-    for (const mode of modes) {
-
-        const field = ANSWER_FIELD[mode];
-
-        let prompt;
+        const [
+            prompt,
+            field
+        ] = FIELD[mode];
 
         if (
-            mode.startsWith('audio_')
+            !word[prompt] ||
+            !word[field]
         ) {
-
-            prompt = '🔊';
-
-        } else if (
-            mode.startsWith('meaning_')
-        ) {
-
-            prompt = word.meaning;
-
-        } else if (
-            mode.startsWith('hiragana_')
-        ) {
-
-            prompt = word.reading;
-
-        } else {
-
-            prompt = word.word;
+            continue;
         }
 
-        const answer = word[field];
-
-        /* ----------------------------------------
-           Lấy đáp án nhiễu từ toàn bộ database,
-           không chỉ trong batch đang học.
-        ----------------------------------------- */
-
-        const other = [
+        const distractors = [
             ...new Set(
-                vocabulary
 
-                    .filter(
-                        item => item.id !== word.id
-                    )
-
-                    .map(
-                        item => item[field]
-                    )
-
-                    .filter(
-                        value =>
-                            value &&
-                            value !== answer
-                    )
+                words.filter(
+                    w => w.id !== word.id
+                ).map(
+                    w => w[field]
+                ).filter(
+                    value =>
+                        value &&
+                        value !== word[field]
+                )
             )
         ];
 
-        if (
-            other.length < 3 ||
-            !prompt ||
-            !answer
-        ) {
+        if (distractors.length < 3) {
             continue;
         }
 
         return {
 
             id: word.id,
-
             mode,
-            prompt,
-            answer,
 
-            options: randomize([
-                answer,
-                ...randomize(other).slice(0, 3)
+            ask: word[prompt],
+            answer: word[field],
+
+            choices: shuffle([
+                word[field],
+                ...shuffle(distractors).slice(0, 3)
             ])
         };
     }
@@ -1240,1026 +503,1271 @@ function buildQuestion(word, stage) {
 
 
 /* ============================================================
-   14. QUESTION CACHE
-
-   Giữ câu hỏi và thứ tự đáp án
-   khi giao diện cập nhật.
+   12. STREAK
 ============================================================ */
 
-function getQuestion(m) {
-
-    const id = m.batch[m.cursor];
-
-    const signature = [
-
-        vietnamDate(),
-
-        m.type,
-        m.target,
-
-        m.stage,
-        m.round,
-
-        m.cursor,
-        id,
-
-        m.review?.[id] || 0
-
-    ].join(':');
+function streakFor(profile, date) {
 
     if (
-        !cachedQuestion ||
-        cachedQuestionKey !== signature
+        profile.lastCheckin === date ||
+        profile.lastCheckin === yday(date)
     ) {
-
-        cachedQuestion = buildQuestion(
-            currentWord(id),
-            m.stage
-        );
-
-        cachedQuestionKey = signature;
+        return Number(profile.streak) || 0;
     }
 
-    /* ----------------------------------------
-       Nếu đã chọn đáp án, khôi phục feedback
-       và thứ tự lựa chọn đã lưu.
-    ----------------------------------------- */
+    return 0;
+}
+
+
+/* Chỉ đánh dấu khi đạt mục tiêu. */
+
+function markDayDone(profile, date) {
+
+    const d = profile.days[date];
 
     if (
-        m.feedback &&
-        cachedQuestion
+        !d ||
+        d.mission?.stage !== 'done' ||
+        dayCompleted(d) < clamp(profile.goal)
     ) {
-
-        cachedQuestion.mode =
-            m.feedback.mode;
-
-        cachedQuestion.prompt =
-            m.feedback.prompt;
-
-        cachedQuestion.answer =
-            m.feedback.answer;
-
-        cachedQuestion.options =
-            m.feedback.options;
+        return;
     }
 
-    return cachedQuestion;
+    d.missionDone = true;
+
+    if (d.checked) return;
+
+    d.checked = true;
+
+    profile.streak =
+        profile.lastCheckin === yday(date)
+            ? (Number(profile.streak) || 0) + 1
+            : 1;
+
+    profile.lastCheckin = date;
 }
 
 
 /* ============================================================
-   15. ANSWER QUESTION
+   13. FIREBASE TRANSACTION
 
-   Review:
-     Đúng +1
-     Sai +0
+   dailyProgress/{uid}
 
-   Quiz:
-     Đúng / Sai được lưu kết quả.
-
-   Không chuyển câu ngay sau khi chọn.
+   Giữ history, completed và streak.
 ============================================================ */
+
+async function update(change) {
+
+    const currentUid =
+        auth.currentUser?.uid;
+
+    if (
+        !currentUid ||
+        busy
+    ) {
+        return false;
+    }
+
+    busy = true;
+    render();
+
+    const date = today();
+
+    try {
+
+        const result = await runTransaction(
+
+            ref(
+                db,
+                `dailyProgress/${currentUid}`
+            ),
+
+            raw => {
+
+                const s =
+                    raw &&
+                    typeof raw === 'object'
+                        ? raw
+                        : {};
+
+                s.goal = clamp(s.goal);
+
+                s.days ||= {};
+                s.learned ||= {};
+
+                const d = s.days[date] || {};
+
+                d.completed ||= {};
+
+                s.days[date] = d;
+
+                change(s, d, date);
+
+                markDayDone(s, date);
+
+                return s;
+            },
+
+            {
+                applyLocally: false
+            }
+        );
+
+        if (!result.committed) {
+            return false;
+        }
+
+        if (
+            auth.currentUser?.uid === currentUid
+        ) {
+
+            state =
+                result.snapshot.val() || state;
+
+            render();
+        }
+
+        return true;
+
+    } catch (error) {
+
+        console.error('[DAILY]', error);
+
+        message(
+            'Firebase: ' + error.message,
+            true
+        );
+
+        return false;
+
+    } finally {
+
+        busy = false;
+        render();
+    }
+}
 
 
 /* ============================================================
-   DAILY - ANSWER QUESTION
-
-   REVIEW:
-   - Đúng: cộng 1 lượt.
-   - Sai: giữ nguyên số lượt đã đúng.
-   - Lưu kết quả và chờ người học bấm NEXT.
-
-   QUIZ:
-   - Lưu đáp án và trạng thái đúng/sai.
+   14. SOURCE SELECTION
 ============================================================ */
 
-async function chooseAnswer(selected) {
+async function topicsOptions() {
 
-    if (inProgress) return;
+    const {
+        topics
+    } = await import('./lobby.js');
 
-    const m = currentMission();
+    return Array.isArray(topics)
+        ? topics
+        : [];
+}
 
-    if (!m) return;
+
+async function updateTargets(preferred = '') {
+
+    const target =
+        $('dailyTarget');
+
+    const type =
+        $('dailyStudyMode')?.value || 'jlpt';
+
+    if (!target) return;
+
+    if (type === 'jlpt') {
+
+        target.replaceChildren(
+            ...[
+                'n5', 'n4', 'n3', 'n2', 'n1'
+            ].map(
+                n => new Option(
+                    n.toUpperCase(),
+                    n
+                )
+            )
+        );
+
+    } else {
+
+        try {
+
+            const list = await topicsOptions();
+
+            target.replaceChildren(
+                ...list.map(
+                    t => new Option(
+                        t.name,
+                        t.id
+                    )
+                )
+            );
+
+        } catch (error) {
+
+            message(
+                'Không đọc được danh sách chủ đề.',
+                true
+            );
+        }
+    }
 
     if (
-        m.stage !== 'review' &&
-        m.stage !== 'quiz'
+        preferred &&
+        [...target.options].some(
+            o => o.value === preferred
+        )
+    ) {
+        target.value = preferred;
+    }
+}
+
+
+/* ============================================================
+   15. CHOOSE NEW WORDS
+
+   - ID 1 -> hết bộ.
+   - Bỏ qua từ đã thuộc.
+   - Không random.
+============================================================ */
+
+function chooseNewIds(
+    list,
+    s,
+    d,
+    type,
+    target
+) {
+
+    const key = sourceKey(
+        type,
+        target
+    );
+
+    const doneToday =
+        d.completed?.[key] || {};
+
+    const known =
+        s.learned?.[key] || {};
+
+    return list.filter(
+        w =>
+
+            !known[wordKey(w.id)] &&
+            !doneToday[wordKey(w.id)]
+
+    ).sort(
+        (a, b) => compareIds(a.id, b.id)
+    ).map(
+        w => w.id
+    );
+}
+
+
+/* ============================================================
+   16. START / CHANGE GOAL
+
+   Lưu mục tiêu -> thu gọn form.
+
+   Đổi bộ:
+   Lưu tiến độ của bộ trước.
+============================================================ */
+
+async function startMission() {
+
+    if (busy) return;
+
+    const type =
+        $('dailyStudyMode')?.value || 'jlpt';
+
+    const target =
+        $('dailyTarget')?.value || 'n5';
+
+    const n = Number(
+        $('dailyGoalInput')?.value
+    );
+
+    if (
+        !Number.isInteger(n) ||
+        n < MIN_GOAL ||
+        n > MAX_GOAL
+    ) {
+
+        message(
+            'Mục tiêu phải là số nguyên từ 5 đến 100.',
+            true
+        );
+
+        return;
+    }
+
+    const current = mission();
+
+    const different =
+        !!current &&
+        (
+            current.type !== type ||
+            current.target !== target
+        );
+
+    if (
+        different &&
+        !confirm(
+            'Đổi bộ từ sẽ lưu tiến độ bộ cũ. Tiếp tục?'
+        )
     ) {
         return;
     }
 
-    // Không cho trả lời lại câu đã chọn.
-    if (m.feedback) return;
+    try {
 
-    const q = getQuestion(m);
+        message('Đang tải bộ từ...');
 
-    if (!q) {
-        notify(
-            'Không tạo được câu hỏi Review.',
+        const list = await loadWords(
+            type,
+            target
+        );
+
+        const selected = chooseNewIds(
+            list,
+            state,
+            day(),
+            type,
+            target
+        );
+
+        const changed = await update(
+            (s, d) => {
+
+                s.goal = n;
+
+                d.missionDone =
+                    dayCompleted(d) >= n;
+
+                d.pausedMissions ||= {};
+
+                const sk = sourceKey(
+                    type,
+                    target
+                );
+
+                const keep =
+                    d.mission &&
+                    d.mission.type === type &&
+                    d.mission.target === target;
+
+                /* Tiếp tục bộ đang học. */
+
+                if (keep) {
+
+                    d.mission.goal = n;
+                    d.mission.queue = selected;
+
+                    if (
+                        dayCompleted(d) >= n
+                    ) {
+
+                        d.mission.stage = 'done';
+                        d.mission.batch = [];
+
+                    } else if (
+                        ['done', 'exhausted'].includes(
+                            d.mission.stage
+                        )
+                    ) {
+
+                        d.mission.stage = 'between';
+                        d.mission.batch = [];
+                        d.mission.queue = selected;
+                    }
+
+                    return;
+                }
+
+                /* Tạm lưu bộ trước. */
+
+                if (d.mission) {
+
+                    const oldKey = sourceKey(
+                        d.mission.type,
+                        d.mission.target
+                    );
+
+                    d.pausedMissions[oldKey] =
+                        d.mission;
+                }
+
+                /* Khôi phục bộ nếu có. */
+
+                const resumed =
+                    d.pausedMissions[sk];
+
+                d.mission = resumed || {
+
+                    type,
+                    target,
+                    goal: n,
+
+                    queue: selected,
+
+                    stage:
+                        dayCompleted(d) >= n
+                            ? 'done'
+                            : 'between',
+
+                    batch: [],
+                    cursor: 0,
+
+                    review: {},
+                    quizResults: {},
+
+                    feedback: null,
+                    round: 0,
+                    summary: null
+                };
+
+                d.mission.goal = n;
+
+                d.mission.queue =
+                    selected.filter(
+                        id =>
+                            !d.mission.batch?.some(
+                                b =>
+                                    String(b) === String(id)
+                            )
+                    );
+
+                if (
+                    dayCompleted(d) >= n
+                ) {
+
+                    d.mission.stage = 'done';
+                    d.mission.batch = [];
+
+                } else if (
+                    ['done', 'exhausted'].includes(
+                        d.mission.stage
+                    )
+                ) {
+
+                    d.mission.stage = 'between';
+                    d.mission.batch = [];
+                    d.mission.queue = selected;
+                }
+
+                delete d.pausedMissions[sk];
+            }
+        );
+
+        if (!changed) return;
+
+        /* Thu gọn form mục tiêu. */
+
+        setupCollapsed = true;
+
+        revealed = false;
+        question = null;
+        questionSig = '';
+
+        await nextBatch();
+
+    } catch (error) {
+
+        message(
+            error.message,
             true
         );
+    }
+}
+
+
+/* ============================================================
+   17. PREPARE NEXT BATCH
+
+   Nhóm tối đa 10 từ.
+
+   Nếu còn 2 từ -> học đúng 2 từ.
+============================================================ */
+
+async function nextBatch() {
+
+    const m = mission();
+
+    if (
+        !m ||
+        busy ||
+        m.stage === 'done' ||
+        m.stage === 'exhausted' ||
+        m.batch?.length
+    ) {
         return;
     }
 
-    const wordId = String(q.id);
+    const n = remaining(
+        day(),
+        state
+    );
+
+    if (n <= 0) return;
+
+    await update(
+        (s, d) => {
+
+            const x = d.mission;
+
+            if (
+                !x ||
+                x.batch?.length
+            ) {
+                return;
+            }
+
+            const sk = sourceKey(
+                x.type,
+                x.target
+            );
+
+            const selected =
+                d.completed?.[sk] || {};
+
+            x.queue = (
+                x.queue || []
+            ).filter(
+                id =>
+                    !selected[wordKey(id)]
+            );
+
+            const slice = x.queue.slice(
+                0,
+                Math.min(
+                    BATCH,
+                    remaining(d, s)
+                )
+            );
+
+            if (!slice.length) {
+
+                x.stage = 'exhausted';
+
+                return;
+            }
+
+            x.batch = slice;
+            x.cursor = 0;
+
+            x.stage = 'flashcard';
+
+            x.review = {};
+            x.quizResults = {};
+
+            x.feedback = null;
+            x.summary = null;
+        }
+    );
+}
+
+
+/* ============================================================
+   18. RESUME SOURCE
+============================================================ */
+
+async function resumeSource() {
+
+    const m = mission();
+
+    if (
+        !m ||
+        m.stage === 'done'
+    ) {
+        return;
+    }
+
+    if (
+        loadedSource === sourceKey(
+            m.type,
+            m.target
+        ) &&
+        words.length
+    ) {
+        return;
+    }
+
+    try {
+
+        await loadWords(
+            m.type,
+            m.target
+        );
+
+        renderStudy();
+
+    } catch (error) {
+
+        message(
+            error.message,
+            true
+        );
+    }
+}
+
+
+/* ============================================================
+   19. FLASHCARD
+
+   Chỉ chuyển khi đã hiện đáp án
+   và bấm Đã thuộc.
+============================================================ */
+
+async function known() {
+
+    const m = mission();
+
+    if (
+        !m ||
+        m.stage !== 'flashcard' ||
+        !revealed
+    ) {
+        return;
+    }
+
+    revealed = false;
+    question = null;
+    questionSig = '';
+
+    await update(
+        (s, d) => {
+
+            const x = d.mission;
+
+            if (
+                x?.stage !== 'flashcard'
+            ) {
+                return;
+            }
+
+            x.cursor++;
+
+            if (
+                x.cursor >= x.batch.length
+            ) {
+
+                x.cursor = 0;
+                x.stage = 'review';
+
+                x.review ||= {};
+            }
+        }
+    );
+}
+
+
+/* ============================================================
+   20. REVIEW NEXT INDEX
+
+   REVIEW:
+   Đúng 3 lần cộng dồn.
+
+   Sai không reset lượt đúng.
+============================================================ */
+
+function nextReviewIndex(m, after) {
+
+    for (
+        let i = 1;
+        i <= m.batch.length;
+        i++
+    ) {
+
+        const at =
+            (after + i) % m.batch.length;
+
+        const id = m.batch[at];
+
+        if (
+            (Number(m.review?.[id]) || 0) < 3
+        ) {
+            return at;
+        }
+    }
+
+    return -1;
+}
+
+
+/* ============================================================
+   21. ANSWER QUESTION
+
+   Sau khi bấm:
+   1. Đọc từ ngay.
+   2. Lưu Firebase.
+   3. Hiện kết quả.
+   4. Đợi bấm NEXT.
+============================================================ */
+
+async function answer(choice) {
+
+    const m = mission();
+    const q = question;
+
+    if (
+        !m ||
+        !q ||
+        busy ||
+        m.feedback ||
+        !['review', 'quiz'].includes(m.stage) ||
+        String(m.batch[m.cursor]) !== String(q.id)
+    ) {
+        return;
+    }
 
     const correct =
-        String(selected) === String(q.answer);
+        choice === q.answer;
+
+    const mode = q.mode;
+
+    /* Phát âm ngay trong sự kiện click. */
+
+    speak(getWord(q.id));
 
     const expectedStage = m.stage;
     const expectedCursor = m.cursor;
 
-    // Lưu lại câu hỏi trước khi ghi Firebase.
-    const feedback = {
+    await update(
+        (s, d) => {
 
-        id: wordId,
+            const x = d.mission;
 
-        selected: String(selected),
-        correct,
+            if (
+                !x ||
+                x.feedback ||
+                x.stage !== expectedStage ||
+                x.cursor !== expectedCursor ||
+                String(x.batch[x.cursor]) !== String(q.id)
+            ) {
+                return;
+            }
 
-        mode: q.mode,
-        prompt: q.prompt,
-        answer: q.answer,
+            x.feedback = {
 
-        options: [...q.options]
-    };
+                id: q.id,
 
-    const saved = await save((profile, day) => {
+                selected: choice,
+                answer: q.answer,
 
-        const x = day.mission;
-
-        // Tránh ghi vào câu khác nếu tiến độ đã thay đổi.
-        if (
-            !x ||
-            x.stage !== expectedStage ||
-            x.cursor !== expectedCursor ||
-            String(x.batch?.[x.cursor]) !== wordId ||
-            x.feedback
-        ) {
-            return;
-        }
-
-        // Firebase lưu kết quả để hiển thị feedback.
-        x.feedback = feedback;
-
-        /* ==========================================
-           REVIEW - 3 LẦN ĐÚNG
-        ========================================== */
-
-        if (x.stage === 'review') {
-
-            x.review ||= {};
-
-            const previous =
-                Number(x.review[wordId]) || 0;
-
-            // Sai sẽ cộng 0, không reset.
-            x.review[wordId] = Math.min(
-                3,
-                previous + (correct ? 1 : 0)
-            );
-        }
-
-        /* ==========================================
-           QUIZ - LƯU KẾT QUẢ
-        ========================================== */
-
-        if (x.stage === 'quiz') {
-
-            x.quizResults ||= {};
-
-            x.quizResults[wordId] = {
-
-                id: wordId,
+                mode,
                 correct,
 
-                selected: String(selected),
-                answer: q.answer,
-                mode: q.mode
+                choices: q.choices,
+                ask: q.ask
             };
-        }
-    });
 
-    if (!saved) {
+            if (x.stage === 'review') {
 
-        console.error(
-            '[DAILY] Không lưu được đáp án',
-            {
-                stage: expectedStage,
-                wordId,
-                selected
+                x.review ||= {};
+
+                /* Sai cộng 0, không reset. */
+
+                x.review[q.id] = Math.min(
+                    3,
+
+                    (Number(x.review[q.id]) || 0) +
+                    (correct ? 1 : 0)
+                );
+
+            } else if (
+                x.stage === 'quiz'
+            ) {
+
+                x.quizResults ||= {};
+
+                x.quizResults[q.id] = {
+
+                    correct,
+                    selected: choice,
+
+                    answer: q.answer,
+                    mode
+                };
             }
-        );
-
-        return;
-    }
-
-    // Đã lưu thành công: hiển thị đáp án và nút NEXT.
-    renderStudy();
+        }
+    );
 }
 
 
-
 /* ============================================================
-   16. NEXT QUESTION
+   22. NEXT QUESTION
 
-   Người dùng tự bấm Next.
+   REVIEW:
+       Đủ 3 lượt đúng cho tất cả -> QUIZ.
 
-   Review:
-     Chuyển sang từ chưa đủ 3 lần đúng.
-
-   Quiz:
-     Chuyển sang từ kế tiếp.
-
-   Hết Quiz:
-     Tổng hợp kết quả.
+   QUIZ:
+       Hết batch -> SUMMARY.
 ============================================================ */
 
 async function nextQuestion() {
 
-    const m = currentMission();
-
-    if (!m?.feedback) {
-        return;
-    }
-
-    resetQuestion();
-
-    await save((profile, day, date) => {
-
-        const x = day.mission;
-
-        if (
-            !x?.feedback
-        ) {
-            return;
-        }
-
-        x.feedback = null;
-
-              /* ============================================================
-            REVIEW NEXT
-         ============================================================ */
-         
-         if (x.stage === 'review') {
-         
-             const next = nextReviewPosition(
-                 x,
-                 x.cursor
-             );
-         
-             if (next === -1) {
-         
-                 // Tất cả từ đã trả lời đúng đủ 3 lần.
-                 x.stage = 'quiz';
-                 x.cursor = 0;
-                 x.quizResults = {};
-         
-             } else {
-         
-                 // Chuyển sang từ chưa đạt 3 lần đúng.
-                 x.cursor = next;
-             }
-         
-             return;
-         }
-
-        /* ====================================================
-           QUIZ NEXT
-        ==================================================== */
-
-        if (
-            x.stage !== 'quiz'
-        ) {
-            return;
-        }
-
-        x.cursor++;
-
-        if (
-            x.cursor < x.batch.length
-        ) {
-            return;
-        }
-
-        /* ----------------------------------------
-           TẤT CẢ CÂU QUIZ ĐÃ KẾT THÚC
-        ----------------------------------------- */
-
-        const results = x.batch.map(
-            id =>
-
-                x.quizResults[id] || {
-
-                    id,
-                    correct: false,
-                    selected: '',
-                    answer: '',
-                    mode: ''
-                }
-        );
-
-        const correct = results.filter(
-            result => result.correct
-        ).length;
-
-        const wrong =
-            results.length - correct;
-
-        x.summary = {
-
-            results,
-            correct,
-            wrong
-        };
-
-        x.stage = 'summary';
-        x.cursor = 0;
-
-        /* ====================================================
-           SAVE LEARNED WORDS
-        ==================================================== */
-
-        const sk = sourceKey(
-            x.type,
-            x.target
-        );
-
-        day.completed[sk] ||= {};
-        profile.learned[sk] ||= {};
-
-        /* ----------------------------------------
-           Chỉ từ đúng Quiz mới được chốt.
-        ----------------------------------------- */
-
-        for (
-            const result of results.filter(
-                item => item.correct
-            )
-        ) {
-
-            const word = currentWord(
-                result.id
-            );
-
-            if (!word) continue;
-
-            const key = keyForId(
-                result.id
-            );
-
-            day.completed[sk][key] = true;
-
-            const previous =
-                profile.learned[sk][key] || {};
-
-            profile.learned[sk][key] = {
-
-                ...word,
-
-                firstLearnedAt:
-                    previous.firstLearnedAt || date,
-
-                lastLearnedAt: date,
-
-                timesPassed:
-                    (Number(previous.timesPassed) || 0) + 1
-            };
-        }
-
-        /* ====================================================
-           SAVE QUIZ HISTORY
-        ==================================================== */
-
-        day.quizHistory ||= {};
-
-        const round =
-            (Number(day.quizRoundCount) || 0) + 1;
-
-        day.quizRoundCount = round;
-
-        day.quizHistory[`round_${round}`] = {
-
-            source: sk,
-
-            correct,
-            wrong,
-
-            results: results.map(result => ({
-
-                ...result,
-
-                word:
-                    currentWord(result.id)?.word ||
-                    result.id,
-
-                reading:
-                    currentWord(result.id)?.reading ||
-                    '',
-
-                meaning:
-                    currentWord(result.id)?.meaning ||
-                    ''
-            }))
-        };
-    });
-}
-
-
-/* ============================================================
-   17. AFTER SUMMARY
-
-   Từ đúng:
-     Đã hoàn thành.
-
-   Từ sai:
-     Flashcard → Review → Quiz.
-
-   Không còn từ sai:
-     Chuyển batch kế tiếp.
-
-   Đạt mục tiêu:
-     Done + Check-in.
-============================================================ */
-
-async function continueAfterSummary() {
-
-    const m = currentMission();
+    const m = mission();
 
     if (
-        m?.stage !== 'summary'
+        !m?.feedback ||
+        busy
     ) {
         return;
     }
 
-    const failed = (
-        m.summary?.results || []
-    )
-        .filter(
-            result => !result.correct
-        )
-        .map(
-            result => result.id
-        );
+    question = null;
+    questionSig = '';
 
-    resetQuestion();
+    await update(
+        (s, d) => {
 
-    await save((profile, day) => {
+            const x = d.mission;
 
-        const x = day.mission;
+            if (!x?.feedback) {
+                return;
+            }
 
-        if (
-            x?.stage !== 'summary'
-        ) {
-            return;
-        }
+            x.feedback = null;
 
-        x.summary = null;
-        x.feedback = null;
-
-        x.review = {};
-        x.quizResults = {};
-
-        x.cursor = 0;
-
-        x.round =
-            (Number(x.round) || 0) + 1;
-
-        /* ----------------------------------------
-           ĐÃ ĐỦ CHỈ TIÊU NGÀY
-        ----------------------------------------- */
-
-        if (
-            remainingGoal(day, profile) === 0
-        ) {
-
-            x.stage = 'done';
-            x.batch = [];
-
-        } else if (
-            failed.length
-        ) {
-
-            /* ------------------------------------
-               CHỈ TỪ SAI QUAY LẠI FLASHCARD
-            ------------------------------------- */
-
-            x.batch = failed;
-            x.stage = 'flashcard';
-
-        } else {
-
-            /* ------------------------------------
-               Chuyển nhóm từ kế tiếp.
-            ------------------------------------- */
-
-            x.batch = [];
-            x.stage = 'between';
-        }
-    });
-
-    await prepareBatch();
-}
-
-
-/* ============================================================
-   18. DASHBOARD DATA
-
-   Danh sách học được lưu theo bộ:
-
-   learned/
-       jlpt_n5/
-       jlpt_n4/
-       topic_animals/
-       ...
-============================================================ */
-
-function learnedRows() {
-
-    const rows = [];
-
-    for (
-        const [source, group]
-        of Object.entries(allLearned())
-    ) {
-
-        for (
-            const item
-            of Object.values(group || {})
-        ) {
+            /* ================================================
+               REVIEW
+            ================================================ */
 
             if (
-                item?.word
+                x.stage === 'review'
             ) {
 
-                rows.push({
-
-                    ...item,
-                    source
-
-                });
-            }
-        }
-    }
-
-    /* --------------------------------------------------------
-       Dashboard:
-       Sắp xếp theo bộ và ID.
-    -------------------------------------------------------- */
-
-    return rows.sort(
-        (a, b) =>
-
-            a.source.localeCompare(b.source) ||
-            sortIds(a.id, b.id)
-    );
-}
-
-
-/* ============================================================
-   19. CLEAR LEARNED HISTORY
-
-   Chỉ xóa một bộ từ đã chọn.
-
-   Ví dụ:
-   Xóa jlpt_n5:
-     Cho phép học N5 lại từ ID 1.
-
-   Không xóa dữ liệu các bộ khác.
-============================================================ */
-
-async function clearSource(source) {
-
-    if (
-        source === 'all'
-    ) {
-
-        notify(
-            'Hãy chọn một bộ từ cụ thể trước khi xóa lịch sử.',
-            true
-        );
-
-        return;
-    }
-
-    const count = learnedRows().filter(
-        word => word.source === source
-    ).length;
-
-    if (
-        !confirm(
-            `Xóa lịch sử ${count} từ đã học của bộ ${source}? Có thể học lại từ ID 1.`
-        )
-    ) {
-        return;
-    }
-
-    const ok = await save((profile, day) => {
-
-        /* ----------------------------------------
-           Xóa lịch sử từ đã học của bộ.
-        ----------------------------------------- */
-
-        delete profile.learned[source];
-
-        /* ----------------------------------------
-           Xóa tiến độ hôm nay của bộ,
-           không xóa lịch sử điểm danh ngày cũ.
-        ----------------------------------------- */
-
-        delete day.completed[source];
-
-        /* ----------------------------------------
-           Nếu đang học chính bộ đó:
-           reset nhiệm vụ hiện tại.
-        ----------------------------------------- */
-
-        if (
-            day.mission &&
-            sourceKey(
-                day.mission.type,
-                day.mission.target
-            ) === source
-        ) {
-
-            day.mission = null;
-        }
-
-        if (
-            day.pausedMissions
-        ) {
-
-            delete day.pausedMissions[source];
-        }
-    });
-
-    if (
-        ok
-    ) {
-
-        resetQuestion();
-
-        notify(
-            `Đã xóa lịch sử bộ ${source}. Chọn lại bộ để bắt đầu từ ID 1.`
-        );
-    }
-}
-
-
-/* ============================================================
-   20. RENDER HISTORY TABLE
-
-   Các cột:
-
-   Bộ / ID / Kanji / Hiragana /
-   Nghĩa / Ngày học / Âm thanh
-============================================================ */
-
-function renderHistoryRows() {
-
-    const tbody = $('dailyHistoryRows');
-
-    if (!tbody) return;
-
-    tbody.replaceChildren();
-
-    const q = searchText.toLowerCase();
-
-    const rows = learnedRows().filter(
-        word => {
-
-            const sameSource =
-
-                filterSource === 'all' ||
-                word.source === filterSource;
-
-            const matchSearch =
-
-                !q ||
-
-                [
-                    word.id,
-                    word.word,
-                    word.reading,
-                    word.meaning
-                ].some(
-                    value =>
-                        String(value || '')
-                            .toLowerCase()
-                            .includes(q)
+                const next = nextReviewIndex(
+                    x,
+                    x.cursor
                 );
 
-            return sameSource && matchSearch;
+                if (next < 0) {
+
+                    x.stage = 'quiz';
+                    x.cursor = 0;
+                    x.quizResults = {};
+
+                } else {
+
+                    x.cursor = next;
+                }
+
+                return;
+            }
+
+            /* ================================================
+               QUIZ
+            ================================================ */
+
+            if (
+                x.stage !== 'quiz'
+            ) {
+                return;
+            }
+
+            x.cursor++;
+
+            if (
+                x.cursor < x.batch.length
+            ) {
+                return;
+            }
+
+            /* ================================================
+               QUIZ SUMMARY
+            ================================================ */
+
+            const results = x.batch.map(
+                id => ({
+
+                    id,
+
+                    ...(
+                        x.quizResults?.[id] ||
+                        {
+                            correct: false
+                        }
+                    )
+                })
+            );
+
+            const correct = results.filter(
+                r => r.correct
+            ).length;
+
+            const wrong =
+                results.length - correct;
+
+            x.summary = {
+                results,
+                correct,
+                wrong
+            };
+
+            /* ================================================
+               SAVE LEARNED WORDS
+            ================================================ */
+
+            const sk = sourceKey(
+                x.type,
+                x.target
+            );
+
+            d.completed[sk] ||= {};
+            s.learned[sk] ||= {};
+
+            for (
+                const r of results.filter(
+                    item => item.correct
+                )
+            ) {
+
+                const item = getWord(r.id);
+
+                if (!item) continue;
+
+                const key = wordKey(
+                    r.id
+                );
+
+                d.completed[sk][key] = true;
+
+                const previous =
+                    s.learned[sk][key] || {};
+
+                s.learned[sk][key] = {
+
+                    ...item,
+
+                    firstLearnedAt:
+                        previous.firstLearnedAt || today(),
+
+                    lastLearnedAt:
+                        today(),
+
+                    timesPassed:
+                        (Number(previous.timesPassed) || 0) + 1
+                };
+            }
+
+            /* ================================================
+               SAVE QUIZ HISTORY
+            ================================================ */
+
+            d.quizHistory ||= {};
+
+            const no =
+                (Number(d.quizRoundCount) || 0) + 1;
+
+            d.quizRoundCount = no;
+
+            d.quizHistory[`round_${no}`] = {
+
+                source: sk,
+
+                correct,
+                wrong,
+
+                results: results.map(
+                    r => ({
+
+                        id: r.id,
+
+                        correct: !!r.correct,
+
+                        selected: r.selected || '',
+                        answer: r.answer || '',
+                        mode: r.mode || '',
+
+                        word:
+                            getWord(r.id)?.word || r.id,
+
+                        reading:
+                            getWord(r.id)?.reading || '',
+
+                        meaning:
+                            getWord(r.id)?.meaning || ''
+                    })
+                )
+            };
+
+            x.stage = 'summary';
+            x.cursor = 0;
         }
     );
-
-    $('dailyHistoryCount').textContent =
-        `${rows.length} từ`;
-
-    /* --------------------------------------------------------
-       Giới hạn 500 dòng hiển thị để nhẹ UI.
-
-       Lịch sử Firebase vẫn được giữ đầy đủ.
-    -------------------------------------------------------- */
-
-    for (
-        const word of rows.slice(0, 500)
-    ) {
-
-        const tr = element('tr');
-
-        const columns = [
-
-            word.source,
-            word.id,
-            word.word,
-            word.reading,
-            word.meaning,
-            word.lastLearnedAt || '—'
-
-        ];
-
-        for (
-            const value of columns
-        ) {
-
-            tr.append(
-                element(
-                    'td',
-                    '',
-                    value
-                )
-            );
-        }
-
-        /* ----------------------------------------
-           PLAY SOUND BUTTON
-        ----------------------------------------- */
-
-        const sound = element('td');
-
-        sound.append(
-            action(
-                '🔊',
-
-                () => sayJapanese(word),
-
-                'daily-mini-button'
-            )
-        );
-
-        tr.append(sound);
-
-        tbody.append(tr);
-    }
 }
 
 
 /* ============================================================
-   21. RENDER DASHBOARD
+   23. AFTER SUMMARY
 
-   - Tổng số từ đã học.
-   - Quiz hôm nay.
-   - Filter theo bộ.
-   - Tìm kiếm.
-   - Clear history.
+   Từ sai -> Flashcard -> Review -> Quiz.
+
+   Từ đúng -> đã chốt.
+
+   Đủ mục tiêu -> Done.
 ============================================================ */
 
-function renderDashboard() {
+async function afterSummary() {
 
-    const rows = learnedRows();
-
-    $('dailyDashboardTotal').textContent =
-        `${rows.length} từ đã học`;
-
-    const sources = [
-        ...new Set(
-            rows.map(word => word.source)
-        )
-    ].sort();
-
-    const select = $('dailySourceFilter');
-
-    const previous = filterSource;
-
-    select.replaceChildren(
-        new Option(
-            'Tất cả bộ từ',
-            'all'
-        )
-    );
-
-    for (
-        const source of sources
-    ) {
-
-        const count = rows.filter(
-            word => word.source === source
-        ).length;
-
-        select.add(
-            new Option(
-                `${source} (${count})`,
-                source
-            )
-        );
-    }
+    const m = mission();
 
     if (
-        previous !== 'all' &&
-        !sources.includes(previous)
+        m?.stage !== 'summary' ||
+        busy
     ) {
-
-        filterSource = 'all';
-
-    } else {
-
-        filterSource = previous;
+        return;
     }
 
-    select.value = filterSource;
+    const failed =
+        m.summary?.results
+            ?.filter(r => !r.correct)
+            .map(r => r.id) || [];
 
-    /* --------------------------------------------------------
-       Chỉ bật Clear khi chọn một bộ từ cụ thể.
-    -------------------------------------------------------- */
+    await update(
+        (s, d) => {
 
-    $('dailyClearButton').disabled =
-        inProgress ||
-        filterSource === 'all';
+            const x = d.mission;
 
-    /* --------------------------------------------------------
-       QUIZ STATS TODAY
-    -------------------------------------------------------- */
+            if (
+                x?.stage !== 'summary'
+            ) {
+                return;
+            }
 
-    const rounds = Object.values(
-        currentDay().quizHistory || {}
+            x.summary = null;
+            x.feedback = null;
+
+            x.review = {};
+            x.quizResults = {};
+
+            x.cursor = 0;
+            x.round =
+                (Number(x.round) || 0) + 1;
+
+            if (
+                dayCompleted(d) >= clamp(s.goal)
+            ) {
+
+                x.batch = [];
+                x.stage = 'done';
+
+                return;
+            }
+
+            if (failed.length) {
+
+                x.batch = failed;
+                x.stage = 'flashcard';
+
+            } else {
+
+                x.batch = [];
+                x.stage = 'between';
+            }
+        }
     );
 
-    const right = rounds.reduce(
-        (sum, round) =>
-
-            sum + (
-                Number(round.correct) || 0
-            ),
-
-        0
-    );
-
-    const wrong = rounds.reduce(
-        (sum, round) =>
-
-            sum + (
-                Number(round.wrong) || 0
-            ),
-
-        0
-    );
-
-    const percent =
-        right + wrong
-
-            ? Math.round(
-                100 * right / (right + wrong)
-            )
-
-            : 0;
-
-    $('dailyDashboardQuiz').textContent =
-
-        `Quiz hôm nay: ${right} đúng · ${wrong} sai · ${percent}%`;
-
-    renderHistoryRows();
+    if (!failed.length) {
+        await nextBatch();
+    }
 }
 
 
 /* ============================================================
-   22. RENDER LEARNING
+   24. DOM HELPERS
+============================================================ */
 
-   Màn hình động:
+function el(tag, className, value) {
 
-   - Chưa bắt đầu
-   - Flashcard
-   - Review
-   - Quiz
-   - Summary
-   - Hết bộ
-   - Hoàn thành ngày
+    const e = document.createElement(
+        tag
+    );
+
+    if (className) {
+        e.className = className;
+    }
+
+    if (value !== undefined) {
+        e.textContent = value;
+    }
+
+    return e;
+}
+
+
+function button(
+    label,
+    callback,
+    className = 'daily-button daily-wide'
+) {
+
+    const b = el(
+        'button',
+        className,
+        label
+    );
+
+    b.type = 'button';
+    b.disabled = busy;
+
+    b.addEventListener(
+        'click',
+        callback
+    );
+
+    return b;
+}
+
+
+/* ============================================================
+   25. RENDER STUDY
 ============================================================ */
 
 function renderStudy() {
 
     const root = $('dailyStudy');
+    const m = mission();
 
     if (!root) return;
 
     root.replaceChildren();
 
-    const m = currentMission();
-
-    /* --------------------------------------------------------
-       CHƯA CÓ NHIỆM VỤ
-    -------------------------------------------------------- */
+    /* ================================================
+       NO MISSION
+    ================================================ */
 
     if (!m) {
 
         root.append(
-            element(
+            el(
                 'p',
                 'daily-muted',
-                'Chọn nguồn học và đặt mục tiêu để bắt đầu.'
+
+                'Chọn JLPT hoặc Chủ đề, đặt mục tiêu rồi bấm Bắt đầu.'
             )
         );
 
         return;
     }
 
-    /* --------------------------------------------------------
-       HOÀN THÀNH MỤC TIÊU NGÀY
-    -------------------------------------------------------- */
+    /* ================================================
+       DAILY COMPLETE
+    ================================================ */
 
     if (
+        day().missionDone ||
         m.stage === 'done'
     ) {
 
+        const rounds = Object.values(
+            day().quizHistory || {}
+        );
+
+        const right = rounds.reduce(
+            (n, r) => n + (r.correct || 0),
+            0
+        );
+
+        const wrong = rounds.reduce(
+            (n, r) => n + (r.wrong || 0),
+            0
+        );
+
+        const total = right + wrong;
+
         root.append(
-            element(
-                'h3',
+
+            el(
+                'div',
                 'daily-finished',
-                '🏆 ĐÃ HOÀN THÀNH MỤC TIÊU NGÀY!'
+
+                '🏆 HOÀN THÀNH NHIỆM VỤ HÔM NAY!'
+            ),
+
+            el(
+                'p',
+                'daily-muted',
+
+                `Đã hoàn thành ${dayCompleted(day())} từ.`
+            ),
+
+            el(
+                'div',
+                'daily-summary-numbers',
+
+                `Quiz: ${total} lượt · Đúng ${right} · Sai ${wrong} · ${total ? Math.round(right * 100 / total) : 0}%`
             )
         );
 
         return;
     }
 
-    /* --------------------------------------------------------
-       ĐÃ HỌC HẾT BỘ TỪ
-
-       Chỉ còn 2 từ → học 2 từ → hết bộ.
-
-       Có thể chọn bộ tiếp theo để tiếp tục mục tiêu.
-    -------------------------------------------------------- */
+    /* ================================================
+       SOURCE EXHAUSTED
+    ================================================ */
 
     if (
         m.stage === 'exhausted'
     ) {
 
         root.append(
-            element(
-                'h3',
-                'daily-finished',
-                '📚 ĐÃ HOÀN THÀNH BỘ TỪ!'
-            )
-        );
 
-        root.append(
-            element(
+            el(
+                'div',
+                'daily-finished',
+
+                '📚 ĐÃ HỌC HẾT BỘ TỪ ĐANG CHỌN'
+            ),
+
+            el(
                 'p',
                 'daily-muted',
 
-                `Bộ này không còn từ mới. Bạn có thể chọn bộ tiếp theo để học tiếp ${remainingGoal(currentDay(), data)} từ còn thiếu.`
+                `Còn ${remaining(day(), state)} từ để đạt mục tiêu. Hãy chọn bộ từ khác hoặc giảm mục tiêu.`
             )
         );
 
         return;
     }
 
-    /* --------------------------------------------------------
-       ĐANG TẢI DATABASE
-    -------------------------------------------------------- */
+    /* ================================================
+       LOADING SOURCE
+    ================================================ */
 
     if (
-        loadedKey !== sourceKey(
+        loadedSource !== sourceKey(
             m.type,
             m.target
-        )
+        ) ||
+        !words.length
     ) {
 
         root.append(
-            element(
+            el(
                 'p',
                 'daily-muted',
-                'Đang tải bộ từ...'
+
+                'Đang tải dữ liệu từ vựng...'
             )
         );
 
-        ensureSourceLoaded();
+        resumeSource();
 
         return;
     }
 
-    /* --------------------------------------------------------
-       CHƯA CÓ BATCH
-    -------------------------------------------------------- */
+    /* ================================================
+       PREPARING BATCH
+    ================================================ */
 
-    if (
-        !m.batch?.length
-    ) {
+    if (!m.batch?.length) {
 
         root.append(
-            element(
+            el(
                 'p',
                 'daily-muted',
+
                 'Đang chuẩn bị nhóm từ tiếp theo...'
             )
         );
@@ -2267,236 +1775,193 @@ function renderStudy() {
         if (
             m.stage === 'between'
         ) {
-
-            prepareBatch();
+            nextBatch();
         }
 
         return;
     }
 
-    /* ========================================================
-       SUMMARY SCREEN
-    ======================================================== */
+    /* ================================================
+       QUIZ SUMMARY
+    ================================================ */
 
     if (
         m.stage === 'summary'
     ) {
 
         const summary = m.summary || {
-
             results: [],
             correct: 0,
             wrong: 0
         };
 
-        const percent =
-            summary.results.length
+        const total =
+            summary.results.length;
 
-                ? Math.round(
-                    summary.correct *
-                    100 /
-                    summary.results.length
-                )
-
-                : 0;
+        const percent = total
+            ? Math.round(
+                100 * summary.correct / total
+            )
+            : 0;
 
         root.append(
-            element(
+
+            el(
                 'h3',
                 'daily-stage-title',
                 '📊 KẾT QUẢ QUIZ'
-            )
-        );
+            ),
 
-        root.append(
-            element(
+            el(
                 'div',
                 'daily-summary-numbers',
 
-                `Đúng ${summary.correct} · Sai ${summary.wrong} · Chính xác ${percent}%`
+                `✅ ${summary.correct} đúng · ❌ ${summary.wrong} sai · ${percent}%`
             )
         );
 
-        const list = element(
+        const list = el(
             'div',
             'daily-result-list'
         );
 
-        /* ----------------------------------------
-           HIỂN THỊ TỪ ĐÚNG / SAI
-        ----------------------------------------- */
+        summary.results.forEach(
+            (r, index) => {
 
-        for (
-            const result of summary.results
-        ) {
+                const w = getWord(
+                    r.id
+                );
 
-            const word = currentWord(
-                result.id
-            );
+                const row = el(
+                    'div',
+                    'daily-result-row'
+                );
 
-            const row = element(
-                'div',
-                'daily-result-row'
-            );
+                row.append(
 
-            row.append(
+                    el(
+                        'span',
+                        '',
 
-                element(
-                    'span',
-                    '',
-                    `${word?.word || result.id} (${word?.reading || ''})`
-                ),
+                        `${index + 1}. ${w?.word || r.id} · ${w?.reading || ''}`
+                    ),
 
-                element(
-                    'span',
+                    el(
+                        'span',
 
-                    result.correct
-                        ? 'daily-good'
-                        : 'daily-bad',
+                        r.correct
+                            ? 'daily-good'
+                            : 'daily-bad',
 
-                    result.correct
+                        r.correct
+                            ? '✓ Đúng'
+                            : `✕ ${r.selected || '—'} → ${r.answer || '—'}`
+                    )
+                );
 
-                        ? '✓ Đúng'
-
-                        : `✕ ${result.selected || '—'} → ${result.answer || '—'}`
-                )
-            );
-
-            list.append(row);
-        }
+                list.append(row);
+            }
+        );
 
         root.append(list);
 
         root.append(
-            action(
+            button(
 
                 summary.wrong
-                    ? '↻ HỌC LẠI TỪ SAI'
-                    : '▶ TIẾP TỤC',
+                    ? '↻ HỌC LẠI CÁC TỪ SAI'
+                    : '▶ TIẾP TỤC / HOÀN THÀNH',
 
-                continueAfterSummary
+                afterSummary
             )
         );
 
         return;
     }
 
-    /* ========================================================
-       HIỆN TỪ ĐANG HỌC
-    ======================================================== */
+    /* ================================================
+       CURRENT WORD
+    ================================================ */
 
-    const id = m.batch[m.cursor];
+    const id =
+        m.batch[m.cursor];
 
-    const word = currentWord(id);
+    const w = getWord(id);
 
-    if (!word) {
+    if (!w) {
 
         root.append(
-            element(
+            el(
                 'p',
                 'daily-muted',
-                'Không tìm thấy từ trong nguồn đã chọn.'
+
+                'Không tìm thấy từ trong dữ liệu.'
             )
         );
 
         return;
     }
 
-    let stageName;
-
-    if (
+    const stageName =
         m.stage === 'flashcard'
-    ) {
-
-        stageName = '1 · FLASHCARD';
-
-    } else if (
-        m.stage === 'review'
-    ) {
-
-        stageName = '2 · REVIEW';
-
-    } else {
-
-        stageName = '3 · QUIZ';
-    }
+            ? '1 · FLASHCARD'
+            : m.stage === 'review'
+                ? '2 · REVIEW'
+                : '3 · QUIZ RANDOM';
 
     root.append(
-        element(
+        el(
             'h3',
             'daily-stage-title',
 
-            `${stageName} · Từ ${m.cursor + 1}/${m.batch.length}`
+            `${stageName} · ${m.cursor + 1}/${m.batch.length}`
         )
     );
 
-    /* ========================================================
-       FLASHCARD UI
-    ======================================================== */
+    /* ================================================
+       FLASHCARD
+    ================================================ */
 
     if (
         m.stage === 'flashcard'
     ) {
 
-        /* ----------------------------------------
-           KANJI
-        ----------------------------------------- */
-
         root.append(
-            element(
+
+            el(
                 'div',
                 'daily-word',
-                word.word
-            )
-        );
+                w.word
+            ),
 
-        /* ----------------------------------------
-           SOUND
-        ----------------------------------------- */
-
-        root.append(
-            action(
-
+            button(
                 '🔊 PHÁT ÂM',
-
-                () => sayJapanese(word),
-
+                () => speak(w),
                 'daily-sound'
             )
         );
 
-        /* ----------------------------------------
-           HIRAGANA + MEANING
-        ----------------------------------------- */
-
         root.append(
-            element(
+            el(
                 'div',
                 'daily-word-back',
 
-                cardRevealed
-
-                    ? `${word.reading}\n${word.meaning}`
-
-                    : 'Bấm hiện đáp án để xem cách đọc và nghĩa.'
+                revealed
+                    ? `${w.reading}\n${w.meaning}`
+                    : 'Lật thẻ để xem cách đọc và nghĩa.'
             )
         );
 
-        /* ----------------------------------------
-           FLIP CARD
-        ----------------------------------------- */
-
         root.append(
-            action(
+            button(
 
-                cardRevealed
+                revealed
                     ? 'ẨN ĐÁP ÁN'
                     : 'HIỆN ĐÁP ÁN',
 
                 () => {
 
-                    cardRevealed = !cardRevealed;
-
+                    revealed = !revealed;
                     renderStudy();
                 },
 
@@ -2504,29 +1969,24 @@ function renderStudy() {
             )
         );
 
-        /* ----------------------------------------
-           CONFIRM
-        ----------------------------------------- */
-
-        const next = action(
+        const next = button(
 
             '✓ ĐÃ THUỘC · TIẾP THEO',
 
-            confirmFlashcard
+            known
         );
 
         next.disabled =
-            inProgress ||
-            !cardRevealed;
+            busy || !revealed;
 
         root.append(next);
 
         return;
     }
 
-    /* ========================================================
-       REVIEW UI
-    ======================================================== */
+    /* ================================================
+       REVIEW PROGRESS
+    ================================================ */
 
     if (
         m.stage === 'review'
@@ -2535,40 +1995,85 @@ function renderStudy() {
         const count = Object.values(
             m.review || {}
         ).reduce(
-
-            (sum, value) =>
-
-                sum + Math.min(
+            (n, value) =>
+                n + Math.min(
                     3,
                     Number(value) || 0
                 ),
-
             0
         );
 
         root.append(
-            element(
+            el(
                 'p',
                 'daily-muted',
 
-                `Đúng ${count}/${m.batch.length * 3} lượt · Từ này ${m.review?.[id] || 0}/3. Sai không mất lượt đúng.`
+                `Tổng lượt đúng ${count}/${m.batch.length * 3} · Từ này ${m.review?.[id] || 0}/3 · Sai không trừ lượt đúng.`
             )
         );
     }
 
-    /* ========================================================
-       REVIEW / QUIZ QUESTION
-    ======================================================== */
+    /* ================================================
+       GET / CACHE QUESTION
+    ================================================ */
 
-    const q = getQuestion(m);
+    const sig = [
+
+        today(),
+
+        m.type,
+        m.target,
+        m.stage,
+
+        m.round,
+        m.cursor,
+
+        id,
+        m.review?.[id] || 0
+
+    ].join(':');
+
+    if (
+        !question ||
+        questionSig !== sig
+    ) {
+
+        question = makeQuestion(
+            w,
+            m.stage
+        );
+
+        questionSig = sig;
+    }
+
+    const q = question;
+
+    if (
+        m.feedback &&
+        q
+    ) {
+
+        q.choices =
+            m.feedback.choices || q.choices;
+
+        q.answer =
+            m.feedback.answer;
+
+        q.mode =
+            m.feedback.mode;
+
+        q.ask =
+            m.feedback.ask || q.ask;
+    }
 
     if (!q) {
 
         root.append(
-            element(
+            el(
                 'p',
                 'daily-muted',
-                'Không tạo được câu hỏi. Hãy kiểm tra dữ liệu đáp án.'
+
+                'Không đủ đáp án nhiễu. Kiểm tra database.'
             )
         );
 
@@ -2576,162 +2081,784 @@ function renderStudy() {
     }
 
     root.append(
-        element(
+        el(
             'p',
             'daily-muted',
-            MODE_LABELS[q.mode]
+
+            LABEL[q.mode]
         )
     );
 
-    /* --------------------------------------------------------
+    /* ================================================
        AUDIO MODE
-    -------------------------------------------------------- */
+    ================================================ */
 
     if (
         q.mode.startsWith('audio_')
     ) {
 
         root.append(
-            element(
+
+            el(
                 'div',
                 'daily-word daily-audio',
-                '🔊 NGHE VÀ CHỌN ĐÁP ÁN'
-            )
-        );
 
-        root.append(
-            action(
+                '🔊 NGHE VÀ CHỌN ĐÁP ÁN'
+            ),
+
+            button(
 
                 '▶ NGHE LẠI',
 
-                () => sayJapanese(word),
+                () => speak(w),
 
-                'daily-button daily-secondary daily-wide'
+                'daily-button daily-wide daily-secondary'
             )
         );
 
     } else {
 
         root.append(
-            element(
+            el(
                 'div',
                 'daily-word',
-                q.prompt
+                q.ask
             )
         );
     }
 
-    /* ========================================================
-       ANSWER OPTIONS
-    ======================================================== */
+    /* ================================================
+       FOUR ANSWERS
+    ================================================ */
 
-    const choices = element(
+    const options = el(
         'div',
         'daily-answers'
     );
 
-    for (
-        const option of q.options
-    ) {
+    q.choices.forEach(choice => {
 
-        const button = action(
+        const b = button(
 
-            option,
+            choice,
 
-            () => chooseAnswer(option),
+            () => answer(choice),
 
             'daily-answer'
         );
-
-        /* ----------------------------------------
-           Sau khi chọn đáp án:
-
-           Đáp án đúng: xanh
-           Đáp án sai: đỏ
-           Khóa các nút chọn.
-        ----------------------------------------- */
 
         if (
             m.feedback
         ) {
 
-            button.disabled = true;
+            b.disabled = true;
 
             if (
-                option === q.answer
+                choice === q.answer
             ) {
 
-                button.classList.add(
+                b.classList.add(
                     'correct'
                 );
 
             } else if (
-                option === m.feedback.selected
+                choice === m.feedback.selected
             ) {
 
-                button.classList.add(
+                b.classList.add(
                     'wrong'
                 );
             }
         }
 
-        choices.append(button);
-    }
+        options.append(b);
+    });
 
-    root.append(choices);
+    root.append(options);
 
-    /* ========================================================
-       FEEDBACK + NEXT
-    ======================================================== */
+    /* ================================================
+       FEEDBACK AREA
+
+       Luôn chiếm sẵn không gian.
+       Không làm đáp án nhảy sau khi chọn.
+    ================================================ */
+
+    const response = el(
+        'div',
+        'daily-response-area'
+    );
+
+    response.setAttribute(
+        'aria-live',
+        'polite'
+    );
 
     if (
         m.feedback
     ) {
 
-        const feedback = m.feedback;
+        const f = m.feedback;
 
-        const info = element(
+        const feedback = el(
+
             'div',
 
             `daily-feedback ${
-                feedback.correct
-                    ? 'correct'
-                    : 'wrong'
+                f.correct ? 'correct' : 'wrong'
             }`
         );
 
-        info.append(
+        feedback.append(
 
-            element(
+            el(
                 'strong',
                 '',
 
-                feedback.correct
+                f.correct
                     ? '✓ CHÍNH XÁC'
                     : '✕ CHƯA CHÍNH XÁC'
             ),
 
-            element(
+            el(
                 'div',
                 '',
 
-                `Đáp án đúng: ${feedback.answer}`
+                `Đáp án: ${f.answer}`
             ),
 
-            element(
+            el(
                 'div',
                 'daily-muted',
 
-                `${word.word} · ${word.reading} · ${word.meaning}`
+                `${w.word} · ${w.reading} · ${w.meaning}`
             )
         );
 
-        root.append(
+        response.append(
+
+            feedback,
+
+            button(
+                'NEXT →',
+                nextQuestion,
+                'daily-button daily-next-button'
+            )
+        );
+
+    } else {
+
+        response.append(
+            el(
+                'div',
+                'daily-feedback-placeholder',
+
+                'Chọn một đáp án để xem kết quả và nghe phát âm.'
+            )
+        );
+    }
+
+    root.append(response);
+}
+
+
+/* ============================================================
+   26. HISTORY DATA
+============================================================ */
+
+function historyRows() {
+
+    const rows = [];
+
+    for (
+        const [sk, group]
+        of Object.entries(learned())
+    ) {
+
+        for (
+            const [key, value]
+            of Object.entries(group || {})
+        ) {
+
+            if (
+                !value ||
+                !value.word
+            ) {
+                continue;
+            }
+
+            rows.push({
+
+                ...value,
+
+                source: sk,
+                key
+            });
+        }
+    }
+
+    return rows.sort(
+        (a, b) =>
+
+            String(
+                b.lastLearnedAt || ''
+            ).localeCompare(
+                String(a.lastLearnedAt || '')
+            ) ||
+
+            compareIds(
+                a.id,
+                b.id
+            )
+    );
+}
+
+
+/* ============================================================
+   27. DASHBOARD ROOT
+
+   Tương thích index.html hiện tại.
+
+   Chuyển nội dung Dashboard sang vùng render động.
+============================================================ */
+
+function ensureDashboardRoot() {
+
+    let root = $(
+        'dailyDashboard'
+    );
+
+    if (root) {
+        return root;
+    }
+
+    const section = $(
+        'dailyHistoryPage'
+    )?.querySelector('.daily-card');
+
+    if (!section) {
+        return null;
+    }
+
+    const title = el(
+        'h3',
+        '',
+        '📊 DASHBOARD TỪ ĐÃ HỌC'
+    );
+
+    root = el('div', '');
+
+    root.id = 'dailyDashboard';
+
+    section.replaceChildren(
+        title,
+        root
+    );
+
+    return root;
+}
+
+
+/* ============================================================
+   28. CLEAR HISTORY BY SOURCE
+
+   Xóa bộ được chọn.
+   Cho phép học lại từ ID đầu tiên.
+============================================================ */
+
+async function clearLearnedSource(sk) {
+
+    if (sk === 'all') {
+        return;
+    }
+
+    const count = historyRows().filter(
+        word => word.source === sk
+    ).length;
+
+    if (
+        !confirm(
+            `Xóa lịch sử ${count} từ của ${sk.toUpperCase()} để học lại từ ID 1?`
+        )
+    ) {
+        return;
+    }
+
+    const success = await update(
+        (profile, d) => {
+
+            if (
+                profile.learned
+            ) {
+                delete profile.learned[sk];
+            }
+
+            if (
+                d.completed
+            ) {
+                delete d.completed[sk];
+            }
+
+            if (
+                d.mission &&
+                sourceKey(
+                    d.mission.type,
+                    d.mission.target
+                ) === sk
+            ) {
+                d.mission = null;
+            }
+
+            if (
+                d.pausedMissions
+            ) {
+                delete d.pausedMissions[sk];
+            }
+        }
+    );
+
+    if (success) {
+
+        dashboardFilter = 'all';
+
+        question = null;
+        questionSig = '';
+
+        renderDashboard();
+
+        message(
+            'Đã xóa lịch sử bộ từ ' + sk
+        );
+    }
+}
+
+
+/* ============================================================
+   29. DASHBOARD
+============================================================ */
+
+function renderDashboard() {
+
+    const root =
+        ensureDashboardRoot();
+
+    if (!root) return;
+
+    root.replaceChildren();
+
+    const all = historyRows();
+
+    const sourceStats = new Map();
+
+    for (const w of all) {
+
+        sourceStats.set(
+
+            w.source,
+
+            (sourceStats.get(w.source) || 0) + 1
+        );
+    }
+
+    root.append(
+        el(
+            'div',
+            'daily-dashboard-total',
+
+            `📚 ${all.length} từ đã thuộc · ${sourceStats.size} bộ từ`
+        )
+    );
+
+    /* ================================================
+       QUIZ TODAY STATS
+    ================================================ */
+
+    const rounds = Object.values(
+        day().quizHistory || {}
+    );
+
+    const right = rounds.reduce(
+        (n, r) =>
+            n + (Number(r.correct) || 0),
+        0
+    );
+
+    const wrong = rounds.reduce(
+        (n, r) =>
+            n + (Number(r.wrong) || 0),
+        0
+    );
+
+    const total = right + wrong;
+
+    root.append(
+        el(
+            'div',
+            'daily-summary-numbers',
+
+            `Quiz hôm nay: ${right} đúng / ${wrong} sai · ${total ? Math.round(100 * right / total) : 0}%`
+        )
+    );
+
+    /* ================================================
+       QUIZ REVIEW HISTORY
+    ================================================ */
+
+    if (rounds.length) {
+
+        const details = el(
+            'details',
+            'daily-available-details'
+        );
+
+        details.append(
+            el(
+                'summary',
+                '',
+
+                `Xem lại ${rounds.length} lượt Quiz hôm nay`
+            )
+        );
+
+        const review = el(
+            'div',
+            'daily-result-list'
+        );
+
+        rounds.forEach(
+            (round, index) => {
+
+                review.append(
+                    el(
+                        'h4',
+                        'daily-muted',
+
+                        `Lượt ${index + 1} · ${round.source || ''} · ${round.correct || 0} đúng / ${round.wrong || 0} sai`
+                    )
+                );
+
+                for (
+                    const item
+                    of round.results || []
+                ) {
+
+                    const row = el(
+                        'div',
+                        'daily-result-row'
+                    );
+
+                    row.append(
+
+                        el(
+                            'span',
+                            '',
+
+                            `${item.word || item.id} · ${item.reading || ''} · ${LABEL[item.mode] || ''}`
+                        ),
+
+                        el(
+                            'span',
+
+                            item.correct
+                                ? 'daily-good'
+                                : 'daily-bad',
+
+                            item.correct
+                                ? '✓ Đúng'
+                                : `✕ ${item.selected || '—'} → ${item.answer || '—'}`
+                        )
+                    );
+
+                    review.append(row);
+                }
+            }
+        );
+
+        details.append(review);
+        root.append(details);
+    }
+
+    /* ================================================
+       SOURCE CHIPS
+    ================================================ */
+
+    const chips = el(
+        'div',
+        'daily-filter-chips'
+    );
+
+    for (
+        const [sk, n]
+        of sourceStats
+    ) {
+
+        const b = button(
+
+            `${sk.replace('_', ' / ').toUpperCase()} (${n})`,
+
+            () => {
+
+                dashboardFilter = sk;
+
+                renderDashboard();
+            },
+
+            'daily-chip' +
+            (
+                dashboardFilter === sk
+                    ? ' active'
+                    : ''
+            )
+        );
+
+        chips.append(b);
+    }
+
+    root.append(chips);
+
+    /* ================================================
+       SOURCE FILTER
+    ================================================ */
+
+    const filters = el(
+        'div',
+        'daily-dashboard-filters'
+    );
+
+    const select = el(
+        'select',
+        'daily-select'
+    );
+
+    select.append(
+        new Option(
+            'Tất cả các bộ',
+            'all'
+        )
+    );
+
+    for (
+        const [sk, n]
+        of sourceStats
+    ) {
+
+        select.add(
+            new Option(
+                `${sk.toUpperCase()} (${n})`,
+                sk
+            )
+        );
+    }
+
+    if (
+        dashboardFilter !== 'all' &&
+        !sourceStats.has(dashboardFilter)
+    ) {
+
+        dashboardFilter = 'all';
+    }
+
+    select.value =
+        dashboardFilter;
+
+    select.onchange = () => {
+
+        dashboardFilter = select.value;
+        renderDashboard();
+    };
+
+    /* ================================================
+       CLEAR BUTTON
+    ================================================ */
+
+    const clear = button(
+
+        '🗑 XÓA LỊCH SỬ BỘ NÀY',
+
+        () => clearLearnedSource(
+            dashboardFilter
+        ),
+
+        'daily-clear-button'
+    );
+
+    clear.disabled =
+        busy ||
+        dashboardFilter === 'all';
+
+    root.append(clear);
+
+    /* ================================================
+       SEARCH
+    ================================================ */
+
+    const search = el(
+        'input',
+        'daily-select'
+    );
+
+    search.placeholder =
+        'Tìm Kanji / Hiragana / nghĩa...';
+
+    search.value = dashboardSearch;
+
+    search.oninput = () => {
+
+        dashboardSearch = search.value;
+
+        renderHistoryList();
+    };
+
+    filters.append(
+        select,
+        search
+    );
+
+    root.append(filters);
+
+    root.append(
+        el(
+            'div',
+            'daily-muted',
+
+            `Hôm nay: ${dayCompleted(day())} từ · Điểm danh: ${day().checked ? 'Có' : 'Chưa'}`
+        )
+    );
+
+    /* ================================================
+       VOCABULARY LIST
+    ================================================ */
+
+    root.append(
+        el(
+            'div',
+            'daily-history-list'
+        )
+    );
+
+    renderHistoryList();
+}
+
+
+/* ============================================================
+   30. DASHBOARD VOCABULARY LIST
+============================================================ */
+
+function renderHistoryList() {
+
+    const root = $(
+        'dailyDashboard'
+    )?.querySelector(
+        '.daily-history-list'
+    );
+
+    if (!root) return;
+
+    root.replaceChildren();
+
+    const q =
+        dashboardSearch
+            .trim()
+            .toLocaleLowerCase();
+
+    const filtered = historyRows().filter(
+        word => {
+
+            const correctSource =
+                dashboardFilter === 'all' ||
+                dashboardFilter === word.source;
+
+            const searchMatch =
+                !q ||
+                [
+                    word.word,
+                    word.reading,
+                    word.meaning
+                ].some(
+                    value =>
+                        String(value || '')
+                            .toLocaleLowerCase()
+                            .includes(q)
+                );
+
+            return (
+                correctSource &&
+                searchMatch
+            );
+        }
+    );
+
+    root.append(
+        el(
+            'p',
+            'daily-muted',
+
+            `Đang hiển thị ${filtered.length} từ`
+        )
+    );
+
+    for (
+        const word of filtered.slice(0, 500)
+    ) {
+
+        const row = el(
+            'div',
+            'daily-history-word'
+        );
+
+        const info = el(
+            'div',
+            ''
+        );
+
+        info.append(
+
+            el(
+                'strong',
+                '',
+                word.word
+            ),
+
+            el(
+                'span',
+                '',
+
+                ` ${word.reading} · ${word.meaning}`
+            ),
+
+            el(
+                'small',
+                '',
+
+                `${word.source.toUpperCase()} · ${word.lastLearnedAt || '—'}`
+            )
+        );
+
+        row.append(
+
             info,
 
-            action(
-                'NEXT →',
-                nextQuestion
+            button(
+                '🔊',
+
+                () => speak(word),
+
+                'daily-history-sound'
+            )
+        );
+
+        root.append(row);
+    }
+
+    if (
+        filtered.length > 500
+    ) {
+
+        root.append(
+            el(
+                'p',
+                'daily-muted',
+
+                `Hiển thị 500/${filtered.length} từ. Hãy lọc để thu hẹp danh sách.`
             )
         );
     }
@@ -2739,236 +2866,346 @@ function renderStudy() {
 
 
 /* ============================================================
-   23. RENDER MAIN SCREEN
-
-   Cập nhật:
+   31. RENDER MAIN UI
 
    - Header streak
-   - Daily progress
-   - Goal
-   - Source info
-   - Remaining vocabulary
-   - Dashboard / Mission tabs
+   - Goal progress
+   - Auto-collapse configuration
+   - Focus mode
+   - Dashboard
 ============================================================ */
 
 function render() {
 
-    const signedIn =
+    const signed =
         !!auth.currentUser;
 
-    $('dailyHeaderButton')?.classList.toggle(
+    const header =
+        $('dailyHeaderButton');
+
+    header?.classList.toggle(
         'hidden',
-        !signedIn
+        !signed
     );
 
-    if (!signedIn) {
-        return;
-    }
+    if (!signed) return;
 
-    const day = currentDay();
-    const m = currentMission();
+    const d = day();
+    const m = mission();
 
-    const goal = clampGoal(
-        data.goal
+    const g = clamp(
+        state.goal
     );
 
-    const completed = completedCount(
-        day
+    const count =
+        dayCompleted(d);
+
+    const streak = streakFor(
+        state,
+        today()
     );
 
-    const progress = Math.min(
-        100,
-        completed * 100 / goal
-    );
-
-    /* ========================================================
-       HEADER / STREAK
-    ======================================================== */
-
-    $('dailyStreakCount').textContent =
-        visibleStreak();
-
-    $('dailyStreak').textContent =
-        `${visibleStreak()} ngày`;
-
-    $('dailyDate').textContent =
-        `${vietnamDate()} · Giờ Việt Nam (UTC+7)`;
-
-    $('dailyHeaderButton').classList.toggle(
-        'checked',
-        !!day.checked
-    );
-
-    /* ========================================================
-       CHECK-IN STATUS
-    ======================================================== */
-
-    $('dailyCheckinStatus').textContent =
-
-        day.checked
-
-            ? '✓ Đã hoàn thành nhiệm vụ và điểm danh'
-
-            : 'Hoàn thành mục tiêu để tự động điểm danh';
-
-    $('dailyCheckinButton').textContent =
-
-        day.checked
-
-            ? '✓ ĐÃ ĐIỂM DANH'
-
-            : '🔒 CHƯA ĐỦ MỤC TIÊU';
-
-    /* ========================================================
-       GOAL / PROGRESS
-    ======================================================== */
-
-    $('dailyGoalLabel').textContent =
-        `${goal} từ/ngày`;
-
-    $('dailyProgress').textContent =
-        `${completed} / ${goal}`;
-
-    $('dailyBar').style.width =
-        `${progress}%`;
-
-    $('dailyMissionStatus').textContent =
-
-        day.checked
-
-            ? '✓ HOÀN THÀNH NHIỆM VỤ NGÀY'
-
-            : `Còn ${Math.max(0, goal - completed)} từ cần vượt Quiz`;
-
-    $('dailyActual').textContent =
-
-        `Hôm nay: ${completed} từ · Lịch sử: ${learnedRows().length} từ`;
+    /* ================================================
+       HEADER STREAK
+    ================================================ */
 
     if (
+        $('dailyStreakCount')
+    ) {
+
+        $('dailyStreakCount').textContent =
+            streak;
+    }
+
+    header?.classList.toggle(
+        'checked',
+        !!d.checked
+    );
+
+    if (
+        $('dailyStreak')
+    ) {
+
+        $('dailyStreak').textContent =
+            `${streak} ngày`;
+    }
+
+    if (
+        $('dailyDate')
+    ) {
+
+        $('dailyDate').textContent =
+            `${today()} · Việt Nam (UTC+7)`;
+    }
+
+    /* ================================================
+       CHECK-IN
+    ================================================ */
+
+    if (
+        $('dailyCheckinStatus')
+    ) {
+
+        $('dailyCheckinStatus').textContent =
+            d.checked
+
+                ? '✓ Nhiệm vụ hoàn thành · Đã điểm danh'
+
+                : 'Điểm danh tự động khi hoàn thành mục tiêu';
+    }
+
+    const checkButton =
+        $('dailyCheckinButton');
+
+    if (checkButton) {
+
+        checkButton.disabled = true;
+
+        checkButton.textContent =
+            d.checked
+                ? '✓ ĐÃ ĐIỂM DANH'
+                : '🔒 HOÀN THÀNH ĐỂ ĐIỂM DANH';
+    }
+
+    /* ================================================
+       GOAL
+    ================================================ */
+
+    if (
+        $('dailyGoalLabel')
+    ) {
+
+        $('dailyGoalLabel').textContent =
+            `${g} từ/ngày`;
+    }
+
+    if (
+        $('dailyProgress')
+    ) {
+
+        $('dailyProgress').textContent =
+            `${Math.min(g, count)} / ${g}`;
+    }
+
+    if (
+        $('dailyBar')
+    ) {
+
+        $('dailyBar').style.width =
+            `${Math.min(100, 100 * count / g)}%`;
+    }
+
+    if (
+        $('dailyMissionStatus')
+    ) {
+
+        $('dailyMissionStatus').textContent =
+            d.missionDone
+
+                ? '✓ HOÀN THÀNH NHIỆM VỤ NGÀY'
+
+                : `Còn ${Math.max(0, g - count)} từ`;
+    }
+
+    if (
+        $('dailyActual')
+    ) {
+
+        $('dailyActual').textContent =
+            `Hôm nay: ${count} từ · Lịch sử: ${historyRows().length} từ`;
+    }
+
+    if (
+        $('dailyGoalInput') &&
         document.activeElement !==
         $('dailyGoalInput')
     ) {
 
-        $('dailyGoalInput').value = goal;
+        $('dailyGoalInput').value = g;
     }
 
-    $('dailyStartButton').disabled =
-        inProgress;
-
-    /* ========================================================
-       SOURCE INFORMATION
-    ======================================================== */
-
-    $('dailyStageSummary').textContent =
-
-        m
-
-            ? `Nguồn hiện tại: ${m.type.toUpperCase()} / ${m.target.toUpperCase()}`
-
-            : 'Chưa bắt đầu';
-
-    /* ========================================================
-       DANH SÁCH TỪ CÒN LẠI TRONG BỘ
-    ======================================================== */
-
-    const available = $(
-        'dailyAvailableWords'
-    );
-
-    available.replaceChildren();
-
     if (
-        m &&
-        loadedKey === sourceKey(
-            m.type,
-            m.target
-        )
+        $('dailyStartButton')
     ) {
 
-        const ids = availableWordIds(
-            vocabulary,
-            data,
-            day,
-            m.type,
-            m.target
-        );
-
-        const details = element(
-            'details',
-            'daily-available-details'
-        );
-
-        details.append(
-            element(
-                'summary',
-                '',
-
-                `Còn ${ids.length} từ trong bộ · Xem danh sách`
-            )
-        );
-
-        const list = element(
-            'div',
-            'daily-remaining-list'
-        );
-
-        for (
-            const id of ids.slice(0, 500)
-        ) {
-
-            const word = currentWord(id);
-
-            list.append(
-                element(
-                    'div',
-                    'daily-remaining-word',
-
-                    `ID ${id} · ${word.word} · ${word.reading} · ${word.meaning}`
-                )
-            );
-        }
-
-        details.append(list);
-
-        available.append(details);
+        $('dailyStartButton').disabled =
+            busy;
     }
 
-    /* ========================================================
-       TAB STATE
-    ======================================================== */
+    /* ================================================
+       FOCUS MODE
 
-    $('dailyMissionTab').classList.toggle(
-        'active',
-        activeTab === 'mission'
+       Chỉ kích hoạt khi:
+       - Ở tab học
+       - Đang học
+       - Mục tiêu đã thu gọn
+    ================================================ */
+
+    const studying =
+        tab === 'learn' &&
+        [
+            'flashcard',
+            'review',
+            'quiz'
+        ].includes(m?.stage);
+
+    const overlay =
+        $('dailyOverlay');
+
+    overlay?.classList.toggle(
+        'daily-focus-mode',
+        studying && setupCollapsed
     );
 
-    $('dailyHistoryTab').classList.toggle(
-        'active',
-        activeTab === 'history'
+    /* ================================================
+       AUTO COLLAPSE GOAL
+    ================================================ */
+
+    $('dailySetup')?.classList.toggle(
+        'daily-setup-collapsed',
+
+        setupCollapsed && !!m
     );
 
-    $('dailyLearningPage').classList.toggle(
-        'hidden',
-        activeTab !== 'mission'
-    );
+    const edit =
+        $('dailyEditGoalButton');
 
-    $('dailyHistoryPage').classList.toggle(
-        'hidden',
-        activeTab !== 'history'
-    );
+    if (edit) {
 
-    /* ========================================================
-       RENDER CURRENT TAB
-    ======================================================== */
+        edit.hidden = !m;
+
+        edit.textContent =
+            setupCollapsed
+                ? '⚙ SỬA MỤC TIÊU'
+                : '✕ THU GỌN';
+    }
+
+    /* ================================================
+       REMAINING WORDS
+    ================================================ */
+
+    const available =
+        $('dailyAvailableWords');
+
+    if (available) {
+
+        available.replaceChildren();
+
+        if (
+            m &&
+            loadedSource === sourceKey(
+                m.type,
+                m.target
+            ) &&
+            words.length
+        ) {
+
+            const sk = sourceKey(
+                m.type,
+                m.target
+            );
+
+            const known =
+                learned()[sk] || {};
+
+            const completedToday =
+                day().completed?.[sk] || {};
+
+            const left = words.filter(
+                w =>
+
+                    !known[wordKey(w.id)] &&
+                    !completedToday[wordKey(w.id)]
+            );
+
+            const details = el(
+                'details',
+                'daily-available-details'
+            );
+
+            details.append(
+                el(
+                    'summary',
+                    '',
+
+                    `Còn ${left.length} từ trong bộ ${m.target.toUpperCase()} · Xem danh sách`
+                )
+            );
+
+            const list = el(
+                'div',
+                'daily-remaining-list'
+            );
+
+            for (
+                const w of left.slice(0, 500)
+            ) {
+
+                list.append(
+                    el(
+                        'div',
+                        'daily-remaining-word',
+
+                        `${w.word} · ${w.reading} · ${w.meaning}`
+                    )
+                );
+            }
+
+            details.append(list);
+            available.append(details);
+        }
+    }
+
+    /* ================================================
+       CURRENT SOURCE
+    ================================================ */
 
     if (
-        !$('dailyOverlay').classList.contains(
+        $('dailyStageSummary')
+    ) {
+
+        $('dailyStageSummary').textContent =
+            m
+                ? `Nguồn: ${m.type.toUpperCase()} / ${m.target.toUpperCase()} · Nhóm tối đa ${BATCH} từ`
+                : 'Chưa bắt đầu';
+    }
+
+    /* ================================================
+       TABS
+    ================================================ */
+
+    $('dailyMissionTab')?.classList.toggle(
+        'active',
+        tab === 'learn'
+    );
+
+    $('dailyHistoryTab')?.classList.toggle(
+        'active',
+        tab === 'history'
+    );
+
+    $('dailyLearningPage')?.classList.toggle(
+        'hidden',
+        tab !== 'learn'
+    );
+
+    $('dailyHistoryPage')?.classList.toggle(
+        'hidden',
+        tab !== 'history'
+    );
+
+    /* ================================================
+       RENDER ACTIVE TAB
+    ================================================ */
+
+    if (
+        !$('dailyOverlay')?.classList.contains(
             'hidden'
         )
     ) {
 
         if (
-            activeTab === 'mission'
+            tab === 'learn'
         ) {
 
             renderStudy();
@@ -2982,49 +3219,54 @@ function render() {
 
 
 /* ============================================================
-   24. OPEN DAILY
+   32. OPEN DAILY
 ============================================================ */
 
-async function openDaily() {
+async function open() {
 
-    if (
-        !auth.currentUser
-    ) {
+    if (!auth.currentUser) {
 
         window.BatLingoAuthUI?.open?.();
 
         return;
     }
 
-    activeTab = 'mission';
+    tab = 'learn';
 
-    const m = currentMission();
+    const m = mission();
+
+    setupCollapsed = !!m;
 
     if (m) {
 
-        $('dailyStudyMode').value =
-            m.type;
+        if (
+            $('dailyStudyMode')
+        ) {
 
-        await refreshTargets(
+            $('dailyStudyMode').value =
+                m.type;
+        }
+
+        await updateTargets(
             m.target
         );
     }
 
-    $('dailyOverlay').classList.remove(
+    $('dailyOverlay')?.classList.remove(
         'hidden'
     );
 
     render();
 
-    await ensureSourceLoaded();
+    resumeSource();
 }
 
 
 /* ============================================================
-   25. CLOSE DAILY
+   33. CLOSE DAILY
 ============================================================ */
 
-function closeDaily() {
+function close() {
 
     $('dailyOverlay')?.classList.add(
         'hidden'
@@ -3035,69 +3277,66 @@ function closeDaily() {
 
 
 /* ============================================================
-   26. FIREBASE USER LISTENER
-
-   Mỗi UID có dữ liệu riêng.
-   Khi logout hoặc đổi tài khoản:
-   Xóa cache của tài khoản cũ.
+   34. FIREBASE USER LISTENER
 ============================================================ */
 
-function listenUser(uid) {
+function watch(userId) {
 
     if (
-        currentUid === uid &&
-        unsubscribeUser
+        uid === userId &&
+        stopUser
     ) {
         return;
     }
 
-    unsubscribeUser?.();
+    stopUser?.();
 
-    unsubscribeUser = null;
+    stopUser = null;
 
-    currentUid = uid || '';
+    uid = userId || '';
 
-    data = {};
+    state = {};
 
-    loadedKey = '';
-    vocabulary = [];
+    loadedSource = '';
+    words = [];
 
-    loadVersion++;
+    loadSeq++;
 
-    resetQuestion();
+    question = null;
+    questionSig = '';
 
-    closeDaily();
+    revealed = false;
 
+    close();
     render();
 
-    if (!uid) {
-        return;
-    }
+    if (!userId) return;
 
-    unsubscribeUser = onValue(
+    stopUser = onValue(
 
         ref(
             db,
-            `dailyProgress/${uid}`
+            `dailyProgress/${userId}`
         ),
 
         snapshot => {
 
             if (
-                currentUid !== uid
+                uid !== userId
             ) {
                 return;
             }
 
-            data = snapshot.val() || {};
+            state =
+                snapshot.val() || {};
 
             render();
         },
 
         error => {
 
-            notify(
-                `Firebase: ${error.message}`,
+            message(
+                'Firebase: ' + error.message,
                 true
             );
         }
@@ -3106,26 +3345,76 @@ function listenUser(uid) {
 
 
 /* ============================================================
-   27. INITIALIZE DAILY MISSION
+   35. INITIALIZE DAILY MISSION
 
    Được gọi từ main.js:
-
-   import { initDaily } from "./daily.js";
-
-   initDaily();
+       initDaily();
 ============================================================ */
 
 export function initDaily() {
 
-    if (initialized) {
-        return;
-    }
+    if (initialized) return;
 
     initialized = true;
 
-    /* ========================================================
-       FIREBASE SERVER TIME OFFSET
-    ======================================================== */
+    /* ================================================
+       CREATE EDIT GOAL BUTTON
+
+       Tạo bằng JS:
+       Không cần sửa index.html.
+    ================================================ */
+
+    const setup =
+        $('dailySetup');
+
+    if (
+        setup &&
+        !$('dailyEditGoalButton')
+    ) {
+
+        const heading =
+            setup.querySelector('h3');
+
+        const edit = el(
+
+            'button',
+            'daily-edit-goal',
+            '⚙ SỬA MỤC TIÊU'
+        );
+
+        edit.id =
+            'dailyEditGoalButton';
+
+        edit.type = 'button';
+        edit.hidden = true;
+
+        edit.addEventListener(
+            'click',
+            () => {
+
+                setupCollapsed =
+                    !setupCollapsed;
+
+                render();
+
+                if (
+                    !setupCollapsed
+                ) {
+
+                    setup.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        );
+
+        heading?.after(edit);
+    }
+
+    /* ================================================
+       SERVER TIME OFFSET
+    ================================================ */
 
     onValue(
 
@@ -3136,31 +3425,31 @@ export function initDaily() {
 
         snapshot => {
 
-            databaseOffset =
+            offset =
                 Number(snapshot.val()) || 0;
 
             render();
         }
     );
 
-    /* ========================================================
-       HEADER OPEN
-    ======================================================== */
+    /* ================================================
+       HEADER BUTTON
+    ================================================ */
 
     $('dailyHeaderButton')
         ?.addEventListener(
             'click',
-            openDaily
+            open
         );
 
-    /* ========================================================
-       CLOSE
-    ======================================================== */
+    /* ================================================
+       CLOSE BUTTON
+    ================================================ */
 
     $('dailyCloseButton')
         ?.addEventListener(
             'click',
-            closeDaily
+            close
         );
 
     $('dailyOverlay')
@@ -3169,27 +3458,28 @@ export function initDaily() {
             event => {
 
                 if (
-                    event.target === $('dailyOverlay')
+                    event.target ===
+                    $('dailyOverlay')
                 ) {
 
-                    closeDaily();
+                    close();
                 }
             }
         );
 
-    /* ========================================================
-       CHANGE STUDY MODE
-    ======================================================== */
+    /* ================================================
+       SELECT SOURCE
+    ================================================ */
 
     $('dailyStudyMode')
         ?.addEventListener(
             'change',
-            () => refreshTargets()
+            () => updateTargets()
         );
 
-    /* ========================================================
-       START MISSION
-    ======================================================== */
+    /* ================================================
+       SAVE GOAL
+    ================================================ */
 
     $('dailyStartButton')
         ?.addEventListener(
@@ -3197,17 +3487,16 @@ export function initDaily() {
             startMission
         );
 
-    /* ========================================================
-       TAB NAVIGATION
-    ======================================================== */
+    /* ================================================
+       TABS
+    ================================================ */
 
     $('dailyMissionTab')
         ?.addEventListener(
             'click',
             () => {
 
-                activeTab = 'mission';
-
+                tab = 'learn';
                 render();
             }
         );
@@ -3217,55 +3506,14 @@ export function initDaily() {
             'click',
             () => {
 
-                activeTab = 'history';
-
+                tab = 'history';
                 render();
             }
         );
 
-    /* ========================================================
-       DASHBOARD FILTER
-    ======================================================== */
-
-    $('dailySourceFilter')
-        ?.addEventListener(
-            'change',
-            event => {
-
-                filterSource = event.target.value;
-
-                renderDashboard();
-            }
-        );
-
-    /* ========================================================
-       DASHBOARD SEARCH
-    ======================================================== */
-
-    $('dailyHistorySearch')
-        ?.addEventListener(
-            'input',
-            event => {
-
-                searchText = event.target.value;
-
-                renderHistoryRows();
-            }
-        );
-
-    /* ========================================================
-       CLEAR HISTORY
-    ======================================================== */
-
-    $('dailyClearButton')
-        ?.addEventListener(
-            'click',
-            () => clearSource(filterSource)
-        );
-
-    /* ========================================================
-       ESC TO CLOSE
-    ======================================================== */
+    /* ================================================
+       ESC CLOSE
+    ================================================ */
 
     document.addEventListener(
         'keydown',
@@ -3275,39 +3523,39 @@ export function initDaily() {
                 event.key === 'Escape'
             ) {
 
-                closeDaily();
+                close();
             }
         }
     );
 
-    /* ========================================================
-       AUTH LISTENER
-    ======================================================== */
+    /* ================================================
+       FIREBASE AUTH
+    ================================================ */
 
-    auth.onAuthStateChanged(
-        user => listenUser(user?.uid)
+    onAuthStateChanged(
+        auth,
+        user => watch(user?.uid)
     );
 
-    /* ========================================================
-       CHECK VIETNAM DATE CHANGE
+    /* ================================================
+       DATE CHANGE
+    ================================================ */
 
-       Kiểm tra mỗi 30 giây.
-       Khi sang ngày mới:
-       Reset câu hỏi đang hiển thị.
-    ======================================================== */
-
-    lastVietnamDate = vietnamDate();
+    lastDate = today();
 
     setInterval(
         () => {
 
             if (
-                vietnamDate() !== lastVietnamDate
+                today() !== lastDate
             ) {
 
-                lastVietnamDate = vietnamDate();
+                lastDate = today();
 
-                resetQuestion();
+                question = null;
+                questionSig = '';
+
+                revealed = false;
             }
 
             render();
@@ -3316,12 +3564,12 @@ export function initDaily() {
         30000
     );
 
-    /* ========================================================
-       INIT DEFAULT TARGETS
-    ======================================================== */
+    /* ================================================
+       INITIAL TARGETS
+    ================================================ */
 
-    refreshTargets().catch(
-        error => notify(
+    updateTargets().catch(
+        error => message(
             error.message,
             true
         )
