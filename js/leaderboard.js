@@ -121,52 +121,58 @@ function createPlayerRow(player, type, isTop = false) {
         getPositionIcon(player.position)
     );
 
-       const avatar = createElement(
+     
+   /* ==========================================
+      PLAYER ACCOUNT AVATAR
+      Use Firebase Profile photoURL
+      NOT Mascot image
+   ========================================== */
+   
+   const avatar = createElement(
        "div",
-       "leaderboard-avatar",
-       getMascotIcon(player.mascot)
+       "leaderboard-avatar"
    );
    
-   if (
-       player.mascot === "buffalo" ||
-       player.mascot === "monkey"
-   ) {
+   // Fallback: first character of player's name.
+   const fallback = createElement(
+       "span",
+       "leaderboard-avatar-fallback",
+       String(player.name || "U")
+           .trim()
+           .charAt(0)
+           .toUpperCase() || "U"
+   );
+   
+   avatar.appendChild(fallback);
+   
+   // Account avatar from Firebase.
+   const photoURL = String(
+       player.photoURL || ""
+   ).trim();
+   
+   if (/^https:\/\//i.test(photoURL)) {
    
        const img = document.createElement("img");
    
-       const stage = Math.max(
-           1,
-           Math.min(
-               5,
-               player.mascotEvolution + 1
-           )
-       );
+       img.src = photoURL;
+       img.alt = `${player.name} avatar`;
    
-       const basePath =
-           `assets/mascot/${player.mascot}.png`;
-   
-       img.src = stage === 1
-           ? basePath
-           : `assets/mascot/${player.mascot}-stage-${stage}.png`;
-   
-       img.alt = player.mascot;
        img.loading = "lazy";
+       img.decoding = "async";
+       img.referrerPolicy = "no-referrer";
    
-       img.onerror = () => {
-   
-           if (img.dataset.fallback) {
-               img.remove();
-               avatar.textContent =
-                   getMascotIcon(player.mascot);
-               return;
-           }
-   
-           img.dataset.fallback = "1";
-           img.src = basePath;
+       img.onload = () => {
+           fallback.classList.add("hidden");
        };
    
-       avatar.replaceChildren(img);
+       img.onerror = () => {
+           img.remove();
+           fallback.classList.remove("hidden");
+       };
+   
+       avatar.appendChild(img);
    }
+
 
     const info = createElement(
         "div",
