@@ -1195,3 +1195,96 @@
         margin: 5px 0;
     }
 }
+
+/* ============================================================
+   BATLINGO DAILY V4.3
+   COMPACT NAVIGATION TABS
+
+   Thu nhỏ NHIỆM VỤ / DASHBOARD
+   Để tăng không gian cho Review / Quiz
+============================================================ */
+
+/* ------------------------------------------------------------
+   01. TAB CONTAINER
+------------------------------------------------------------ */
+
+#dailyOverlay .daily-tabs {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+
+    margin: 5px 0 2px;
+}
+
+
+/* ------------------------------------------------------------
+   02. TAB BUTTONS
+------------------------------------------------------------ */
+
+#dailyOverlay .daily-tabs button {
+
+    min-height: 30px;
+
+    padding: 5px 8px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* ------------------------------------------------------------
+   03. FOCUS STUDY MODE
+------------------------------------------------------------ */
+
+#dailyOverlay.daily-focus-mode .daily-tabs {
+
+    margin: 2px 0;
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+#dailyOverlay.daily-focus-mode .daily-tabs button {
+
+    min-height: 28px;
+    padding: 4px 6px;
+
+    font-size: 10px;
+    line-height: 1.1;
+}
+
+
+/* ------------------------------------------------------------
+   04. MOBILE
+------------------------------------------------------------ */
+
+@media (max-width: 550px) {
+
+    #dailyOverlay .daily-tabs {
+
+        gap: 5px;
+        margin: 4px 0 2px;
+    }
+
+    #dailyOverlay .daily-tabs button {
+
+        min-height: 28px;
+        padding: 4px 5px;
+
+        font-size: 10px;
+    }
+
+    #dailyOverlay.daily-focus-mode .daily-tabs button {
+
+        min-height: 26px;
+        padding: 3px 5px;
+
+        font-size: 10px;
+    }
+}
+
