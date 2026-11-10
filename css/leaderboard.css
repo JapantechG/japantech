@@ -514,19 +514,92 @@
     outline-offset: 3px;
 }
 
+
 /* ==========================================
-   PET IMAGE
+   LEADERBOARD ACCOUNT AVATAR
 ========================================== */
 
 .leaderboard-avatar {
+    position: relative;
+
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 2px solid #475569;
+    border-radius: 50%;
+
+    background: #263248;
+    color: #f8fafc;
 }
 
 .leaderboard-avatar img {
+    display: block;
+
     width: 100%;
     height: 100%;
-    object-fit: contain;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center;
 }
+
+.leaderboard-avatar-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 17px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.leaderboard-avatar-fallback.hidden {
+    display: none !important;
+}
+
+/* TOP 3 AVATAR */
+
+.leaderboard-top-card .leaderboard-avatar {
+    width: 60px;
+    height: 60px;
+}
+
+.leaderboard-top-card .leaderboard-avatar-fallback {
+    font-size: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .leaderboard-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .leaderboard-top-card .leaderboard-avatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .leaderboard-avatar-fallback {
+        font-size: 15px;
+    }
+
+    .leaderboard-top-card .leaderboard-avatar-fallback {
+        font-size: 20px;
+    }
+}
+
 
 /* ==========================================
    MOBILE
