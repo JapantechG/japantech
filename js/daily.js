@@ -1090,42 +1090,38 @@ async function confirmFlashcard() {
 }
 
 
-/* ============================================================
-   12. REVIEW
 
-   Mỗi từ phải trả lời đúng 3 lần.
+/* ============================================================
+   FIND NEXT REVIEW WORD
 
    Ví dụ:
+   ID 1: 3/3 → Bỏ qua
+   ID 2: 1/3 → Tiếp tục
+   ID 3: 2/3 → Tiếp tục
 
-   Từ ID 1:
-     Đúng → 1/3
-     Sai  → 1/3
-     Đúng → 2/3
-     Sai  → 2/3
-     Đúng → 3/3
-
-   Trả lời sai không trừ lượt đúng.
+   Khi tất cả đạt 3/3 → trả về -1.
 ============================================================ */
 
 function nextReviewPosition(m, cursor) {
 
-    for (
-        let i = 1;
-        i <= m.batch.length;
-        i++
-    ) {
+    const batch = m.batch || [];
 
-        const position =
-            (cursor + i) % m.batch.length;
+    if (!batch.length) {
+        return -1;
+    }
 
-        const count = Number(
-            m.review?.[m.batch[position]]
-        ) || 0;
+    for (let i = 1; i <= batch.length; i++) {
 
-        if (
-            count < 3
-        ) {
-            return position;
+        const index =
+            (cursor + i) % batch.length;
+
+        const id = String(batch[index]);
+
+        const correctCount =
+            Number(m.review?.[id]) || 0;
+
+        if (correctCount < 3) {
+            return index;
         }
     }
 
@@ -1324,94 +1320,144 @@ function getQuestion(m) {
    Không chuyển câu ngay sau khi chọn.
 ============================================================ */
 
+
+/* ============================================================
+   DAILY - ANSWER QUESTION
+
+   REVIEW:
+   - Đúng: cộng 1 lượt.
+   - Sai: giữ nguyên số lượt đã đúng.
+   - Lưu kết quả và chờ người học bấm NEXT.
+
+   QUIZ:
+   - Lưu đáp án và trạng thái đúng/sai.
+============================================================ */
+
 async function chooseAnswer(selected) {
+
+    if (inProgress) return;
 
     const m = currentMission();
 
     if (!m) return;
 
-    const q = getQuestion(m);
-
     if (
-        !q ||
-        m.feedback ||
-        !['review', 'quiz'].includes(m.stage)
+        m.stage !== 'review' &&
+        m.stage !== 'quiz'
     ) {
         return;
     }
 
-    const correct =
-        selected === q.answer;
+    // Không cho trả lời lại câu đã chọn.
+    if (m.feedback) return;
 
-    await save((profile, day) => {
+    const q = getQuestion(m);
+
+    if (!q) {
+        notify(
+            'Không tạo được câu hỏi Review.',
+            true
+        );
+        return;
+    }
+
+    const wordId = String(q.id);
+
+    const correct =
+        String(selected) === String(q.answer);
+
+    const expectedStage = m.stage;
+    const expectedCursor = m.cursor;
+
+    // Lưu lại câu hỏi trước khi ghi Firebase.
+    const feedback = {
+
+        id: wordId,
+
+        selected: String(selected),
+        correct,
+
+        mode: q.mode,
+        prompt: q.prompt,
+        answer: q.answer,
+
+        options: [...q.options]
+    };
+
+    const saved = await save((profile, day) => {
 
         const x = day.mission;
 
+        // Tránh ghi vào câu khác nếu tiến độ đã thay đổi.
         if (
             !x ||
-            x.feedback ||
-            x.batch[x.cursor] !== q.id
+            x.stage !== expectedStage ||
+            x.cursor !== expectedCursor ||
+            String(x.batch?.[x.cursor]) !== wordId ||
+            x.feedback
         ) {
             return;
         }
 
-        /* ----------------------------------------
-           Lưu feedback để hiển thị dưới đáp án.
-        ----------------------------------------- */
+        // Firebase lưu kết quả để hiển thị feedback.
+        x.feedback = feedback;
 
-        x.feedback = {
+        /* ==========================================
+           REVIEW - 3 LẦN ĐÚNG
+        ========================================== */
 
-            id: q.id,
+        if (x.stage === 'review') {
 
-            selected,
-            correct,
+            x.review ||= {};
 
-            mode: q.mode,
-            prompt: q.prompt,
+            const previous =
+                Number(x.review[wordId]) || 0;
 
-            answer: q.answer,
-            options: q.options
-        };
-
-        /* ----------------------------------------
-           REVIEW: Cộng dồn lượt đúng.
-        ----------------------------------------- */
-
-        if (
-            x.stage === 'review'
-        ) {
-
-            const old = Number(
-                x.review[q.id]
-            ) || 0;
-
-            x.review[q.id] = Math.min(
+            // Sai sẽ cộng 0, không reset.
+            x.review[wordId] = Math.min(
                 3,
-                old + (correct ? 1 : 0)
+                previous + (correct ? 1 : 0)
             );
+        }
 
-        } else if (
-            x.stage === 'quiz'
-        ) {
+        /* ==========================================
+           QUIZ - LƯU KẾT QUẢ
+        ========================================== */
 
-            /* ------------------------------------
-               QUIZ: Mỗi từ chỉ làm một lần
-               trong lượt Quiz hiện tại.
-            ------------------------------------- */
+        if (x.stage === 'quiz') {
 
-            x.quizResults[q.id] = {
+            x.quizResults ||= {};
 
-                id: q.id,
+            x.quizResults[wordId] = {
 
+                id: wordId,
                 correct,
-                selected,
 
+                selected: String(selected),
                 answer: q.answer,
                 mode: q.mode
             };
         }
     });
+
+    if (!saved) {
+
+        console.error(
+            '[DAILY] Không lưu được đáp án',
+            {
+                stage: expectedStage,
+                wordId,
+                selected
+            }
+        );
+
+        return;
+    }
+
+    // Đã lưu thành công: hiển thị đáp án và nút NEXT.
+    renderStudy();
 }
+
 
 
 /* ============================================================
@@ -1451,40 +1497,32 @@ async function nextQuestion() {
 
         x.feedback = null;
 
-        /* ====================================================
-           REVIEW NEXT
-        ==================================================== */
-
-        if (
-            x.stage === 'review'
-        ) {
-
-            const next = nextReviewPosition(
-                x,
-                x.cursor
-            );
-
-            /* ------------------------------------
-               Tất cả từ đã đúng 3 lần:
-               chuyển sang Quiz.
-            ------------------------------------- */
-
-            if (
-                next === -1
-            ) {
-
-                x.stage = 'quiz';
-                x.cursor = 0;
-
-                x.quizResults = {};
-
-            } else {
-
-                x.cursor = next;
-            }
-
-            return;
-        }
+              /* ============================================================
+            REVIEW NEXT
+         ============================================================ */
+         
+         if (x.stage === 'review') {
+         
+             const next = nextReviewPosition(
+                 x,
+                 x.cursor
+             );
+         
+             if (next === -1) {
+         
+                 // Tất cả từ đã trả lời đúng đủ 3 lần.
+                 x.stage = 'quiz';
+                 x.cursor = 0;
+                 x.quizResults = {};
+         
+             } else {
+         
+                 // Chuyển sang từ chưa đạt 3 lần đúng.
+                 x.cursor = next;
+             }
+         
+             return;
+         }
 
         /* ====================================================
            QUIZ NEXT
