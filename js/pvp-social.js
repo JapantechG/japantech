@@ -1853,6 +1853,9 @@ async function loadPvpInvitePlayers(type = "online") {
 
     if (!container) return;
 
+    /* Reset scroll when switching invite tabs */
+    container.scrollTop = 0;
+
     if (!myUid || !code || !room) {
 
         container.textContent =
@@ -1971,6 +1974,9 @@ async function loadPvpInvitePlayers(type = "online") {
             : `<p class="pvp-empty">
                 No players available.
                </p>`;
+        
+        // Always display first player at top
+        container.scrollTop = 0;
 
         container
             .querySelectorAll("[data-pvp-invite]")
