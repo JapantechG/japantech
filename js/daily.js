@@ -3489,21 +3489,6 @@ export function initDaily() {
             close
         );
 
-    $('dailyOverlay')
-        ?.addEventListener(
-            'click',
-            event => {
-
-                if (
-                    event.target ===
-                    $('dailyOverlay')
-                ) {
-
-                    close();
-                }
-            }
-        );
-
     /* ================================================
        SELECT SOURCE
     ================================================ */
