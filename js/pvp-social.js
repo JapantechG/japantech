@@ -17,7 +17,8 @@ import {
     remove,
     update,
     onValue,
-    onDisconnect
+    onDisconnect,
+    runTransaction
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
 /* =========================================================
@@ -844,29 +845,104 @@ export async function leavePvpSocial() {
     }
 }
 
+
+/* =========================================================
+   PVP - CLEAN UP ABANDONED ROOMS
+========================================================= */
+
+const pendingRoomCleanup = new Set();
+
+async function cleanupAbandonedRoom(code) {
+
+    if (pendingRoomCleanup.has(code)) return;
+
+    pendingRoomCleanup.add(code);
+
+    try {
+
+        await runTransaction(
+            ref(db, `rooms/${code}`),
+            room => {
+
+                if (!room) return;
+
+                // Host is still connected.
+                if (room.host?.connected !== false) {
+                    return;
+                }
+
+                // Never remove an active guest.
+                if (room.guest?.connected === true) {
+                    return;
+                }
+
+                // Never remove an active match here.
+                if (!["waiting", "connected"].includes(
+                    room.status
+                )) {
+                    return;
+                }
+
+                // No active players: delete room.
+                return null;
+            },
+            { applyLocally: false }
+        );
+
+    } catch (error) {
+
+        console.warn(
+            "[PVP] Room cleanup failed:",
+            code,
+            error
+        );
+
+    } finally {
+
+        pendingRoomCleanup.delete(code);
+    }
+}
+
+
 /* =========================================================
    PUBLIC ROOM LIST
 ========================================================= */
 
 function renderPublicRooms(snapshot) {
 
-    const rooms = Object.entries(
+    const allRooms = Object.entries(
         snapshot.val() || {}
-    )
-    .filter(([code, room]) => {
+    );
 
-        return (
-            room.visibility === "public" &&
-            room.host?.connected === true &&
-            !room.guest?.connected &&
+    // Clean abandoned rooms, including private rooms.
+    for (const [code, room] of allRooms) {
+
+        if (
+            room.host?.connected === false &&
+            room.guest?.connected !== true &&
             ["waiting", "connected"].includes(room.status)
-        );
-    })
-    .sort((a, b) =>
-        (b[1].createdAt || 0) -
-        (a[1].createdAt || 0)
-    )
-    .slice(0, 100);
+        ) {
+            cleanupAbandonedRoom(code);
+        }
+    }
+
+    const rooms = allRooms
+        .filter(([code, room]) => {
+
+            return (
+                room.visibility === "public" &&
+                room.host?.connected === true &&
+                !room.guest?.connected &&
+                ["waiting", "connected"].includes(
+                    room.status
+                )
+            );
+        })
+        .sort((a, b) =>
+            (b[1].createdAt || 0) -
+            (a[1].createdAt || 0)
+        )
+        .slice(0, 100);
 
     const container = $("pvpPublicRooms");
 
