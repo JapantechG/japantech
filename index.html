@@ -47,6 +47,8 @@
     <link rel="stylesheet" href="./css/jlpt-exam.css">
     <link rel="stylesheet" href="css/review-modern.css">
     <link rel="stylesheet" href="css/how-to-play.css">
+    <!-- BATLINGO DAILY MISSION -->
+    <link rel="stylesheet" href="css/daily.css">
 </head>
 
 <body>
@@ -91,6 +93,21 @@
             </select>
 
         </div>
+
+        <!-- ==========================================
+             DAILY STREAK - HEADER
+        =========================================== -->
+        
+        <button
+            id="dailyHeaderButton"
+            class="hidden"
+            type="button"
+            aria-label="Daily Mission">
+        
+            🔥
+            <span id="dailyStreakCount">0</span>
+        
+        </button>
 
         <!-- LOGIN -->
         <button id="homeLoginBtn" class="top-action-btn login-button" type="button">
@@ -3182,6 +3199,351 @@
     </aside>
 
 </section>
+
+<!-- ============================================================
+     BATLINGO DAILY MISSION V4
+     Flashcard / Review / Quiz / Dashboard
+============================================================ -->
+
+<div
+    id="dailyOverlay"
+    class="hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Daily Mission">
+
+    <div class="daily-panel">
+
+        <!-- ======================================
+             HEADER
+        ======================================= -->
+
+        <div class="daily-head">
+
+            <h2>🔥 DAILY MISSION</h2>
+
+            <button
+                id="dailyCloseButton"
+                type="button"
+                aria-label="Close">
+                ✕
+            </button>
+
+        </div>
+
+        <p id="dailyDate" class="daily-muted">
+            Giờ Việt Nam (UTC+7)
+        </p>
+
+        <!-- ======================================
+             MAIN TABS
+        ======================================= -->
+
+        <nav class="daily-tabs">
+
+            <button
+                id="dailyMissionTab"
+                class="active"
+                type="button">
+                📖 NHIỆM VỤ
+            </button>
+
+            <button
+                id="dailyHistoryTab"
+                type="button">
+                📊 DASHBOARD
+            </button>
+
+        </nav>
+
+        <!-- ======================================
+             PAGE 1 - DAILY MISSION
+        ======================================= -->
+
+        <div id="dailyLearningPage">
+
+            <!-- DAILY CHECK-IN -->
+
+            <section class="daily-card">
+
+                <h3>📅 ĐIỂM DANH</h3>
+
+                <div class="daily-row">
+
+                    <span>Chuỗi liên tiếp</span>
+
+                    <strong id="dailyStreak">
+                        0 ngày
+                    </strong>
+
+                </div>
+
+                <p
+                    id="dailyCheckinStatus"
+                    class="daily-muted">
+                    Hoàn thành mục tiêu để điểm danh
+                </p>
+
+                <button
+                    id="dailyCheckinButton"
+                    class="daily-button daily-wide"
+                    type="button"
+                    disabled>
+                    🔒 CHƯA ĐỦ MỤC TIÊU
+                </button>
+
+            </section>
+
+            <!-- DAILY GOAL -->
+
+            <section
+                id="dailySetup"
+                class="daily-card">
+
+                <h3>🎯 MỤC TIÊU HẰNG NGÀY</h3>
+
+                <div class="daily-row">
+
+                    <span>Mục tiêu</span>
+
+                    <strong id="dailyGoalLabel">
+                        5 từ/ngày
+                    </strong>
+
+                </div>
+
+                <div class="daily-row">
+
+                    <span>Đã hoàn thành</span>
+
+                    <strong id="dailyProgress">
+                        0 / 5
+                    </strong>
+
+                </div>
+
+                <!-- PROGRESS BAR -->
+
+                <div class="daily-track">
+                    <div id="dailyBar"></div>
+                </div>
+
+                <p
+                    id="dailyMissionStatus"
+                    class="daily-muted">
+                    Chưa bắt đầu
+                </p>
+
+                <p
+                    id="dailyActual"
+                    class="daily-muted">
+                    Hôm nay: 0 từ
+                </p>
+
+                <!-- STUDY MODE -->
+
+                <label
+                    class="daily-label"
+                    for="dailyStudyMode">
+                    Nguồn học
+                </label>
+
+                <select
+                    id="dailyStudyMode"
+                    class="daily-select">
+
+                    <option value="jlpt">
+                        🎓 JLPT
+                    </option>
+
+                    <option value="topic">
+                        📚 CHỦ ĐỀ
+                    </option>
+
+                </select>
+
+                <!-- LEVEL / TOPIC -->
+
+                <label
+                    class="daily-label"
+                    for="dailyTarget">
+                    Cấp độ / Chủ đề
+                </label>
+
+                <select
+                    id="dailyTarget"
+                    class="daily-select">
+
+                    <option value="n5">N5</option>
+
+                </select>
+
+                <!-- DAILY GOAL -->
+
+                <label
+                    class="daily-label"
+                    for="dailyGoalInput">
+                    Số từ mỗi ngày (5–100)
+                </label>
+
+                <input
+                    id="dailyGoalInput"
+                    class="daily-select"
+                    type="number"
+                    min="5"
+                    max="100"
+                    step="1"
+                    value="5">
+
+                <button
+                    id="dailyStartButton"
+                    class="daily-button daily-wide"
+                    type="button">
+                    ▶ BẮT ĐẦU / LƯU MỤC TIÊU
+                </button>
+
+                <p class="daily-muted">
+                    Flashcard → Review 3 lần đúng →
+                    Quiz ngẫu nhiên. Chỉ từ trả lời
+                    sai ở Quiz phải học lại.
+                </p>
+
+                <p
+                    id="dailyStageSummary"
+                    class="daily-muted">
+                    Chưa bắt đầu
+                </p>
+
+                <!-- REMAINING VOCABULARY -->
+
+                <div id="dailyAvailableWords"></div>
+
+            </section>
+
+            <!-- LEARNING AREA -->
+
+            <section class="daily-card">
+
+                <h3>📚 BÀI HỌC HÔM NAY</h3>
+
+                <div
+                    id="dailyStudy"
+                    aria-live="polite">
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- ======================================
+             PAGE 2 - DASHBOARD
+        ======================================= -->
+
+        <div
+            id="dailyHistoryPage"
+            class="hidden">
+
+            <section class="daily-card">
+
+                <h3>📊 DASHBOARD TỪ ĐÃ HỌC</h3>
+
+                <!-- STATISTICS -->
+
+                <div
+                    id="dailyDashboardTotal"
+                    class="daily-summary-numbers">
+                    0 từ đã học
+                </div>
+
+                <p
+                    id="dailyDashboardQuiz"
+                    class="daily-muted">
+                    Quiz hôm nay
+                </p>
+
+                <!-- FILTERS -->
+
+                <div class="daily-dashboard-toolbar">
+
+                    <select
+                        id="dailySourceFilter"
+                        class="daily-select">
+
+                        <option value="all">
+                            Tất cả bộ từ
+                        </option>
+
+                    </select>
+
+                    <input
+                        id="dailyHistorySearch"
+                        class="daily-select"
+                        type="search"
+                        placeholder="Tìm từ / Hiragana / nghĩa">
+
+                    <button
+                        id="dailyClearButton"
+                        type="button"
+                        disabled>
+                        🗑 CLEAR
+                    </button>
+
+                </div>
+
+                <p
+                    id="dailyHistoryCount"
+                    class="daily-muted">
+                    0 từ
+                </p>
+
+                <!-- VOCABULARY TABLE -->
+
+                <div class="daily-table-scroll">
+
+                    <table class="daily-history-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>BỘ TỪ</th>
+                                <th>ID</th>
+                                <th>KANJI</th>
+                                <th>HIRAGANA</th>
+                                <th>NGHĨA</th>
+                                <th>NGÀY HỌC</th>
+                                <th>ÂM THANH</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="dailyHistoryRows">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="daily-muted">
+                    Chọn một bộ từ trong Filter
+                    để bật nút CLEAR.
+                    Xóa lịch sử sẽ cho phép học lại
+                    bộ đó từ ID nhỏ nhất.
+                </p>
+
+            </section>
+
+        </div>
+
+        <!-- STATUS MESSAGE -->
+
+        <p
+            id="dailyMessage"
+            role="status">
+        </p>
+
+    </div>
+
+</div>
 
     <!-- =====================================================
          AUDIO
