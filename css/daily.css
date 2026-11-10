@@ -379,60 +379,6 @@
     white-space: pre-line;
 }
 
-
-/* ============================================================
-   10. ANSWER GRID
-============================================================ */
-
-.daily-answers {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px;
-
-    margin-top: 12px;
-}
-
-.daily-answer {
-    width: 100%;
-    min-height: 55px;
-    padding: 12px;
-
-    border: 1px solid #475569;
-    border-radius: 11px;
-
-    background: #1e293b;
-    color: #f8fafc;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    cursor: pointer;
-    overflow-wrap: anywhere;
-}
-
-.daily-answer:hover:not(:disabled) {
-    border-color: #fbbf24;
-    background: #29374d;
-}
-
-.daily-answer.correct {
-    border-color: #22c55e !important;
-    background: rgba(34, 197, 94, .20) !important;
-    color: #dcfce7;
-}
-
-.daily-answer.wrong {
-    border-color: #ef4444 !important;
-    background: rgba(239, 68, 68, .17) !important;
-    color: #fee2e2;
-}
-
-.daily-answer:disabled {
-    opacity: 1;
-    cursor: default;
-}
-
-
 /* ============================================================
    11. ANSWER FEEDBACK / NEXT
 ============================================================ */
@@ -1053,5 +999,199 @@
     #dailyOverlay.daily-focus-mode
     #dailyMissionStatus {
         display: none;
+    }
+}
+
+/* ============================================================
+   BATLINGO DAILY V4.2
+   REVIEW / QUIZ - 4 ANSWERS, ONE PER ROW
+============================================================ */
+
+/* ------------------------------------------------------------
+   01. ANSWER CONTAINER
+   Một đáp án trên một hàng
+------------------------------------------------------------ */
+
+#dailyOverlay .daily-answers,
+#dailyOverlay.daily-focus-mode .daily-answers {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+
+    gap: 9px;
+
+    width: 100%;
+    margin: 10px 0;
+
+    flex: 1;
+    min-height: 0;
+}
+
+
+/* ------------------------------------------------------------
+   02. ANSWER BUTTON
+------------------------------------------------------------ */
+
+#dailyOverlay .daily-answer,
+#dailyOverlay.daily-focus-mode .daily-answer {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    min-height: 60px;
+
+    padding: 10px 16px;
+
+    border: 2px solid #475569;
+    border-radius: 12px;
+
+    background: #1e293b;
+    color: #f8fafc;
+
+    font-size: clamp(17px, 2vw, 22px);
+    font-weight: 750;
+    line-height: 1.4;
+
+    text-align: left;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+
+    transition:
+        border-color 0.15s,
+        background 0.15s;
+}
+
+
+/* ------------------------------------------------------------
+   03. ANSWER NUMBER
+------------------------------------------------------------ */
+
+.daily-answer-number {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    flex: 0 0 35px;
+
+    border-radius: 9px;
+
+    background: #334155;
+    color: #fbbf24;
+
+    font-size: 17px;
+    font-weight: 900;
+}
+
+
+/* ------------------------------------------------------------
+   04. ANSWER TEXT
+------------------------------------------------------------ */
+
+.daily-answer-text {
+
+    flex: 1;
+    min-width: 0;
+
+    font-size: inherit;
+    line-height: 1.35;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+
+/* ------------------------------------------------------------
+   05. SELECTED ANSWER COLORS
+------------------------------------------------------------ */
+
+#dailyOverlay .daily-answer.correct,
+#dailyOverlay.daily-focus-mode .daily-answer.correct {
+
+    background: #14532d !important;
+    border-color: #22c55e !important;
+}
+
+#dailyOverlay .daily-answer.wrong,
+#dailyOverlay.daily-focus-mode .daily-answer.wrong {
+
+    background: #7f1d1d !important;
+    border-color: #ef4444 !important;
+}
+
+.daily-answer.correct .daily-answer-number {
+
+    background: #22c55e;
+    color: #052e16;
+}
+
+.daily-answer.wrong .daily-answer-number {
+
+    background: #ef4444;
+    color: white;
+}
+
+
+/* ------------------------------------------------------------
+   06. FOCUS MODE
+   Giữ 4 hàng đáp án lớn nhất có thể
+------------------------------------------------------------ */
+
+#dailyOverlay.daily-focus-mode .daily-answers {
+
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+
+    gap: 7px;
+    margin: 6px 0;
+}
+
+#dailyOverlay.daily-focus-mode .daily-answer {
+
+    min-height: 0;
+
+    padding: 7px 13px;
+
+    font-size: clamp(17px, 2vw, 21px);
+}
+
+
+/* ------------------------------------------------------------
+   07. MOBILE
+------------------------------------------------------------ */
+
+@media (max-width: 550px) {
+
+    #dailyOverlay .daily-answer,
+    #dailyOverlay.daily-focus-mode .daily-answer {
+
+        gap: 10px;
+        padding: 8px 10px;
+
+        min-height: 53px;
+
+        font-size: clamp(15px, 4vw, 19px);
+    }
+
+    .daily-answer-number {
+
+        width: 30px;
+        height: 30px;
+
+        flex-basis: 30px;
+
+        font-size: 15px;
+    }
+
+    #dailyOverlay.daily-focus-mode .daily-answers {
+
+        gap: 5px;
+        margin: 5px 0;
     }
 }
