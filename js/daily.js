@@ -3117,81 +3117,32 @@ function render() {
                 : '✕ THU GỌN';
     }
 
-    /* ================================================
-       REMAINING WORDS
-    ================================================ */
-
-    const available =
-        $('dailyAvailableWords');
-
-    if (available) {
-
-        available.replaceChildren();
-
-        if (
-            m &&
-            loadedSource === sourceKey(
-                m.type,
-                m.target
-            ) &&
-            words.length
-        ) {
-
-            const sk = sourceKey(
-                m.type,
-                m.target
-            );
-
-            const known =
-                learned()[sk] || {};
-
-            const completedToday =
-                day().completed?.[sk] || {};
-
-            const left = words.filter(
-                w =>
-
-                    !known[wordKey(w.id)] &&
-                    !completedToday[wordKey(w.id)]
-            );
-
-            const details = el(
-                'details',
-                'daily-available-details'
-            );
-
-            details.append(
-                el(
-                    'summary',
-                    '',
-
-                    `Còn ${left.length} từ trong bộ ${m.target.toUpperCase()} · Xem danh sách`
-                )
-            );
-
-            const list = el(
-                'div',
-                'daily-remaining-list'
-            );
-
-            for (
-                const w of left.slice(0, 500)
-            ) {
-
-                list.append(
-                    el(
-                        'div',
-                        'daily-remaining-word',
-
-                        `${w.word} · ${w.reading} · ${w.meaning}`
-                    )
-                );
-            }
-
-            details.append(list);
-            available.append(details);
-        }
-    }
+          /* ============================================================
+         DAILY SOURCE SUMMARY
+      
+         Chỉ hiển thị thống kê.
+         Không tạo danh sách từng từ.
+      ============================================================ */
+      
+      const summary = $('dailyStageSummary');
+      
+      if (summary && m) {
+      
+          const sk = sourceKey(m.type, m.target);
+      
+          const known = learned()[sk] || {};
+      
+          const total = words.length;
+      
+          const learnedCount = words.filter(w =>
+              !!known[wordKey(w.id)]
+          ).length;
+      
+          summary.textContent =
+              `${m.target.toUpperCase()} · ` +
+              `Đã học ${learnedCount}/${total} từ · ` +
+              `Còn ${Math.max(0, total - learnedCount)} từ`;
+      }
 
     /* ================================================
        CURRENT SOURCE
