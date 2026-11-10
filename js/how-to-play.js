@@ -16,7 +16,7 @@ import {
 ========================================================= */
 
 const STORAGE_KEY = "batlingo_how_to_play_seen_v1";
-const IMAGE_PATH = "assets/how-to-play/";
+
 
 const DEFAULT_LANGUAGE = "en";
 
@@ -913,8 +913,14 @@ function openCreateAccount() {
     });
 }
 
+
 /* =========================================================
-   IMAGE AREA
+   HOW TO PLAY - PLACEHOLDER ONLY
+
+   - Keep existing illustration container
+   - No image loading
+   - No WebP links
+   - No image path or coming soon message
 ========================================================= */
 
 function createImageArea(slide, translation, text) {
@@ -924,77 +930,37 @@ function createImageArea(slide, translation, text) {
         "htp-media"
     );
 
-    const image = createElement(
-        "img",
-        "htp-image"
-    );
-
-    image.alt = translation.title;
-    image.decoding = "async";
-    image.loading = "lazy";
-
     const placeholder = createElement(
         "div",
         "htp-image-placeholder"
     );
 
-    placeholder.append(
-        createElement(
-            "div",
-            "htp-placeholder-icon",
-            slide.icon
-        )
+    /* MODE ICON */
+
+    const icon = createElement(
+        "div",
+        "htp-placeholder-icon",
+        slide.icon
+    );
+
+    /* MODE TITLE */
+
+    const title = createElement(
+        "strong",
+        "",
+        slide.tag
     );
 
     placeholder.append(
-        createElement(
-            "strong",
-            "",
-            slide.tag
-        )
+        icon,
+        title
     );
 
-    placeholder.append(
-        createElement(
-            "span",
-            "",
-            text.image
-        )
-    );
-
-    const path = IMAGE_PATH + slide.id + ".webp";
-
-    placeholder.append(
-        createElement(
-            "code",
-            "htp-image-path",
-            path
-        )
-    );
-
-    image.addEventListener("load", () => {
-
-        image.classList.add("ready");
-        placeholder.classList.add("hidden");
-
-    });
-
-    image.addEventListener("error", () => {
-
-        image.classList.remove("ready");
-        placeholder.classList.remove("hidden");
-
-    });
-
-    container.append(
-        image,
-        placeholder
-    );
-
-    image.src = path;
+    container.append(placeholder);
 
     return container;
 }
+
 
 /* =========================================================
    LANGUAGE SELECTOR
