@@ -2136,43 +2136,80 @@ function renderStudy() {
         'daily-answers'
     );
 
-    q.choices.forEach(choice => {
+   
+/* ============================================================
+   REVIEW / QUIZ ANSWERS
 
-        const b = button(
+   - 4 đáp án, mỗi đáp án một hàng.
+   - Đánh số 1, 2, 3, 4.
+   - Chữ đáp án lớn.
+   - Giữ logic đúng/sai và đọc phát âm.
+============================================================ */
 
-            choice,
+q.choices.forEach((choice, index) => {
 
-            () => answer(choice),
+    /* --------------------------------------------------------
+       TẠO NÚT ĐÁP ÁN
+    -------------------------------------------------------- */
 
-            'daily-answer'
-        );
+    const b = button(
+        '',
+        () => answer(choice),
+        'daily-answer'
+    );
 
-        if (
-            m.feedback
+    /* --------------------------------------------------------
+       SỐ THỨ TỰ 1, 2, 3, 4
+    -------------------------------------------------------- */
+
+    const number = el(
+        'span',
+        'daily-answer-number',
+        String(index + 1)
+    );
+
+    /* --------------------------------------------------------
+       NỘI DUNG ĐÁP ÁN
+    -------------------------------------------------------- */
+
+    const answerText = el(
+        'span',
+        'daily-answer-text',
+        choice
+    );
+
+    b.append(
+        number,
+        answerText
+    );
+
+    /* --------------------------------------------------------
+       SAU KHI TRẢ LỜI
+
+       - Đáp án đúng: xanh lá.
+       - Đáp án sai đã chọn: đỏ.
+       - Khóa nút, đợi NEXT.
+    -------------------------------------------------------- */
+
+    if (m.feedback) {
+
+        b.disabled = true;
+
+        if (choice === q.answer) {
+
+            b.classList.add('correct');
+
+        } else if (
+            choice === m.feedback.selected
         ) {
 
-            b.disabled = true;
-
-            if (
-                choice === q.answer
-            ) {
-
-                b.classList.add(
-                    'correct'
-                );
-
-            } else if (
-                choice === m.feedback.selected
-            ) {
-
-                b.classList.add(
-                    'wrong'
-                );
-            }
+            b.classList.add('wrong');
         }
+    }
 
-        options.append(b);
-    });
+    options.append(b);
+});
+
 
     root.append(options);
 
