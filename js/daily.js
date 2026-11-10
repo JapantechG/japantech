@@ -104,6 +104,42 @@ let words = [];
 let loadedSource = '';
 let loadSeq = 0;
 
+/* ============================================================
+   DAILY DEBUG SYSTEM
+
+   DEBUG = true:
+       Hiển thị log trên Console.
+
+   DEBUG = false:
+       Tắt log sau khi sửa xong lỗi.
+============================================================ */
+
+const DAILY_DEBUG = true;
+
+const wordCache = new Map();
+
+const pendingLoads = new Map();
+
+const resumingSources = new Set();
+
+const sourceErrors = new Map();
+
+function dailyLog(step, label, details = null) {
+
+    if (!DAILY_DEBUG) return;
+
+    const prefix = `[DAILY ${step}] ${label}`;
+
+    if (details === null) {
+
+        console.log(prefix);
+
+    } else {
+
+        console.log(prefix, details);
+    }
+}
+
 let question = null;
 let questionSig = '';
 let revealed = false;
@@ -349,17 +385,30 @@ function normalize(raw) {
 }
 
 
+
 /* ============================================================
-   10. LOAD WORDS
+  10 LOAD VOCABULARY - DEBUG + SINGLE REQUEST
 
-   JLPT: data/n5.json ... data/n1.json
-   TOPIC: data/topics/{target}.json
-
-   QUAN TRỌNG:
-   Danh sách từ luôn theo ID tăng dần.
+   - Một request cho mỗi bộ từ.
+   - Cache sau khi tải.
+   - Sort ID tăng dần.
+   - Ghi log từng bước.
 ============================================================ */
 
 async function loadWords(type, target) {
+
+    const key = sourceKey(type, target);
+
+    dailyLog('01', 'LOAD REQUEST', {
+        type,
+        target,
+        key,
+        loadedSource
+    });
+
+    /* ========================================================
+       VALIDATION
+    ======================================================== */
 
     if (
         !['jlpt', 'topic'].includes(type) ||
@@ -369,63 +418,177 @@ async function loadWords(type, target) {
             !/^n[1-5]$/.test(target)
         )
     ) {
-        throw Error('Bộ từ không hợp lệ.');
+
+        throw new Error(
+            `Invalid source: ${key}`
+        );
     }
 
-    const key = sourceKey(
-        type,
-        target
-    );
+    /* ========================================================
+       CACHE HIT
+    ======================================================== */
 
-    if (
-        key === loadedSource &&
-        words.length
-    ) {
-        return words;
+    if (wordCache.has(key)) {
+
+        dailyLog('02', 'CACHE HIT', {
+            key,
+            count: wordCache.get(key).length
+        });
+
+        return wordCache.get(key);
     }
 
-    const request = ++loadSeq;
+    /* ========================================================
+       PREVENT DUPLICATE FETCH
+    ======================================================== */
+
+    if (pendingLoads.has(key)) {
+
+        dailyLog('02', 'WAIT EXISTING REQUEST', key);
+
+        return pendingLoads.get(key);
+    }
+
+    /* ========================================================
+       FETCH
+    ======================================================== */
 
     const url = type === 'topic'
+
         ? `data/topics/${target}.json`
+
         : `data/${target}.json`;
 
-    const res = await fetch(url);
+    const request = (async () => {
 
-    if (!res.ok) {
-        throw Error(
-            'Không tải được bộ từ ' + target
+        dailyLog('02', 'FETCH START', url);
+
+        const controller = new AbortController();
+
+        // Báo lỗi rõ ràng nếu request vượt quá 15 giây.
+        const timeout = setTimeout(
+            () => controller.abort(),
+            15000
         );
+
+        try {
+
+            const response = await fetch(url, {
+                signal: controller.signal
+            });
+
+            dailyLog('03', 'FETCH RESPONSE', {
+                url,
+                status: response.status,
+                ok: response.ok
+            });
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `HTTP ${response.status}: ${url}`
+                );
+            }
+
+            /* ================================================
+               PARSE JSON
+            ================================================ */
+
+            const raw = await response.json();
+
+            dailyLog('04', 'JSON PARSED', {
+                isArray: Array.isArray(raw),
+                count: Array.isArray(raw)
+                    ? raw.length
+                    : null
+            });
+
+            if (!Array.isArray(raw)) {
+
+                throw new Error(
+                    `Invalid JSON structure: ${url}`
+                );
+            }
+
+            /* ================================================
+               NORMALIZE
+            ================================================ */
+
+            const list = normalize(raw);
+
+            list.sort(
+                (a, b) => compareIds(a.id, b.id)
+            );
+
+            dailyLog('05', 'NORMALIZED', {
+                raw: raw.length,
+                valid: list.length,
+                firstIds: list.slice(0, 10)
+                    .map(w => w.id)
+            });
+
+            if (list.length < 4) {
+
+                throw new Error(
+                    `Only ${list.length} valid words in ${key}`
+                );
+            }
+
+            /* ================================================
+               CACHE RESULT
+            ================================================ */
+
+            wordCache.set(key, list);
+
+            sourceErrors.delete(key);
+
+            dailyLog('06', 'CACHE READY', {
+                key,
+                count: list.length
+            });
+
+            return list;
+
+        } catch (error) {
+
+            const actualError =
+                error.name === 'AbortError'
+                    ? new Error(
+                        `Timeout loading ${url} (15s)`
+                    )
+                    : error;
+
+            sourceErrors.set(
+                key,
+                actualError.message
+            );
+
+            console.error(
+                '[DAILY LOAD ERROR]',
+                actualError
+            );
+
+            throw actualError;
+
+        } finally {
+
+            clearTimeout(timeout);
+        }
+
+    })();
+
+    pendingLoads.set(key, request);
+
+    try {
+
+        return await request;
+
+    } finally {
+
+        pendingLoads.delete(key);
     }
-
-    const raw = await res.json();
-
-    if (!Array.isArray(raw)) {
-        throw Error(
-            'Database không phải mảng.'
-        );
-    }
-
-    /* KHÔNG random. */
-
-    const list = normalize(raw).sort(
-        (a, b) => compareIds(a.id, b.id)
-    );
-
-    if (list.length < 4) {
-        throw Error(
-            'Bộ từ cần ít nhất 4 từ hợp lệ để tạo Quiz 4 lựa chọn.'
-        );
-    }
-
-    if (request === loadSeq) {
-
-        words = list;
-        loadedSource = key;
-    }
-
-    return list;
 }
+
 
 
 /* ============================================================
@@ -827,6 +990,21 @@ async function startMission() {
             target
         );
 
+                /* ============================================================
+            ACTIVATE SELECTED SOURCE
+         
+            Đảm bảo bộ mới được kích hoạt sau khi tải.
+         ============================================================ */
+         
+         words = list;
+         
+         loadedSource = sourceKey(type, target);
+         
+         dailyLog('06', 'SOURCE SELECTED', {
+             source: loadedSource,
+             count: words.length
+         });
+
         const selected = chooseNewIds(
             list,
             state,
@@ -1070,44 +1248,133 @@ async function nextBatch() {
    18. RESUME SOURCE
 ============================================================ */
 
+
+/* ============================================================
+   RESUME SOURCE - DEBUG
+
+   - Không fetch trùng.
+   - Chỉ kích hoạt nguồn của mission hiện tại.
+   - Log rõ thời điểm hoàn tất.
+============================================================ */
+
 async function resumeSource() {
 
     const m = mission();
 
-    if (
-        !m ||
-        m.stage === 'done'
-    ) {
+    if (!m || m.stage === 'done') {
         return;
     }
 
+    const key = sourceKey(
+        m.type,
+        m.target
+    );
+
+    dailyLog('07', 'RESUME CHECK', {
+        key,
+        stage: m.stage,
+        loadedSource,
+        wordsCount: words.length
+    });
+
+    /* ========================================================
+       ALREADY ACTIVE
+    ======================================================== */
+
     if (
-        loadedSource === sourceKey(
-            m.type,
-            m.target
-        ) &&
-        words.length
+        loadedSource === key &&
+        words.length > 0
     ) {
+
+        dailyLog('07', 'ALREADY READY', key);
+
         return;
     }
+
+    /* ========================================================
+       PREVENT DUPLICATE RESUME
+    ======================================================== */
+
+    if (resumingSources.has(key)) {
+        return;
+    }
+
+    /* ========================================================
+       DON'T RETRY ERROR AUTOMATICALLY
+    ======================================================== */
+
+    if (sourceErrors.has(key)) {
+
+        dailyLog(
+            '07',
+            'SOURCE ERROR',
+            sourceErrors.get(key)
+        );
+
+        return;
+    }
+
+    resumingSources.add(key);
 
     try {
 
-        await loadWords(
+        const list = await loadWords(
             m.type,
             m.target
         );
 
-        renderStudy();
+        const current = mission();
+
+        const currentKey = current
+            ? sourceKey(
+                current.type,
+                current.target
+            )
+            : '';
+
+        /* ================================================
+           SOURCE CHANGED WHILE LOADING
+        ================================================ */
+
+        if (currentKey !== key) {
+
+            dailyLog('07', 'SOURCE CHANGED', {
+                requested: key,
+                current: currentKey
+            });
+
+            return;
+        }
+
+        /* ================================================
+           ACTIVATE SOURCE
+        ================================================ */
+
+        words = list;
+        loadedSource = key;
+
+        dailyLog('07', 'RESUME OK', {
+            key,
+            count: words.length,
+            stage: current.stage,
+            batch: current.batch
+        });
 
     } catch (error) {
 
         message(
-            error.message,
+            `Lỗi tải từ vựng: ${error.message}`,
             true
         );
+
+    } finally {
+
+        resumingSources.delete(key);
+
+        render();
     }
 }
+
 
 
 /* ============================================================
@@ -1730,32 +1997,66 @@ function renderStudy() {
 
         return;
     }
-
-    /* ================================================
-       LOADING SOURCE
-    ================================================ */
-
-    if (
-        loadedSource !== sourceKey(
-            m.type,
-            m.target
-        ) ||
-        !words.length
-    ) {
-
-        root.append(
-            el(
-                'p',
-                'daily-muted',
-
-                'Đang tải dữ liệu từ vựng...'
-            )
-        );
-
-        resumeSource();
-
-        return;
-    }
+      
+          /* ============================================================
+         RENDER STUDY - LOADING STATE
+      ============================================================ */
+      
+      const currentKey = sourceKey(
+          m.type,
+          m.target
+      );
+      
+      if (
+          loadedSource !== currentKey ||
+          !words.length
+      ) {
+      
+          const error = sourceErrors.get(currentKey);
+      
+          if (error) {
+      
+              root.append(
+                  el(
+                      'p',
+                      'daily-muted',
+                      `Lỗi tải dữ liệu: ${error}`
+                  )
+              );
+      
+              root.append(
+                  button('↻ THỬ LẠI', () => {
+      
+                      sourceErrors.delete(currentKey);
+      
+                      resumeSource();
+      
+                  })
+              );
+      
+          } else {
+      
+              root.append(
+                  el(
+                      'p',
+                      'daily-muted',
+                      'Đang chuẩn bị dữ liệu từ vựng...'
+                  )
+              );
+      
+              resumeSource();
+          }
+      
+          return;
+      }
+      
+      dailyLog('08', 'RENDER STUDY', {
+          source: currentKey,
+          stage: m.stage,
+          cursor: m.cursor,
+          batch: m.batch,
+          totalWords: words.length
+      });
 
     /* ================================================
        PREPARING BATCH
