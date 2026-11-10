@@ -1,13 +1,13 @@
 
-/* ==========================================================
-   BATLINGO - DAILY MISSION V4
-   Giao diện Header / Mission / Quiz / Dashboard
-========================================================== */
+/* ============================================================
+   BATLINGO DAILY MISSION V4.1
+   HOME WIDTH 900px / FOCUS STUDY / DASHBOARD
+============================================================ */
 
 
-/* ==========================================================
-   01. HEADER - STREAK ICON
-========================================================== */
+/* ============================================================
+   01. HEADER STREAK
+============================================================ */
 
 #dailyHeaderButton {
     display: inline-flex;
@@ -15,14 +15,14 @@
     justify-content: center;
     gap: 5px;
 
-    height: 40px;
     min-width: 58px;
+    height: 40px;
     padding: 0 10px;
 
     border: 1px solid #475569;
     border-radius: 11px;
 
-    background: #17243a;
+    background: #192438;
     color: #f8fafc;
 
     font-weight: 900;
@@ -31,8 +31,12 @@
 }
 
 #dailyHeaderButton.checked {
+    border-color: #f59e0b;
     color: #fbbf24;
-    border-color: #fbbf24;
+}
+
+#dailyStreakCount {
+    font-size: 13px;
 }
 
 #dailyHeaderButton.hidden,
@@ -41,9 +45,9 @@
 }
 
 
-/* ==========================================================
+/* ============================================================
    02. OVERLAY / MAIN PANEL
-========================================================== */
+============================================================ */
 
 #dailyOverlay {
     position: fixed;
@@ -51,18 +55,13 @@
     z-index: 20000;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    padding:
-        max(14px, env(safe-area-inset-top))
-        12px
-        max(14px, env(safe-area-inset-bottom));
+    padding: 12px;
 
+    background: rgba(2, 6, 23, .86);
     overflow: auto;
-
-    background: rgba(2, 6, 23, 0.87);
-    color: #f8fafc;
 }
 
 #dailyOverlay * {
@@ -70,39 +69,42 @@
 }
 
 #dailyOverlay .daily-panel {
-    width: min(100%, 760px);
+    width: min(900px, 100%);
+    max-width: 900px;
     max-height: 94dvh;
 
-    overflow-y: auto;
     padding: 20px;
+    overflow-y: auto;
 
     border: 1px solid #475569;
     border-radius: 18px;
 
     background: #0f172a;
-    box-shadow: 0 20px 60px #0008;
+    color: #f8fafc;
+
+    box-shadow: 0 20px 65px #0008;
 }
 
 
-/* ==========================================================
-   03. HEADER / CARDS
-========================================================== */
+/* ============================================================
+   03. HEADER
+============================================================ */
 
 .daily-head {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 12px;
 }
 
 .daily-head h2 {
-    color: #fbbf24;
-    font-size: 21px;
     margin: 0;
+    font-size: 21px;
+    color: #fbbf24;
 }
 
 #dailyCloseButton {
-    min-width: 38px;
+    width: 38px;
     height: 38px;
 
     border: 1px solid #475569;
@@ -116,12 +118,18 @@
 .daily-muted {
     color: #94a3b8;
     font-size: 12px;
-    line-height: 1.6;
+    line-height: 1.5;
+    margin: 8px 0;
 }
+
+
+/* ============================================================
+   04. CARDS
+============================================================ */
 
 .daily-card {
     margin-top: 12px;
-    padding: 17px;
+    padding: 16px;
 
     border: 1px solid #334155;
     border-radius: 14px;
@@ -136,9 +144,12 @@
 
 .daily-row {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin: 12px 0;
+    gap: 12px;
+
+    margin: 9px 0;
+    font-size: 13px;
 }
 
 .daily-row strong {
@@ -146,19 +157,20 @@
 }
 
 
-/* ==========================================================
-   04. TABS
-========================================================== */
+/* ============================================================
+   05. MAIN TABS
+============================================================ */
 
 .daily-tabs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    margin-top: 15px;
+
+    margin: 12px 0 4px;
 }
 
 .daily-tabs button {
-    padding: 12px 5px;
+    padding: 11px 6px;
 
     border: 1px solid #334155;
     border-radius: 10px;
@@ -171,9 +183,9 @@
 }
 
 .daily-tabs button.active {
-    color: #fbbf24;
+    background: #29364d;
     border-color: #f59e0b;
-    background: #27364d;
+    color: #fbbf24;
 }
 
 #dailyLearningPage.hidden,
@@ -182,9 +194,9 @@
 }
 
 
-/* ==========================================================
-   05. FORM / BUTTONS
-========================================================== */
+/* ============================================================
+   06. INPUT / BUTTONS
+============================================================ */
 
 .daily-label {
     display: block;
@@ -196,23 +208,25 @@
 }
 
 .daily-select {
+    display: block;
     width: 100%;
     min-width: 0;
     min-height: 43px;
 
-    padding: 9px 11px;
+    padding: 9px 12px;
 
     border: 1px solid #475569;
     border-radius: 10px;
 
     background: #0b1220;
-    color: white;
+    color: #f8fafc;
+
     font: inherit;
 }
 
 .daily-button {
-    min-height: 44px;
-    padding: 10px 15px;
+    min-height: 42px;
+    padding: 9px 14px;
 
     border: 1px solid #d97706;
     border-radius: 10px;
@@ -225,7 +239,7 @@
 }
 
 .daily-button:disabled {
-    opacity: 0.55;
+    opacity: .6;
     cursor: default;
 }
 
@@ -235,26 +249,42 @@
 }
 
 .daily-secondary {
-    background: #25344d;
+    background: #28364e;
     border-color: #64748b;
     color: white;
 }
 
+.daily-sound {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 18px;
 
-/* ==========================================================
-   06. MISSION PROGRESS
-========================================================== */
+    border: 1px solid #475569;
+    border-radius: 8px;
+
+    background: #1e293b;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   07. DAILY GOAL / PROGRESS
+============================================================ */
 
 .daily-track {
     height: 9px;
-    background: #334155;
+    margin: 12px 0;
     overflow: hidden;
-    border-radius: 20px;
+
+    background: #334155;
+    border-radius: 99px;
 }
 
 #dailyBar {
-    height: 100%;
     width: 0;
+    height: 100%;
 
     background: linear-gradient(
         90deg,
@@ -262,98 +292,139 @@
         #22c55e
     );
 
-    transition: width 0.25s;
+    transition: width .25s;
 }
 
 
-/* ==========================================================
-   07. FLASHCARD / REVIEW / QUIZ
-========================================================== */
+/* ============================================================
+   08. EDIT / COLLAPSE GOAL
+============================================================ */
+
+#dailySetup {
+    position: relative;
+}
+
+#dailySetup .daily-edit-goal {
+    padding: 6px 11px;
+    margin-bottom: 9px;
+
+    border: 1px solid #64748b;
+    border-radius: 8px;
+
+    background: #263650;
+    color: #fbbf24;
+
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#dailySetup .daily-edit-goal[hidden] {
+    display: none !important;
+}
+
+/* Sau khi lưu: ẩn phần lựa chọn.
+   Giữ lại mục tiêu, progress và nút sửa. */
+
+#dailySetup.daily-setup-collapsed .daily-label,
+#dailySetup.daily-setup-collapsed .daily-select,
+#dailySetup.daily-setup-collapsed #dailyStartButton,
+#dailySetup.daily-setup-collapsed #dailyAvailableWords,
+#dailySetup.daily-setup-collapsed > p.daily-muted:not(#dailyMissionStatus):not(#dailyActual):not(#dailyStageSummary) {
+    display: none !important;
+}
+
+
+/* ============================================================
+   09. FLASHCARD / QUESTIONS
+============================================================ */
 
 .daily-stage-title {
+    margin: 9px 0;
+
     color: #fbbf24;
-    margin: 14px 0;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 900;
 }
 
 .daily-word {
     margin: 10px 0;
-    padding: 26px 12px;
-
-    text-align: center;
-    font-size: clamp(26px, 5vw, 40px);
-    font-weight: 900;
-
-    overflow-wrap: anywhere;
+    padding: 24px 12px;
 
     border: 1px solid #475569;
     border-radius: 14px;
+
     background: #0b1220;
+    color: #f8fafc;
+
+    text-align: center;
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
 }
 
 .daily-audio {
-    font-size: 22px;
+    font-size: 21px;
 }
 
 .daily-word-back {
-    white-space: pre-line;
-    min-height: 76px;
-    padding: 15px;
+    min-height: 70px;
+    padding: 14px;
 
+    color: #cbd5e1;
     text-align: center;
+
     line-height: 1.8;
+    white-space: pre-line;
 }
 
-.daily-sound {
-    display: block;
-    margin: 0 auto;
-    padding: 8px 15px;
 
-    border: 1px solid #475569;
-    border-radius: 9px;
-
-    background: #1e293b;
-    color: #fff;
-    cursor: pointer;
-}
+/* ============================================================
+   10. ANSWER GRID
+============================================================ */
 
 .daily-answers {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 9px;
-    margin-top: 14px;
+
+    margin-top: 12px;
 }
 
 .daily-answer {
     width: 100%;
-    min-height: 58px;
+    min-height: 55px;
     padding: 12px;
 
     border: 1px solid #475569;
     border-radius: 11px;
 
     background: #1e293b;
-    color: white;
+    color: #f8fafc;
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    cursor: pointer;
 
+    cursor: pointer;
     overflow-wrap: anywhere;
 }
 
 .daily-answer:hover:not(:disabled) {
     border-color: #fbbf24;
+    background: #29374d;
 }
 
 .daily-answer.correct {
-    border-color: #22c55e;
-    background: #14532d;
+    border-color: #22c55e !important;
+    background: rgba(34, 197, 94, .20) !important;
+    color: #dcfce7;
 }
 
 .daily-answer.wrong {
-    border-color: #ef4444;
-    background: #7f1d1d;
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, .17) !important;
+    color: #fee2e2;
 }
 
 .daily-answer:disabled {
@@ -362,72 +433,111 @@
 }
 
 
-/* ==========================================================
-   08. QUIZ FEEDBACK / RESULT
-========================================================== */
+/* ============================================================
+   11. ANSWER FEEDBACK / NEXT
+============================================================ */
+
+.daily-response-area {
+    margin-top: 10px;
+}
 
 .daily-feedback {
-    margin-top: 14px;
-    padding: 14px;
+    padding: 12px 14px;
 
     border: 1px solid;
     border-radius: 12px;
 
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.daily-feedback.correct {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, .11);
+    color: #bbf7d0;
+}
+
+.daily-feedback.wrong {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, .10);
+    color: #fecaca;
 }
 
 .daily-feedback strong {
     display: block;
+    margin-bottom: 4px;
 }
 
-.daily-feedback.correct {
-    background: #14532d30;
-    border-color: #22c55e;
+.daily-feedback .daily-muted {
+    margin: 4px 0 0;
+    color: #cbd5e1;
 }
 
-.daily-feedback.wrong {
-    background: #7f1d1d30;
-    border-color: #ef4444;
+.daily-feedback-placeholder {
+    padding: 12px;
+
+    border: 1px dashed #334155;
+    border-radius: 10px;
+
+    color: #94a3b8;
+    font-size: 12px;
 }
+
+.daily-next-button {
+    min-width: 110px;
+    margin-top: 8px;
+}
+
+
+/* ============================================================
+   12. QUIZ SUMMARY
+============================================================ */
 
 .daily-summary-numbers {
-    margin: 12px 0;
-    padding: 16px;
+    padding: 15px;
+    margin: 10px 0;
 
     border: 1px solid #334155;
     border-radius: 12px;
 
-    text-align: center;
-    font-weight: 900;
+    background: #0b1220;
     color: #fbbf24;
+
+    font-weight: 900;
+    text-align: center;
 }
 
 .daily-finished {
-    padding: 22px 10px;
-    text-align: center;
+    padding: 25px 10px;
+
     color: #86efac;
+    font-weight: 900;
+    font-size: 19px;
+    text-align: center;
 }
 
 .daily-result-list {
     display: grid;
-    gap: 8px;
+    gap: 6px;
 
-    max-height: 330px;
-    overflow-y: auto;
+    max-height: 300px;
     margin: 12px 0;
+
+    overflow-y: auto;
 }
 
 .daily-result-row {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 12px;
 
     padding: 10px;
 
     border: 1px solid #334155;
     border-radius: 9px;
 
-    overflow-wrap: anywhere;
+    font-size: 13px;
 }
 
 .daily-good {
@@ -439,88 +549,134 @@
 }
 
 
-/* ==========================================================
-   09. DASHBOARD - FILTER / TABLE / CLEAR
-========================================================== */
+/* ============================================================
+   13. DASHBOARD
+============================================================ */
 
-.daily-dashboard-toolbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    gap: 8px;
-    margin: 12px 0;
+.daily-dashboard-total {
+    margin: 6px 0 12px;
+
+    color: #fbbf24;
+    font-size: 18px;
+    font-weight: 900;
 }
 
-.daily-mini-button {
+.daily-filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    max-height: 94px;
+    margin-bottom: 12px;
+
+    overflow-y: auto;
+}
+
+.daily-chip {
+    padding: 6px 10px;
+
+    border: 1px solid #475569;
+    border-radius: 50px;
+
+    background: #1e293b;
+    color: #cbd5e1;
+
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.daily-chip.active {
+    border-color: #fbbf24;
+    color: #fbbf24;
+}
+
+.daily-dashboard-filters {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 9px;
+
+    margin-bottom: 12px;
+}
+
+.daily-history-list {
+    display: grid;
+    gap: 8px;
+
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.daily-history-word {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 11px 12px;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    background: #0b1220;
+}
+
+.daily-history-word > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.daily-history-word strong {
+    color: white;
+}
+
+.daily-history-word span {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.daily-history-word small {
+    display: block;
+    margin-top: 4px;
+
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.daily-history-sound {
+    padding: 9px;
+
     border: 1px solid #475569;
     border-radius: 8px;
 
-    background: #27364d;
+    background: #29364d;
     color: white;
 
-    padding: 7px 9px;
     cursor: pointer;
 }
 
-#dailyClearButton {
-    border: 1px solid #b91c1c;
-    border-radius: 9px;
+.daily-clear-button {
+    margin-bottom: 10px;
+    padding: 9px 14px;
 
-    padding: 8px 12px;
+    border: 1px solid #dc2626;
+    border-radius: 9px;
 
     background: #7f1d1d;
     color: white;
+
+    font-weight: 800;
     cursor: pointer;
 }
 
-#dailyClearButton:disabled {
-    opacity: 0.45;
+.daily-clear-button:disabled {
+    opacity: .45;
     cursor: default;
 }
 
-.daily-table-scroll {
-    width: 100%;
-    max-height: 420px;
 
-    overflow: auto;
-
-    border: 1px solid #334155;
-    border-radius: 12px;
-}
-
-.daily-history-table {
-    width: 100%;
-    min-width: 620px;
-
-    border-collapse: collapse;
-    font-size: 12px;
-}
-
-.daily-history-table th {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-
-    background: #24344c;
-    color: #fbbf24;
-    text-align: left;
-}
-
-.daily-history-table th,
-.daily-history-table td {
-    padding: 10px;
-
-    border-bottom: 1px solid #334155;
-    white-space: nowrap;
-}
-
-.daily-history-table tr:nth-child(even) {
-    background: #111c2f;
-}
-
-
-/* ==========================================================
-   10. REMAINING VOCABULARY
-========================================================== */
+/* ============================================================
+   14. REMAINING VOCABULARY
+============================================================ */
 
 .daily-available-details {
     margin: 12px 0;
@@ -528,32 +684,38 @@
 
     border: 1px solid #334155;
     border-radius: 10px;
-}
 
-.daily-available-details summary {
-    cursor: pointer;
-    color: #fbbf24;
-}
-
-.daily-remaining-list {
-    max-height: 220px;
-    overflow: auto;
-    margin-top: 8px;
-}
-
-.daily-remaining-word {
-    padding: 8px;
-    border-bottom: 1px solid #334155;
+    background: #111827;
+    color: #cbd5e1;
     font-size: 12px;
 }
 
+.daily-available-details summary {
+    color: #fbbf24;
+    font-weight: 800;
+    cursor: pointer;
+}
 
-/* ==========================================================
-   11. STATUS
-========================================================== */
+.daily-remaining-list {
+    max-height: 240px;
+    margin-top: 8px;
+    overflow: auto;
+}
+
+.daily-remaining-word {
+    padding: 7px 4px;
+    border-bottom: 1px solid #334155;
+}
+
+
+/* ============================================================
+   15. MESSAGE
+============================================================ */
 
 #dailyMessage {
     min-height: 16px;
+    margin: 7px 0;
+
     color: #86efac;
     font-size: 12px;
 }
@@ -563,29 +725,333 @@
 }
 
 
-/* ==========================================================
-   12. RESPONSIVE - MOBILE
-========================================================== */
+/* ============================================================
+   16. FOCUS STUDY MODE
 
-@media (max-width: 620px) {
+   Kích hoạt khi đang học:
+   - Flashcard
+   - Review
+   - Quiz
+
+   Và mục tiêu đã được thu gọn.
+============================================================ */
+
+#dailyOverlay.daily-focus-mode {
+    padding: 6px 8px;
+    overflow: hidden;
+}
+
+#dailyOverlay.daily-focus-mode .daily-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    height: calc(100dvh - 12px);
+    max-height: calc(100dvh - 12px);
+
+    min-height: 0;
+    padding: 12px 17px;
+    overflow: hidden;
+}
+
+#dailyOverlay.daily-focus-mode .daily-head {
+    flex-shrink: 0;
+}
+
+#dailyOverlay.daily-focus-mode .daily-head h2 {
+    font-size: 17px;
+}
+
+#dailyOverlay.daily-focus-mode #dailyDate {
+    margin: 0;
+}
+
+#dailyOverlay.daily-focus-mode .daily-tabs {
+    margin: 2px 0;
+    flex-shrink: 0;
+}
+
+#dailyOverlay.daily-focus-mode .daily-tabs button {
+    padding: 7px 5px;
+}
+
+#dailyOverlay.daily-focus-mode #dailyLearningPage {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Ẩn card điểm danh lớn khi học. */
+
+#dailyOverlay.daily-focus-mode
+#dailyLearningPage > .daily-card:first-child {
+    display: none;
+}
+
+/* Mục tiêu thu gọn thành progress. */
+
+#dailyOverlay.daily-focus-mode #dailySetup {
+    flex-shrink: 0;
+
+    margin-top: 2px;
+    padding: 8px 12px;
+}
+
+#dailyOverlay.daily-focus-mode #dailySetup h3 {
+    display: none;
+}
+
+#dailyOverlay.daily-focus-mode
+#dailySetup .daily-edit-goal {
+    float: right;
+
+    margin: 0 0 0 10px;
+    padding: 4px 8px;
+}
+
+#dailyOverlay.daily-focus-mode
+#dailySetup .daily-row {
+    margin: 2px 0;
+}
+
+#dailyOverlay.daily-focus-mode
+#dailySetup #dailyActual,
+#dailyOverlay.daily-focus-mode
+#dailySetup #dailyStageSummary {
+    display: none;
+}
+
+#dailyOverlay.daily-focus-mode .daily-track {
+    height: 6px;
+    margin: 5px 0;
+}
+
+#dailyOverlay.daily-focus-mode
+#dailyMissionStatus {
+    margin: 2px 0;
+}
+
+/* Bài học chiếm toàn bộ phần chiều cao còn lại. */
+
+#dailyOverlay.daily-focus-mode
+#dailyLearningPage > .daily-card:last-child {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    min-height: 0;
+    margin-top: 5px;
+    padding: 7px 12px;
+
+    overflow: hidden;
+}
+
+#dailyOverlay.daily-focus-mode
+#dailyLearningPage > .daily-card:last-child > h3 {
+    display: none;
+}
+
+#dailyOverlay.daily-focus-mode #dailyStudy {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    min-height: 0;
+    overflow: hidden;
+}
+
+#dailyOverlay.daily-focus-mode .daily-stage-title {
+    margin: 3px 0;
+    font-size: 12px;
+}
+
+#dailyOverlay.daily-focus-mode
+#dailyStudy > .daily-muted {
+    margin: 3px 0;
+    line-height: 1.25;
+}
+
+#dailyOverlay.daily-focus-mode .daily-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+
+    min-height: 54px;
+    margin: 5px 0;
+
+    padding: clamp(8px, 1.5dvh, 14px) 8px;
+
+    font-size: clamp(24px, 4vw, 37px);
+}
+
+/* Đáp án 2 cột × 2 hàng. */
+
+#dailyOverlay.daily-focus-mode .daily-answers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(43px, 1fr));
+    gap: 8px;
+
+    flex: 1;
+    min-height: 0;
+
+    margin: 6px 0;
+}
+
+#dailyOverlay.daily-focus-mode .daily-answer {
+    min-height: 0;
+    padding: 7px 9px;
+
+    font-size: clamp(12px, 1.7vw, 17px);
+    line-height: 1.25;
+}
+
+/* Vùng kết quả được chừa sẵn trước khi chọn. */
+
+#dailyOverlay.daily-focus-mode .daily-response-area {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: stretch;
+    gap: 9px;
+
+    flex-shrink: 0;
+    min-height: 83px;
+    max-height: 108px;
+}
+
+#dailyOverlay.daily-focus-mode .daily-feedback {
+    margin: 0;
+    padding: 6px 11px;
+
+    font-size: 12px;
+    line-height: 1.35;
+
+    overflow: auto;
+}
+
+#dailyOverlay.daily-focus-mode .daily-feedback strong {
+    margin: 0;
+}
+
+#dailyOverlay.daily-focus-mode
+.daily-feedback .daily-muted {
+    margin: 2px 0;
+}
+
+#dailyOverlay.daily-focus-mode .daily-feedback-placeholder {
+    display: flex;
+    align-items: center;
+
+    padding: 8px;
+
+    font-size: 12px;
+}
+
+#dailyOverlay.daily-focus-mode .daily-next-button {
+    min-width: 100px;
+    margin: 0;
+}
+
+#dailyOverlay.daily-focus-mode #dailyMessage {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+
+/* ============================================================
+   17. MOBILE
+============================================================ */
+
+@media (max-width: 550px) {
 
     #dailyOverlay .daily-panel {
         padding: 13px;
-        max-height: 96dvh;
-    }
-
-    .daily-dashboard-toolbar {
-        grid-template-columns: 1fr;
     }
 
     #dailyHeaderButton {
         min-width: 45px;
-        padding: 0 6px;
         height: 36px;
+        padding: 0 6px;
+    }
+
+    .daily-dashboard-filters {
+        grid-template-columns: 1fr;
     }
 
     .daily-result-row {
-        flex-direction: column;
+        align-items: flex-start;
     }
 
+    #dailyOverlay.daily-focus-mode .daily-panel {
+        padding: 8px;
+    }
+
+    #dailyOverlay.daily-focus-mode .daily-answers {
+        gap: 5px;
+    }
+
+    #dailyOverlay.daily-focus-mode .daily-answer {
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    #dailyOverlay.daily-focus-mode .daily-response-area {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(56px, 1fr) 32px;
+
+        gap: 4px;
+        min-height: 95px;
+        max-height: 116px;
+    }
+
+    #dailyOverlay.daily-focus-mode .daily-next-button {
+        width: 100%;
+        min-height: 32px;
+    }
+
+    #dailyOverlay.daily-focus-mode #dailySetup {
+        padding: 6px 8px;
+    }
+
+    #dailyOverlay.daily-focus-mode
+    #dailyStudy > .daily-muted {
+        font-size: 11px;
+    }
+}
+
+
+/* ============================================================
+   18. LOW HEIGHT SCREENS
+============================================================ */
+
+@media (max-height: 660px) {
+
+    #dailyOverlay.daily-focus-mode #dailyDate {
+        display: none;
+    }
+
+    #dailyOverlay.daily-focus-mode
+    .daily-tabs button {
+        padding: 4px;
+    }
+
+    #dailyOverlay.daily-focus-mode .daily-word {
+        min-height: 42px;
+        margin: 2px 0;
+        padding: 4px 6px;
+    }
+
+    #dailyOverlay.daily-focus-mode
+    #dailySetup .daily-row:first-of-type {
+        display: none;
+    }
+
+    #dailyOverlay.daily-focus-mode
+    #dailyMissionStatus {
+        display: none;
+    }
 }
