@@ -636,3 +636,182 @@
 
     transform: none;
 }
+
+/* =========================================
+   AUTH UI - MOBILE OPTIMIZATION
+========================================= */
+
+/* Prevent horizontal overflow */
+
+.auth-screen {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.auth-container {
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.auth-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 44px;
+}
+
+/* FIX BACK BUTTON */
+
+.auth-back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.08);
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        background .15s ease,
+        transform .12s ease;
+}
+
+.auth-back-btn:hover {
+    background: rgba(255,255,255,.15);
+}
+
+.auth-back-btn:active {
+    transform: scale(.96);
+}
+
+/* =========================================
+   INPUT IMPROVEMENTS
+========================================= */
+
+.auth-field input {
+    min-width: 0;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.auth-field input:focus {
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 3px rgba(251,191,36,.12);
+}
+
+/* PASSWORD EYE */
+
+.auth-eye {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: #cbd5e1;
+    font-size: 19px;
+    line-height: 1;
+}
+
+/* KEYBOARD FOCUS */
+
+.auth-back-btn:focus-visible,
+.auth-eye:focus-visible,
+.auth-primary-btn:focus-visible,
+.auth-google-btn:focus-visible {
+    outline: 2px solid #fbbf24;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .auth-container {
+        padding:
+            max(16px, env(safe-area-inset-top))
+            max(16px, env(safe-area-inset-right))
+            max(24px, env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+    }
+
+    .auth-brand {
+        margin: 12px 0 22px;
+    }
+
+    .auth-panel {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .auth-field {
+        margin-bottom: 14px;
+    }
+
+    .auth-field input {
+        height: 50px;
+    }
+
+    .auth-primary-btn,
+    .auth-google-btn {
+        min-height: 50px;
+    }
+}
+
+/* SHORT MOBILE SCREENS */
+
+@media (max-height: 700px) and (max-width: 480px) {
+
+    .auth-brand {
+        margin: 6px 0 16px;
+    }
+
+    .auth-logo {
+        width: 54px;
+        height: 54px;
+    }
+
+    .auth-brand h1 {
+        font-size: 26px;
+    }
+
+    .auth-panel {
+        padding: 18px 16px;
+    }
+
+    .auth-description {
+        margin-bottom: 18px;
+    }
+}
