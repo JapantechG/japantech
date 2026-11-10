@@ -7,6 +7,10 @@
 import { auth, db } from "./firebase.js";
 
 import {
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+import {
     ref,
     get,
     set,
@@ -14,7 +18,8 @@ import {
     onValue,
     query,
     orderByChild,
-    equalTo
+    equalTo,
+    onDisconnect
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
 
@@ -41,6 +46,173 @@ let generation = 0;
 let renderVersion = 0;
 
 let unsubscribeList = [];
+
+
+/* =========================================================
+   FRIENDS - REALTIME PRESENCE
+========================================================= */
+
+const presenceUnsubscribers = new Map();
+const presenceCache = new Map();
+
+let ownPresenceStop = null;
+let ownPresenceUid = null;
+let ownPresenceEpoch = 0;
+
+/* UPDATE ONLINE STATUS ELEMENTS */
+
+function refreshPresenceElements(uid) {
+
+    const isOnline =
+        presenceCache.get(uid) === true;
+
+    document.querySelectorAll(
+        "[data-presence-uid]"
+    ).forEach(element => {
+
+        if (element.dataset.presenceUid !== uid) {
+            return;
+        }
+
+        element.classList.toggle(
+            "online",
+            isOnline
+        );
+
+        element.classList.toggle(
+            "offline",
+            !isOnline
+        );
+
+        element.title =
+            isOnline ? "Online" : "Offline";
+
+        element.setAttribute(
+            "aria-label",
+            isOnline ? "Online" : "Offline"
+        );
+    });
+}
+
+/* WATCH PLAYER ONLINE / OFFLINE */
+
+function watchPlayerPresence(uid) {
+
+    if (
+        !uid ||
+        presenceUnsubscribers.has(uid)
+    ) {
+        return;
+    }
+
+    const unsubscribe = onValue(
+        ref(db, `presence/${uid}`),
+
+        snapshot => {
+
+            presenceCache.set(
+                uid,
+                snapshot.val()?.online === true
+            );
+
+            refreshPresenceElements(uid);
+        },
+
+        error => {
+
+            console.warn(
+                "[FRIENDS] Presence read:",
+                error
+            );
+        }
+    );
+
+    presenceUnsubscribers.set(
+        uid,
+        unsubscribe
+    );
+}
+
+/* CLEAR FRIEND PRESENCE LISTENERS */
+
+function clearPlayerPresence() {
+
+    presenceUnsubscribers.forEach(
+        unsubscribe => unsubscribe()
+    );
+
+    presenceUnsubscribers.clear();
+    presenceCache.clear();
+}
+
+/* CURRENT USER PRESENCE */
+
+function startOwnPresence(uid) {
+
+    if (ownPresenceUid === uid) {
+        return;
+    }
+
+    ownPresenceStop?.();
+    ownPresenceStop = null;
+
+    ownPresenceUid = uid;
+
+    const epoch = ++ownPresenceEpoch;
+
+    if (!uid) {
+        return;
+    }
+
+    ownPresenceStop = onValue(
+        ref(db, ".info/connected"),
+
+        async snapshot => {
+
+            if (
+                !snapshot.val() ||
+                epoch !== ownPresenceEpoch ||
+                auth.currentUser?.uid !== uid
+            ) {
+                return;
+            }
+
+            const myRef = ref(
+                db,
+                `presence/${uid}`
+            );
+
+            try {
+
+                // Register offline operation first.
+                await onDisconnect(myRef).set({
+                    online: false,
+                    lastSeen: Date.now()
+                });
+
+                if (
+                    epoch !== ownPresenceEpoch ||
+                    auth.currentUser?.uid !== uid
+                ) {
+                    return;
+                }
+
+                await set(myRef, {
+                    online: true,
+                    lastSeen: Date.now()
+                });
+
+            } catch (error) {
+
+                console.warn(
+                    "[FRIENDS] Presence write:",
+                    error
+                );
+            }
+        }
+    );
+}
+
 
 
 /* =========================================================
@@ -324,46 +496,67 @@ function startListeners() {
 }
 
 
+
 /* =========================================================
-   MASCOT IMAGE
+   ACCOUNT AVATAR (NOT MASCOT)
 ========================================================= */
 
-function getMascotHTML(profile) {
+function getAccountAvatarHTML(profile) {
 
-    const mascot = profile?.mascot;
+    const url =
+        typeof profile?.photoURL === "string" &&
+        /^https:\/\//i.test(profile.photoURL)
+            ? profile.photoURL
+            : "";
 
-    if (
-        mascot !== "buffalo" &&
-        mascot !== "monkey"
-    ) {
+    const name =
+        getDisplayName(profile).trim();
 
-        return `
-            <span class="friends-mascot-fallback">
-                👤
-            </span>
-        `;
-    }
-
-    const evolution = Math.min(
-        4,
-        Math.max(
-            0,
-            Math.floor(number(profile.evolution))
-        )
-    );
-
-    const path = evolution === 0
-        ? `assets/mascot/${mascot}.webp`
-        : `assets/mascot/${mascot}-stage-${evolution + 1}.webp`;
+    const initial =
+        Array.from(name)[0]?.toUpperCase() || "👤";
 
     return `
-        <img
-            class="friends-mascot"
-            src="${path}"
-            alt="${mascot}"
-            onerror="this.hidden=true">
+        <span class="friends-avatar">
+
+            <span class="friends-avatar-fallback">
+                ${safe(initial)}
+            </span>
+
+            ${url ? `
+                <img
+                    class="friends-avatar-image"
+                    src="${safe(url)}"
+                    alt=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()">
+            ` : ""}
+
+        </span>
     `;
 }
+
+/* =========================================================
+   PRESENCE DOT
+========================================================= */
+
+function getPresenceHTML(uid) {
+
+    const online =
+        presenceCache.get(uid) === true;
+
+    return `
+        <span
+            class="friends-presence ${online ? "online" : "offline"}"
+            data-presence-uid="${safe(uid)}"
+            role="img"
+            aria-label="${online ? "Online" : "Offline"}"
+            title="${online ? "Online" : "Offline"}">
+        </span>
+    `;
+}
+
+
 
 
 /* =========================================================
@@ -428,7 +621,9 @@ function createPlayerRow(uid, profile, type) {
     return `
         <article class="friends-player-row">
 
-            ${getMascotHTML(profile)}
+            ${getPresenceHTML(uid)}
+
+            ${getAccountAvatarHTML(profile)}
 
             <div class="friends-player-text">
 
@@ -450,6 +645,7 @@ function createPlayerRow(uid, profile, type) {
         </article>
     `;
 }
+
 
 
 /* =========================================================
@@ -537,6 +733,8 @@ async function renderList() {
             tab
         )
     ).join("");
+
+   ids.forEach(watchPlayerPresence);
 }
 
 
@@ -607,6 +805,8 @@ async function searchPlayer() {
         const [otherUid, profile] = results[0];
 
         showSearchResult(otherUid, profile);
+
+        watchPlayerPresence(otherUid);
 
         showMessage("");
 
@@ -940,7 +1140,9 @@ async function showFriendProfile(otherUid) {
 
             <div class="friends-profile-head">
 
-                ${getMascotHTML(profile)}
+                ${getPresenceHTML(otherUid)}
+
+               ${getAccountAvatarHTML(profile)}
 
                 <div>
 
@@ -984,6 +1186,8 @@ async function showFriendProfile(otherUid) {
             </p>
         `;
 
+       watchPlayerPresence(otherUid);
+       
         $("friendProfileClose")
             ?.addEventListener(
                 "click",
@@ -1058,6 +1262,8 @@ export function openFriends() {
 
     activeTab = "friends";
 
+    clearPlayerPresence();
+   
     startListeners();
 
     renderList();
@@ -1075,6 +1281,8 @@ export function closeFriends() {
 
     closeFriendProfile();
 
+    clearPlayerPresence();
+   
     stopListeners();
 
     currentUid = null;
@@ -1096,6 +1304,12 @@ export function initFriends() {
     if (initialized) return;
 
     initialized = true;
+
+   onAuthStateChanged(auth, user => {
+
+       startOwnPresence(user?.uid || null);
+   
+   });
 
     /* BACK */
 
