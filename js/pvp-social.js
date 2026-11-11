@@ -1220,6 +1220,9 @@ async function renderFriends(snapshot) {
                 No friends yet.
            </p>`;
 
+    // Reset scroll to the first friend
+    container.scrollTop = 0;
+
     container.querySelectorAll("[data-friend]")
         .forEach(button => {
 
@@ -1240,10 +1243,22 @@ async function renderRequests(snapshot) {
 
     const container = $("pvpIncomingRequests");
 
+
     if (!ids.length) {
-        container.innerHTML = "";
+    
+        container.replaceChildren();
+    
+        container.classList.add("hidden");
+    
         return;
     }
+    
+    // Only show when the Friends tab is selected.
+    container.classList.toggle(
+        "hidden",
+        activePvpTab !== "friends"
+    );
+
 
     const players = await Promise.all(
         ids.map(async uid => {
