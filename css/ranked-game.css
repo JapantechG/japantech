@@ -103,3 +103,73 @@
     }
 }
 
+.ranked-question-mode {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #fbbf24;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.ranked-audio-trigger {
+    cursor: pointer;
+    color: #38bdf8;
+}
+
+.ranked-result-card {
+    padding: 22px;
+    border-radius: 18px;
+    background: #111827;
+    border: 1px solid #334155;
+}
+
+.ranked-result-card h2 {
+    font-size: clamp(26px, 5vw, 40px);
+    margin: 0 0 12px;
+}
+
+.ranked-result-card .win {
+    color: #4ade80;
+}
+
+.ranked-result-card .lose {
+    color: #f87171;
+}
+
+.ranked-result-versus {
+    font-size: clamp(16px, 4vw, 24px);
+    font-weight: 900;
+    color: #fbbf24;
+    padding: 14px;
+}
+
+.ranked-result-grid {
+    display: grid;
+    gap: 0;
+    text-align: left;
+}
+
+.ranked-result-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 4px;
+    border-bottom: 1px solid #334155;
+}
+
+.ranked-result-line span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.ranked-result-line strong {
+    text-align: right;
+    font-size: 13px;
+}
+
+.ranked-result-elo {
+    font-size: 22px;
+    font-weight: 900;
+    padding: 18px 4px;
+}
+
