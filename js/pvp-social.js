@@ -621,8 +621,12 @@ function bindSocialEvents() {
                     "hidden", selected !== "friends"
                 );
 
-                $("pvpIncomingRequests").classList.toggle(
-                    "hidden", selected !== "friends"
+                const requestsPanel = $("pvpIncomingRequests");
+
+                requestsPanel.classList.toggle(
+                    "hidden",
+                    selected !== "friends" ||
+                    requestsPanel.children.length === 0
                 );
             };
         });
