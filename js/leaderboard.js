@@ -19,6 +19,7 @@ import {
 ========================================== */
 
 let currentTab = "level";
+let rankLevel = "n5";
 let previousScreen = null;
 let requestId = 0;
 
@@ -393,9 +394,9 @@ function updateTabUI(type) {
         scoreLabels[type] || "SCORE";
 
     $("leaderboardSeason").textContent =
-        type === "rank"
-            ? `SEASON ${RANK_SEASON}`
-            : "GLOBAL";
+    type === "rank"
+        ? `SEASON ${RANK_SEASON} · ${rankLevel.toUpperCase()}`
+        : "GLOBAL";
 }
 
 /* ==========================================
@@ -405,6 +406,11 @@ function updateTabUI(type) {
 async function loadLeaderboard(type) {
 
     const thisRequest = ++requestId;
+
+   const cacheKey =
+    type === "rank"
+        ? `rank:${rankLevel}`
+        : type;
 
     const top = $("leaderboardTop");
     const list = $("leaderboardList");
@@ -418,7 +424,7 @@ async function loadLeaderboard(type) {
 
     try {
 
-        const cached = cache.get(type);
+        const cached = cache.get(cacheKey);
 
         let players;
 
@@ -436,9 +442,13 @@ async function loadLeaderboard(type) {
                 );
             });
             
-            players = await getLeaderboard(type, 100);
+            players = await getLeaderboard(
+                type,
+                100,
+                rankLevel
+            );
 
-            cache.set(type, {
+            cache.set(cacheKey, {
                 players,
                 time: Date.now()
             });
@@ -486,11 +496,39 @@ export function switchLeaderboardTab(type) {
 }
 
 
+function updateRankLevelButtons() {
+
+    document
+        .querySelectorAll(
+            '#leaderboardRankLevels [data-board-level]'
+        )
+        .forEach(button => {
+
+            button.classList.toggle(
+                'active',
+                button.dataset.boardLevel === rankLevel
+            );
+        });
+}
+
+
 /* ==========================================
    OPEN LEADERBOARD
 ========================================== */
 
-export function openLeaderboard(defaultTab = "level") {
+
+export function openLeaderboard(
+    defaultTab = "level",
+    selectedLevel = null
+) {
+
+    if (
+        selectedLevel &&
+        ['n5','n4','n3','n2','n1'].includes(selectedLevel)
+    ) {
+        rankLevel = selectedLevel;
+    }
+
 
     const screen = getScreen();
     const setupScreen = document.getElementById("setupScreen");
@@ -588,6 +626,27 @@ export function initLeaderboard() {
     }
 
     screen.dataset.initialized = "true";
+
+   
+   document
+       .querySelectorAll(
+           '#leaderboardRankLevels [data-board-level]'
+       )
+       .forEach(button => {
+   
+           button.addEventListener('click', () => {
+   
+               rankLevel = button.dataset.boardLevel;
+   
+               updateRankLevelButtons();
+   
+               if (currentTab === 'rank') {
+                   updateTabUI('rank');
+                   loadLeaderboard('rank');
+               }
+           });
+       });
+
 
     document.querySelectorAll(
         "#leaderboardScreen .leaderboard-tab"
