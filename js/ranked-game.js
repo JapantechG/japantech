@@ -8,6 +8,9 @@ import {
     prepareRankTiebreak
 } from './ranked-match.js';
 
+import { settleMyRankMatch } from './rank-store.js';
+import { speakJapanese } from './audio.js';
+
 import {
     loadRankDatabase,
     buildRankQuestion
@@ -31,6 +34,8 @@ let advancingQuestion = false;
 
 let finalizingMatchId = null;
 let preparingTiebreakKey = null;
+
+const settledMatches = new Set();
 
 function stopCountdown() {
     clearInterval(countdownInterval);
@@ -163,6 +168,50 @@ async function showRankedQuestion(match) {
         word.className = 'ranked-question-word';
         word.textContent = question.question;
 
+        
+        /* ==========================================
+           MIXED QUESTION MODE LABEL / AUDIO
+        ========================================== */
+        
+        const modeLabel = document.createElement('div');
+        
+        modeLabel.className = 'ranked-question-mode';
+        
+        modeLabel.textContent =
+            `${String(match.config?.target || 'n5').toUpperCase()} · ` +
+            `${question.mode.replaceAll('_', ' → ').toUpperCase()}`;
+        
+        if (question.mode.startsWith('audio_')) {
+        
+            word.classList.add('ranked-audio-trigger');
+        
+            word.setAttribute('role', 'button');
+            word.tabIndex = 0;
+        
+            const speak = () =>
+                speakJapanese(question.speechText);
+        
+            word.addEventListener('click', speak);
+        
+            word.addEventListener('keydown', e => {
+        
+                if (
+                    e.key === 'Enter' ||
+                    e.key === ' '
+                ) {
+                    e.preventDefault();
+                    speak();
+                }
+            });
+        
+            setTimeout(() => {
+                if (generation === renderGeneration) {
+                    speak();
+                }
+            }, 250);
+        }
+
+
         const options = document.createElement('div');
         options.className = 'ranked-options';
 
@@ -215,7 +264,12 @@ async function showRankedQuestion(match) {
             options.appendChild(button);
         });
 
-        card.append(number, word, options);
+        card.append(
+                number,
+                modeLabel,
+                word,
+                options
+            );
         content.replaceChildren(card);
 
         if (
@@ -243,102 +297,183 @@ async function showRankedQuestion(match) {
 }
 
 
+
+/* ==========================================
+   RANKED MATCH RESULT
+========================================== */
+
 function showRankedResult(match) {
+
     stopQuestionTimer();
 
     const result = match.result;
-    if (!result) return;
-
     const uid = auth.currentUser?.uid;
 
-    const myRole =
+    const role =
         uid === match.hostUid ? 'host' :
         uid === match.guestUid ? 'guest' :
         null;
 
-    if (!myRole) return;
+    if (!result || !role) return;
 
-    const opponentRole =
-        myRole === 'host' ? 'guest' : 'host';
+    const otherRole =
+        role === 'host' ? 'guest' : 'host';
 
-    const mine = result[myRole];
-    const opponent = result[opponentRole];
+    const mine = result[role] || {};
+    const other = result[otherRole] || {};
 
-    const won = result.winnerRole === myRole;
+    const won = result.winnerRole === role;
 
     $('rankedGameStatus').textContent =
-        won ? '🏆 VICTORY!' : 'DEFEAT';
+        won ? '🏆 VICTORY!' : '💔 DEFEAT';
 
     const content = $('rankedGameContent');
+
     content.replaceChildren();
 
-    const title = document.createElement('h2');
-    title.textContent = won ? 'YOU WIN!' : 'YOU LOSE!';
+    const wrap = document.createElement('div');
+    wrap.className = 'ranked-result-card';
 
-    const score = document.createElement('p');
-    score.textContent =
-        `SCORE: ${mine.score} - ${opponent.score}`;
+    /* TITLE */
 
-    const accuracy = document.createElement('p');
-    accuracy.textContent =
-        `CORRECT: ${mine.correct} / 20`;
+    const h = document.createElement('h2');
 
-    const combo = document.createElement('p');
-    combo.textContent =
-        `MAX COMBO: ${mine.maxCombo}`;
+    h.textContent = won
+        ? '🏆 VICTORY'
+        : '💔 DEFEAT';
 
-    const time = document.createElement('p');
-    time.textContent =
-        `TOTAL TIME: ${(mine.totalTimeMs / 1000).toFixed(2)}s`;
+    h.className = won ? 'win' : 'lose';
 
-    const reason = document.createElement('p');
-    const reasonLabels = {
-    score: 'WINNER DECIDED BY SCORE',
-    time: 'WINNER DECIDED BY TOTAL ANSWER TIME',
-    tiebreak: `SUDDEN DEATH · ${result.tiebreakRounds} ROUND(S)`
-    };
+    wrap.append(h);
 
-    reason.textContent =
-        reasonLabels[result.reason] || 'RANKED RESULT';
+    /* SCORE */
 
-   
-        content.append(
-            title,
-            score,
-            accuracy,
-            combo,
-            time,
-            reason
-        );
+    const heading = document.createElement('div');
 
-        // Hiển thị Elo dự kiến, chưa cập nhật hồ sơ.
-        const elo = result.eloPreview?.[myRole];
+    heading.className = 'ranked-result-versus';
 
-        if (elo) {
-            const eloTitle = document.createElement('h3');
-            eloTitle.textContent = 'ELO CHANGE (PREVIEW)';
+    heading.textContent =
+        `YOU ${Number(mine.score) || 0}  :  ` +
+        `${Number(other.score) || 0} OPPONENT`;
 
-            const eloChange = document.createElement('p');
-            eloChange.className = 'ranked-elo-change';
+    wrap.append(heading);
 
-            eloChange.textContent =
-                `${elo.change >= 0 ? '+' : ''}${elo.change} ELO`;
+    /* DETAIL */
 
-            eloChange.style.color =
-                elo.change >= 0 ? '#22c55e' : '#ef4444';
+    const rows = [
+        [
+            'JLPT',
+            String(
+                match.config?.target || 'n5'
+            ).toUpperCase()
+        ],
 
-            const eloValue = document.createElement('p');
-            eloValue.textContent =
-                `${elo.before} → ${elo.after} ELO`;
+        [
+            'CORRECT',
+            `${mine.correct || 0} / 20  ·  ` +
+            `Opponent ${other.correct || 0} / 20`
+        ],
 
-            content.append(
-                eloTitle,
-                eloChange,
-                eloValue
-            );
-        }
+        [
+            'WRONG / MISSED',
+            `${mine.wrong || 0} / ${mine.missed || 0}`
+        ],
 
+        [
+            'MAX COMBO',
+            `${mine.maxCombo || 0}`
+        ],
+
+        [
+            'TOTAL TIME',
+            `${((mine.totalTimeMs || 0) / 1000).toFixed(2)}s`
+        ],
+
+        [
+            'DECIDED BY',
+            String(result.reason || 'score').toUpperCase()
+        ]
+    ];
+
+    const grid = document.createElement('div');
+
+    grid.className = 'ranked-result-grid';
+
+    rows.forEach(([label, value]) => {
+
+        const line = document.createElement('div');
+        line.className = 'ranked-result-line';
+
+        const a = document.createElement('span');
+        a.textContent = label;
+
+        const b = document.createElement('strong');
+        b.textContent = value;
+
+        line.append(a, b);
+        grid.append(line);
+    });
+
+    wrap.append(grid);
+
+    /* ELO CHANGE */
+
+    const change = result.eloPreview?.[role];
+
+    if (change) {
+
+        const elo = document.createElement('div');
+
+        elo.className =
+            `ranked-result-elo ${won ? 'win' : 'lose'}`;
+
+        elo.textContent =
+            `${change.change >= 0 ? '+' : ''}` +
+            `${change.change} ELO  ·  ` +
+            `${change.before} → ${change.after}`;
+
+        wrap.append(elo);
+    }
+
+    /* SAVE RESULT */
+
+    const note = document.createElement('p');
+
+    note.className = 'rank-muted';
+
+    note.textContent =
+        'Saving rating and match history…';
+
+    wrap.append(note);
+    content.append(wrap);
+
+    if (!settledMatches.has(match.matchId)) {
+
+        settledMatches.add(match.matchId);
+
+        settleMyRankMatch(match)
+            .then(() => {
+                note.textContent =
+                    '✓ Result saved to Rank history';
+            })
+            .catch(error => {
+
+                settledMatches.delete(match.matchId);
+
+                note.textContent =
+                    `Could not save result: ${error.message}`;
+
+                console.error(
+                    '[RANK] Save:',
+                    error
+                );
+            });
+
+    } else {
+        note.textContent = 'Result already processed';
+    }
 }
+
 
 
 export function initRankedGame() {
