@@ -3,7 +3,8 @@ import { auth, db } from './firebase.js';
 
 import {
     loadRankDatabase,
-    buildRankQuestion
+    buildRankQuestion,
+    eligibleRankModes
 } from './ranked-question.js';
 
 import {
@@ -55,52 +56,92 @@ const RANK_QUESTION_COUNT = 20;
 const RANK_QUESTION_TIME_MS = 10_000;
 const RANK_BASE_QUESTIONS = 20;
 
-async function createRankQuestionIndexes(config) {
-    const level = String(config.target || 'n1').toLowerCase();
 
-    if (!/^n[1-5]$/.test(level)) {
-        throw new Error('INVALID_JLPT_LEVEL');
+/* ==========================================
+   CREATE RANDOM MIXED QUESTION PLAN
+========================================== */
+
+async function createRankQuestionPlan(config) {
+
+    const level = String(
+        config.target || 'n5'
+    ).toLowerCase();
+
+    const database = await loadRankDatabase(level);
+
+    const available = database
+        .map((item, index) => ({
+            index,
+            category: item._rankCategory,
+            modes: eligibleRankModes(database, index)
+        }))
+        .filter(x => x.modes.length);
+
+    if (available.length < RANK_QUESTION_COUNT) {
+        throw new Error('NOT_ENOUGH_VALID_RANK_QUESTIONS');
     }
 
-    if (config.category !== 'vocabulary') {
-        throw new Error('RANK_CATEGORY_NOT_SUPPORTED');
-    }
+    const shuffle = values => {
+        for (let i = values.length - 1; i > 0; i--) {
+            const j = Math.floor(
+                Math.random() * (i + 1)
+            );
 
-    const response = await fetch(`data/${level}.json`);
+            [values[i], values[j]] =
+                [values[j], values[i]];
+        }
 
-    if (!response.ok) {
-        throw new Error(`DATABASE_LOAD_FAILED: ${level}`);
-    }
+        return values;
+    };
 
-    const database = await response.json();
-
-    if (!Array.isArray(database)) {
-        throw new Error('INVALID_DATABASE_FORMAT');
-    }
-
-    if (database.length < RANK_QUESTION_COUNT) {
-        throw new Error('NOT_ENOUGH_QUESTIONS');
-    }
-
-    // Tạo danh sách vị trí câu hỏi: 0, 1, 2...
-    const indexes = Array.from(
-        { length: database.length },
-        (_, index) => index
+    const grammar = shuffle(
+        available.filter(
+            x => x.category === 'grammar'
+        )
     );
 
-    // Fisher-Yates shuffle
-    for (let i = indexes.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+    const words = shuffle(
+        available.filter(
+            x => x.category !== 'grammar'
+        )
+    );
 
-        [indexes[i], indexes[j]] = [
-            indexes[j],
-            indexes[i]
-        ];
+    const grammarCount = Math.min(4, grammar.length);
+
+    const chosen = shuffle([
+        ...grammar.slice(0, grammarCount),
+
+        ...words.slice(
+            0,
+            20 - grammarCount
+        ),
+
+        ...grammar.slice(
+            grammarCount,
+            grammarCount + Math.max(
+                0,
+                20 - grammarCount - words.length
+            )
+        )
+    ]);
+
+    if (chosen.length < RANK_QUESTION_COUNT) {
+        throw new Error('NOT_ENOUGH_VALID_RANK_QUESTIONS');
     }
 
-    // Chỉ lấy 20 câu đầu tiên
-    return indexes.slice(0, RANK_QUESTION_COUNT);
+    return {
+        questionIndexes: chosen.map(x => x.index),
+
+        questionModes: chosen.map(x =>
+            x.modes[
+                Math.floor(
+                    Math.random() * x.modes.length
+                )
+            ]
+        )
+    };
 }
+
 
 
 export async function connectRankedMatch(info) {
@@ -149,8 +190,8 @@ export async function connectRankedMatch(info) {
         if (activeMatchId !== matchId) return;
 
         // HOST chọn 20 câu từ database.
-        const questionIndexes =
-            await createRankQuestionIndexes(config);
+        const { questionIndexes, questionModes } =
+            await createRankQuestionPlan(config);
 
         if (activeMatchId !== matchId) return;
 
@@ -174,15 +215,18 @@ export async function connectRankedMatch(info) {
                 createdAt: serverTimestamp(),
                 startAt: rankedServerNow() + 3000,
              
+                
                 config: {
                     studyMode: config.studyMode || 'jlpt',
-                    target: String(config.target || 'n1').toLowerCase(),
+                    target: String(config.target || 'n5').toLowerCase(),
                     category: config.category,
-                    subMode: config.subMode || 'kanji_meaning'
+                    subMode: 'mixed'
                 },
-
+                
                 questionCount: RANK_QUESTION_COUNT,
                 questionIndexes,
+                questionModes,
+
 
                 currentQuestion: 0,
                 hostScore: 0,
@@ -585,12 +629,20 @@ export async function prepareRankTiebreak(matchId) {
         const available = [];
 
         for (let i = 0; i < database.length; i++) {
-            if (!used.has(i)) available.push(i);
+            if (
+                    !used.has(i) &&
+                    eligibleRankModes(database, i).length
+                ) {
+                    available.push(i);
+                }
         }
 
         if (available.length === 0) {
             for (let i = 0; i < database.length; i++) {
-                if (i !== indexes[indexes.length - 1]) {
+                if (
+                        i !== indexes[indexes.length - 1] &&
+                        eligibleRankModes(database, i).length
+                    ) {
                     available.push(i);
                 }
             }
@@ -615,8 +667,25 @@ export async function prepareRankTiebreak(matchId) {
 
         const now = rankedServerNow();
 
-        match.questionIndexes = [...indexes, selectedIndex];
-        match.questionCount = match.questionIndexes.length;
+        
+        match.questionIndexes = [
+            ...indexes,
+            selectedIndex
+        ];
+        
+        const modes = eligibleRankModes(
+            database,
+            selectedIndex
+        );
+        
+        match.questionModes = [
+            ...(match.questionModes || []),
+            modes[(hash >>> 0) % modes.length]
+        ];
+        
+        match.questionCount =
+            match.questionIndexes.length;
+
 
         match.currentQuestion = indexes.length;
 
