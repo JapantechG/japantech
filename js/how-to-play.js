@@ -60,6 +60,7 @@ const SLIDES = [
     { id: "friends", icon: "🤝", tag: "1 VS 1 & FRIENDS" },
     { id: "ranked", icon: "🏆", tag: "RANKED BATTLE" },
     { id: "progress", icon: "🐃", tag: "PROGRESS & MASCOT" },
+    { id: "daily", icon: "📅", tag: "DAILY MISSION" },
     { id: "account", icon: "🌟", tag: "CREATE ACCOUNT" }
 ];
 
@@ -211,6 +212,25 @@ const CONTENT = {
                 tip:
                     "Create an account to save your progress and mascot development."
             },
+
+           
+            {
+                title: "Daily Missions",
+                subtitle:
+                    "Build a consistent learning habit with daily challenges.",
+            
+                points: [
+                    "Discover new learning missions every day.",
+                    "Complete challenges by studying and playing supported game modes.",
+                    "Track your mission progress as you complete each objective.",
+                    "Finish daily goals to unlock available mission rewards.",
+                    "Return regularly to maintain your learning motivation."
+                ],
+            
+                tip:
+                    "Check your Daily Missions regularly so you don't miss today's challenges."
+            },
+
 
             {
                 title: "Ready to Begin?",
@@ -375,6 +395,24 @@ const CONTENT = {
                 tip:
                     "Tạo tài khoản để lưu tiến độ và theo dõi hành trình học lâu dài."
             },
+           
+            {
+                title: "Nhiệm vụ hằng ngày",
+                subtitle:
+                    "Duy trì thói quen học tiếng Nhật thông qua các thử thách mỗi ngày.",
+            
+                points: [
+                    "Khám phá các nhiệm vụ học tập được giao mỗi ngày.",
+                    "Hoàn thành thử thách bằng cách học và tham gia các chế độ chơi được hỗ trợ.",
+                    "Theo dõi tiến độ hoàn thành của từng nhiệm vụ.",
+                    "Hoàn thành mục tiêu để nhận phần thưởng nhiệm vụ nếu có.",
+                    "Quay lại BatLingo thường xuyên để duy trì động lực học tập."
+                ],
+            
+                tip:
+                    "Hãy kiểm tra Daily Mission mỗi ngày để không bỏ lỡ thử thách mới."
+            },
+
 
             {
                 title: "Sẵn sàng bắt đầu?",
@@ -539,6 +577,24 @@ const CONTENT = {
                 tip:
                     "アカウントを作成すると学習履歴とマスコットの成長を保存できます。"
             },
+   
+            {
+                title: "デイリーミッション",
+                subtitle:
+                    "毎日のチャレンジで日本語学習を習慣にしよう。",
+            
+                points: [
+                    "毎日新しい学習ミッションに挑戦できます。",
+                    "対象の学習モードやゲームをプレイしてミッションを進めましょう。",
+                    "各ミッションの達成状況を確認できます。",
+                    "目標を達成すると、設定されている報酬を獲得できます。",
+                    "毎日BatLingoにアクセスして、学習のモチベーションを維持しましょう。"
+                ],
+            
+                tip:
+                    "その日のチャレンジを見逃さないよう、毎日ミッションを確認しましょう。"
+            },
+
 
             {
                 title: "さあ、始めよう！",
@@ -703,6 +759,25 @@ const CONTENT = {
                 tip:
                     "创建账号后可以保存学习记录和吉祥物的成长进度。"
             },
+
+           
+            {
+                title: "每日任务",
+                subtitle:
+                    "通过每天的挑战，养成持续学习日语的习惯。",
+            
+                points: [
+                    "每天查看新的学习任务和挑战。",
+                    "通过学习和参与支持的游戏模式完成任务。",
+                    "实时查看每项任务的完成进度。",
+                    "达到目标后领取已设置的任务奖励。",
+                    "每天回到BatLingo，保持学习动力。"
+                ],
+            
+                tip:
+                    "记得每天查看Daily Mission，不要错过新的挑战。"
+            },
+
 
             {
                 title: "准备好开始了吗？",
