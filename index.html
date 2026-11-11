@@ -1068,9 +1068,22 @@
                 </button>
     
             </div>
+
+            <div id="leaderboardRankLevels"
+                 class="rank-level-picker hidden"
+                 aria-label="Rank leaderboard JLPT level">
+            
+                <button data-board-level="n5" type="button">N5</button>
+                <button data-board-level="n4" type="button">N4</button>
+                <button data-board-level="n3" type="button">N3</button>
+                <button data-board-level="n2" type="button">N2</button>
+                <button data-board-level="n1" type="button">N1</button>
+            
+            </div>
     
     
             <!-- TOP PLAYERS -->
+
     
             <div
                 id="leaderboardTop"
@@ -1465,6 +1478,19 @@
           <h1>RANKED BATTLE</h1>
           <span id="rankSeason" class="rank-season">S01</span>
         </header>
+
+        
+        <div class="rank-level-picker"
+             aria-label="Select Ranked JLPT level">
+        
+            <button data-rank-level="n5" type="button">N5</button>
+            <button data-rank-level="n4" type="button">N4</button>
+            <button data-rank-level="n3" type="button">N3</button>
+            <button data-rank-level="n2" type="button">N2</button>
+            <button data-rank-level="n1" type="button">N1</button>
+        
+        </div>
+
         <div class="rank-card">
           <div id="rankBadge" class="rank-badge">🥈</div>
           <div id="rankTier" class="rank-tier">SILVER</div>
@@ -1482,6 +1508,17 @@
         <div id="rankModeInfo" class="rank-muted">N1 · VOCABULARY</div>
         <button id="rankFindMatchButton" class="rank-action" type="button">⚔ FIND MATCH</button>
         <button id="rankLeaderboardButton" class="rank-action rank-secondary" type="button">🏆 LEADERBOARD</button>
+          
+        <button id="rankHistoryButton"
+                class="rank-action rank-secondary"
+                type="button">
+            📜 MATCH HISTORY
+        </button>
+        
+        <div id="rankHistoryList"
+             class="rank-history-list hidden">
+        </div>
+
         <div id="rankNotice" class="rank-notice" aria-live="polite"></div>
       </div>
       
