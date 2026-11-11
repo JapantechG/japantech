@@ -1111,11 +1111,11 @@
 }
 
 
+
+/* INVITE PANEL - NORMAL FLOW */
+
 #pvpScreen.waiting-mode #pvpInvitePanel {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
+    display: block;
 
     width: 100%;
     height: auto;
@@ -1124,33 +1124,22 @@
 
     margin: 6px 0 0;
     padding: 11px 12px;
-    gap: 8px;
 
     overflow: visible;
 }
 
-
-/* Invitation heading */
-
 #pvpScreen.waiting-mode #pvpInvitePanel h3 {
-    margin: 0;
-
-    color: var(--ps-gold);
-
-    font-size: 12px;
-    font-weight: 800;
-    line-height: 1.2;
+    margin: 0 0 8px;
 }
-
-/* ONLINE / FRIENDS */
 
 #pvpScreen.waiting-mode .pvp-invite-tabs {
     display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 7px;
-    margin: 0;
+    margin: 0 0 8px;
 }
+
 
 #pvpScreen.waiting-mode .pvp-invite-tabs button {
     display: flex;
@@ -1186,18 +1175,13 @@
 }
 
 
-/* ==========================================
-   INVITE LIST - REMOVE TOP EMPTY SPACE
-========================================== */
 
+/* =========================================================
+   INVITE LIST - NO EMPTY SPACE
+========================================================= */
 
 #pvpScreen.waiting-mode #pvpInviteList {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-
-    flex: 0 1 auto;
+    display: block;
 
     width: 100%;
     height: auto;
@@ -1206,28 +1190,39 @@
 
     margin: 0;
     padding: 0;
-    gap: 6px;
 
     overflow-x: hidden;
     overflow-y: auto;
+    overflow-anchor: none;
 }
 
 #pvpScreen.waiting-mode
 #pvpInviteList > .pvp-list-item {
     display: flex;
-    flex: 0 0 auto;
+    align-items: center;
 
     width: 100%;
     min-height: 36px;
 
-    margin: 0;
+    margin: 0 0 6px;
     padding: 6px 8px;
 }
 
 #pvpScreen.waiting-mode
-#pvpInviteList > .pvp-list-item:first-child {
-    margin-top: 0;
+#pvpInviteList > .pvp-list-item:last-child {
+    margin-bottom: 0;
 }
+
+#pvpScreen.waiting-mode
+#pvpInviteMessage {
+    margin: 6px 0 0;
+}
+
+#pvpScreen.waiting-mode
+#pvpInviteMessage:empty {
+    display: none;
+}
+
 
 
 
