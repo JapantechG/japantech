@@ -340,6 +340,28 @@ initHome({
             return;
         }
 
+        
+        /* ==========================================
+           RANK - OPEN DIRECTLY FROM HOME
+        ========================================== */
+        
+        if (modeId === "rank") {
+        
+            if (!requireLogin()) {
+                return;
+            }
+        
+            openRank({}, {
+                back: () => {
+                    showHome();
+                    playLobbyMusic();
+                }
+            });
+        
+            return;
+        }
+
+
         /* =====================================
            OTHER MODES
         ===================================== */
