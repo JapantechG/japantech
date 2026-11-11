@@ -128,18 +128,18 @@ export async function syncLeaderboardProfile(
         battles
     };
 
-    const updates = {
-        [`publicProfiles/${uid}`]: publicProfile,
+    
+      const updates = {
+          [`publicProfiles/${uid}`]:
+              publicProfile,
+      
+          [`leaderboards/level/${uid}`]:
+              leaderboardPlayer,
+      
+          [`leaderboards/pet/${uid}`]:
+              mascotId ? leaderboardPlayer : null
+      };
 
-        [`leaderboards/level/${uid}`]:
-            leaderboardPlayer,
-
-        [`leaderboards/rank/${RANK_SEASON}/${uid}`]:
-            leaderboardPlayer,
-
-        [`leaderboards/pet/${uid}`]:
-            mascotId ? leaderboardPlayer : null
-    };
 
     await update(ref(db), updates);
 
@@ -157,7 +157,11 @@ export async function syncLeaderboardProfile(
    DATABASE PATH
 ========================================== */
 
-function getLeaderboardPath(type) {
+
+function getLeaderboardPath(
+    type,
+    rankLevel = "n5"
+) {
 
     switch (type) {
 
@@ -167,13 +171,22 @@ function getLeaderboardPath(type) {
         case "pet":
             return "leaderboards/pet";
 
-        case "rank":
-            return `leaderboards/rank/${RANK_SEASON}`;
+        case "rank": {
+
+            const level = [
+                "n5", "n4", "n3", "n2", "n1"
+            ].includes(rankLevel)
+                ? rankLevel
+                : "n5";
+
+            return `leaderboards/rank/${RANK_SEASON}/${level}`;
+        }
 
         default:
             throw new Error("INVALID_LEADERBOARD_TYPE");
     }
 }
+
 
 /* ==========================================
    GET SCORE
@@ -241,7 +254,8 @@ function sortLeaderboard(players, type) {
 
 export async function getLeaderboard(
     type = "level",
-    limit = LEADERBOARD_LIMIT
+    limit = LEADERBOARD_LIMIT,
+    rankLevel = "n5"
 ) {
 
     const safeLimit = Math.max(
@@ -250,7 +264,7 @@ export async function getLeaderboard(
     );
 
     const snapshot = await get(
-        ref(db, getLeaderboardPath(type))
+        ref(db, getLeaderboardPath(type, rankLevel))
     );
 
     if (!snapshot.exists()) {
