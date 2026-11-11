@@ -479,8 +479,9 @@ async function loadLeaderboard(type) {
     }
 }
 
+
 /* ==========================================
-   SWITCH TAB
+   SWITCH LEADERBOARD TAB
 ========================================== */
 
 export function switchLeaderboardTab(type) {
@@ -491,9 +492,26 @@ export function switchLeaderboardTab(type) {
 
     currentTab = type;
 
+    // Update LEVEL / PET / RANK tab.
     updateTabUI(type);
+
+    // Show N5-N1 buttons only for RANK.
+    const rankLevels = $("leaderboardRankLevels");
+
+    if (rankLevels) {
+        rankLevels.classList.toggle(
+            "hidden",
+            type !== "rank"
+        );
+    }
+
+    // Update selected JLPT level.
+    updateRankLevelButtons();
+
+    // Load corresponding leaderboard data.
     loadLeaderboard(type);
 }
+
 
 
 function updateRankLevelButtons() {
