@@ -1076,3 +1076,88 @@ body.htp-open {
     }
 
 }
+
+/* =========================================================
+   HOW TO PLAY - FIXED PANEL HEIGHT
+   Prevent jumping between slides
+========================================================= */
+
+/* DESKTOP */
+
+@media (min-width: 681px) {
+
+    /* Fixed panel height */
+
+    .htp-panel {
+        height: min(680px, calc(100dvh - 48px));
+        max-height: calc(100dvh - 48px);
+        min-height: 0;
+    }
+
+    /* Header stays fixed */
+
+    .htp-header {
+        flex: 0 0 auto;
+    }
+
+    /* Progress stays fixed */
+
+    .htp-progress {
+        flex: 0 0 auto;
+    }
+
+    /* Content takes remaining space */
+
+    .htp-content {
+        flex: 1 1 auto;
+
+        min-height: 0;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        align-items: start;
+
+        scrollbar-gutter: stable;
+    }
+
+    /* Avoid centering short content vertically */
+
+    .htp-copy {
+        align-self: start;
+    }
+
+    /* Footer stays fixed */
+
+    .htp-footer {
+        flex: 0 0 auto;
+        margin-top: auto;
+    }
+
+}
+
+/* =========================================================
+   MOBILE - FULL SCREEN
+========================================================= */
+
+@media (max-width: 680px) {
+
+    .htp-panel {
+        height: 100dvh;
+        max-height: 100dvh;
+        min-height: 0;
+    }
+
+    .htp-content {
+        flex: 1 1 auto;
+        min-height: 0;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .htp-footer {
+        flex: 0 0 auto;
+    }
+
+}
