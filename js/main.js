@@ -529,9 +529,9 @@ document.getElementById("batHomeMascotBtn")
         handleOpenMascotEvolution
     );
 
-/* SIDE MENU PET */
+/* USER ACCOUNT MENU - PET */
 
-document.getElementById("menuPetBtn")
+document.getElementById("userPetBtn")
     ?.addEventListener(
         "click",
         handleOpenMascotEvolution
