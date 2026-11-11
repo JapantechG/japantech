@@ -342,19 +342,45 @@
     color: var(--ps-gold);
 }
 
-#pvpScreen .pvp-social-list {
+
+/* =========================================================
+   PVP LOBBY - PUBLIC / ONLINE / FRIENDS LIST
+========================================================= */
+
+#pvpScreen #roomSelectPanel .pvp-social-list {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
 
-    gap: 7px;
-
-    min-height: 90px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
     max-height: 48dvh;
 
+    margin: 0;
+    padding: 0;
+    gap: 7px;
+
+    overflow-x: hidden;
     overflow-y: auto;
 
     text-align: left;
 }
+
+/* Empty friend requests must not occupy space */
+
+#pvpScreen #pvpIncomingRequests:empty {
+    display: none !important;
+}
+
+/* No extra spacing before first row */
+
+#pvpScreen #roomSelectPanel
+.pvp-social-list > .pvp-list-item:first-child {
+    margin-top: 0;
+}
+
 
 #pvpScreen .pvp-list-item {
     display: flex;
