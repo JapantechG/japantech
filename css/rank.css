@@ -570,3 +570,293 @@
         font-size: 12px;
     }
 }
+
+/* ============================================================
+   BATLINGO RANK - COMPACT FULLSCREEN
+   Fix background gaps + optimize one-screen layout
+============================================================ */
+
+/* 01. FULLSCREEN BACKGROUND */
+
+#rankScreen.rank-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 800;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        max(12px, env(safe-area-inset-top))
+        16px
+        max(12px, env(safe-area-inset-bottom));
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            rgba(3, 8, 18, .78),
+            rgba(3, 8, 18, .94)
+        ),
+        url("../assets/images/backgrounds/lobby-bg.webp")
+        center center / cover no-repeat,
+        #080d17;
+
+    background-attachment: fixed;
+
+    overscroll-behavior: contain;
+    isolation: isolate;
+}
+
+/* Remove old overlay to avoid background gaps */
+
+#rankScreen.rank-screen::before {
+    display: none !important;
+}
+
+/* 02. MAIN CONTAINER */
+
+#rankScreen .rank-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 560px);
+    max-width: 560px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: clamp(7px, 1.1dvh, 12px);
+
+    margin: auto;
+    padding: 0;
+
+    text-align: center;
+}
+
+/* 03. HEADER */
+
+#rankScreen .rank-header {
+    min-height: 38px;
+    gap: 10px;
+}
+
+#rankScreen .rank-header h1 {
+    margin: 0;
+    font-size: clamp(18px, 2.5dvh, 24px);
+    letter-spacing: 1px;
+}
+
+#rankScreen .rank-back {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#rankScreen .rank-season {
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+/* 04. JLPT LEVEL SELECTOR */
+
+#rankScreen .rank-level-picker {
+    gap: 5px;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+#rankScreen .rank-level-picker button {
+    min-height: 37px;
+    padding: 6px 2px;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+/* 05. RANK MAIN CARD */
+
+#rankScreen .rank-card {
+    padding: clamp(11px, 1.8dvh, 20px) 16px;
+    border-radius: 16px;
+}
+
+#rankScreen .rank-badge {
+    font-size: clamp(38px, 5.5dvh, 55px);
+    line-height: 1.05;
+}
+
+#rankScreen .rank-tier {
+    margin-top: 3px;
+    font-size: clamp(19px, 3dvh, 25px);
+    line-height: 1.15;
+}
+
+#rankScreen .rank-rating {
+    margin: 4px 0;
+    font-size: clamp(23px, 3.4dvh, 30px);
+    line-height: 1.15;
+}
+
+#rankScreen .rank-muted {
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+/* 06. ELO PROGRESS BAR */
+
+#rankScreen .rank-progress {
+    height: 9px;
+    margin: 10px 0 6px;
+    border-radius: 99px;
+}
+
+#rankScreen .rank-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+}
+
+/* 07. STATISTICS */
+
+#rankScreen .rank-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+}
+
+#rankScreen .rank-stat {
+    padding: 10px 5px;
+    border-radius: 11px;
+}
+
+#rankScreen .rank-stat strong {
+    font-size: clamp(17px, 2.5dvh, 22px);
+    line-height: 1.2;
+}
+
+#rankScreen .rank-stat span {
+    font-size: 10px;
+    letter-spacing: .3px;
+}
+
+/* 08. ACTION BUTTONS */
+
+#rankScreen .rank-action {
+    min-height: clamp(40px, 5.8dvh, 49px);
+    padding: 8px 12px;
+
+    border-radius: 11px;
+
+    font-size: clamp(12px, 1.8dvh, 15px);
+    line-height: 1.2;
+    letter-spacing: .3px;
+}
+
+/* 09. NOTICE */
+
+#rankScreen .rank-notice {
+    min-height: 16px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+/* 10. MATCH HISTORY */
+
+#rankScreen .rank-history-list {
+    max-height: min(210px, 28dvh);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+
+    padding: 2px;
+}
+
+#rankScreen .rank-history-row {
+    padding: 9px 10px;
+    border-radius: 10px;
+}
+
+/* 11. SMALL HEIGHT SCREENS */
+
+@media (max-height: 720px) {
+
+    #rankScreen.rank-screen {
+        align-items: flex-start;
+        padding-top: max(8px, env(safe-area-inset-top));
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+    }
+
+    #rankScreen .rank-container {
+        gap: 7px;
+    }
+
+    #rankScreen .rank-card {
+        padding: 10px 13px;
+    }
+
+    #rankScreen .rank-badge {
+        font-size: 36px;
+    }
+
+    #rankScreen .rank-tier {
+        font-size: 19px;
+    }
+
+    #rankScreen .rank-rating {
+        font-size: 23px;
+    }
+
+    #rankScreen .rank-stat {
+        padding: 8px 4px;
+    }
+
+    #rankScreen .rank-action {
+        min-height: 39px;
+    }
+}
+
+/* 12. MOBILE */
+
+@media (max-width: 480px) {
+
+    #rankScreen.rank-screen {
+        padding:
+            max(10px, env(safe-area-inset-top))
+            12px
+            max(10px, env(safe-area-inset-bottom));
+    }
+
+    #rankScreen .rank-container {
+        width: 100%;
+        gap: 8px;
+    }
+
+    #rankScreen .rank-card {
+        padding: 13px 12px;
+    }
+
+    #rankScreen .rank-header h1 {
+        font-size: 19px;
+    }
+
+    #rankScreen .rank-level-picker button {
+        min-height: 36px;
+        font-size: 12px;
+    }
+
+    #rankScreen .rank-action {
+        min-height: 43px;
+        font-size: 13px;
+    }
+
+    #rankScreen .rank-history-list {
+        max-height: 180px;
+    }
+}
