@@ -69,6 +69,9 @@ let listeners = [];
 let currentRoom = null;
 let selectedProfileUid = null;
 
+let publicRoomsSnapshot = null;
+let onlinePresenceSnapshot = null;
+
 const modes = [
     ["kanji_meaning", "Kanji → Meaning"],
     ["kanji_hiragana", "Kanji → Hiragana"],
@@ -788,8 +791,26 @@ export async function enterPvpSocial() {
         // Profile được quản lý bởi hệ thống
         // user / friends hiện tại.
         
-        subscribe("rooms", renderPublicRooms);
-        subscribe("pvpPresence", renderOnlinePlayers);
+        
+        subscribe("rooms", snapshot => {
+        
+            publicRoomsSnapshot = snapshot;
+        
+            renderPublicRooms(snapshot);
+        });
+        
+        subscribe("pvpPresence", snapshot => {
+        
+            onlinePresenceSnapshot = snapshot;
+        
+            renderOnlinePlayers(snapshot);
+        
+            // Recheck rooms whenever a player goes offline.
+            if (publicRoomsSnapshot) {
+                renderPublicRooms(publicRoomsSnapshot);
+            }
+        });
+
 
         subscribe(
             `friends/${me.uid}`,
@@ -824,6 +845,9 @@ export async function leavePvpSocial() {
 
     clearListeners();
     lobbyActive = false;
+
+    publicRoomsSnapshot = null;
+    onlinePresenceSnapshot = null;
 
     const uid = auth.currentUser?.uid;
 
@@ -904,47 +928,107 @@ async function cleanupAbandonedRoom(code) {
 }
 
 
+
 /* =========================================================
    PUBLIC ROOM LIST
+   Hide abandoned / offline rooms
 ========================================================= */
 
 function renderPublicRooms(snapshot) {
+
+    const container = $("pvpPublicRooms");
+
+    if (!container) return;
+
+    // Wait until presence data is available.
+    if (!onlinePresenceSnapshot) {
+
+        container.innerHTML = `
+            <p class="pvp-empty">
+                Loading rooms...
+            </p>
+        `;
+
+        return;
+    }
+
+    const presence =
+        onlinePresenceSnapshot.val() || {};
 
     const allRooms = Object.entries(
         snapshot.val() || {}
     );
 
-    // Clean abandoned rooms, including private rooms.
+    /* ==========================================
+       CLEAN ABANDONED ROOMS
+    ========================================== */
+
     for (const [code, room] of allRooms) {
 
+        const hostOffline =
+            room.host?.connected === false;
+
+        const noActiveGuest =
+            room.guest?.connected !== true;
+
+        const waitingRoom =
+            ["waiting", "connected"].includes(
+                room.status
+            );
+
+        // Only clean when room data explicitly
+        // confirms the host has disconnected.
         if (
-            room.host?.connected === false &&
-            room.guest?.connected !== true &&
-            ["waiting", "connected"].includes(room.status)
+            hostOffline &&
+            noActiveGuest &&
+            waitingRoom
         ) {
             cleanupAbandonedRoom(code);
         }
     }
 
+    /* ==========================================
+       FILTER VALID PUBLIC ROOMS
+    ========================================== */
+
     const rooms = allRooms
         .filter(([code, room]) => {
 
-            return (
-                room.visibility === "public" &&
+            const hostUid = room.host?.uid;
+
+            if (!hostUid) return false;
+
+            const hostPresence = presence[hostUid];
+
+            const hostOnline =
                 room.host?.connected === true &&
-                !room.guest?.connected &&
+                hostPresence?.online === true &&
+                hostPresence?.uid === hostUid;
+
+            const roomAvailable =
                 ["waiting", "connected"].includes(
                     room.status
-                )
+                );
+
+            const noGuest =
+                !room.guest?.connected;
+
+            return (
+                room.visibility === "public" &&
+                hostOnline &&
+                noGuest &&
+                roomAvailable
             );
         })
         .sort((a, b) =>
-            (b[1].createdAt || 0) -
-            (a[1].createdAt || 0)
+            (Number(b[1].createdAt) || 0) -
+            (Number(a[1].createdAt) || 0)
         )
         .slice(0, 100);
 
-    const container = $("pvpPublicRooms");
+    /* ==========================================
+       RENDER
+    ========================================== */
 
     container.innerHTML = rooms.length
         ? rooms.map(([code, room]) => `
@@ -955,40 +1039,70 @@ function renderPublicRooms(snapshot) {
                 </span>
 
                 <div class="pvp-list-info">
+
                     <strong>
-                        ${escapeHTML(room.name || "JLPT BATTLE")}
+                        ${escapeHTML(
+                            room.name || "JLPT BATTLE"
+                        )}
                     </strong>
 
                     <small>
-                        ${escapeHTML(room.host?.name)}
-                        · ${(room.settings?.level || "n5").toUpperCase()}
+                        ${escapeHTML(
+                            room.host?.name || "Player"
+                        )}
+                        · ${escapeHTML(
+                            String(
+                                room.settings?.level || "n5"
+                            ).toUpperCase()
+                        )}
                         · ${escapeHTML(code)}
                         · 1/2
                     </small>
+
                 </div>
 
-                <button data-join-room="${escapeHTML(code)}"
-                        type="button">
+                <button
+                    data-join-room="${escapeHTML(code)}"
+                    type="button">
                     JOIN
                 </button>
+
             </div>
         `).join("")
-        : `<p class="pvp-empty">
+        : `
+            <p class="pvp-empty">
                 No public rooms. Create one!
-           </p>`;
+            </p>
+        `;
 
-    container.querySelectorAll("[data-join-room]")
+    /* ==========================================
+       JOIN ROOM EVENTS
+    ========================================== */
+
+    container
+        .querySelectorAll("[data-join-room]")
         .forEach(button => {
 
             button.onclick = () => {
 
-                $("roomCodeInput").value =
+                const code =
                     button.dataset.joinRoom;
 
-                $("joinRoomButton").click();
+                const input =
+                    $("roomCodeInput");
+
+                const joinButton =
+                    $("joinRoomButton");
+
+                if (!input || !joinButton) return;
+
+                input.value = code;
+
+                joinButton.click();
             };
         });
 }
+
 
 /* =========================================================
    ONLINE PLAYERS
