@@ -1,5 +1,20 @@
 
-const databaseCache = new Map();
+/* BATLINGO - Shared seeded mixed ranked questions */
+
+const cache = new Map();
+
+const MODES = {
+    kanji_meaning: ['word', 'meaning'],
+    meaning_kanji: ['meaning', 'word'],
+    kanji_hiragana: ['word', 'reading'],
+    hiragana_meaning: ['reading', 'meaning'],
+    audio_meaning: ['reading', 'meaning'],
+    audio_hiragana: ['reading', 'reading'],
+    audio_kanji: ['reading', 'word'],
+    grammar_meaning: ['grammar', 'meaning']
+};
+
+export const RANK_MIXED_MODES = Object.keys(MODES);
 
 export async function loadRankDatabase(level) {
     const key = String(level).toLowerCase();
@@ -8,47 +23,85 @@ export async function loadRankDatabase(level) {
         throw new Error('INVALID_JLPT_LEVEL');
     }
 
-    if (!databaseCache.has(key)) {
-        const promise = fetch(`data/${key}.json`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('DATABASE_LOAD_FAILED');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (!Array.isArray(data)) {
-                    throw new Error('INVALID_DATABASE_FORMAT');
-                }
-                return data;
-            });
+    if (!cache.has(key)) {
+        const request = (async () => {
+            const response = await fetch(`data/${key}.json`);
 
-        databaseCache.set(key, promise);
+            if (!response.ok) {
+                throw new Error(
+                    `DATABASE_LOAD_FAILED: ${key}`
+                );
+            }
+
+            const words = await response.json();
+
+            if (!Array.isArray(words)) {
+                throw new Error('INVALID_DATABASE_FORMAT');
+            }
+
+            // Optional grammar source.
+            let grammar = [];
+
+            try {
+                const r = await fetch(
+                    `data/grammar/${key}.json`
+                );
+
+                if (r.ok) {
+                    const parsed = await r.json();
+
+                    if (Array.isArray(parsed)) {
+                        grammar = parsed
+                            .filter(x => x.grammar && x.meaning)
+                            .map(x => ({
+                                ...x,
+                                _rankCategory: 'grammar'
+                            }));
+                    }
+                }
+            } catch (error) {
+                console.debug(
+                    '[RANK] Optional grammar not loaded:',
+                    error
+                );
+            }
+
+            return [
+                ...words.map(x => ({
+                    ...x,
+                    _rankCategory: 'vocabulary'
+                })),
+                ...grammar
+            ];
+        })();
+
+        cache.set(key, request);
+
+        request.catch(() => cache.delete(key));
     }
 
-    return databaseCache.get(key);
+    return cache.get(key);
 }
 
-// Biến chuỗi thành seed cố định.
-function hashString(value) {
-    let hash = 2166136261;
+function hash(value) {
+    let h = 2166136261;
 
     for (const char of value) {
-        hash ^= char.charCodeAt(0);
-        hash = Math.imul(hash, 16777619);
+        h ^= char.charCodeAt(0);
+        h = Math.imul(h, 16777619);
     }
 
-    return hash >>> 0;
+    return h >>> 0;
 }
 
-// Bộ random có kết quả lặp lại với cùng seed.
-function seededRandom(seed) {
-    let state = seed >>> 0;
+function rng(seed) {
+    let s = seed >>> 0;
 
     return () => {
-        state = (state + 0x6D2B79F5) >>> 0;
+        s = (s + 0x6D2B79F5) >>> 0;
 
-        let t = state;
+        let t = s;
+
         t = Math.imul(t ^ (t >>> 15), t | 1);
         t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
 
@@ -56,15 +109,60 @@ function seededRandom(seed) {
     };
 }
 
-function shuffle(items, random) {
-    const result = [...items];
+function shuffle(items, rand) {
+    const arr = [...items];
 
-    for (let i = result.length - 1; i > 0; i--) {
-        const j = Math.floor(random() * (i + 1));
-        [result[i], result[j]] = [result[j], result[i]];
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(rand() * (i + 1));
+
+        [arr[i], arr[j]] = [arr[j], arr[i]];
     }
 
-    return result;
+    return arr;
+}
+
+export function eligibleRankModes(database, index) {
+    const item = database[index];
+
+    if (!item) return [];
+
+    const baseModes = item._rankCategory === 'grammar'
+        ? ['grammar_meaning']
+        : [
+            'kanji_meaning',
+            'meaning_kanji',
+            'kanji_hiragana',
+            'hiragana_meaning',
+            'audio_meaning',
+            'audio_hiragana',
+            'audio_kanji'
+        ];
+
+    return baseModes.filter(mode => {
+        const [from, to] = MODES[mode];
+
+        if (
+            !String(item[from] ?? '').trim() ||
+            !String(item[to] ?? '').trim()
+        ) {
+            return false;
+        }
+
+        const other = new Set(
+            database
+                .filter((x, i) =>
+                    i !== index &&
+                    x._rankCategory === item._rankCategory
+                )
+                .map(x => String(x[to] ?? '').trim())
+                .filter(s =>
+                    s &&
+                    s !== String(item[to]).trim()
+                )
+        );
+
+        return other.size >= 3;
+    });
 }
 
 export function buildRankQuestion(database, match, position) {
@@ -75,58 +173,76 @@ export function buildRankQuestion(database, match, position) {
         throw new Error('QUESTION_NOT_FOUND');
     }
 
-    const subMode = match.config?.subMode || 'kanji_meaning';
-
-    const fields = {
-        kanji_meaning: ['word', 'meaning'],
-        kanji_hiragana: ['word', 'reading']
-    };
-
-    if (!fields[subMode]) {
-        throw new Error(`UNSUPPORTED_RANK_MODE: ${subMode}`);
-    }
-
-    const [questionField, answerField] = fields[subMode];
-
-    const question = String(item[questionField] ?? '').trim();
-    const correctAnswer = String(item[answerField] ?? '').trim();
-
-    if (!question || !correctAnswer) {
-        throw new Error('INVALID_QUESTION_DATA');
-    }
-
-    const seed = hashString(
-        `${match.matchId}:${position}:${subMode}`
+    const allowed = eligibleRankModes(
+        database,
+        questionIndex
     );
 
-    const random = seededRandom(seed);
+    const configured = match.questionModes?.[position];
 
-    // Loại đáp án trùng để luôn có 4 lựa chọn khác nhau.
+    const mode =
+        configured && allowed.includes(configured)
+            ? configured
+            : allowed[
+                hash(`${match.matchId}:${position}:mode`) %
+                allowed.length
+            ];
+
+    if (!mode) {
+        throw new Error('NO_VALID_RANK_QUESTION_MODE');
+    }
+
+    const [from, to] = MODES[mode];
+
+    const rand = rng(
+        hash(`${match.matchId}:${position}:${mode}`)
+    );
+
+    const correctAnswer = String(item[to]).trim();
+
     const distractors = [
         ...new Set(
             database
-                .filter((entry, index) => index !== questionIndex)
-                .map(entry => String(entry[answerField] ?? '').trim())
-                .filter(value => value && value !== correctAnswer)
+                .filter((x, i) =>
+                    i !== questionIndex &&
+                    x._rankCategory === item._rankCategory
+                )
+                .map(x => String(x[to] ?? '').trim())
+                .filter(x =>
+                    x &&
+                    x !== correctAnswer
+                )
         )
     ];
 
-    const picked = shuffle(distractors, random).slice(0, 3);
-
-    if (picked.length !== 3) {
+    if (distractors.length < 3) {
         throw new Error('NOT_ENOUGH_DISTRACTORS');
     }
 
     const options = shuffle(
-        [correctAnswer, ...picked],
-        random
+        [
+            correctAnswer,
+            ...shuffle(distractors, rand).slice(0, 3)
+        ],
+        rand
     );
 
     return {
         position,
         questionIndex,
-        question,
+
+        question: mode.startsWith('audio_')
+            ? '🔊'
+            : String(item[from]).trim(),
+
+        speechText: String(
+            item.reading || item.word || ''
+        ),
+
+        category: item._rankCategory,
+        mode,
         options,
+
         correctIndex: options.indexOf(correctAnswer)
     };
 }
