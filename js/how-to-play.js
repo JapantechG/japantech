@@ -18,7 +18,7 @@ import {
 const STORAGE_KEY = "batlingo_how_to_play_seen_v1";
 
 
-const DEFAULT_LANGUAGE = "en";
+const DEFAULT_LANGUAGE = "vi";
 
 const LANGUAGES = [
     { code: "en", label: "EN · English" },
