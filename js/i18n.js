@@ -1294,145 +1294,1059 @@ const translations = {
 
 };
 
+
 /* =========================================================
-   CURRENT LANGUAGE
+   BATLINGO - NEW UI TRANSLATIONS
+   Home V2 / Solo / Ranked / Leaderboard / Review / Exam
 ========================================================= */
 
-let uiLanguage = localStorage.getItem("batlingo_ui_language") || DEFAULT_LANGUAGE;
+const L = (ja, en, zh, vi) => ({
+    ja, en, zh, vi
+});
 
-
-/* Validate saved language */
-
-if (!SUPPORTED_LANGUAGES.includes(uiLanguage)) {
-    uiLanguage = DEFAULT_LANGUAGE;
+function addTranslations(group, entries) {
+    translations[group] ??= {};
+    Object.assign(translations[group], entries);
 }
 
+/* ================= HOME ================= */
+
+addTranslations("home", {
+
+    tagline: L(
+        "言語バトルアリーナ",
+        "LANGUAGE BATTLE ARENA",
+        "语言对战竞技场",
+        "ĐẤU TRƯỜNG NGÔN NGỮ"
+    ),
+
+    gameModes: L(
+        "ゲームモード",
+        "GAME MODES",
+        "游戏模式",
+        "CHẾ ĐỘ CHƠI"
+    ),
+
+    quickAccess: L(
+        "クイックアクセス",
+        "QUICK ACCESS",
+        "快捷入口",
+        "TRUY CẬP NHANH"
+    ),
+
+    solo: L(
+        "ソロ",
+        "SOLO",
+        "单人",
+        "SOLO"
+    ),
+
+    soloDescription: L(
+        "練習とチャレンジ",
+        "Practice & Challenge",
+        "练习与挑战",
+        "Luyện tập & thử thách"
+    ),
+
+    flashcardDescription: L(
+        "学習と暗記",
+        "Learn & Memorize",
+        "学习与记忆",
+        "Học & ghi nhớ"
+    ),
+
+    pvp: L(
+        "1対1バトル",
+        "1V1 BATTLE",
+        "1V1 对战",
+        "ĐẤU 1V1"
+    ),
+
+    pvpDescription: L(
+        "友達に挑戦",
+        "Challenge Friends",
+        "挑战好友",
+        "Thách đấu bạn bè"
+    ),
+
+    ranked: L(
+        "ランク戦",
+        "RANKED",
+        "排位赛",
+        "ĐẤU HẠNG"
+    ),
+
+    rankedDescription: L(
+        "ランクを上げよう",
+        "Climb the Ranks",
+        "提升排名",
+        "Leo bảng xếp hạng"
+    ),
+
+    jlptExam: L(
+        "JLPT模擬試験",
+        "JLPT EXAM",
+        "JLPT 模拟考试",
+        "THI THỬ JLPT"
+    ),
+
+    examDescription: L(
+        "練習と模擬試験",
+        "Practice & Mock Test",
+        "练习与模拟考试",
+        "Luyện tập & thi thử"
+    ),
+
+    leaderboard: L(
+        "ランキング",
+        "LEADERBOARD",
+        "排行榜",
+        "BẢNG XẾP HẠNG"
+    ),
+
+    review: L(
+        "復習",
+        "REVIEW",
+        "复习",
+        "ÔN TẬP"
+    ),
+
+    friends: L(
+        "フレンド",
+        "FRIENDS",
+        "好友",
+        "BẠN BÈ"
+    ),
+
+    more: L(
+        "その他",
+        "MORE",
+        "更多",
+        "THÊM"
+    ),
+
+    soon: L(
+        "近日公開",
+        "SOON",
+        "即将推出",
+        "SẮP RA MẮT"
+    ),
+
+    topic: L(
+        "テーマ",
+        "TOPIC",
+        "主题",
+        "CHỦ ĐỀ"
+    ),
+
+    languageEnglish: L(
+        "英語",
+        "ENGLISH",
+        "英语",
+        "TIẾNG ANH"
+    ),
+
+    languageChinese: L(
+        "中国語",
+        "CHINESE",
+        "中文",
+        "TIẾNG TRUNG"
+    ),
+
+    languageVietnamese: L(
+        "ベトナム語",
+        "VIETNAMESE",
+        "越南语",
+        "TIẾNG VIỆT"
+    ),
+
+    openMascot: L(
+        "マスコットを開く",
+        "Open mascot",
+        "查看吉祥物",
+        "Mở linh vật"
+    ),
+
+    backHome: L(
+        "ホームに戻る",
+        "Back to Home",
+        "返回主页",
+        "Về trang chủ"
+    ),
+
+    selectLanguage: L(
+        "表示言語",
+        "Interface language",
+        "界面语言",
+        "Ngôn ngữ giao diện"
+    )
+
+});
+
+/* ================= SOLO ================= */
+
+addTranslations("solo", {
+
+    chooseMode: L(
+        "ソロモードを選択",
+        "CHOOSE SOLO MODE",
+        "选择单人模式",
+        "CHỌN CHẾ ĐỘ SOLO"
+    ),
+
+    survival: L(
+        "サバイバル",
+        "SURVIVAL",
+        "生存模式",
+        "SINH TỒN"
+    ),
+
+    practice: L(
+        "練習",
+        "PRACTICE",
+        "练习模式",
+        "LUYỆN TẬP"
+    ),
+
+    survivalShort: L(
+        "3ライフ・スコア・EXP",
+        "3 LIVES · SCORE · EXP",
+        "3条命 · 分数 · 经验",
+        "3 MẠNG · ĐIỂM · EXP"
+    ),
+
+    practiceShort: L(
+        "問題・正答率",
+        "QUESTIONS · ACCURACY",
+        "题目 · 正确率",
+        "SỐ CÂU · ĐỘ CHÍNH XÁC"
+    ),
+
+    survivalDescription: L(
+        "ライフ3つで挑戦。スコアとEXPを獲得。",
+        "Survive with 3 lives. Earn score and EXP.",
+        "用3条生命挑战，获得分数和经验。",
+        "Vượt thử thách với 3 mạng, nhận điểm và EXP."
+    ),
+
+    practiceDescription: L(
+        "問題を練習し、正答率を確認。",
+        "Practice questions and review your accuracy.",
+        "练习题目并查看正确率。",
+        "Luyện câu hỏi và theo dõi độ chính xác."
+    ),
+
+    questionCount: L(
+        "問題数",
+        "QUESTIONS",
+        "题目数量",
+        "SỐ CÂU"
+    ),
+
+    answerTime: L(
+        "回答時間",
+        "ANSWER TIME",
+        "答题时间",
+        "THỜI GIAN TRẢ LỜI"
+    ),
+
+    lastSession: L(
+        "前回の練習",
+        "LAST SESSION",
+        "上次练习",
+        "LẦN LUYỆN GẦN NHẤT"
+    ),
+
+    accuracy: L(
+        "正答率",
+        "ACCURACY",
+        "正确率",
+        "ĐỘ CHÍNH XÁC"
+    ),
+
+    autoNext: L(
+        "自動で次へ",
+        "AUTO NEXT",
+        "自动下一题",
+        "TỰ CHUYỂN CÂU"
+    ),
+
+    next: L(
+        "次へ",
+        "NEXT",
+        "下一题",
+        "CÂU TIẾP"
+    )
+
+});
+
+/* ================= LEADERBOARD ================= */
+
+addTranslations("leaderboard", {
+
+    title: L(
+        "ランキング",
+        "LEADERBOARD",
+        "排行榜",
+        "BẢNG XẾP HẠNG"
+    ),
+
+    level: L(
+        "レベル",
+        "Level",
+        "等级",
+        "Cấp độ"
+    ),
+
+    petLevel: L(
+        "ペットレベル",
+        "Pet Level",
+        "宠物等级",
+        "Cấp linh vật"
+    ),
+
+    rank: L(
+        "ランク",
+        "Rank",
+        "排位",
+        "Xếp hạng"
+    ),
+
+    positionPlayer: L(
+        "順位 / プレイヤー",
+        "POSITION / PLAYER",
+        "排名 / 玩家",
+        "HẠNG / NGƯỜI CHƠI"
+    ),
+
+    yourPosition: L(
+        "あなたの順位",
+        "YOUR POSITION",
+        "你的排名",
+        "HẠNG CỦA BẠN"
+    ),
+
+    you: L(
+        "あなた",
+        "YOU",
+        "你",
+        "BẠN"
+    ),
+
+    global: L(
+        "全体",
+        "GLOBAL",
+        "全球",
+        "TOÀN BỘ"
+    ),
+
+    noPlayers: L(
+        "まだプレイヤーがいません。",
+        "No players yet.",
+        "暂无玩家。",
+        "Chưa có người chơi."
+    ),
+
+    noMore: L(
+        "これ以上のプレイヤーはいません。",
+        "No more players.",
+        "没有更多玩家。",
+        "Không còn người chơi."
+    ),
+
+    loginRequired: L(
+        "ログインすると順位を確認できます。",
+        "Login to see your position.",
+        "登录后查看排名。",
+        "Đăng nhập để xem thứ hạng."
+    ),
+
+    outsideTop: L(
+        "表示中のトップ100に入っていません。",
+        "You are not in the displayed Top 100.",
+        "你未进入当前前100名。",
+        "Bạn chưa nằm trong Top 100 đang hiển thị."
+    ),
+
+    loading: L(
+        "ランキングを読み込み中...",
+        "Loading leaderboard...",
+        "正在加载排行榜...",
+        "Đang tải bảng xếp hạng..."
+    ),
+
+    seasonLabel: L(
+        "シーズン {season}",
+        "SEASON {season}",
+        "赛季 {season}",
+        "MÙA {season}"
+    ),
+
+    petStage: L(
+        "進化段階 {stage}",
+        "Pet Stage {stage}",
+        "进化阶段 {stage}",
+        "Tiến hóa cấp {stage}"
+    ),
+
+    viewProfile: L(
+        "{name}のプロフィールを見る",
+        "View {name}'s profile",
+        "查看{name}的资料",
+        "Xem hồ sơ của {name}"
+    )
+
+});
+
+/* ================= RANKED ================= */
+
+addTranslations("rank", {
+
+    wins: L(
+        "勝利",
+        "WINS",
+        "胜场",
+        "THẮNG"
+    ),
+
+    losses: L(
+        "敗北",
+        "LOSSES",
+        "负场",
+        "THUA"
+    ),
+
+    winRate: L(
+        "勝率",
+        "WIN RATE",
+        "胜率",
+        "TỶ LỆ THẮNG"
+    ),
+
+    rating: L(
+        "ELOレーティング",
+        "ELO RATING",
+        "ELO 评分",
+        "ĐIỂM ELO"
+    ),
+
+    maxTier: L(
+        "最高ランク",
+        "MAX TIER",
+        "最高段位",
+        "HẠNG CAO NHẤT"
+    ),
+
+    matchFound: L(
+        "対戦相手が見つかりました！",
+        "MATCH FOUND!",
+        "匹配成功！",
+        "ĐÃ TÌM THẤY TRẬN!"
+    ),
+
+    acceptQuestion: L(
+        "ランク戦に参加しますか？",
+        "Accept the Ranked Battle?",
+        "接受排位赛吗？",
+        "Chấp nhận trận đấu hạng?"
+    ),
+
+    accept: L(
+        "承諾",
+        "ACCEPT",
+        "接受",
+        "CHẤP NHẬN"
+    ),
+
+    waitingDecision: L(
+        "選択を待っています...",
+        "Waiting for your decision...",
+        "等待你的决定...",
+        "Đang chờ bạn quyết định..."
+    ),
+
+    waitingOpponent: L(
+        "対戦相手を待っています...",
+        "Waiting for opponent...",
+        "等待对手...",
+        "Đang chờ đối thủ..."
+    ),
+
+    bothAccepted: L(
+        "両プレイヤーが承諾しました！",
+        "Both players accepted!",
+        "双方已接受！",
+        "Cả hai đã chấp nhận!"
+    ),
+
+    connecting: L(
+        "接続中...",
+        "CONNECTING...",
+        "连接中...",
+        "ĐANG KẾT NỐI..."
+    ),
+
+    cancelSearch: L(
+        "検索を中止",
+        "CANCEL SEARCH",
+        "取消匹配",
+        "HỦY TÌM TRẬN"
+    ),
+
+    searchNotice: L(
+        "同じ設定の対戦相手を検索中（Elo差±200以内）...",
+        "Searching for players with matching settings (Elo ±200)...",
+        "正在寻找相同设置的对手（Elo ±200）...",
+        "Đang tìm đối thủ cùng cấu hình (Elo ±200)..."
+    ),
+
+    searchExpired: L(
+        "検索がタイムアウトしました。",
+        "Matchmaking expired.",
+        "匹配已超时。",
+        "Hàng chờ đã hết hạn."
+    ),
+
+    searchCancelled: L(
+        "検索を中止しました。",
+        "Matchmaking cancelled.",
+        "已取消匹配。",
+        "Đã hủy tìm trận."
+    ),
+
+    matchId: L(
+        "対戦ID: {id}",
+        "MATCH ID: {id}",
+        "比赛 ID: {id}",
+        "MÃ TRẬN: {id}"
+    ),
+
+    role: L(
+        "役割: {role}",
+        "ROLE: {role}",
+        "角色: {role}",
+        "VAI TRÒ: {role}"
+    ),
+
+    preparing: L(
+        "対戦を準備中...",
+        "Preparing ranked match...",
+        "正在准备排位赛...",
+        "Đang chuẩn bị trận hạng..."
+    ),
+
+    loadingQuestion: L(
+        "問題を読み込み中...",
+        "Loading question...",
+        "正在加载题目...",
+        "Đang tải câu hỏi...",
+    ),
+
+    question: L(
+        "問題 {current} / {total}",
+        "QUESTION {current} / {total}",
+        "题目 {current} / {total}",
+        "CÂU {current} / {total}"
+    ),
+
+    suddenDeath: L(
+        "サドンデス · ラウンド {round}",
+        "SUDDEN DEATH · ROUND {round}",
+        "加赛 · 第{round}轮",
+        "HIỆP PHỤ · VÒNG {round}"
+    ),
+
+    connectionFailed: L(
+        "接続に失敗しました",
+        "CONNECTION FAILED",
+        "连接失败",
+        "KẾT NỐI THẤT BẠI"
+    )
+
+});
+
+/* ================= REVIEW ================= */
+
+addTranslations("review", {
+
+    title: L(
+        "復習",
+        "REVIEW",
+        "复习",
+        "ÔN TẬP"
+    ),
+
+    words: L(
+        "{count}語",
+        "{count} WORDS",
+        "{count} 个词",
+        "{count} TỪ"
+    ),
+
+    correct: L(
+        "正解",
+        "CORRECT",
+        "正确",
+        "ĐÚNG"
+    ),
+
+    wrong: L(
+        "不正解",
+        "WRONG",
+        "错误",
+        "SAI"
+    ),
+
+    next: L(
+        "次の問題",
+        "NEXT QUESTION",
+        "下一题",
+        "CÂU TIẾP"
+    ),
+
+    finish: L(
+        "終了",
+        "FINISH",
+        "完成",
+        "KẾT THÚC"
+    ),
+
+    autoNext: L(
+        "自動で次へ",
+        "AUTO NEXT",
+        "自动下一题",
+        "TỰ CHUYỂN CÂU"
+    )
+
+});
+
+/* ================= JLPT EXAM ================= */
+
+addTranslations("exam", {
+
+    title: L(
+        "JLPT模擬試験",
+        "JLPT EXAM",
+        "JLPT 模拟考试",
+        "THI THỬ JLPT"
+    ),
+
+    practice: L(
+        "練習",
+        "PRACTICE",
+        "练习",
+        "LUYỆN TẬP"
+    ),
+
+    test: L(
+        "模擬試験",
+        "MOCK TEST",
+        "模拟考试",
+        "THI THỬ"
+    ),
+
+    review: L(
+        "解答を確認",
+        "REVIEW ANSWERS",
+        "查看答案",
+        "XEM ĐÁP ÁN"
+    ),
+
+    start: L(
+        "開始",
+        "START",
+        "开始",
+        "BẮT ĐẦU"
+    ),
+
+    submit: L(
+        "提出",
+        "SUBMIT",
+        "提交",
+        "NỘP BÀI"
+    ),
+
+    previous: L(
+        "前へ",
+        "PREVIOUS",
+        "上一题",
+        "CÂU TRƯỚC"
+    ),
+
+    next: L(
+        "次へ",
+        "NEXT",
+        "下一题",
+        "CÂU TIẾP"
+    ),
+
+    elapsed: L(
+        "経過時間",
+        "Elapsed",
+        "已用时间",
+        "Đã làm"
+    ),
+
+    questions: L(
+        "問題",
+        "QUESTIONS",
+        "题目",
+        "CÂU HỎI"
+    ),
+
+    confirmSubmit: L(
+        "提出しますか？",
+        "Submit your answers?",
+        "确定提交吗？",
+        "Xác nhận nộp bài?"
+    ),
+
+    retry: L(
+        "もう一度",
+        "RETRY",
+        "重试",
+        "LÀM LẠI"
+    )
+
+});
+
+/* ================= QUESTION MODES ================= */
+
+addTranslations("mode", {
+
+    kanji_meaning: L(
+        "漢字 → 意味",
+        "Kanji → Meaning",
+        "汉字 → 含义",
+        "Kanji → Nghĩa"
+    ),
+
+    kanji_hiragana: L(
+        "漢字 → ひらがな",
+        "Kanji → Hiragana",
+        "汉字 → 平假名",
+        "Kanji → Hiragana"
+    ),
+
+    hiragana_meaning: L(
+        "ひらがな → 意味",
+        "Hiragana → Meaning",
+        "平假名 → 含义",
+        "Hiragana → Nghĩa"
+    ),
+
+    meaning_kanji: L(
+        "意味 → 漢字",
+        "Meaning → Kanji",
+        "含义 → 汉字",
+        "Nghĩa → Kanji"
+    ),
+
+    audio_meaning: L(
+        "音声 → 意味",
+        "Audio → Meaning",
+        "语音 → 含义",
+        "Âm thanh → Nghĩa"
+    ),
+
+    audio_hiragana: L(
+        "音声 → ひらがな",
+        "Audio → Hiragana",
+        "语音 → 平假名",
+        "Âm thanh → Hiragana"
+    ),
+
+    audio_kanji: L(
+        "音声 → 漢字",
+        "Audio → Kanji",
+        "语音 → 汉字",
+        "Âm thanh → Kanji"
+    )
+
+});
+
+addTranslations("studyMode", {
+    topic: L("テーマ別", "TOPIC", "主题", "CHỦ ĐỀ")
+});
+
+addTranslations("common", {
+    questions: L("問題数", "QUESTIONS", "题目数量", "SỐ CÂU"),
+    score: L("スコア", "SCORE", "分数", "ĐIỂM")
+});
+
+
 
 /* =========================================================
-   GET TRANSLATION
+   BATLINGO - I18N CORE
+   4 LANGUAGES
 ========================================================= */
 
-export function t(key) {
-    const parts = key.split(".");
-    let value = translations;
+const STORAGE_KEY = "batlingo_ui_language";
 
-    for (const part of parts) {
-        if (value === undefined || value === null) {
-            return key;
-        }
+let uiLanguage = DEFAULT_LANGUAGE;
 
-        value = value[part];
+try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+
+    if (SUPPORTED_LANGUAGES.includes(saved)) {
+        uiLanguage = saved;
     }
-
-    if (
-        value === undefined ||
-        value === null ||
-        typeof value !== "object"
-    ) {
-        return key;
-    }
-
-    return value[uiLanguage] ?? value[DEFAULT_LANGUAGE] ?? key;
+} catch (error) {
+    console.warn("[i18n] Storage error:", error);
 }
 
-
-/* =========================================================
-   APPLY LANGUAGE TO HTML
-========================================================= */
-
-export function applyLanguage() {
-    document.documentElement.lang = uiLanguage;
-
-
-    /* Normal text */
-
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.dataset.i18n;
-        element.textContent = t(key);
-    });
-
-
-    /* Placeholder */
-
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
-        const key = element.dataset.i18nPlaceholder;
-        element.placeholder = t(key);
-    });
-
-
-    /* Sync language selects */
-
-    const homeLanguage = document.getElementById("homeLanguage");
-    const authLanguage = document.getElementById("authLanguage");
-
-    if (homeLanguage) {
-        homeLanguage.value = uiLanguage;
-    }
-
-    if (authLanguage) {
-        authLanguage.value = uiLanguage;
-    }
-}
-
-
-/* =========================================================
-   SET LANGUAGE
-========================================================= */
-
-export function setLanguage(language) {
-    if (!SUPPORTED_LANGUAGES.includes(language)) {
-        return;
-    }
-
-    uiLanguage = language;
-
-    localStorage.setItem(
-        "batlingo_ui_language",
-        language
-    );
-
-    applyLanguage();
-
-    window.dispatchEvent(
-        new CustomEvent(
-            "batlingo-language-change",
-            {
-                detail: {
-                    language
-                }
-            }
-        )
-    );
-}
-
-
-/* =========================================================
-   GET CURRENT LANGUAGE
-========================================================= */
+/* ================= GET LANGUAGE ================= */
 
 export function getLanguage() {
     return uiLanguage;
 }
 
+/* ================= TRANSLATE ================= */
 
-/* =========================================================
-   INIT
-========================================================= */
+export function t(key, params = {}) {
 
-export function initI18n() {
-    const homeLanguage = document.getElementById("homeLanguage");
-    const authLanguage = document.getElementById("authLanguage");
+    const path = String(key ?? "").split(".");
+    let value = translations;
 
+    for (const part of path) {
 
-    homeLanguage?.addEventListener("change", event => {
-        setLanguage(event.target.value);
+        if (
+            !value ||
+            typeof value !== "object" ||
+            !Object.prototype.hasOwnProperty.call(value, part)
+        ) {
+            return String(key);
+        }
+
+        value = value[part];
+    }
+
+    if (!value || typeof value !== "object") {
+        return String(key);
+    }
+
+    const phrase =
+        value[uiLanguage] ??
+        value[DEFAULT_LANGUAGE];
+
+    if (typeof phrase !== "string") {
+        return String(key);
+    }
+
+    return phrase.replace(
+        /\{([a-zA-Z][\w]*)\}/g,
+        (match, name) => {
+
+            if (
+                params[name] === undefined ||
+                params[name] === null
+            ) {
+                return match;
+            }
+
+            return String(params[name]);
+        }
+    );
+}
+
+/* ================= APPLY LANGUAGE ================= */
+
+const missingKeys = new Set();
+
+export function applyLanguage(root = document) {
+
+    document.documentElement.lang = uiLanguage;
+
+    const attributes = [
+        ["data-i18n", "textContent"],
+        ["data-i18n-placeholder", "placeholder"],
+        ["data-i18n-title", "title"],
+        ["data-i18n-aria-label", "aria-label"]
+    ];
+
+    for (const [attribute, target] of attributes) {
+
+        const elements = [];
+
+        if (
+            root.nodeType === 1 &&
+            root.hasAttribute(attribute)
+        ) {
+            elements.push(root);
+        }
+
+        if (root.querySelectorAll) {
+            elements.push(
+                ...root.querySelectorAll(`[${attribute}]`)
+            );
+        }
+
+        for (const element of elements) {
+
+            const key = element.getAttribute(attribute);
+
+            if (!key) continue;
+
+            const translated = t(key);
+
+            if (translated === key) {
+
+                if (!missingKeys.has(key)) {
+
+                    missingKeys.add(key);
+
+                    console.warn(
+                        `[i18n] Missing translation: ${key}`
+                    );
+                }
+
+                continue;
+            }
+
+            if (target === "aria-label") {
+
+                element.setAttribute(
+                    "aria-label",
+                    translated
+                );
+
+            } else {
+
+                element[target] = translated;
+            }
+        }
+    }
+
+    /* Sync UI language selectors */
+
+    document.querySelectorAll(
+        "#homeLanguage, #authLanguage"
+    ).forEach(select => {
+
+        if (select.value !== uiLanguage) {
+            select.value = uiLanguage;
+        }
     });
+}
 
+/* ================= SET LANGUAGE ================= */
 
-    authLanguage?.addEventListener("change", event => {
-        setLanguage(event.target.value);
-    });
+export function setLanguage(language) {
 
+    if (!SUPPORTED_LANGUAGES.includes(language)) {
+        return false;
+    }
+
+    const changed = language !== uiLanguage;
+
+    uiLanguage = language;
+
+    try {
+        localStorage.setItem(
+            STORAGE_KEY,
+            language
+        );
+    } catch (error) {
+        console.warn("[i18n] Save failed:", error);
+    }
 
     applyLanguage();
+
+    if (changed) {
+
+        window.dispatchEvent(
+            new CustomEvent(
+                "batlingo-language-change",
+                {
+                    detail: { language }
+                }
+            )
+        );
+    }
+
+    return true;
+}
+
+/* ================= INITIALIZE ================= */
+
+let initialized = false;
+
+export function initI18n() {
+
+    if (initialized) {
+        applyLanguage();
+        return;
+    }
+
+    initialized = true;
+
+    /* Event delegation for existing or future selects */
+
+    document.addEventListener("change", event => {
+
+        if (
+            event.target?.matches?.(
+                "#homeLanguage, #authLanguage"
+            )
+        ) {
+
+            setLanguage(event.target.value);
+        }
+    });
+
+    applyLanguage();
+}
+
+/* ================= AUDIT ================= */
+
+export function auditI18n(root = document) {
+
+    const known = [];
+    const missing = [];
+
+    const attributes = [
+        "data-i18n",
+        "data-i18n-placeholder",
+        "data-i18n-title",
+        "data-i18n-aria-label"
+    ];
+
+    const selector = attributes
+        .map(attribute => `[${attribute}]`)
+        .join(", ");
+
+    const nodes = root.querySelectorAll?.(selector) ?? [];
+
+    for (const element of nodes) {
+
+        for (const attribute of attributes) {
+
+            const key = element.getAttribute(attribute);
+
+            if (!key) continue;
+
+            const item = {
+                key,
+                id: element.id,
+                tag: element.tagName
+            };
+
+            if (t(key) === key) {
+                missing.push(item);
+            } else {
+                known.push(item);
+            }
+        }
+    }
+
+    console.table(missing);
+
+    console.info(
+        `[i18n] Translated: ${known.length}, Missing: ${missing.length}`
+    );
+
+    return {
+        known,
+        missing
+    };
 }
