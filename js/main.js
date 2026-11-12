@@ -196,33 +196,6 @@ reviewBackButton?.addEventListener("click", () => {
     playLobbyMusic();
 });
 
-function setUILanguage(language) 
-{
-    homeLanguage.value = language;
-
-    authLanguage.value = language;
-
-    localStorage.setItem("batlingo_ui_language",language);
-
-    /*
-       Bước sau:
-
-       I18n.setLanguage(language);
-    */
-
-}
-
-homeLanguage.addEventListener("change",event => 
-    {
-        setUILanguage(event.target.value);
-    }
-);
-
-authLanguage.addEventListener("change",event => 
-    {
-        setUILanguage(event.target.value);
-    }
-);
 
 homeLoginBtn.addEventListener("click",() => 
     {
