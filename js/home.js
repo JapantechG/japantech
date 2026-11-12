@@ -1,6 +1,6 @@
 
 import { getExpRequired } from "./progression.js";
-
+import { t } from "./i18n.js";
 // ==========================================
 // BATLINGO HOME CONTROLLER
 // ==========================================
@@ -8,14 +8,16 @@ import { getExpRequired } from "./progression.js";
 let initialized = false;
 
 const modeNames = {
-    solo: "SOLO BATTLE",
-    flashcard: "FLASHCARD",
-    pvp: "1 VS 1",
-    rank: "RANKED BATTLE"
+    solo: "battleMode.solo",
+    flashcard: "studyMode.flashcard",
+    pvp: "battleMode.pvp",
+    rank: "home.ranked"
 };
 
-export function showHome() {
+let currentModeId = null;
 
+export function showHome() {
+    currentModeId = null;
     document.getElementById("setupScreen")
         ?.classList.remove("hidden");
 
@@ -34,7 +36,13 @@ export function showHome() {
 
 export function showConfiguration(modeId) {
 
-    const title = modeNames[modeId];
+    const key = modeNames[modeId];
+
+    if (!key) return false;
+    
+    currentModeId = modeId;
+    
+    const title = t(key);
 
     if (!title) return false;
 
@@ -302,3 +310,19 @@ export function updateHomeReviewCount(count = 0) {
         total === 0
     );
 }
+window.addEventListener(
+    "batlingo-language-change",
+    () => {
+
+        if (!currentModeId) return;
+
+        const titleElement =
+            document.getElementById("batConfigModeTitle");
+
+        const key = modeNames[currentModeId];
+
+        if (titleElement && key) {
+            titleElement.textContent = t(key);
+        }
+    }
+);
