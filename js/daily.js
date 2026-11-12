@@ -159,6 +159,304 @@ let setupCollapsed = false;
 
 
 /* ============================================================
+   DAILY MISSION V4.2
+   SETTINGS + LOGIN REMINDER
+
+   - Giữ nguồn học và mục tiêu qua ngày mới.
+   - Nhắc người dùng chưa hoàn thành nhiệm vụ.
+   - SKIP chỉ ẩn thông báo.
+   - Không thay đổi lịch sử từ đã học.
+============================================================ */
+
+let dailyDataReady = false;
+let reminderShownKey = '';
+
+
+/* ============================================================
+   GET SAVED DAILY SETTINGS
+
+   Thứ tự ưu tiên:
+   1. Mission hôm nay.
+   2. dailyChoice trong Firebase.
+   3. Mission gần nhất của ngày trước.
+============================================================ */
+
+function getSavedDailyChoice() {
+
+    const current = mission();
+
+    if (current?.type && current?.target) {
+
+        return {
+            type: current.type,
+            target: current.target
+        };
+    }
+
+    const saved = state.dailyChoice;
+
+    if (saved?.type && saved?.target) {
+
+        return {
+            type: saved.type,
+            target: saved.target
+        };
+    }
+
+    // Hỗ trợ tài khoản đang dùng cấu trúc cũ.
+    const dates = Object.keys(
+        state.days || {}
+    ).sort().reverse();
+
+    for (const date of dates) {
+
+        const previous =
+            state.days[date]?.mission;
+
+        if (
+            previous?.type &&
+            previous?.target
+        ) {
+
+            return {
+                type: previous.type,
+                target: previous.target
+            };
+        }
+    }
+
+    return null;
+}
+
+
+/* ============================================================
+   HIDE REMINDER
+
+   Không xóa nhiệm vụ.
+   Không ghi Firebase.
+============================================================ */
+
+function hideDailyReminder() {
+
+    $('dailyReminderOverlay')
+        ?.classList.add('hidden');
+}
+
+
+/* ============================================================
+   CREATE LOGIN REMINDER
+
+   Tạo giao diện bằng JavaScript.
+   Không cần thêm HTML.
+============================================================ */
+
+function createDailyReminder() {
+
+    let overlay = $('dailyReminderOverlay');
+
+    if (overlay) return overlay;
+
+    overlay = document.createElement('div');
+
+    overlay.id = 'dailyReminderOverlay';
+
+    overlay.className =
+        'daily-reminder-overlay hidden';
+
+    const card = document.createElement('div');
+
+    card.className = 'daily-reminder-card';
+
+    card.setAttribute('role', 'dialog');
+
+    card.setAttribute('aria-modal', 'true');
+
+    card.setAttribute(
+        'aria-labelledby',
+        'dailyReminderTitle'
+    );
+
+    /* TITLE */
+
+    const title = document.createElement('h2');
+
+    title.id = 'dailyReminderTitle';
+
+    title.textContent = '🔥 DAILY MISSION';
+
+    /* DESCRIPTION */
+
+    const description = document.createElement('p');
+
+    description.textContent =
+        'Bạn chưa hoàn thành nhiệm vụ hôm nay!';
+
+    /* PROGRESS */
+
+    const progress = document.createElement('p');
+
+    progress.id = 'dailyReminderProgress';
+
+    /* SOURCE */
+
+    const source = document.createElement('p');
+
+    source.id = 'dailyReminderSource';
+
+    /* PROGRESS BAR */
+
+    const track = document.createElement('div');
+
+    track.className = 'daily-reminder-track';
+
+    const bar = document.createElement('div');
+
+    bar.id = 'dailyReminderBar';
+
+    track.append(bar);
+
+    /* ACTIONS */
+
+    const actions = document.createElement('div');
+
+    actions.className = 'daily-reminder-actions';
+
+    /* SKIP BUTTON */
+
+    const skip = document.createElement('button');
+
+    skip.id = 'dailyReminderSkip';
+
+    skip.type = 'button';
+
+    skip.textContent = 'SKIP';
+
+    skip.addEventListener(
+        'click',
+        hideDailyReminder
+    );
+
+    /* START BUTTON */
+
+    const start = document.createElement('button');
+
+    start.id = 'dailyReminderStart';
+
+    start.type = 'button';
+
+    start.textContent = '▶ LÀM NHIỆM VỤ';
+
+    start.addEventListener(
+        'click',
+        async () => {
+
+            hideDailyReminder();
+
+            await open();
+        }
+    );
+
+    actions.append(
+        skip,
+        start
+    );
+
+    card.append(
+        title,
+        description,
+        progress,
+        source,
+        track,
+        actions
+    );
+
+    overlay.append(card);
+
+    document.body.append(overlay);
+
+    // Click ra ngoài không đóng thông báo.
+
+    return overlay;
+}
+
+
+/* ============================================================
+   SHOW REMINDER IF DAILY IS NOT COMPLETE
+
+   Chỉ hiện khi:
+   - Đã đăng nhập.
+   - Đã nhận dữ liệu Firebase.
+   - Hôm nay chưa đạt mục tiêu.
+   - Chưa nhắc trong ngày của phiên đăng nhập.
+============================================================ */
+
+function showDailyReminderIfNeeded() {
+
+    if (
+        !dailyDataReady ||
+        !auth.currentUser
+    ) {
+        return;
+    }
+
+    const date = today();
+
+    const key =
+        `${auth.currentUser.uid}:${date}`;
+
+    if (reminderShownKey === key) {
+        return;
+    }
+
+    const d = day();
+
+    const goal = clamp(state.goal);
+
+    const completed = dayCompleted(d);
+
+    /* Nhiệm vụ đã hoàn thành. */
+
+    if (
+        d.checked ||
+        d.missionDone ||
+        completed >= goal
+    ) {
+        return;
+    }
+
+    /* Không hiển thị đè lên Daily. */
+
+    if (
+        !$('dailyOverlay')
+            ?.classList.contains('hidden')
+    ) {
+        return;
+    }
+
+    reminderShownKey = key;
+
+    createDailyReminder();
+
+    const choice = getSavedDailyChoice();
+
+    $('dailyReminderProgress').textContent =
+        `Mục tiêu hôm nay: ${completed} / ${goal} từ`;
+
+    $('dailyReminderSource').textContent =
+        choice
+            ? `Bộ từ: ${choice.type.toUpperCase()} / ${choice.target.toUpperCase()}`
+            : 'Bộ từ: chưa chọn';
+
+    $('dailyReminderBar').style.width =
+        `${Math.min(100, completed * 100 / goal)}%`;
+
+    $('dailyReminderOverlay')
+        .classList.remove('hidden');
+}
+
+
+
+/* ============================================================
    04. HELPER FUNCTIONS
 ============================================================ */
 
@@ -1017,6 +1315,18 @@ async function startMission() {
             (s, d) => {
 
                 s.goal = n;
+
+               /* ============================================================
+                  SAVE SELECTED DAILY SOURCE
+               
+                  Lưu ở cấp tài khoản.
+                  Không phụ thuộc ngày hiện tại.
+               ============================================================ */
+               
+               s.dailyChoice = {
+                   type,
+                   target
+               };
 
                 d.missionDone =
                     dayCompleted(d) >= n;
@@ -3395,28 +3705,33 @@ function render() {
         studying && setupCollapsed
     );
 
-    /* ================================================
-       AUTO COLLAPSE GOAL
-    ================================================ */
+   
+      /* ============================================================
+         AUTO COLLAPSE DAILY SETUP
+      
+         Ngày mới chưa có mission vẫn giữ setup thu gọn
+         nếu đã lưu nguồn học trước đó.
+      ============================================================ */
+      
+      const hasSavedSetup = !!getSavedDailyChoice();
+      
+      $('dailySetup')?.classList.toggle(
+          'daily-setup-collapsed',
+          setupCollapsed && hasSavedSetup
+      );
+      
+      const edit = $('dailyEditGoalButton');
+      
+      if (edit) {
+      
+          edit.hidden = !hasSavedSetup;
+      
+          edit.textContent =
+              setupCollapsed
+                  ? '⚙ SỬA MỤC TIÊU'
+                  : '✕ THU GỌN';
+      }
 
-    $('dailySetup')?.classList.toggle(
-        'daily-setup-collapsed',
-
-        setupCollapsed && !!m
-    );
-
-    const edit =
-        $('dailyEditGoalButton');
-
-    if (edit) {
-
-        edit.hidden = !m;
-
-        edit.textContent =
-            setupCollapsed
-                ? '⚙ SỬA MỤC TIÊU'
-                : '✕ THU GỌN';
-    }
 
           /* ============================================================
          DAILY SOURCE SUMMARY
@@ -3507,8 +3822,14 @@ function render() {
 }
 
 
+
 /* ============================================================
-   32. OPEN DAILY
+   OPEN DAILY MISSION
+
+   - Khôi phục nguồn học đã lưu.
+   - Giữ mục tiêu cũ.
+   - Ngày mới tự tạo mission nếu chưa có.
+   - Không mở lại setup nếu đã thiết lập.
 ============================================================ */
 
 async function open() {
@@ -3520,34 +3841,63 @@ async function open() {
         return;
     }
 
+    hideDailyReminder();
+
     tab = 'learn';
 
-    const m = mission();
+    const saved = getSavedDailyChoice();
 
-    setupCollapsed = !!m;
+    const current = mission();
 
-    if (m) {
+    // Có nguồn học đã lưu thì thu gọn.
+    setupCollapsed = !!saved;
 
-        if (
-            $('dailyStudyMode')
-        ) {
+    /* RESTORE STUDY MODE / TARGET */
 
-            $('dailyStudyMode').value =
-                m.type;
+    if (saved) {
+
+        const studyMode = $('dailyStudyMode');
+
+        if (studyMode) {
+            studyMode.value = saved.type;
         }
 
-        await updateTargets(
-            m.target
-        );
+        await updateTargets(saved.target);
     }
 
-    $('dailyOverlay')?.classList.remove(
-        'hidden'
-    );
+    /* RESTORE DAILY GOAL */
+
+    if ($('dailyGoalInput')) {
+
+        $('dailyGoalInput').value =
+            clamp(state.goal);
+    }
+
+    /* SHOW DAILY */
+
+    $('dailyOverlay')
+        ?.classList.remove('hidden');
 
     render();
 
-    resumeSource();
+    /* CONTINUE TODAY'S MISSION */
+
+    if (current) {
+
+        await resumeSource();
+
+        return;
+    }
+
+    /* NEW DAY, REUSE SAVED SETTINGS */
+
+    if (saved) {
+
+        await startMission();
+    }
+
+    // Nếu chưa từng thiết lập:
+    // Hiển thị form để người dùng chọn lần đầu.
 }
 
 
@@ -3565,8 +3915,13 @@ function close() {
 }
 
 
+
 /* ============================================================
-   34. FIREBASE USER LISTENER
+   FIREBASE USER LISTENER
+
+   - Chỉ nhắc sau khi Firebase đã trả dữ liệu.
+   - Không bật lại thông báo sau khi bấm SKIP.
+   - Đăng xuất sẽ reset trạng thái nhắc.
 ============================================================ */
 
 function watch(userId) {
@@ -3596,10 +3951,21 @@ function watch(userId) {
 
     revealed = false;
 
+    dailyDataReady = false;
+
+    reminderShownKey = '';
+
+    setupCollapsed = false;
+
+    hideDailyReminder();
+
     close();
+
     render();
 
     if (!userId) return;
+
+    let firstSnapshot = true;
 
     stopUser = onValue(
 
@@ -3610,19 +3976,30 @@ function watch(userId) {
 
         snapshot => {
 
-            if (
-                uid !== userId
-            ) {
+            if (uid !== userId) {
                 return;
             }
 
-            state =
-                snapshot.val() || {};
+            state = snapshot.val() || {};
+
+            dailyDataReady = true;
+
+            if (firstSnapshot) {
+
+                firstSnapshot = false;
+
+                setupCollapsed =
+                    !!getSavedDailyChoice();
+            }
 
             render();
+
+            showDailyReminderIfNeeded();
         },
 
         error => {
+
+            dailyDataReady = false;
 
             message(
                 'Firebase: ' + error.message,
@@ -3631,6 +4008,7 @@ function watch(userId) {
         }
     );
 }
+
 
 
 /* ============================================================
@@ -3785,22 +4163,35 @@ export function initDaily() {
             }
         );
 
-    /* ================================================
-       ESC CLOSE
-    ================================================ */
-
-    document.addEventListener(
-        'keydown',
-        event => {
-
-            if (
-                event.key === 'Escape'
-            ) {
-
-                close();
-            }
-        }
-    );
+      /* ============================================================
+         ESCAPE CLOSE
+      
+         - Nếu reminder đang hiện: đóng reminder.
+         - Nếu Daily đang hiện: đóng Daily.
+         - Click ra ngoài: không đóng.
+      ============================================================ */
+      
+      document.addEventListener(
+          'keydown',
+          event => {
+      
+              if (event.key !== 'Escape') {
+                  return;
+              }
+      
+              if (
+                  !$('dailyReminderOverlay')
+                      ?.classList.contains('hidden')
+              ) {
+      
+                  hideDailyReminder();
+      
+                  return;
+              }
+      
+              close();
+          }
+      );
 
     /* ================================================
        FIREBASE AUTH
@@ -3811,32 +4202,49 @@ export function initDaily() {
         user => watch(user?.uid)
     );
 
-    /* ================================================
-       DATE CHANGE
-    ================================================ */
+    
+      /* ============================================================
+         NEW DAY DETECTION
+      
+         Mốc ngày: Việt Nam (UTC+7).
+      
+         - Giữ setup thu gọn.
+         - Giữ nguồn học và mục tiêu.
+         - Reset câu hỏi tạm trong bộ nhớ.
+         - Nhắc người dùng làm nhiệm vụ ngày mới.
+      ============================================================ */
+      
+      lastDate = today();
+      
+      setInterval(
+          () => {
+      
+              if (today() !== lastDate) {
+      
+                  lastDate = today();
+      
+                  question = null;
+                  questionSig = '';
+      
+                  revealed = false;
+      
+                  setupCollapsed =
+                      !!getSavedDailyChoice();
+      
+                  hideDailyReminder();
+              }
+      
+              render();
+      
+              if (dailyDataReady) {
+      
+                  showDailyReminderIfNeeded();
+              }
+      
+          },
+          30000
+      );
 
-    lastDate = today();
-
-    setInterval(
-        () => {
-
-            if (
-                today() !== lastDate
-            ) {
-
-                lastDate = today();
-
-                question = null;
-                questionSig = '';
-
-                revealed = false;
-            }
-
-            render();
-
-        },
-        30000
-    );
 
     /* ================================================
        INITIAL TARGETS
