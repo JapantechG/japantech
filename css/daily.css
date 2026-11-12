@@ -1288,3 +1288,128 @@
     }
 }
 
+/* ============================================================
+   BATLINGO DAILY V4.2
+   LOGIN REMINDER
+============================================================ */
+
+#dailyReminderOverlay.hidden {
+    display: none !important;
+}
+
+#dailyReminderOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 21000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+
+    background: rgba(2, 6, 23, .85);
+}
+
+#dailyReminderOverlay * {
+    box-sizing: border-box;
+}
+
+.daily-reminder-card {
+    width: min(100%, 410px);
+    padding: 25px;
+
+    border: 1px solid #475569;
+    border-radius: 18px;
+
+    background: #0f172a;
+    color: #f8fafc;
+
+    text-align: center;
+    box-shadow: 0 22px 70px rgba(0, 0, 0, .45);
+}
+
+.daily-reminder-card h2 {
+    margin: 0 0 10px;
+
+    color: #fbbf24;
+    font-size: 21px;
+}
+
+.daily-reminder-card p {
+    margin: 8px 0;
+
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+#dailyReminderSource {
+    color: #94a3b8;
+}
+
+.daily-reminder-track {
+    height: 9px;
+    margin: 17px 0;
+
+    overflow: hidden;
+    border-radius: 999px;
+
+    background: #334155;
+}
+
+#dailyReminderBar {
+    width: 0;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #f59e0b,
+        #22c55e
+    );
+}
+
+.daily-reminder-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 9px;
+
+    margin-top: 18px;
+}
+
+.daily-reminder-actions button {
+    min-height: 44px;
+    padding: 9px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+#dailyReminderSkip {
+    border: 1px solid #475569;
+
+    background: #1e293b;
+    color: #cbd5e1;
+}
+
+#dailyReminderStart {
+    border: 1px solid #d97706;
+
+    background: #fbbf24;
+    color: #111827;
+}
+
+@media (max-width: 400px) {
+
+    .daily-reminder-card {
+        padding: 17px;
+    }
+
+    .daily-reminder-actions {
+        grid-template-columns: 1fr 1.3fr;
+    }
+}
+
