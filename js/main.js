@@ -49,6 +49,7 @@ import {
     resumeFlashcardFromQuiz
 } from "./flashcard.js";
 
+import { trackGameStart } from "./analytics.js";
 
 import {
     openProfile,
@@ -216,6 +217,7 @@ initLobby(
     onSolo: config => 
     {
         setupScreen.classList.add("hidden");
+        trackGameStart(config);
         startGame(config);
     },
 
