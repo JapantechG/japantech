@@ -1,0 +1,120 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n5-ch01-kanji",
+  "type": "kanji",
+  "title": "Kanji cơ bản",
+  "items": [
+    {
+      "id": "n5-lk001",
+      "character": "学",
+      "hanViet": "HỌC",
+      "meaning": "Học tập",
+      "readings": {
+        "on": ["ガク"],
+        "kun": ["まなぶ"]
+      },
+      "explanation": "Chữ 学 liên quan đến học tập và nghiên cứu. Trong từ ghép thường đọc ガク, còn 学ぶ đọc まなぶ.",
+      "relatedWords": [
+        {
+          "word": "学生",
+          "reading": "がくせい",
+          "hanViet": "HỌC SINH",
+          "meaning": "Học sinh, sinh viên"
+        },
+        {
+          "word": "学校",
+          "reading": "がっこう",
+          "hanViet": "HỌC HIỆU",
+          "meaning": "Trường học"
+        },
+        {
+          "word": "大学",
+          "reading": "だいがく",
+          "hanViet": "ĐẠI HỌC",
+          "meaning": "Đại học"
+        },
+        {
+          "word": "学ぶ",
+          "reading": "まなぶ",
+          "hanViet": "HỌC",
+          "meaning": "Học hỏi"
+        }
+      ]
+    },
+    {
+      "id": "n5-lk002",
+      "character": "日",
+      "hanViet": "NHẬT",
+      "meaning": "Ngày, mặt trời",
+      "readings": {
+        "on": ["ニチ", "ジツ"],
+        "kun": ["ひ", "か"]
+      },
+      "explanation": "Chữ 日 có nghĩa là ngày hoặc mặt trời. Cách đọc thay đổi tùy từ ghép; 今日 đọc đặc biệt là きょう.",
+      "relatedWords": [
+        {
+          "word": "日本",
+          "reading": "にほん",
+          "hanViet": "NHẬT BẢN",
+          "meaning": "Nhật Bản"
+        },
+        {
+          "word": "日曜日",
+          "reading": "にちようび",
+          "hanViet": "NHẬT DIỆU NHẬT",
+          "meaning": "Chủ nhật"
+        },
+        {
+          "word": "毎日",
+          "reading": "まいにち",
+          "hanViet": "MỖI NHẬT",
+          "meaning": "Mỗi ngày"
+        },
+        {
+          "word": "今日",
+          "reading": "きょう",
+          "hanViet": "KIM NHẬT",
+          "meaning": "Hôm nay"
+        }
+      ]
+    },
+    {
+      "id": "n5-lk003",
+      "character": "人",
+      "hanViet": "NHÂN",
+      "meaning": "Người",
+      "readings": {
+        "on": ["ジン", "ニン"],
+        "kun": ["ひと"]
+      },
+      "explanation": "Chữ 人 có nghĩa là người. Trong các từ chỉ quốc tịch thường đọc ジン. 一人 và 大人 có cách đọc đặc biệt.",
+      "relatedWords": [
+        {
+          "word": "日本人",
+          "reading": "にほんじん",
+          "hanViet": "NHẬT BẢN NHÂN",
+          "meaning": "Người Nhật"
+        },
+        {
+          "word": "外国人",
+          "reading": "がいこくじん",
+          "hanViet": "NGOẠI QUỐC NHÂN",
+          "meaning": "Người nước ngoài"
+        },
+        {
+          "word": "一人",
+          "reading": "ひとり",
+          "hanViet": "NHẤT NHÂN",
+          "meaning": "Một người"
+        },
+        {
+          "word": "大人",
+          "reading": "おとな",
+          "hanViet": "ĐẠI NHÂN",
+          "meaning": "Người lớn"
+        }
+      ]
+    }
+  ]
+}
