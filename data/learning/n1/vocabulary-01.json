@@ -1,0 +1,47 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch01-vocab",
+  "type": "vocabulary",
+  "title": "Vocabulary N1 — Xã hội và công việc",
+  "items": [
+    {
+      "id": "n1-lv001",
+      "word": "懸念",
+      "reading": "けねん",
+      "hanViet": "HUYỀN NIỆM",
+      "meaning": "Lo ngại, quan ngại",
+      "partOfSpeech": "noun",
+      "explanation": "Dùng để chỉ sự lo ngại về một vấn đề có thể xảy ra. Thường gặp trong báo chí, báo cáo và văn viết.",
+      "example": {
+        "sentence": "景気の悪化が懸念されている。",
+        "reading": "けいきのあっかがけねんされている。",
+        "translation": "Người ta đang lo ngại về sự suy giảm kinh tế.",
+        "blank": "景気の悪化が____されている。",
+        "answer": "懸念",
+        "hint": "けねん · HUYỀN NIỆM",
+        "reason": "懸念されている diễn tả một vấn đề đang gây lo ngại.",
+        "wrongReason": "Chỗ trống cần danh từ mang nghĩa lo ngại, kết hợp với されている."
+      }
+    },
+    {
+      "id": "n1-lv002",
+      "word": "促進",
+      "reading": "そくしん",
+      "hanViet": "THÚC TIẾN",
+      "meaning": "Thúc đẩy, xúc tiến",
+      "partOfSpeech": "noun",
+      "explanation": "Dùng khi thúc đẩy sự phát triển hoặc tiến triển của một chính sách, hoạt động hay quá trình.",
+      "example": {
+        "sentence": "政府は経済成長を促進する政策を発表した。",
+        "reading": "せいふはけいざいせいちょうをそくしんするせいさくをはっぴょうした。",
+        "translation": "Chính phủ công bố chính sách thúc đẩy tăng trưởng kinh tế.",
+        "blank": "政府は経済成長を____する政策を発表した。",
+        "answer": "促進",
+        "hint": "そくしん · THÚC TIẾN",
+        "reason": "促進する diễn tả việc thúc đẩy một quá trình.",
+        "wrongReason": "Ở đây cần danh từ đi với する, mang nghĩa thúc đẩy."
+      }
+    }
+  ]
+}
