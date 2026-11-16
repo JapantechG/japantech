@@ -13,11 +13,14 @@ import {
     applyExp
 } from "../progression.js";
 
+
 import {
     ref,
     get,
+    onValue,
     runTransaction
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
 
 
 /* =========================================================
@@ -80,23 +83,27 @@ function notifyProgress(userData, gainedExp) {
 
 async function mutate(kind, id, value) {
 
-    const targetRef = getUserRef();
+  
+      const targetRef = getUserRef();
+      
+      /* ==========================================
+         LOAD USER AND PREPARE TRANSACTION CACHE
+      ========================================== */
+      
+      const initialUser =
+          await loadTransactionReadyUser(targetRef);
+      
+      console.log(
+          "[LEARNING] Starting transaction:",
+          {
+              kind,
+              id,
+              value,
+              currentStars:
+                  initialUser.learning?.cards?.[id]?.stars || 0
+          }
+      );
 
-    /* -----------------------------------------
-       STEP 1: READ REMOTE PROFILE FIRST
-    ----------------------------------------- */
-
-    const initialSnapshot = await get(targetRef);
-
-    if (!initialSnapshot.exists()) {
-        throw new Error("USER_PROFILE_NOT_FOUND");
-    }
-
-    const initialUser = initialSnapshot.val();
-
-    if (!initialUser.progress) {
-        throw new Error("USER_PROGRESS_NOT_FOUND");
-    }
 
     /* -----------------------------------------
        STEP 2: CHECK REQUEST
@@ -400,4 +407,58 @@ export function grantLearningStar(cardId, targetStars) {
 export function grantLearningChapter(chapterId, score) {
 
     return mutate("test", chapterId, score);
+}
+
+/* =========================================================
+   WARM FIREBASE LOCAL CACHE
+
+   runTransaction() có thể nhận NULL nếu dữ liệu
+   chưa được đồng bộ vào local cache.
+
+   onValue() nhận snapshot ban đầu sau khi dữ liệu
+   tại đường dẫn đã được đồng bộ.
+========================================================= */
+
+function loadTransactionReadyUser(userRef) {
+
+    return new Promise((resolve, reject) => {
+
+        onValue(
+            userRef,
+
+            snapshot => {
+
+                if (!snapshot.exists()) {
+                    reject(
+                        new Error("USER_PROFILE_NOT_FOUND")
+                    );
+                    return;
+                }
+
+                const userData = snapshot.val();
+
+                if (!userData?.progress) {
+                    reject(
+                        new Error("USER_PROGRESS_NOT_FOUND")
+                    );
+                    return;
+                }
+
+                console.log(
+                    "[LEARNING] Firebase cache ready:",
+                    {
+                        hasProgress: true,
+                        level: userData.progress.level,
+                        exp: userData.progress.exp
+                    }
+                );
+
+                resolve(userData);
+            },
+
+            error => reject(error),
+
+            { onlyOnce: true }
+        );
+    });
 }
