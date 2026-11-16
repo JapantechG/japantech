@@ -1,0 +1,32 @@
+
+{
+  "schemaVersion": 1,
+  "courseId": "n5",
+  "chapters": [
+    {
+      "id": "n5-ch01",
+      "title": "Chương 01 · Giới thiệu bản thân",
+      "description": "Từ vựng, Kanji và ngữ pháp cơ bản",
+      "lessons": [
+        {
+          "id": "n5-ch01-vocab",
+          "type": "vocabulary",
+          "title": "01 · Vocabulary Discovery",
+          "file": "data/learning/n5/vocabulary-01.json"
+        },
+        {
+          "id": "n5-ch01-kanji",
+          "type": "kanji",
+          "title": "02 · Kanji Discovery",
+          "file": "data/learning/n5/kanji-01.json"
+        },
+        {
+          "id": "n5-ch01-grammar",
+          "type": "grammar",
+          "title": "03 · Grammar Discovery",
+          "file": "data/learning/n5/grammar-01.json"
+        }
+      ]
+    }
+  ]
+}
