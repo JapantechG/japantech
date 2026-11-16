@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/lobby.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/learning.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/solo-practice.css">
     <!-- SOLO MASCOT + COMBO ANIMATIONS -->
@@ -613,6 +614,22 @@
         </div>
 
         <div class="bat-home-mode-grid">
+            
+            <!-- BATLINGO LEARNING -->
+            <button
+                id="batHomeLearningBtn"
+                class="bat-home-mode-card bat-mode-learning"
+                type="button">
+            
+                <span class="bat-home-mode-icon">📚</span>
+            
+                <strong>LEARNING</strong>
+            
+                <small>Discover · Collect · Master</small>
+            
+                <span class="bat-home-mode-arrow">↗</span>
+            </button>
+
 
             <button
                 class="bat-home-mode-card bat-mode-solo"
@@ -3590,6 +3607,42 @@
 
 </div>
 
+<!-- ========================================
+     BATLINGO LEARNING
+========================================= -->
+<section
+    id="learningScreen"
+    class="hidden"
+    aria-label="BatLingo Learning">
+
+    <div class="learn-wrap">
+
+        <header class="learn-head">
+
+            <button
+                id="learningBackBtn"
+                class="learn-btn"
+                type="button">
+                ← HOME
+            </button>
+
+            <h1 id="learningTitle">
+                LEARNING
+            </h1>
+
+        </header>
+
+        <div
+            id="learningExpToast"
+            aria-live="polite">
+        </div>
+
+        <div id="learningBody"></div>
+
+    </div>
+
+</section>
+
     <!-- =====================================================
          AUDIO
          ===================================================== -->
@@ -3606,6 +3659,11 @@
     <audio id="gameoverSound" src="assets/audio/sfx/gameover.mp3"></audio>
 
     <script type="module" src="js/main.js"></script>
+
+    <script
+        type="module"
+        src="js/learning/learning-entry.js">
+    </script>
 
     <script src="./js/auth-ui.js"></script>
 
