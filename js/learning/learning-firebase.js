@@ -171,28 +171,37 @@ async function mutate(kind, id, value) {
 
         user => {
 
-            attemptCount++;
-
-            if (user === null) {
-            
-                abortReason = "TRANSACTION_USER_NULL";
-            
-                // Không ghi đè toàn bộ user.
-                // Không tạo tài khoản mới tại đây.
-                // Dừng transaction để bảo vệ dữ liệu.
-            
-                console.warn(
-                    "[LEARNING] Transaction received null user"
-                );
-            
-                return;
-            }
-
-            if (!user.progress) {
-
-                abortReason = "TRANSACTION_PROGRESS_MISSING";
-                return;
-            }
+                    attemptCount++;
+      
+              /* ========================================
+                 FIX INITIAL NULL TRANSACTION
+              ======================================== */
+      
+              if (user === null) {
+      
+                  // Hồ sơ đã được đọc và kiểm tra
+                  // trước khi bắt đầu transaction.
+                  //
+                  // Tạo bản sao dữ liệu làm giá trị
+                  // đề xuất ban đầu, không sửa trực tiếp
+                  // initialUser.
+      
+                  console.log(
+                      "[LEARNING] Initial transaction cache is null."
+                  );
+      
+                  user = JSON.parse(
+                      JSON.stringify(initialUser)
+                  );
+              }
+      
+              if (!user?.progress) {
+      
+                  abortReason =
+                      "TRANSACTION_PROGRESS_MISSING";
+      
+                  return;
+              }
 
             user.learning ||= {};
             user.learning.cards ||= {};
