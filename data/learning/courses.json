@@ -1,0 +1,38 @@
+
+{
+  "schemaVersion": 1,
+  "courses": [
+    {
+      "id": "n5",
+      "title": "JLPT N5",
+      "description": "Tiếng Nhật cơ bản",
+      "available": true,
+      "manifest": "data/learning/n5/chapters.json"
+    },
+    {
+      "id": "n4",
+      "title": "JLPT N4",
+      "description": "Đang chuẩn bị",
+      "available": false
+    },
+    {
+      "id": "n3",
+      "title": "JLPT N3",
+      "description": "Đang chuẩn bị",
+      "available": false
+    },
+    {
+      "id": "n2",
+      "title": "JLPT N2",
+      "description": "Đang chuẩn bị",
+      "available": false
+    },
+    {
+      "id": "n1",
+      "title": "JLPT N1",
+      "description": "Xã hội và công việc",
+      "available": true,
+      "manifest": "data/learning/n1/chapters.json"
+    }
+  ]
+}
