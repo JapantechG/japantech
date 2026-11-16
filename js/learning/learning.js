@@ -327,32 +327,80 @@ function sync(result) {
     expToast(result?.awardedExp || 0);
 }
 
+
+/* ==========================================
+   LEARNING - SAVE STAR AND EXP
+========================================== */
+
 async function earn(item, targetStars) {
+
+    if (busy) {
+        return false;
+    }
 
     if (rating(item.id) >= targetStars) {
         return true;
     }
 
-    if (busy) return false;
-
     busy = true;
 
     try {
+
+        console.log("[LEARNING] Saving star:", {
+            cardId: item.id,
+            targetStars,
+            currentStars: rating(item.id)
+        });
+
         const result = await grantLearningStar(
             item.id,
             targetStars
         );
 
+        if (!result?.committed) {
+
+            throw new Error(
+                "Firebase không ghi nhận lần nâng sao này. " +
+                "Hãy kiểm tra tiến độ hiện tại và quyền Firebase."
+            );
+        }
+
         sync(result);
 
-        return rating(item.id) >= targetStars;
+        const newStars = rating(item.id);
+
+        console.log("[LEARNING] Saved:", {
+            cardId: item.id,
+            stars: newStars,
+            exp: result.awardedExp
+        });
+
+        if (newStars < targetStars) {
+
+            throw new Error(
+                "Đã lưu nhưng số sao chưa đạt yêu cầu."
+            );
+        }
+
+        return true;
 
     } catch (error) {
-        console.error("[LEARNING STAR]", error);
-        alert("Không lưu được sao: " + error.message);
+
+        console.error(
+            "[LEARNING] Save star failed:",
+            error
+        );
+
+        feedback =
+            "Không lưu được sao: " +
+            (error?.message || String(error));
+
+        renderQuest();
+
         return false;
 
     } finally {
+
         busy = false;
     }
 }
@@ -1436,21 +1484,50 @@ function renderQuest() {
             renderQuest();
         });
 
+        
         on("klGuess", async () => {
-
-            if (!guess) return;
-
-            const correct = guess === item.meaning;
-
-            if (!(await earn(item, 1))) return;
-
-            feedback = correct
-                ? "Bạn suy luận đúng!"
-                : "Hãy xem giải thích và học đáp án đúng.";
-
+        
+            if (!guess || busy) {
+                return;
+            }
+        
+            const button = $("klGuess");
+        
+            if (button) {
+                button.disabled = true;
+                button.textContent = "⏳ Đang lưu 1★...";
+            }
+        
+            const isCorrect = guess === item.meaning;
+        
+            console.log("[DISCOVERY] Decode:", {
+                id: item.id,
+                selected: guess,
+                correct: item.meaning,
+                isCorrect
+            });
+        
+            const success = await earn(item, 1);
+        
+            if (!success) {
+        
+                if (button?.isConnected) {
+                    button.disabled = false;
+                    button.textContent = "Giải mã → 1★";
+                }
+        
+                return;
+            }
+        
+            feedback = isCorrect
+                ? "✅ Giải mã chính xác! Đã nhận 1★ và 5 EXP."
+                : "Đã nhận 1★ và 5 EXP. Hãy học đáp án đúng.";
+        
             phase = "learn";
+        
             renderQuest();
         });
+
     }
 
     /* LEARN */
