@@ -1,0 +1,155 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch01-grammar",
+  "type": "grammar",
+  "title": "Grammar N1 — Xã hội và công việc",
+  "items": [
+    {
+      "id": "n1-lg001",
+      "grammar": "～にほかならない",
+      "meaning": "Chính là; không gì khác ngoài",
+      "formation": "Danh từ + にほかならない",
+      "priorityStars": 4,
+      "explanation": "Dùng để khẳng định mạnh về bản chất hoặc nguyên nhân của sự việc, thường xuất hiện trong văn viết trang trọng.",
+      "usageDetails": [
+        {
+          "title": "Điều kiện sử dụng",
+          "text": "Đứng sau danh từ để khẳng định nguyên nhân hoặc bản chất của một sự việc."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Không giống ～にすぎない, mang nghĩa chỉ là, không hơn."
+        }
+      ],
+      "commonMistakes": [
+        "Dùng quá nhiều trong hội thoại thân mật.",
+        "Nhầm với ～にすぎない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Chỉ là điều không đáng kể",
+          "Diễn tả khả năng không chắc chắn",
+          "Diễn tả điều kiện giả định"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "今回の成功は努力の結果にほかならない。",
+          "reading": "こんかいのせいこうはどりょくのけっかにほかならない。",
+          "translation": "Thành công lần này chính là kết quả của nỗ lực.",
+          "blank": "今回の成功は努力の結果____。",
+          "answer": "にほかならない",
+          "chunks": [
+            "今回の成功は",
+            "努力の結果",
+            "にほかならない。"
+          ],
+          "reason": "Mẫu ngữ pháp nhấn mạnh nỗ lực là nguyên nhân của thành công.",
+          "wrongReason": "Cần mẫu khẳng định mạnh về nguyên nhân."
+        },
+        {
+          "sentence": "彼の発言は責任逃れにほかならない。",
+          "reading": "かれのはつげんはせきにんのがれにほかならない。",
+          "translation": "Phát biểu của anh ấy chính là hành vi trốn tránh trách nhiệm.",
+          "blank": "彼の発言は責任逃れ____。",
+          "answer": "にほかならない",
+          "chunks": [
+            "彼の発言は",
+            "責任逃れ",
+            "にほかならない。"
+          ],
+          "reason": "Người nói khẳng định bản chất của phát biểu.",
+          "wrongReason": "Cần cách diễn đạt mang nghĩa khẳng định mạnh."
+        },
+        {
+          "sentence": "この変化は技術革新の成果にほかならない。",
+          "reading": "このへんかはぎじゅつかくしんのせいかにほかならない。",
+          "translation": "Sự thay đổi này chính là thành quả của đổi mới công nghệ.",
+          "blank": "この変化は技術革新の成果____。",
+          "answer": "にほかならない",
+          "chunks": [
+            "この変化は",
+            "技術革新の成果",
+            "にほかならない。"
+          ],
+          "reason": "Mẫu ngữ pháp nhấn mạnh nguyên nhân tạo ra sự thay đổi.",
+          "wrongReason": "Cần cách diễn đạt khẳng định mạnh."
+        }
+      ]
+    },
+    {
+      "id": "n1-lg002",
+      "grammar": "～を余儀なくされる",
+      "meaning": "Bị buộc phải; không còn lựa chọn khác",
+      "formation": "Danh từ chỉ hành động + を余儀なくされる",
+      "priorityStars": 4,
+      "explanation": "Diễn tả hành động bị hoàn cảnh bên ngoài buộc phải thực hiện, thường mang sắc thái ngoài mong muốn.",
+      "usageDetails": [
+        {
+          "title": "Điều kiện sử dụng",
+          "text": "Thường kết hợp với danh từ chỉ hành động như 中止, 変更, 避難."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Khác với ～なければならない, diễn tả nghĩa vụ hoặc sự cần thiết nói chung."
+        }
+      ],
+      "commonMistakes": [
+        "Dùng cho hành động hoàn toàn tự nguyện.",
+        "Quên trợ từ を trước 余儀なくされる."
+      ],
+      "discovery": {
+        "distractors": [
+          "Chủ động lựa chọn vì sở thích",
+          "Đưa lời khuyên nhẹ nhàng",
+          "Đưa điều kiện giả định"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "台風の影響でイベントは中止を余儀なくされた。",
+          "reading": "たいふうのえいきょうでイベントはちゅうしをよぎなくされた。",
+          "translation": "Do bão, sự kiện buộc phải hủy bỏ.",
+          "blank": "台風の影響でイベントは中止____。",
+          "answer": "を余儀なくされた",
+          "chunks": [
+            "台風の影響で",
+            "イベントは",
+            "中止を余儀なくされた。"
+          ],
+          "reason": "Bão là nguyên nhân bên ngoài khiến sự kiện buộc phải hủy.",
+          "wrongReason": "Đây không phải quyết định hủy hoàn toàn tự nguyện."
+        },
+        {
+          "sentence": "会社は経営方針の変更を余儀なくされた。",
+          "reading": "かいしゃはけいえいほうしんのへんこうをよぎなくされた。",
+          "translation": "Công ty buộc phải thay đổi phương châm kinh doanh.",
+          "blank": "会社は経営方針の変更____。",
+          "answer": "を余儀なくされた",
+          "chunks": [
+            "会社は",
+            "経営方針の変更を",
+            "余儀なくされた。"
+          ],
+          "reason": "Người nói nhấn mạnh việc thay đổi là điều không thể tránh.",
+          "wrongReason": "Cần diễn tả sự bắt buộc do hoàn cảnh."
+        },
+        {
+          "sentence": "大雨により住民は避難を余儀なくされた。",
+          "reading": "おおあめによりじゅうみんはひなんをよぎなくされた。",
+          "translation": "Do mưa lớn, người dân buộc phải sơ tán.",
+          "blank": "大雨により住民は避難____。",
+          "answer": "を余儀なくされた",
+          "chunks": [
+            "大雨により",
+            "住民は",
+            "避難を余儀なくされた。"
+          ],
+          "reason": "Mưa lớn khiến việc sơ tán trở thành điều không thể tránh.",
+          "wrongReason": "Đây là sự bắt buộc khách quan, không phải sở thích."
+        }
+      ]
+    }
+  ]
+}
