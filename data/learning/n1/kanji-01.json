@@ -1,0 +1,83 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch01-kanji",
+  "type": "kanji",
+  "title": "Kanji N1 — Xã hội và công việc",
+  "items": [
+    {
+      "id": "n1-lk001",
+      "character": "懸",
+      "hanViet": "HUYỀN",
+      "meaning": "Treo; xuất hiện trong một số từ chỉ lo ngại hoặc vấn đề tồn đọng",
+      "readings": {
+        "on": ["ケン"],
+        "kun": ["かける", "かかる"]
+      },
+      "explanation": "Không phải mọi từ ghép chứa 懸 đều có thể suy luận nghĩa trực tiếp từ chữ đơn lẻ. Cần học theo từng từ và ngữ cảnh.",
+      "relatedWords": [
+        {
+          "word": "懸念",
+          "reading": "けねん",
+          "hanViet": "HUYỀN NIỆM",
+          "meaning": "Lo ngại"
+        },
+        {
+          "word": "懸命",
+          "reading": "けんめい",
+          "hanViet": "HUYỀN MỆNH",
+          "meaning": "Hết sức, hết mình"
+        },
+        {
+          "word": "懸賞",
+          "reading": "けんしょう",
+          "hanViet": "HUYỀN THƯỞNG",
+          "meaning": "Giải thưởng treo"
+        },
+        {
+          "word": "懸案",
+          "reading": "けんあん",
+          "hanViet": "HUYỀN ÁN",
+          "meaning": "Vấn đề tồn đọng"
+        }
+      ]
+    },
+    {
+      "id": "n1-lk002",
+      "character": "促",
+      "hanViet": "THÚC",
+      "meaning": "Thúc giục, thúc đẩy",
+      "readings": {
+        "on": ["ソク"],
+        "kun": ["うながす"]
+      },
+      "explanation": "Chữ 促 thường diễn đạt việc thúc đẩy một quá trình hoặc thúc giục thực hiện một hành động.",
+      "relatedWords": [
+        {
+          "word": "促進",
+          "reading": "そくしん",
+          "hanViet": "THÚC TIẾN",
+          "meaning": "Thúc đẩy"
+        },
+        {
+          "word": "催促",
+          "reading": "さいそく",
+          "hanViet": "THÔI THÚC",
+          "meaning": "Thúc giục"
+        },
+        {
+          "word": "促す",
+          "reading": "うながす",
+          "hanViet": "THÚC",
+          "meaning": "Thúc giục, khuyến khích"
+        },
+        {
+          "word": "促成",
+          "reading": "そくせい",
+          "hanViet": "THÚC THÀNH",
+          "meaning": "Thúc cho phát triển sớm"
+        }
+      ]
+    }
+  ]
+}
