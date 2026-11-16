@@ -1,6 +1,17 @@
 
-import { auth, db } from "../firebase.js";
-import { applyExp } from "../progression.js";
+/* =========================================================
+   BATLINGO LEARNING FIREBASE
+   FIX TRANSACTION ABORT / STAR 1
+========================================================= */
+
+import {
+    auth,
+    db
+} from "../firebase.js";
+
+import {
+    applyExp
+} from "../progression.js";
 
 import {
     ref,
@@ -8,55 +19,185 @@ import {
     runTransaction
 } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
+
+/* =========================================================
+   USER REFERENCE
+========================================================= */
+
 function getUserRef() {
 
     const uid = auth.currentUser?.uid;
 
     if (!uid) {
-        throw new Error(
-            "Bạn cần đăng nhập để lưu thẻ và EXP."
-        );
+        throw new Error("USER_NOT_LOGGED_IN");
     }
 
     return ref(db, `users/${uid}`);
 }
+
+
+/* =========================================================
+   LOAD USER DATA
+========================================================= */
 
 export async function loadLearningProgress() {
 
     const snapshot = await get(getUserRef());
 
     if (!snapshot.exists()) {
-        throw new Error(
-            "Không tìm thấy hồ sơ người chơi trên Firebase."
-        );
+        throw new Error("USER_PROFILE_NOT_FOUND");
     }
 
     return snapshot.val();
 }
 
-/* ==========================================
-   ATOMIC STAR + EXP TRANSACTION
-========================================== */
+
+/* =========================================================
+   SYNC USER DATA TO UI
+========================================================= */
+
+function notifyProgress(userData, gainedExp) {
+
+    window.currentUserData = userData;
+
+    window.dispatchEvent(
+        new CustomEvent(
+            "batlingo-progress-updated",
+            {
+                detail: {
+                    userData,
+                    gainedExp
+                }
+            }
+        )
+    );
+}
+
+
+/* =========================================================
+   ATOMIC LEARNING TRANSACTION
+========================================================= */
 
 async function mutate(kind, id, value) {
 
-    let awarded = 0;
+    const targetRef = getUserRef();
+
+    /* -----------------------------------------
+       STEP 1: READ REMOTE PROFILE FIRST
+    ----------------------------------------- */
+
+    const initialSnapshot = await get(targetRef);
+
+    if (!initialSnapshot.exists()) {
+        throw new Error("USER_PROFILE_NOT_FOUND");
+    }
+
+    const initialUser = initialSnapshot.val();
+
+    if (!initialUser.progress) {
+        throw new Error("USER_PROGRESS_NOT_FOUND");
+    }
+
+    /* -----------------------------------------
+       STEP 2: CHECK REQUEST
+    ----------------------------------------- */
+
+    if (kind === "star") {
+
+        const requested = Number(value);
+
+        if (
+            !id ||
+            !Number.isInteger(requested) ||
+            requested < 1 ||
+            requested > 5
+        ) {
+            throw new Error("INVALID_STAR_REQUEST");
+        }
+
+        const currentStars = Number(
+            initialUser.learning?.cards?.[id]?.stars
+        ) || 0;
+
+        if (currentStars >= requested) {
+
+            notifyProgress(initialUser, 0);
+
+            return {
+                committed: true,
+                alreadyCompleted: true,
+                userData: initialUser,
+                awardedExp: 0
+            };
+        }
+
+        if (requested !== currentStars + 1) {
+            throw new Error(
+                `STAR_SEQUENCE_INVALID: current=${currentStars}, requested=${requested}`
+            );
+        }
+    }
+
+    if (kind === "test") {
+
+        const score = Number(value);
+
+        if (
+            !id ||
+            !Number.isFinite(score) ||
+            score < 70 ||
+            score > 100
+        ) {
+            throw new Error("INVALID_CHAPTER_SCORE");
+        }
+    }
+
+    /* -----------------------------------------
+       STEP 3: RUN TRANSACTION
+    ----------------------------------------- */
+
+    let abortReason = "";
+    let attemptCount = 0;
 
     const result = await runTransaction(
-        getUserRef(),
+        targetRef,
 
         user => {
 
-            if (!user?.progress) return;
+            attemptCount++;
 
-            // Firebase có thể chạy lại callback.
-            awarded = 0;
+            if (user === null) {
+            
+                abortReason = "TRANSACTION_USER_NULL";
+            
+                // Không ghi đè toàn bộ user.
+                // Không tạo tài khoản mới tại đây.
+                // Dừng transaction để bảo vệ dữ liệu.
+            
+                console.warn(
+                    "[LEARNING] Transaction received null user"
+                );
+            
+                return;
+            }
+
+            if (!user.progress) {
+
+                abortReason = "TRANSACTION_PROGRESS_MISSING";
+                return;
+            }
 
             user.learning ||= {};
             user.learning.cards ||= {};
             user.learning.tests ||= {};
 
             const now = Date.now();
+
+            let gained = 0;
+
+            /* =====================================
+               STAR
+            ===================================== */
 
             if (kind === "star") {
 
@@ -66,13 +207,17 @@ async function mutate(kind, id, value) {
                 const previousStars =
                     Number(oldCard.stars) || 0;
 
-                // Chỉ nâng từng sao một.
-                if (
-                    !Number.isInteger(value) ||
-                    value !== previousStars + 1 ||
-                    value < 1 ||
-                    value > 5
-                ) {
+                if (previousStars >= value) {
+
+                    abortReason = "STAR_ALREADY_COMPLETED";
+                    return;
+                }
+
+                if (value !== previousStars + 1) {
+
+                    abortReason =
+                        `STAR_SEQUENCE_CHANGED: ${previousStars} -> ${value}`;
+
                     return;
                 }
 
@@ -83,25 +228,20 @@ async function mutate(kind, id, value) {
                     updatedAt: now
                 };
 
-                awarded = 5;
-
                 if (previousStars === 0) {
+
                     user.learning.wordsSeen =
-                        (Number(user.learning.wordsSeen) || 0)
-                        + 1;
+                        (Number(user.learning.wordsSeen) || 0) + 1;
                 }
 
-            } else if (kind === "test") {
+                gained = 5;
+            }
 
-                const score = Number(value);
+            /* =====================================
+               CHAPTER TEST
+            ===================================== */
 
-                if (
-                    !Number.isFinite(score) ||
-                    score < 70 ||
-                    score > 100
-                ) {
-                    return;
-                }
+            else if (kind === "test") {
 
                 const oldTest =
                     user.learning.tests[id] || {};
@@ -110,31 +250,34 @@ async function mutate(kind, id, value) {
                     ...oldTest,
                     passed: true,
                     best: Math.max(
-                        score,
-                        Number(oldTest.best) || 0
+                        Number(oldTest.best) || 0,
+                        Number(value)
                     ),
                     at: now
                 };
 
-                // Test chương chỉ nhận thưởng lần đầu.
-                awarded = oldTest.passed ? 0 : 30;
+                gained = oldTest.passed ? 0 : 30;
 
             } else {
 
+                abortReason = "INVALID_MUTATION_KIND";
                 return;
-
             }
 
-            if (awarded > 0) {
+            /* =====================================
+               APPLY EXP
+            ===================================== */
 
-                const newProgress = applyExp(
+            if (gained > 0) {
+
+                const nextProgress = applyExp(
                     user.progress,
-                    awarded
+                    gained
                 );
 
                 user.progress = {
                     ...user.progress,
-                    ...newProgress,
+                    ...nextProgress,
                     lastStudyAt: now
                 };
             }
@@ -144,6 +287,8 @@ async function mutate(kind, id, value) {
                 lastUpdatedAt: now
             };
 
+            abortReason = "";
+
             return user;
         },
 
@@ -152,48 +297,107 @@ async function mutate(kind, id, value) {
         }
     );
 
+    /* -----------------------------------------
+       STEP 4: VERIFY RESULT
+    ----------------------------------------- */
+
     if (!result.committed) {
 
-        const snapshot = await get(getUserRef());
+        const latestSnapshot = await get(targetRef);
 
-        return {
-            userData: snapshot.val(),
-            awardedExp: 0,
-            committed: false
-        };
+        const latestUser = latestSnapshot.val();
+
+        console.warn("[LEARNING FIREBASE] Aborted:", {
+            kind,
+            id,
+            value,
+            abortReason,
+            attemptCount,
+            profileExists: latestSnapshot.exists(),
+            progressExists: Boolean(latestUser?.progress),
+            currentStars:
+                latestUser?.learning?.cards?.[id]?.stars ?? 0
+        });
+
+        if (
+            kind === "star" &&
+            Number(
+                latestUser?.learning?.cards?.[id]?.stars
+            ) >= Number(value)
+        ) {
+
+            notifyProgress(latestUser, 0);
+
+            return {
+                committed: true,
+                alreadyCompleted: true,
+                userData: latestUser,
+                awardedExp: 0
+            };
+        }
+
+        throw new Error(
+            "LEARNING_TRANSACTION_ABORTED: " +
+            (abortReason || "UNKNOWN")
+        );
     }
+
+    /* -----------------------------------------
+       STEP 5: READ COMMITTED VALUES
+    ----------------------------------------- */
 
     const userData = result.snapshot.val();
 
-    window.currentUserData = userData;
+    let awardedExp = 0;
 
-    window.dispatchEvent(
-        new CustomEvent(
-            "batlingo-progress-updated",
-            {
-                detail: {
-                    userData,
-                    gainedExp: awarded
-                }
-            }
-        )
-    );
+    if (kind === "star") {
+
+        const before =
+            Number(initialUser.progress.totalExp) || 0;
+
+        const after =
+            Number(userData.progress?.totalExp) || 0;
+
+        // EXP thực tế nhận được từ transaction.
+        awardedExp = Math.max(0, after - before);
+
+    } else if (kind === "test") {
+
+        awardedExp =
+            initialUser.learning?.tests?.[id]?.passed
+                ? 0
+                : 30;
+    }
+
+    notifyProgress(userData, awardedExp);
+
+    console.log("[LEARNING FIREBASE] Success:", {
+        kind,
+        id,
+        value,
+        awardedExp,
+        stars: userData.learning?.cards?.[id]?.stars
+    });
 
     return {
+        committed: true,
+        alreadyCompleted: false,
         userData,
-        awardedExp: awarded,
-        committed: true
+        awardedExp
     };
 }
+
+
+/* =========================================================
+   PUBLIC API
+========================================================= */
 
 export function grantLearningStar(cardId, targetStars) {
 
     return mutate("star", cardId, targetStars);
-
 }
 
 export function grantLearningChapter(chapterId, score) {
 
     return mutate("test", chapterId, score);
-
 }
