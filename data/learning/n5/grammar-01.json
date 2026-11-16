@@ -1,0 +1,88 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n5-ch01-grammar",
+  "type": "grammar",
+  "title": "Ngữ pháp ～です",
+  "items": [
+    {
+      "id": "n5-lg001",
+      "grammar": "～です",
+      "meaning": "Là...; cách nói lịch sự",
+      "formation": "Danh từ + です",
+      "priorityStars": 5,
+      "frequencyNote": "Mức ưu tiên học rất cao.",
+      "explanation": "Dùng sau danh từ để giới thiệu, xác định thông tin hoặc diễn đạt một nhận định một cách lịch sự.",
+      "usageDetails": [
+        {
+          "title": "Khi sử dụng",
+          "text": "Dùng trong giao tiếp lịch sự, giới thiệu bản thân, nghề nghiệp hoặc xác định thông tin."
+        },
+        {
+          "title": "Cách tạo câu",
+          "text": "A は B です。Trong đó は là trợ từ chủ đề, đọc là わ."
+        },
+        {
+          "title": "Phủ định và quá khứ",
+          "text": "Phủ định: ではありません. Quá khứ: でした. Quá khứ phủ định: ではありませんでした."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Không gắn です trực tiếp sau động từ dạng từ điển như 食べるです."
+        }
+      ],
+      "commonMistakes": [
+        "Đọc trợ từ は thành は thay vì わ.",
+        "Dùng です trực tiếp sau động từ dạng từ điển.",
+        "Hiểu です luôn tương đương với từ 'là' trong mọi câu."
+      ],
+      "examples": [
+        {
+          "sentence": "私は学生です。",
+          "reading": "わたしはがくせいです。",
+          "translation": "Tôi là học sinh / sinh viên.",
+          "blank": "私は学生____。",
+          "answer": "です",
+          "hint": "Đuôi câu lịch sự sau danh từ.",
+          "chunks": [
+            "私は",
+            "学生",
+            "です。"
+          ],
+          "reason": "学生 là danh từ; です dùng để kết thúc câu khẳng định lịch sự.",
+          "wrongReason": "Không dùng ます trực tiếp sau danh từ 学生."
+        },
+        {
+          "sentence": "田中さんは先生です。",
+          "reading": "たなかさんはせんせいです。",
+          "translation": "Anh/chị Tanaka là giáo viên.",
+          "blank": "田中さんは先生____。",
+          "answer": "です",
+          "hint": "Cấu trúc danh từ + です.",
+          "chunks": [
+            "田中さんは",
+            "先生",
+            "です。"
+          ],
+          "reason": "先生 là danh từ chỉ nghề nghiệp, được kết thúc bằng です.",
+          "wrongReason": "Cần dùng です, không phải ます."
+        },
+        {
+          "sentence": "ここは教室です。",
+          "reading": "ここはきょうしつです。",
+          "translation": "Đây là phòng học.",
+          "blank": "ここは教室____。",
+          "answer": "です",
+          "hint": "Đuôi lịch sự của câu danh từ.",
+          "chunks": [
+            "ここは",
+            "教室",
+            "です。"
+          ],
+          "reason": "教室 là danh từ chỉ phòng học, kết hợp với です để tạo câu lịch sự.",
+          "wrongReason": "Không dùng ます trực tiếp sau danh từ 教室."
+        }
+      ]
+    }
+  ]
+}
