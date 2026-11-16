@@ -1,0 +1,84 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n5-ch01-vocab",
+  "type": "vocabulary",
+  "title": "Từ vựng chào hỏi",
+  "items": [
+    {
+      "id": "n5-lv001",
+      "word": "学生",
+      "reading": "がくせい",
+      "hanViet": "HỌC SINH",
+      "meaning": "Học sinh, sinh viên",
+      "partOfSpeech": "noun",
+      "image": "assets/images/learning/vocabulary/student.webp",
+      "explanation": "Dùng để chỉ học sinh hoặc sinh viên.",
+      "example": {
+        "sentence": "私は学生です。",
+        "reading": "わたしはがくせいです。",
+        "translation": "Tôi là học sinh / sinh viên.",
+        "blank": "私は____です。",
+        "answer": "学生",
+        "hint": "がくせい · HỌC SINH",
+        "reason": "学生 là danh từ chỉ người đang đi học."
+      }
+    },
+    {
+      "id": "n5-lv002",
+      "word": "先生",
+      "reading": "せんせい",
+      "hanViet": "TIÊN SINH",
+      "meaning": "Giáo viên, thầy cô",
+      "partOfSpeech": "noun",
+      "image": "assets/images/learning/vocabulary/teacher.webp",
+      "explanation": "Dùng để gọi hoặc nhắc đến giáo viên, thầy cô. Cũng được dùng để gọi một số người có chuyên môn như bác sĩ.",
+      "example": {
+        "sentence": "田中さんは先生です。",
+        "reading": "たなかさんはせんせいです。",
+        "translation": "Anh/chị Tanaka là giáo viên.",
+        "blank": "田中さんは____です。",
+        "answer": "先生",
+        "hint": "せんせい · TIÊN SINH",
+        "reason": "先生 chỉ giáo viên trong ngữ cảnh này."
+      }
+    },
+    {
+      "id": "n5-lv003",
+      "word": "日本",
+      "reading": "にほん",
+      "hanViet": "NHẬT BẢN",
+      "meaning": "Nhật Bản",
+      "partOfSpeech": "noun",
+      "explanation": "Tên quốc gia Nhật Bản. Cũng có cách đọc にっぽん.",
+      "example": {
+        "sentence": "日本へ行きます。",
+        "reading": "にほんへいきます。",
+        "translation": "Tôi đến Nhật Bản.",
+        "blank": "____へ行きます。",
+        "answer": "日本",
+        "hint": "にほん · NHẬT BẢN",
+        "reason": "日本 là tên quốc gia Nhật Bản."
+      }
+    },
+    {
+      "id": "n5-lv004",
+      "word": "大学",
+      "reading": "だいがく",
+      "hanViet": "ĐẠI HỌC",
+      "meaning": "Trường đại học",
+      "partOfSpeech": "noun",
+      "image": "assets/images/learning/vocabulary/university.webp",
+      "explanation": "Chỉ cơ sở giáo dục bậc đại học.",
+      "example": {
+        "sentence": "大学で勉強します。",
+        "reading": "だいがくでべんきょうします。",
+        "translation": "Tôi học ở trường đại học.",
+        "blank": "____で勉強します。",
+        "answer": "大学",
+        "hint": "だいがく · ĐẠI HỌC",
+        "reason": "大学 chỉ địa điểm học tập là trường đại học."
+      }
+    }
+  ]
+}
