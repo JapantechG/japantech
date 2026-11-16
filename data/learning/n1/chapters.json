@@ -1,0 +1,32 @@
+
+{
+  "schemaVersion": 1,
+  "courseId": "n1",
+  "chapters": [
+    {
+      "id": "n1-ch01",
+      "title": "Chương 01 · Xã hội và công việc",
+      "description": "Từ vựng và ngữ pháp nâng cao",
+      "lessons": [
+        {
+          "id": "n1-ch01-vocab",
+          "type": "vocabulary",
+          "title": "01 · Vocabulary Discovery",
+          "file": "data/learning/n1/vocabulary-01.json"
+        },
+        {
+          "id": "n1-ch01-kanji",
+          "type": "kanji",
+          "title": "02 · Kanji Discovery",
+          "file": "data/learning/n1/kanji-01.json"
+        },
+        {
+          "id": "n1-ch01-grammar",
+          "type": "grammar",
+          "title": "03 · Grammar Discovery",
+          "file": "data/learning/n1/grammar-01.json"
+        }
+      ]
+    }
+  ]
+}
