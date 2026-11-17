@@ -630,3 +630,228 @@
     flex: 0 0 34px;
     width: 34px;
 }
+
+/* =========================================================
+   BATLINGO LEARNING UX V4.2
+   DISCOVERY / COLLECTION / AUDIO / EXP
+========================================================= */
+
+/* Toolbar */
+
+#learningScreen .kl-quest-toolbar {
+    gap: 8px;
+    margin: 6px 0 12px;
+}
+
+#learningScreen .kl-card-topline {
+    margin-bottom: 6px;
+}
+
+/* Correct / Wrong feedback */
+
+#learningScreen .kl-discovery-result {
+    margin: 14px 0;
+    padding: 15px;
+    border-radius: 14px;
+    background: #172b42;
+    border: 1px solid #4b6886;
+    line-height: 1.65;
+}
+
+#learningScreen .kl-discovery-result.correct {
+    border-color: #34d399;
+    background: #11372e;
+}
+
+#learningScreen .kl-discovery-result.wrong {
+    border-color: #fbbf24;
+    background: #3a3020;
+}
+
+#learningScreen .kl-discovery-result h3 {
+    margin: 0 0 10px;
+    font-size: clamp(16px, 3.6vw, 21px);
+}
+
+#learningScreen .kl-result-answer {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#learningScreen .kl-result-reward {
+    color: #fcd34d;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* I don't know button */
+
+#learningScreen .kl-discover-unknown {
+    display: block;
+    margin: 0 auto 12px;
+    width: 100%;
+    max-width: 370px;
+    background: transparent;
+    color: #cbd5e1;
+    border-style: dashed;
+}
+
+/* Example audio at the top-right corner */
+
+#learningScreen .kl-example-evidence {
+    position: relative;
+    padding-right: 51px;
+}
+
+#learningScreen .kl-example-audio-line {
+    display: block;
+    min-width: 0;
+}
+
+#learningScreen .kl-example-audio-line > b {
+    display: block;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#learningScreen .kl-example-evidence > .kl-speak-btn,
+#learningScreen .kl-example-audio-line > .kl-speak-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    margin: 0;
+    padding: 4px;
+    font-size: 15px;
+}
+
+/* Collection Card */
+
+#learningScreen .kl-collection-grid {
+    grid-template-columns:
+        repeat(auto-fill, minmax(120px, 1fr));
+    margin: 12px 0;
+}
+
+#learningScreen button.kl-mini-card {
+    width: 100%;
+    color: #f8fafc;
+    cursor: pointer;
+    font: inherit;
+
+    transition:
+        border-color .16s ease,
+        transform .16s ease;
+}
+
+#learningScreen
+button.kl-mini-card:not(:disabled):hover {
+    transform: translateY(-2px);
+    border-color: #fbbf24;
+}
+
+#learningScreen button.kl-mini-card:disabled {
+    opacity: .42;
+    cursor: not-allowed;
+}
+
+#learningScreen button.kl-mini-card:focus-visible {
+    outline: 2px solid #ff981a;
+    outline-offset: 2px;
+}
+
+/* EXP animation at the center */
+
+#learningScreen #learningExpToast {
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+
+    z-index: 20000;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+    opacity: 0;
+
+    font-size: clamp(30px, 7vw, 54px);
+    font-weight: 900;
+    line-height: 1;
+
+    color: #fbbf24;
+
+    text-shadow:
+        0 0 18px rgba(251,191,36,.45),
+        0 4px 16px rgba(0,0,0,.75);
+
+    white-space: nowrap;
+}
+
+#learningScreen #learningExpToast.kl-exp-show {
+    animation: klExpCenterV42 1.5s ease-out forwards;
+}
+
+@keyframes klExpCenterV42 {
+
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -20%) scale(.6);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.18);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-50%, -65%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -120%) scale(.9);
+    }
+}
+
+/* Hiragana for beginners */
+
+#learningScreen .kl-beginner-reading {
+    display: block;
+
+    font-size: clamp(17px, 4vw, 24px);
+
+    color: #cbd5e1;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    #learningScreen .kl-quest-toolbar .learn-btn {
+        padding: 9px 10px;
+    }
+
+    #learningScreen .kl-collection-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #learningScreen #learningExpToast.kl-exp-show {
+        animation: none;
+        opacity: 1;
+    }
+}
