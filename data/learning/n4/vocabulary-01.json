@@ -1,0 +1,125 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n4-ch01-vocab",
+  "type": "vocabulary",
+  "title": "N4 · Kế hoạch và giao tiếp",
+  "items": [
+    {
+      "id": "n4-lv001",
+      "word": "約束",
+      "reading": "やくそく",
+      "hanViet": "ƯỚC THÚC",
+      "meaning": "Lời hứa, cuộc hẹn",
+      "explanation": "Dùng khi hứa hoặc có cuộc hẹn với ai đó.",
+      "image": "assets/images/learning/vocabulary/promise.webp",
+      "choices": {
+        "meaning": [
+          "Dự định, kế hoạch",
+          "Lời xin lỗi"
+        ],
+        "sentence": [
+          "予定",
+          "準備"
+        ]
+      },
+      "example": {
+        "sentence": "友達と約束があります。",
+        "reading": "ともだちとやくそくがあります。",
+        "translation": "Tôi có hẹn với bạn.",
+        "blank": "友達と____があります。",
+        "answer": "約束",
+        "hint": "やくそく",
+        "reason": "約束があります diễn tả có một cuộc hẹn.",
+        "wrongReason": "Câu nói về một cuộc hẹn với bạn bè."
+      }
+    },
+    {
+      "id": "n4-lv002",
+      "word": "予定",
+      "reading": "よてい",
+      "hanViet": "DỰ ĐỊNH",
+      "meaning": "Dự định, kế hoạch",
+      "explanation": "Nói về lịch trình hoặc việc đã dự định.",
+      "image": "assets/images/learning/vocabulary/schedule.webp",
+      "choices": {
+        "meaning": [
+          "Lời hứa",
+          "Sự chuẩn bị"
+        ],
+        "sentence": [
+          "約束",
+          "連絡"
+        ]
+      },
+      "example": {
+        "sentence": "明日は予定があります。",
+        "reading": "あしたはよていがあります。",
+        "translation": "Ngày mai tôi đã có kế hoạch.",
+        "blank": "明日は____があります。",
+        "answer": "予定",
+        "hint": "よてい",
+        "reason": "予定があります nói về lịch trình đã có.",
+        "wrongReason": "Câu đề cập đến kế hoạch cho ngày mai."
+      }
+    },
+    {
+      "id": "n4-lv003",
+      "word": "準備",
+      "reading": "じゅんび",
+      "hanViet": "CHUẨN BỊ",
+      "meaning": "Sự chuẩn bị",
+      "explanation": "Chuẩn bị trước khi thực hiện một hoạt động.",
+      "image": "assets/images/learning/vocabulary/preparation.webp",
+      "choices": {
+        "meaning": [
+          "Cuộc hẹn",
+          "Thông báo, liên lạc"
+        ],
+        "sentence": [
+          "予定",
+          "約束"
+        ]
+      },
+      "example": {
+        "sentence": "旅行の準備をします。",
+        "reading": "りょこうのじゅんびをします。",
+        "translation": "Tôi chuẩn bị cho chuyến du lịch.",
+        "blank": "旅行の____をします。",
+        "answer": "準備",
+        "hint": "じゅんび",
+        "reason": "旅行の準備をする là chuẩn bị cho chuyến đi.",
+        "wrongReason": "Cần một danh từ chỉ việc chuẩn bị."
+      }
+    },
+    {
+      "id": "n4-lv004",
+      "word": "連絡",
+      "reading": "れんらく",
+      "hanViet": "LIÊN LẠC",
+      "meaning": "Liên lạc, thông báo",
+      "explanation": "Liên hệ để trao đổi hoặc truyền đạt thông tin.",
+      "image": "assets/images/learning/vocabulary/contact.webp",
+      "choices": {
+        "meaning": [
+          "Sự chuẩn bị",
+          "Dự định, kế hoạch"
+        ],
+        "sentence": [
+          "準備",
+          "約束"
+        ]
+      },
+      "example": {
+        "sentence": "後で先生に連絡します。",
+        "reading": "あとでせんせいにれんらくします。",
+        "translation": "Lát nữa tôi sẽ liên lạc với giáo viên.",
+        "blank": "後で先生に____します。",
+        "answer": "連絡",
+        "hint": "れんらく",
+        "reason": "連絡する mang nghĩa liên hệ hoặc thông báo.",
+        "wrongReason": "Câu nói về hành động liên hệ với giáo viên."
+      }
+    }
+  ]
+}
