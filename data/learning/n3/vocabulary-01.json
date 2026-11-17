@@ -1,0 +1,125 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n3-ch01-vocab",
+  "type": "vocabulary",
+  "title": "N3 · Công việc và giao tiếp",
+  "items": [
+    {
+      "id": "n3-lv001",
+      "word": "経験",
+      "reading": "けいけん",
+      "hanViet": "KINH NGHIỆM",
+      "meaning": "Kinh nghiệm",
+      "explanation": "Kiến thức và kỹ năng có được qua trải nghiệm thực tế.",
+      "image": "assets/images/learning/vocabulary/experience.webp",
+      "choices": {
+        "meaning": [
+          "Kết quả",
+          "Kế hoạch"
+        ],
+        "sentence": [
+          "結果",
+          "予定"
+        ]
+      },
+      "example": {
+        "sentence": "日本で働いた経験があります。",
+        "reading": "にほんではたらいたけいけんがあります。",
+        "translation": "Tôi có kinh nghiệm làm việc ở Nhật.",
+        "blank": "日本で働いた____があります。",
+        "answer": "経験",
+        "hint": "けいけん",
+        "reason": "経験がある diễn tả từng có trải nghiệm.",
+        "wrongReason": "Câu nói về kinh nghiệm làm việc."
+      }
+    },
+    {
+      "id": "n3-lv002",
+      "word": "確認",
+      "reading": "かくにん",
+      "hanViet": "XÁC NHẬN",
+      "meaning": "Kiểm tra, xác nhận",
+      "explanation": "Kiểm tra để bảo đảm thông tin hoặc trạng thái là đúng.",
+      "image": "assets/images/learning/vocabulary/confirmation.webp",
+      "choices": {
+        "meaning": [
+          "Đề xuất",
+          "Giải thích"
+        ],
+        "sentence": [
+          "提案",
+          "説明"
+        ]
+      },
+      "example": {
+        "sentence": "メールの内容を確認してください。",
+        "reading": "めーるのないようをかくにんしてください。",
+        "translation": "Hãy kiểm tra nội dung email.",
+        "blank": "メールの内容を____してください。",
+        "answer": "確認",
+        "hint": "かくにん",
+        "reason": "確認する là kiểm tra hoặc xác nhận.",
+        "wrongReason": "Câu yêu cầu kiểm tra nội dung email."
+      }
+    },
+    {
+      "id": "n3-lv003",
+      "word": "改善",
+      "reading": "かいぜん",
+      "hanViet": "CẢI THIỆN",
+      "meaning": "Cải thiện",
+      "explanation": "Thay đổi tình trạng hiện tại theo hướng tốt hơn.",
+      "image": "assets/images/learning/vocabulary/improvement.webp",
+      "choices": {
+        "meaning": [
+          "Kiểm tra",
+          "Duy trì"
+        ],
+        "sentence": [
+          "確認",
+          "維持"
+        ]
+      },
+      "example": {
+        "sentence": "仕事のやり方を改善します。",
+        "reading": "しごとのやりかたをかいぜんします。",
+        "translation": "Tôi cải thiện cách làm việc.",
+        "blank": "仕事のやり方を____します。",
+        "answer": "改善",
+        "hint": "かいぜん",
+        "reason": "改善する diễn tả cải thiện phương pháp hoặc tình trạng.",
+        "wrongReason": "Câu nói về việc làm cho cách làm việc tốt hơn."
+      }
+    },
+    {
+      "id": "n3-lv004",
+      "word": "提案",
+      "reading": "ていあん",
+      "hanViet": "ĐỀ ÁN",
+      "meaning": "Đề xuất",
+      "explanation": "Đưa ra một phương án hoặc ý tưởng để người khác xem xét.",
+      "image": "assets/images/learning/vocabulary/proposal.webp",
+      "choices": {
+        "meaning": [
+          "Kết quả",
+          "Kinh nghiệm"
+        ],
+        "sentence": [
+          "結果",
+          "経験"
+        ]
+      },
+      "example": {
+        "sentence": "新しい方法を提案しました。",
+        "reading": "あたらしいほうほうをていあんしました。",
+        "translation": "Tôi đã đề xuất một phương pháp mới.",
+        "blank": "新しい方法を____しました。",
+        "answer": "提案",
+        "hint": "ていあん",
+        "reason": "提案する là đưa ra đề xuất.",
+        "wrongReason": "Câu đề cập đến hành động đề xuất phương pháp."
+      }
+    }
+  ]
+}
