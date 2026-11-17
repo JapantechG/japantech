@@ -1,0 +1,20 @@
+
+{
+  "schemaVersion": 1,
+  "courseId": "n3",
+  "chapters": [
+    {
+      "id": "n3-ch01",
+      "title": "Chương 01 · Công việc và giao tiếp",
+      "description": "Kinh nghiệm, kiểm tra, cải thiện và đề xuất",
+      "lessons": [
+        {
+          "id": "n3-ch01-vocab",
+          "type": "vocabulary",
+          "title": "01 · Vocabulary",
+          "file": "data/learning/n3/vocabulary-01.json"
+        }
+      ]
+    }
+  ]
+}
