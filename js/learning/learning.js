@@ -87,6 +87,16 @@ let reverseResult = null;
 // Ghi nhớ nơi quay lại từ Collection
 let collectionReturn = "quest";
 
+// Vocabulary V5 session state (never used as Firebase authority)
+let vocabSelected = "";
+let vocabChecked = false;
+let vocabCorrect = false;
+let vocabTiles = [];
+let vocabChosen = [];
+let vocabOptions = null;
+let vocabReplay = false;
+
+
 
 let itemIndex = 0;
 let phase = "discover";
@@ -245,6 +255,19 @@ function bindCardImages() {
     });
 }
 
+/* Only cards saved in Firebase are counted. Never count clicks/replays. */
+function learningStarStats() {
+    const levels = { n5:0, n4:0, n3:0, n2:0, n1:0 };
+    const cards = userData?.learning?.cards || {};
+    for (const [id, data] of Object.entries(cards)) {
+        const levelId = /^n[1-5](?=-)/i.exec(id)?.[0]?.toLowerCase();
+        if (levelId) {
+            levels[levelId] += Math.max(0, Math.min(5, Number(data?.stars) || 0));
+        }
+    }
+    return { levels, totalStars:Object.values(levels).reduce((a,b)=>a+b,0) };
+}
+
 /* ==========================================
    COMMON RENDER
 ========================================== */
@@ -256,7 +279,15 @@ function render(title, html) {
     }
 
     if (root()) {
-        root().innerHTML = html;
+        const stats = learningStarStats();
+        const activeLevel = course?.id || "n5";
+        const levelStars = stats.levels[activeLevel] || 0;
+        root().innerHTML = `
+            <div class="kl-stars-summary" aria-label="Learning stars">
+                <span>${safe(activeLevel.toUpperCase())}: <strong>${levelStars} ★</strong></span>
+                <span>ACCOUNT: <strong>${stats.totalStars} ★</strong></span>
+            </div>
+        ` + html;
     }
 
     bindAudio();
@@ -301,7 +332,7 @@ function expToast(value) {
 
     if (!node) return;
 
-    node.textContent = `✨ +${value} EXP`;
+    node.textContent = `✨ +${value}★`;
 
     node.classList.remove("kl-exp-show");
 
@@ -335,7 +366,8 @@ function sync(result) {
         userData = result.userData;
     }
 
-    expToast(result?.awardedExp || 0);
+    // Learning no longer displays EXP animation; stars are animated at commit.
+
 }
 
 
@@ -354,6 +386,7 @@ async function earn(item, targetStars) {
     }
 
     busy = true;
+    const previousStars = rating(item.id);
 
     try {
 
@@ -365,7 +398,8 @@ async function earn(item, targetStars) {
 
         const result = await grantLearningStar(
             item.id,
-            targetStars
+            targetStars,
+            targetStars === 5 ? chapter?.id : undefined
         );
 
         if (!result?.committed) {
@@ -379,6 +413,7 @@ async function earn(item, targetStars) {
         sync(result);
 
         const newStars = rating(item.id);
+        if (newStars > previousStars) expToast(newStars - previousStars);
 
         console.log("[LEARNING] Saved:", {
             cardId: item.id,
@@ -514,7 +549,7 @@ async function showCourses() {
         courses = data.courses || [];
 
         render("LEARNING", `
-            ${mascot("Hãy suy luận, học và thu thập các thẻ kiến thức!")}
+            
 
             <div class="learn-grid">
                 ${courses.map(c => `
@@ -566,7 +601,7 @@ async function showChapters(courseId) {
                 ← Khóa học
             </button>
 
-            ${mascot("Đạt ít nhất 3★ mỗi thẻ để mở bài kế tiếp.")}
+            
         `;
 
         for (
@@ -688,6 +723,13 @@ function resetCard() {
     discoveryResult = null;
     practiceResult = null;
     reverseResult = null;
+    vocabSelected = "";
+    vocabChecked = false;
+    vocabCorrect = false;
+    vocabTiles = [];
+    vocabChosen = [];
+    vocabOptions = null;
+    vocabReplay = false;
 }
 
 
@@ -695,6 +737,12 @@ function startPhase() {
 
     const item = lessonData.items[itemIndex];
     const s = rating(item.id);
+
+    // Vocabulary: recognition is a free learning step; then 1..4★ tests.
+    if (typeOf() === "vocabulary") {
+        return s >= 4 ? "complete" :
+               ["recognize", "meaning", "listening", "hiragana", "sentence"][s];
+    }
 
     if (s >= 4) return "complete";
     if (s === 3) return "reverse";
@@ -1320,6 +1368,218 @@ function knowledgeCard(
 }
 
 
+/* =========================================================
+   VOCABULARY V5: RECOGNIZE -> 1★ -> 2★ -> 3★ -> 4★
+   5★ is granted ONLY after Chapter Test.
+========================================================= */
+
+function vocabShuffle(array) {
+    const a = [...array];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i],a[j]] = [a[j],a[i]];
+    }
+    return a;
+}
+
+function vocabChoices(item, mode) {
+    const correct = mode === "sentence"
+        ? item.example?.answer || item.word
+        : item.meaning;
+    const keys = mode === "sentence"
+        ? (item.choices?.sentence || [])
+        : (item.choices?.meaning || []);
+    const source = lessonData.items.map(x => mode === "sentence" ? x.word : x.meaning);
+    const fallbacks = mode === "sentence"
+        ? ["先生", "学生", "大学", "学校", "日本", "時間", "仕事"]
+        : ["Học sinh, sinh viên", "Giáo viên, thầy cô", "Trường đại học", "Nhật Bản", "Thời gian", "Công việc"];
+    const distractors = [...new Set([...keys,...source,...fallbacks]
+        .filter(x => x && x !== correct))];
+    return vocabShuffle([correct,...vocabShuffle(distractors).slice(0,2)]);
+}
+
+function vocabGetOptions(item) {
+    if (!vocabOptions || vocabOptions.phase !== phase || vocabOptions.id !== item.id) {
+        vocabOptions = { id:item.id, phase, values:vocabChoices(item, phase) };
+    }
+    return vocabOptions.values;
+}
+
+function vocabPrepareTiles(item) {
+    if (vocabTiles.length) return;
+    const chars = Array.from(String(item.reading || "").normalize("NFC"));
+    vocabTiles = vocabShuffle(chars.map((char,id) => ({ id,char })));
+    if (chars.length > 1 && vocabTiles.map(x=>x.char).join("") === chars.join("")) {
+        vocabTiles.reverse();
+    }
+    vocabChosen = [];
+}
+
+function vocabBuilt() {
+    return vocabChosen.map(id => vocabTiles.find(t=>t.id===id)?.char || "").join("").normalize("NFC");
+}
+
+function vocabStageName() {
+    return ({recognize:"NHẬN DIỆN · KHÔNG SAO", meaning:"CHỌN NGHĨA · 1★",
+        listening:"NGHE & HIỂU · 2★", hiragana:"GHÉP HIRAGANA · 3★",
+        sentence:"ĐIỀN TỪ VÀO CÂU · 4★", complete:"HOÀN THÀNH · CHỜ TEST 5★"})[phase] || "VOCABULARY";
+}
+
+function renderVocabularyQuest(item) {
+    const currentStars = rating(item.id);
+    const recognized = phase === "recognize";
+    const isComplete = phase === "complete";
+    const question = !recognized && !isComplete;
+    const opts = (phase === "meaning" || phase === "listening" || phase === "sentence")
+        ? vocabGetOptions(item) : [];
+    if (phase === "hiragana") vocabPrepareTiles(item);
+    const expected = phase === "sentence" ? (item.example?.answer || item.word)
+        : phase === "hiragana" ? String(item.reading || "").normalize("NFC") : item.meaning;
+    let content = "";
+    const showCard = phase !== "listening";
+    if (recognized) {
+        content = `
+            <div class="kl-vocab-hero"><div class="kl-vocab-word">${safe(item.word)}</div>
+                <div class="kl-vocab-reading">${safe(item.reading)}</div>
+                <div class="kl-vocab-meaning">${safe(item.meaning)}</div>
+                ${audioButton(item.reading || item.word,"Nghe từ")}
+            </div>
+            ${exampleHTML(item.example)}
+            <p class="learn-muted">Hãy nhìn, nghe và hiểu từ mới. Bạn chưa cần đoán hay gõ tiếng Nhật.</p>
+            <button class="learn-btn primary kl-vocab-wide" id="klVocabRecognized">Mình đã hiểu · Bắt đầu →</button>`;
+    } else if (phase === "meaning") {
+        content = `<div class="kl-vocab-hero"><div class="kl-vocab-word">${safe(item.word)}</div>
+            <div class="kl-vocab-reading">${safe(item.reading)}</div></div>
+            <p class="kl-vocab-prompt">Chọn nghĩa tiếng Việt của từ này</p>`;
+    } else if (phase === "listening") {
+        content = `<div class="kl-vocab-hero"><div class="kl-vocab-headphone">🎧</div>
+            <p>Nghe từ tiếng Nhật rồi chọn nghĩa</p>
+            <button id="klVocabListen" class="learn-btn">🔊 Nghe từ · có thể nghe lại</button></div>`;
+    } else if (phase === "hiragana") {
+        content = `<div class="kl-vocab-hero"><div class="kl-vocab-word">${safe(item.word)}</div>
+            <div class="kl-vocab-meaning">${safe(item.meaning)}</div>
+            <p class="learn-muted">Bấm từng chữ để ghép đúng cách đọc Hiragana</p></div>
+            <div class="kl-vocab-tilebox" aria-label="Ký tự đã chọn">
+                ${vocabChosen.length ? vocabChosen.map(id=>{
+                    const t = vocabTiles.find(x=>x.id===id);
+                    return `<button class="kl-vocab-tile" data-vocab-remove="${id}" ${vocabChecked?'disabled':''}>${safe(t?.char)}</button>`;
+                }).join("") : '<span class="learn-muted">Chọn các ký tự bên dưới</span>'}
+            </div>
+            <div class="kl-vocab-tilebox kl-vocab-tray" aria-label="Ký tự có sẵn">
+                ${vocabTiles.filter(t=>!vocabChosen.includes(t.id)).map(t=>
+                    `<button class="kl-vocab-tile" data-vocab-pick="${t.id}" ${vocabChecked?'disabled':''}>${safe(t.char)}</button>`
+                ).join("")}
+            </div>`;
+    } else if (phase === "sentence") {
+        content = `<p class="kl-vocab-prompt">Chọn từ còn thiếu trong câu ví dụ</p>
+            <div class="kl-evidence kl-example-evidence"><div class="kl-example-audio-line">
+                <b class="kl-vocab-blank">${safe(item.example?.blank || item.example?.sentence || "")}</b>
+                ${audioButton(item.example?.sentence,"Nghe câu")}</div>
+                <small>${safe(item.example?.translation || "")}</small></div>`;
+    } else {
+        content = `<div class="kl-vocab-hero"><div class="kl-vocab-word">${safe(item.word)}</div>
+            <div class="kl-vocab-reading">${safe(item.reading)}</div>
+            <div class="kl-vocab-meaning">${safe(item.meaning)}</div></div>
+            ${exampleHTML(item.example)}
+            <p class="learn-muted">${currentStars===5?'🏆 MASTER CARD 5★':'Đã đạt 4★. Chỉ Chapter Test mới mở khóa 5★.'}</p>
+            <div class="learn-actions"><button class="learn-btn" id="klVocabReplay">↺ Học lại (không cộng sao)</button></div>`;
+    }
+    if (opts.length) {
+        content += `<div class="kl-options">${opts.map((option,i)=>`
+            <button type="button" class="kl-option${vocabSelected===option?' selected':''}${vocabChecked&&option===expected?' kl-vocab-right':''}${vocabChecked&&vocabSelected===option&&!vocabCorrect?' kl-vocab-wrong':''}"
+            data-vocab-choice="${i}" ${vocabChecked?'disabled':''}>${safe(option)}</button>`).join('')}</div>`;
+    }
+    if (question) {
+        if (vocabChecked) {
+            content += `<div role="status" class="kl-vocab-result ${vocabCorrect?'correct':'wrong'}">
+                <b>${vocabCorrect?'🎉 Chính xác! Bạn đã mở khóa một sao mới.':'💪 Chưa đúng, nhưng bạn đang tiến bộ. Hãy thử lại!'}</b>
+                ${!vocabCorrect?`<p>Đáp án: <strong>${safe(expected)}</strong></p>`:''}
+            </div><div class="learn-actions"><button class="learn-btn primary" id="klVocabAfter">
+                ${vocabCorrect?'Tiếp tục →':'↺ Thử lại'}</button></div>`;
+        } else {
+            const disabled = busy || (phase==='hiragana' ? vocabChosen.length!==vocabTiles.length : !vocabSelected);
+            content += `<div class="learn-actions"><button class="learn-btn primary" id="klVocabCheck" ${disabled?'disabled':''}>Kiểm tra đáp án</button></div>`;
+        }
+    }
+    render(lesson.title, `
+        <div class="learn-row kl-quest-toolbar"><button id="klPath" class="learn-btn">← Lộ trình</button>
+            <button id="klCollection" class="learn-btn">▦ Collection</button>
+            <span class="learn-muted">Thẻ ${itemIndex+1}/${lessonData.items.length}</span></div>
+        <section class="kl-quest-card kl-type-vocabulary">
+            <div class="learn-row kl-card-topline">${logo()} ${stars(currentStars)}</div>
+            <div class="kl-stage-label">${vocabStageName()}</div>${content}
+            <div class="learn-actions">
+                <button class="learn-btn" id="klPrev" ${itemIndex===0?'disabled':''}>← Trước</button>
+                <button class="learn-btn primary" id="klNext" ${currentStars<3?'disabled':''}>
+                    ${itemIndex===lessonData.items.length-1?'Kết thúc bài':'Thẻ tiếp →'}</button>
+            </div>
+            ${feedback?`<div class="kl-feedback">${safe(feedback)}</div>`:''}
+        </section>`);
+    on("klPath", ()=>showChapters(course.id));
+    on("klCollection", ()=>openCollection("quest"));
+    on("klPrev", ()=>moveCard(-1));
+    on("klNext", ()=>moveCard(1));
+    on("klVocabRecognized", ()=> { phase="meaning"; renderQuest(); });
+    on("klVocabListen", ()=>speakJapanese(item.reading || item.word));
+    on("klVocabReplay", ()=>{
+        vocabReplay=true;
+        phase="recognize";
+        vocabOptions=null;
+        renderQuest();
+    });
+    root()?.querySelectorAll('[data-vocab-choice]').forEach(button=>{
+        button.onclick=()=>{
+            if(vocabChecked||busy)return;
+            vocabSelected=opts[Number(button.dataset.vocabChoice)];
+            renderQuest();
+        };
+    });
+    root()?.querySelectorAll('[data-vocab-pick]').forEach(button=>{
+        button.onclick=()=>{
+            if(vocabChecked||busy)return;
+            const id=Number(button.dataset.vocabPick);
+            if(!vocabChosen.includes(id))vocabChosen.push(id);
+            renderQuest();
+        };
+    });
+    root()?.querySelectorAll('[data-vocab-remove]').forEach(button=>{
+        button.onclick=()=>{
+            if(vocabChecked||busy)return;
+            const id=Number(button.dataset.vocabRemove);
+            vocabChosen=vocabChosen.filter(x=>x!==id);
+            renderQuest();
+        };
+    });
+    on("klVocabCheck",async()=>{
+        if(vocabChecked||busy)return;
+        const currentPhase=phase;
+        const actual=phase==='hiragana' ? vocabBuilt() : vocabSelected;
+        const ok=actual===expected;
+        if(ok) {
+            const target={meaning:1,listening:2,hiragana:3,sentence:4}[currentPhase];
+            if(rating(item.id)<target) {
+                if(!(await earn(item,target)))return;
+            }
+        }
+        vocabChecked=true;
+        vocabCorrect=ok;
+        renderQuest();
+    });
+    on("klVocabAfter",()=>{
+        if(vocabCorrect){
+            phase=({meaning:'listening',listening:'hiragana',hiragana:'sentence',sentence:'complete'})[phase];
+        }
+        vocabSelected="";
+        vocabChecked=false;
+        vocabCorrect=false;
+        vocabChosen=[];
+        vocabOptions=null;
+        if(phase==='hiragana')vocabTiles=[];
+        feedback="";
+        renderQuest();
+    });
+}
+
 /* ==========================================
    QUEST SCREEN
 ========================================== */
@@ -1331,6 +1591,10 @@ function renderQuest() {
     if (!item) return;
 
     const kind = typeOf();
+    if (kind === "vocabulary") {
+        renderVocabularyQuest(item);
+        return;
+    }
     const s = rating(item.id);
 
     
@@ -2106,11 +2370,6 @@ async function completeLesson() {
     const ready = await lessonReady(lesson);
 
     render("KẾT THÚC BÀI", `
-        ${mascot(
-            ready
-                ? "Đã đủ 3★ để đi tiếp!"
-                : "Hãy hoàn thành thêm các thẻ chưa đạt 3★."
-        )}
 
         <div class="learn-card">
 
@@ -2692,7 +2951,7 @@ function renderTest() {
     const options = optionList(item, kind, pool);
 
     render("CHAPTER TEST", `
-        ${mascot("Chọn nghĩa chính xác để tăng sao của thẻ!")}
+        
 
         <div class="kl-quest-card">
 
@@ -2872,11 +3131,6 @@ async function finishTest() {
         }
 
         render("KẾT QUẢ CHƯƠNG", `
-            ${mascot(
-                passed
-                    ? "Hoàn thành chương!"
-                    : "Hãy luyện thêm để vượt qua thử thách."
-            )}
 
             <div class="learn-card">
 
