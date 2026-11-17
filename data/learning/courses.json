@@ -5,32 +5,35 @@
     {
       "id": "n5",
       "title": "JLPT N5",
-      "description": "Tiếng Nhật cơ bản",
+      "description": "Nền tảng tiếng Nhật cho người mới bắt đầu",
       "available": true,
       "manifest": "data/learning/n5/chapters.json"
     },
     {
       "id": "n4",
       "title": "JLPT N4",
-      "description": "Đang chuẩn bị",
-      "available": false
+      "description": "Sinh hoạt, kế hoạch và giao tiếp hằng ngày",
+      "available": true,
+      "manifest": "data/learning/n4/chapters.json"
     },
     {
       "id": "n3",
       "title": "JLPT N3",
-      "description": "Đang chuẩn bị",
-      "available": false
+      "description": "Học tập, công việc và diễn đạt ý kiến",
+      "available": true,
+      "manifest": "data/learning/n3/chapters.json"
     },
     {
       "id": "n2",
       "title": "JLPT N2",
-      "description": "Đang chuẩn bị",
-      "available": false
+      "description": "Công việc, xã hội và ngôn ngữ nâng cao",
+      "available": true,
+      "manifest": "data/learning/n2/chapters.json"
     },
     {
       "id": "n1",
       "title": "JLPT N1",
-      "description": "Xã hội và công việc",
+      "description": "Xã hội, công việc và cách diễn đạt chuyên sâu",
       "available": true,
       "manifest": "data/learning/n1/chapters.json"
     }
