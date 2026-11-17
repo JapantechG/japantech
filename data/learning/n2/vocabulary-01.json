@@ -1,0 +1,125 @@
+
+{
+  "schemaVersion": 1,
+  "lessonId": "n2-ch01-vocab",
+  "type": "vocabulary",
+  "title": "N2 · Công việc và xử lý vấn đề",
+  "items": [
+    {
+      "id": "n2-lv001",
+      "word": "対応",
+      "reading": "たいおう",
+      "hanViet": "ĐỐI ỨNG",
+      "meaning": "Ứng phó, xử lý",
+      "explanation": "Dùng khi xử lý tình huống, vấn đề hoặc yêu cầu.",
+      "image": "assets/images/learning/vocabulary/response.webp",
+      "choices": {
+        "meaning": [
+          "Điều chỉnh",
+          "Duy trì"
+        ],
+        "sentence": [
+          "調整",
+          "維持"
+        ]
+      },
+      "example": {
+        "sentence": "問題に早く対応する必要があります。",
+        "reading": "もんだいにはやくたいおうするひつようがあります。",
+        "translation": "Cần nhanh chóng xử lý vấn đề.",
+        "blank": "問題に早く____する必要があります。",
+        "answer": "対応",
+        "hint": "たいおう",
+        "reason": "問題に対応する là xử lý hoặc ứng phó với vấn đề.",
+        "wrongReason": "Cần danh từ đi với する để diễn tả xử lý vấn đề."
+      }
+    },
+    {
+      "id": "n2-lv002",
+      "word": "調整",
+      "reading": "ちょうせい",
+      "hanViet": "ĐIỀU CHỈNH",
+      "meaning": "Điều chỉnh, sắp xếp",
+      "explanation": "Thay đổi hoặc phối hợp để đạt trạng thái thích hợp.",
+      "image": "assets/images/learning/vocabulary/adjustment.webp",
+      "choices": {
+        "meaning": [
+          "Ảnh hưởng",
+          "Ứng phó, xử lý"
+        ],
+        "sentence": [
+          "影響",
+          "対応"
+        ]
+      },
+      "example": {
+        "sentence": "会議の日程を調整します。",
+        "reading": "かいぎのにっていをちょうせいします。",
+        "translation": "Tôi điều chỉnh lịch họp.",
+        "blank": "会議の日程を____します。",
+        "answer": "調整",
+        "hint": "ちょうせい",
+        "reason": "日程を調整する là điều chỉnh hoặc sắp xếp lịch trình.",
+        "wrongReason": "Câu nói về việc điều chỉnh lịch họp."
+      }
+    },
+    {
+      "id": "n2-lv003",
+      "word": "維持",
+      "reading": "いじ",
+      "hanViet": "DUY TRÌ",
+      "meaning": "Duy trì",
+      "explanation": "Giữ một trạng thái hoặc mức độ không bị thay đổi.",
+      "image": "assets/images/learning/vocabulary/maintenance.webp",
+      "choices": {
+        "meaning": [
+          "Cải thiện",
+          "Điều chỉnh"
+        ],
+        "sentence": [
+          "改善",
+          "調整"
+        ]
+      },
+      "example": {
+        "sentence": "品質を維持することが大切です。",
+        "reading": "ひんしつをいじすることがたいせつです。",
+        "translation": "Việc duy trì chất lượng rất quan trọng.",
+        "blank": "品質を____することが大切です。",
+        "answer": "維持",
+        "hint": "いじ",
+        "reason": "品質を維持する là duy trì chất lượng.",
+        "wrongReason": "Câu nói về việc giữ chất lượng ổn định."
+      }
+    },
+    {
+      "id": "n2-lv004",
+      "word": "影響",
+      "reading": "えいきょう",
+      "hanViet": "ẢNH HƯỞNG",
+      "meaning": "Ảnh hưởng",
+      "explanation": "Tác động của một sự việc đến người hoặc sự việc khác.",
+      "image": "assets/images/learning/vocabulary/influence.webp",
+      "choices": {
+        "meaning": [
+          "Duy trì",
+          "Đề xuất"
+        ],
+        "sentence": [
+          "維持",
+          "提案"
+        ]
+      },
+      "example": {
+        "sentence": "天気は試合に影響します。",
+        "reading": "てんきはしあいにえいきょうします。",
+        "translation": "Thời tiết ảnh hưởng đến trận đấu.",
+        "blank": "天気は試合に____します。",
+        "answer": "影響",
+        "hint": "えいきょう",
+        "reason": "影響する diễn tả một sự việc tác động đến sự việc khác.",
+        "wrongReason": "Câu nói về tác động của thời tiết."
+      }
+    }
+  ]
+}
