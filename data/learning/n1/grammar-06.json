@@ -8,22 +8,27 @@
       "id": "n1-lg043",
       "grammar": "～見込みだ",
       "reading": "～みこみだ",
-      "meaning": "Dự kiến sẽ V / không V",
-      "formation": "Cấu trúc: ～見込みだ (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Dự kiến, có triển vọng xảy ra; có khả năng đạt được",
+      "formation": "Động từ dạng từ điển + 見込みだ／見込みです; Động từ dạng từ điển + 見込みがある／ない; Danh từ + の + 見込み",
       "priorityStars": 4,
-      "explanation": "Mẫu ～見込みだ diễn tả: Dự kiến sẽ V / không V. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "見込み diễn tả dự đoán có cơ sở hoặc triển vọng dựa trên thông tin, tình hình đã biết. Hay xuất hiện trong tin tức, kế hoạch, dự báo và báo cáo; 見込みがない phủ định triển vọng, không đơn thuần là người nói không muốn.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Dự kiến sẽ V / không V"
+          "title": "Cấu trúc và cách dùng",
+          "text": "Dùng cho kết quả trong tương lai được dự đoán từ dữ kiện: 判明する見込みです."
         },
         {
-          "title": "Mẫu",
-          "text": "～見込みだ"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "見込みはない／見込みがない nói rằng triển vọng rất thấp hoặc không có."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Phân biệt 予定: lịch trình đã định; 見込み: dự báo có thể thay đổi."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không coi 見込み là một sự chắc chắn 100%.",
+        "Không đồng nhất 見込みがない với cấm đoán ～てはいけない."
       ],
       "discovery": {
         "distractors": [
@@ -35,43 +40,41 @@
       "examples": [
         {
           "sentence": "選挙の結果は、今夜遅くに判明する見込みです。",
-          "reading": "",
+          "reading": "せんきょのけっかは、こんやおそくにはんめいするみこみです。",
           "translation": "Kết quả bầu cử dự kiến sẽ được xác định vào tối muộn hôm nay.",
           "blank": "選挙の結果は、今夜遅くに判明する____。",
           "answer": "見込みです",
-          "hint": "Mẫu mục tiêu: ～見込みだ",
-          "reason": "Trong câu này, 見込みです thể hiện ý nghĩa: Dự kiến sẽ V / không V.",
-          "wrongReason": "Đối chiếu với mẫu ～見込みだ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Dùng cho kết quả trong tương lai được dự đoán từ dữ kiện: 判明する見込みです.",
+          "reason": "Kết quả bầu cử dự kiến được công bố muộn hôm nay; đây là dự đoán về thời điểm, không phải lời hứa chắc chắn.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng từ điển + 見込みだ／見込みです; Động từ dạng từ điển + 見込みがある／ない; Danh từ + の + 見込み. Kết quả bầu cử dự kiến được công bố muộn hôm nay; đây là dự đoán về thời điểm, không phải lời hứa chắc chắn.",
           "chunks": [
             "選挙の結果は、",
-            "今夜遅くに",
-            "判明する見込みです。"
+            "今夜遅くに判明する見込みです。"
           ]
         },
         {
           "sentence": "この患者が歩けるようになる見込みはない。",
-          "reading": "",
+          "reading": "このかんじゃがあるけるようになるみこみはない。",
           "translation": "Không có khả năng bệnh nhân này sẽ có thể đi lại được.",
           "blank": "この患者が歩けるようになる____。",
           "answer": "見込みはない",
-          "hint": "Mẫu mục tiêu: ～見込みだ",
-          "reason": "Trong câu này, 見込みはない thể hiện ý nghĩa: Dự kiến sẽ V / không V.",
-          "wrongReason": "Đối chiếu với mẫu ～見込みだ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Dùng cho kết quả trong tương lai được dự đoán từ dữ kiện: 判明する見込みです.",
+          "reason": "見込みはない phủ định triển vọng bệnh nhân có thể đi lại; không phải diễn tả ý chí của bệnh nhân.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng từ điển + 見込みだ／見込みです; Động từ dạng từ điển + 見込みがある／ない; Danh từ + の + 見込み. 見込みはない phủ định triển vọng bệnh nhân có thể đi lại; không phải diễn tả ý chí của bệnh nhân.",
           "chunks": [
-            "この患者が",
-            "歩けるように",
-            "なる見込みはない。"
+            "この患者が歩けるようになる",
+            "見込みはない。"
           ]
         },
         {
           "sentence": "コンサートにどうしても行きたかったが、その日は朝から台風で、電車が運休になる見込みだと聞いて、諦めた。",
-          "reading": "",
+          "reading": "コンサートにどうしてもいきたかったが、そのひはあさからたいふうで、でんしゃがうんきゅうになるみこみだときいて、あきらめた。",
           "translation": "Tôi rất muốn đi buổi hòa nhạc, nhưng nghe nói hôm đó có bão từ sáng và dự kiến tàu sẽ ngừng hoạt động nên tôi đã từ bỏ.",
           "blank": "コンサートにどうしても行きたかったが、その日は朝から台風で、電車が運休になる____と聞いて、諦めた。",
           "answer": "見込みだ",
-          "hint": "Mẫu mục tiêu: ～見込みだ",
-          "reason": "Trong câu này, 見込みだ thể hiện ý nghĩa: Dự kiến sẽ V / không V.",
-          "wrongReason": "Đối chiếu với mẫu ～見込みだ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Dùng cho kết quả trong tương lai được dự đoán từ dữ kiện: 判明する見込みです.",
+          "reason": "Thông tin về bão dẫn đến dự báo tàu ngừng chạy; người nói vì thế từ bỏ kế hoạch xem hòa nhạc.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng từ điển + 見込みだ／見込みです; Động từ dạng từ điển + 見込みがある／ない; Danh từ + の + 見込み. Thông tin về bão dẫn đến dự báo tàu ngừng chạy; người nói vì thế từ bỏ kế hoạch xem hòa nhạc.",
           "chunks": [
             "コンサートにどうしても行きたかったが、",
             "その日は朝から台風で、",
@@ -86,22 +89,27 @@
       "id": "n1-lg044",
       "grammar": "～とは",
       "reading": "～とは",
-      "meaning": "Không ngờ...",
-      "formation": "Cấu trúc: ～とは (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Không ngờ rằng...; thật không thể tin là...",
+      "formation": "Mệnh đề thông thường + とは（思わなかった／驚いた... thường được lược bỏ）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～とは diễn tả: Không ngờ.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "とは ở cuối câu bộc lộ sự kinh ngạc, sửng sốt, khó tin hoặc trách móc trước một sự thật trái với dự đoán. Đây là cách rút gọn của một câu cảm thán; không phải mọi ～とは đều mang nghĩa bất ngờ.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Không ngờ..."
+          "title": "Cấu trúc và cách dùng",
+          "text": "Dùng sau một sự kiện đã được người nói nhận biết: ～人がいるとは。"
         },
         {
-          "title": "Mẫu",
-          "text": "～とは"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "Có thể đi với まさか để nhấn mạnh mức độ không ngờ."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Phân biệt ～とは ở câu định nghĩa “～とは～のことだ” và ～とは思わなかった."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không coi mọi ～とは đều là mẫu cảm thán.",
+        "Không dịch máy móc thành “về việc...” khi câu có sắc thái ngạc nhiên."
       ],
       "discovery": {
         "distractors": [
@@ -113,46 +121,43 @@
       "examples": [
         {
           "sentence": "信号を無視して運転する人がいるとは。",
-          "reading": "",
+          "reading": "しんごうをむししてうんてんするひとがいるとは。",
           "translation": "Không ngờ lại có người lái xe mà phớt lờ tín hiệu giao thông.",
           "blank": "信号を無視して運転する人がいる____。",
           "answer": "とは",
-          "hint": "Mẫu mục tiêu: ～とは",
-          "reason": "Trong câu này, とは thể hiện ý nghĩa: Không ngờ....",
-          "wrongReason": "Đối chiếu với mẫu ～とは và đọc lại nghĩa tiếng Việt.",
+          "hint": "Dùng sau một sự kiện đã được người nói nhận biết: ～人がいるとは。",
+          "reason": "Sự tồn tại của người phớt lờ đèn tín hiệu trái với điều người nói mong đợi, nên とは mang sắc thái bất ngờ và phê phán.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề thông thường + とは（思わなかった／驚いた... thường được lược bỏ）. Sự tồn tại của người phớt lờ đèn tín hiệu trái với điều người nói mong đợi, nên とは mang sắc thái bất ngờ và phê phán.",
           "chunks": [
-            "信号を",
-            "無視して運転する人が",
-            "いるとは。"
+            "信号を無視して",
+            "運転する人がいるとは。"
           ]
         },
         {
           "sentence": "リスクを考えずに、何でもチャレンジする人がいるとは。",
-          "reading": "",
+          "reading": "リスクをかんがえずに、なんでもチャレンジするひとがいるとは。",
           "translation": "Không ngờ lại có người bất chấp rủi ro mà thử thách bất cứ điều gì.",
           "blank": "リスクを考えずに、何でもチャレンジする人がいる____。",
           "answer": "とは",
-          "hint": "Mẫu mục tiêu: ～とは",
-          "reason": "Trong câu này, とは thể hiện ý nghĩa: Không ngờ....",
-          "wrongReason": "Đối chiếu với mẫu ～とは và đọc lại nghĩa tiếng Việt.",
+          "hint": "Dùng sau một sự kiện đã được người nói nhận biết: ～人がいるとは。",
+          "reason": "Người nói thấy khó tin khi có người thử thách mọi chuyện mà không xét rủi ro.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề thông thường + とは（思わなかった／驚いた... thường được lược bỏ）. Người nói thấy khó tin khi có người thử thách mọi chuyện mà không xét rủi ro.",
           "chunks": [
             "リスクを考えずに、",
-            "何でもチャレンジする人が",
-            "いるとは。"
+            "何でもチャレンジする人がいるとは。"
           ]
         },
         {
           "sentence": "まさか私のお金を盗んだ人が彼だったとは。",
-          "reading": "",
+          "reading": "まさかわたしのおかねをぬすんだひとがかれだったとは。",
           "translation": "Không ngờ người đã lấy trộm tiền của tôi lại chính là anh ta.",
           "blank": "まさか私のお金を盗んだ人が彼だった____。",
           "answer": "とは",
-          "hint": "Mẫu mục tiêu: ～とは",
-          "reason": "Trong câu này, とは thể hiện ý nghĩa: Không ngờ....",
-          "wrongReason": "Đối chiếu với mẫu ～とは và đọc lại nghĩa tiếng Việt.",
+          "hint": "Dùng sau một sự kiện đã được người nói nhận biết: ～人がいるとは。",
+          "reason": "まさか kết hợp với とは nhấn mạnh cú sốc khi phát hiện người lấy tiền chính là anh ấy.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề thông thường + とは（思わなかった／驚いた... thường được lược bỏ）. まさか kết hợp với とは nhấn mạnh cú sốc khi phát hiện người lấy tiền chính là anh ấy.",
           "chunks": [
-            "まさか私のお金を",
-            "盗んだ人が",
+            "まさか私のお金を盗んだ人が",
             "彼だったとは。"
           ]
         }
@@ -163,22 +168,27 @@
       "id": "n1-lg045",
       "grammar": "～だろうに",
       "reading": "～だろうに",
-      "meaning": "Thì có khi / Có lẽ đã... / Hẳn là... vậy mà...",
-      "formation": "Cấu trúc: ～だろうに (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Giá mà... thì đã...; hẳn là... vậy mà...",
+      "formation": "Mệnh đề phỏng đoán／giả định + だろうに; Tính từ／động từ + だろうに（theo cấu trúc thích hợp）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～だろうに diễn tả: Thì có khi / Có lẽ đã... / Hẳn là... vậy mà.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "だろうに kết hợp phỏng đoán với cảm giác tiếc nuối, trách móc hoặc cảm thông: sự việc thực tế trái với điều người nói suy đoán hoặc mong muốn. Trong câu phản thực, người nói nuối tiếc một kết quả đã không xảy ra; trong câu khác có thể thể hiện ngạc nhiên hay thương cảm.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Thì có khi / Có lẽ đã... / Hẳn là... vậy mà..."
+          "title": "Cấu trúc và cách dùng",
+          "text": "Đi sau giả định quá khứ để tiếc nuối kết quả đáng lẽ có thể xảy ra."
         },
         {
-          "title": "Mẫu",
-          "text": "～だろうに"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "Có thể nêu nhận định “hẳn là vất vả” rồi đối lập với hành vi đáng ngạc nhiên."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Phân biệt だろう: phỏng đoán đơn thuần; だろうに: thêm cảm xúc và đối lập ngầm."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu tất cả ví dụ là giả định quá khứ; 彼女は大変だろうに là cảm thông ở hiện tại.",
+        "Không bỏ sắc thái tiếc nuối/đối lập khi dịch."
       ],
       "discovery": {
         "distractors": [
@@ -190,13 +200,13 @@
       "examples": [
         {
           "sentence": "気を付けて運転していれば、事故で死ぬなんてことはなかっただろうに、本当に残念だ。",
-          "reading": "",
+          "reading": "きをつけてうんてんしていれば、じこでしぬなんてことはなかっただろうに、ほんとうにざんねんだ。",
           "translation": "Giá mà lái xe cẩn thận thì có lẽ đã không chết vì tai nạn, thật sự rất đáng tiếc.",
           "blank": "気を付けて運転していれば、事故で死ぬなんてことはなかった____、本当に残念だ。",
           "answer": "だろうに",
-          "hint": "Mẫu mục tiêu: ～だろうに",
-          "reason": "Trong câu này, だろうに thể hiện ý nghĩa: Thì có khi / Có lẽ đã... / Hẳn là... vậy mà....",
-          "wrongReason": "Đối chiếu với mẫu ～だろうに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Đi sau giả định quá khứ để tiếc nuối kết quả đáng lẽ có thể xảy ra.",
+          "reason": "Người nói tiếc rằng nếu lái xe cẩn thận thì có thể tránh được cái chết; だろうに diễn đạt kết quả đáng lẽ khác.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề phỏng đoán／giả định + だろうに; Tính từ／động từ + だろうに（theo cấu trúc thích hợp）. Người nói tiếc rằng nếu lái xe cẩn thận thì có thể tránh được cái chết; だろうに diễn đạt kết quả đáng lẽ khác.",
           "chunks": [
             "気を付けて運転していれば、",
             "事故で死ぬなんてことはなかっただろうに、",
@@ -205,13 +215,13 @@
         },
         {
           "sentence": "誰かに協力をお願いしたら、方法は色々あっただろうに、なぜ手遅れになってから言うのか。",
-          "reading": "",
+          "reading": "だれかにきょうりょくをおねがいしたら、ほうほうはいろいろあっただろうに、なぜておくれになってからいうのか。",
           "translation": "Nếu nhờ ai đó giúp đỡ thì hẳn đã có nhiều cách giải quyết, vậy mà tại sao đến khi quá muộn mới nói?",
           "blank": "誰かに協力をお願いしたら、方法は色々あった____、なぜ手遅れになってから言うのか。",
           "answer": "だろうに",
-          "hint": "Mẫu mục tiêu: ～だろうに",
-          "reason": "Trong câu này, だろうに thể hiện ý nghĩa: Thì có khi / Có lẽ đã... / Hẳn là... vậy mà....",
-          "wrongReason": "Đối chiếu với mẫu ～だろうに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Đi sau giả định quá khứ để tiếc nuối kết quả đáng lẽ có thể xảy ra.",
+          "reason": "Người nói trách vì đối phương không nhờ giúp sớm, dù khi đó có thể có nhiều phương án.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề phỏng đoán／giả định + だろうに; Tính từ／động từ + だろうに（theo cấu trúc thích hợp）. Người nói trách vì đối phương không nhờ giúp sớm, dù khi đó có thể có nhiều phương án.",
           "chunks": [
             "誰かに協力をお願いしたら、",
             "方法は色々あっただろうに、",
@@ -220,13 +230,13 @@
         },
         {
           "sentence": "彼女は、子供を3人も育てながら働いていて大変だろうに、文句ひとつ言ったことがない。",
-          "reading": "",
+          "reading": "かのじょは、こどもをさんにんもそだてながらはたらいていてたいへんだろうに、もんくひとついったことがない。",
           "translation": "Cô ấy vừa nuôi ba đứa con vừa đi làm, hẳn là rất vất vả, vậy mà chưa từng than phiền lấy một lời.",
           "blank": "彼女は、子供を3人も育てながら働いていて大変____、文句ひとつ言ったことがない。",
           "answer": "だろうに",
-          "hint": "Mẫu mục tiêu: ～だろうに",
-          "reason": "Trong câu này, だろうに thể hiện ý nghĩa: Thì có khi / Có lẽ đã... / Hẳn là... vậy mà....",
-          "wrongReason": "Đối chiếu với mẫu ～だろうに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Đi sau giả định quá khứ để tiếc nuối kết quả đáng lẽ có thể xảy ra.",
+          "reason": "Người nói nghĩ cô ấy hẳn rất vất vả khi vừa chăm con vừa làm việc nhưng vẫn không phàn nàn.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề phỏng đoán／giả định + だろうに; Tính từ／động từ + だろうに（theo cấu trúc thích hợp）. Người nói nghĩ cô ấy hẳn rất vất vả khi vừa chăm con vừa làm việc nhưng vẫn không phàn nàn.",
           "chunks": [
             "彼女は、",
             "子供を3人も育てながら働いていて大変だろうに、",
@@ -235,17 +245,17 @@
         },
         {
           "sentence": "自分も仕事が忙しいだろうに、彼はわざわざこちらを気遣って連絡をくれた。",
-          "reading": "",
+          "reading": "じぶんもしごとがいそがしいだろうに、かれはわざわざこちらをきづかってれんらくをくれた。",
           "translation": "Bản thân anh ấy chắc cũng bận công việc, vậy mà vẫn đặc biệt quan tâm và liên lạc với tôi.",
           "blank": "自分も仕事が忙しい____、彼はわざわざこちらを気遣って連絡をくれた。",
           "answer": "だろうに",
-          "hint": "Mẫu mục tiêu: ～だろうに",
-          "reason": "Trong câu này, だろうに thể hiện ý nghĩa: Thì có khi / Có lẽ đã... / Hẳn là... vậy mà....",
-          "wrongReason": "Đối chiếu với mẫu ～だろうに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Đi sau giả định quá khứ để tiếc nuối kết quả đáng lẽ có thể xảy ra.",
+          "reason": "Người nói cảm động vì anh ấy hẳn cũng bận rộn nhưng vẫn chủ động quan tâm.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề phỏng đoán／giả định + だろうに; Tính từ／động từ + だろうに（theo cấu trúc thích hợp）. Người nói cảm động vì anh ấy hẳn cũng bận rộn nhưng vẫn chủ động quan tâm.",
           "chunks": [
             "自分も仕事が忙しいだろうに、",
-            "彼はわざわざこちらを",
-            "気遣って連絡をくれた。"
+            "彼はわざわざこちらを気遣って",
+            "連絡をくれた。"
           ]
         }
       ],
@@ -255,22 +265,27 @@
       "id": "n1-lg046",
       "grammar": "～ものを",
       "reading": "～ものを",
-      "meaning": "Thì đã... rồi / Lẽ ra là...",
-      "formation": "Cấu trúc: ～ものを (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Lẽ ra chỉ cần... thì tốt rồi, vậy mà...; tiếc thay...",
+      "formation": "Mệnh đề dạng thông thường + ものを; ～ばいいものを／～たらよかったものを thường gặp",
       "priorityStars": 4,
-      "explanation": "Mẫu ～ものを diễn tả: Thì đã... rồi / Lẽ ra là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "ものを diễn tả sự tiếc nuối, bất mãn hoặc trách móc vì một điều lẽ ra nên làm nhưng trên thực tế đã không được thực hiện. Vế sau thường nêu hậu quả không mong muốn; đôi khi được lược bỏ.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Thì đã... rồi / Lẽ ra là..."
+          "title": "Cấu trúc và cách dùng",
+          "text": "Thường gặp trong ～ばいいものを: “lẽ ra cứ... là được”."
         },
         {
-          "title": "Mẫu",
-          "text": "～ものを"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "Có thể kết thúc câu để cảm xúc tiếc nuối được hiểu ngầm."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Phân biệt ～のに: đối lập chung; ～ものを thiên về tiếc nuối hoặc trách cứ."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không nhầm ものを với danh từ 物 + trợ từ を.",
+        "Không dùng khi người nói chỉ tường thuật sự việc trung tính."
       ],
       "discovery": {
         "distractors": [
@@ -282,28 +297,27 @@
       "examples": [
         {
           "sentence": "すぐに宿題を終わらせればよかったものを。時間が経つほどだるくなるでしょう。",
-          "reading": "",
+          "reading": "すぐにしゅくだいをおわらせればよかったものを。じかんがたつほどだるくなるでしょう。",
           "translation": "Lẽ ra nên làm xong bài tập ngay từ đầu. Càng để lâu thì càng thấy uể oải thôi.",
           "blank": "すぐに宿題を終わらせればよかった____。時間が経つほどだるくなるでしょう。",
           "answer": "ものを",
-          "hint": "Mẫu mục tiêu: ～ものを",
-          "reason": "Trong câu này, ものを thể hiện ý nghĩa: Thì đã... rồi / Lẽ ra là....",
-          "wrongReason": "Đối chiếu với mẫu ～ものを và đọc lại nghĩa tiếng Việt.",
+          "hint": "Thường gặp trong ～ばいいものを: “lẽ ra cứ... là được”.",
+          "reason": "Người nói tiếc vì bài tập lẽ ra có thể hoàn thành sớm, nhưng đã bị trì hoãn.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề dạng thông thường + ものを; ～ばいいものを／～たらよかったものを thường gặp. Người nói tiếc vì bài tập lẽ ra có thể hoàn thành sớm, nhưng đã bị trì hoãn.",
           "chunks": [
-            "すぐに宿題を終わらせればよかったも",
-            "のを。時間が",
-            "経つほどだるくなるでしょう。"
+            "すぐに宿題を終わらせればよかったものを。",
+            "時間が経つほどだるくなるでしょう。"
           ]
         },
         {
           "sentence": "具合が悪いなら休めばいいものを、無理をするから逆に周りに迷惑がかかるのだ。",
-          "reading": "",
+          "reading": "ぐあいがわるいならやすめばいいものを、むりをするからぎゃくにまわりにめいわくがかかるのだ。",
           "translation": "Nếu không khỏe thì lẽ ra cứ nghỉ đi, vậy mà vì cố quá sức nên ngược lại còn gây phiền cho những người xung quanh.",
           "blank": "具合が悪いなら休めばいい____、無理をするから逆に周りに迷惑がかかるのだ。",
           "answer": "ものを",
-          "hint": "Mẫu mục tiêu: ～ものを",
-          "reason": "Trong câu này, ものを thể hiện ý nghĩa: Thì đã... rồi / Lẽ ra là....",
-          "wrongReason": "Đối chiếu với mẫu ～ものを và đọc lại nghĩa tiếng Việt.",
+          "hint": "Thường gặp trong ～ばいいものを: “lẽ ra cứ... là được”.",
+          "reason": "Nếu mệt thì nên nghỉ; việc cố sức tạo phiền toái nên ものを mang sắc thái trách móc.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề dạng thông thường + ものを; ～ばいいものを／～たらよかったものを thường gặp. Nếu mệt thì nên nghỉ; việc cố sức tạo phiền toái nên ものを mang sắc thái trách móc.",
           "chunks": [
             "具合が悪いなら休めばいいものを、",
             "無理をするから逆に",
@@ -312,13 +326,13 @@
         },
         {
           "sentence": "あんな悪事を謀らなければ、今でも会社の役員として活躍できていたものを、やっぱ馬鹿なことをした。",
-          "reading": "",
+          "reading": "あんなあくじをはからなければ、いまでもかいしゃのやくいんとしてかつやくできていたものを、やっぱばかなことをした。",
           "translation": "Nếu không âm mưu làm chuyện xấu như vậy thì giờ vẫn có thể hoạt động với tư cách là lãnh đạo công ty, vậy mà cuối cùng lại làm một chuyện ngu ngốc.",
           "blank": "あんな悪事を謀らなければ、今でも会社の役員として活躍できていた____、やっぱ馬鹿なことをした。",
           "answer": "ものを",
-          "hint": "Mẫu mục tiêu: ～ものを",
-          "reason": "Trong câu này, ものを thể hiện ý nghĩa: Thì đã... rồi / Lẽ ra là....",
-          "wrongReason": "Đối chiếu với mẫu ～ものを và đọc lại nghĩa tiếng Việt.",
+          "hint": "Thường gặp trong ～ばいいものを: “lẽ ra cứ... là được”.",
+          "reason": "Nếu không làm việc xấu thì vẫn có thể giữ vị trí lãnh đạo; ものを thể hiện tiếc nuối cho hậu quả đã xảy ra.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Mệnh đề dạng thông thường + ものを; ～ばいいものを／～たらよかったものを thường gặp. Nếu không làm việc xấu thì vẫn có thể giữ vị trí lãnh đạo; ものを thể hiện tiếc nuối cho hậu quả đã xảy ra.",
           "chunks": [
             "あんな悪事を謀らなければ、",
             "今でも会社の役員として活躍できていたものを、",
@@ -332,22 +346,27 @@
       "id": "n1-lg047",
       "grammar": "～といったらない / ～といったらありはしない",
       "reading": "～といったらない / ～といったらありはしない",
-      "meaning": "Cực kỳ... / Hết chỗ nói...",
-      "formation": "Cấu trúc: ～といったらない / ～といったらありはしない (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Cực kỳ...; không thể diễn tả hết mức độ...",
+      "formation": "Danh từ biểu thị cảm xúc／mức độ + といったらない／といったらありはしない; dạng quá khứ といったらなかった",
       "priorityStars": 4,
-      "explanation": "Mẫu ～といったらない / ～といったらありはしない diễn tả: Cực kỳ... / Hết chỗ nói.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Mẫu nhấn mạnh mức độ cảm xúc hoặc tính chất cao đến nỗi khó diễn tả bằng lời. Tùy danh từ phía trước có thể biểu đạt cảm xúc tích cực hoặc tiêu cực; thường có sắc thái cảm thán mạnh.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Cực kỳ... / Hết chỗ nói..."
+          "title": "Cấu trúc và cách dùng",
+          "text": "Kết hợp với danh từ như 喜び, 悔しさ, 暑さ, 寂しさ."
         },
         {
-          "title": "Mẫu",
-          "text": "～といったらない / ～といったらありはしない"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "といったらなかった là cách nói ở quá khứ."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Không phải cấu trúc liệt kê ～といったら trong văn nói thông thường."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu といったらない là phủ định “không có lời nói”.",
+        "Không dùng sau một câu hoàn chỉnh bất kỳ mà thiếu thành phần chỉ cảm xúc/mức độ."
       ],
       "discovery": {
         "distractors": [
@@ -359,33 +378,31 @@
       "examples": [
         {
           "sentence": "合格の知らせを聞いたときのうれしさといったらなかった。",
-          "reading": "",
+          "reading": "ごうかくのしらせをきいたときのうれしさといったらなかった。",
           "translation": "Niềm vui khi nghe tin thi đỗ thật không thể diễn tả hết.",
           "blank": "合格の知らせを聞いたときのうれしさ____。",
           "answer": "といったらなかった",
-          "hint": "Mẫu mục tiêu: ～といったらない / ～といったらありはしない",
-          "reason": "Trong câu này, といったらなかった thể hiện ý nghĩa: Cực kỳ... / Hết chỗ nói....",
-          "wrongReason": "Đối chiếu với mẫu ～といったらない / ～といったらありはしない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Kết hợp với danh từ như 喜び, 悔しさ, 暑さ, 寂しさ.",
+          "reason": "うれしさ là niềm vui khi đỗ; といったらなかった nhấn mạnh niềm vui lớn không tả nổi.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ biểu thị cảm xúc／mức độ + といったらない／といったらありはしない; dạng quá khứ といったらなかった. うれしさ là niềm vui khi đỗ; といったらなかった nhấn mạnh niềm vui lớn không tả nổi.",
           "chunks": [
-            "合格の知らせを",
-            "聞いたときのうれしさと",
-            "いったらなかった。"
+            "合格の知らせを聞いたときの",
+            "うれしさといったらなかった。"
           ],
           "editorialExample": true
         },
         {
           "sentence": "真夏の満員電車の暑さといったらない。",
-          "reading": "",
+          "reading": "まなつのまんいんでんしゃのあつさといったらない。",
           "translation": "Cái nóng trên chuyến tàu đông nghịt giữa mùa hè thật kinh khủng.",
           "blank": "真夏の満員電車の暑さ____。",
           "answer": "といったらない",
-          "hint": "Mẫu mục tiêu: ～といったらない / ～といったらありはしない",
-          "reason": "Trong câu này, といったらない thể hiện ý nghĩa: Cực kỳ... / Hết chỗ nói....",
-          "wrongReason": "Đối chiếu với mẫu ～といったらない / ～といったらありはしない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Kết hợp với danh từ như 喜び, 悔しさ, 暑さ, 寂しさ.",
+          "reason": "暑さ là cái nóng trong tàu chật giữa mùa hè; といったらない diễn tả mức độ nóng cực kỳ.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ biểu thị cảm xúc／mức độ + といったらない／といったらありはしない; dạng quá khứ といったらなかった. 暑さ là cái nóng trong tàu chật giữa mùa hè; といったらない diễn tả mức độ nóng cực kỳ.",
           "chunks": [
-            "真夏の満員電車の暑さと",
-            "い",
-            "ったらない。"
+            "真夏の満員電車の",
+            "暑さといったらない。"
           ],
           "editorialExample": true
         }
@@ -397,22 +414,27 @@
       "id": "n1-lg048",
       "grammar": "～ないで済む / ～ずに済む",
       "reading": "～ないですむ / ～ずにすむ",
-      "meaning": "Không cần phải V",
-      "formation": "Cấu trúc: ～ないで済む / ～ずに済む (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Không phải làm...; tránh được việc phải...; may mà không cần...",
+      "formation": "Động từ dạng ない + で済む／なくて済む; Động từ dạng ず + に済む（する → せずに済む）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～ないで済む / ～ずに済む diễn tả: Không cần phải V. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "済む ở đây nghĩa là một tình huống được giải quyết mà không cần thực hiện hành động đáng lẽ phải làm hoặc không phải gánh hậu quả xấu. ～ないで済む và ～ずに済む gần nghĩa; ～なくて済む cũng là biến thể thực tế. Dạng quá khứ ～済んだ thể hiện đã tránh được việc đó.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Không cần phải V"
+          "title": "Cấu trúc và cách dùng",
+          "text": "待たないで済んだ: không phải đợi nhờ tình huống thuận lợi."
         },
         {
-          "title": "Mẫu",
-          "text": "～ないで済む / ～ずに済む"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "買わなくて済んだ: khỏi phải mua vì đã được cho máy tính."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "する→せずに済む; không nói *しずに済む."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không nhầm ～ずに済む với ～ずには済まない (rốt cuộc buộc phải làm).",
+        "Không coi ～なくて済む là lỗi; đó là dạng thường dùng cùng ý nghĩa."
       ],
       "discovery": {
         "distractors": [
@@ -424,13 +446,13 @@
       "examples": [
         {
           "sentence": "ビルの屋上から隣のビルの屋上に飛び移るなんて、無謀なことをしなければ、彼は死ななくて済んだだろう。",
-          "reading": "",
+          "reading": "ビルのおくじょうからとなりのビルのおくじょうにとびうつるなんて、むぼうなことをしなければ、かれはしななくてすんだだろう。",
           "translation": "Nếu anh ấy không làm chuyện liều lĩnh như nhảy từ sân thượng tòa nhà này sang sân thượng tòa nhà bên cạnh thì có lẽ đã không phải chết.",
           "blank": "ビルの屋上から隣のビルの屋上に飛び移るなんて、無謀なことをしなければ、彼は死な____だろう。",
           "answer": "なくて済んだ",
-          "hint": "Mẫu mục tiêu: ～ないで済む / ～ずに済む",
-          "reason": "Trong câu này, なくて済んだ thể hiện ý nghĩa: Không cần phải V.",
-          "wrongReason": "Đối chiếu với mẫu ～ないで済む / ～ずに済む và đọc lại nghĩa tiếng Việt.",
+          "hint": "待たないで済んだ: không phải đợi nhờ tình huống thuận lợi.",
+          "reason": "Đây là tình huống giả định: nếu không liều lĩnh thì có lẽ đã tránh được cái chết; ～なくて済んだ biểu thị tránh hậu quả xấu.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng ない + で済む／なくて済む; Động từ dạng ず + に済む（する → せずに済む）. Đây là tình huống giả định: nếu không liều lĩnh thì có lẽ đã tránh được cái chết; ～なくて済んだ biểu thị tránh hậu quả xấu.",
           "chunks": [
             "ビルの屋上から隣のビルの屋上に飛び移るなんて、",
             "無謀なことをしなければ、",
@@ -439,13 +461,13 @@
         },
         {
           "sentence": "人気のレストランに行ったら、その日はたまたま空いていて、待たないで済んだ。",
-          "reading": "",
+          "reading": "にんきのレストランにいったら、そのひはたまたまあいていて、またないですんだ。",
           "translation": "Khi đến một nhà hàng nổi tiếng, hôm đó tình cờ khá vắng nên tôi không cần phải chờ.",
           "blank": "人気のレストランに行ったら、その日はたまたま空いていて、待た____。",
           "answer": "ないで済んだ",
-          "hint": "Mẫu mục tiêu: ～ないで済む / ～ずに済む",
-          "reason": "Trong câu này, ないで済んだ thể hiện ý nghĩa: Không cần phải V.",
-          "wrongReason": "Đối chiếu với mẫu ～ないで済む / ～ずに済む và đọc lại nghĩa tiếng Việt.",
+          "hint": "待たないで済んだ: không phải đợi nhờ tình huống thuận lợi.",
+          "reason": "Nhà hàng vắng nên người nói tránh được việc phải chờ; ～ないで済んだ là không cần thực hiện hành động.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng ない + で済む／なくて済む; Động từ dạng ず + に済む（する → せずに済む）. Nhà hàng vắng nên người nói tránh được việc phải chờ; ～ないで済んだ là không cần thực hiện hành động.",
           "chunks": [
             "人気のレストランに行ったら、",
             "その日はたまたま空いていて、",
@@ -454,13 +476,13 @@
         },
         {
           "sentence": "パソコンを買うつもりだったが、友達がもう使わないパソコンを譲ってくれたので、新しく買わなくて済んだ。",
-          "reading": "",
+          "reading": "パソコンをかうつもりだったが、ともだちがもうつかわないパソコンをゆずってくれたので、あたらしくかわなくてすんだ。",
           "translation": "Tôi vốn định mua máy tính, nhưng vì bạn tôi nhượng lại chiếc máy tính không còn dùng nữa nên tôi không cần phải mua máy mới.",
           "blank": "パソコンを買うつもりだったが、友達がもう使わないパソコンを譲ってくれたので、新しく買わ____。",
           "answer": "なくて済んだ",
-          "hint": "Mẫu mục tiêu: ～ないで済む / ～ずに済む",
-          "reason": "Trong câu này, なくて済んだ thể hiện ý nghĩa: Không cần phải V.",
-          "wrongReason": "Đối chiếu với mẫu ～ないで済む / ～ずに済む và đọc lại nghĩa tiếng Việt.",
+          "hint": "待たないで済んだ: không phải đợi nhờ tình huống thuận lợi.",
+          "reason": "Bạn nhượng máy tính nên người nói không cần mua mới; ～なくて済んだ là tránh được chi phí.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng ない + で済む／なくて済む; Động từ dạng ず + に済む（する → せずに済む）. Bạn nhượng máy tính nên người nói không cần mua mới; ～なくて済んだ là tránh được chi phí.",
           "chunks": [
             "パソコンを買うつもりだったが、",
             "友達がもう使わないパソコンを譲ってくれたので、",
@@ -474,22 +496,27 @@
       "id": "n1-lg049",
       "grammar": "～もさることながら",
       "reading": "～もさることながら",
-      "meaning": "Không chỉ N mà... còn...",
-      "formation": "Cấu trúc: ～もさることながら (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Không chỉ... mà còn...; chưa nói đến... thì...",
+      "formation": "Danh từ + もさることながら + nội dung muốn nhấn mạnh",
       "priorityStars": 4,
-      "explanation": "Mẫu ～もさることながら diễn tả: Không chỉ N mà... còn.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "もさることながら thừa nhận yếu tố A đáng chú ý, đồng thời chuyển trọng tâm sang B cũng quan trọng hoặc còn nổi bật hơn. Thường dùng để đánh giá đa diện trong văn viết, giới thiệu sản phẩm, bình luận.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Không chỉ N mà... còn..."
+          "title": "Cấu trúc và cách dùng",
+          "text": "Aもさることながら、B: cả A lẫn B đều đáng kể, nhất là B."
         },
         {
-          "title": "Mẫu",
-          "text": "～もさることながら"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "Có thể dùng cho đánh giá tích cực lẫn tiêu cực."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Phân biệt AだけでなくB: liệt kê đơn thuần; もさることながら có sắc thái nhấn mạnh B."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu さる theo nghĩa con khỉ 猿.",
+        "Không dùng khi vế B hoàn toàn không liên quan đến nhận định đang đánh giá."
       ],
       "discovery": {
         "distractors": [
@@ -501,13 +528,13 @@
       "examples": [
         {
           "sentence": "一人暮らししてよくわかった。食費もさることながら、雑費が馬鹿にならない。",
-          "reading": "",
+          "reading": "ひとりぐらししてよくわかった。しょくひもさることながら、ざっぴがばかにならない。",
           "translation": "Sau khi sống một mình tôi mới hiểu rõ. Không chỉ tiền ăn mà các khoản chi phí lặt vặt cũng không thể xem nhẹ.",
           "blank": "一人暮らししてよくわかった。食費____、雑費が馬鹿にならない。",
           "answer": "もさることながら",
-          "hint": "Mẫu mục tiêu: ～もさることながら",
-          "reason": "Trong câu này, もさることながら thể hiện ý nghĩa: Không chỉ N mà... còn....",
-          "wrongReason": "Đối chiếu với mẫu ～もさることながら và đọc lại nghĩa tiếng Việt.",
+          "hint": "Aもさることながら、B: cả A lẫn B đều đáng kể, nhất là B.",
+          "reason": "Không chỉ tiền ăn, các chi phí lặt vặt cũng đáng kể; trọng tâm được chuyển sang 雑費.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ + もさることながら + nội dung muốn nhấn mạnh. Không chỉ tiền ăn, các chi phí lặt vặt cũng đáng kể; trọng tâm được chuyển sang 雑費.",
           "chunks": [
             "一人暮らししてよくわかった。",
             "食費もさることながら、",
@@ -516,13 +543,13 @@
         },
         {
           "sentence": "このメーカーの車は、デザインや性能もさることながら、価格も手頃で故障しにくい。",
-          "reading": "",
+          "reading": "このメーカーのくるまは、デザインやせいのうもさることながら、かかくもてごろでこしょうしにくい。",
           "translation": "Xe của hãng này không chỉ có thiết kế và tính năng tốt mà giá cả cũng hợp lý và ít hỏng hóc.",
           "blank": "このメーカーの車は、デザインや性能____、価格も手頃で故障しにくい。",
           "answer": "もさることながら",
-          "hint": "Mẫu mục tiêu: ～もさることながら",
-          "reason": "Trong câu này, もさることながら thể hiện ý nghĩa: Không chỉ N mà... còn....",
-          "wrongReason": "Đối chiếu với mẫu ～もさることながら và đọc lại nghĩa tiếng Việt.",
+          "hint": "Aもさることながら、B: cả A lẫn B đều đáng kể, nhất là B.",
+          "reason": "Thiết kế và tính năng tốt, nhưng giá hợp lý và ít hỏng cũng là ưu điểm quan trọng.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ + もさることながら + nội dung muốn nhấn mạnh. Thiết kế và tính năng tốt, nhưng giá hợp lý và ít hỏng cũng là ưu điểm quan trọng.",
           "chunks": [
             "このメーカーの車は、",
             "デザインや性能もさることながら、",
@@ -531,13 +558,13 @@
         },
         {
           "sentence": "未開の土地の開発は、労働の大変さもさることながら、病原菌との戦いが何より過酷だったそうだ。",
-          "reading": "",
+          "reading": "みかいのとちのかいはつは、ろうどうのたいへんさもさることながら、びょうげんきんとのたたかいがなによりかこくだったそうだ。",
           "translation": "Nghe nói việc khai phá vùng đất chưa được phát triển, không chỉ lao động rất vất vả mà hơn hết cuộc chiến với các mầm bệnh còn vô cùng khắc nghiệt.",
           "blank": "未開の土地の開発は、労働の大変さ____、病原菌との戦いが何より過酷だったそうだ。",
           "answer": "もさることながら",
-          "hint": "Mẫu mục tiêu: ～もさることながら",
-          "reason": "Trong câu này, もさることながら thể hiện ý nghĩa: Không chỉ N mà... còn....",
-          "wrongReason": "Đối chiếu với mẫu ～もさることながら và đọc lại nghĩa tiếng Việt.",
+          "hint": "Aもさることながら、B: cả A lẫn B đều đáng kể, nhất là B.",
+          "reason": "Ngoài lao động vất vả, việc đối phó mầm bệnh còn khắc nghiệt hơn; vế sau được nhấn mạnh.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ + もさることながら + nội dung muốn nhấn mạnh. Ngoài lao động vất vả, việc đối phó mầm bệnh còn khắc nghiệt hơn; vế sau được nhấn mạnh.",
           "chunks": [
             "未開の土地の開発は、",
             "労働の大変さもさることながら、",
@@ -551,22 +578,27 @@
       "id": "n1-lg050",
       "grammar": "～に越したことはない",
       "reading": "～にこしたことはない",
-      "meaning": "...thì không gì bằng",
-      "formation": "Cấu trúc: ～に越したことはない (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "... vẫn là tốt nhất; không gì bằng...; càng ... càng tốt",
+      "formation": "Động từ dạng từ điển／ない + に越したことはない; Tính từ／danh từ + に越したことはない（khi phù hợp）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～に越したことはない diễn tả: ...thì không gì bằng. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Diễn tả phương án hoặc trạng thái tối ưu trong số những khả năng có thể xảy ra. Không khẳng định lựa chọn khác hoàn toàn sai; chỉ nói “nếu được như thế thì càng tốt”.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "...thì không gì bằng"
+          "title": "Cấu trúc và cách dùng",
+          "text": "Có thể áp dụng với dạng khẳng định hoặc phủ định: 訴えられないに越したことはない."
         },
         {
-          "title": "Mẫu",
-          "text": "～に越したことはない"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "Thường nhấn mạnh khuyến nghị thực tế, an toàn, sức khỏe."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Phân biệt ～べきだ: nghĩa vụ; ～に越したことはない: lựa chọn tốt nhất."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu nghĩa đen “vượt qua”; đây là thành ngữ cố định.",
+        "Không dịch thành mệnh lệnh tuyệt đối."
       ],
       "discovery": {
         "distractors": [
@@ -578,43 +610,41 @@
       "examples": [
         {
           "sentence": "一人できれいな海を眺めるのもいいが、君が一緒にいてくれるに越したことはない。",
-          "reading": "",
+          "reading": "ひとりできれいなうみをながめるのもいいが、きみがいっしょにいてくれるにこしたことはない。",
           "translation": "Ngắm biển đẹp một mình cũng tốt, nhưng nếu có em ở bên thì không gì bằng.",
           "blank": "一人できれいな海を眺めるのもいいが、君が一緒にいてくれる____。",
           "answer": "に越したことはない",
-          "hint": "Mẫu mục tiêu: ～に越したことはない",
-          "reason": "Trong câu này, に越したことはない thể hiện ý nghĩa: ...thì không gì bằng.",
-          "wrongReason": "Đối chiếu với mẫu ～に越したことはない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Có thể áp dụng với dạng khẳng định hoặc phủ định: 訴えられないに越したことはない.",
+          "reason": "Ở một mình cũng được nhưng có người thương bên cạnh vẫn là lựa chọn tốt nhất.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng từ điển／ない + に越したことはない; Tính từ／danh từ + に越したことはない（khi phù hợp）. Ở một mình cũng được nhưng có người thương bên cạnh vẫn là lựa chọn tốt nhất.",
           "chunks": [
             "一人できれいな海を眺めるのもいいが、",
-            "君が一緒にいてくれるに",
-            "越したことはない。"
+            "君が一緒にいてくれるに越したことはない。"
           ]
         },
         {
           "sentence": "お金があっても病気になったら辛い。やはり、健康であるに越したことはない。",
-          "reading": "",
+          "reading": "おかねがあってもびょうきになったらつらい。やはり、けんこうであるにこしたことはない。",
           "translation": "Dù có tiền nhưng nếu bị bệnh thì vẫn khổ. Quả nhiên, không gì bằng có sức khỏe.",
           "blank": "お金があっても病気になったら辛い。やはり、健康である____。",
           "answer": "に越したことはない",
-          "hint": "Mẫu mục tiêu: ～に越したことはない",
-          "reason": "Trong câu này, に越したことはない thể hiện ý nghĩa: ...thì không gì bằng.",
-          "wrongReason": "Đối chiếu với mẫu ～に越したことはない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Có thể áp dụng với dạng khẳng định hoặc phủ định: 訴えられないに越したことはない.",
+          "reason": "Kết luận rằng khỏe mạnh là tốt nhất dù có nhiều tiền đến đâu.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng từ điển／ない + に越したことはない; Tính từ／danh từ + に越したことはない（khi phù hợp）. Kết luận rằng khỏe mạnh là tốt nhất dù có nhiều tiền đến đâu.",
           "chunks": [
-            "お金があっても病気に",
-            "なったら辛い。やはり、",
-            "健康であるに越したことはない。"
+            "お金があっても病気になったら辛い。",
+            "やはり、健康であるに越したことはない。"
           ]
         },
         {
           "sentence": "訴えられないに越したことはないが、万が一訴えられたときのために、証拠は残しておくつもりだ。",
-          "reading": "",
+          "reading": "うったえられないにこしたことはないが、まんがいちうったえられたときのために、しょうこはのこしておくつもりだ。",
           "translation": "Tốt nhất là không bị kiện, nhưng để phòng trường hợp chẳng may bị kiện, tôi định giữ lại bằng chứng.",
           "blank": "訴えられない____が、万が一訴えられたときのために、証拠は残しておくつもりだ。",
           "answer": "に越したことはない",
-          "hint": "Mẫu mục tiêu: ～に越したことはない",
-          "reason": "Trong câu này, に越したことはない thể hiện ý nghĩa: ...thì không gì bằng.",
-          "wrongReason": "Đối chiếu với mẫu ～に越したことはない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Có thể áp dụng với dạng khẳng định hoặc phủ định: 訴えられないに越したことはない.",
+          "reason": "Tốt nhất là không bị kiện, nhưng người nói vẫn chuẩn bị chứng cứ để dự phòng.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng từ điển／ない + に越したことはない; Tính từ／danh từ + に越したことはない（khi phù hợp）. Tốt nhất là không bị kiện, nhưng người nói vẫn chuẩn bị chứng cứ để dự phòng.",
           "chunks": [
             "訴えられないに越したことはないが、",
             "万が一訴えられたときのために、",
@@ -626,24 +656,29 @@
     },
     {
       "id": "n1-lg051",
-      "grammar": "～からぬ",
-      "reading": "～からぬ",
-      "meaning": "Không...",
-      "formation": "Cấu trúc: ～からぬ (xem vị trí kết hợp trong các câu ví dụ)",
+      "grammar": "～らしからぬ",
+      "reading": "～らしからぬ",
+      "meaning": "Không giống với...; không tương xứng với... (～らしからぬ)",
+      "formation": "Danh từ／người + らしからぬ + danh từ; らしい → らしからぬ（phủ định mang sắc thái văn viết）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～からぬ diễn tả: Không.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Mẫu học trọng tâm trong thẻ này là ～らしからぬ: hành động hoặc biểu hiện không phù hợp với tính cách, vai trò hay đặc điểm vốn được mong đợi ở người/vật. Dạng phủ định cổ ～ぬ trong 見知らぬ, 予期せぬ thuộc nhóm cấu trúc khác, không nên gom chung vào thẻ này.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Không..."
+          "title": "Cấu trúc và cách dùng",
+          "text": "あいつらしからぬ行動: hành động không giống con người thường ngày của hắn."
         },
         {
-          "title": "Mẫu",
-          "text": "～からぬ"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "子供らしからぬ発言: lời nói không giống trẻ con."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Phân biệt ～らしくない: ý nghĩa gần nhau nhưng ～らしからぬ trang trọng/văn viết hơn."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không nhầm ～らしからぬ với mọi động từ phủ định kết thúc bằng ～ぬ.",
+        "Không hiểu らしからぬ là “không có vẻ...” theo nghĩa phỏng đoán ～らしい."
       ],
       "discovery": {
         "distractors": [
@@ -655,48 +690,47 @@
       "examples": [
         {
           "sentence": "困っている人を助けるなんて、いじわるなあいつらしからぬ行動だな。",
-          "reading": "",
+          "reading": "こまっているひとをたすけるなんて、いじわるなあいつらしからぬこうどうだな。",
           "translation": "Giúp đỡ người đang gặp khó khăn đúng là một hành động không giống với một kẻ xấu tính như hắn.",
-          "blank": "困っている人を助けるなんて、いじわるなあいつら____行動だな。",
-          "answer": "しからぬ",
-          "hint": "Mẫu mục tiêu: ～からぬ",
-          "reason": "Trong câu này, しからぬ thể hiện ý nghĩa: Không....",
-          "wrongReason": "Đối chiếu với mẫu ～からぬ và đọc lại nghĩa tiếng Việt.",
+          "blank": "困っている人を助けるなんて、いじわるなあいつ____行動だな。",
+          "answer": "らしからぬ",
+          "hint": "あいつらしからぬ行動: hành động không giống con người thường ngày của hắn.",
+          "reason": "Người vốn xấu tính bất ngờ giúp người khác; hành động ấy không giống tính cách thường ngày.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ／người + らしからぬ + danh từ; らしい → らしからぬ（phủ định mang sắc thái văn viết）. Người vốn xấu tính bất ngờ giúp người khác; hành động ấy không giống tính cách thường ngày.",
           "chunks": [
             "困っている人を助けるなんて、",
-            "いじわるなあいつら",
-            "しからぬ行動だな。"
+            "いじわるなあいつらしからぬ行動だな。"
           ]
         },
         {
-          "sentence": "見知らぬ二人組に捕まって、拷問を受けた。",
-          "reading": "",
-          "translation": "Tôi bị hai người lạ mặt bắt giữ và tra tấn.",
-          "blank": "見____二人組に捕まって、拷問を受けた。",
-          "answer": "知らぬ",
-          "hint": "Mẫu mục tiêu: ～からぬ",
-          "reason": "Trong câu này, 知らぬ thể hiện ý nghĩa: Không....",
-          "wrongReason": "Đối chiếu với mẫu ～からぬ và đọc lại nghĩa tiếng Việt.",
+          "sentence": "小学生とは思えないほど冷静な発言は、子供らしからぬものだった。",
+          "reading": "しょうがくせいとはおもえないほどれいせいなはつげんは、こどもらしからぬものだった。",
+          "translation": "Lời phát biểu điềm tĩnh đến mức khó tin là của học sinh tiểu học, thật không giống trẻ con.",
+          "blank": "小学生とは思えないほど冷静な発言は、子供____ものだった。",
+          "answer": "らしからぬ",
+          "hint": "あいつらしからぬ行動: hành động không giống con người thường ngày của hắn.",
+          "reason": "Một học sinh nhỏ tuổi có nhận xét chín chắn khác thường, do đó dùng 子供らしからぬ.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ／người + らしからぬ + danh từ; らしい → らしからぬ（phủ định mang sắc thái văn viết）. Một học sinh nhỏ tuổi có nhận xét chín chắn khác thường, do đó dùng 子供らしからぬ.",
           "chunks": [
-            "見知らぬ二人組に",
-            "捕まって、",
-            "拷問を受けた。"
-          ]
+            "小学生とは思えないほど冷静な発言は、",
+            "子供らしからぬものだった。"
+          ],
+          "editorialReplacedExample": true
         },
         {
-          "sentence": "予期せぬ出来事に驚いて、何も言えなかった。",
-          "reading": "",
-          "translation": "Tôi bất ngờ trước một sự việc không lường trước được nên không thể nói gì.",
-          "blank": "予期____出来事に驚いて、何も言えなかった。",
-          "answer": "せぬ",
-          "hint": "Mẫu mục tiêu: ～からぬ",
-          "reason": "Trong câu này, せぬ thể hiện ý nghĩa: Không....",
-          "wrongReason": "Đối chiếu với mẫu ～からぬ và đọc lại nghĩa tiếng Việt.",
+          "sentence": "責任を放棄するのは、リーダーらしからぬ行動だ。",
+          "reading": "せきにんをほうきするのは、リーダーらしからぬこうどうだ。",
+          "translation": "Việc từ bỏ trách nhiệm là hành động không xứng với một người lãnh đạo.",
+          "blank": "責任を放棄するのは、リーダー____行動だ。",
+          "answer": "らしからぬ",
+          "hint": "あいつらしからぬ行動: hành động không giống con người thường ngày của hắn.",
+          "reason": "Cách hành xử của người lãnh đạo không tương xứng với vai trò và trách nhiệm vốn có.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Danh từ／người + らしからぬ + danh từ; らしい → らしからぬ（phủ định mang sắc thái văn viết）. Cách hành xử của người lãnh đạo không tương xứng với vai trò và trách nhiệm vốn có.",
           "chunks": [
-            "予期せぬ出来事に",
-            "驚いて、",
-            "何も言えなかった。"
-          ]
+            "責任を放棄するのは、",
+            "リーダーらしからぬ行動だ。"
+          ],
+          "editorialReplacedExample": true
         }
       ],
       "sourceId": 49
@@ -705,22 +739,27 @@
       "id": "n1-lg052",
       "grammar": "～はしない",
       "reading": "～はしない",
-      "meaning": "Tuyệt đối không V / Tuy không V nhưng...",
-      "formation": "Cấu trúc: ～はしない (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Hoàn toàn không...; nhất quyết không...; có ... thì cũng không...",
+      "formation": "Động từ dạng ます bỏ ます + はしない（する→しはしない／しない; động từ khả năng できる→できはしない）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～はしない diễn tả: Tuyệt đối không V / Tuy không V nhưng.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "はしない dùng は để nhấn mạnh sự phủ định của hành động; thường mang sắc thái quyết liệt hoặc đối lập với điều người nghe có thể nghĩ. Khi đi với が, có thể công nhận một giới hạn rồi chuyển sang ý khác.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Tuyệt đối không V / Tuy không V nhưng..."
+          "title": "Cấu trúc và cách dùng",
+          "text": "信じはしない: hoàn toàn không tin, mạnh hơn 信じない."
         },
         {
-          "title": "Mẫu",
-          "text": "～はしない"
+          "title": "Sắc thái và ngữ cảnh",
+          "text": "死にはしないが...: tuy sẽ không chết nhưng vẫn có hệ quả rất nặng nề."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "できはしない: nhấn mạnh sự bất khả thi."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không coi は trong ～はしない là trợ từ chỉ chủ đề độc lập cần đặt sau bất kỳ dạng động từ nào.",
+        "Không luôn dịch thành “tuy không” khi câu chỉ nhấn mạnh phủ định."
       ],
       "discovery": {
         "distractors": [
@@ -732,28 +771,27 @@
       "examples": [
         {
           "sentence": "いつも嘘ばかりいっている彼女が言うことなんて、誰も信じはしないよ。",
-          "reading": "",
+          "reading": "いつもうそばかりいっているかのじょがいうことなんて、だれもしんじはしないよ。",
           "translation": "Những điều mà cô ấy, người lúc nào cũng chỉ nói dối, nói ra thì chẳng ai tin đâu.",
           "blank": "いつも嘘ばかりいっている彼女が言うことなんて、誰も信じ____よ。",
           "answer": "はしない",
-          "hint": "Mẫu mục tiêu: ～はしない",
-          "reason": "Trong câu này, はしない thể hiện ý nghĩa: Tuyệt đối không V / Tuy không V nhưng....",
-          "wrongReason": "Đối chiếu với mẫu ～はしない và đọc lại nghĩa tiếng Việt.",
+          "hint": "信じはしない: hoàn toàn không tin, mạnh hơn 信じない.",
+          "reason": "Cô ấy thường nói dối nên chẳng ai tin lời; はしない làm sự phủ định mạnh hơn.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng ます bỏ ます + はしない（する→しはしない／しない; động từ khả năng できる→できはしない）. Cô ấy thường nói dối nên chẳng ai tin lời; はしない làm sự phủ định mạnh hơn.",
           "chunks": [
-            "いつも嘘ばかりいっている彼女が",
-            "言うことなんて、",
+            "いつも嘘ばかりいっている彼女が言うことなんて、",
             "誰も信じはしないよ。"
           ]
         },
         {
           "sentence": "硫酸をかけられた場合、死にはしないが、大変な苦痛を味わうことになる。",
-          "reading": "",
+          "reading": "りゅうさんをかけられたばあい、しにはしないが、たいへんなくつうをあじわうことになる。",
           "translation": "Nếu bị tạt axit sulfuric thì tuy không chết nhưng sẽ phải chịu đau đớn vô cùng.",
           "blank": "硫酸をかけられた場合、死に____が、大変な苦痛を味わうことになる。",
           "answer": "はしない",
-          "hint": "Mẫu mục tiêu: ～はしない",
-          "reason": "Trong câu này, はしない thể hiện ý nghĩa: Tuyệt đối không V / Tuy không V nhưng....",
-          "wrongReason": "Đối chiếu với mẫu ～はしない và đọc lại nghĩa tiếng Việt.",
+          "hint": "信じはしない: hoàn toàn không tin, mạnh hơn 信じない.",
+          "reason": "Dù không chết, người bị axit vẫn chịu đau đớn; ～はしないが mang đối lập.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng ます bỏ ます + はしない（する→しはしない／しない; động từ khả năng できる→できはしない）. Dù không chết, người bị axit vẫn chịu đau đớn; ～はしないが mang đối lập.",
           "chunks": [
             "硫酸をかけられた場合、",
             "死にはしないが、",
@@ -762,17 +800,16 @@
         },
         {
           "sentence": "練習をすることなしに、優勝することなどできはしない。",
-          "reading": "",
+          "reading": "れんしゅうをすることなしに、ゆうしょうすることなどできはしない。",
           "translation": "Nếu không luyện tập thì tuyệt đối không thể nào giành chức vô địch được.",
           "blank": "練習をすることなしに、優勝することなどでき____。",
           "answer": "はしない",
-          "hint": "Mẫu mục tiêu: ～はしない",
-          "reason": "Trong câu này, はしない thể hiện ý nghĩa: Tuyệt đối không V / Tuy không V nhưng....",
-          "wrongReason": "Đối chiếu với mẫu ～はしない và đọc lại nghĩa tiếng Việt.",
+          "hint": "信じはしない: hoàn toàn không tin, mạnh hơn 信じない.",
+          "reason": "Không luyện tập thì không thể vô địch; できはしない nhấn mạnh “không thể nào”.",
+          "wrongReason": "Chú ý vị trí mẫu trong câu: Động từ dạng ます bỏ ます + はしない（する→しはしない／しない; động từ khả năng できる→できはしない）. Không luyện tập thì không thể vô địch; できはしない nhấn mạnh “không thể nào”.",
           "chunks": [
             "練習をすることなしに、",
-            "優勝すること",
-            "などできはしない。"
+            "優勝することなどできはしない。"
           ]
         }
       ],
