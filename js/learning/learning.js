@@ -77,6 +77,8 @@ let chapter = null;
 let lesson = null;
 let lessonData = null;
 
+let discoveryResult = null;
+
 let itemIndex = 0;
 let phase = "discover";
 
@@ -673,6 +675,7 @@ function resetCard() {
     chosen = [];
     feedback = "";
     manualHint = false;
+    discoveryResult = null;
 }
 
 function startPhase() {
