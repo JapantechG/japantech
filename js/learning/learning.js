@@ -77,7 +77,16 @@ let chapter = null;
 let lesson = null;
 let lessonData = null;
 
+
 let discoveryResult = null;
+
+// Trạng thái kết quả từng bước
+let practiceResult = null;
+let reverseResult = null;
+
+// Ghi nhớ nơi quay lại từ Collection
+let collectionReturn = "quest";
+
 
 let itemIndex = 0;
 let phase = "discover";
@@ -667,16 +676,20 @@ async function showChapters(courseId) {
    START LESSON
 ========================================== */
 
-function resetCard() {
 
+function resetCard() {
     guess = "";
     hint = 0;
     answer = "";
     chosen = [];
     feedback = "";
     manualHint = false;
+
     discoveryResult = null;
+    practiceResult = null;
+    reverseResult = null;
 }
+
 
 function startPhase() {
 
@@ -768,26 +781,54 @@ function optionList(item, kind, pool) {
    DISCOVERY EVIDENCE
 ========================================== */
 
+
 function evidence(item, kind) {
 
     if (kind === "vocabulary") {
 
+        const beginner =
+            course?.id === "n5" ||
+            course?.id === "n4";
+
         return `
             <div class="kl-giant">
                 ${safe(item.word)}
+
+                ${
+                    beginner && item.reading
+                        ? `<small class="kl-beginner-reading">
+                            ${safe(item.reading)}
+                           </small>`
+                        : ""
+                }
+
                 ${audioButton(
                     item.reading || item.word,
-                    "Đọc từ vựng"
+                    "Nghe từ vựng"
                 )}
             </div>
 
-            <div class="kl-evidence">
-                ${safe(item.example?.sentence || "")}
-                ${audioButton(
-                    item.example?.sentence,
-                    "Đọc câu ví dụ"
-                )}
+            <div class="kl-evidence kl-example-evidence">
+
+                <div class="kl-example-audio-line">
+                    <b>${safe(item.example?.sentence || "")}</b>
+                    ${audioButton(
+                        item.example?.sentence,
+                        "Nghe câu ví dụ"
+                    )}
+                </div>
+
+                <small>
+                    ${safe(item.example?.reading || "")}
+                </small>
+
             </div>
+
+            <p class="learn-muted">
+                Bạn chưa biết từ này?
+                Hãy thử đoán hoặc chọn
+                "Tôi chưa biết" để khám phá.
+            </p>
         `;
     }
 
@@ -798,15 +839,23 @@ function evidence(item, kind) {
                 ${safe(item.character)}
             </div>
 
-            <p>Đoán nghĩa từ các từ ghép:</p>
+            <p class="learn-muted">
+                Quan sát các từ ghép và thử tìm nghĩa chung.
+            </p>
 
             ${(item.relatedWords || [])
                 .slice(0, 3)
                 .map(w => `
-                    <div class="kl-evidence">
-                        <b>${safe(w.word)}</b>
-                        ${audioButton(w.reading || w.word)}
-                        <small>${safe(w.meaning)}</small>
+                    <div class="kl-evidence kl-example-evidence">
+
+                        <div class="kl-example-audio-line">
+                            <b>${safe(w.word)}</b>
+                            ${audioButton(w.reading || w.word)}
+                        </div>
+
+                        <small>${safe(w.reading || "")}</small>
+                        <small>${safe(w.meaning || "")}</small>
+
                     </div>
                 `).join("")}
         `;
@@ -817,46 +866,71 @@ function evidence(item, kind) {
             ${safe(item.grammar)}
         </div>
 
-        <p>Ba ví dụ có điểm chung gì?</p>
+        <p class="learn-muted">
+            Đọc các câu ví dụ.
+            Bạn nhận thấy mẫu ngữ pháp này
+            có ý nghĩa gì?
+        </p>
 
         ${(item.examples || [])
             .slice(0, 3)
             .map(e => `
-                <div class="kl-evidence">
-                    <b>${safe(e.sentence)}</b>
-                    ${audioButton(e.sentence)}
+                <div class="kl-evidence kl-example-evidence">
+
+                    <div class="kl-example-audio-line">
+                        <b>${safe(e.sentence)}</b>
+                        ${audioButton(e.sentence)}
+                    </div>
+
                     <small>${safe(e.translation)}</small>
+
                 </div>
             `).join("")}
     `;
 }
 
+
 /* ==========================================
    EXAMPLE CARD
 ========================================== */
+
 
 function exampleHTML(ex, allowHint = true) {
 
     if (!ex) return "";
 
     return `
-        <div class="kl-evidence">
-            <div class="kl-audio-line">
-                <b>${safe(ex.sentence)}</b>
-                ${audioButton(ex.sentence, "Đọc câu ví dụ")}
+        <div class="kl-evidence kl-example-evidence">
+
+            <div class="kl-example-audio-line">
+
+                <b>${safe(ex.sentence || "")}</b>
+
+                ${audioButton(
+                    ex.sentence,
+                    "Nghe câu ví dụ"
+                )}
+
             </div>
 
             ${
                 allowHint
                     ? `
-                        <small>${safe(ex.reading || "")}</small>
-                        <small>${safe(ex.translation || "")}</small>
+                        <small>
+                            ${safe(ex.reading || "")}
+                        </small>
+
+                        <small>
+                            ${safe(ex.translation || "")}
+                        </small>
                     `
                     : ""
             }
+
         </div>
     `;
 }
+
 
 /* ==========================================
    LEARN CONTENT
@@ -1105,7 +1179,7 @@ function reverseHTML(item, kind) {
 function knowledgeCard(
     item,
     kind,
-    { hinted = true } = {}
+    { hinted = true, embedded = false } = {}
 ) {
 
     let body = `
@@ -1216,22 +1290,35 @@ function knowledgeCard(
             .join("");
     }
 
+    
+    const content = `
+        ${cardImageHTML(item, kind)}
+        ${body}
+    `;
+
+    // Đang nằm trong khung thẻ chính:
+    // Không thêm logo và khung thẻ lần hai.
+    if (embedded) {
+        return content;
+    }
+
+    // Dùng trong Review hoặc Card Detail:
+    // Hiển thị thẻ hoàn chỉnh.
     return `
         <section
             class="kl-quest-card kl-type-${typeColor(kind)}">
 
-            <div class="learn-row">
+            <div class="learn-row kl-card-topline">
                 ${logo()}
                 ${stars(rating(item.id))}
             </div>
 
-            ${cardImageHTML(item, kind)}
-
-            ${body}
+            ${content}
 
         </section>
     `;
 }
+
 
 /* ==========================================
    QUEST SCREEN
@@ -1246,103 +1333,200 @@ function renderQuest() {
     const kind = typeOf();
     const s = rating(item.id);
 
-    let html = `
-        <div class="learn-row">
-            <button id="klPath" class="learn-btn">
-                ← Lộ trình
-            </button>
+    
+let html = `
+    <div class="learn-row kl-quest-toolbar">
 
-            <span>
-                ${itemIndex + 1}/${lessonData.items.length}
-            </span>
+        <button
+            id="klPath"
+            class="learn-btn">
+            ← Lộ trình
+        </button>
+
+        <button
+            id="klCollection"
+            class="learn-btn">
+            ▦ Collection
+        </button>
+
+        <span class="learn-muted">
+            ${itemIndex + 1}/${lessonData.items.length}
+        </span>
+
+    </div>
+
+    <section
+        class="kl-quest-card kl-type-${typeColor(kind)}">
+
+        <div class="learn-row kl-card-topline">
+            ${logo()}
+            ${stars(s)}
+        </div>
+`;
+
+
+    
+if (phase === "discover") {
+
+    const options = optionList(
+        item,
+        kind,
+        lessonData.items
+    );
+
+    const completed = discoveryResult !== null;
+
+    html += `
+        <div class="kl-stage-label">
+            🔍 DISCOVER · Khám phá kiến thức
         </div>
 
-        <div class="kl-collection-strip">
-            ${lessonData.items.map((x, i) => `
-                <button
-                    class="learn-chip"
-                    data-jump="${i}"
-                    ${i === itemIndex ? 'aria-current="true"' : ""}>
-                    ${rating(x.id) ? safe(titleOf(x)) : "?"}
-                </button>
-            `).join("")}
-        </div>
+        <p class="learn-muted">
+            Không cần biết trước.
+            Hãy thử suy luận hoặc khám phá đáp án.
+        </p>
 
-        ${mascot(
-            hint
-                ? "Hãy dùng các manh mối để suy luận!"
-                : "Mỗi sao là một bước làm chủ kiến thức."
-        )}
-
-        <section
-            class="kl-quest-card kl-type-${typeColor(kind)}">
-
-            <div class="learn-row">
-                ${logo()}
-                ${stars(s)}
-            </div>
+        ${evidence(item, kind)}
     `;
 
-    if (phase === "discover") {
-
-        const options = optionList(
-            item,
-            kind,
-            lessonData.items
-        );
+    if (!completed) {
 
         html += `
-            <div class="kl-stage-label">
-                🔍 DISCOVER · Suy luận trước
-            </div>
-
-            ${evidence(item, kind)}
-
             <div class="kl-options">
+
                 ${options.map((option, i) => `
                     <button
                         class="kl-option ${
                             guess === option ? "selected" : ""
                         }"
                         data-choice="${i}">
+
                         ${safe(option)}
+
                     </button>
                 `).join("")}
+
             </div>
         `;
 
-        if (hint) {
+        if (hint > 0) {
 
-            const hintText =
-                kind === "vocabulary"
-                    ? item.example?.hint || item.reading
-                    : kind === "kanji"
-                        ? item.hanViet
-                        : item.formation || item.explanation;
+            let hintText = "";
+
+            if (kind === "vocabulary") {
+
+                hintText =
+                    item.example?.reading ||
+                    "Hãy quan sát vị trí từ trong câu.";
+
+            } else if (kind === "kanji") {
+
+                hintText =
+                    "Nhìn các từ ghép và tìm điểm chung.";
+
+            } else {
+
+                hintText =
+                    item.examples?.[0]?.reading ||
+                    "Hãy so sánh các câu ví dụ.";
+            }
 
             html += `
                 <div class="kl-hint">
-                    ${safe(hintText)}
+                    💡 ${safe(hintText)}
                 </div>
             `;
         }
 
         html += `
             <div class="learn-actions">
-                <button id="klHint" class="learn-btn">
-                    💡 Hint
+
+                <button
+                    id="klHint"
+                    class="learn-btn">
+                    💡 Gợi ý
                 </button>
 
                 <button
                     id="klGuess"
                     class="learn-btn primary"
                     ${!guess ? "disabled" : ""}>
-                    Giải mã → 1★
+                    Kiểm tra đáp án
                 </button>
+
             </div>
+
+            <button
+                id="klDiscoverUnknown"
+                class="learn-btn kl-discover-unknown">
+
+                Tôi chưa biết · Xem đáp án
+
+            </button>
         `;
 
-    } else if (phase === "learn") {
+    } else {
+
+        const correct = discoveryResult.correct;
+        const unknown = discoveryResult.unknown;
+
+        const message = unknown
+            ? "Bạn vừa khám phá được một kiến thức mới!"
+            : correct
+                ? "🎉 Chính xác! Suy luận tốt lắm!"
+                : "💪 Chưa đúng, nhưng bạn đã tiến thêm một bước!";
+
+        html += `
+            <div
+                class="kl-discovery-result ${
+                    correct ? "correct" : "wrong"
+                }"
+                role="status">
+
+                <h3>${safe(message)}</h3>
+
+                <p class="kl-result-answer">
+
+                    <strong>${safe(titleOf(item))}</strong>
+
+                    ${
+                        kind === "vocabulary"
+                            ? `（${safe(item.reading)}）`
+                            : ""
+                    }
+
+                    — ${safe(item.meaning)}
+
+                </p>
+
+                <p>
+                    ${safe(
+                        item.explanation ||
+                        "Xem tiếp phần Learn để hiểu cách sử dụng."
+                    )}
+                </p>
+
+                <p class="kl-result-reward">
+                    ★ 1 sao đã mở khóa
+                </p>
+
+            </div>
+
+            <div class="learn-actions">
+
+                <button
+                    id="klContinueLearn"
+                    class="learn-btn primary">
+
+                    📖 Tiếp tục học →
+
+                </button>
+
+            </div>
+        `;
+    }
+
+}else if (phase === "learn") {
 
         html += `
             ${learnHTML(item, kind)}
@@ -1356,41 +1540,135 @@ function renderQuest() {
             </div>
         `;
 
-    } else if (phase === "practice") {
+    
+} else if (phase === "practice") {
 
-        html += `
-            <div class="kl-stage-label">
-                🎯 PRACTICE · 3★
-            </div>
+    html += `
+        <div class="kl-stage-label">
+            🎯 PRACTICE · 3★
+        </div>
 
-            ${practiceHTML(item, kind)}
+        ${
+            practiceResult?.correct
+                ? ""
+                : practiceHTML(item, kind)
+        }
 
-            <div class="learn-actions">
-                <button
-                    id="klCheck"
-                    class="learn-btn primary">
-                    Kiểm tra
-                </button>
-            </div>
-        `;
+        ${
+            practiceResult
+                ? `
+                    <div
+                        class="kl-discovery-result ${
+                            practiceResult.correct
+                                ? "correct"
+                                : "wrong"
+                        }">
 
-    } else if (phase === "reverse") {
+                        <h3>
+                            ${
+                                practiceResult.correct
+                                    ? "🎉 Làm tốt lắm! Bạn đã ghi nhớ kiến thức."
+                                    : "💪 Chưa đúng, cứ luyện thêm nhé!"
+                            }
+                        </h3>
 
-        html += `
-            <div class="kl-stage-label">
-                🧩 CHALLENGE · 4★
-            </div>
+                        <p>
+                            ${safe(practiceResult.message)}
+                        </p>
 
-            ${reverseHTML(item, kind)}
+                    </div>
+                `
+                : ""
+        }
 
-            <div class="learn-actions">
-                <button
-                    id="klReverseCheck"
-                    class="learn-btn primary">
-                    Kiểm tra thử thách
-                </button>
-            </div>
-        `;
+        <div class="learn-actions">
+
+            ${
+                practiceResult?.correct
+                    ? `
+                        <button
+                            id="klPracticeContinue"
+                            class="learn-btn primary">
+                            Tiếp tục thử thách →
+                        </button>
+                    `
+                    : `
+                        <button
+                            id="klCheck"
+                            class="learn-btn primary">
+                            Kiểm tra
+                        </button>
+                    `
+            }
+
+        </div>
+    `;
+
+
+    
+} else if (phase === "reverse") {
+
+    html += `
+        <div class="kl-stage-label">
+            🧩 REVERSE CHALLENGE · 4★
+        </div>
+
+        ${
+            reverseResult?.correct
+                ? ""
+                : reverseHTML(item, kind)
+        }
+
+        ${
+            reverseResult
+                ? `
+                    <div
+                        class="kl-discovery-result ${
+                            reverseResult.correct
+                                ? "correct"
+                                : "wrong"
+                        }">
+
+                        <h3>
+                            ${
+                                reverseResult.correct
+                                    ? "🏆 Tuyệt vời! Bạn đã vận dụng đúng."
+                                    : "💪 Thử lại nào, bạn đang tiến bộ!"
+                            }
+                        </h3>
+
+                        <p>
+                            ${safe(reverseResult.message)}
+                        </p>
+
+                    </div>
+                `
+                : ""
+        }
+
+        <div class="learn-actions">
+
+            ${
+                reverseResult?.correct
+                    ? `
+                        <button
+                            id="klReverseContinue"
+                            class="learn-btn primary">
+                            Xem thẻ 4★ →
+                        </button>
+                    `
+                    : `
+                        <button
+                            id="klReverseCheck"
+                            class="learn-btn primary">
+                            Kiểm tra thử thách
+                        </button>
+                    `
+            }
+
+        </div>
+    `;
+
 
     } else {
 
@@ -1403,7 +1681,7 @@ function renderQuest() {
                 }
             </div>
 
-            ${knowledgeCard(item, kind)}
+            ${knowledgeCard(item, kind, { embedded: true })}
 
             <p class="learn-muted">
                 ${
@@ -1452,6 +1730,7 @@ function renderQuest() {
     render(lesson.title, html);
 
     on("klPath", () => showChapters(course.id));
+    on("klCollection", () => openCollection("quest"));
     on("klPrev", () => moveCard(-1));
     on("klNext", () => moveCard(1));
 
@@ -1464,74 +1743,114 @@ function renderQuest() {
         };
     });
 
-    /* DISCOVERY */
+    
+/* ==========================================
+   DISCOVERY EVENTS
+========================================== */
 
-    if (phase === "discover") {
+if (phase === "discover") {
 
-        const options = optionList(
-            item,
-            kind,
-            lessonData.items
-        );
+    const options = optionList(
+        item,
+        kind,
+        lessonData.items
+    );
 
-        root().querySelectorAll("[data-choice]").forEach(button => {
+    if (!discoveryResult) {
 
-            button.onclick = () => {
-                guess = options[Number(button.dataset.choice)];
-                renderQuest();
-            };
-        });
+        root()
+            .querySelectorAll("[data-choice]")
+            .forEach(button => {
+
+                button.onclick = () => {
+
+                    if (busy) return;
+
+                    guess = options[
+                        Number(button.dataset.choice)
+                    ];
+
+                    renderQuest();
+                };
+            });
 
         on("klHint", () => {
+
             hint++;
+
             renderQuest();
         });
 
-        
-        on("klGuess", async () => {
-        
-            if (!guess || busy) {
-                return;
-            }
-        
-            const button = $("klGuess");
-        
+        async function finishDiscovery(unknown) {
+
+            if (busy || discoveryResult) return;
+
+            if (!unknown && !guess) return;
+
+            const correct =
+                !unknown && guess === item.meaning;
+
+            const button = $(
+                unknown
+                    ? "klDiscoverUnknown"
+                    : "klGuess"
+            );
+
             if (button) {
                 button.disabled = true;
-                button.textContent = "⏳ Đang lưu 1★...";
+                button.textContent = "⏳ Đang lưu sao...";
             }
-        
-            const isCorrect = guess === item.meaning;
-        
-            console.log("[DISCOVERY] Decode:", {
-                id: item.id,
-                selected: guess,
-                correct: item.meaning,
-                isCorrect
-            });
-        
+
+            // Lưu sao thật vào Firebase.
             const success = await earn(item, 1);
-        
+
             if (!success) {
-        
+
                 if (button?.isConnected) {
                     button.disabled = false;
-                    button.textContent = "Giải mã → 1★";
+
+                    button.textContent = unknown
+                        ? "Tôi chưa biết · Xem đáp án"
+                        : "Kiểm tra đáp án";
                 }
-        
+
                 return;
             }
-        
-            feedback = isCorrect
-                ? "✅ Giải mã chính xác! Đã nhận 1★ và 5 EXP."
-                : "Đã nhận 1★ và 5 EXP. Hãy học đáp án đúng.";
-        
-            phase = "learn";
-        
+
+            feedback = "";
+
+            discoveryResult = {
+                correct,
+                unknown
+            };
+
+            // Dừng ở màn phản hồi.
+            // Không chuyển thẳng sang Learn.
             renderQuest();
+        }
+
+        on("klGuess", () => {
+            finishDiscovery(false);
         });
 
+        on("klDiscoverUnknown", () => {
+            finishDiscovery(true);
+        });
+
+    } else {
+
+        on("klContinueLearn", () => {
+
+            discoveryResult = null;
+            feedback = "";
+
+            phase = "learn";
+
+            renderQuest();
+        });
     }
+}
+
 
     /* LEARN */
 
@@ -1567,45 +1886,65 @@ function renderQuest() {
             };
         }
 
+        
         on("klCheck", async () => {
-
+        
+            if (busy || practiceResult?.correct) return;
+        
             const ex = exampleOf(item, kind);
-
+        
             const expected =
                 kind === "kanji"
                     ? item.relatedWords?.[0]?.reading
                     : ex?.answer;
-
-            answer = input?.value || "";
-
-            const correct =
-                expected &&
+        
+            answer = $("klInput")?.value || "";
+        
+            const correct = Boolean(expected) &&
                 normalize(answer) === normalize(expected);
-
+        
             if (correct) {
-
+        
                 if (!(await earn(item, 3))) return;
-
+        
                 feedback = "";
-                phase = "reverse";
-
-                renderQuest();
-
+        
+                practiceResult = {
+                    correct: true,
+                    message:
+                        "Bạn đã nhận 3★. " +
+                        "Giờ hãy thử vận dụng kiến thức theo chiều ngược lại!"
+                };
+        
             } else {
-
-                feedback = `
-                    Đáp án: ${expected || "Chưa có"}.
-                    ${
-                        ex?.wrongReason ||
-                        ex?.reason ||
-                        item.explanation ||
-                        "Hãy xem lại ví dụ."
-                    }
-                `;
-
-                renderQuest();
+        
+                practiceResult = {
+                    correct: false,
+                    message:
+                        `Đáp án: ${expected || "Chưa có"}. ` +
+                        (
+                            ex?.wrongReason ||
+                            ex?.reason ||
+                            item.explanation ||
+                            "Hãy xem lại ví dụ."
+                        )
+                };
             }
+        
+            renderQuest();
         });
+        
+        on("klPracticeContinue", () => {
+        
+            practiceResult = null;
+            answer = "";
+            feedback = "";
+        
+            phase = "reverse";
+        
+            renderQuest();
+        });
+
     }
 
     /* REVERSE */
@@ -1653,7 +1992,7 @@ function renderQuest() {
         }
 
         on("klReverseCheck", async () => {
-
+            if (busy || reverseResult?.correct) return;
             const ex =
                 kind === "grammar"
                     ? (
@@ -1682,26 +2021,45 @@ function renderQuest() {
                         ) === normalize(expected)
                     );
 
+            
             if (correct) {
-
+            
                 if (!(await earn(item, 4))) return;
-
-                feedback =
-                    "Đã nhận 4★. Hãy vượt Chapter Test để nhận 5★.";
-
-                phase = "complete";
-
+            
+                feedback = "";
+            
+                reverseResult = {
+                    correct: true,
+                    message:
+                        "Đã nhận 4★. " +
+                        "Chapter Test sẽ giúp bạn đạt 5★!"
+                };
+            
             } else {
-
-                feedback =
-                    `Chưa đúng. ${
+            
+                reverseResult = {
+                    correct: false,
+                    message:
                         ex?.reason ||
                         ("Cách đọc đúng: " + expected)
-                    }`;
+                };
             }
+            
+            renderQuest();
 
+        });
+
+        
+        on("klReverseContinue", () => {
+        
+            reverseResult = null;
+            feedback = "";
+        
+            phase = "complete";
+        
             renderQuest();
         });
+
     }
 }
 
@@ -1761,7 +2119,13 @@ async function completeLesson() {
             <div class="kl-album">
 
                 ${lessonData.items.map(item => `
-                    <div class="kl-mini-card">
+                    
+                    <button
+                        class="kl-mini-card"
+                        type="button"
+                        data-card-id="${safe(item.id)}"
+                        ${rating(item.id) ? "" : "disabled"}>
+
 
                         ${logo()}
 
@@ -1781,7 +2145,7 @@ async function completeLesson() {
 
                         ${stars(rating(item.id))}
 
-                    </div>
+                    </button>
                 `).join("")}
 
             </div>
@@ -1818,6 +2182,19 @@ async function completeLesson() {
     on("klReview", () => {
         openReview(lessonData.items, typeOf());
     });
+
+        
+    root()?.querySelectorAll("[data-card-id]").forEach(button => {
+    
+        button.onclick = () => {
+    
+            openCardDetail(
+                button.dataset.cardId,
+                "complete"
+            );
+        };
+    });
+
 }
 
 /* ==========================================
@@ -2005,6 +2382,254 @@ function renderReview(autoRead = false) {
     if (autoRead && preferences.autoSpeak) {
         speakCard(item, reviewKind);
     }
+}
+
+
+/* =========================================================
+   BATLINGO COLLECTION
+   OPEN CARDS ANYTIME
+========================================================= */
+
+function openCollection(returnTo = "quest") {
+
+    stopLearningSpeech();
+
+    collectionReturn = returnTo;
+
+    if (!lessonData?.items?.length) {
+        return;
+    }
+
+    const items = lessonData.items;
+
+    const collected = items.filter(
+        item => rating(item.id) > 0
+    ).length;
+
+    render("MY COLLECTION", `
+
+        <div class="learn-row kl-quest-toolbar">
+
+            <button
+                id="klCollectionBack"
+                class="learn-btn">
+                ← Quay lại
+            </button>
+
+            <span class="learn-muted">
+                ${collected}/${items.length} thẻ
+            </span>
+
+        </div>
+
+        <p class="learn-muted">
+            Bấm vào bất kỳ thẻ đã mở khóa nào
+            để xem thông tin chi tiết.
+        </p>
+
+        <div class="kl-album kl-collection-grid">
+
+            ${items.map(item => `
+
+                <button
+                    class="kl-mini-card"
+                    type="button"
+                    data-card-id="${safe(item.id)}"
+                    ${rating(item.id) ? "" : "disabled"}>
+
+                    ${logo()}
+
+                    ${
+                        rating(item.id)
+                            ? cardImageHTML(
+                                item,
+                                typeOf(),
+                                true
+                              )
+                            : ""
+                    }
+
+                    <b>
+                        ${
+                            rating(item.id)
+                                ? safe(titleOf(item))
+                                : "?"
+                        }
+                    </b>
+
+                    ${stars(rating(item.id))}
+
+                </button>
+
+            `).join("")}
+
+        </div>
+    `);
+
+    on("klCollectionBack", returnFromCollection);
+
+    root()
+        ?.querySelectorAll("[data-card-id]")
+        .forEach(button => {
+
+            button.onclick = () => {
+
+                openCardDetail(
+                    button.dataset.cardId,
+                    "collection"
+                );
+            };
+        });
+}
+
+
+/* =========================================================
+   RETURN TO PREVIOUS SCREEN
+========================================================= */
+
+function returnFromCollection() {
+
+    if (collectionReturn === "complete") {
+
+        completeLesson();
+
+    } else {
+
+        renderQuest();
+    }
+}
+
+
+/* =========================================================
+   OPEN SINGLE KNOWLEDGE CARD
+========================================================= */
+
+function openCardDetail(
+    cardId,
+    from = "collection"
+) {
+
+    stopLearningSpeech();
+
+    const item = lessonData?.items?.find(
+        x => x.id === cardId
+    );
+
+    if (!item || rating(item.id) < 1) {
+        return;
+    }
+
+    const level = rating(cardId);
+
+    const description = level >= 2
+        ? "Bạn có thể xem lại thẻ và nghe phát âm bất cứ lúc nào."
+        : "Bạn đã khám phá đáp án. Hãy học tiếp để mở phần giải thích đầy đủ ở 2★.";
+
+    let content = "";
+
+    if (level >= 2) {
+
+        content = knowledgeCard(
+            item,
+            typeOf(),
+            { hinted: true }
+        );
+
+    } else {
+
+        content = `
+            <section
+                class="kl-quest-card kl-type-${typeColor(typeOf())}">
+
+                <div class="learn-row kl-card-topline">
+                    ${logo()}
+                    ${stars(level)}
+                </div>
+
+                <div class="kl-giant">
+                    ${safe(titleOf(item))}
+                </div>
+
+                <p class="kl-hv">
+                    ${safe(item.meaning)}
+                </p>
+
+            </section>
+        `;
+    }
+
+    render("KNOWLEDGE CARD", `
+
+        <div class="learn-row kl-quest-toolbar">
+
+            <button
+                id="klDetailBack"
+                class="learn-btn">
+                ← Quay lại
+            </button>
+
+            <span class="learn-muted">
+                ${safe(lesson?.title || "Collection")}
+            </span>
+
+        </div>
+
+        ${content}
+
+        <p class="learn-muted">
+            ${safe(description)}
+        </p>
+
+        <div class="learn-actions">
+
+            <button
+                id="klDetailSpeak"
+                class="learn-btn">
+                🔊 Đọc thẻ
+            </button>
+
+            <button
+                id="klDetailReturnLesson"
+                class="learn-btn primary">
+                Tiếp tục học
+            </button>
+
+        </div>
+    `);
+
+    on("klDetailBack", () => {
+
+        if (from === "complete") {
+
+            completeLesson();
+
+        } else {
+
+            openCollection(collectionReturn);
+        }
+    });
+
+    on("klDetailSpeak", () => {
+
+        speakCard(item, typeOf());
+    });
+
+    on("klDetailReturnLesson", () => {
+
+        const index = lessonData.items.findIndex(
+            x => x.id === cardId
+        );
+
+        if (index >= 0) {
+            itemIndex = index;
+        }
+
+        resetCard();
+
+        phase = startPhase();
+
+        renderQuest();
+    });
 }
 
 /* ==========================================
