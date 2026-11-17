@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch11-grammar",
+  "type": "grammar",
+  "title": "N1 · Ngữ pháp nâng cao 10",
+  "items": [
+    {
+      "id": "n1-lg093",
+      "grammar": "～に関わる",
+      "reading": "～にかかわる",
+      "meaning": "Ảnh hưởng tới N / Liên quan đến N",
+      "formation": "Cấu trúc: ～に関わる (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～に関わる diễn tả: Ảnh hưởng tới N / Liên quan đến N. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Ảnh hưởng tới N / Liên quan đến N"
+        },
+        {
+          "title": "Mẫu",
+          "text": "～に関わる"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Nếu V thì là hết / Nếu V thì coi như xong",
+          "Buộc phải N",
+          "Mặc dù... vậy mà... / Mang tiếng là... thế mà..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "佐藤さんが入院したと聞いてびっくりしたが、命にかかわる病気ではないそうで、安心した。",
+          "reading": "",
+          "translation": "Tôi rất bất ngờ khi nghe anh Sato nhập viện, nhưng nghe nói đó không phải là căn bệnh nguy hiểm đến tính mạng nên tôi đã yên tâm.",
+          "blank": "佐藤さんが入院したと聞いてびっくりしたが、命____病気ではないそうで、安心した。",
+          "answer": "にかかわる",
+          "hint": "Mẫu mục tiêu: ～に関わる",
+          "reason": "Trong câu này, にかかわる thể hiện ý nghĩa: Ảnh hưởng tới N / Liên quan đến N.",
+          "wrongReason": "Đối chiếu với mẫu ～に関わる và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "佐藤さんが入院したと聞いてびっくりしたが、",
+            "命にかかわる病気ではないそうで、",
+            "安心した。"
+          ]
+        },
+        {
+          "sentence": "会社は、サービス残業、パワハラなどコンプライアンスにかかわる問題を軽視してきた。",
+          "reading": "",
+          "translation": "Công ty đã xem nhẹ những vấn đề liên quan đến tuân thủ pháp luật và quy định như làm thêm giờ không lương, quấy rối quyền lực.",
+          "blank": "会社は、サービス残業、パワハラなどコンプライアンス____問題を軽視してきた。",
+          "answer": "にかかわる",
+          "hint": "Mẫu mục tiêu: ～に関わる",
+          "reason": "Trong câu này, にかかわる thể hiện ý nghĩa: Ảnh hưởng tới N / Liên quan đến N.",
+          "wrongReason": "Đối chiếu với mẫu ～に関わる và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "会社は、",
+            "サービス残業、",
+            "パワハラなどコンプライアンスにかかわる問題を軽視してきた。"
+          ]
+        },
+        {
+          "sentence": "今回の試験は志望する大学の合否にかかわるので、自然と全身に力が入る。",
+          "reading": "",
+          "translation": "Kỳ thi lần này ảnh hưởng đến việc đỗ hay trượt trường đại học mà tôi mong muốn, nên tự nhiên tôi cảm thấy vô cùng căng thẳng.",
+          "blank": "今回の試験は志望する大学の合否____ので、自然と全身に力が入る。",
+          "answer": "にかかわる",
+          "hint": "Mẫu mục tiêu: ～に関わる",
+          "reason": "Trong câu này, にかかわる thể hiện ý nghĩa: Ảnh hưởng tới N / Liên quan đến N.",
+          "wrongReason": "Đối chiếu với mẫu ～に関わる và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "今回の試験は",
+            "志望する大学の合否にかかわるので、",
+            "自然と全身に力が入る。"
+          ]
+        }
+      ],
+      "sourceId": 91
+    },
+    {
+      "id": "n1-lg094",
+      "grammar": "～いかんで（は）／～いかんによって（は）",
+      "reading": "～いかんで（は）／～いかんによって（は）",
+      "meaning": "Tùy vào N / Dựa vào N / Phụ thuộc vào N mà...",
+      "formation": "Cấu trúc: ～いかんで（は）／～いかんによって（は） (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～いかんで（は）／～いかんによって（は） diễn tả: Tùy vào N / Dựa vào N / Phụ thuộc vào N mà.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Tùy vào N / Dựa vào N / Phụ thuộc vào N mà..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～いかんで（は）／～いかんによって（は）"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Đã đạt đến / Đã có thể đến mức...",
+          "Khởi đầu với N / Đầu tiên là N, sau đó...",
+          "Chỉ có N / Chính là N nên mới có thể..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "テストの結果いかんでは、大学を辞めなければならないかもしれない。",
+          "reading": "",
+          "translation": "Tùy vào kết quả bài kiểm tra, có lẽ tôi sẽ phải nghỉ học đại học.",
+          "blank": "テストの結果____、大学を辞めなければならないかもしれない。",
+          "answer": "いかんでは",
+          "hint": "Mẫu mục tiêu: ～いかんで（は）／～いかんによって（は）",
+          "reason": "Trong câu này, いかんでは thể hiện ý nghĩa: Tùy vào N / Dựa vào N / Phụ thuộc vào N mà....",
+          "wrongReason": "Đối chiếu với mẫu ～いかんで（は）／～いかんによって（は） và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "テストの結果いかんでは、",
+            "大学を辞めなければならないかも",
+            "しれない。"
+          ]
+        },
+        {
+          "sentence": "お支払い後は、理由のいかんに関わらずキャンセルすることはできません。",
+          "reading": "",
+          "translation": "Sau khi thanh toán, bất kể lý do là gì cũng không thể hủy.",
+          "blank": "お支払い後は、理由____キャンセルすることはできません。",
+          "answer": "のいかんに関わらず",
+          "hint": "Mẫu mục tiêu: ～いかんで（は）／～いかんによって（は）",
+          "reason": "Trong câu này, のいかんに関わらず thể hiện ý nghĩa: Tùy vào N / Dựa vào N / Phụ thuộc vào N mà....",
+          "wrongReason": "Đối chiếu với mẫu ～いかんで（は）／～いかんによって（は） và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "お支払い後は、",
+            "理由のいかんに",
+            "関わらずキャンセルすることはできません。"
+          ]
+        },
+        {
+          "sentence": "日本語の森は、国籍のいかんを問わず利用できるサービスです。",
+          "reading": "",
+          "translation": "Nihongo no Mori là dịch vụ có thể sử dụng bất kể quốc tịch.",
+          "blank": "日本語の森は、国籍____利用できるサービスです。",
+          "answer": "のいかんを問わず",
+          "hint": "Mẫu mục tiêu: ～いかんで（は）／～いかんによって（は）",
+          "reason": "Trong câu này, のいかんを問わず thể hiện ý nghĩa: Tùy vào N / Dựa vào N / Phụ thuộc vào N mà....",
+          "wrongReason": "Đối chiếu với mẫu ～いかんで（は）／～いかんによって（は） và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "日本語の森は、",
+            "国籍のいかんを問わず利用で",
+            "きるサービスです。"
+          ]
+        }
+      ],
+      "sourceId": 92
+    },
+    {
+      "id": "n1-lg095",
+      "grammar": "～いかんにかかわらず／～いかんによらず／～いかんをとわず",
+      "reading": "～いかんにかかわらず／～いかんによらず／～いかんをとわず",
+      "meaning": "Bất kể... / Không phụ thuộc vào...",
+      "formation": "Cấu trúc: ～いかんにかかわらず／～いかんによらず／～いかんをとわず (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～いかんにかかわらず／～いかんによらず／～いかんをとわず diễn tả: Bất kể... / Không phụ thuộc vào.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Bất kể... / Không phụ thuộc vào..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～いかんにかかわらず／～いかんによらず／～いかんをとわず"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Chính vì... / Trước mặt... nên",
+          "Thông qua N / Bằng N",
+          "Chỉ trong... / Từ lúc sinh ra, bẩm sinh, thường... / May mà, bất hạnh thay là..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "結果のいかんによらず、難しい課題に挑戦しただけでもすばらしいと思う。",
+          "reading": "",
+          "translation": "Bất kể kết quả thế nào, tôi nghĩ chỉ riêng việc dám thử sức với một nhiệm vụ khó cũng đã rất tuyệt vời.",
+          "blank": "結果の____、難しい課題に挑戦しただけでもすばらしいと思う。",
+          "answer": "いかんによらず",
+          "hint": "Mẫu mục tiêu: ～いかんにかかわらず／～いかんによらず／～いかんをとわず",
+          "reason": "Trong câu này, いかんによらず thể hiện ý nghĩa: Bất kể... / Không phụ thuộc vào....",
+          "wrongReason": "Đối chiếu với mẫu ～いかんにかかわらず／～いかんによらず／～いかんをとわず và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "結果のいかんによらず、",
+            "難しい課題に挑戦しただけで",
+            "もすばらしいと思う。"
+          ]
+        },
+        {
+          "sentence": "この授業は、英語能力のいかんをとわず誰でも受けることができます。",
+          "reading": "",
+          "translation": "Lớp học này bất kể năng lực tiếng Anh thế nào thì bất kỳ ai cũng có thể tham gia.",
+          "blank": "この授業は、英語能力____誰でも受けることができます。",
+          "answer": "のいかんをとわず",
+          "hint": "Mẫu mục tiêu: ～いかんにかかわらず／～いかんによらず／～いかんをとわず",
+          "reason": "Trong câu này, のいかんをとわず thể hiện ý nghĩa: Bất kể... / Không phụ thuộc vào....",
+          "wrongReason": "Đối chiếu với mẫu ～いかんにかかわらず／～いかんによらず／～いかんをとわず và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "この授業は、",
+            "英語能力のいかんをとわず誰で",
+            "も受けることができます。"
+          ]
+        },
+        {
+          "sentence": "授業に30分以上遅刻をしたものは、理由のいかんを問わず欠席扱いとする。",
+          "reading": "",
+          "translation": "Người đi học muộn từ 30 phút trở lên sẽ bị tính là vắng mặt, bất kể lý do là gì.",
+          "blank": "授業に30分以上遅刻をしたものは、理由____欠席扱いとする。",
+          "answer": "のいかんを問わず",
+          "hint": "Mẫu mục tiêu: ～いかんにかかわらず／～いかんによらず／～いかんをとわず",
+          "reason": "Trong câu này, のいかんを問わず thể hiện ý nghĩa: Bất kể... / Không phụ thuộc vào....",
+          "wrongReason": "Đối chiếu với mẫu ～いかんにかかわらず／～いかんによらず／～いかんをとわず và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "授業に30分以上遅刻をしたものは、",
+            "理由のいかんを",
+            "問わず欠席扱いとする。"
+          ]
+        }
+      ],
+      "sourceId": 93
+    },
+    {
+      "id": "n1-lg096",
+      "grammar": "～まじき",
+      "reading": "～まじき",
+      "meaning": "Không thể chấp nhận được / Không nên có đối với...",
+      "formation": "Cấu trúc: ～まじき (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～まじき diễn tả: Không thể chấp nhận được / Không nên có đối với.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Không thể chấp nhận được / Không nên có đối với..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～まじき"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Cả... nữa / Vì cũng...",
+          "Nốt (thời gian) / Sau (thời gian) sẽ... (kết thúc)",
+          "Cuối cùng thì... / Rốt cuộc thì... / Kết cục thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "彼の態度は、スポーツ選手としてあるまじき態度だ。",
+          "reading": "",
+          "translation": "Thái độ của anh ta là một thái độ không thể chấp nhận được đối với một vận động viên thể thao.",
+          "blank": "彼の態度は、スポーツ選手としてある____態度だ。",
+          "answer": "まじき",
+          "hint": "Mẫu mục tiêu: ～まじき",
+          "reason": "Trong câu này, まじき thể hiện ý nghĩa: Không thể chấp nhận được / Không nên có đối với....",
+          "wrongReason": "Đối chiếu với mẫu ～まじき và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "彼の態度は、",
+            "スポーツ選手と",
+            "してあるまじき態度だ。"
+          ]
+        },
+        {
+          "sentence": "会社の機密情報を、SNS上に流出させるなんて、会社員としてあるまじき行為だ。",
+          "reading": "",
+          "translation": "Làm rò rỉ thông tin mật của công ty lên mạng xã hội là hành vi không thể chấp nhận được đối với một nhân viên công ty.",
+          "blank": "会社の機密情報を、SNS上に流出させるなんて、会社員としてある____行為だ。",
+          "answer": "まじき",
+          "hint": "Mẫu mục tiêu: ～まじき",
+          "reason": "Trong câu này, まじき thể hiện ý nghĩa: Không thể chấp nhận được / Không nên có đối với....",
+          "wrongReason": "Đối chiếu với mẫu ～まじき và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "会社の機密情報を、",
+            "SNS上に流出させるなんて、",
+            "会社員としてあるまじき行為だ。"
+          ]
+        },
+        {
+          "sentence": "飲酒をして、事故を巻き起こすなんて警官としてあるまじき行為だ。",
+          "reading": "",
+          "translation": "Uống rượu rồi gây ra tai nạn là hành vi không thể chấp nhận được đối với một cảnh sát.",
+          "blank": "飲酒をして、事故を巻き起こすなんて警官としてある____行為だ。",
+          "answer": "まじき",
+          "hint": "Mẫu mục tiêu: ～まじき",
+          "reason": "Trong câu này, まじき thể hiện ý nghĩa: Không thể chấp nhận được / Không nên có đối với....",
+          "wrongReason": "Đối chiếu với mẫu ～まじき và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "飲酒をして、",
+            "事故を巻き起こすなんて警官と",
+            "してあるまじき行為だ。"
+          ]
+        }
+      ],
+      "sourceId": 94
+    },
+    {
+      "id": "n1-lg097",
+      "grammar": "～たが最後／～たら最後",
+      "reading": "～たがさいご／～たらさいご",
+      "meaning": "Một khi... thì... / Nếu mà làm... thì...",
+      "formation": "Cấu trúc: ～たが最後／～たら最後 (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～たが最後／～たら最後 diễn tả: Một khi... thì... / Nếu mà làm... thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Một khi... thì... / Nếu mà làm... thì..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～たが最後／～たら最後"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Giống như là... / Tựa như là...",
+          "N là lần cuối, sau đó...",
+          "Vừa mới V là lập tức..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "一度手を出したが最後、麻薬はあなたの体だけでなく心も壊してしまいます。",
+          "reading": "",
+          "translation": "Một khi đã dính vào ma túy thì nó sẽ hủy hoại không chỉ cơ thể mà cả tâm hồn của bạn.",
+          "blank": "一度手を出し____、麻薬はあなたの体だけでなく心も壊してしまいます。",
+          "answer": "たが最後",
+          "hint": "Mẫu mục tiêu: ～たが最後／～たら最後",
+          "reason": "Trong câu này, たが最後 thể hiện ý nghĩa: Một khi... thì... / Nếu mà làm... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～たが最後／～たら最後 và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "一度手を出したが最後、",
+            "麻薬はあなたの体だけで",
+            "なく心も壊してしまいます。"
+          ]
+        },
+        {
+          "sentence": "Aさんの信頼を失ったが最後、根に持つ性格だから一度見限った人を二度と信頼しない。",
+          "reading": "",
+          "translation": "Một khi đã đánh mất lòng tin của anh A thì vì anh ấy là người hay để bụng, người mà anh ấy đã mất niềm tin một lần sẽ không bao giờ được tin tưởng lại.",
+          "blank": "Aさんの信頼を失っ____、根に持つ性格だから一度見限った人を二度と信頼しない。",
+          "answer": "たが最後",
+          "hint": "Mẫu mục tiêu: ～たが最後／～たら最後",
+          "reason": "Trong câu này, たが最後 thể hiện ý nghĩa: Một khi... thì... / Nếu mà làm... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～たが最後／～たら最後 và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "Aさんの信頼を失ったが最後、",
+            "根に持つ性格だから一度見限った人を",
+            "二度と信頼しない。"
+          ]
+        },
+        {
+          "sentence": "パソコンを開いたが最後、オンラインゲームに熱中してしまい、いつの間にか数時間が過ぎていた。",
+          "reading": "",
+          "translation": "Một khi đã mở máy tính ra thì tôi lại mải mê chơi game online, đến lúc nhận ra thì đã vài tiếng trôi qua.",
+          "blank": "パソコンを開い____、オンラインゲームに熱中してしまい、いつの間にか数時間が過ぎていた。",
+          "answer": "たが最後",
+          "hint": "Mẫu mục tiêu: ～たが最後／～たら最後",
+          "reason": "Trong câu này, たが最後 thể hiện ý nghĩa: Một khi... thì... / Nếu mà làm... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～たが最後／～たら最後 và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "パソコンを開いたが最後、",
+            "オンラインゲームに熱中してしまい、",
+            "いつの間にか数時間が過ぎていた。"
+          ]
+        }
+      ],
+      "sourceId": 95
+    },
+    {
+      "id": "n1-lg098",
+      "grammar": "～が早いか",
+      "reading": "～がはやいか",
+      "meaning": "Ngay khi vừa mới... thì đã...",
+      "formation": "Cấu trúc: ～が早いか (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～が早いか diễn tả: Ngay khi vừa mới... thì đã.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Ngay khi vừa mới... thì đã..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～が早いか"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Tầm như... / Những thứ như...",
+          "Gần đến N1",
+          "Dù thế nào đi nữa thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "家に帰ってきたが早いか、娘は遊びに出かけてしまった。",
+          "reading": "",
+          "translation": "Vừa mới về đến nhà thì con gái tôi đã đi ra ngoài chơi.",
+          "blank": "家に帰ってきた____、娘は遊びに出かけてしまった。",
+          "answer": "が早いか",
+          "hint": "Mẫu mục tiêu: ～が早いか",
+          "reason": "Trong câu này, が早いか thể hiện ý nghĩa: Ngay khi vừa mới... thì đã....",
+          "wrongReason": "Đối chiếu với mẫu ～が早いか và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "家に帰ってきたが早いか、",
+            "娘は遊びに",
+            "出かけてしまった。"
+          ]
+        },
+        {
+          "sentence": "海で溺れている子どもを見るが早いか、少年は勢いよく海に飛び込んだ。",
+          "reading": "",
+          "translation": "Ngay khi vừa nhìn thấy một đứa trẻ đang bị đuối nước ngoài biển, cậu thiếu niên đã lập tức lao xuống biển.",
+          "blank": "海で溺れている子どもを見る____、少年は勢いよく海に飛び込んだ。",
+          "answer": "が早いか",
+          "hint": "Mẫu mục tiêu: ～が早いか",
+          "reason": "Trong câu này, が早いか thể hiện ý nghĩa: Ngay khi vừa mới... thì đã....",
+          "wrongReason": "Đối chiếu với mẫu ～が早いか và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "海で溺れている子ども",
+            "を見るが早いか、",
+            "少年は勢いよく海に飛び込んだ。"
+          ]
+        },
+        {
+          "sentence": "授業終了のチャイムが鳴るが早いか、生徒たちは教室を飛び出して帰ってしまった。",
+          "reading": "",
+          "translation": "Ngay khi tiếng chuông kết thúc giờ học vừa vang lên, các học sinh đã lao ra khỏi lớp và về nhà.",
+          "blank": "授業終了のチャイムが鳴る____、生徒たちは教室を飛び出して帰ってしまった。",
+          "answer": "が早いか",
+          "hint": "Mẫu mục tiêu: ～が早いか",
+          "reason": "Trong câu này, が早いか thể hiện ý nghĩa: Ngay khi vừa mới... thì đã....",
+          "wrongReason": "Đối chiếu với mẫu ～が早いか và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "授業終了のチャイムが鳴るが早いか、",
+            "生徒たちは教室を",
+            "飛び出して帰ってしまった。"
+          ]
+        }
+      ],
+      "sourceId": 96
+    },
+    {
+      "id": "n1-lg099",
+      "grammar": "～や否や／～や",
+      "reading": "～やいなや／～や",
+      "meaning": "Vừa mới... thì đã...",
+      "formation": "Cấu trúc: ～や否や／～や (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～や否や／～や diễn tả: Vừa mới... thì đã.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Vừa mới... thì đã..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～や否や／～や"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Từ đáy lòng vẫn luôn / Vẫn mãi... / Vô cùng...",
+          "Tùy vào cách V mà...",
+          "Dù không đến mức... nhưng tối thiểu thì cũng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "教師が教室に入るや否や、学生たちは水を打ったように静かになった。",
+          "reading": "",
+          "translation": "Ngay khi giáo viên vừa bước vào lớp, các học sinh lập tức trở nên im phăng phắc.",
+          "blank": "教師が教室に入る____、学生たちは水を打ったように静かになった。",
+          "answer": "や否や",
+          "hint": "Mẫu mục tiêu: ～や否や／～や",
+          "reason": "Trong câu này, や否や thể hiện ý nghĩa: Vừa mới... thì đã....",
+          "wrongReason": "Đối chiếu với mẫu ～や否や／～や và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "教師が教室に入るや否や、",
+            "学生たちは水を",
+            "打ったように静かになった。"
+          ]
+        },
+        {
+          "sentence": "医師の治療を受けるや否や、脱臼した肩の痛みが引いていった。",
+          "reading": "",
+          "translation": "Ngay khi vừa được bác sĩ điều trị, cơn đau ở vai bị trật khớp đã dần giảm xuống.",
+          "blank": "医師の治療を受ける____、脱臼した肩の痛みが引いていった。",
+          "answer": "や否や",
+          "hint": "Mẫu mục tiêu: ～や否や／～や",
+          "reason": "Trong câu này, や否や thể hiện ý nghĩa: Vừa mới... thì đã....",
+          "wrongReason": "Đối chiếu với mẫu ～や否や／～や và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "医師の治療を受けるや否や、",
+            "脱臼した肩の痛みが",
+            "引いていった。"
+          ]
+        },
+        {
+          "sentence": "その客は、開いている席に着くや否や、「コーヒー１つ」と注文した。",
+          "reading": "",
+          "translation": "Vị khách đó vừa ngồi xuống chỗ trống thì lập tức gọi: \"Một cà phê.\"",
+          "blank": "その客は、開いている席に着く____、「コーヒー１つ」と注文した。",
+          "answer": "や否や",
+          "hint": "Mẫu mục tiêu: ～や否や／～や",
+          "reason": "Trong câu này, や否や thể hiện ý nghĩa: Vừa mới... thì đã....",
+          "wrongReason": "Đối chiếu với mẫu ～や否や／～や và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "その客は、",
+            "開いている席に着くや否や、",
+            "「コーヒー１つ」と注文した。"
+          ]
+        }
+      ],
+      "sourceId": 97
+    },
+    {
+      "id": "n1-lg100",
+      "grammar": "いざ～となると／～となれば",
+      "reading": "いざ～となると／～となれば",
+      "meaning": "Đến lúc... thì... / Đến khi thực sự... thì...",
+      "formation": "Cấu trúc: いざ～となると／～となれば (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu いざ～となると／～となれば diễn tả: Đến lúc... thì... / Đến khi thực sự... thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Đến lúc... thì... / Đến khi thực sự... thì..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "いざ～となると／～となれば"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Cuối cùng cũng không... / Không kịp...",
+          "Dù muốn... cũng không...",
+          "Tuy... nhưng... / ... vậy thôi chứ..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "何度も練習してきたのに、いざ発表となったら緊張してしまって、思っていたことの半分くらいしか伝えられなかった。",
+          "reading": "",
+          "translation": "Mặc dù đã luyện tập rất nhiều lần, nhưng đến lúc thực sự phải thuyết trình thì tôi lại căng thẳng và chỉ truyền đạt được khoảng một nửa những gì mình định nói.",
+          "blank": "何度も練習してきたのに、いざ発表____緊張してしまって、思っていたことの半分くらいしか伝えられなかった。",
+          "answer": "となったら",
+          "hint": "Mẫu mục tiêu: いざ～となると／～となれば",
+          "reason": "Trong câu này, となったら thể hiện ý nghĩa: Đến lúc... thì... / Đến khi thực sự... thì....",
+          "wrongReason": "Đối chiếu với mẫu いざ～となると／～となれば và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "何度も練習してきたのに、",
+            "いざ発表となったら緊張してしまって、",
+            "思っていたことの半分くらいしか伝えられなかった。"
+          ]
+        },
+        {
+          "sentence": "いつも片付けよう、片付けようとは思っているものの、いざ片付けるとなると、どこから始めていいのかわからない。",
+          "reading": "",
+          "translation": "Mặc dù lúc nào tôi cũng nghĩ phải dọn dẹp, nhưng đến lúc thực sự bắt tay vào dọn thì lại không biết nên bắt đầu từ đâu.",
+          "blank": "いつも片付けよう、片付けようとは思っているものの、いざ片付ける____、どこから始めていいのかわからない。",
+          "answer": "となると",
+          "hint": "Mẫu mục tiêu: いざ～となると／～となれば",
+          "reason": "Trong câu này, となると thể hiện ý nghĩa: Đến lúc... thì... / Đến khi thực sự... thì....",
+          "wrongReason": "Đối chiếu với mẫu いざ～となると／～となれば và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "いつも片付けよう、",
+            "片付けようとは思っているものの、",
+            "いざ片付けるとなると、",
+            "どこから始めていいのかわからない。"
+          ]
+        },
+        {
+          "sentence": "他の人を客観的に判断したり評価したりするのは簡単だが、いざ自分のこととなれば全然客観的に見られないものだ。",
+          "reading": "",
+          "translation": "Đánh giá hay nhận xét người khác một cách khách quan thì dễ, nhưng đến khi nói về chính bản thân mình thì lại hoàn toàn không thể nhìn nhận một cách khách quan.",
+          "blank": "他の人を客観的に判断したり評価したりするのは簡単だが、いざ自分のこと____全然客観的に見られないものだ。",
+          "answer": "となれば",
+          "hint": "Mẫu mục tiêu: いざ～となると／～となれば",
+          "reason": "Trong câu này, となれば thể hiện ý nghĩa: Đến lúc... thì... / Đến khi thực sự... thì....",
+          "wrongReason": "Đối chiếu với mẫu いざ～となると／～となれば và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "他の人を客観的に",
+            "判断したり評価したりするのは簡単だが、",
+            "いざ自分のこととなれば全然客観的に見られないものだ。"
+          ]
+        }
+      ],
+      "sourceId": 98
+    },
+    {
+      "id": "n1-lg101",
+      "grammar": "～ならまだしも",
+      "reading": "～ならまだしも",
+      "meaning": "Nếu là... thì còn được / Nếu là... thì còn đành, nhưng...",
+      "formation": "Cấu trúc: ～ならまだしも (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ならまだしも diễn tả: Nếu là... thì còn được / Nếu là... thì còn đành, nhưng.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Nếu là... thì còn được / Nếu là... thì còn đành, nhưng..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ならまだしも"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Nhất định / Chắc chắn phải... / Không... thì không xong",
+          "Có hay không thì... / Có hay không...",
+          "Dù nói là... cũng không quá lời"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "周りの人が迷惑しているならまだしも、特に問題ないならあなたが口出しすることじゃないでしょう。",
+          "reading": "",
+          "translation": "Nếu những người xung quanh đang bị làm phiền thì còn được, nhưng nếu chẳng có vấn đề gì đặc biệt thì đâu phải chuyện để bạn xen vào.",
+          "blank": "周りの人が迷惑している____、特に問題ないならあなたが口出しすることじゃないでしょう。",
+          "answer": "ならまだしも",
+          "hint": "Mẫu mục tiêu: ～ならまだしも",
+          "reason": "Trong câu này, ならまだしも thể hiện ý nghĩa: Nếu là... thì còn được / Nếu là... thì còn đành, nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～ならまだしも và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "周りの人が迷惑しているならまだしも、",
+            "特に問題ないならあなたが",
+            "口出しすることじゃないでしょう。"
+          ]
+        },
+        {
+          "sentence": "ちゃんと働いている人に言われるならまだしも、引きこもりのお前にだけは言われたくないよ。",
+          "reading": "",
+          "translation": "Nếu bị một người đang làm việc đàng hoàng nói thì còn chấp nhận được, nhưng riêng một kẻ chỉ ru rú trong nhà như mày thì tôi không muốn bị nói như vậy.",
+          "blank": "ちゃんと働いている人に言われる____、引きこもりのお前にだけは言われたくないよ。",
+          "answer": "ならまだしも",
+          "hint": "Mẫu mục tiêu: ～ならまだしも",
+          "reason": "Trong câu này, ならまだしも thể hiện ý nghĩa: Nếu là... thì còn được / Nếu là... thì còn đành, nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～ならまだしも và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "ちゃんと働いている人に",
+            "言われるならまだしも、",
+            "引きこもりのお前にだけは言われたくないよ。"
+          ]
+        },
+        {
+          "sentence": "私のことを無視するならまだしも、気に入らないからと言って叩いたり、他の人に悪口を言ったりするのは許せない。",
+          "reading": "",
+          "translation": "Nếu chỉ phớt lờ tôi thì còn có thể chấp nhận được, nhưng chỉ vì không ưa mà đánh tôi hay nói xấu tôi với người khác thì không thể tha thứ được.",
+          "blank": "私のことを無視する____、気に入らないからと言って叩いたり、他の人に悪口を言ったりするのは許せない。",
+          "answer": "ならまだしも",
+          "hint": "Mẫu mục tiêu: ～ならまだしも",
+          "reason": "Trong câu này, ならまだしも thể hiện ý nghĩa: Nếu là... thì còn được / Nếu là... thì còn đành, nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～ならまだしも và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "私のことを無視するならまだしも、",
+            "気に入らないからと言って叩いたり、",
+            "他の人に悪口を言ったりするのは許せない。"
+          ]
+        }
+      ],
+      "sourceId": 99
+    },
+    {
+      "id": "n1-lg102",
+      "grammar": "～ならいざ知らず",
+      "reading": "～ならいざしらず",
+      "meaning": "Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng...",
+      "formation": "Cấu trúc: ～ならいざ知らず (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ならいざ知らず diễn tả: Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ならいざ知らず"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "N2 có được / tồn tại được là nhờ có N1",
+          "Nhân dịp... / Nhân việc...",
+          "Cho dù... thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "スポーツ選手ならいざ知らず、ただ健康になりたいという人にはこういった本格的な筋トレは必要ない。",
+          "reading": "",
+          "translation": "Nếu là vận động viên thể thao thì đã đành, nhưng đối với người chỉ muốn khỏe mạnh thì không cần những bài tập cơ bắp chuyên sâu như thế này.",
+          "blank": "スポーツ選手____、ただ健康になりたいという人にはこういった本格的な筋トレは必要ない。",
+          "answer": "ならいざ知らず",
+          "hint": "Mẫu mục tiêu: ～ならいざ知らず",
+          "reason": "Trong câu này, ならいざ知らず thể hiện ý nghĩa: Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～ならいざ知らず và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "スポーツ選手ならいざ知らず、",
+            "ただ健康になりたいという人には",
+            "こういった本格的な筋トレは必要ない。"
+          ]
+        },
+        {
+          "sentence": "安いサービスならいざ知らず、大金を払ってこんなサービス内容なのは如何なものだろうか。",
+          "reading": "",
+          "translation": "Nếu là dịch vụ giá rẻ thì còn là một nhẽ, nhưng đã trả một số tiền lớn mà chất lượng dịch vụ lại như thế này thì thật khó chấp nhận.",
+          "blank": "安いサービス____、大金を払ってこんなサービス内容なのは如何なものだろうか。",
+          "answer": "ならいざ知らず",
+          "hint": "Mẫu mục tiêu: ～ならいざ知らず",
+          "reason": "Trong câu này, ならいざ知らず thể hiện ý nghĩa: Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～ならいざ知らず và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "安いサービスならいざ知らず、",
+            "大金を払ってこんなサービス内容なのは",
+            "如何なものだろうか。"
+          ]
+        },
+        {
+          "sentence": "新入社員ならいざ知らず、入社5年目のキミがこのようなミスを犯すなんて信じられない。",
+          "reading": "",
+          "translation": "Nếu là nhân viên mới thì còn có thể hiểu được, nhưng một người đã vào công ty năm thứ năm như cậu mà lại mắc lỗi như thế này thì thật khó tin.",
+          "blank": "新入社員____、入社5年目のキミがこのようなミスを犯すなんて信じられない。",
+          "answer": "ならいざ知らず",
+          "hint": "Mẫu mục tiêu: ～ならいざ知らず",
+          "reason": "Trong câu này, ならいざ知らず thể hiện ý nghĩa: Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～ならいざ知らず và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "新入社員ならいざ知らず、",
+            "入社5年目のキミがこのようなミスを",
+            "犯すなんて信じられない。"
+          ]
+        }
+      ],
+      "sourceId": 100
+    }
+  ]
+}

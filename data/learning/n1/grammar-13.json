@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch13-grammar",
+  "type": "grammar",
+  "title": "N1 · Ngữ pháp nâng cao 12",
+  "items": [
+    {
+      "id": "n1-lg113",
+      "grammar": "～ないではすまない",
+      "reading": "～ないではすまない",
+      "meaning": "Nhất định / Chắc chắn phải... / Không... thì không xong",
+      "formation": "Cấu trúc: ～ないではすまない (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ないではすまない diễn tả: Nhất định / Chắc chắn phải... / Không... thì không xong. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Nhất định / Chắc chắn phải... / Không... thì không xong"
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ないではすまない"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "N là lần cuối, sau đó...",
+          "Vừa mới V là lập tức...",
+          "Thì đã... rồi / Lẽ ra là..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "学校内で起きた事故について、保護者には事故の経緯を説明しないではすまない。",
+          "reading": "",
+          "translation": "Về tai nạn xảy ra trong trường, nhất định phải giải thích cho phụ huynh về diễn biến của vụ tai nạn.",
+          "blank": "学校内で起きた事故について、保護者には事故の経緯を説明し____。",
+          "answer": "ないではすまない",
+          "hint": "Mẫu mục tiêu: ～ないではすまない",
+          "reason": "Trong câu này, ないではすまない thể hiện ý nghĩa: Nhất định / Chắc chắn phải... / Không... thì không xong.",
+          "wrongReason": "Đối chiếu với mẫu ～ないではすまない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "学校内で起きた事故について、",
+            "保護者には事故の経緯を",
+            "説明しないではすまない。"
+          ]
+        },
+        {
+          "sentence": "会社の情報を盗んだ社員は、処分しないではすまないだろう。",
+          "reading": "",
+          "translation": "Nhân viên đã đánh cắp thông tin của công ty chắc chắn sẽ phải bị xử lý kỷ luật.",
+          "blank": "会社の情報を盗んだ社員は、処分し____だろう。",
+          "answer": "ないではすまない",
+          "hint": "Mẫu mục tiêu: ～ないではすまない",
+          "reason": "Trong câu này, ないではすまない thể hiện ý nghĩa: Nhất định / Chắc chắn phải... / Không... thì không xong.",
+          "wrongReason": "Đối chiếu với mẫu ～ないではすまない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "会社の情報を盗んだ社員は、",
+            "処分しないでは",
+            "すまないだろう。"
+          ]
+        },
+        {
+          "sentence": "たくさんの人に迷惑をかけたんだから、みんなの前で土下座して謝らないではすまないだろう。",
+          "reading": "",
+          "translation": "Vì đã gây phiền phức cho rất nhiều người nên chắc chắn phải quỳ xuống xin lỗi trước mặt mọi người.",
+          "blank": "たくさんの人に迷惑をかけたんだから、みんなの前で土下座して謝ら____だろう。",
+          "answer": "ないではすまない",
+          "hint": "Mẫu mục tiêu: ～ないではすまない",
+          "reason": "Trong câu này, ないではすまない thể hiện ý nghĩa: Nhất định / Chắc chắn phải... / Không... thì không xong.",
+          "wrongReason": "Đối chiếu với mẫu ～ないではすまない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "たくさんの人に迷惑をかけたんだから、",
+            "みんなの前で土下座して謝らないで",
+            "はすまないだろう。"
+          ]
+        }
+      ],
+      "sourceId": 111
+    }
+  ]
+}

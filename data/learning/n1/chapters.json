@@ -1,30 +1,185 @@
-
 {
   "schemaVersion": 1,
   "courseId": "n1",
   "chapters": [
     {
       "id": "n1-ch01",
-      "title": "Chương 01 · Xã hội và công việc",
-      "description": "Từ vựng và ngữ pháp nâng cao",
+      "title": "N1 · Xã hội và công việc",
+      "description": "Tư duy qua ví dụ nâng cao",
       "lessons": [
         {
           "id": "n1-ch01-vocab",
           "type": "vocabulary",
-          "title": "01 · Vocabulary Discovery",
+          "title": "01 · Vocabulary",
           "file": "data/learning/n1/vocabulary-01.json"
         },
         {
           "id": "n1-ch01-kanji",
           "type": "kanji",
-          "title": "02 · Kanji Discovery",
+          "title": "02 · Kanji",
           "file": "data/learning/n1/kanji-01.json"
         },
         {
           "id": "n1-ch01-grammar",
           "type": "grammar",
-          "title": "03 · Grammar Discovery",
+          "title": "03 · Grammar",
           "file": "data/learning/n1/grammar-01.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch02",
+      "title": "N1 · Ngữ pháp mở rộng 01",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch02-grammar",
+          "type": "grammar",
+          "title": "Grammar 01",
+          "file": "data/learning/n1/grammar-02.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch03",
+      "title": "N1 · Ngữ pháp mở rộng 02",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch03-grammar",
+          "type": "grammar",
+          "title": "Grammar 02",
+          "file": "data/learning/n1/grammar-03.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch04",
+      "title": "N1 · Ngữ pháp mở rộng 03",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch04-grammar",
+          "type": "grammar",
+          "title": "Grammar 03",
+          "file": "data/learning/n1/grammar-04.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch05",
+      "title": "N1 · Ngữ pháp mở rộng 04",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch05-grammar",
+          "type": "grammar",
+          "title": "Grammar 04",
+          "file": "data/learning/n1/grammar-05.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch06",
+      "title": "N1 · Ngữ pháp mở rộng 05",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch06-grammar",
+          "type": "grammar",
+          "title": "Grammar 05",
+          "file": "data/learning/n1/grammar-06.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch07",
+      "title": "N1 · Ngữ pháp mở rộng 06",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch07-grammar",
+          "type": "grammar",
+          "title": "Grammar 06",
+          "file": "data/learning/n1/grammar-07.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch08",
+      "title": "N1 · Ngữ pháp mở rộng 07",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch08-grammar",
+          "type": "grammar",
+          "title": "Grammar 07",
+          "file": "data/learning/n1/grammar-08.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch09",
+      "title": "N1 · Ngữ pháp mở rộng 08",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch09-grammar",
+          "type": "grammar",
+          "title": "Grammar 08",
+          "file": "data/learning/n1/grammar-09.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch10",
+      "title": "N1 · Ngữ pháp mở rộng 09",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch10-grammar",
+          "type": "grammar",
+          "title": "Grammar 09",
+          "file": "data/learning/n1/grammar-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch11",
+      "title": "N1 · Ngữ pháp mở rộng 10",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch11-grammar",
+          "type": "grammar",
+          "title": "Grammar 10",
+          "file": "data/learning/n1/grammar-11.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch12",
+      "title": "N1 · Ngữ pháp mở rộng 11",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch12-grammar",
+          "type": "grammar",
+          "title": "Grammar 11",
+          "file": "data/learning/n1/grammar-12.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch13",
+      "title": "N1 · Ngữ pháp mở rộng 12",
+      "description": "Mẫu ngữ pháp N1 còn lại",
+      "lessons": [
+        {
+          "id": "n1-ch13-grammar",
+          "type": "grammar",
+          "title": "Grammar 12",
+          "file": "data/learning/n1/grammar-13.json"
         }
       ]
     }

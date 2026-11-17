@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch08-grammar",
+  "type": "grammar",
+  "title": "N1 · Ngữ pháp nâng cao 07",
+  "items": [
+    {
+      "id": "n1-lg063",
+      "grammar": "～たりとも～ない",
+      "reading": "～たりとも～ない",
+      "meaning": "Dù chỉ 1... cũng (không)...",
+      "formation": "Cấu trúc: ～たりとも～ない (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～たりとも～ない diễn tả: Dù chỉ 1... cũng (không).... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Dù chỉ 1... cũng (không)..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～たりとも～ない"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Nào là... nào là...",
+          "Đối với N thì... / Nếu xét từ lập trường của N thì...",
+          "Chính vì... / Trước mặt... nên"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "あの日の屈辱は、今日まで一日たりとも忘れたことはない。",
+          "reading": "",
+          "translation": "Sự nhục nhã ngày hôm đó, cho đến hôm nay tôi chưa từng quên dù chỉ một ngày.",
+          "blank": "あの日の屈辱は、今日まで一日____忘れたことはない。",
+          "answer": "たりとも",
+          "hint": "Mẫu mục tiêu: ～たりとも～ない",
+          "reason": "Trong câu này, たりとも thể hiện ý nghĩa: Dù chỉ 1... cũng (không)....",
+          "wrongReason": "Đối chiếu với mẫu ～たりとも～ない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "あの日の屈辱は、",
+            "今日まで一日たりと",
+            "も忘れたことはない。"
+          ]
+        },
+        {
+          "sentence": "死に物狂いで働いて必死で貯めたお金なので、一円たりとも無駄にしたくはない。",
+          "reading": "",
+          "translation": "Vì đây là số tiền tôi đã liều mình làm việc và cố gắng dành dụm, nên dù chỉ một yên tôi cũng không muốn lãng phí.",
+          "blank": "死に物狂いで働いて必死で貯めたお金なので、一円____無駄にしたくはない。",
+          "answer": "たりとも",
+          "hint": "Mẫu mục tiêu: ～たりとも～ない",
+          "reason": "Trong câu này, たりとも thể hiện ý nghĩa: Dù chỉ 1... cũng (không)....",
+          "wrongReason": "Đối chiếu với mẫu ～たりとも～ない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "死に物狂いで働いて必死で",
+            "貯めたお金なので、",
+            "一円たりとも無駄にしたくはない。"
+          ]
+        },
+        {
+          "sentence": "ワールドカップ決勝戦は、一瞬たりとも目が離せないほど面白い試合だった。",
+          "reading": "",
+          "translation": "Trận chung kết World Cup hấp dẫn đến mức không thể rời mắt dù chỉ một khoảnh khắc.",
+          "blank": "ワールドカップ決勝戦は、一瞬____目が離せないほど面白い試合だった。",
+          "answer": "たりとも",
+          "hint": "Mẫu mục tiêu: ～たりとも～ない",
+          "reason": "Trong câu này, たりとも thể hiện ý nghĩa: Dù chỉ 1... cũng (không)....",
+          "wrongReason": "Đối chiếu với mẫu ～たりとも～ない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "ワールドカップ決勝戦は、",
+            "一瞬たりとも目が",
+            "離せないほど面白い試合だった。"
+          ]
+        }
+      ],
+      "sourceId": 61
+    },
+    {
+      "id": "n1-lg064",
+      "grammar": "～（よ）うが～まいが / ～（よ）うと～まいと",
+      "reading": "～（よ）うが～まいが / ～（よ）うと～まいと",
+      "meaning": "Dù có V hay không",
+      "formation": "Cấu trúc: ～（よ）うが～まいが / ～（よ）うと～まいと (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～（よ）うが～まいが / ～（よ）うと～まいと diễn tả: Dù có V hay không. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Dù có V hay không"
+        },
+        {
+          "title": "Mẫu",
+          "text": "～（よ）うが～まいが / ～（よ）うと～まいと"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Hoặc là... hoặc là...",
+          "Trong hoàn cảnh... / Ở tình huống...",
+          "Cả... nữa / Vì cũng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "どれだけ周囲の反対を受けようが受けまいが、自分で決めた道なので後悔はない。",
+          "reading": "",
+          "translation": "Dù có bị những người xung quanh phản đối đến mức nào hay không, vì đây là con đường do chính mình lựa chọn nên tôi không hối hận.",
+          "blank": "どれだけ周囲の反対を受け____、自分で決めた道なので後悔はない。",
+          "answer": "ようが受けまいが",
+          "hint": "Mẫu mục tiêu: ～（よ）うが～まいが / ～（よ）うと～まいと",
+          "reason": "Trong câu này, ようが受けまいが thể hiện ý nghĩa: Dù có V hay không.",
+          "wrongReason": "Đối chiếu với mẫu ～（よ）うが～まいが / ～（よ）うと～まいと và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "どれだけ周囲の反対を",
+            "受けようが受けまいが、",
+            "自分で決めた道なので後悔はない。"
+          ]
+        },
+        {
+          "sentence": "上司や同僚に何を言われようと言われまいと、会社を辞めて、自分で会社を立ち上げる事に決めた。",
+          "reading": "",
+          "translation": "Dù cấp trên hay đồng nghiệp có nói gì hay không, tôi đã quyết định nghỉ việc và tự thành lập công ty.",
+          "blank": "上司や同僚に何を言われ____、会社を辞めて、自分で会社を立ち上げる事に決めた。",
+          "answer": "ようと言われまいと",
+          "hint": "Mẫu mục tiêu: ～（よ）うが～まいが / ～（よ）うと～まいと",
+          "reason": "Trong câu này, ようと言われまいと thể hiện ý nghĩa: Dù có V hay không.",
+          "wrongReason": "Đối chiếu với mẫu ～（よ）うが～まいが / ～（よ）うと～まいと và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "上司や同僚に何を言われようと言われまいと、",
+            "会社を辞めて、",
+            "自分で会社を立ち上げる事に決めた。"
+          ]
+        },
+        {
+          "sentence": "勉強ができようができまいがどちらでもいい。健やかに育ってくれればそれでよい。",
+          "reading": "",
+          "translation": "Dù có học giỏi hay không cũng không quan trọng. Chỉ cần lớn lên khỏe mạnh là được.",
+          "blank": "勉強ができ____どちらでもいい。健やかに育ってくれればそれでよい。",
+          "answer": "ようができまいが",
+          "hint": "Mẫu mục tiêu: ～（よ）うが～まいが / ～（よ）うと～まいと",
+          "reason": "Trong câu này, ようができまいが thể hiện ý nghĩa: Dù có V hay không.",
+          "wrongReason": "Đối chiếu với mẫu ～（よ）うが～まいが / ～（よ）うと～まいと và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "勉強ができようができまいが",
+            "どちらでもいい。健やかに",
+            "育ってくれればそれでよい。"
+          ]
+        }
+      ],
+      "sourceId": 62
+    },
+    {
+      "id": "n1-lg065",
+      "grammar": "～につけ～につけ",
+      "reading": "～につけ～につけ",
+      "meaning": "Dù là... hay là...",
+      "formation": "Cấu trúc: ～につけ～につけ (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～につけ～につけ diễn tả: Dù là... hay là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Dù là... hay là..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～につけ～につけ"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Để mà... / Vì mục đích...",
+          "Ảnh hưởng tới N / Liên quan đến N",
+          "Giống như là... / Tựa như là..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "彼女は喜ぶにつけ悲しむにつけ、感情表現が豊かだ。",
+          "reading": "",
+          "translation": "Dù vui hay buồn, cô ấy đều thể hiện cảm xúc rất phong phú.",
+          "blank": "彼女は喜ぶ____悲しむにつけ、感情表現が豊かだ。",
+          "answer": "につけ",
+          "hint": "Mẫu mục tiêu: ～につけ～につけ",
+          "reason": "Trong câu này, につけ thể hiện ý nghĩa: Dù là... hay là....",
+          "wrongReason": "Đối chiếu với mẫu ～につけ～につけ và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "彼女は喜ぶに",
+            "つけ悲しむにつけ、",
+            "感情表現が豊かだ。"
+          ]
+        },
+        {
+          "sentence": "彼は海峡を見るにつけ、峡谷を見るにつけ、とにかく写真を山のように撮る。",
+          "reading": "",
+          "translation": "Dù nhìn thấy eo biển hay thung lũng, anh ấy đều chụp rất nhiều ảnh.",
+          "blank": "彼は海峡を見る____、峡谷を見るにつけ、とにかく写真を山のように撮る。",
+          "answer": "につけ",
+          "hint": "Mẫu mục tiêu: ～につけ～につけ",
+          "reason": "Trong câu này, につけ thể hiện ý nghĩa: Dù là... hay là....",
+          "wrongReason": "Đối chiếu với mẫu ～につけ～につけ và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "彼は海峡を見るにつけ、",
+            "峡谷を見るにつけ、",
+            "とにかく写真を山のように撮る。"
+          ]
+        },
+        {
+          "sentence": "良きにつけ悪しきにつけ、子どもは保護者をお手本にします。",
+          "reading": "",
+          "translation": "Dù tốt hay xấu, trẻ em đều lấy cha mẹ hoặc người giám hộ làm hình mẫu.",
+          "blank": "良き____悪しきにつけ、子どもは保護者をお手本にします。",
+          "answer": "につけ",
+          "hint": "Mẫu mục tiêu: ～につけ～につけ",
+          "reason": "Trong câu này, につけ thể hiện ý nghĩa: Dù là... hay là....",
+          "wrongReason": "Đối chiếu với mẫu ～につけ～につけ và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "良きにつけ悪しきにつけ、",
+            "子どもは保護者を",
+            "お手本にします。"
+          ]
+        }
+      ],
+      "sourceId": 63
+    },
+    {
+      "id": "n1-lg066",
+      "grammar": "～としたって",
+      "reading": "～としたって",
+      "meaning": "Dù có... đi chăng nữa thì...",
+      "formation": "Cấu trúc: ～としたって (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～としたって diễn tả: Dù có... đi chăng nữa thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Dù có... đi chăng nữa thì..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～としたって"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Như thể sắp V / Cứ như muốn V",
+          "Tùy vào N / Dựa vào N / Phụ thuộc vào N mà...",
+          "Tầm như... / Những thứ như..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "この古着は状態がいいから、値引きがあるとしたって、せいぜい20％くらいしか安くならないだろう。",
+          "reading": "",
+          "translation": "Vì bộ đồ cũ này còn trong tình trạng tốt nên dù có được giảm giá đi chăng nữa thì có lẽ cũng chỉ rẻ hơn khoảng 20% là cùng.",
+          "blank": "この古着は状態がいいから、値引きがある____、せいぜい20％くらいしか安くならないだろう。",
+          "answer": "としたって",
+          "hint": "Mẫu mục tiêu: ～としたって",
+          "reason": "Trong câu này, としたって thể hiện ý nghĩa: Dù có... đi chăng nữa thì....",
+          "wrongReason": "Đối chiếu với mẫu ～としたって và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "この古着は状態がいいから、",
+            "値引きがあるとしたって、",
+            "せいぜい20％くらいしか安くならないだろう。"
+          ]
+        },
+        {
+          "sentence": "2時3分の電車に乗り遅れたとしたって、次の電車がすぐ来るから、焦る必要はないよ。",
+          "reading": "",
+          "translation": "Dù có lỡ chuyến tàu lúc 2 giờ 3 phút đi chăng nữa thì chuyến tiếp theo cũng sẽ đến ngay, nên không cần phải vội.",
+          "blank": "2時3分の電車に乗り遅れた____、次の電車がすぐ来るから、焦る必要はないよ。",
+          "answer": "としたって",
+          "hint": "Mẫu mục tiêu: ～としたって",
+          "reason": "Trong câu này, としたって thể hiện ý nghĩa: Dù có... đi chăng nữa thì....",
+          "wrongReason": "Đối chiếu với mẫu ～としたって và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "2時3分の電車に乗り遅れたとしたって、",
+            "次の電車がすぐ来るから、",
+            "焦る必要はないよ。"
+          ]
+        },
+        {
+          "sentence": "職場で例えば他のメンバーに何を言われたとしたって、放っておいて自分のことだけを考える。",
+          "reading": "",
+          "translation": "Ở nơi làm việc, dù có bị các thành viên khác nói gì đi chăng nữa thì tôi cũng mặc kệ và chỉ tập trung vào việc của mình.",
+          "blank": "職場で例えば他のメンバーに何を言われた____、放っておいて自分のことだけを考える。",
+          "answer": "としたって",
+          "hint": "Mẫu mục tiêu: ～としたって",
+          "reason": "Trong câu này, としたって thể hiện ý nghĩa: Dù có... đi chăng nữa thì....",
+          "wrongReason": "Đối chiếu với mẫu ～としたって và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "職場で例えば他のメンバーに",
+            "何を言われたとしたって、",
+            "放っておいて自分のことだけを考える。"
+          ]
+        }
+      ],
+      "sourceId": 64
+    },
+    {
+      "id": "n1-lg067",
+      "grammar": "～にしたって",
+      "reading": "～にしたって",
+      "meaning": "Dù có... đi chăng nữa thì... / Tuy đúng là... nhưng...",
+      "formation": "Cấu trúc: ～にしたって (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～にしたって diễn tả: Dù có... đi chăng nữa thì... / Tuy đúng là... nhưng.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Dù có... đi chăng nữa thì... / Tuy đúng là... nhưng..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～にしたって"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Bất chấp... / Không màng đến N",
+          "Bất kể... / Không phụ thuộc vào...",
+          "Từ đáy lòng vẫn luôn / Vẫn mãi... / Vô cùng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "今から掃除を始めるにしたって、山田さんが来るまでに片付けを終えることはできないだろう。",
+          "reading": "",
+          "translation": "Dù có bắt đầu dọn dẹp từ bây giờ đi chăng nữa thì có lẽ cũng không thể dọn xong trước khi anh Yamada đến.",
+          "blank": "今から掃除を始める____、山田さんが来るまでに片付けを終えることはできないだろう。",
+          "answer": "にしたって",
+          "hint": "Mẫu mục tiêu: ～にしたって",
+          "reason": "Trong câu này, にしたって thể hiện ý nghĩa: Dù có... đi chăng nữa thì... / Tuy đúng là... nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～にしたって và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "今から掃除を始めるにしたって、",
+            "山田さんが来るまでに片付けを",
+            "終えることはできないだろう。"
+          ]
+        },
+        {
+          "sentence": "いくら学校で英語を習っているにしたって、こんな難しい文章を読めるのはすごいよ。",
+          "reading": "",
+          "translation": "Tuy đúng là đang học tiếng Anh ở trường, nhưng đọc được một đoạn văn khó như thế này thì thật giỏi.",
+          "blank": "いくら学校で英語を習っている____、こんな難しい文章を読めるのはすごいよ。",
+          "answer": "にしたって",
+          "hint": "Mẫu mục tiêu: ～にしたって",
+          "reason": "Trong câu này, にしたって thể hiện ý nghĩa: Dù có... đi chăng nữa thì... / Tuy đúng là... nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～にしたって và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "いくら学校で英語を",
+            "習っているにしたって、",
+            "こんな難しい文章を読めるのはすごいよ。"
+          ]
+        },
+        {
+          "sentence": "ゲームがどれほど楽しいにしたって、5時間連続でプレイしていたら目が痛くてたまらないはずだ。",
+          "reading": "",
+          "translation": "Dù trò chơi có thú vị đến mức nào đi chăng nữa thì nếu chơi liên tục 5 tiếng, chắc chắn mắt cũng sẽ đau không chịu nổi.",
+          "blank": "ゲームがどれほど楽しい____、5時間連続でプレイしていたら目が痛くてたまらないはずだ。",
+          "answer": "にしたって",
+          "hint": "Mẫu mục tiêu: ～にしたって",
+          "reason": "Trong câu này, にしたって thể hiện ý nghĩa: Dù có... đi chăng nữa thì... / Tuy đúng là... nhưng....",
+          "wrongReason": "Đối chiếu với mẫu ～にしたって và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "ゲームがどれほど楽しいにしたって、",
+            "5時間連続でプレイしていたら目が",
+            "痛くてたまらないはずだ。"
+          ]
+        }
+      ],
+      "sourceId": 65
+    },
+    {
+      "id": "n1-lg068",
+      "grammar": "～といえども",
+      "reading": "～といえども",
+      "meaning": "Dẫu là... / Dù là...",
+      "formation": "Cấu trúc: ～といえども (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～といえども diễn tả: Dẫu là... / Dù là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Dẫu là... / Dù là..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～といえども"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Bất chấp... / Vượt lên N",
+          "Không thể chấp nhận được / Không nên có đối với...",
+          "Cuối cùng cũng không... / Không kịp..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "N1合格者といえども、読めない漢字やわからない単語もあります。",
+          "reading": "",
+          "translation": "Dù là người đã đỗ N1 thì vẫn có những chữ Hán không đọc được và những từ vựng không hiểu.",
+          "blank": "N1合格者____、読めない漢字やわからない単語もあります。",
+          "answer": "といえども",
+          "hint": "Mẫu mục tiêu: ～といえども",
+          "reason": "Trong câu này, といえども thể hiện ý nghĩa: Dẫu là... / Dù là....",
+          "wrongReason": "Đối chiếu với mẫu ～といえども và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "N1合格者といえども、",
+            "読めない漢字やわからない単語も",
+            "あります。"
+          ]
+        },
+        {
+          "sentence": "たとえ子供といえども、俺に従わない者には容赦しない。",
+          "reading": "",
+          "translation": "Dẫu là trẻ con đi nữa, tôi cũng không khoan dung với kẻ không nghe theo tôi.",
+          "blank": "たとえ子供____、俺に従わない者には容赦しない。",
+          "answer": "といえども",
+          "hint": "Mẫu mục tiêu: ～といえども",
+          "reason": "Trong câu này, といえども thể hiện ý nghĩa: Dẫu là... / Dù là....",
+          "wrongReason": "Đối chiếu với mẫu ～といえども và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "たとえ子供といえども、",
+            "俺に従わない者に",
+            "は容赦しない。"
+          ]
+        },
+        {
+          "sentence": "なんでも分かり合える親友といえども、最低限の礼儀は尽くすべきだ。",
+          "reading": "",
+          "translation": "Dù là bạn thân có thể thấu hiểu nhau mọi chuyện thì vẫn nên giữ phép lịch sự tối thiểu.",
+          "blank": "なんでも分かり合える親友____、最低限の礼儀は尽くすべきだ。",
+          "answer": "といえども",
+          "hint": "Mẫu mục tiêu: ～といえども",
+          "reason": "Trong câu này, といえども thể hiện ý nghĩa: Dẫu là... / Dù là....",
+          "wrongReason": "Đối chiếu với mẫu ～といえども và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "なんでも分かり合える親友と",
+            "いえども、",
+            "最低限の礼儀は尽くすべきだ。"
+          ]
+        }
+      ],
+      "sourceId": 66
+    },
+    {
+      "id": "n1-lg069",
+      "grammar": "～となると / ～となれば / ～となったら",
+      "reading": "～となると / ～となれば / ～となったら",
+      "meaning": "Nếu... thì...",
+      "formation": "Cấu trúc: ～となると / ～となれば / ～となったら (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～となると / ～となれば / ～となったら diễn tả: Nếu... thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Nếu... thì..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～となると / ～となれば / ～となったら"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Nhân tiện N... / N2 kết hợp cùng N1...",
+          "Một khi... thì... / Nếu mà làm... thì...",
+          "Nhất định / Chắc chắn phải... / Không... thì không xong"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "台風が直撃するとなったら、避難をしないといけなくなるかもしれない。",
+          "reading": "",
+          "translation": "Nếu bão đổ bộ trực tiếp thì có lẽ sẽ phải sơ tán.",
+          "blank": "台風が直撃する____、避難をしないといけなくなるかもしれない。",
+          "answer": "となったら",
+          "hint": "Mẫu mục tiêu: ～となると / ～となれば / ～となったら",
+          "reason": "Trong câu này, となったら thể hiện ý nghĩa: Nếu... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～となると / ～となれば / ～となったら và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "台風が直撃するとなったら、",
+            "避難をしないと",
+            "いけなくなるかもしれない。"
+          ]
+        },
+        {
+          "sentence": "今検査をしているところだが、もし入院となったら、着替えなどを用意しなければいけない。",
+          "reading": "",
+          "translation": "Hiện giờ đang trong quá trình kiểm tra, nhưng nếu phải nhập viện thì sẽ phải chuẩn bị quần áo để thay và những thứ cần thiết khác.",
+          "blank": "今検査をしているところだが、もし入院____、着替えなどを用意しなければいけない。",
+          "answer": "となったら",
+          "hint": "Mẫu mục tiêu: ～となると / ～となれば / ～となったら",
+          "reason": "Trong câu này, となったら thể hiện ý nghĩa: Nếu... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～となると / ～となれば / ～となったら và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "今検査をしているところだが、",
+            "もし入院となったら、",
+            "着替えなどを用意しなければいけない。"
+          ]
+        },
+        {
+          "sentence": "試験の範囲が教科書の約半分となれば、学生も必死に勉強しなければならなくなる。",
+          "reading": "",
+          "translation": "Nếu phạm vi thi là khoảng một nửa cuốn giáo trình thì học sinh cũng sẽ phải cố gắng hết sức để học.",
+          "blank": "試験の範囲が教科書の約半分____、学生も必死に勉強しなければならなくなる。",
+          "answer": "となれば",
+          "hint": "Mẫu mục tiêu: ～となると / ～となれば / ～となったら",
+          "reason": "Trong câu này, となれば thể hiện ý nghĩa: Nếu... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～となると / ～となれば / ～となったら và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "試験の範囲が教科書の約半分となれば、",
+            "学生も必死に",
+            "勉強しなければならなくなる。"
+          ]
+        }
+      ],
+      "sourceId": 67
+    },
+    {
+      "id": "n1-lg070",
+      "grammar": "～とも～とも",
+      "reading": "～とも～とも",
+      "meaning": "(Không rõ) là... hay là...",
+      "formation": "Cấu trúc: ～とも～とも (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～とも～とも diễn tả: (Không rõ) là... hay là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "(Không rõ) là... hay là..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～とも～とも"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Trải qua... / Thông qua...",
+          "Ngay khi vừa mới... thì đã...",
+          "N2 có được / tồn tại được là nhờ có N1"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "彼女の表情は嬉しいとも悲しいとも言えない。",
+          "reading": "",
+          "translation": "Biểu cảm của cô ấy không thể nói rõ là vui hay là buồn.",
+          "blank": "彼女の表情は嬉しい____悲しいとも言えない。",
+          "answer": "とも",
+          "hint": "Mẫu mục tiêu: ～とも～とも",
+          "reason": "Trong câu này, とも thể hiện ý nghĩa: (Không rõ) là... hay là....",
+          "wrongReason": "Đối chiếu với mẫu ～とも～とも và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "彼女の表情は",
+            "嬉しいとも悲しいと",
+            "も言えない。"
+          ]
+        },
+        {
+          "sentence": "朝飯とも昼飯ともいえる食事をバインミーですませた。",
+          "reading": "",
+          "translation": "Tôi đã dùng bánh mì cho một bữa ăn không rõ là bữa sáng hay bữa trưa.",
+          "blank": "朝飯____昼飯ともいえる食事をバインミーですませた。",
+          "answer": "とも",
+          "hint": "Mẫu mục tiêu: ～とも～とも",
+          "reason": "Trong câu này, とも thể hiện ý nghĩa: (Không rõ) là... hay là....",
+          "wrongReason": "Đối chiếu với mẫu ～とも～とも và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "朝飯とも昼飯とも",
+            "いえる食事を",
+            "バインミーですませた。"
+          ]
+        },
+        {
+          "sentence": "彼の言葉は、冗談とも本気とも取れ、私はどう反応していいのかわからなかった。",
+          "reading": "",
+          "translation": "Lời nói của anh ấy có thể hiểu là đùa mà cũng có thể là nghiêm túc, khiến tôi không biết nên phản ứng thế nào.",
+          "blank": "彼の言葉は、冗談____本気とも取れ、私はどう反応していいのかわからなかった。",
+          "answer": "とも",
+          "hint": "Mẫu mục tiêu: ～とも～とも",
+          "reason": "Trong câu này, とも thể hiện ý nghĩa: (Không rõ) là... hay là....",
+          "wrongReason": "Đối chiếu với mẫu ～とも～とも và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "彼の言葉は、",
+            "冗談とも本気とも取れ、",
+            "私はどう反応していいのかわからなかった。"
+          ]
+        }
+      ],
+      "sourceId": 68
+    },
+    {
+      "id": "n1-lg071",
+      "grammar": "～ともなく / ～ともなしに",
+      "reading": "～ともなく / ～ともなしに",
+      "meaning": "Vô thức / Vô tình... / Không chủ đích làm...",
+      "formation": "Cấu trúc: ～ともなく / ～ともなしに (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ともなく / ～ともなしに diễn tả: Vô thức / Vô tình... / Không chủ đích làm.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Vô thức / Vô tình... / Không chủ đích làm..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ともなく / ～ともなしに"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Hết... / Kể từ mốc N thì chấm dứt...",
+          "Vừa mới... thì đã...",
+          "Vì... nên (đương nhiên)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "教室からグラウンドを見るともなく見ていたら、彼と目があってしまった。",
+          "reading": "",
+          "translation": "Khi tôi vô thức nhìn ra sân trường từ lớp học thì bất chợt chạm mắt với anh ấy.",
+          "blank": "教室からグラウンドを見る____見ていたら、彼と目があってしまった。",
+          "answer": "ともなく",
+          "hint": "Mẫu mục tiêu: ～ともなく / ～ともなしに",
+          "reason": "Trong câu này, ともなく thể hiện ý nghĩa: Vô thức / Vô tình... / Không chủ đích làm....",
+          "wrongReason": "Đối chiếu với mẫu ～ともなく / ～ともなしに và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "教室からグラウンドを",
+            "見るともなく見ていたら、",
+            "彼と目があってしまった。"
+          ]
+        },
+        {
+          "sentence": "隣の人の話を聞くともなく聞いていたら、知っている人の名前が出てきた。",
+          "reading": "",
+          "translation": "Khi tôi vô tình nghe câu chuyện của người bên cạnh thì nghe thấy tên của một người mình quen.",
+          "blank": "隣の人の話を聞く____聞いていたら、知っている人の名前が出てきた。",
+          "answer": "ともなく",
+          "hint": "Mẫu mục tiêu: ～ともなく / ～ともなしに",
+          "reason": "Trong câu này, ともなく thể hiện ý nghĩa: Vô thức / Vô tình... / Không chủ đích làm....",
+          "wrongReason": "Đối chiếu với mẫu ～ともなく / ～ともなしに và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "隣の人の話を聞くと",
+            "もなく聞いていたら、",
+            "知っている人の名前が出てきた。"
+          ]
+        },
+        {
+          "sentence": "人生について考えるともなく考えていたら、朝になっていた。",
+          "reading": "",
+          "translation": "Tôi cứ vô thức suy nghĩ về cuộc đời, đến khi nhận ra thì trời đã sáng.",
+          "blank": "人生について考える____考えていたら、朝になっていた。",
+          "answer": "ともなく",
+          "hint": "Mẫu mục tiêu: ～ともなく / ～ともなしに",
+          "reason": "Trong câu này, ともなく thể hiện ý nghĩa: Vô thức / Vô tình... / Không chủ đích làm....",
+          "wrongReason": "Đối chiếu với mẫu ～ともなく / ～ともなしに và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "人生について考えると",
+            "もなく考えていたら、",
+            "朝になっていた。"
+          ]
+        }
+      ],
+      "sourceId": 69
+    },
+    {
+      "id": "n1-lg072",
+      "grammar": "～ときたら",
+      "reading": "～ときたら",
+      "meaning": "(Nói đến) N ấy à, thì...",
+      "formation": "Cấu trúc: ～ときたら (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ときたら diễn tả: (Nói đến) N ấy à, thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "(Nói đến) N ấy à, thì..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ときたら"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Kết quả là... / Đi đến (hành động, trạng thái)...",
+          "Đến lúc... thì... / Đến khi thực sự... thì...",
+          "Cũng một phần là vì... / Cũng bởi vì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "あいつときたら、どんなに注意しても平気で遅刻して、全然謝らない。",
+          "reading": "",
+          "translation": "Nói đến tên đó thì, dù có nhắc nhở thế nào hắn vẫn thản nhiên đi muộn mà chẳng hề xin lỗi.",
+          "blank": "あいつ____、どんなに注意しても平気で遅刻して、全然謝らない。",
+          "answer": "ときたら",
+          "hint": "Mẫu mục tiêu: ～ときたら",
+          "reason": "Trong câu này, ときたら thể hiện ý nghĩa: (Nói đến) N ấy à, thì....",
+          "wrongReason": "Đối chiếu với mẫu ～ときたら và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "あいつときたら、",
+            "どんなに注意しても平気で遅刻して、",
+            "全然謝らない。"
+          ]
+        },
+        {
+          "sentence": "うちの犬ときたら、家族には吠えるくせに、知らない人が来ると怖がって隠れてしまう。",
+          "reading": "",
+          "translation": "Nói đến con chó nhà tôi thì, nó sủa người trong gia đình vậy mà khi có người lạ đến lại sợ hãi rồi trốn mất.",
+          "blank": "うちの犬____、家族には吠えるくせに、知らない人が来ると怖がって隠れてしまう。",
+          "answer": "ときたら",
+          "hint": "Mẫu mục tiêu: ～ときたら",
+          "reason": "Trong câu này, ときたら thể hiện ý nghĩa: (Nói đến) N ấy à, thì....",
+          "wrongReason": "Đối chiếu với mẫu ～ときたら và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "うちの犬ときたら、",
+            "家族には吠えるくせに、",
+            "知らない人が来ると怖がって隠れてしまう。"
+          ]
+        },
+        {
+          "sentence": "ここのコンビニの店員ときたら、態度も悪いし、声も小さいし、最低だ。",
+          "reading": "",
+          "translation": "Nói đến nhân viên cửa hàng tiện lợi ở đây thì, thái độ đã tệ, nói lại nhỏ tiếng, đúng là tệ hết chỗ nói.",
+          "blank": "ここのコンビニの店員____、態度も悪いし、声も小さいし、最低だ。",
+          "answer": "ときたら",
+          "hint": "Mẫu mục tiêu: ～ときたら",
+          "reason": "Trong câu này, ときたら thể hiện ý nghĩa: (Nói đến) N ấy à, thì....",
+          "wrongReason": "Đối chiếu với mẫu ～ときたら và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "ここのコンビニの店員ときたら、",
+            "態度も悪いし、",
+            "声も小さいし、",
+            "最低だ。"
+          ]
+        }
+      ],
+      "sourceId": 70
+    }
+  ]
+}

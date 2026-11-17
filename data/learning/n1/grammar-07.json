@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch07-grammar",
+  "type": "grammar",
+  "title": "N1 · Ngữ pháp nâng cao 06",
+  "items": [
+    {
+      "id": "n1-lg053",
+      "grammar": "～もしない / N＋もVない",
+      "reading": "～もしない / N＋もVない",
+      "meaning": "Không (thèm) làm...",
+      "formation": "Cấu trúc: ～もしない / N＋もVない (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～もしない / N＋もVない diễn tả: Không (thèm) làm.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Không (thèm) làm..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～もしない / N＋もVない"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Dù là... hay là...",
+          "Nhân tiện N... / N2 kết hợp cùng N1...",
+          "Một khi... thì... / Nếu mà làm... thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "この国の警察は、よく調べもしないで好き勝手に疑いがある人を拷問するらしい。",
+          "reading": "",
+          "translation": "Nghe nói cảnh sát ở đất nước này thậm chí chẳng điều tra kỹ mà tùy tiện tra tấn những người bị tình nghi.",
+          "blank": "この国の警察は、よく調べ____で好き勝手に疑いがある人を拷問するらしい。",
+          "answer": "もしない",
+          "hint": "Mẫu mục tiêu: ～もしない / N＋もVない",
+          "reason": "Trong câu này, もしない thể hiện ý nghĩa: Không (thèm) làm....",
+          "wrongReason": "Đối chiếu với mẫu ～もしない / N＋もVない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "この国の警察は、",
+            "よく調べもしないで好き勝手に",
+            "疑いがある人を拷問するらしい。"
+          ]
+        },
+        {
+          "sentence": "息子は高校を出て以来、仕事もしないで毎日ゲームばかりしている。",
+          "reading": "",
+          "translation": "Kể từ khi tốt nghiệp cấp ba, con trai tôi chẳng chịu đi làm mà ngày nào cũng chỉ chơi game.",
+          "blank": "息子は高校を出て以来、仕事____で毎日ゲームばかりしている。",
+          "answer": "もしない",
+          "hint": "Mẫu mục tiêu: ～もしない / N＋もVない",
+          "reason": "Trong câu này, もしない thể hiện ý nghĩa: Không (thèm) làm....",
+          "wrongReason": "Đối chiếu với mẫu ～もしない / N＋もVない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "息子は高校を出て以来、",
+            "仕事もしないで",
+            "毎日ゲームばかりしている。"
+          ]
+        },
+        {
+          "sentence": "疲れて帰って来たときは、化粧も落とさないで寝てしまうこともある。",
+          "reading": "",
+          "translation": "Có những lúc mệt mỏi trở về nhà, tôi thậm chí chẳng tẩy trang mà cứ thế ngủ luôn.",
+          "blank": "疲れて帰って来たときは、化粧____で寝てしまうこともある。",
+          "answer": "も落とさない",
+          "hint": "Mẫu mục tiêu: ～もしない / N＋もVない",
+          "reason": "Trong câu này, も落とさない thể hiện ý nghĩa: Không (thèm) làm....",
+          "wrongReason": "Đối chiếu với mẫu ～もしない / N＋もVない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "疲れて帰って来たときは、",
+            "化粧も落とさないで",
+            "寝てしまうこともある。"
+          ]
+        }
+      ],
+      "sourceId": 51
+    },
+    {
+      "id": "n1-lg054",
+      "grammar": "～ほどのNではない",
+      "reading": "～ほどのNではない",
+      "meaning": "Không đến mức V / Làm gì đến mức V",
+      "formation": "Cấu trúc: ～ほどのNではない (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ほどのNではない diễn tả: Không đến mức V / Làm gì đến mức V. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Không đến mức V / Làm gì đến mức V"
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ほどのNではない"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Dù có... đi chăng nữa thì...",
+          "Trải qua... / Thông qua...",
+          "Ngay khi vừa mới... thì đã..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "秘書の経験があるといっても、親戚の会社の手伝いをしただけで、履歴書に書くほどの経歴ではない。",
+          "reading": "",
+          "translation": "Dù nói là có kinh nghiệm làm thư ký nhưng tôi chỉ từng phụ giúp công ty của họ hàng thôi, không đến mức là kinh nghiệm đáng để ghi vào sơ yếu lý lịch.",
+          "blank": "秘書の経験があるといっても、親戚の会社の手伝いをしただけで、履歴書に書く____。",
+          "answer": "ほどの経歴ではない",
+          "hint": "Mẫu mục tiêu: ～ほどのNではない",
+          "reason": "Trong câu này, ほどの経歴ではない thể hiện ý nghĩa: Không đến mức V / Làm gì đến mức V.",
+          "wrongReason": "Đối chiếu với mẫu ～ほどのNではない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "秘書の経験があるといっても、",
+            "親戚の会社の手伝いをしただけで、",
+            "履歴書に書くほどの経歴ではない。"
+          ]
+        },
+        {
+          "sentence": "たしかに黙って君のものを使った彼も悪いが、そんなに怒るほどのことでもないだろう。",
+          "reading": "",
+          "translation": "Đúng là anh ấy cũng sai khi tự ý dùng đồ của cậu mà không nói, nhưng cũng đâu đến mức phải tức giận như vậy.",
+          "blank": "たしかに黙って君のものを使った彼も悪いが、そんなに怒る____だろう。",
+          "answer": "ほどのことでもない",
+          "hint": "Mẫu mục tiêu: ～ほどのNではない",
+          "reason": "Trong câu này, ほどのことでもない thể hiện ý nghĩa: Không đến mức V / Làm gì đến mức V.",
+          "wrongReason": "Đối chiếu với mẫu ～ほどのNではない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "たしかに黙って君のも",
+            "のを使った彼も悪いが、",
+            "そんなに怒るほどのことでもないだろう。"
+          ]
+        },
+        {
+          "sentence": "留学に必要な書類をそろえるのは少々大変ですが、専門の業者に頼むほどの煩雑さではありません。",
+          "reading": "",
+          "translation": "Chuẩn bị đầy đủ giấy tờ cần thiết để du học hơi vất vả một chút, nhưng không đến mức phức tạp đến nỗi phải nhờ công ty chuyên môn.",
+          "blank": "留学に必要な書類をそろえるのは少々大変ですが、専門の業者に頼む____。",
+          "answer": "ほどの煩雑さではありません",
+          "hint": "Mẫu mục tiêu: ～ほどのNではない",
+          "reason": "Trong câu này, ほどの煩雑さではありません thể hiện ý nghĩa: Không đến mức V / Làm gì đến mức V.",
+          "wrongReason": "Đối chiếu với mẫu ～ほどのNではない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "留学に必要な書類を",
+            "そろえるのは少々大変ですが、",
+            "専門の業者に頼むほどの煩雑さではありません。"
+          ]
+        }
+      ],
+      "sourceId": 52
+    },
+    {
+      "id": "n1-lg055",
+      "grammar": "～にもほどがある",
+      "reading": "～にもほどがある",
+      "meaning": "... quá rồi đấy! / Có... thì cũng phải vừa phải thôi!",
+      "formation": "Cấu trúc: ～にもほどがある (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～にもほどがある diễn tả: ... quá rồi đấy! / Có... thì cũng phải vừa phải thôi!. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "... quá rồi đấy! / Có... thì cũng phải vừa phải thôi!"
+        },
+        {
+          "title": "Mẫu",
+          "text": "～にもほどがある"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Dù có... đi chăng nữa thì... / Tuy đúng là... nhưng...",
+          "Hết... / Kể từ mốc N thì chấm dứt...",
+          "Vừa mới... thì đã..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "もう別れたのにしつこくメールしてくるなんて、粘着質にもほどがある。",
+          "reading": "",
+          "translation": "Đã chia tay rồi mà vẫn cứ dai dẳng gửi email như vậy thì đúng là đeo bám quá mức rồi đấy.",
+          "blank": "もう別れたのにしつこくメールしてくるなんて、粘着質____。",
+          "answer": "にもほどがある",
+          "hint": "Mẫu mục tiêu: ～にもほどがある",
+          "reason": "Trong câu này, にもほどがある thể hiện ý nghĩa: ... quá rồi đấy! / Có... thì cũng phải vừa phải thôi!.",
+          "wrongReason": "Đối chiếu với mẫu ～にもほどがある và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "もう別れたのに",
+            "しつこくメールしてくるなんて、",
+            "粘着質にもほどがある。"
+          ]
+        },
+        {
+          "sentence": "いくら蜂蜜が好きだからといって、1週間で食べきってしまうなんて、食べすぎにもほどがあるんじゃない？",
+          "reading": "",
+          "translation": "Dù có thích mật ong đến đâu mà ăn hết chừng đó chỉ trong một tuần thì cũng là ăn quá nhiều rồi đấy, phải không?",
+          "blank": "いくら蜂蜜が好きだからといって、1週間で食べきってしまうなんて、食べすぎ____んじゃない？",
+          "answer": "にもほどがある",
+          "hint": "Mẫu mục tiêu: ～にもほどがある",
+          "reason": "Trong câu này, にもほどがある thể hiện ý nghĩa: ... quá rồi đấy! / Có... thì cũng phải vừa phải thôi!.",
+          "wrongReason": "Đối chiếu với mẫu ～にもほどがある và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "いくら蜂蜜が好きだからといって、",
+            "1週間で食べきってしまうなんて、",
+            "食べすぎにもほどがあるんじゃない？"
+          ]
+        },
+        {
+          "sentence": "A：ごめん、遅れちゃった。\nB：50分も待ったんだよ。遅れるにもほどがあるよ。",
+          "reading": "",
+          "translation": "A: Xin lỗi, tôi đến muộn mất rồi.\nB: Tôi đã đợi tận 50 phút đấy. Có đến muộn thì cũng phải vừa phải thôi chứ.",
+          "blank": "A：ごめん、遅れちゃった。\nB：50分も待ったんだよ。遅れる____よ。",
+          "answer": "にもほどがある",
+          "hint": "Mẫu mục tiêu: ～にもほどがある",
+          "reason": "Trong câu này, にもほどがある thể hiện ý nghĩa: ... quá rồi đấy! / Có... thì cũng phải vừa phải thôi!.",
+          "wrongReason": "Đối chiếu với mẫu ～にもほどがある và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "A：ごめん、遅れちゃった。\n",
+            "B：50分も待ったんだよ。遅れるにもほどがあるよ。"
+          ]
+        }
+      ],
+      "sourceId": 53
+    },
+    {
+      "id": "n1-lg056",
+      "grammar": "～べく",
+      "reading": "～べく",
+      "meaning": "Để V",
+      "formation": "Động từ dạng từ điển + べく (する → すべく)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～べく diễn tả: Để V. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Để V"
+        },
+        {
+          "title": "Mẫu",
+          "text": "～べく"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Dẫu là... / Dù là...",
+          "Kết quả là... / Đi đến (hành động, trạng thái)...",
+          "Đến lúc... thì... / Đến khi thực sự... thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "苦手な長文の読解を克服するべく、まずは短文から解き進める。",
+          "reading": "",
+          "translation": "Để khắc phục điểm yếu trong việc đọc hiểu các đoạn văn dài, trước tiên tôi bắt đầu giải từ những đoạn văn ngắn.",
+          "blank": "苦手な長文の読解を克服する____、まずは短文から解き進める。",
+          "answer": "べく",
+          "hint": "Mẫu mục tiêu: ～べく",
+          "reason": "Trong câu này, べく thể hiện ý nghĩa: Để V.",
+          "wrongReason": "Đối chiếu với mẫu ～べく và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "苦手な長文の読解を",
+            "克服するべく、",
+            "まずは短文から解き進める。"
+          ]
+        },
+        {
+          "sentence": "事故を未然に防ぐべく、安全を徹底する。",
+          "reading": "",
+          "translation": "Để phòng tránh tai nạn trước khi xảy ra, chúng tôi triệt để thực hiện các biện pháp an toàn.",
+          "blank": "事故を未然に防ぐ____、安全を徹底する。",
+          "answer": "べく",
+          "hint": "Mẫu mục tiêu: ～べく",
+          "reason": "Trong câu này, べく thể hiện ý nghĩa: Để V.",
+          "wrongReason": "Đối chiếu với mẫu ～べく và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "事故を未然に",
+            "防ぐべく、",
+            "安全を徹底する。"
+          ]
+        },
+        {
+          "sentence": "人手不足問題を解決すべく、AIを導入することにした。",
+          "reading": "",
+          "translation": "Để giải quyết vấn đề thiếu nhân lực, chúng tôi đã quyết định đưa AI vào sử dụng.",
+          "blank": "人手不足問題を解決す____、AIを導入することにした。",
+          "answer": "べく",
+          "hint": "Mẫu mục tiêu: ～べく",
+          "reason": "Trong câu này, べく thể hiện ý nghĩa: Để V.",
+          "wrongReason": "Đối chiếu với mẫu ～べく và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "人手不足問題を解決すべく、",
+            "AIを",
+            "導入することにした。"
+          ]
+        }
+      ],
+      "sourceId": 54
+    },
+    {
+      "id": "n1-lg057",
+      "grammar": "～たはいいが",
+      "reading": "～たはいいが",
+      "meaning": "V thì tốt rồi / được rồi, nhưng mà...",
+      "formation": "Cấu trúc: ～たはいいが (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～たはいいが diễn tả: V thì tốt rồi / được rồi, nhưng mà.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "V thì tốt rồi / được rồi, nhưng mà..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～たはいいが"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Nếu... thì...",
+          "Cho đến N... / Đến cả N...",
+          "Nếu là... thì còn được / Nếu là... thì còn đành, nhưng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "待ち合わせ場所に来たはいいが、友達がどこにいるのかわからない。",
+          "reading": "",
+          "translation": "Đến được chỗ hẹn thì tốt rồi, nhưng tôi không biết bạn mình đang ở đâu.",
+          "blank": "待ち合わせ場所に来____、友達がどこにいるのかわからない。",
+          "answer": "たはいいが",
+          "hint": "Mẫu mục tiêu: ～たはいいが",
+          "reason": "Trong câu này, たはいいが thể hiện ý nghĩa: V thì tốt rồi / được rồi, nhưng mà....",
+          "wrongReason": "Đối chiếu với mẫu ～たはいいが và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "待ち合わせ場所に来たはいいが、",
+            "友達がどこに",
+            "いるのかわからない。"
+          ]
+        },
+        {
+          "sentence": "就職できたはいいが、これからこの会社でやっていけるかどうか、自信がない。",
+          "reading": "",
+          "translation": "Tìm được việc thì tốt rồi, nhưng tôi không tự tin liệu từ giờ mình có thể tiếp tục làm tốt ở công ty này hay không.",
+          "blank": "就職でき____、これからこの会社でやっていけるかどうか、自信がない。",
+          "answer": "たはいいが",
+          "hint": "Mẫu mục tiêu: ～たはいいが",
+          "reason": "Trong câu này, たはいいが thể hiện ý nghĩa: V thì tốt rồi / được rồi, nhưng mà....",
+          "wrongReason": "Đối chiếu với mẫu ～たはいいが và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "就職できたはいいが、",
+            "これからこの会社でやっていけるかどうか、",
+            "自信がない。"
+          ]
+        },
+        {
+          "sentence": "高い化粧品をもらったはいいが、私の敏感な肌には合わなかった。",
+          "reading": "",
+          "translation": "Được tặng mỹ phẩm đắt tiền thì tốt đấy, nhưng nó lại không hợp với làn da nhạy cảm của tôi.",
+          "blank": "高い化粧品をもらっ____、私の敏感な肌には合わなかった。",
+          "answer": "たはいいが",
+          "hint": "Mẫu mục tiêu: ～たはいいが",
+          "reason": "Trong câu này, たはいいが thể hiện ý nghĩa: V thì tốt rồi / được rồi, nhưng mà....",
+          "wrongReason": "Đối chiếu với mẫu ～たはいいが và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "高い化粧品をもらったはいいが、",
+            "私の敏感な肌に",
+            "は合わなかった。"
+          ]
+        }
+      ],
+      "sourceId": 55
+    },
+    {
+      "id": "n1-lg058",
+      "grammar": "～ては",
+      "reading": "～ては",
+      "meaning": "Nếu mà... thì...",
+      "formation": "Cấu trúc: ～ては (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ては diễn tả: Nếu mà... thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Nếu mà... thì..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ては"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "(Không rõ) là... hay là...",
+          "Nhất là N (thì lại càng...) / Đến cả N...",
+          "Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "せっかく運動したのに、甘いものを食べてしまっては運動した意味がなくなってしまう。",
+          "reading": "",
+          "translation": "Đã mất công tập thể dục mà nếu lại ăn đồ ngọt thì việc tập thể dục sẽ trở nên vô nghĩa.",
+          "blank": "せっかく運動したのに、甘いものを食べ____運動した意味がなくなってしまう。",
+          "answer": "てしまっては",
+          "hint": "Mẫu mục tiêu: ～ては",
+          "reason": "Trong câu này, てしまっては thể hiện ý nghĩa: Nếu mà... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～ては và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "せっかく運動したのに、",
+            "甘いものを食べてしまっては",
+            "運動した意味がなくなってしまう。"
+          ]
+        },
+        {
+          "sentence": "グラフに色をつけるときは、色に濃淡をつけなくては、白黒コピーしたときに色がわからなくなる。",
+          "reading": "",
+          "translation": "Khi tô màu cho biểu đồ, nếu không tạo độ đậm nhạt cho màu sắc thì khi sao chép đen trắng sẽ không phân biệt được các màu.",
+          "blank": "グラフに色をつけるときは、色に濃淡をつけ____、白黒コピーしたときに色がわからなくなる。",
+          "answer": "なくては",
+          "hint": "Mẫu mục tiêu: ～ては",
+          "reason": "Trong câu này, なくては thể hiện ý nghĩa: Nếu mà... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～ては và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "グラフに色をつけるときは、",
+            "色に濃淡をつけなくては、",
+            "白黒コピーしたときに色がわからなくなる。"
+          ]
+        },
+        {
+          "sentence": "過去の行いを悔いるばかりじゃ、前に進めない。",
+          "reading": "",
+          "translation": "Nếu chỉ mãi hối hận về những việc đã làm trong quá khứ thì không thể tiến về phía trước.",
+          "blank": "過去の行いを悔いる____、前に進めない。",
+          "answer": "ばかりじゃ",
+          "hint": "Mẫu mục tiêu: ～ては",
+          "reason": "Trong câu này, ばかりじゃ thể hiện ý nghĩa: Nếu mà... thì....",
+          "wrongReason": "Đối chiếu với mẫu ～ては và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "過去の行いを",
+            "悔いるばかりじゃ、",
+            "前に進めない。"
+          ]
+        }
+      ],
+      "sourceId": 56
+    },
+    {
+      "id": "n1-lg059",
+      "grammar": "V1てはV2",
+      "reading": "V1てはV2",
+      "meaning": "Cứ V1 rồi lại V2",
+      "formation": "Cấu trúc: V1てはV2 (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu V1てはV2 diễn tả: Cứ V1 rồi lại V2. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Cứ V1 rồi lại V2"
+        },
+        {
+          "title": "Mẫu",
+          "text": "V1てはV2"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Vô thức / Vô tình... / Không chủ đích làm...",
+          "Đáng để V / Đủ giá trị, chất lượng để V",
+          "Nếu không có... thì... / Không có... thì không thể..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "彼女の優しい態度に、淡い期待を抱いてはそれを壊されている。",
+          "reading": "",
+          "translation": "Trước thái độ dịu dàng của cô ấy, tôi cứ ôm một chút hy vọng rồi lại bị chính hy vọng đó phá vỡ.",
+          "blank": "彼女の優しい態度に、淡い期待を抱い____それを壊されている。",
+          "answer": "ては",
+          "hint": "Mẫu mục tiêu: V1てはV2",
+          "reason": "Trong câu này, ては thể hiện ý nghĩa: Cứ V1 rồi lại V2.",
+          "wrongReason": "Đối chiếu với mẫu V1てはV2 và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "彼女の優しい態度に、",
+            "淡い期待を抱いては",
+            "それを壊されている。"
+          ]
+        },
+        {
+          "sentence": "週末なので道路が渋滞していて、進んでは止まり、止まっては進んでの繰り返しでなかなか前に進むことができない。",
+          "reading": "",
+          "translation": "Vì là cuối tuần nên đường bị tắc, cứ đi rồi lại dừng, dừng rồi lại đi, lặp đi lặp lại nên mãi không thể tiến lên phía trước.",
+          "blank": "週末なので道路が渋滞していて、進んでは止まり、止まっ____進んでの繰り返しでなかなか前に進むことができない。",
+          "answer": "ては",
+          "hint": "Mẫu mục tiêu: V1てはV2",
+          "reason": "Trong câu này, ては thể hiện ý nghĩa: Cứ V1 rồi lại V2.",
+          "wrongReason": "Đối chiếu với mẫu V1てはV2 và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "週末なので道路が渋滞していて、",
+            "進んでは止まり、",
+            "止まっては進んでの繰り返しでなかなか前に進むことができない。"
+          ]
+        },
+        {
+          "sentence": "あの2人は喧嘩をするたびに別れては付き合い、付き合っては別れ、よくわからない関係だ。",
+          "reading": "",
+          "translation": "Hai người đó mỗi lần cãi nhau lại cứ chia tay rồi quay lại, quay lại rồi lại chia tay, đúng là một mối quan hệ khó hiểu.",
+          "blank": "あの2人は喧嘩をするたびに別れ____付き合い、付き合っては別れ、よくわからない関係だ。",
+          "answer": "ては",
+          "hint": "Mẫu mục tiêu: V1てはV2",
+          "reason": "Trong câu này, ては thể hiện ý nghĩa: Cứ V1 rồi lại V2.",
+          "wrongReason": "Đối chiếu với mẫu V1てはV2 và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "あの2人は喧嘩をするたびに別れては付き合い、",
+            "付き合っては別れ、",
+            "よくわからない関係だ。"
+          ]
+        }
+      ],
+      "sourceId": 57
+    },
+    {
+      "id": "n1-lg060",
+      "grammar": "～そのものだ",
+      "reading": "～そのものだ",
+      "meaning": "Chính là... / hệt như là...",
+      "formation": "Cấu trúc: ～そのものだ (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～そのものだ diễn tả: Chính là... / hệt như là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Chính là... / hệt như là..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～そのものだ"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "(Nói đến) N ấy à, thì...",
+          "Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc)",
+          "(Nếu...) thì cùng lắm sẽ... / Chỉ cần... là được"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "自分の不注意で子供を亡くした親が悔やむ姿は、悲劇そのものだった。",
+          "reading": "",
+          "translation": "Hình ảnh người cha mẹ đau khổ vì đã mất con do sự bất cẩn của chính mình đúng là hiện thân của bi kịch.",
+          "blank": "自分の不注意で子供を亡くした親が悔やむ姿は、悲劇____。",
+          "answer": "そのものだった",
+          "hint": "Mẫu mục tiêu: ～そのものだ",
+          "reason": "Trong câu này, そのものだった thể hiện ý nghĩa: Chính là... / hệt như là....",
+          "wrongReason": "Đối chiếu với mẫu ～そのものだ và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "自分の不注意で子供を",
+            "亡くした親が悔やむ姿は、",
+            "悲劇そのものだった。"
+          ]
+        },
+        {
+          "sentence": "美しいドレスを着た彼女は、まさに女神そのものだ。",
+          "reading": "",
+          "translation": "Cô ấy trong chiếc váy xinh đẹp quả thực hệt như một nữ thần.",
+          "blank": "美しいドレスを着た彼女は、まさに女神____。",
+          "answer": "そのものだ",
+          "hint": "Mẫu mục tiêu: ～そのものだ",
+          "reason": "Trong câu này, そのものだ thể hiện ý nghĩa: Chính là... / hệt như là....",
+          "wrongReason": "Đối chiếu với mẫu ～そのものだ và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "美しいドレスを",
+            "着た彼女は、",
+            "まさに女神そのものだ。"
+          ]
+        },
+        {
+          "sentence": "彼女の料理は、私にとっての忘れがたい「母の味」そのものでした。",
+          "reading": "",
+          "translation": "Món ăn của cô ấy đối với tôi chính là \"hương vị của mẹ\" không thể nào quên.",
+          "blank": "彼女の料理は、私にとっての忘れがたい「母の味」____。",
+          "answer": "そのものでした",
+          "hint": "Mẫu mục tiêu: ～そのものだ",
+          "reason": "Trong câu này, そのものでした thể hiện ý nghĩa: Chính là... / hệt như là....",
+          "wrongReason": "Đối chiếu với mẫu ～そのものだ và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "彼女の料理は、",
+            "私にとっての忘れが",
+            "たい「母の味」そのものでした。"
+          ]
+        }
+      ],
+      "sourceId": 58
+    },
+    {
+      "id": "n1-lg061",
+      "grammar": "～ても始まらない",
+      "reading": "～てもはじまらない",
+      "meaning": "Dù có... thì cũng chẳng để làm gì / vô ích",
+      "formation": "Cấu trúc: ～ても始まらない (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～ても始まらない diễn tả: Dù có... thì cũng chẳng để làm gì / vô ích. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Dù có... thì cũng chẳng để làm gì / vô ích"
+        },
+        {
+          "title": "Mẫu",
+          "text": "～ても始まらない"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Cả N1, cả N2 đều... / Dù N1, dù N2 đều...",
+          "Xứng đáng... / Đủ để...",
+          "Nếu V thì là hết / Nếu V thì coi như xong"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "上司と部下の板挟みになって辛い立場だが、悩んでいても始まらない。成果を出せるように頑張ろう。",
+          "reading": "",
+          "translation": "Tôi đang ở vào tình thế khó xử, bị kẹt giữa cấp trên và cấp dưới, nhưng có lo lắng mãi cũng chẳng ích gì. Hãy cố gắng để đạt được kết quả.",
+          "blank": "上司と部下の板挟みになって辛い立場だが、悩んでい____。成果を出せるように頑張ろう。",
+          "answer": "ても始まらない",
+          "hint": "Mẫu mục tiêu: ～ても始まらない",
+          "reason": "Trong câu này, ても始まらない thể hiện ý nghĩa: Dù có... thì cũng chẳng để làm gì / vô ích.",
+          "wrongReason": "Đối chiếu với mẫu ～ても始まらない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "上司と部下の板挟みになって辛い立場だが、",
+            "悩んでいても始まらない。",
+            "成果を出せるように頑張ろう。"
+          ]
+        },
+        {
+          "sentence": "A：本当にクラスで演劇なんかやるの？やりたくないなぁ。\nB：もう決まったことなんだから、文句を言っても始まらないよ。",
+          "reading": "",
+          "translation": "A: Thật sự lớp mình sẽ diễn kịch à? Tôi không muốn làm chút nào.\nB: Chuyện đã quyết định rồi, có phàn nàn cũng chẳng để làm gì đâu.",
+          "blank": "A：本当にクラスで演劇なんかやるの？やりたくないなぁ。\nB：もう決まったことなんだから、文句を言っ____よ。",
+          "answer": "ても始まらない",
+          "hint": "Mẫu mục tiêu: ～ても始まらない",
+          "reason": "Trong câu này, ても始まらない thể hiện ý nghĩa: Dù có... thì cũng chẳng để làm gì / vô ích.",
+          "wrongReason": "Đối chiếu với mẫu ～ても始まらない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "A：本当にクラスで演劇なんかやるの？やりたくないなぁ。\n",
+            "B：もう決まったことなんだから、文句を言っても始まらないよ。"
+          ]
+        },
+        {
+          "sentence": "勉強しないで試験に落ちてしまったが、今更、もっと勉強しておけばよかったと後悔しても始まらない。",
+          "reading": "",
+          "translation": "Tôi đã trượt kỳ thi vì không học, nhưng bây giờ có hối hận rằng lẽ ra mình nên học nhiều hơn thì cũng chẳng ích gì.",
+          "blank": "勉強しないで試験に落ちてしまったが、今更、もっと勉強しておけばよかったと後悔し____。",
+          "answer": "ても始まらない",
+          "hint": "Mẫu mục tiêu: ～ても始まらない",
+          "reason": "Trong câu này, ても始まらない thể hiện ý nghĩa: Dù có... thì cũng chẳng để làm gì / vô ích.",
+          "wrongReason": "Đối chiếu với mẫu ～ても始まらない và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "勉強しないで試験に落ちてしまったが、",
+            "今更、",
+            "もっと勉強しておけばよかったと後悔しても始まらない。"
+          ]
+        }
+      ],
+      "sourceId": 59
+    },
+    {
+      "id": "n1-lg062",
+      "grammar": "～たところで",
+      "reading": "～たところで",
+      "meaning": "Cho dù... thì cũng...",
+      "formation": "Cấu trúc: ～たところで (xem vị trí kết hợp trong các câu ví dụ)",
+      "priorityStars": 4,
+      "explanation": "Mẫu ～たところで diễn tả: Cho dù... thì cũng.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "usageDetails": [
+        {
+          "title": "Ý nghĩa",
+          "text": "Cho dù... thì cũng..."
+        },
+        {
+          "title": "Mẫu",
+          "text": "～たところで"
+        }
+      ],
+      "commonMistakes": [
+        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+      ],
+      "discovery": {
+        "distractors": [
+          "Không biết nên nói là... hay là...",
+          "Trái ngược với... / Khác với...",
+          "Đã đạt đến / Đã có thể đến mức..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "怒ったところで何も解決しないので、気持ちを切り替えて次の作業に取り組む。",
+          "reading": "",
+          "translation": "Cho dù có tức giận thì cũng chẳng giải quyết được gì, nên tôi sẽ thay đổi tâm trạng và bắt tay vào công việc tiếp theo.",
+          "blank": "怒っ____何も解決しないので、気持ちを切り替えて次の作業に取り組む。",
+          "answer": "たところで",
+          "hint": "Mẫu mục tiêu: ～たところで",
+          "reason": "Trong câu này, たところで thể hiện ý nghĩa: Cho dù... thì cũng....",
+          "wrongReason": "Đối chiếu với mẫu ～たところで và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "怒ったところで何も解決しないので、",
+            "気持ちを",
+            "切り替えて次の作業に取り組む。"
+          ]
+        },
+        {
+          "sentence": "試験前日になって勉強したところで、結果が変わるとは到底思えない。",
+          "reading": "",
+          "translation": "Cho dù đến ngày trước kỳ thi mới học thì tôi cũng hoàn toàn không nghĩ rằng kết quả sẽ thay đổi.",
+          "blank": "試験前日になって勉強し____、結果が変わるとは到底思えない。",
+          "answer": "たところで",
+          "hint": "Mẫu mục tiêu: ～たところで",
+          "reason": "Trong câu này, たところで thể hiện ý nghĩa: Cho dù... thì cũng....",
+          "wrongReason": "Đối chiếu với mẫu ～たところで và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "試験前日に",
+            "なって勉強したところで、",
+            "結果が変わるとは到底思えない。"
+          ]
+        },
+        {
+          "sentence": "人の意見を受け入れない人にアドバイスをしたところで、何も変わらないだろう。",
+          "reading": "",
+          "translation": "Cho dù có đưa ra lời khuyên cho người không chịu tiếp thu ý kiến của người khác thì có lẽ cũng chẳng thay đổi được gì.",
+          "blank": "人の意見を受け入れない人にアドバイスをし____、何も変わらないだろう。",
+          "answer": "たところで",
+          "hint": "Mẫu mục tiêu: ～たところで",
+          "reason": "Trong câu này, たところで thể hiện ý nghĩa: Cho dù... thì cũng....",
+          "wrongReason": "Đối chiếu với mẫu ～たところで và đọc lại nghĩa tiếng Việt.",
+          "chunks": [
+            "人の意見を受け入れない人に",
+            "アドバイスをしたところで、",
+            "何も変わらないだろう。"
+          ]
+        }
+      ],
+      "sourceId": 60
+    }
+  ]
+}
