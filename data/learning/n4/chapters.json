@@ -1,0 +1,20 @@
+
+{
+  "schemaVersion": 1,
+  "courseId": "n4",
+  "chapters": [
+    {
+      "id": "n4-ch01",
+      "title": "Chương 01 · Kế hoạch và giao tiếp",
+      "description": "Học từ vựng về cuộc hẹn, kế hoạch và liên lạc",
+      "lessons": [
+        {
+          "id": "n4-ch01-vocab",
+          "type": "vocabulary",
+          "title": "01 · Vocabulary",
+          "file": "data/learning/n4/vocabulary-01.json"
+        }
+      ]
+    }
+  ]
+}
