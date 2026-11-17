@@ -1,0 +1,20 @@
+
+{
+  "schemaVersion": 1,
+  "courseId": "n2",
+  "chapters": [
+    {
+      "id": "n2-ch01",
+      "title": "Chương 01 · Công việc và xử lý vấn đề",
+      "description": "Ứng phó, điều chỉnh, duy trì và ảnh hưởng",
+      "lessons": [
+        {
+          "id": "n2-ch01-vocab",
+          "type": "vocabulary",
+          "title": "01 · Vocabulary",
+          "file": "data/learning/n2/vocabulary-01.json"
+        }
+      ]
+    }
+  ]
+}
