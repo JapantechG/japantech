@@ -855,3 +855,32 @@ button.kl-mini-card:not(:disabled):hover {
         opacity: 1;
     }
 }
+/* BATLINGO LEARNING V5 - paste at END of css/learning.css */
+#learningScreen .kl-stars-summary{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:12px}
+#learningScreen .kl-stars-summary span{background:#152c46;border:1px solid #3c5672;color:#cbd5e1;padding:7px 12px;border-radius:12px;font-size:12px;font-weight:700}
+#learningScreen .kl-stars-summary strong{color:#fbbf24;font-size:18px}
+#learningScreen .kl-vocab-hero{text-align:center;padding:8px 0 18px}
+#learningScreen .kl-vocab-word{font-size:clamp(48px,9vw,72px);font-weight:900;line-height:1.35;color:#fff}
+#learningScreen .kl-vocab-reading{font-size:23px;color:#cbd5e1;margin-top:3px}
+#learningScreen .kl-vocab-meaning{font-size:18px;font-weight:800;color:#fcd34d;margin-top:8px}
+#learningScreen .kl-vocab-headphone{font-size:60px;margin:18px auto}
+#learningScreen .kl-vocab-prompt{font-weight:800;margin:15px 0 8px}
+#learningScreen .kl-vocab-wide{display:block;width:100%;margin:20px 0 0}
+#learningScreen .kl-vocab-tilebox{display:flex;flex-wrap:wrap;gap:8px;min-height:65px;padding:12px;justify-content:center;align-items:center;border:1px dashed #5a7698;border-radius:13px;margin:12px 0}
+#learningScreen .kl-vocab-tray{background:#10253e}
+#learningScreen .kl-vocab-tile{background:#315477;color:white;min-width:46px;min-height:46px;padding:7px;border:1px solid #7091b3;border-radius:10px;font-size:23px;font-weight:800}
+#learningScreen .kl-vocab-result{padding:14px;background:#1c3550;border:1px solid #4f7592;border-radius:14px;line-height:1.7;margin:15px 0}
+#learningScreen .kl-vocab-result.correct{border-color:#34d399;background:#123b30}
+#learningScreen .kl-vocab-result.wrong{border-color:#fbbf24;background:#3a3020}
+#learningScreen .kl-option.kl-vocab-right{border-color:#34d399;background:#14513d}
+#learningScreen .kl-option.kl-vocab-wrong{border-color:#fca5a5;background:#532d35}
+#learningScreen .kl-vocab-blank{font-size:clamp(18px,4vw,25px)}
+#learningScreen .kl-example-evidence{position:relative;padding-right:51px}
+#learningScreen .kl-example-audio-line{display:block;min-width:0}
+#learningScreen .kl-example-audio-line>b{display:block;overflow-wrap:anywhere}
+#learningScreen .kl-example-audio-line>.kl-speak-btn{position:absolute;right:8px;top:8px;width:34px;min-width:34px;height:34px;margin:0}
+#learningScreen #learningExpToast{position:fixed;left:50%;top:50%;right:auto;bottom:auto;z-index:20000;font-weight:900;font-size:clamp(35px,8vw,60px);color:#fbbf24;pointer-events:none;opacity:0;text-shadow:0 0 18px #dfb34880}
+#learningScreen #learningExpToast.kl-exp-show{animation:klStarCenterV5 1.4s ease-out forwards}
+@keyframes klStarCenterV5{0%{opacity:0;transform:translate(-50%,-20%) scale(.6)}22%{opacity:1;transform:translate(-50%,-50%) scale(1.2)}66%{opacity:1;transform:translate(-50%,-65%) scale(1)}100%{opacity:0;transform:translate(-50%,-120%) scale(.9)}}
+@media(max-width:600px){#learningScreen .kl-stars-summary{justify-content:center}#learningScreen .kl-quest-card{padding:13px}#learningScreen .kl-vocab-word{font-size:48px}}
+@media(prefers-reduced-motion:reduce){#learningScreen #learningExpToast.kl-exp-show{animation:none;opacity:1;transform:translate(-50%,-50%)}}
