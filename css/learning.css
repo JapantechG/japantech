@@ -467,37 +467,50 @@
 
 #learningScreen #learningExpToast {
     position: fixed;
-    right: 20px;
-    top: 85px;
-    z-index: 2;
+    top: 50%;
+    left: 50%;
+    right: auto;
+
+    transform: translate(-50%, -50%);
+    z-index: 20000;
+
     pointer-events: none;
-    color: #fbbf24;
-    font-weight: 900;
     opacity: 0;
+
+    font-size: clamp(30px, 7vw, 54px);
+    font-weight: 900;
+    color: #fbbf24;
+
+    text-shadow:
+        0 0 15px rgba(251,191,36,.5),
+        0 3px 16px rgba(0,0,0,.7);
+
+    white-space: nowrap;
 }
 
 #learningScreen #learningExpToast.kl-exp-show {
-    animation: klExpPop 2s ease forwards;
+    animation: klExpCenter 1.5s ease-out forwards;
 }
 
-@keyframes klExpPop {
+@keyframes klExpCenter {
     0% {
         opacity: 0;
-        transform: translateY(25px) scale(.8);
+        transform: translate(-50%, -25%) scale(.65);
     }
 
-    20% {
+    25% {
         opacity: 1;
-        transform: translateY(0) scale(1.1);
+        transform: translate(-50%, -50%) scale(1.2);
     }
 
-    70% {
+    65% {
         opacity: 1;
+        transform: translate(-50%, -60%) scale(1);
     }
 
     100% {
         opacity: 0;
-        transform: translateY(-55px);
+        transform: translate(-50%, -110%) scale(.9);
     }
 }
 
@@ -584,4 +597,36 @@
         animation: none;
         opacity: 1;
     }
+}
+/* Example audio at top-right corner */
+
+#learningScreen .kl-evidence {
+    position: relative;
+    padding-right: 54px;
+}
+
+#learningScreen .kl-evidence > .kl-speak-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+}
+
+#learningScreen .kl-audio-line {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+#learningScreen .kl-audio-line > b {
+    flex: 1;
+    min-width: 0;
+}
+
+#learningScreen .kl-audio-line .kl-speak-btn {
+    flex: 0 0 34px;
+    width: 34px;
 }
