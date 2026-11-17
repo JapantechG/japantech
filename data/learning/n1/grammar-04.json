@@ -8,22 +8,27 @@
       "id": "n1-lg023",
       "grammar": "～だけのことだ（2）",
       "reading": "～だけのことだ",
-      "meaning": "Chỉ (đơn giản) là...",
-      "formation": "Mệnh đề + というだけのことだ",
+      "meaning": "Chỉ đơn giản là…; chẳng qua chỉ là…",
+      "formation": "Mệnh đề thể thông thường + だけのことだ／というだけのことだ; biến thể だけのことで／だけのことです",
       "priorityStars": 4,
-      "explanation": "Mẫu ～だけのことだ（2） diễn tả: Chỉ (đơn giản) là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Dùng để giới hạn bản chất của sự việc: thực tế chỉ có lý do hoặc tình huống đơn giản được nêu, không có hàm ý hay nguyên nhân đặc biệt khác. Có thể mang sắc thái khiêm tốn, giải thích hoặc bác bỏ suy đoán của người nghe.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Chỉ (đơn giản) là..."
+          "title": "Cấu trúc",
+          "text": "Vる／Vた + だけのことだ; mệnh đề + というだけのことだ. Khi nối với mệnh đề sau dùng だけのことで."
         },
         {
-          "title": "Mẫu",
-          "text": "～だけのことだ（2）"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh “chỉ vậy thôi”, thường giảm nhẹ thành tích hay giải thích rằng không có ẩn ý."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Khác ～だけのことだ（1）: dạng (1) sau điều kiện có nghĩa “chỉ cần làm vậy là xong”; dạng (2) giới hạn nội dung sự thật."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu nhầm だけのことです trong lời khiêm tốn thành sự đánh giá thấp đối phương.",
+        "Không đồng nhất dạng giải thích sự việc với dạng ～ばいいだけのことだ mang nghĩa giải pháp đơn giản."
       ],
       "discovery": {
         "distractors": [
@@ -35,45 +40,46 @@
       "examples": [
         {
           "sentence": "A：Bさんは、何でもできてすごいですね。\nB：そんなことないですよ。皆さんより少し長く生きているというだけのことです。",
-          "reading": "",
+          "reading": "A：Bさんは、なんでもできてすごいですね。\nB：そんなことないですよ。みなさんよりすこしながくいきているというだけのことです。",
           "translation": "A: Anh B giỏi thật đấy, việc gì cũng làm được nhỉ.\nB: Không có đâu. Chỉ đơn giản là tôi sống lâu hơn mọi người một chút thôi.",
           "blank": "A：Bさんは、何でもできてすごいですね。\nB：そんなことないですよ。皆さんより少し長く生きているという____。",
           "answer": "だけのことです",
-          "hint": "Mẫu mục tiêu: ～だけのことだ（2）",
-          "reason": "Trong câu này, だけのことです thể hiện ý nghĩa: Chỉ (đơn giản) là....",
-          "wrongReason": "Đối chiếu với mẫu ～だけのことだ（2） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～だけのことだ（2） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Người B khiêm tốn: điều được khen chỉ đơn giản là nhờ sống lâu hơn mọi người một chút.",
+          "wrongReason": "「というだけのことです」 giới hạn lời giải thích ở một sự thật đơn giản, không khẳng định người B có tài năng đặc biệt.",
           "chunks": [
-            "A：Bさんは、何でもできてすごいですね。\n",
-            "B：そんなことないですよ。皆さんより少し長く生きているというだけのことです。"
+            "A：Bさんは、",
+            "何でもできてすごいですね。",
+            "\n",
+            "B：そんなことないですよ。",
+            "皆さんより少し長く生きているというだけのことです。"
           ]
         },
         {
           "sentence": "お金がなかったから医者になる夢を諦めただけのことで、別に嫌な思いをしたからやめたわけではない。",
-          "reading": "",
+          "reading": "おかねがなかったからいしゃになるゆめをあきらめただけのことで、べつにいやなおもいをしたからやめたわけではない。",
           "translation": "Chỉ đơn giản là vì không có tiền nên tôi đã từ bỏ ước mơ trở thành bác sĩ, chứ không phải vì gặp chuyện khó chịu mà từ bỏ.",
           "blank": "お金がなかったから医者になる夢を諦めた____、別に嫌な思いをしたからやめたわけではない。",
           "answer": "だけのことで",
-          "hint": "Mẫu mục tiêu: ～だけのことだ（2）",
-          "reason": "Trong câu này, だけのことで thể hiện ý nghĩa: Chỉ (đơn giản) là....",
-          "wrongReason": "Đối chiếu với mẫu ～だけのことだ（2） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～だけのことだ（2） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Người nói chỉ từ bỏ ước mơ làm bác sĩ vì không có tiền, không phải do trải nghiệm khó chịu.",
+          "wrongReason": "「だけのことで」 giới hạn nguyên nhân, đối lập với 「わけではない」 ở mệnh đề sau.",
           "chunks": [
-            "お金がなかったから医者に",
-            "なる夢を諦めただけのことで、",
+            "お金がなかったから医者になる夢を諦めただけのことで、",
             "別に嫌な思いをしたからやめたわけではない。"
           ]
         },
         {
           "sentence": "親同士が仲がいいというだけのことで、私たちは特別な関係ではありません。",
-          "reading": "",
+          "reading": "おやどうしがなかがいいというだけのことで、わたしたちはとくべつなかんけいではありません。",
           "translation": "Chỉ đơn giản là bố mẹ hai bên thân thiết với nhau thôi, chúng tôi không có mối quan hệ đặc biệt nào.",
           "blank": "親同士が仲がいいという____、私たちは特別な関係ではありません。",
           "answer": "だけのことで",
-          "hint": "Mẫu mục tiêu: ～だけのことだ（2）",
-          "reason": "Trong câu này, だけのことで thể hiện ý nghĩa: Chỉ (đơn giản) là....",
-          "wrongReason": "Đối chiếu với mẫu ～だけのことだ（2） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～だけのことだ（2） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Quan hệ giữa hai người chỉ đơn giản bắt nguồn từ việc cha mẹ thân nhau; không có quan hệ đặc biệt.",
+          "wrongReason": "Cần hiểu 「というだけのことで」 là “chỉ có sự thật đó thôi”, không hàm ý thêm.",
           "chunks": [
-            "親同士が仲がいいと",
-            "いうだけのことで、",
+            "親同士が仲がいいというだけのことで、",
             "私たちは特別な関係ではありません。"
           ]
         }
@@ -84,22 +90,27 @@
       "id": "n1-lg024",
       "grammar": "～にして（1）",
       "reading": "～にして",
-      "meaning": "Phải đến tận... / Mới... mà đã...",
-      "formation": "Danh từ chỉ thời gian/tuổi + にして",
+      "meaning": "Đến tận một mốc mới…; mới ở tuổi/mốc đó mà đã…",
+      "formation": "Danh từ chỉ tuổi, thời gian, thời điểm + にして",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にして（1） diễn tả: Phải đến tận... / Mới... mà đã.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Đánh dấu một mốc thời gian hoặc độ tuổi đáng chú ý và nhấn mạnh kết quả xảy ra tại mốc ấy. Tùy ngữ cảnh, người nói tỏ ra ngạc nhiên vì đạt được sớm, hoặc vì mãi đến lúc đó mới xảy ra.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Phải đến tận... / Mới... mà đã..."
+          "title": "Cấu trúc",
+          "text": "40歳にして／試験の前日にして／10か月にして + sự việc phát sinh."
         },
         {
-          "title": "Mẫu",
-          "text": "～にして（1）"
+          "title": "Sắc thái",
+          "text": "Hay đi với ようやく, 初めて và các biểu thức thể hiện sự bất ngờ về thời điểm."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～になって chỉ sự chuyển sang mốc thời gian thông thường; ～にして nhấn mạnh mốc có ý nghĩa đặc biệt."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không mặc định にして luôn mang nghĩa “mặc dù”; phải đọc kết quả sau mốc.",
+        "Phân biệt cách dùng mốc thời gian này với ～にして nghĩa “vừa… vừa…”."
       ],
       "discovery": {
         "distractors": [
@@ -111,47 +122,44 @@
       "examples": [
         {
           "sentence": "兄は、40歳にしてようやく子供を授かった。",
-          "reading": "",
+          "reading": "あには、よんじゅっさいにしてようやくこどもをさずかった。",
           "translation": "Anh trai tôi phải đến tận 40 tuổi mới có được một đứa con.",
           "blank": "兄は、40歳____ようやく子供を授かった。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（1）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Phải đến tận... / Mới... mà đã....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（1） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（1） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Mốc 40 tuổi được nhấn mạnh vì anh trai phải đến lúc đó mới có con.",
+          "wrongReason": "「ようやく」 kết hợp với 「にして」 nhấn mạnh việc cuối cùng mới đạt được ở tuổi ấy.",
           "chunks": [
             "兄は、",
-            "40歳にしてようやく子供を",
-            "授かった。"
+            "40歳にしてようやく子供を授かった。"
           ]
         },
         {
           "sentence": "試験の前日にして、違うところを勉強していたことに気が付いた。",
-          "reading": "",
+          "reading": "しけんのぜんじつにして、ちがうところをべんきょうしていたことにきがついた。",
           "translation": "Phải đến tận ngày trước kỳ thi tôi mới nhận ra rằng mình đã học nhầm phần.",
           "blank": "試験の前日____、違うところを勉強していたことに気が付いた。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（1）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Phải đến tận... / Mới... mà đã....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（1） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（1） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Đến tận ngày trước kỳ thi người nói mới nhận ra mình đã học sai phần.",
+          "wrongReason": "「前日にして」 nhấn mạnh thời điểm quá muộn để nhận ra sai sót.",
           "chunks": [
             "試験の前日にして、",
-            "違うところを",
-            "勉強していたことに気が付いた。"
+            "違うところを勉強していたことに気が付いた。"
           ]
         },
         {
           "sentence": "付き合って10か月にして、初めて相手が既婚者だと気が付いた。",
-          "reading": "",
+          "reading": "つきあってじゅっかげつにして、はじめてあいてがきこんしゃだときがついた。",
           "translation": "Phải đến tận 10 tháng sau khi hẹn hò, tôi mới lần đầu nhận ra đối phương là người đã có gia đình.",
           "blank": "付き合って10か月____、初めて相手が既婚者だと気が付いた。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（1）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Phải đến tận... / Mới... mà đã....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（1） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（1） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Sau 10 tháng hẹn hò mới lần đầu nhận ra đối phương đã kết hôn.",
+          "wrongReason": "「初めて」 cùng 「10か月にして」 làm rõ việc phát hiện muộn và bất ngờ.",
           "chunks": [
             "付き合って10か月にして、",
-            "初めて相手が",
-            "既婚者だと気が付いた。"
+            "初めて相手が既婚者だと気が付いた。"
           ]
         }
       ],
@@ -161,22 +169,27 @@
       "id": "n1-lg025",
       "grammar": "～にして（2）",
       "reading": "～にして",
-      "meaning": "Vừa là... vừa là...",
-      "formation": "Danh từ / tính chất + にして + tính chất",
+      "meaning": "Vừa là… vừa là…; đồng thời mang hai đặc tính",
+      "formation": "Danh từ / từ chỉ tính chất A + にして + danh từ / từ chỉ tính chất B",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にして（2） diễn tả: Vừa là... vừa là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Diễn đạt một chủ thể đồng thời có hai tư cách, đặc trưng hoặc thuộc tính. Cách nói có sắc thái trang trọng, cô đọng và mang tính văn viết.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Vừa là... vừa là..."
+          "title": "Cấu trúc",
+          "text": "AにしてB: 伴侶にしてビジネスパートナー; 最初にして最後."
         },
         {
-          "title": "Mẫu",
-          "text": "～にして（2）"
+          "title": "Sắc thái",
+          "text": "Liên kết hai đặc tính của cùng một đối tượng, có thể nhấn mạnh cặp đặc tính tưởng khác nhau."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "AでありBでもある cùng nghĩa cơ bản nhưng tự nhiên trong hội thoại hơn; ～にして thường trang trọng hơn."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng để nối hai sự kiện không có chung chủ thể.",
+        "Không nhầm にして ở đây với nghĩa “đến tận tuổi/mốc thời gian”."
       ],
       "discovery": {
         "distractors": [
@@ -188,46 +201,41 @@
       "examples": [
         {
           "sentence": "安全にして快適な社会が作りたいです。",
-          "reading": "",
+          "reading": "あんぜんにしてかいてきなしゃかいがつくりたいです。",
           "translation": "Tôi muốn xây dựng một xã hội vừa an toàn vừa thoải mái.",
           "blank": "安全____快適な社会が作りたいです。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（2）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Vừa là... vừa là....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（2） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（2） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Xã hội được mong muốn có đồng thời hai tính chất: an toàn và thoải mái.",
+          "wrongReason": "「安全にして快適」 liên kết hai đặc tính của cùng một xã hội.",
           "chunks": [
-            "安全に",
-            "して快適な社会が",
-            "作りたいです。"
+            "安全にして快適な社会が作りたいです。"
           ]
         },
         {
           "sentence": "彼女は私の伴侶にしてビジネスパートナーでもある。",
-          "reading": "",
+          "reading": "かのじょはわたしのはんりょにしてビジネスパートナーでもある。",
           "translation": "Cô ấy vừa là bạn đời của tôi, vừa là đối tác kinh doanh.",
           "blank": "彼女は私の伴侶____ビジネスパートナーでもある。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（2）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Vừa là... vừa là....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（2） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（2） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Cô ấy vừa là bạn đời vừa là đối tác kinh doanh của người nói.",
+          "wrongReason": "Hai danh từ 「伴侶」 và 「ビジネスパートナー」 cùng chỉ một người, được nối bằng 「にして」.",
           "chunks": [
-            "彼女は私の伴侶に",
-            "してビジネスパートナーで",
-            "もある。"
+            "彼女は私の伴侶にしてビジネスパートナーでもある。"
           ]
         },
         {
           "sentence": "70歳を過ぎて達成した富士山登頂が、父の最初にして最後の登山だった。",
-          "reading": "",
+          "reading": "ななじゅっさいをすぎてたっせいしたふじさんとうちょうが、ちちのさいしょにしてさいごのとざんだった。",
           "translation": "Lần chinh phục đỉnh Phú Sĩ sau tuổi 70 vừa là lần leo núi đầu tiên, vừa là lần cuối cùng của bố tôi.",
           "blank": "70歳を過ぎて達成した富士山登頂が、父の最初____最後の登山だった。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（2）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Vừa là... vừa là....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（2） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（2） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Chuyến leo núi ấy vừa là lần đầu vừa là lần cuối của người bố.",
+          "wrongReason": "「最初にして最後」 là cách diễn đạt hai tính chất đồng thời của cùng sự việc.",
           "chunks": [
-            "70歳を",
-            "過ぎて達成した富士山登頂が、",
+            "70歳を過ぎて達成した富士山登頂が、",
             "父の最初にして最後の登山だった。"
           ]
         }
@@ -238,22 +246,27 @@
       "id": "n1-lg026",
       "grammar": "～にして（3）",
       "reading": "～にして",
-      "meaning": "Mặc dù... vậy mà... / Mang tiếng là... thế mà...",
-      "formation": "Danh từ chỉ tuổi/thời điểm + にして",
+      "meaning": "Dù đã ở tuổi/mốc ấy mà vẫn… (nhấn mạnh sự ngạc nhiên)",
+      "formation": "Danh từ chỉ độ tuổi / thời điểm + にして + sự việc trái dự đoán",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にして（3） diễn tả: Mặc dù... vậy mà... / Mang tiếng là... thế mà.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Nêu một độ tuổi hay thời điểm, rồi nhấn mạnh rằng kết quả ở sau rất đáng ngạc nhiên so với dự đoán thông thường. Cùng hình thức với にして chỉ mốc thời gian, nhưng trọng tâm câu này là sự đánh giá, thán phục.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Mặc dù... vậy mà... / Mang tiếng là... thế mà..."
+          "title": "Cấu trúc",
+          "text": "50歳にして + kết quả vượt kỳ vọng: vẫn giữ thân hình săn chắc."
         },
         {
-          "title": "Mẫu",
-          "text": "～にして（3）"
+          "title": "Sắc thái",
+          "text": "Thường thể hiện sự thán phục hoặc ngạc nhiên khi kết quả xuất hiện ở một độ tuổi đặc biệt."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Đây là sắc thái ngữ cảnh của mẫu mốc thời gian にして; không phải một dạng kết hợp ngữ pháp hoàn toàn tách biệt với ～にして（1）."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu にして một mình có nghĩa từ vựng “mặc dù”; sắc thái tương phản đến từ toàn câu.",
+        "Không dùng nhận định áp đặt về tuổi tác trong ngữ cảnh nhạy cảm."
       ],
       "discovery": {
         "distractors": [
@@ -265,16 +278,15 @@
       "examples": [
         {
           "sentence": "50歳にしてこれほど引き締まった体を維持するとは、素晴らしい。",
-          "reading": "",
+          "reading": "ごじゅっさいにしてこれほどひきしまったからだをいじするとは、すばらしい。",
           "translation": "Mặc dù đã 50 tuổi mà vẫn duy trì được một cơ thể săn chắc đến mức này, thật tuyệt vời.",
           "blank": "50歳____これほど引き締まった体を維持するとは、素晴らしい。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（3）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Mặc dù... vậy mà... / Mang tiếng là... thế mà....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（3） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（3） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Ở tuổi 50 mà vẫn duy trì vóc dáng săn chắc như vậy khiến người nói thán phục.",
+          "wrongReason": "Cảm giác bất ngờ nằm ở toàn câu 「50歳にして…とは、素晴らしい」, không chỉ ở 「にして」.",
           "chunks": [
-            "50歳にしてこれほど引き締まった体を",
-            "維持するとは、",
+            "50歳にしてこれほど引き締まった体を維持するとは、",
             "素晴らしい。"
           ]
         }
@@ -285,22 +297,27 @@
       "id": "n1-lg027",
       "grammar": "～にして（4）",
       "reading": "～にして",
-      "meaning": "Chỉ có N / Chính là N nên mới có thể...",
-      "formation": "Danh từ chỉ người + にして",
+      "meaning": "Chỉ người ấy mới…; chính vì là người ấy nên…",
+      "formation": "Danh từ chỉ người / danh từ chỉ tư cách + にして + kết quả (thường vượt khả năng người khác)",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にして（4） diễn tả: Chỉ có N / Chính là N nên mới có thể.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Nhấn mạnh sự việc hoặc thành quả chỉ có thể thực hiện bởi một người có năng lực hay tư cách đặc biệt. Cần phân biệt với thành ngữ あの親にしてあの子あり, mô tả sự tương đồng giữa cha mẹ và con.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Chỉ có N / Chính là N nên mới có thể..."
+          "title": "Cấu trúc",
+          "text": "彼にして思いつく／彼女にして達成できる: nhấn mạnh năng lực đặc biệt của chủ thể."
         },
         {
-          "title": "Mẫu",
-          "text": "～にして（4）"
+          "title": "Sắc thái",
+          "text": "Thường dùng trong đánh giá năng lực nổi bật; văn viết và cách nói trang trọng."
+        },
+        {
+          "title": "Ngoại lệ ngữ cảnh",
+          "text": "あの親にしてあの子あり là thành ngữ “cha mẹ nào con nấy”; không có nghĩa người con đạt được việc khó nhờ tài năng."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không áp dụng cách giải thích “chỉ người đó mới…” cho thành ngữ あの親にしてあの子あり.",
+        "Không nhầm にして với trợ từ に đơn thuần hoặc với によって."
       ],
       "discovery": {
         "distractors": [
@@ -312,46 +329,48 @@
       "examples": [
         {
           "sentence": "そのアイデアは、長年努力してきた彼にして思いついたアイデアだった。",
-          "reading": "",
+          "reading": "そのアイデアは、ながねんどりょくしてきたかれにしておもいついたアイデアだった。",
           "translation": "Ý tưởng đó là một ý tưởng mà chỉ có anh ấy, người đã nỗ lực suốt nhiều năm, mới có thể nghĩ ra.",
           "blank": "そのアイデアは、長年努力してきた彼____思いついたアイデアだった。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（4）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Chỉ có N / Chính là N nên mới có thể....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（4） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（4） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Chính nhờ kinh nghiệm nỗ lực lâu năm nên người đàn ông đó mới nghĩ ra ý tưởng.",
+          "wrongReason": "「彼にして」 nhấn mạnh năng lực đặc biệt của nhân vật; người khác khó có thể nghĩ ra.",
           "chunks": [
             "そのアイデアは、",
-            "長年努力してきた彼に",
-            "して思いついたアイデアだった。"
+            "長年努力してきた彼にして思いついたアイデアだった。"
           ]
         },
         {
           "sentence": "そのような売上は、優秀な営業担当者である彼女にして達成できるものだ。",
-          "reading": "",
+          "reading": "そのようなうりあげは、ゆうしゅうなえいぎょうたんとうしゃであるかのじょにしてたっせいできるものだ。",
           "translation": "Doanh số như vậy là thành tích mà chỉ có cô ấy, một nhân viên kinh doanh xuất sắc, mới có thể đạt được.",
           "blank": "そのような売上は、優秀な営業担当者である彼女____達成できるものだ。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（4）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Chỉ có N / Chính là N nên mới có thể....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（4） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（4） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Do cô ấy là nhân viên kinh doanh xuất sắc nên mới đạt được doanh số như vậy.",
+          "wrongReason": "「彼女にして」 nhấn mạnh khả năng chỉ người có năng lực đó mới đạt được.",
           "chunks": [
             "そのような売上は、",
-            "優秀な営業担当者である彼女に",
-            "して達成できるものだ。"
+            "優秀な営業担当者である彼女にして達成できるものだ。"
           ]
         },
         {
           "sentence": "A：あそこのうちの子、何かもらっても「ありがとう」も言わないんですよ。\nB：ああ、親もそうだからね。「あの親にしてあの子あり」と言いますから。",
-          "reading": "",
+          "reading": "A：あそこのうちのこ、なにかもらっても「ありがとう」もいわないんですよ。\nB：ああ、おやもそうだからね。「あのおやにしてあのこあり」といいますから。",
           "translation": "A: Đứa trẻ nhà kia dù được cho thứ gì cũng chẳng nói \"cảm ơn\" đâu.\nB: À, bố mẹ nó cũng như vậy mà. Người ta vẫn nói \"cha mẹ nào con nấy\" đấy.",
           "blank": "A：あそこのうちの子、何かもらっても「ありがとう」も言わないんですよ。\nB：ああ、親もそうだからね。「あの親____あの子あり」と言いますから。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（4）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Chỉ có N / Chính là N nên mới có thể....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（4） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（4） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Thành ngữ 「あの親にしてあの子あり」 hàm ý cha mẹ thế nào thì con cái cũng thường như vậy.",
+          "wrongReason": "Đây là thành ngữ nói về sự tương đồng cha mẹ và con; không áp dụng nghĩa “chỉ người đó mới làm được”.",
           "chunks": [
-            "A：あそこのうちの子、何かもらっても「ありがとう」も言わないんですよ。\n",
-            "B：ああ、親もそうだからね。「あの親にしてあの子あり」と言いますから。"
+            "A：あそこのうちの子、",
+            "何かもらっても「ありがとう」も言わないんですよ。",
+            "\n",
+            "B：ああ、",
+            "親もそうだからね。",
+            "「あの親にしてあの子あり」と言いますから。"
           ]
         }
       ],
@@ -361,22 +380,27 @@
       "id": "n1-lg028",
       "grammar": "～にして（5）",
       "reading": "～にして",
-      "meaning": "Chỉ trong... / Từ lúc sinh ra, bẩm sinh, thường... / May mà, bất hạnh thay là...",
-      "formation": "Các cách nói cố định: 生まれながらにして／幸いにして",
+      "meaning": "Trong các cụm cố định: bẩm sinh; may thay…",
+      "formation": "生まれながらにして + đặc điểm bẩm sinh／幸いにして + kết quả may mắn",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にして（5） diễn tả: Chỉ trong... / Từ lúc sinh ra, bẩm sinh, thường... / May mà, bất hạnh thay là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Đây là nhóm cách diễn đạt cố định có にして. 生まれながらにして diễn tả năng lực hoặc đặc điểm đã có từ khi sinh ra; 幸いにして nêu tình huống may mắn. Không nên gộp hai cách dùng thành một công thức có thể thay thế tự do.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Chỉ trong... / Từ lúc sinh ra, bẩm sinh, thường... / May mà, bất hạnh thay là..."
+          "title": "生まれながらにして",
+          "text": "Có nghĩa “bẩm sinh, từ lúc sinh ra đã…”, thường mô tả tài năng hoặc tố chất."
         },
         {
-          "title": "Mẫu",
-          "text": "～にして（5）"
+          "title": "幸いにして",
+          "text": "Có nghĩa “may mắn thay”, thường đứng đầu câu để bình luận về kết quả."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "生まれつき là từ diễn đạt “bẩm sinh” thông dụng; 幸いにも gần nghĩa với 幸いにして, ít trang trọng hơn."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu mọi cụm có にして đều có chung nghĩa “chỉ trong thời gian”.",
+        "Không bỏ ながら trong 生まれながらにして hoặc gán nghĩa “bẩm sinh” cho 幸いにして."
       ],
       "discovery": {
         "distractors": [
@@ -388,33 +412,30 @@
       "examples": [
         {
           "sentence": "彼は生まれながらにして優れた音楽の才能を持っている。",
-          "reading": "",
+          "reading": "かれはうまれながらにしてすぐれたおんがくのさいのうをもっている。",
           "translation": "Anh ấy có tài năng âm nhạc xuất sắc từ khi sinh ra.",
           "blank": "彼は生まれ____優れた音楽の才能を持っている。",
           "answer": "ながらにして",
-          "hint": "Mẫu mục tiêu: ～にして（5）",
-          "reason": "Trong câu này, ながらにして thể hiện ý nghĩa: Chỉ trong... / Từ lúc sinh ra, bẩm sinh, thường... / May mà, bất hạnh thay là....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（5） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（5） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "「生まれながらにして」 cho biết tài năng âm nhạc đã có từ khi sinh ra.",
+          "wrongReason": "Phải nhận biết cả cụm cố định 「生まれながらにして」, không hiểu riêng 「にして」.",
           "chunks": [
-            "彼は生まれなが",
-            "らにして優れた音楽の才能を",
-            "持っている。"
+            "彼は生まれながらにして優れた音楽の才能を持っている。"
           ],
           "editorialExample": true
         },
         {
           "sentence": "幸いにして、全員が無事に避難できた。",
-          "reading": "",
+          "reading": "さいわいにして、ぜんいんがぶじにひなんできた。",
           "translation": "May mắn thay, tất cả mọi người đã sơ tán an toàn.",
           "blank": "幸い____、全員が無事に避難できた。",
           "answer": "にして",
-          "hint": "Mẫu mục tiêu: ～にして（5）",
-          "reason": "Trong câu này, にして thể hiện ý nghĩa: Chỉ trong... / Từ lúc sinh ra, bẩm sinh, thường... / May mà, bất hạnh thay là....",
-          "wrongReason": "Đối chiếu với mẫu ～にして（5） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～にして（5） và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "「幸いにして」 diễn tả may mắn vì tất cả đã sơ tán an toàn.",
+          "wrongReason": "Đây là lời bình luận về kết quả may mắn, khác với sắc thái “bẩm sinh” ở ví dụ trước.",
           "chunks": [
             "幸いにして、",
-            "全員が無事に",
-            "避難できた。"
+            "全員が無事に避難できた。"
           ],
           "editorialExample": true
         }
@@ -426,22 +447,27 @@
       "id": "n1-lg029",
       "grammar": "～始末だ",
       "reading": "～しまつだ",
-      "meaning": "Cuối cùng thì... / Rốt cuộc thì... / Kết cục thì...",
-      "formation": "Động từ dạng từ điển + 始末だ",
+      "meaning": "Rốt cuộc lại đến mức… (kết cục tiêu cực)",
+      "formation": "Động từ dạng từ điển + 始末だ／始末である",
       "priorityStars": 4,
-      "explanation": "Mẫu ～始末だ diễn tả: Cuối cùng thì... / Rốt cuộc thì... / Kết cục thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Diễn tả chuỗi diễn biến tiêu cực kéo dài hoặc xấu dần và cuối cùng dẫn đến kết quả đáng thất vọng, vượt quá mức người nói mong đợi. Thường biểu hiện sự phê phán, ngán ngẩm.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Cuối cùng thì... / Rốt cuộc thì... / Kết cục thì..."
+          "title": "Cấu trúc",
+          "text": "Vる + 始末だ: 暴言まで吐く始末だ; 居眠りする始末だ."
         },
         {
-          "title": "Mẫu",
-          "text": "～始末だ"
+          "title": "Sắc thái",
+          "text": "Có cảm giác “đến mức tệ hại là…”, không dùng cho kết quả vui mừng hay bình thường."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "結局 chỉ nêu kết quả cuối; 始末だ thường kèm đánh giá tiêu cực và sự xuống cấp của tình hình."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng 始末だ cho thành tựu tích cực.",
+        "Không nhầm 始末（しまつ） trong mẫu với chữ 始める（はじめる）."
       ],
       "discovery": {
         "distractors": [
@@ -453,13 +479,13 @@
       "examples": [
         {
           "sentence": "好意でアドバイスしたのに、彼は怒り出して、最後には暴言まで吐く始末だ。",
-          "reading": "",
+          "reading": "こういでアドバイスしたのに、かれはおこりだして、さいごにはぼうげんまではくしまつだ。",
           "translation": "Dù tôi có ý tốt nên mới khuyên anh ấy, vậy mà anh ấy nổi giận, cuối cùng thậm chí còn buông lời xúc phạm.",
           "blank": "好意でアドバイスしたのに、彼は怒り出して、最後には暴言まで吐く____。",
           "answer": "始末だ",
-          "hint": "Mẫu mục tiêu: ～始末だ",
-          "reason": "Trong câu này, 始末だ thể hiện ý nghĩa: Cuối cùng thì... / Rốt cuộc thì... / Kết cục thì....",
-          "wrongReason": "Đối chiếu với mẫu ～始末だ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～始末だ và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Dù được góp ý thiện chí, người ấy lại tức giận và cuối cùng còn buông lời xúc phạm.",
+          "wrongReason": "「最後には」 và 「まで」 nhấn mạnh chuỗi sự việc xấu đi đến mức đáng trách.",
           "chunks": [
             "好意でアドバイスしたのに、",
             "彼は怒り出して、",
@@ -468,13 +494,13 @@
         },
         {
           "sentence": "彼は遅刻してきた上に、教科書もノートも持ってこないで、授業も居眠りする始末だ。",
-          "reading": "",
+          "reading": "かれはちこくしてきたうえに、きょうかしょもノートももってこないで、じゅぎょうもいねむりするしまつだ。",
           "translation": "Anh ấy không những đến muộn mà còn không mang cả sách giáo khoa lẫn vở, cuối cùng còn ngủ gật trong giờ học.",
           "blank": "彼は遅刻してきた上に、教科書もノートも持ってこないで、授業も居眠りする____。",
           "answer": "始末だ",
-          "hint": "Mẫu mục tiêu: ～始末だ",
-          "reason": "Trong câu này, 始末だ thể hiện ý nghĩa: Cuối cùng thì... / Rốt cuộc thì... / Kết cục thì....",
-          "wrongReason": "Đối chiếu với mẫu ～始末だ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～始末だ và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Anh ấy đến muộn, không mang sách vở, cuối cùng còn ngủ gật trong lớp.",
+          "wrongReason": "「始末だ」 dùng để thể hiện sự ngán ngẩm với kết cục tệ hơn trước.",
           "chunks": [
             "彼は遅刻してきた上に、",
             "教科書もノートも持ってこないで、",
@@ -483,13 +509,13 @@
         },
         {
           "sentence": "何もしていないのに犯人扱いされて、みんなから非難され、最後は土下座しろと言われる始末だ。",
-          "reading": "",
+          "reading": "なにもしていないのにはんにんあつかいされて、みんなからひなんされ、さいごはどげざしろといわれるしまつだ。",
           "translation": "Dù chẳng làm gì nhưng tôi lại bị coi như thủ phạm, bị mọi người chỉ trích, cuối cùng thậm chí còn bị yêu cầu quỳ xuống xin lỗi.",
           "blank": "何もしていないのに犯人扱いされて、みんなから非難され、最後は土下座しろと言われる____。",
           "answer": "始末だ",
-          "hint": "Mẫu mục tiêu: ～始末だ",
-          "reason": "Trong câu này, 始末だ thể hiện ý nghĩa: Cuối cùng thì... / Rốt cuộc thì... / Kết cục thì....",
-          "wrongReason": "Đối chiếu với mẫu ～始末だ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～始末だ và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Người vô tội bị nghi ngờ và chỉ trích, cuối cùng còn bị yêu cầu quỳ xuống xin lỗi.",
+          "wrongReason": "「始末だ」 diễn tả kết cục vô lý và tiêu cực, không chỉ một kết quả bình thường.",
           "chunks": [
             "何もしていないのに犯人扱いされて、",
             "みんなから非難され、",
@@ -503,22 +529,27 @@
       "id": "n1-lg030",
       "grammar": "～なり",
       "reading": "～なり",
-      "meaning": "Vừa mới V là lập tức...",
-      "formation": "Động từ dạng từ điển + なり",
+      "meaning": "Vừa mới làm V thì ngay lập tức…",
+      "formation": "Động từ dạng từ điển + なり + hành động tiếp theo",
       "priorityStars": 4,
-      "explanation": "Mẫu ～なり diễn tả: Vừa mới V là lập tức.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Nhấn mạnh hai hành động nối tiếp gần như tức khắc. Thường dùng khi người nói quan sát hành vi của người khác; sắc thái văn viết, kể chuyện, hành động thứ hai có tính bất ngờ hoặc đột ngột.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Vừa mới V là lập tức..."
+          "title": "Cấu trúc",
+          "text": "Vる + なり: 見るなり笑い出す; なるなり口喧嘩を始める."
         },
         {
-          "title": "Mẫu",
-          "text": "～なり"
+          "title": "Sắc thái",
+          "text": "Nhấn vào sự tức thì; phổ biến trong miêu tả, tường thuật, ít dùng để diễn tả kế hoạch tương lai."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～たとたん（に） cũng biểu thị ngay khi; ～なり trang trọng và giàu sắc thái kể chuyện hơn."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không chia động từ trước なり sang dạng quá khứ た trong cấu trúc này.",
+        "Không nhầm với ～なり～なり mang nghĩa “hoặc… hoặc…”."
       ],
       "discovery": {
         "distractors": [
@@ -530,47 +561,44 @@
       "examples": [
         {
           "sentence": "彼女は、メールを見るなり笑い出した。",
-          "reading": "",
+          "reading": "かのじょは、メールをみるなりわらいだした。",
           "translation": "Cô ấy vừa mới xem email là lập tức bật cười.",
           "blank": "彼女は、メールを見る____笑い出した。",
           "answer": "なり",
-          "hint": "Mẫu mục tiêu: ～なり",
-          "reason": "Trong câu này, なり thể hiện ý nghĩa: Vừa mới V là lập tức....",
-          "wrongReason": "Đối chiếu với mẫu ～なり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～なり và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Vừa nhìn email, cô ấy lập tức bật cười.",
+          "wrongReason": "Động từ 「見る」 ở dạng từ điển kết hợp 「なり」 để chỉ hành động xảy ra tức thì.",
           "chunks": [
             "彼女は、",
-            "メールを",
-            "見るなり笑い出した。"
+            "メールを見るなり笑い出した。"
           ]
         },
         {
           "sentence": "人前ではニコニコしていた夫婦が、二人きりになるなり口喧嘩を始めた。",
-          "reading": "",
+          "reading": "ひとまえではニコニコしていたふうふが、ふたりきりになるなりくちげんかをはじめた。",
           "translation": "Cặp vợ chồng vốn tươi cười trước mặt mọi người, vừa mới ở riêng hai người là lập tức bắt đầu cãi nhau.",
           "blank": "人前ではニコニコしていた夫婦が、二人きりになる____口喧嘩を始めた。",
           "answer": "なり",
-          "hint": "Mẫu mục tiêu: ～なり",
-          "reason": "Trong câu này, なり thể hiện ý nghĩa: Vừa mới V là lập tức....",
-          "wrongReason": "Đối chiếu với mẫu ～なり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～なり và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Ngay khi chỉ còn hai người, đôi vợ chồng bắt đầu cãi nhau.",
+          "wrongReason": "「なるなり」 diễn tả sự chuyển từ tình trạng mỉm cười trước người khác sang cãi nhau rất nhanh.",
           "chunks": [
             "人前ではニコニコしていた夫婦が、",
-            "二人きりに",
-            "なるなり口喧嘩を始めた。"
+            "二人きりになるなり口喧嘩を始めた。"
           ]
         },
         {
           "sentence": "2匹の犬は、顔を合わせるなりけんかを始めた。",
-          "reading": "",
+          "reading": "にひきのいぬは、かおをあわせるなりけんかをはじめた。",
           "translation": "Hai con chó vừa mới chạm mặt nhau là lập tức bắt đầu đánh nhau.",
           "blank": "2匹の犬は、顔を合わせる____けんかを始めた。",
           "answer": "なり",
-          "hint": "Mẫu mục tiêu: ～なり",
-          "reason": "Trong câu này, なり thể hiện ý nghĩa: Vừa mới V là lập tức....",
-          "wrongReason": "Đối chiếu với mẫu ～なり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～なり và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Hai con chó vừa đối mặt là lập tức đánh nhau.",
+          "wrongReason": "「合わせるなり」 nhấn mạnh hành động thứ hai xảy ra gần như ngay lập tức.",
           "chunks": [
             "2匹の犬は、",
-            "顔を合わせるなりけんかを",
-            "始めた。"
+            "顔を合わせるなりけんかを始めた。"
           ]
         }
       ],
@@ -580,22 +608,27 @@
       "id": "n1-lg031",
       "grammar": "～であれ",
       "reading": "～であれ",
-      "meaning": "Dù thế nào đi nữa thì...",
-      "formation": "Danh từ / từ nghi vấn + であれ",
+      "meaning": "Dù là… đi nữa; bất kể…",
+      "formation": "Danh từ + であれ／từ nghi vấn + であれ; tính từ -na + であれ",
       "priorityStars": 4,
-      "explanation": "Mẫu ～であれ diễn tả: Dù thế nào đi nữa thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Công nhận bất kể một điều kiện hoặc tư cách nào, nhưng kết luận phía sau vẫn không thay đổi. Dùng để nêu nguyên tắc, lập trường hoặc quy định có tính bao quát.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Dù thế nào đi nữa thì..."
+          "title": "Cấu trúc",
+          "text": "理由はどうであれ／たとえ家族であれ／丈夫であれ + kết luận."
         },
         {
-          "title": "Mẫu",
-          "text": "～であれ"
+          "title": "Sắc thái",
+          "text": "Văn viết, trang trọng hoặc cứng rắn; nhấn mạnh không có ngoại lệ."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～でも diễn tả nhượng bộ thông dụng; ～であれ thường nêu nguyên tắc khái quát hoặc lập trường dứt khoát."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu であれ là động từ あれ mang nghĩa “có”; đây là mẫu nhượng bộ.",
+        "Đối với tính từ -i, không trực tiếp gắn であれ như danh từ hoặc tính từ -na."
       ],
       "discovery": {
         "distractors": [
@@ -607,47 +640,43 @@
       "examples": [
         {
           "sentence": "理由はどうであれ、遅刻はよくない。",
-          "reading": "",
+          "reading": "りゆうはどうであれ、ちこくはよくない。",
           "translation": "Dù lý do có là gì đi nữa thì đi muộn cũng không tốt.",
           "blank": "理由はどう____、遅刻はよくない。",
           "answer": "であれ",
-          "hint": "Mẫu mục tiêu: ～であれ",
-          "reason": "Trong câu này, であれ thể hiện ý nghĩa: Dù thế nào đi nữa thì....",
-          "wrongReason": "Đối chiếu với mẫu ～であれ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～であれ và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Bất kể lý do là gì, đi muộn vẫn là việc không tốt.",
+          "wrongReason": "「どうであれ」 cho thấy kết luận không thay đổi dù lý do khác nhau.",
           "chunks": [
-            "理由は",
-            "どうであれ、",
+            "理由はどうであれ、",
             "遅刻はよくない。"
           ]
         },
         {
           "sentence": "たとえ家族であれ個人の空間を侵害してはならないのです。",
-          "reading": "",
+          "reading": "たとえかぞくであれこじんのくうかんをしんがいしてはならないのです。",
           "translation": "Dù có là người trong gia đình đi nữa thì cũng không được xâm phạm không gian riêng tư của cá nhân.",
           "blank": "たとえ家族____個人の空間を侵害してはならないのです。",
           "answer": "であれ",
-          "hint": "Mẫu mục tiêu: ～であれ",
-          "reason": "Trong câu này, であれ thể hiện ý nghĩa: Dù thế nào đi nữa thì....",
-          "wrongReason": "Đối chiếu với mẫu ～であれ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～であれ và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Ngay cả người trong gia đình cũng không được xâm phạm không gian riêng tư.",
+          "wrongReason": "「たとえ家族であれ」 nêu trường hợp ngoại lệ tưởng có thể được chấp nhận, rồi phủ nhận ngoại lệ đó.",
           "chunks": [
-            "たとえ家族で",
-            "あれ個人の空間を侵害しては",
-            "ならないのです。"
+            "たとえ家族であれ個人の空間を侵害してはならないのです。"
           ]
         },
         {
           "sentence": "どんなにこの家が丈夫であれ、竜巻が来たら無事では済まないだろう。",
-          "reading": "",
+          "reading": "どんなにこのいえがじょうぶであれ、たつまきがきたらぶじではすまないだろう。",
           "translation": "Dù ngôi nhà này có kiên cố đến thế nào đi nữa thì nếu lốc xoáy tới, có lẽ cũng khó mà bình an vô sự.",
           "blank": "どんなにこの家が丈夫____、竜巻が来たら無事では済まないだろう。",
           "answer": "であれ",
-          "hint": "Mẫu mục tiêu: ～であれ",
-          "reason": "Trong câu này, であれ thể hiện ý nghĩa: Dù thế nào đi nữa thì....",
-          "wrongReason": "Đối chiếu với mẫu ～であれ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～であれ và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Ngôi nhà dù có kiên cố đến đâu cũng có thể bị lốc xoáy gây thiệt hại.",
+          "wrongReason": "「丈夫であれ」 diễn tả nhượng bộ; kết luận phía sau vẫn không đổi.",
           "chunks": [
             "どんなにこの家が丈夫であれ、",
-            "竜巻が来たら無事で",
-            "は済まないだろう。"
+            "竜巻が来たら無事では済まないだろう。"
           ]
         }
       ],
@@ -657,22 +686,27 @@
       "id": "n1-lg032",
       "grammar": "～ないまでも",
       "reading": "～ないまでも",
-      "meaning": "Dù không đến mức... nhưng tối thiểu thì cũng...",
-      "formation": "Động từ dạng ない + までも",
+      "meaning": "Dù chưa đến mức… nhưng ít nhất cũng…",
+      "formation": "Động từ dạng ない + までも, theo sau bằng mức độ thực tế/thấp hơn",
       "priorityStars": 4,
-      "explanation": "Mẫu ～ないまでも diễn tả: Dù không đến mức... nhưng tối thiểu thì cũng.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Người nói phủ nhận rằng sự việc đạt đến mức độ cực đoan hoặc cao nhất, rồi thừa nhận một mức thấp hơn vẫn có thật. Phần sau thường nêu đánh giá, sự tối thiểu hoặc hệ quả vẫn đáng kể.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Dù không đến mức... nhưng tối thiểu thì cũng..."
+          "title": "Cấu trúc",
+          "text": "Vない + までも: 言えないまでも／言わないまでも／破らないまでも."
         },
         {
-          "title": "Mẫu",
-          "text": "～ないまでも"
+          "title": "Sắc thái",
+          "text": "So sánh hai mức độ: chưa đến mức A, nhưng vẫn B; phần B thường là đánh giá hoặc giới hạn tối thiểu."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～とは言えないまでも là một cách nói cụ thể; ～なくても chỉ phủ định điều kiện và không nhất thiết có sắc thái phân cấp."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không bỏ phần sau chỉ mức độ thực tế; thiếu phần này sẽ khó hiểu ý nhượng bộ.",
+        "Không đồng nhất với ～ないことには (nếu không… thì không thể…)."
       ],
       "discovery": {
         "distractors": [
@@ -684,47 +718,44 @@
       "examples": [
         {
           "sentence": "満足しているとまでは言えないまでも、それなりに納得できる給料をもらっている。",
-          "reading": "",
+          "reading": "まんぞくしているとまではいえないまでも、それなりになっとくできるきゅうりょうをもらっている。",
           "translation": "Dù không thể nói là hài lòng, nhưng ít nhất tôi cũng đang nhận được mức lương có thể chấp nhận được.",
           "blank": "満足しているとまでは言え____、それなりに納得できる給料をもらっている。",
           "answer": "ないまでも",
-          "hint": "Mẫu mục tiêu: ～ないまでも",
-          "reason": "Trong câu này, ないまでも thể hiện ý nghĩa: Dù không đến mức... nhưng tối thiểu thì cũng....",
-          "wrongReason": "Đối chiếu với mẫu ～ないまでも và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～ないまでも và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Chưa thể nói là hài lòng hoàn toàn, nhưng mức lương vẫn có thể chấp nhận được.",
+          "wrongReason": "「ないまでも」 nhượng bộ mức cao nhất rồi đưa ra đánh giá thấp hơn.",
           "chunks": [
             "満足しているとまでは言えないまでも、",
-            "それなりに納得で",
-            "きる給料をもらっている。"
+            "それなりに納得できる給料をもらっている。"
           ]
         },
         {
           "sentence": "毎月帰ってこいとは言わないまでも、お盆と正月ぐらいは帰ってきてほしい。",
-          "reading": "",
+          "reading": "まいつきかえってこいとはいわないまでも、おぼんとしょうがつぐらいはかえってきてほしい。",
           "translation": "Dù không yêu cầu phải về mỗi tháng, nhưng ít nhất tôi cũng muốn bạn về vào dịp Obon và Tết.",
           "blank": "毎月帰ってこいとは言わ____、お盆と正月ぐらいは帰ってきてほしい。",
           "answer": "ないまでも",
-          "hint": "Mẫu mục tiêu: ～ないまでも",
-          "reason": "Trong câu này, ないまでも thể hiện ý nghĩa: Dù không đến mức... nhưng tối thiểu thì cũng....",
-          "wrongReason": "Đối chiếu với mẫu ～ないまでも và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～ないまでも và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Không yêu cầu phải về nhà mỗi tháng, nhưng ít nhất muốn về dịp Obon và năm mới.",
+          "wrongReason": "Vế đầu giảm mức yêu cầu; vế sau nêu mong muốn tối thiểu.",
           "chunks": [
             "毎月帰ってこいとは言わないまでも、",
-            "お盆と正月ぐらいは",
-            "帰ってきてほしい。"
+            "お盆と正月ぐらいは帰ってきてほしい。"
           ]
         },
         {
           "sentence": "あんなことばかりやっていたら、法律を破らないまでも社会的な信用を失うだろう。",
-          "reading": "",
+          "reading": "あんなことばかりやっていたら、ほうりつをやぶらないまでもしゃかいてきなしんようをうしなうだろう。",
           "translation": "Nếu cứ làm những chuyện như thế, dù chưa đến mức vi phạm pháp luật thì ít nhất cũng sẽ mất đi uy tín trong xã hội.",
           "blank": "あんなことばかりやっていたら、法律を破ら____社会的な信用を失うだろう。",
           "answer": "ないまでも",
-          "hint": "Mẫu mục tiêu: ～ないまでも",
-          "reason": "Trong câu này, ないまでも thể hiện ý nghĩa: Dù không đến mức... nhưng tối thiểu thì cũng....",
-          "wrongReason": "Đối chiếu với mẫu ～ないまでも và đọc lại nghĩa tiếng Việt.",
+          "hint": "Chú ý cấu trúc ～ないまでも và vai trò của mệnh đề đứng trước/sau.",
+          "reason": "Dù chưa đến mức phạm pháp, hành động ấy vẫn có thể làm mất uy tín xã hội.",
+          "wrongReason": "「ないまでも」 phủ nhận mức độ nghiêm trọng hơn, nhưng nhấn mạnh hậu quả vẫn đáng lo.",
           "chunks": [
             "あんなことばかりやっていたら、",
-            "法律を破らないまでも",
-            "社会的な信用を失うだろう。"
+            "法律を破らないまでも社会的な信用を失うだろう。"
           ]
         }
       ],
