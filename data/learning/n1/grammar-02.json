@@ -7,23 +7,28 @@
     {
       "id": "n1-lg003",
       "grammar": "～あっての",
-      "reading": "～あっての",
+      "reading": "あっての",
       "meaning": "N2 có được / tồn tại được là nhờ có N1",
-      "formation": "Danh từ + あっての + danh từ",
+      "formation": "N1 + あっての + N2",
       "priorityStars": 4,
-      "explanation": "Mẫu ～あっての diễn tả: N2 có được / tồn tại được là nhờ có N1. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Nhấn mạnh N1 là điều kiện nền tảng, nhờ có N1 thì N2 mới tồn tại, thành công hoặc có ý nghĩa. Người nói thường dùng mẫu này để bày tỏ sự trân trọng hay nhấn mạnh tầm quan trọng của N1; không đơn thuần nêu nguyên nhân thông thường như ～から／～ので.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "N2 có được / tồn tại được là nhờ có N1"
+          "title": "Cấu trúc",
+          "text": "Danh từ N1 + あっての + danh từ N2. N1 là yếu tố không thể thiếu để N2 tồn tại."
         },
         {
-          "title": "Mẫu",
-          "text": "～あっての"
+          "title": "Sắc thái",
+          "text": "Hay dùng trong lời cảm ơn, đánh giá vai trò của khách hàng, gia đình, đồng nghiệp, sức khỏe."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～のおかげで nói chung về nguyên nhân tích cực; ～あっての nhấn mạnh quan hệ phụ thuộc “không có N1 thì không có N2”."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không đặt ～あっての trực tiếp sau một động từ chia thì; thường cần một danh từ ở phía trước.",
+        "Không bỏ danh từ N2 ở sau あっての khi dùng cấu trúc bổ nghĩa danh từ."
       ],
       "discovery": {
         "distractors": [
@@ -35,13 +40,13 @@
       "examples": [
         {
           "sentence": "頑張るのはいいけど、健康あっての仕事だから、休むのも大切だよ。",
-          "reading": "",
+          "reading": "がんばるのはいいけど、けんこうあってのしごとだから、やすむのもたいせつだよ。",
           "translation": "Cố gắng là tốt, nhưng có sức khỏe thì mới có thể làm việc được, vì vậy nghỉ ngơi cũng rất quan trọng.",
           "blank": "頑張るのはいいけど、健康____仕事だから、休むのも大切だよ。",
           "answer": "あっての",
-          "hint": "Mẫu mục tiêu: ～あっての",
-          "reason": "Trong câu này, あっての thể hiện ý nghĩa: N2 có được / tồn tại được là nhờ có N1.",
-          "wrongReason": "Đối chiếu với mẫu ～あっての và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "健康 là nền tảng để có thể làm 仕事; vì vậy người nói nhắc đến tầm quan trọng của việc nghỉ ngơi.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N1 + あっての + N2. 健康 là nền tảng để có thể làm 仕事; vì vậy người nói nhắc đến tầm quan trọng của việc nghỉ ngơi.",
           "chunks": [
             "頑張るのはいいけど、",
             "健康あっての仕事だから、",
@@ -50,32 +55,32 @@
         },
         {
           "sentence": "来てくださるお客様あってのレストランですから、最高のサービスを提供するのは当たり前だ。",
-          "reading": "",
+          "reading": "きてくださるおきゃくさまあってのレストランですから、さいこうのサービスをていきょうするのはあたりまえだ。",
           "translation": "Nhà hàng tồn tại được là nhờ những khách hàng đến ủng hộ, vì vậy cung cấp dịch vụ tốt nhất là điều đương nhiên.",
           "blank": "来てくださるお客様____レストランですから、最高のサービスを提供するのは当たり前だ。",
           "answer": "あっての",
-          "hint": "Mẫu mục tiêu: ～あっての",
-          "reason": "Trong câu này, あっての thể hiện ý nghĩa: N2 có được / tồn tại được là nhờ có N1.",
-          "wrongReason": "Đối chiếu với mẫu ～あっての và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "お客様 là yếu tố giúp レストラン tồn tại, nên nhà hàng phải phục vụ tốt.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N1 + あっての + N2. お客様 là yếu tố giúp レストラン tồn tại, nên nhà hàng phải phục vụ tốt.",
           "chunks": [
-            "来てくださるお客様あってのレストランで",
-            "すから、",
-            "最高のサービスを提供するのは当たり前だ。"
+            "来てくださるお客様あってのレストランですから、",
+            "最高のサービスを提供するのは",
+            "当たり前だ。"
           ]
         },
         {
           "sentence": "このプロジェクトの成功は、皆様のご協力あってのことです。感謝いたします。",
-          "reading": "",
+          "reading": "このプロジェクトのせいこうは、みなさまのごきょうりょくあってのことです。かんしゃいたします。",
           "translation": "Thành công của dự án này có được là nhờ sự hợp tác của mọi người. Xin chân thành cảm ơn.",
           "blank": "このプロジェクトの成功は、皆様のご協力____ことです。感謝いたします。",
           "answer": "あっての",
-          "hint": "Mẫu mục tiêu: ～あっての",
-          "reason": "Trong câu này, あっての thể hiện ý nghĩa: N2 có được / tồn tại được là nhờ có N1.",
-          "wrongReason": "Đối chiếu với mẫu ～あっての và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "ご協力 của mọi người là điều kiện tạo nên 成功 của dự án, dùng để bày tỏ sự biết ơn.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N1 + あっての + N2. ご協力 của mọi người là điều kiện tạo nên 成功 của dự án, dùng để bày tỏ sự biết ơn.",
           "chunks": [
             "このプロジェクトの成功は、",
-            "皆様のご協力あってのこと",
-            "です。感謝いたします。"
+            "皆様のご協力あってのことです。",
+            "感謝いたします。"
           ]
         }
       ],
@@ -84,23 +89,28 @@
     {
       "id": "n1-lg004",
       "grammar": "～とあって",
-      "reading": "～とあって",
+      "reading": "とあって",
       "meaning": "Vì... nên (đương nhiên)",
-      "formation": "Mệnh đề thông thường / danh từ + とあって",
+      "formation": "N / mệnh đề thể thông thường + とあって",
       "priorityStars": 4,
-      "explanation": "Mẫu ～とあって diễn tả: Vì... nên (đương nhiên). Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Nêu một hoàn cảnh đặc biệt, nổi bật hoặc hiếm có làm nguyên nhân dẫn đến kết quả dễ hiểu, thường gây chú ý hoặc quy mô lớn. Phổ biến trong tin tức và văn viết; kết quả sau とあって được xem là phản ứng tự nhiên đối với hoàn cảnh đó.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Vì... nên (đương nhiên)"
+          "title": "Cấu trúc",
+          "text": "Danh từ hoặc mệnh đề thể thông thường + とあって. Có thể dùng với danh từ chỉ sự kiện hay khoảng thời gian."
         },
         {
-          "title": "Mẫu",
-          "text": "～とあって"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh hoàn cảnh đặc biệt khiến kết quả xảy ra là điều dễ hiểu."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～ので chỉ nguyên nhân thông thường; ～とあって làm nổi bật tính đặc biệt của tình huống."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không lạm dụng ～とあって cho nguyên nhân nhỏ, thông thường.",
+        "Tránh nhầm ～とあって (vì hoàn cảnh) với ～とあっては (nếu tình thế nghiêm trọng là...)."
       ],
       "discovery": {
         "distractors": [
@@ -112,28 +122,28 @@
       "examples": [
         {
           "sentence": "世界的スターが来日するとあって、空港が厳重に警備されている。",
-          "reading": "",
+          "reading": "せかいてきスターがらいにちするとあって、くうこうがげんじゅうにけいびされている。",
           "translation": "Vì một ngôi sao nổi tiếng thế giới đến Nhật Bản nên sân bay được bảo vệ nghiêm ngặt.",
           "blank": "世界的スターが来日する____、空港が厳重に警備されている。",
           "answer": "とあって",
-          "hint": "Mẫu mục tiêu: ～とあって",
-          "reason": "Trong câu này, とあって thể hiện ý nghĩa: Vì... nên (đương nhiên).",
-          "wrongReason": "Đối chiếu với mẫu ～とあって và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Việc ngôi sao nổi tiếng thế giới đến Nhật là hoàn cảnh đặc biệt giải thích an ninh sân bay được tăng cường.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N / mệnh đề thể thông thường + とあって. Việc ngôi sao nổi tiếng thế giới đến Nhật là hoàn cảnh đặc biệt giải thích an ninh sân bay được tăng cường.",
           "chunks": [
-            "世界的スターが",
-            "来日するとあって、",
-            "空港が厳重に警備されている。"
+            "世界的スターが来日するとあって、",
+            "空港が厳重に",
+            "警備されている。"
           ]
         },
         {
           "sentence": "10連休とあって、新幹線は実家へ帰省する人々でいっぱいだった。",
-          "reading": "",
+          "reading": "じゅうれんきゅうとあって、しんかんせんはじっかへきせいするひとびとでいっぱいだった。",
           "translation": "Vì là kỳ nghỉ dài 10 ngày nên tàu Shinkansen chật kín những người về quê.",
           "blank": "10連休____、新幹線は実家へ帰省する人々でいっぱいだった。",
           "answer": "とあって",
-          "hint": "Mẫu mục tiêu: ～とあって",
-          "reason": "Trong câu này, とあって thể hiện ý nghĩa: Vì... nên (đương nhiên).",
-          "wrongReason": "Đối chiếu với mẫu ～とあって và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Kỳ nghỉ liên tiếp 10 ngày khiến số người về quê bằng Shinkansen tăng cao.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N / mệnh đề thể thông thường + とあって. Kỳ nghỉ liên tiếp 10 ngày khiến số người về quê bằng Shinkansen tăng cao.",
           "chunks": [
             "10連休とあって、",
             "新幹線は実家へ帰省する人々で",
@@ -142,17 +152,17 @@
         },
         {
           "sentence": "15年ぶりの再会とあって、同窓会は大盛り上がりだった。",
-          "reading": "",
+          "reading": "じゅうごねんぶりのさいかいとあって、どうそうかいはおおもりあがりだった。",
           "translation": "Vì là cuộc hội ngộ sau 15 năm nên buổi họp lớp đã vô cùng sôi nổi.",
           "blank": "15年ぶりの再会____、同窓会は大盛り上がりだった。",
           "answer": "とあって",
-          "hint": "Mẫu mục tiêu: ～とあって",
-          "reason": "Trong câu này, とあって thể hiện ý nghĩa: Vì... nên (đương nhiên).",
-          "wrongReason": "Đối chiếu với mẫu ～とあって và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Cuộc tái ngộ sau 15 năm là dịp hiếm, khiến buổi họp lớp sôi nổi.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N / mệnh đề thể thông thường + とあって. Cuộc tái ngộ sau 15 năm là dịp hiếm, khiến buổi họp lớp sôi nổi.",
           "chunks": [
             "15年ぶりの再会とあって、",
-            "同窓会は大盛り上が",
-            "りだった。"
+            "同窓会は",
+            "大盛り上がりだった。"
           ]
         }
       ],
@@ -161,23 +171,28 @@
     {
       "id": "n1-lg005",
       "grammar": "～ということもあって",
-      "reading": "～ということもあって",
+      "reading": "ということもあって",
       "meaning": "Cũng một phần là vì... / Cũng bởi vì...",
-      "formation": "Mệnh đề thông thường + ということもあって",
+      "formation": "N + ということもあって / mệnh đề + ということもあって",
       "priorityStars": 4,
-      "explanation": "Mẫu ～ということもあって diễn tả: Cũng một phần là vì... / Cũng bởi vì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Giải thích một nguyên nhân góp phần dẫn đến kết quả; chữ も hàm ý đây là một trong nhiều yếu tố chứ không nhất thiết là nguyên nhân duy nhất. Dùng khi cần nêu lý do mang tính hoàn cảnh, với cách nói mềm và có chừng mực.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Cũng một phần là vì... / Cũng bởi vì..."
+          "title": "Cấu trúc",
+          "text": "Danh từ hoặc mệnh đề + ということもあって, sau đó là kết quả."
         },
         {
-          "title": "Mẫu",
-          "text": "～ということもあって"
+          "title": "Sắc thái",
+          "text": "もあって hàm ý “cũng một phần vì”, tránh khẳng định chỉ có một nguyên nhân."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～ということもあって mềm và giới hạn nguyên nhân hơn ～から; khác ～とあって vốn nhấn mạnh hoàn cảnh đặc biệt."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dịch chữ も thành “cũng” một cách máy móc khi câu tiếng Việt đã thể hiện “một phần vì”.",
+        "Không dùng khi muốn nói chắc chắn chỉ có duy nhất một nguyên nhân."
       ],
       "discovery": {
         "distractors": [
@@ -189,28 +204,28 @@
       "examples": [
         {
           "sentence": "初めての受験ということもあって、とても不安でした。",
-          "reading": "",
+          "reading": "はじめてのじゅけんということもあって、とてもふあんでした。",
           "translation": "Cũng một phần vì đây là lần đầu dự thi nên tôi đã rất lo lắng.",
           "blank": "初めての受験____、とても不安でした。",
           "answer": "ということもあって",
-          "hint": "Mẫu mục tiêu: ～ということもあって",
-          "reason": "Trong câu này, ということもあって thể hiện ý nghĩa: Cũng một phần là vì... / Cũng bởi vì....",
-          "wrongReason": "Đối chiếu với mẫu ～ということもあって và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Lần đầu dự thi là một trong những lý do khiến người nói lo lắng.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + ということもあって / mệnh đề + ということもあって. Lần đầu dự thi là một trong những lý do khiến người nói lo lắng.",
           "chunks": [
-            "初めての受験と",
-            "いうこともあって、",
-            "とても不安でした。"
+            "初めての受験ということもあって、",
+            "とても",
+            "不安でした。"
           ]
         },
         {
           "sentence": "アルバイトが忙しいということもあって、今週の飲み会には参加しないことにした。",
-          "reading": "",
+          "reading": "アルバイトがいそがしいということもあって、こんしゅうののみかいにはさんかしないことにした。",
           "translation": "Cũng một phần vì công việc làm thêm bận rộn nên tôi quyết định không tham gia buổi nhậu tuần này.",
           "blank": "アルバイトが忙しい____、今週の飲み会には参加しないことにした。",
           "answer": "ということもあって",
-          "hint": "Mẫu mục tiêu: ～ということもあって",
-          "reason": "Trong câu này, ということもあって thể hiện ý nghĩa: Cũng một phần là vì... / Cũng bởi vì....",
-          "wrongReason": "Đối chiếu với mẫu ～ということもあって và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Công việc làm thêm bận rộn góp phần dẫn đến quyết định không tham gia buổi gặp.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + ということもあって / mệnh đề + ということもあって. Công việc làm thêm bận rộn góp phần dẫn đến quyết định không tham gia buổi gặp.",
           "chunks": [
             "アルバイトが忙しいということもあって、",
             "今週の飲み会には",
@@ -219,13 +234,13 @@
         },
         {
           "sentence": "店の商品を落として割ってしまったが、落としたのが子供ということもあって、許してもらった。",
-          "reading": "",
+          "reading": "みせのしょうひんをおとしてわってしまったが、おとしたのがこどもということもあって、ゆるしてもらった。",
           "translation": "Tôi đã làm rơi và vỡ hàng của cửa hàng, nhưng cũng vì người làm rơi là trẻ con nên đã được bỏ qua.",
           "blank": "店の商品を落として割ってしまったが、落としたのが子供____、許してもらった。",
           "answer": "ということもあって",
-          "hint": "Mẫu mục tiêu: ～ということもあって",
-          "reason": "Trong câu này, ということもあって thể hiện ý nghĩa: Cũng một phần là vì... / Cũng bởi vì....",
-          "wrongReason": "Đối chiếu với mẫu ～ということもあって và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Người làm rơi là trẻ em, điều đó góp phần khiến cửa hàng bỏ qua lỗi.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + ということもあって / mệnh đề + ということもあって. Người làm rơi là trẻ em, điều đó góp phần khiến cửa hàng bỏ qua lỗi.",
           "chunks": [
             "店の商品を落として割ってしまったが、",
             "落としたのが子供ということもあって、",
@@ -238,23 +253,28 @@
     {
       "id": "n1-lg006",
       "grammar": "～次第だ",
-      "reading": "～しだいだ",
+      "reading": "しだいだ",
       "meaning": "..., thế nên là... / Vì hoàn cảnh, lý do như vậy nên dẫn đến kết quả này",
-      "formation": "Mệnh đề lý do + 次第だ／次第です",
+      "formation": "V thể thông thường / tình huống được trình bày + 次第だ・次第です",
       "priorityStars": 4,
-      "explanation": "Mẫu ～次第だ diễn tả: ..., thế nên là... / Vì hoàn cảnh, lý do như vậy nên dẫn đến kết quả này. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "次第だ／次第です kết thúc lời giải thích về sự việc, nguyên do hay hoàn cảnh dẫn đến hành động hoặc quyết định. Thường dùng trong phát biểu trang trọng, thư từ công việc hay khi trình bày lý do. Đây là cách dùng giải thích, không phải ～次第 “ngay sau khi...”.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "..., thế nên là... / Vì hoàn cảnh, lý do như vậy nên dẫn đến kết quả này"
+          "title": "Cấu trúc",
+          "text": "Đưa ra hoàn cảnh hoặc lý do trước, kết bằng ～次第だ／～次第です để giải thích sự tình."
         },
         {
-          "title": "Mẫu",
-          "text": "～次第だ"
+          "title": "Sắc thái",
+          "text": "次第です lịch sự, phổ biến trong báo cáo, đơn ứng tuyển, giải trình."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Không nhầm với Vます-bỏ-ます + 次第 (ngay khi làm xong...) và N + 次第で (tùy vào...)."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dịch 次第です thành “ngay khi” trong câu dùng để giải thích lý do.",
+        "Không dùng 次第だ như một liên từ thay thế trực tiếp cho だから."
       ],
       "discovery": {
         "distractors": [
@@ -266,13 +286,13 @@
       "examples": [
         {
           "sentence": "彼女は大雨の中、2時間かけて家に歩いて帰ってきたため、熱を出した次第だ。",
-          "reading": "",
+          "reading": "かのじょはおおあめのなか、にじかんかけていえにあるいてかえってきたため、ねつをだしたしだいだ。",
           "translation": "Cô ấy đã đi bộ mất 2 tiếng để về nhà giữa trời mưa lớn, vì vậy cuối cùng đã bị sốt.",
           "blank": "彼女は大雨の中、2時間かけて家に歩いて帰ってきたため、熱を出した____。",
           "answer": "次第だ",
-          "hint": "Mẫu mục tiêu: ～次第だ",
-          "reason": "Trong câu này, 次第だ thể hiện ý nghĩa: ..., thế nên là... / Vì hoàn cảnh, lý do như vậy nên dẫn đến kết quả này.",
-          "wrongReason": "Đối chiếu với mẫu ～次第だ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "次第だ là phần kết của lời giải thích về hoàn cảnh dẫn đến việc bị sốt.",
+          "wrongReason": "Trong câu này, xem cấu trúc: V thể thông thường / tình huống được trình bày + 次第だ・次第です. 次第だ là phần kết của lời giải thích về hoàn cảnh dẫn đến việc bị sốt.",
           "chunks": [
             "彼女は大雨の中、",
             "2時間かけて家に歩いて帰ってきたため、",
@@ -281,31 +301,32 @@
         },
         {
           "sentence": "私もこのような商品の開発に関わりたいと思い、貴社に応募した次第です。",
-          "reading": "",
+          "reading": "わたしもこのようなしょうひんのかいはつにかかわりたいとおもい、きしゃにおうぼしたしだいです。",
           "translation": "Tôi cũng mong muốn được tham gia phát triển những sản phẩm như thế này, vì vậy tôi đã ứng tuyển vào quý công ty.",
           "blank": "私もこのような商品の開発に関わりたいと思い、貴社に応募した____。",
           "answer": "次第です",
-          "hint": "Mẫu mục tiêu: ～次第だ",
-          "reason": "Trong câu này, 次第です thể hiện ý nghĩa: ..., thế nên là... / Vì hoàn cảnh, lý do như vậy nên dẫn đến kết quả này.",
-          "wrongReason": "Đối chiếu với mẫu ～次第だ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "次第です trình bày lịch sự lý do ứng tuyển vào công ty.",
+          "wrongReason": "Trong câu này, xem cấu trúc: V thể thông thường / tình huống được trình bày + 次第だ・次第です. 次第です trình bày lịch sự lý do ứng tuyển vào công ty.",
           "chunks": [
-            "私もこのような商品の開発に",
-            "関わりたいと思い、",
-            "貴社に応募した次第です。"
+            "私もこのような商品の開発に関わりたいと思い、",
+            "貴社に応募した",
+            "次第です。"
           ]
         },
         {
           "sentence": "A：今年も子ども食堂へのご支援、ありがとうございます。\nB：こちらこそ、地域の皆さまのために、援助を続けている次第です。",
-          "reading": "",
+          "reading": "エー：ことしもこどもしょくどうへのごしえん、ありがとうございます。\nビー：こちらこそ、ちいきのみなさまのために、えんじょをつづけているしだいです。",
           "translation": "A: Cảm ơn quý vị đã tiếp tục hỗ trợ bếp ăn trẻ em trong năm nay.\nB: Không có gì, chính vì cộng đồng địa phương mà chúng tôi vẫn đang tiếp tục hỗ trợ.",
           "blank": "A：今年も子ども食堂へのご支援、ありがとうございます。\nB：こちらこそ、地域の皆さまのために、援助を続けている____。",
           "answer": "次第です",
-          "hint": "Mẫu mục tiêu: ～次第だ",
-          "reason": "Trong câu này, 次第です thể hiện ý nghĩa: ..., thế nên là... / Vì hoàn cảnh, lý do như vậy nên dẫn đến kết quả này.",
-          "wrongReason": "Đối chiếu với mẫu ～次第だ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "次第です kết thúc lời giải thích về việc tiếp tục hoạt động hỗ trợ cộng đồng.",
+          "wrongReason": "Trong câu này, xem cấu trúc: V thể thông thường / tình huống được trình bày + 次第だ・次第です. 次第です kết thúc lời giải thích về việc tiếp tục hoạt động hỗ trợ cộng đồng.",
           "chunks": [
             "A：今年も子ども食堂へのご支援、ありがとうございます。\n",
-            "B：こちらこそ、地域の皆さまのために、援助を続けている次第です。"
+            "B：こちらこそ、地域の皆さまのために、",
+            "援助を続けている次第です。"
           ]
         }
       ],
@@ -314,23 +335,28 @@
     {
       "id": "n1-lg007",
       "grammar": "～（が）ゆえ（に）",
-      "reading": "～（が）ゆえ（に）",
+      "reading": "（が）ゆえ（に）",
       "meaning": "Vì... / Do... / Bởi vì...",
-      "formation": "Danh từ + （が）ゆえ（に）／mệnh đề + ゆえに",
+      "formation": "N + （が）ゆえ（に） / V thể thông thường + ゆえ（に）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～（が）ゆえ（に） diễn tả: Vì... / Do... / Bởi vì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "ゆえ（に） mang nghĩa “vì/do” và có sắc thái trang trọng, văn viết hoặc hơi cổ. Nêu nguyên nhân mang tính bản chất, điều kiện hay đặc điểm của chủ thể. Một số biến thể có が sau danh từ; cấu trúc gốc trong ví dụ có cả 生活ゆえに và 愛するゆえに.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Vì... / Do... / Bởi vì..."
+          "title": "Cấu trúc",
+          "text": "Danh từ + （が）ゆえに hoặc mệnh đề + ゆえに; dạng ゆえ đôi khi xuất hiện trong văn phong văn học."
         },
         {
-          "title": "Mẫu",
-          "text": "～（が）ゆえ（に）"
+          "title": "Sắc thái",
+          "text": "Trang trọng hơn ～ので, thường gặp trong văn viết và cách diễn đạt lý lẽ."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "Không nhầm với ～がために; cả hai chỉ nguyên nhân nhưng phạm vi, sắc thái kết hợp không hoàn toàn giống nhau."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không sử dụng tùy tiện như ～から trong đối thoại thân mật.",
+        "Chú ý các biến thể có/không có が và に, không xem mọi cách kết hợp đều đồng nghĩa trong mọi câu."
       ],
       "discovery": {
         "distractors": [
@@ -342,13 +368,13 @@
       "examples": [
         {
           "sentence": "幼児2人を抱えた生活ゆえに、自分のための時間はとても少ない。",
-          "reading": "",
+          "reading": "ようじふたりをかかえたせいかつゆえに、じぶんのためのじかんはとてもすくない。",
           "translation": "Vì cuộc sống phải chăm sóc hai đứa con nhỏ nên thời gian dành cho bản thân rất ít.",
           "blank": "幼児2人を抱えた生活____、自分のための時間はとても少ない。",
           "answer": "ゆえに",
-          "hint": "Mẫu mục tiêu: ～（が）ゆえ（に）",
-          "reason": "Trong câu này, ゆえに thể hiện ý nghĩa: Vì... / Do... / Bởi vì....",
-          "wrongReason": "Đối chiếu với mẫu ～（が）ゆえ（に） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Cuộc sống chăm hai con nhỏ là nguyên nhân khiến thời gian riêng ít.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + （が）ゆえ（に） / V thể thông thường + ゆえ（に）. Cuộc sống chăm hai con nhỏ là nguyên nhân khiến thời gian riêng ít.",
           "chunks": [
             "幼児2人を抱えた生活ゆえに、",
             "自分のための時間は",
@@ -357,28 +383,28 @@
         },
         {
           "sentence": "愛するゆえに厳しくするというが、彼女のやり方ではやりすぎだ。",
-          "reading": "",
+          "reading": "あいするゆえにきびしくするというが、かのじょのやりかたではやりすぎだ。",
           "translation": "Người ta nói rằng vì yêu thương nên mới nghiêm khắc, nhưng cách làm của cô ấy thì có phần quá mức.",
           "blank": "愛する____厳しくするというが、彼女のやり方ではやりすぎだ。",
           "answer": "ゆえに",
-          "hint": "Mẫu mục tiêu: ～（が）ゆえ（に）",
-          "reason": "Trong câu này, ゆえに thể hiện ý nghĩa: Vì... / Do... / Bởi vì....",
-          "wrongReason": "Đối chiếu với mẫu ～（が）ゆえ（に） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Tình yêu được đưa ra làm lý do cho việc nghiêm khắc.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + （が）ゆえ（に） / V thể thông thường + ゆえ（に）. Tình yêu được đưa ra làm lý do cho việc nghiêm khắc.",
           "chunks": [
-            "愛するゆえに",
-            "厳しくするというが、",
-            "彼女のやり方ではやりすぎだ。"
+            "愛するゆえに厳しくするというが、",
+            "彼女のやり方では",
+            "やりすぎだ。"
           ]
         },
         {
           "sentence": "彼女は俊才ゆえに周りから期待されることが多く、プレッシャーを感じていた。",
-          "reading": "",
+          "reading": "かのじょはしゅんさいゆえにまわりからきたいされることがおおく、プレッシャーをかんじていた。",
           "translation": "Vì cô ấy là người tài giỏi nên thường được mọi người xung quanh kỳ vọng và cảm thấy áp lực.",
           "blank": "彼女は俊才____周りから期待されることが多く、プレッシャーを感じていた。",
           "answer": "ゆえに",
-          "hint": "Mẫu mục tiêu: ～（が）ゆえ（に）",
-          "reason": "Trong câu này, ゆえに thể hiện ý nghĩa: Vì... / Do... / Bởi vì....",
-          "wrongReason": "Đối chiếu với mẫu ～（が）ゆえ（に） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Tài năng của cô ấy khiến mọi người đặt nhiều kỳ vọng.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + （が）ゆえ（に） / V thể thông thường + ゆえ（に）. Tài năng của cô ấy khiến mọi người đặt nhiều kỳ vọng.",
           "chunks": [
             "彼女は俊才ゆえに",
             "周りから期待されることが多く、",
@@ -391,23 +417,28 @@
     {
       "id": "n1-lg008",
       "grammar": "～を受けて",
-      "reading": "～をうけて",
+      "reading": "をうけて",
       "meaning": "Do N mà... / Vì có N mà...",
-      "formation": "Danh từ + を受けて",
+      "formation": "N + を受けて",
       "priorityStars": 4,
-      "explanation": "Mẫu ～を受けて diễn tả: Do N mà... / Vì có N mà.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Chỉ một hành động, quyết định hay phản ứng được thực hiện sau khi nhận thông tin, tác động hoặc sự kiện từ bên ngoài. Hay xuất hiện trong tin tức, báo cáo và công việc; ngoài “vì” còn có nét nghĩa “sau khi tiếp nhận tác động/tin tức đó”.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Do N mà... / Vì có N mà..."
+          "title": "Cấu trúc",
+          "text": "Danh từ chỉ tin tức, yêu cầu, phản hồi, quyết định, tác động + を受けて."
         },
         {
-          "title": "Mẫu",
-          "text": "～を受けて"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh một phản ứng tiếp theo trước thông tin hoặc tác động đã nhận."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～によって chỉ nguyên nhân/phương tiện rộng hơn; ～を受けて đòi hỏi có sự kiện hoặc thông tin được tiếp nhận."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng を受けて cho mọi nguyên nhân một cách máy móc.",
+        "Chú ý tân ngữ là sự kiện/tác động: 報告を受けて, 要望を受けて, 影響を受けて."
       ],
       "discovery": {
         "distractors": [
@@ -419,13 +450,13 @@
       "examples": [
         {
           "sentence": "米の価格の高騰を受けて、政府は備蓄している米を放出することを決定した。",
-          "reading": "",
+          "reading": "こめのかかくのこうとうをうけて、せいふはびちくしているこめをほうしゅつすることをけっていした。",
           "translation": "Do giá gạo tăng cao, chính phủ đã quyết định tung lượng gạo dự trữ ra thị trường.",
           "blank": "米の価格の高騰____、政府は備蓄している米を放出することを決定した。",
           "answer": "を受けて",
-          "hint": "Mẫu mục tiêu: ～を受けて",
-          "reason": "Trong câu này, を受けて thể hiện ý nghĩa: Do N mà... / Vì có N mà....",
-          "wrongReason": "Đối chiếu với mẫu ～を受けて và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Giá gạo tăng là tác động khiến chính phủ quyết định xuất gạo dự trữ.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + を受けて. Giá gạo tăng là tác động khiến chính phủ quyết định xuất gạo dự trữ.",
           "chunks": [
             "米の価格の高騰を受けて、",
             "政府は備蓄している米を",
@@ -434,32 +465,32 @@
         },
         {
           "sentence": "大統領訪問の決定を受けて、首相は来週大統領との会談を行うことを発表した。",
-          "reading": "",
+          "reading": "だいとうりょうほうもんのけっていをうけて、しゅしょうはらいしゅうだいとうりょうとのかいだんをおこなうことをはっぴょうした。",
           "translation": "Sau quyết định về chuyến thăm của tổng thống, thủ tướng đã thông báo sẽ tiến hành hội đàm với tổng thống vào tuần tới.",
           "blank": "大統領訪問の決定____、首相は来週大統領との会談を行うことを発表した。",
           "answer": "を受けて",
-          "hint": "Mẫu mục tiêu: ～を受けて",
-          "reason": "Trong câu này, を受けて thể hiện ý nghĩa: Do N mà... / Vì có N mà....",
-          "wrongReason": "Đối chiếu với mẫu ～を受けて và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Sau khi có quyết định về chuyến thăm, thủ tướng đưa ra thông báo tiếp theo.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + を受けて. Sau khi có quyết định về chuyến thăm, thủ tướng đưa ra thông báo tiếp theo.",
           "chunks": [
             "大統領訪問の決定を受けて、",
-            "首相は来週大統領と",
-            "の会談を行うことを発表した。"
+            "首相は来週大統領との会談を行うことを",
+            "発表した。"
           ]
         },
         {
           "sentence": "自然災害が発生したという報告を受けて、各病院でけが人の受け入れが整えられた。",
-          "reading": "",
+          "reading": "しぜんさいがいがはっせいしたというほうこくをうけて、かくびょういんでけがにんのうけいれがととのえられた。",
           "translation": "Sau khi nhận được báo cáo rằng thiên tai đã xảy ra, các bệnh viện đã chuẩn bị sẵn sàng để tiếp nhận người bị thương.",
           "blank": "自然災害が発生したという報告____、各病院でけが人の受け入れが整えられた。",
           "answer": "を受けて",
-          "hint": "Mẫu mục tiêu: ～を受けて",
-          "reason": "Trong câu này, を受けて thể hiện ý nghĩa: Do N mà... / Vì có N mà....",
-          "wrongReason": "Đối chiếu với mẫu ～を受けて và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Sau khi nhận báo cáo thiên tai, bệnh viện chuẩn bị tiếp nhận người bị thương.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + を受けて. Sau khi nhận báo cáo thiên tai, bệnh viện chuẩn bị tiếp nhận người bị thương.",
           "chunks": [
             "自然災害が発生したという報告を受けて、",
-            "各病院でけが",
-            "人の受け入れが整えられた。"
+            "各病院でけが人の受け入れが",
+            "整えられた。"
           ]
         }
       ],
@@ -468,23 +499,28 @@
     {
       "id": "n1-lg009",
       "grammar": "～をよそに",
-      "reading": "～をよそに",
+      "reading": "をよそに",
       "meaning": "Bất chấp N / Mặc kệ N",
-      "formation": "Danh từ + をよそに",
+      "formation": "N + をよそに",
       "priorityStars": 4,
-      "explanation": "Mẫu ～をよそに diễn tả: Bất chấp N / Mặc kệ N. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Chỉ việc làm ngơ hoặc không quan tâm đến tình cảm, lo lắng, phản đối, dư luận hay xu hướng xung quanh để tiếp tục hành động. Thường có sắc thái phê phán khi đối tượng bỏ ngoài tai sự quan tâm của người khác; đôi khi chỉ sự tương phản giữa hai tình huống.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Bất chấp N / Mặc kệ N"
+          "title": "Cấu trúc",
+          "text": "Danh từ chỉ sự quan tâm, lo lắng, ánh mắt, ý kiến, dư luận... + をよそに."
         },
         {
-          "title": "Mẫu",
-          "text": "～をよそに"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh sự thờ ơ hoặc hành động trái với kỳ vọng xung quanh."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～にもかかわらず diễn tả nghịch lý rộng; ～をよそに nhấn mạnh thái độ bỏ ngoài tai/không bận tâm."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng khi chỉ muốn diễn tả đối lập đơn thuần mà không có ý bỏ mặc/không chịu tác động.",
+        "Lưu ý ～をよそに là một cụm cố định, không phải nghĩa thông thường của よそ (nơi khác)."
       ],
       "discovery": {
         "distractors": [
@@ -496,43 +532,43 @@
       "examples": [
         {
           "sentence": "一生懸命働いているA君をよそに、課長は携帯電話をいじって遊んでばかりいる。",
-          "reading": "",
+          "reading": "いっしょうけんめいはたらいているエーくんをよそに、かちょうはけいたいでんわをいじってあそんでばかりいる。",
           "translation": "Mặc cho anh A đang làm việc rất chăm chỉ, trưởng phòng chỉ toàn nghịch điện thoại và chơi.",
           "blank": "一生懸命働いているA君____、課長は携帯電話をいじって遊んでばかりいる。",
           "answer": "をよそに",
-          "hint": "Mẫu mục tiêu: ～をよそに",
-          "reason": "Trong câu này, をよそに thể hiện ý nghĩa: Bất chấp N / Mặc kệ N.",
-          "wrongReason": "Đối chiếu với mẫu ～をよそに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Trưởng phòng thản nhiên chơi điện thoại mặc cho đồng nghiệp làm việc chăm chỉ.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + をよそに. Trưởng phòng thản nhiên chơi điện thoại mặc cho đồng nghiệp làm việc chăm chỉ.",
           "chunks": [
             "一生懸命働いているA君をよそに、",
-            "課長は携帯電話を",
-            "いじって遊んでばかりいる。"
+            "課長は携帯電話をいじって",
+            "遊んでばかりいる。"
           ]
         },
         {
           "sentence": "彼女は親の心配をよそに、友達と遊んでばかりいる。",
-          "reading": "",
+          "reading": "かのじょはおやのしんぱいをよそに、ともだちとあそんでばかりいる。",
           "translation": "Mặc kệ sự lo lắng của bố mẹ, cô ấy chỉ mải đi chơi với bạn bè.",
           "blank": "彼女は親の心配____、友達と遊んでばかりいる。",
           "answer": "をよそに",
-          "hint": "Mẫu mục tiêu: ～をよそに",
-          "reason": "Trong câu này, をよそに thể hiện ý nghĩa: Bất chấp N / Mặc kệ N.",
-          "wrongReason": "Đối chiếu với mẫu ～をよそに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Cô ấy mặc kệ nỗi lo của cha mẹ để tiếp tục đi chơi.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + をよそに. Cô ấy mặc kệ nỗi lo của cha mẹ để tiếp tục đi chơi.",
           "chunks": [
             "彼女は親の心配をよそに、",
-            "友達と遊んで",
-            "ばかりいる。"
+            "友達と",
+            "遊んでばかりいる。"
           ]
         },
         {
           "sentence": "SNSのブームをよそに、私の母はずっと手紙で友達とやりとりしている。",
-          "reading": "",
+          "reading": "エスエヌエスのブームをよそに、わたしのはははずっとてがみでともだちとやりとりしている。",
           "translation": "Bất chấp trào lưu mạng xã hội, mẹ tôi vẫn luôn trao đổi thư từ với bạn bè.",
           "blank": "SNSのブーム____、私の母はずっと手紙で友達とやりとりしている。",
           "answer": "をよそに",
-          "hint": "Mẫu mục tiêu: ～をよそに",
-          "reason": "Trong câu này, をよそに thể hiện ý nghĩa: Bất chấp N / Mặc kệ N.",
-          "wrongReason": "Đối chiếu với mẫu ～をよそに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Người mẹ không chạy theo trào lưu SNS mà vẫn dùng thư tay.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + をよそに. Người mẹ không chạy theo trào lưu SNS mà vẫn dùng thư tay.",
           "chunks": [
             "SNSのブームをよそに、",
             "私の母はずっと手紙で",
@@ -545,23 +581,29 @@
     {
       "id": "n1-lg010",
       "grammar": "～を余儀なくされる / ～を余儀なくさせる",
-      "reading": "～をよぎなくされる / ～をよぎなくさせる",
+      "reading": "をよぎなくされる／をよぎなくさせる",
       "meaning": "Buộc phải N",
-      "formation": "Danh từ chỉ hành động + を余儀なくされる／させる",
+      "formation": "N（サ変名詞・動作名詞）+ を余儀なくされる / 原因・状況 + が + Nを余儀なくさせる",
       "priorityStars": 4,
-      "explanation": "Mẫu ～を余儀なくされる / ～を余儀なくさせる diễn tả: Buộc phải N. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～を余儀なくされる diễn tả chủ thể bị tình hình, sự cố hoặc sức ép bên ngoài buộc phải làm điều ngoài ý muốn. ～を余儀なくさせる là dạng khiến ai đó phải làm vậy; chủ thể gây ra hoàn cảnh được nêu rõ hoặc hiểu từ ngữ cảnh. Thường dùng trong tin tức và văn bản trang trọng.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Buộc phải N"
+          "title": "Cấu trúc",
+          "text": "Chủ thể bị ảnh hưởng + は／が + N + を余儀なくされる. Ví dụ: 中止を余儀なくされる."
         },
         {
-          "title": "Mẫu",
-          "text": "～を余儀なくされる / ～を余儀なくさせる"
+          "title": "Biến thể chủ động gây ra",
+          "text": "Tình huống + が + chủ thể + に + N + を余儀なくさせる. Ví dụ: 災害が住民に避難を余儀なくさせた."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～なければならない nêu sự cần thiết/nghĩa vụ; ～を余儀なくされる nhấn mạnh sức ép khách quan ngoài mong muốn."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng mẫu này để mô tả quyết định hoàn toàn tự nguyện.",
+        "Chú ý ～される (bị buộc) và ～させる (khiến phải) có điểm nhìn ngữ pháp khác nhau.",
+        "Các câu nguồn hiện tại đều minh họa dạng bị động ～される; cần bổ sung ví dụ ～させる khi phát triển giáo trình."
       ],
       "discovery": {
         "distractors": [
@@ -573,46 +615,45 @@
       "examples": [
         {
           "sentence": "友人は会社の倒産で借金を負った上に離婚も余儀なくされ、目も当てられない。",
-          "reading": "",
+          "reading": "ゆうじんはかいしゃのとうさんでしゃっきんをおったうえにりこんもよぎなくされ、めもあてられない。",
           "translation": "Bạn tôi không những phải gánh nợ do công ty phá sản mà còn buộc phải ly hôn, tình cảnh thật thảm thương.",
           "blank": "友人は会社の倒産で借金を負った上に離婚も____、目も当てられない。",
           "answer": "余儀なくされ",
-          "hint": "Mẫu mục tiêu: ～を余儀なくされる / ～を余儀なくさせる",
-          "reason": "Trong câu này, 余儀なくされ thể hiện ý nghĩa: Buộc phải N.",
-          "wrongReason": "Đối chiếu với mẫu ～を余儀なくされる / ～を余儀なくさせる và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Sau phá sản, người bạn còn bị hoàn cảnh đẩy vào việc ly hôn ngoài ý muốn.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N（サ変名詞・動作名詞）+ を余儀なくされる / 原因・状況 + が + Nを余儀なくさせる. Sau phá sản, người bạn còn bị hoàn cảnh đẩy vào việc ly hôn ngoài ý muốn.",
           "chunks": [
-            "友人は会社の倒産で借金を",
-            "負った上に離婚も余儀なくされ、",
+            "友人は会社の倒産で借金を負った上に",
+            "離婚も余儀なくされ、",
             "目も当てられない。"
           ]
         },
         {
           "sentence": "家族を人質に取られ、身代金として多額の金を渡すことを余儀なくされた。",
-          "reading": "",
+          "reading": "かぞくをひとじちにとられ、みのしろきんとしてたがくのかねをわたすことをよぎなくされた。",
           "translation": "Vì gia đình bị bắt làm con tin nên đã buộc phải giao một số tiền lớn làm tiền chuộc.",
           "blank": "家族を人質に取られ、身代金として多額の金を渡すことを____た。",
           "answer": "余儀なくされ",
-          "hint": "Mẫu mục tiêu: ～を余儀なくされる / ～を余儀なくさせる",
-          "reason": "Trong câu này, 余儀なくされ thể hiện ý nghĩa: Buộc phải N.",
-          "wrongReason": "Đối chiếu với mẫu ～を余儀なくされる / ～を余儀なくさせる và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Việc gia đình bị bắt làm con tin khiến người nói buộc phải đưa tiền chuộc.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N（サ変名詞・動作名詞）+ を余儀なくされる / 原因・状況 + が + Nを余儀なくさせる. Việc gia đình bị bắt làm con tin khiến người nói buộc phải đưa tiền chuộc.",
           "chunks": [
             "家族を人質に取られ、",
-            "身代金として多額の金を",
-            "渡すことを余儀なくされた。"
+            "身代金として多額の金を渡すことを",
+            "余儀なくされた。"
           ]
         },
         {
           "sentence": "長い間、社内で独裁者として振る舞ってきた社長も、この不正の発覚により、とうとう退任を余儀なくされた。",
-          "reading": "",
+          "reading": "ながいあいだ、しゃないでどくさいしゃとしてふるまってきたしゃちょうも、このふせいのはっかくにより、とうとうたいにんをよぎなくされた。",
           "translation": "Vị giám đốc đã hành xử như một kẻ độc tài trong công ty suốt thời gian dài, cuối cùng cũng buộc phải từ chức do vụ sai phạm này bị phát giác.",
           "blank": "長い間、社内で独裁者として振る舞ってきた社長も、この不正の発覚により、とうとう退任を____た。",
           "answer": "余儀なくされ",
-          "hint": "Mẫu mục tiêu: ～を余儀なくされる / ～を余儀なくさせる",
-          "reason": "Trong câu này, 余儀なくされ thể hiện ý nghĩa: Buộc phải N.",
-          "wrongReason": "Đối chiếu với mẫu ～を余儀なくされる / ～を余儀なくさせる và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Sai phạm bị phát giác khiến giám đốc phải từ chức.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N（サ変名詞・動作名詞）+ を余儀なくされる / 原因・状況 + が + Nを余儀なくさせる. Sai phạm bị phát giác khiến giám đốc phải từ chức.",
           "chunks": [
-            "長い間、",
-            "社内で独裁者として振る舞ってきた社長も、",
+            "長い間、社内で独裁者として振る舞ってきた社長も、",
             "この不正の発覚により、",
             "とうとう退任を余儀なくされた。"
           ]
@@ -623,23 +664,28 @@
     {
       "id": "n1-lg011",
       "grammar": "～を皮切りに / ～を皮切りとして",
-      "reading": "～をかわきりに / ～をかわきりとして",
+      "reading": "をかわきりに／をかわきりとして",
       "meaning": "Khởi đầu với N / Đầu tiên là N, sau đó...",
-      "formation": "Danh từ + を皮切りに（して）",
+      "formation": "N + を皮切りに（して） / N + を皮切りとして",
       "priorityStars": 4,
-      "explanation": "Mẫu ～を皮切りに / ～を皮切りとして diễn tả: Khởi đầu với N / Đầu tiên là N, sau đó.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Chọn một sự việc làm điểm khởi đầu cho chuỗi sự việc tương tự tiếp diễn sau đó. Thường đi với 次々に, 続々と, どんどん, 全国各地で... và dùng trong thông báo, tin tức hoặc kể lại một chuỗi diễn biến.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Khởi đầu với N / Đầu tiên là N, sau đó..."
+          "title": "Cấu trúc",
+          "text": "Danh từ chỉ hành động/sự kiện đầu tiên + を皮切りに（して） + chuỗi sự việc tiếp diễn."
         },
         {
-          "title": "Mẫu",
-          "text": "～を皮切りに / ～を皮切りとして"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh tính mở màn cho nhiều diễn biến theo sau; không đơn thuần nói “đầu tiên”."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～をきっかけに chỉ một dịp làm phát sinh thay đổi; ～を皮切りに nhấn mạnh một loạt sự kiện liên tiếp."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng khi sau đó không có chuỗi hoặc sự mở rộng đáng kể.",
+        "Cách đọc 皮切り là かわきり, không phải ひきり."
       ],
       "discovery": {
         "distractors": [
@@ -651,13 +697,13 @@
       "examples": [
         {
           "sentence": "あの新入社員は、先月の契約成功を皮切りにして、次々と大きな仕事を成功させている。",
-          "reading": "",
+          "reading": "あのしんにゅうしゃいんは、せんげつのけいやくせいこうをかわきりにして、つぎつぎとおおきなしごとをせいこうさせている。",
           "translation": "Nhân viên mới đó, khởi đầu bằng việc ký hợp đồng thành công vào tháng trước, sau đó liên tiếp thành công với những công việc lớn.",
           "blank": "あの新入社員は、先月の契約成功____、次々と大きな仕事を成功させている。",
           "answer": "を皮切りにして",
-          "hint": "Mẫu mục tiêu: ～を皮切りに / ～を皮切りとして",
-          "reason": "Trong câu này, を皮切りにして thể hiện ý nghĩa: Khởi đầu với N / Đầu tiên là N, sau đó....",
-          "wrongReason": "Đối chiếu với mẫu ～を皮切りに / ～を皮切りとして và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Thành công của hợp đồng tháng trước là sự kiện mở đầu các thành tích tiếp theo.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + を皮切りに（して） / N + を皮切りとして. Thành công của hợp đồng tháng trước là sự kiện mở đầu các thành tích tiếp theo.",
           "chunks": [
             "あの新入社員は、",
             "先月の契約成功を皮切りにして、",
@@ -666,13 +712,13 @@
         },
         {
           "sentence": "最初は誰も発言をしなかったが、彼の発言を皮切りに、次々に意見が出た。",
-          "reading": "",
+          "reading": "さいしょはだれもはつげんをしなかったが、かれのはつげんをかわきりに、つぎつぎにいけんがでた。",
           "translation": "Ban đầu không ai phát biểu, nhưng bắt đầu từ phát biểu của anh ấy, các ý kiến lần lượt được đưa ra.",
           "blank": "最初は誰も発言をしなかったが、彼の発言____、次々に意見が出た。",
           "answer": "を皮切りに",
-          "hint": "Mẫu mục tiêu: ～を皮切りに / ～を皮切りとして",
-          "reason": "Trong câu này, を皮切りに thể hiện ý nghĩa: Khởi đầu với N / Đầu tiên là N, sau đó....",
-          "wrongReason": "Đối chiếu với mẫu ～を皮切りに / ～を皮切りとして và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Lời phát biểu của anh ấy mở đầu cho chuỗi ý kiến liên tiếp.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + を皮切りに（して） / N + を皮切りとして. Lời phát biểu của anh ấy mở đầu cho chuỗi ý kiến liên tiếp.",
           "chunks": [
             "最初は誰も発言をしなかったが、",
             "彼の発言を皮切りに、",
@@ -681,13 +727,13 @@
         },
         {
           "sentence": "木村さんが辞めたのを皮切りに、木村さんの同期の社員がどんどん辞めていった。",
-          "reading": "",
+          "reading": "きむらさんがやめたのをかわきりに、きむらさんのどうきのしゃいんがどんどんやめていった。",
           "translation": "Bắt đầu từ việc anh Kimura nghỉ việc, những nhân viên cùng khóa với anh ấy cũng lần lượt nghỉ việc.",
           "blank": "木村さんが辞めたの____、木村さんの同期の社員がどんどん辞めていった。",
           "answer": "を皮切りに",
-          "hint": "Mẫu mục tiêu: ～を皮切りに / ～を皮切りとして",
-          "reason": "Trong câu này, を皮切りに thể hiện ý nghĩa: Khởi đầu với N / Đầu tiên là N, sau đó....",
-          "wrongReason": "Đối chiếu với mẫu ～を皮切りに / ～を皮切りとして và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "Kimura nghỉ việc mở đầu cho việc nhiều nhân viên cùng khóa lần lượt rời công ty.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + を皮切りに（して） / N + を皮切りとして. Kimura nghỉ việc mở đầu cho việc nhiều nhân viên cùng khóa lần lượt rời công ty.",
           "chunks": [
             "木村さんが辞めたのを皮切りに、",
             "木村さんの同期の社員が",
@@ -700,23 +746,33 @@
     {
       "id": "n1-lg012",
       "grammar": "～をもって（1）",
-      "reading": "～をもって",
+      "reading": "をもって",
       "meaning": "Thông qua N / Bằng N",
-      "formation": "Danh từ chỉ phương tiện + をもって",
+      "formation": "N + をもって / N + をもってしても",
       "priorityStars": 4,
-      "explanation": "Mẫu ～をもって（1） diễn tả: Thông qua N / Bằng N. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～をもって diễn tả phương tiện, cách thức hoặc cơ sở dùng để thực hiện một việc, thường là văn phong trang trọng. ～をもってしても nhấn mạnh “ngay cả dùng N cũng...”. Cụm 身をもって là cách nói cố định chỉ trải nghiệm bằng chính bản thân mình.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Thông qua N / Bằng N"
+          "title": "Cấu trúc",
+          "text": "Danh từ chỉ công cụ, phương tiện, cơ sở + をもって + động từ."
         },
         {
-          "title": "Mẫu",
-          "text": "～をもって（1）"
+          "title": "Sắc thái",
+          "text": "Thường thấy trong công văn, thông báo chính thức; ví dụ メールをもって通知する."
+        },
+        {
+          "title": "Biến thể nhấn mạnh",
+          "text": "N + をもってしても + kết quả phủ định: ngay cả có phương tiện/khả năng N cũng không đạt kết quả."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～をもって (bằng/căn cứ vào) khác ～をもって (đến thời điểm thì kết thúc), nên giữ hai mục ngữ pháp riêng."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dịch ～をもって thành “nhờ vào” trong mọi trường hợp; đôi khi chỉ là phương tiện trung tính.",
+        "Phân biệt をもって với をもってしても và cụm 身をもって.",
+        "Trong văn nói thông thường, ～で thường tự nhiên hơn ～をもって."
       ],
       "discovery": {
         "distractors": [
@@ -728,47 +784,47 @@
       "examples": [
         {
           "sentence": "不採用の場合、電話は致しません。メールをもって通知させて頂きます。",
-          "reading": "",
+          "reading": "ふさいようのばあい、でんわはいたしません。メールをもってつうちさせていただきます。",
           "translation": "Trong trường hợp không được tuyển dụng, chúng tôi sẽ không gọi điện mà sẽ thông báo bằng email.",
           "blank": "不採用の場合、電話は致しません。メール____通知させて頂きます。",
           "answer": "をもって",
-          "hint": "Mẫu mục tiêu: ～をもって（1）",
-          "reason": "Trong câu này, をもって thể hiện ý nghĩa: Thông qua N / Bằng N.",
-          "wrongReason": "Đối chiếu với mẫu ～をもって（1） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "メールをもって chỉ email là phương tiện thông báo.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + をもって / N + をもってしても. メールをもって chỉ email là phương tiện thông báo.",
           "chunks": [
-            "不採用の場合、",
-            "電話は致しません。メールを",
-            "もって通知させて頂きます。"
+            "不採用の場合、電話は致しません。",
+            "メールをもって",
+            "通知させて頂きます。"
           ]
         },
         {
           "sentence": "現代の医学の力をもってしても、彼の病気は治らないらしい。",
-          "reading": "",
+          "reading": "げんだいのいがくのちからをもってしても、かれのびょうきはなおらないらしい。",
           "translation": "Dường như ngay cả bằng sức mạnh của y học hiện đại cũng không thể chữa khỏi bệnh của anh ấy.",
           "blank": "現代の医学の力____しても、彼の病気は治らないらしい。",
           "answer": "をもって",
-          "hint": "Mẫu mục tiêu: ～をもって（1）",
-          "reason": "Trong câu này, をもって thể hiện ý nghĩa: Thông qua N / Bằng N.",
-          "wrongReason": "Đối chiếu với mẫu ～をもって（1） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "をもってしても kết hợp với phủ định 治らない để nhấn mạnh ngay cả y học hiện đại cũng không thể chữa trị.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + をもって / N + をもってしても. をもってしても kết hợp với phủ định 治らない để nhấn mạnh ngay cả y học hiện đại cũng không thể chữa trị.",
           "chunks": [
-            "現代の医学の力を",
-            "もってしても、",
-            "彼の病気は治らないらしい。"
+            "現代の医学の力をもってしても、",
+            "彼の病気は",
+            "治らないらしい。"
           ]
         },
         {
           "sentence": "10年間一緒に暮らしてきた愛犬をなくして、命の大切さを身をもって知った。",
-          "reading": "",
+          "reading": "じゅうねんかんいっしょにくらしてきたあいけんをなくして、いのちのたいせつさをみをもってしった。",
           "translation": "Sau khi mất chú chó cưng đã sống cùng suốt 10 năm, tôi đã tự mình thấm thía sự quý giá của sinh mạng.",
           "blank": "10年間一緒に暮らしてきた愛犬をなくして、命の大切さを身____知った。",
           "answer": "をもって",
-          "hint": "Mẫu mục tiêu: ～をもって（1）",
-          "reason": "Trong câu này, をもって thể hiện ý nghĩa: Thông qua N / Bằng N.",
-          "wrongReason": "Đối chiếu với mẫu ～をもって（1） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhìn vai trò của mẫu ngữ pháp trong ngữ cảnh, không chỉ dựa vào nghĩa tiếng Việt.",
+          "reason": "身をもって là trải nghiệm bằng chính bản thân, không chỉ biết qua lời kể.",
+          "wrongReason": "Trong câu này, xem cấu trúc: N + をもって / N + をもってしても. 身をもって là trải nghiệm bằng chính bản thân, không chỉ biết qua lời kể.",
           "chunks": [
-            "10年間一緒に",
-            "暮らしてきた愛犬をなくして、",
-            "命の大切さを身をもって知った。"
+            "10年間一緒に暮らしてきた愛犬をなくして、",
+            "命の大切さを",
+            "身をもって知った。"
           ]
         }
       ],
