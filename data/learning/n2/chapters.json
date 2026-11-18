@@ -1,18 +1,134 @@
-
 {
   "schemaVersion": 1,
   "courseId": "n2",
   "chapters": [
     {
       "id": "n2-ch01",
-      "title": "Chương 01 · Công việc và xử lý vấn đề",
-      "description": "Ứng phó, điều chỉnh, duy trì và ảnh hưởng",
+      "title": "N2 · Kết quả, nghĩa vụ và xu hướng",
+      "description": "10 mẫu ngữ pháp N2",
       "lessons": [
         {
-          "id": "n2-ch01-vocab",
-          "type": "vocabulary",
-          "title": "01 · Vocabulary",
-          "file": "data/learning/n2/vocabulary-01.json"
+          "id": "n2-ch01-grammar",
+          "type": "grammar",
+          "title": "Grammar 01",
+          "file": "data/learning/n2/grammar-01.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch02",
+      "title": "N2 · Giới hạn, đánh giá và lý do",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch02-grammar",
+          "type": "grammar",
+          "title": "Grammar 02",
+          "file": "data/learning/n2/grammar-02.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch03",
+      "title": "N2 · Hành động, cảm xúc và nhận định",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch03-grammar",
+          "type": "grammar",
+          "title": "Grammar 03",
+          "file": "data/learning/n2/grammar-03.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch04",
+      "title": "N2 · Thời điểm, bắt buộc và hệ quả",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch04-grammar",
+          "type": "grammar",
+          "title": "Grammar 04",
+          "file": "data/learning/n2/grammar-04.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch05",
+      "title": "N2 · Biến đổi, lặp lại và diễn tiến",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch05-grammar",
+          "type": "grammar",
+          "title": "Grammar 05",
+          "file": "data/learning/n2/grammar-05.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch06",
+      "title": "N2 · Cảm xúc mạnh và cách diễn đạt",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch06-grammar",
+          "type": "grammar",
+          "title": "Grammar 06",
+          "file": "data/learning/n2/grammar-06.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch07",
+      "title": "N2 · Phủ định, giả định và điều kiện",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch07-grammar",
+          "type": "grammar",
+          "title": "Grammar 07",
+          "file": "data/learning/n2/grammar-07.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch08",
+      "title": "N2 · Đối tượng, phạm vi và quan hệ",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch08-grammar",
+          "type": "grammar",
+          "title": "Grammar 08",
+          "file": "data/learning/n2/grammar-08.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch09",
+      "title": "N2 · Tiến trình, bằng chứng và đánh giá",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch09-grammar",
+          "type": "grammar",
+          "title": "Grammar 09",
+          "file": "data/learning/n2/grammar-09.json"
+        }
+      ]
+    },
+    {
+      "id": "n2-ch10",
+      "title": "N2 · Căn cứ, phạm vi và bổ sung",
+      "description": "10 mẫu ngữ pháp N2",
+      "lessons": [
+        {
+          "id": "n2-ch10-grammar",
+          "type": "grammar",
+          "title": "Grammar 10",
+          "file": "data/learning/n2/grammar-10.json"
         }
       ]
     }
