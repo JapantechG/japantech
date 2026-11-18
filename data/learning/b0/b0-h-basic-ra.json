@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-basic-ra",
+  "type": "kana",
+  "title": "Hàng R · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-h-basic-ra-01",
+      "character": "ら",
+      "reading": "ra",
+      "meaning": "Âm ra",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng R",
+      "explanation": "Hiragana ら được đọc là “ra” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ら, phát âm ra mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu らくだ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ri",
+          "Âm ru",
+          "Âm re"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "らくだ",
+          "reading": "ra · ku · da",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ら",
+            "く",
+            "だ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là らくだ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ら",
+          "blank": "____くだ"
+        }
+      ],
+      "sampleWord": "らくだ",
+      "sampleReading": "ra · ku · da",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-basic-ra-02",
+      "character": "り",
+      "reading": "ri",
+      "meaning": "Âm ri",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng R",
+      "explanation": "Hiragana り được đọc là “ri” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn り, phát âm ri mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu りす từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ra",
+          "Âm ru",
+          "Âm re"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "りす",
+          "reading": "ri · su",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "り",
+            "す"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là りす.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "り",
+          "blank": "____す"
+        }
+      ],
+      "sampleWord": "りす",
+      "sampleReading": "ri · su",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-basic-ra-03",
+      "character": "る",
+      "reading": "ru",
+      "meaning": "Âm ru",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng R",
+      "explanation": "Hiragana る được đọc là “ru” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn る, phát âm ru mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu るす từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ra",
+          "Âm ri",
+          "Âm re"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "るす",
+          "reading": "ru · su",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "る",
+            "す"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là るす.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "る",
+          "blank": "____す"
+        }
+      ],
+      "sampleWord": "るす",
+      "sampleReading": "ru · su",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-h-basic-ra-04",
+      "character": "れ",
+      "reading": "re",
+      "meaning": "Âm re",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng R",
+      "explanation": "Hiragana れ được đọc là “re” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn れ, phát âm re mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu れきし từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ra",
+          "Âm ri",
+          "Âm ru"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "れきし",
+          "reading": "re · ki · shi",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "れ",
+            "き",
+            "し"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là れきし.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "れ",
+          "blank": "____きし"
+        }
+      ],
+      "sampleWord": "れきし",
+      "sampleReading": "re · ki · shi",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-h-basic-ra-05",
+      "character": "ろ",
+      "reading": "ro",
+      "meaning": "Âm ro",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng R",
+      "explanation": "Hiragana ろ được đọc là “ro” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ろ, phát âm ro mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ろく từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ra",
+          "Âm ri",
+          "Âm ru"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ろく",
+          "reading": "ro · ku",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ろ",
+            "く"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ろく.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ろ",
+          "blank": "____く"
+        }
+      ],
+      "sampleWord": "ろく",
+      "sampleReading": "ro · ku",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}
