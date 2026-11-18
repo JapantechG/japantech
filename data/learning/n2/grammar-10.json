@@ -1,0 +1,805 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n2-ch10-grammar",
+  "type": "grammar",
+  "title": "N2 · Căn cứ, phạm vi và bổ sung",
+  "items": [
+    {
+      "id": "n2-lg091",
+      "grammar": "～に伴って",
+      "reading": "～にともなって",
+      "meaning": "Kèm theo sự thay đổi / sự kiện...",
+      "formation": "N + に伴って／に伴う + N",
+      "priorityStars": 5,
+      "explanation": "～に伴って biểu thị “kèm theo sự thay đổi / sự kiện...”. Điểm quan trọng của mẫu này là: Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + に伴って／に伴う + N. So với ～とともに, cần chú ý: ～とともに có thể đồng hành; ～に伴って nhấn mạnh hệ quả liên đới. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + に伴って／に伴う + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B. Nghĩa thực tế: Kèm theo sự thay đổi / sự kiện.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「人口の増加に伴って、交通量も増えた。」 — Cùng với dân số tăng, lượng xe cộ cũng tăng. Hãy nhận diện vị trí 「～に伴って」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～とともに",
+          "text": "～とともに có thể đồng hành; ～に伴って nhấn mạnh hệ quả liên đới."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + に伴って／に伴う + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không suy ra quan hệ nguyên nhân tuyệt đối nếu chỉ biết hai việc cùng diễn ra."
+        }
+      ],
+      "commonMistakes": [
+        "Không suy ra quan hệ nguyên nhân tuyệt đối nếu chỉ biết hai việc cùng diễn ra.",
+        "Nhầm ～に伴って với ～とともに. ～とともに có thể đồng hành; ～に伴って nhấn mạnh hệ quả liên đới.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + に伴って／に伴う + N.",
+        "Chỉ nhớ nghĩa “Kèm theo sự thay đổi / sự kiện...” mà bỏ qua sắc thái: Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～に伴って."
+      ],
+      "discovery": {
+        "distractors": [
+          "Có nguy cơ xảy ra điều không tốt",
+          "Không cần phải...",
+          "Nếu chưa... thì không thể..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "人口の増加に伴って、交通量も増えた。",
+          "reading": "じんこうのぞうかにともなって、こうつうりょうもふえた。",
+          "translation": "Cùng với dân số tăng, lượng xe cộ cũng tăng.",
+          "blank": "人口の増加____、交通量も増えた。",
+          "answer": "に伴って",
+          "hint": "Chú ý nghĩa “Kèm theo sự thay đổi / sự kiện...” và cách nối N + に伴って／に伴う + N. Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B.",
+          "reason": "Trong 「人口の増加に伴って、交通量も増えた。」, cụm 「に伴って」 thể hiện mẫu ～に伴って. Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B. Vì thế câu có nghĩa: Cùng với dân số tăng, lượng xe cộ cũng tăng. Dạng nối cần nhớ: N + に伴って／に伴う + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không suy ra quan hệ nguyên nhân tuyệt đối nếu chỉ biết hai việc cùng diễn ra. Đồng thời, ～とともに có thể đồng hành; ～に伴って nhấn mạnh hệ quả liên đới. Câu này cần cấu trúc ～に伴って ở vị trí đã bỏ trống.",
+          "chunks": [
+            "人口の増加に伴って、",
+            "交通量も増えた。"
+          ]
+        },
+        {
+          "sentence": "技術の進歩に伴って、仕事の方法も変わる。",
+          "reading": "ぎじゅつのしんぽにともなって、しごとのほうほうもかわる。",
+          "translation": "Cùng sự tiến bộ công nghệ, cách làm việc cũng thay đổi.",
+          "blank": "技術の進歩____、仕事の方法も変わる。",
+          "answer": "に伴って",
+          "hint": "Chú ý nghĩa “Kèm theo sự thay đổi / sự kiện...” và cách nối N + に伴って／に伴う + N. Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B.",
+          "reason": "Trong 「技術の進歩に伴って、仕事の方法も変わる。」, cụm 「に伴って」 thể hiện mẫu ～に伴って. Sự thay đổi/sự kiện A kéo theo hoặc đi cùng sự thay đổi B. Vì thế câu có nghĩa: Cùng sự tiến bộ công nghệ, cách làm việc cũng thay đổi. Dạng nối cần nhớ: N + に伴って／に伴う + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không suy ra quan hệ nguyên nhân tuyệt đối nếu chỉ biết hai việc cùng diễn ra. Đồng thời, ～とともに có thể đồng hành; ～に伴って nhấn mạnh hệ quả liên đới. Câu này cần cấu trúc ～に伴って ở vị trí đã bỏ trống.",
+          "chunks": [
+            "技術の進歩に伴って、",
+            "仕事の方法も変わる。"
+          ]
+        }
+      ],
+      "sourceId": 91
+    },
+    {
+      "id": "n2-lg092",
+      "grammar": "～に反して",
+      "reading": "～にはんして",
+      "meaning": "Trái với...",
+      "formation": "N + に反して／に反する + N",
+      "priorityStars": 4,
+      "explanation": "～に反して biểu thị “trái với...”. Điểm quan trọng của mẫu này là: Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + に反して／に反する + N. So với ～と違って, cần chú ý: ～と違って chỉ khác biệt; ～に反して nhấn mạnh đối lập với điều được kỳ vọng. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + に反して／に反する + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định. Nghĩa thực tế: Trái với.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「予想に反して、試験は簡単だった。」 — Trái với dự đoán, bài thi khá dễ. Hãy nhận diện vị trí 「～に反して」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～と違って",
+          "text": "～と違って chỉ khác biệt; ～に反して nhấn mạnh đối lập với điều được kỳ vọng."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + に反して／に反する + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nhầm ～に対して dùng so sánh đối tượng."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm ～に対して dùng so sánh đối tượng.",
+        "Nhầm ～に反して với ～と違って. ～と違って chỉ khác biệt; ～に反して nhấn mạnh đối lập với điều được kỳ vọng.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + に反して／に反する + N.",
+        "Chỉ nhớ nghĩa “Trái với...” mà bỏ qua sắc thái: Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～に反して."
+      ],
+      "discovery": {
+        "distractors": [
+          "Đáng công, có kết quả xứng đáng",
+          "Khi, vào dịp... (trang trọng)",
+          "Rất..., không chịu nổi"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "予想に反して、試験は簡単だった。",
+          "reading": "よそうにはんして、しけんはかんたんだった。",
+          "translation": "Trái với dự đoán, bài thi khá dễ.",
+          "blank": "予想____、試験は簡単だった。",
+          "answer": "に反して",
+          "hint": "Chú ý nghĩa “Trái với...” và cách nối N + に反して／に反する + N. Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định.",
+          "reason": "Trong 「予想に反して、試験は簡単だった。」, cụm 「に反して」 thể hiện mẫu ～に反して. Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định. Vì thế câu có nghĩa: Trái với dự đoán, bài thi khá dễ. Dạng nối cần nhớ: N + に反して／に反する + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm ～に対して dùng so sánh đối tượng. Đồng thời, ～と違って chỉ khác biệt; ～に反して nhấn mạnh đối lập với điều được kỳ vọng. Câu này cần cấu trúc ～に反して ở vị trí đã bỏ trống.",
+          "chunks": [
+            "予想に反して、",
+            "試験は簡単だった。"
+          ]
+        },
+        {
+          "sentence": "期待に反して、結果は悪かった。",
+          "reading": "きたいにはんして、けっかはわるかった。",
+          "translation": "Trái kỳ vọng, kết quả lại tệ.",
+          "blank": "期待____、結果は悪かった。",
+          "answer": "に反して",
+          "hint": "Chú ý nghĩa “Trái với...” và cách nối N + に反して／に反する + N. Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định.",
+          "reason": "Trong 「期待に反して、結果は悪かった。」, cụm 「に反して」 thể hiện mẫu ～に反して. Thực tế trái với kỳ vọng, dự đoán, ý định hoặc quy định. Vì thế câu có nghĩa: Trái kỳ vọng, kết quả lại tệ. Dạng nối cần nhớ: N + に反して／に反する + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm ～に対して dùng so sánh đối tượng. Đồng thời, ～と違って chỉ khác biệt; ～に反して nhấn mạnh đối lập với điều được kỳ vọng. Câu này cần cấu trúc ～に反して ở vị trí đã bỏ trống.",
+          "chunks": [
+            "期待に反して、",
+            "結果は悪かった。"
+          ]
+        }
+      ],
+      "sourceId": 92
+    },
+    {
+      "id": "n2-lg093",
+      "grammar": "～にほかならない",
+      "reading": "～にほかならない",
+      "meaning": "Không gì khác chính là...",
+      "formation": "N + にほかならない",
+      "priorityStars": 3,
+      "explanation": "～にほかならない biểu thị “không gì khác chính là...”. Điểm quan trọng của mẫu này là: Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + にほかならない. So với ～にすぎない, cần chú ý: ～にすぎない là hạ thấp thành “chỉ là”; ～にほかならない là nhấn mạnh duy nhất. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + にほかならない. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu. Nghĩa thực tế: Không gì khác chính là.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「成功の理由は、皆の努力にほかならない。」 — Lý do thành công không gì khác chính là nỗ lực của mọi người. Hãy nhận diện vị trí 「～にほかならない」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～にすぎない",
+          "text": "～にすぎない là hạ thấp thành “chỉ là”; ～にほかならない là nhấn mạnh duy nhất."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + にほかならない. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dịch thành “không phải điều đó” dù hình thức chứa ない."
+        }
+      ],
+      "commonMistakes": [
+        "Không dịch thành “không phải điều đó” dù hình thức chứa ない.",
+        "Nhầm ～にほかならない với ～にすぎない. ～にすぎない là hạ thấp thành “chỉ là”; ～にほかならない là nhấn mạnh duy nhất.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + にほかならない.",
+        "Chỉ nhớ nghĩa “Không gì khác chính là...” mà bỏ qua sắc thái: Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～にほかならない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Đáng để làm, có ý nghĩa khi làm",
+          "Đang đúng lúc... thì...",
+          "Cực kỳ..., không chịu được"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "成功の理由は、皆の努力にほかならない。",
+          "reading": "せいこうのりゆうは、みんなのどりょくにほかならない。",
+          "translation": "Lý do thành công không gì khác chính là nỗ lực của mọi người.",
+          "blank": "成功の理由は、皆の努力____。",
+          "answer": "にほかならない",
+          "hint": "Chú ý nghĩa “Không gì khác chính là...” và cách nối N + にほかならない. Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu.",
+          "reason": "Trong 「成功の理由は、皆の努力にほかならない。」, cụm 「にほかならない」 thể hiện mẫu ～にほかならない. Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu. Vì thế câu có nghĩa: Lý do thành công không gì khác chính là nỗ lực của mọi người. Dạng nối cần nhớ: N + にほかならない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dịch thành “không phải điều đó” dù hình thức chứa ない. Đồng thời, ～にすぎない là hạ thấp thành “chỉ là”; ～にほかならない là nhấn mạnh duy nhất. Câu này cần cấu trúc ～にほかならない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "成功の理由は、",
+            "皆の努力にほかならない。"
+          ]
+        },
+        {
+          "sentence": "この賞はチーム全員の成果にほかならない。",
+          "reading": "このしょうはチームぜんいんのせいかにほかならない。",
+          "translation": "Giải thưởng này chính là thành quả của cả đội.",
+          "blank": "この賞はチーム全員の成果____。",
+          "answer": "にほかならない",
+          "hint": "Chú ý nghĩa “Không gì khác chính là...” và cách nối N + にほかならない. Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu.",
+          "reason": "Trong 「この賞はチーム全員の成果にほかならない。」, cụm 「にほかならない」 thể hiện mẫu ～にほかならない. Khẳng định dứt khoát rằng bản chất hoặc nguyên nhân chính là điều được nêu. Vì thế câu có nghĩa: Giải thưởng này chính là thành quả của cả đội. Dạng nối cần nhớ: N + にほかならない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dịch thành “không phải điều đó” dù hình thức chứa ない. Đồng thời, ～にすぎない là hạ thấp thành “chỉ là”; ～にほかならない là nhấn mạnh duy nhất. Câu này cần cấu trúc ～にほかならない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "この賞はチーム全員の成果にほかならない。"
+          ]
+        }
+      ],
+      "sourceId": 93
+    },
+    {
+      "id": "n2-lg094",
+      "grammar": "～に基づいて",
+      "reading": "～にもとづいて",
+      "meaning": "Dựa trên... (căn cứ)",
+      "formation": "N + に基づいて／に基づく + N",
+      "priorityStars": 5,
+      "explanation": "～に基づいて biểu thị “dựa trên... (căn cứ)”. Điểm quan trọng của mẫu này là: Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + に基づいて／に基づく + N. So với ～に沿って, cần chú ý: ～に沿って làm theo đường hướng; ～に基づいて nhấn mạnh căn cứ. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + に基づいて／に基づく + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định. Nghĩa thực tế: Dựa trên... (căn cứ). Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「実験結果に基づいて、設計を変更した。」 — Chúng tôi thay đổi thiết kế dựa trên kết quả thí nghiệm. Hãy nhận diện vị trí 「～に基づいて」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～に沿って",
+          "text": "～に沿って làm theo đường hướng; ～に基づいて nhấn mạnh căn cứ."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + に基づいて／に基づく + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng khi quyết định không có dữ liệu hoặc nguyên tắc làm nền."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng khi quyết định không có dữ liệu hoặc nguyên tắc làm nền.",
+        "Nhầm ～に基づいて với ～に沿って. ～に沿って làm theo đường hướng; ～に基づいて nhấn mạnh căn cứ.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + に基づいて／に基づく + N.",
+        "Chỉ nhớ nghĩa “Dựa trên... (căn cứ)” mà bỏ qua sắc thái: Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～に基づいて."
+      ],
+      "discovery": {
+        "distractors": [
+          "Chừng nào còn... thì...",
+          "Không còn cách nào khác ngoài...",
+          "Cứ cảm thấy... mãi, rất..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "実験結果に基づいて、設計を変更した。",
+          "reading": "じっけんけっかにもとづいて、せっけいをへんこうした。",
+          "translation": "Chúng tôi thay đổi thiết kế dựa trên kết quả thí nghiệm.",
+          "blank": "実験結果____、設計を変更した。",
+          "answer": "に基づいて",
+          "hint": "Chú ý nghĩa “Dựa trên... (căn cứ)” và cách nối N + に基づいて／に基づく + N. Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định.",
+          "reason": "Trong 「実験結果に基づいて、設計を変更した。」, cụm 「に基づいて」 thể hiện mẫu ～に基づいて. Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định. Vì thế câu có nghĩa: Chúng tôi thay đổi thiết kế dựa trên kết quả thí nghiệm. Dạng nối cần nhớ: N + に基づいて／に基づく + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng khi quyết định không có dữ liệu hoặc nguyên tắc làm nền. Đồng thời, ～に沿って làm theo đường hướng; ～に基づいて nhấn mạnh căn cứ. Câu này cần cấu trúc ～に基づいて ở vị trí đã bỏ trống.",
+          "chunks": [
+            "実験結果に基づいて、",
+            "設計を変更した。"
+          ]
+        },
+        {
+          "sentence": "法律に基づいて、対応を決める。",
+          "reading": "ほうりつにもとづいて、たいおうをきめる。",
+          "translation": "Quyết định cách xử lý căn cứ theo luật.",
+          "blank": "法律____、対応を決める。",
+          "answer": "に基づいて",
+          "hint": "Chú ý nghĩa “Dựa trên... (căn cứ)” và cách nối N + に基づいて／に基づく + N. Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định.",
+          "reason": "Trong 「法律に基づいて、対応を決める。」, cụm 「に基づいて」 thể hiện mẫu ～に基づいて. Dựa trên dữ liệu, luật, kết quả, sự thật để thực hiện một quyết định. Vì thế câu có nghĩa: Quyết định cách xử lý căn cứ theo luật. Dạng nối cần nhớ: N + に基づいて／に基づく + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng khi quyết định không có dữ liệu hoặc nguyên tắc làm nền. Đồng thời, ～に沿って làm theo đường hướng; ～に基づいて nhấn mạnh căn cứ. Câu này cần cấu trúc ～に基づいて ở vị trí đã bỏ trống.",
+          "chunks": [
+            "法律に基づいて、",
+            "対応を決める。"
+          ]
+        }
+      ],
+      "sourceId": 94
+    },
+    {
+      "id": "n2-lg095",
+      "grammar": "～によって / ～による",
+      "reading": "～によって / ～による",
+      "meaning": "Do..., bởi..., tùy theo...",
+      "formation": "N + によって／による + N",
+      "priorityStars": 5,
+      "explanation": "～によって / ～による biểu thị “do..., bởi..., tùy theo...”. Điểm quan trọng của mẫu này là: Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + によって／による + N. So với ～に応じて, cần chú ý: ～に応じて là điều chỉnh cho phù hợp; ～によって có nhiều nghĩa và cần đọc theo câu. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + によって／による + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh. Nghĩa thực tế: Do..., bởi..., tùy theo.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「国によって、交通ルールが違う。」 — Tùy theo quốc gia mà luật giao thông khác nhau. Hãy nhận diện vị trí 「～によって / ～による」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～に応じて",
+          "text": "～に応じて là điều chỉnh cho phù hợp; ～によって có nhiều nghĩa và cần đọc theo câu."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + によって／による + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không áp một nghĩa “bởi” cho tất cả trường hợp."
+        }
+      ],
+      "commonMistakes": [
+        "Không áp một nghĩa “bởi” cho tất cả trường hợp.",
+        "Nhầm ～によって / ～による với ～に応じて. ～に応じて là điều chỉnh cho phù hợp; ～によって có nhiều nghĩa và cần đọc theo câu.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + によって／による + N.",
+        "Chỉ nhớ nghĩa “Do..., bởi..., tùy theo...” mà bỏ qua sắc thái: Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～によって / ～による."
+      ],
+      "discovery": {
+        "distractors": [
+          "Trong phạm vi những gì biết, thấy, nghe",
+          "Ngay sau khi... sẽ...",
+          "Chỉ sau khi... mới..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "国によって、交通ルールが違う。",
+          "reading": "くにによって、こうつうルールがちがう。",
+          "translation": "Tùy theo quốc gia mà luật giao thông khác nhau.",
+          "blank": "国____、交通ルールが違う。",
+          "answer": "によって",
+          "hint": "Chú ý nghĩa “Do..., bởi..., tùy theo...” và cách nối N + によって／による + N. Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh.",
+          "reason": "Trong 「国によって、交通ルールが違う。」, cụm 「によって」 thể hiện mẫu ～によって / ～による. Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh. Vì thế câu có nghĩa: Tùy theo quốc gia mà luật giao thông khác nhau. Dạng nối cần nhớ: N + によって／による + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không áp một nghĩa “bởi” cho tất cả trường hợp. Đồng thời, ～に応じて là điều chỉnh cho phù hợp; ～によって có nhiều nghĩa và cần đọc theo câu. Câu này cần cấu trúc ～によって / ～による ở vị trí đã bỏ trống.",
+          "chunks": [
+            "国によって、",
+            "交通ルールが違う。"
+          ]
+        },
+        {
+          "sentence": "人によって、好みは異なる。",
+          "reading": "ひとによって、このみはことなる。",
+          "translation": "Sở thích khác nhau tùy người.",
+          "blank": "人____、好みは異なる。",
+          "answer": "によって",
+          "hint": "Chú ý nghĩa “Do..., bởi..., tùy theo...” và cách nối N + によって／による + N. Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh.",
+          "reason": "Trong 「人によって、好みは異なる。」, cụm 「によって」 thể hiện mẫu ～によって / ～による. Tùy vào đối tượng mà có sự khác biệt; còn chỉ nguyên nhân, phương tiện, tác nhân tùy ngữ cảnh. Vì thế câu có nghĩa: Sở thích khác nhau tùy người. Dạng nối cần nhớ: N + によって／による + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không áp một nghĩa “bởi” cho tất cả trường hợp. Đồng thời, ～に応じて là điều chỉnh cho phù hợp; ～によって có nhiều nghĩa và cần đọc theo câu. Câu này cần cấu trúc ～によって / ～による ở vị trí đã bỏ trống.",
+          "chunks": [
+            "人によって、",
+            "好みは異なる。"
+          ]
+        }
+      ],
+      "sourceId": 95
+    },
+    {
+      "id": "n2-lg096",
+      "grammar": "～にわたって",
+      "reading": "～にわたって",
+      "meaning": "Suốt..., trải dài..., trong phạm vi...",
+      "formation": "N期間・範囲 + にわたって／にわたる + N",
+      "priorityStars": 3,
+      "explanation": "～にわたって biểu thị “suốt..., trải dài..., trong phạm vi...”. Điểm quan trọng của mẫu này là: Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N期間・範囲 + にわたって／にわたる + N. So với ～間, cần chú ý: ～間 chỉ thời lượng; ～にわたって nhấn mạnh độ bao phủ liên tục/rộng. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N期間・範囲 + にわたって／にわたる + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi. Nghĩa thực tế: Suốt..., trải dài..., trong phạm vi.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「工事は三か月にわたって行われた。」 — Công trình được thực hiện suốt ba tháng. Hãy nhận diện vị trí 「～にわたって」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～間",
+          "text": "～間 chỉ thời lượng; ～にわたって nhấn mạnh độ bao phủ liên tục/rộng."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N期間・範囲 + にわたって／にわたる + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng với một thời điểm điểm đơn lẻ."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng với một thời điểm điểm đơn lẻ.",
+        "Nhầm ～にわたって với ～間. ～間 chỉ thời lượng; ～にわたって nhấn mạnh độ bao phủ liên tục/rộng.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N期間・範囲 + にわたって／にわたる + N.",
+        "Chỉ nhớ nghĩa “Suốt..., trải dài..., trong phạm vi...” mà bỏ qua sắc thái: Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～にわたって."
+      ],
+      "discovery": {
+        "distractors": [
+          "Có nguy cơ, có thể dẫn đến điều xấu",
+          "Tùy thuộc vào...",
+          "Đến mức phải... để..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "工事は三か月にわたって行われた。",
+          "reading": "こうじはさんかげつにわたっておこなわれた。",
+          "translation": "Công trình được thực hiện suốt ba tháng.",
+          "blank": "工事は三か月____行われた。",
+          "answer": "にわたって",
+          "hint": "Chú ý nghĩa “Suốt..., trải dài..., trong phạm vi...” và cách nối N期間・範囲 + にわたって／にわたる + N. Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi.",
+          "reason": "Trong 「工事は三か月にわたって行われた。」, cụm 「にわたって」 thể hiện mẫu ～にわたって. Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi. Vì thế câu có nghĩa: Công trình được thực hiện suốt ba tháng. Dạng nối cần nhớ: N期間・範囲 + にわたって／にわたる + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng với một thời điểm điểm đơn lẻ. Đồng thời, ～間 chỉ thời lượng; ～にわたって nhấn mạnh độ bao phủ liên tục/rộng. Câu này cần cấu trúc ～にわたって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "工事は三か月にわたって行われた。"
+          ]
+        },
+        {
+          "sentence": "会議は二日間にわたって開かれた。",
+          "reading": "かいぎはふつかかんにわたってひらかれた。",
+          "translation": "Cuộc họp được tổ chức suốt hai ngày.",
+          "blank": "会議は二日間____開かれた。",
+          "answer": "にわたって",
+          "hint": "Chú ý nghĩa “Suốt..., trải dài..., trong phạm vi...” và cách nối N期間・範囲 + にわたって／にわたる + N. Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi.",
+          "reason": "Trong 「会議は二日間にわたって開かれた。」, cụm 「にわたって」 thể hiện mẫu ～にわたって. Diễn tả sự việc trải rộng suốt một thời gian, địa bàn hoặc phạm vi. Vì thế câu có nghĩa: Cuộc họp được tổ chức suốt hai ngày. Dạng nối cần nhớ: N期間・範囲 + にわたって／にわたる + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng với một thời điểm điểm đơn lẻ. Đồng thời, ～間 chỉ thời lượng; ～にわたって nhấn mạnh độ bao phủ liên tục/rộng. Câu này cần cấu trúc ～にわたって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "会議は二日間にわたって開かれた。"
+          ]
+        }
+      ],
+      "sourceId": 96
+    },
+    {
+      "id": "n2-lg097",
+      "grammar": "～ぬきで / ～ぬきにして",
+      "reading": "～ぬきで / ～ぬきにして",
+      "meaning": "Không có..., bỏ qua...",
+      "formation": "N + ぬきで／ぬきにして／ぬきの + N",
+      "priorityStars": 4,
+      "explanation": "～ぬきで / ～ぬきにして biểu thị “không có..., bỏ qua...”. Điểm quan trọng của mẫu này là: Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + ぬきで／ぬきにして／ぬきの + N. So với ～なしで, cần chú ý: ～なしで là “không có” trung tính; ～ぬきで thường cố ý bỏ qua/loại trừ. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + ぬきで／ぬきにして／ぬきの + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó. Nghĩa thực tế: Không có..., bỏ qua.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「冗談ぬきで、真剣に話し合おう。」 — Không đùa nữa, hãy nghiêm túc bàn bạc. Hãy nhận diện vị trí 「～ぬきで / ～ぬきにして」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～なしで",
+          "text": "～なしで là “không có” trung tính; ～ぬきで thường cố ý bỏ qua/loại trừ."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + ぬきで／ぬきにして／ぬきの + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nhầm 抜き với biến thể Vない bỏ ない + ず."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm 抜き với biến thể Vない bỏ ない + ず.",
+        "Nhầm ～ぬきで / ～ぬきにして với ～なしで. ～なしで là “không có” trung tính; ～ぬきで thường cố ý bỏ qua/loại trừ.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + ぬきで／ぬきにして／ぬきの + N.",
+        "Chỉ nhớ nghĩa “Không có..., bỏ qua...” mà bỏ qua sắc thái: Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～ぬきで / ～ぬきにして."
+      ],
+      "discovery": {
+        "distractors": [
+          "Khó có thể... (cách từ chối lịch sự)",
+          "Sau một quá trình dài... cuối cùng...",
+          "Nghe nói... / có nghĩa là..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "冗談ぬきで、真剣に話し合おう。",
+          "reading": "じょうだんぬきで、しんけんにはなしあおう。",
+          "translation": "Không đùa nữa, hãy nghiêm túc bàn bạc.",
+          "blank": "冗談____、真剣に話し合おう。",
+          "answer": "ぬきで",
+          "hint": "Chú ý nghĩa “Không có..., bỏ qua...” và cách nối N + ぬきで／ぬきにして／ぬきの + N. Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó.",
+          "reason": "Trong 「冗談ぬきで、真剣に話し合おう。」, cụm 「ぬきで」 thể hiện mẫu ～ぬきで / ～ぬきにして. Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó. Vì thế câu có nghĩa: Không đùa nữa, hãy nghiêm túc bàn bạc. Dạng nối cần nhớ: N + ぬきで／ぬきにして／ぬきの + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm 抜き với biến thể Vない bỏ ない + ず. Đồng thời, ～なしで là “không có” trung tính; ～ぬきで thường cố ý bỏ qua/loại trừ. Câu này cần cấu trúc ～ぬきで / ～ぬきにして ở vị trí đã bỏ trống.",
+          "chunks": [
+            "冗談ぬきで、",
+            "真剣に話し合おう。"
+          ]
+        },
+        {
+          "sentence": "遠慮ぬきで、意見を言ってください。",
+          "reading": "えんりょぬきで、いけんをいってください。",
+          "translation": "Xin cứ nói ý kiến không cần ngại ngùng.",
+          "blank": "遠慮____、意見を言ってください。",
+          "answer": "ぬきで",
+          "hint": "Chú ý nghĩa “Không có..., bỏ qua...” và cách nối N + ぬきで／ぬきにして／ぬきの + N. Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó.",
+          "reason": "Trong 「遠慮ぬきで、意見を言ってください。」, cụm 「ぬきで」 thể hiện mẫu ～ぬきで / ～ぬきにして. Loại bỏ một yếu tố khỏi hoạt động; làm mà không tính đến hoặc không kèm nó. Vì thế câu có nghĩa: Xin cứ nói ý kiến không cần ngại ngùng. Dạng nối cần nhớ: N + ぬきで／ぬきにして／ぬきの + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm 抜き với biến thể Vない bỏ ない + ず. Đồng thời, ～なしで là “không có” trung tính; ～ぬきで thường cố ý bỏ qua/loại trừ. Câu này cần cấu trúc ～ぬきで / ～ぬきにして ở vị trí đã bỏ trống.",
+          "chunks": [
+            "遠慮ぬきで、",
+            "意見を言ってください。"
+          ]
+        }
+      ],
+      "sourceId": 97
+    },
+    {
+      "id": "n2-lg098",
+      "grammar": "～のみならず",
+      "reading": "～のみならず",
+      "meaning": "Không chỉ... mà còn... (văn viết)",
+      "formation": "N + のみならず",
+      "priorityStars": 4,
+      "explanation": "～のみならず biểu thị “không chỉ... mà còn... (văn viết)”. Điểm quan trọng của mẫu này là: Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + のみならず. So với ～だけでなく, cần chú ý: ～だけでなく gần nghĩa, thân thuộc; ～のみならず trang trọng. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + のみならず. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết. Nghĩa thực tế: Không chỉ... mà còn... (văn viết). Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「この製品は国内のみならず、海外でも売れている。」 — Sản phẩm này bán chạy không chỉ trong nước mà còn cả nước ngoài. Hãy nhận diện vị trí 「～のみならず」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～だけでなく",
+          "text": "～だけでなく gần nghĩa, thân thuộc; ～のみならず trang trọng."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + のみならず. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng khi không có yếu tố B để mở rộng."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng khi không có yếu tố B để mở rộng.",
+        "Nhầm ～のみならず với ～だけでなく. ～だけでなく gần nghĩa, thân thuộc; ～のみならず trang trọng.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + のみならず.",
+        "Chỉ nhớ nghĩa “Không chỉ... mà còn... (văn viết)” mà bỏ qua sắc thái: Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～のみならず."
+      ],
+      "discovery": {
+        "distractors": [
+          "Ngay từ... đã...; xét từ...",
+          "Không thể không... (cảm xúc thôi thúc)",
+          "Đúng là... (nhận xét mang tính khẳng định)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "この製品は国内のみならず、海外でも売れている。",
+          "reading": "このせいひんはこくないのみならず、かいがいでもうれている。",
+          "translation": "Sản phẩm này bán chạy không chỉ trong nước mà còn cả nước ngoài.",
+          "blank": "この製品は国内____、海外でも売れている。",
+          "answer": "のみならず",
+          "hint": "Chú ý nghĩa “Không chỉ... mà còn... (văn viết)” và cách nối N + のみならず. Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết.",
+          "reason": "Trong 「この製品は国内のみならず、海外でも売れている。」, cụm 「のみならず」 thể hiện mẫu ～のみならず. Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết. Vì thế câu có nghĩa: Sản phẩm này bán chạy không chỉ trong nước mà còn cả nước ngoài. Dạng nối cần nhớ: N + のみならず.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng khi không có yếu tố B để mở rộng. Đồng thời, ～だけでなく gần nghĩa, thân thuộc; ～のみならず trang trọng. Câu này cần cấu trúc ～のみならず ở vị trí đã bỏ trống.",
+          "chunks": [
+            "この製品は国内のみならず、",
+            "海外でも売れている。"
+          ]
+        },
+        {
+          "sentence": "彼女は知識のみならず、経験も豊富だ。",
+          "reading": "かのじょはちしきのみならず、けいけんもほうふだ。",
+          "translation": "Cô ấy không chỉ giỏi kiến thức mà kinh nghiệm cũng phong phú.",
+          "blank": "彼女は知識____、経験も豊富だ。",
+          "answer": "のみならず",
+          "hint": "Chú ý nghĩa “Không chỉ... mà còn... (văn viết)” và cách nối N + のみならず. Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết.",
+          "reason": "Trong 「彼女は知識のみならず、経験も豊富だ。」, cụm 「のみならず」 thể hiện mẫu ～のみならず. Không chỉ A mà còn B; nhấn mạnh mở rộng phạm vi, giọng văn viết. Vì thế câu có nghĩa: Cô ấy không chỉ giỏi kiến thức mà kinh nghiệm cũng phong phú. Dạng nối cần nhớ: N + のみならず.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng khi không có yếu tố B để mở rộng. Đồng thời, ～だけでなく gần nghĩa, thân thuộc; ～のみならず trang trọng. Câu này cần cấu trúc ～のみならず ở vị trí đã bỏ trống.",
+          "chunks": [
+            "彼女は知識のみならず、",
+            "経験も豊富だ。"
+          ]
+        }
+      ],
+      "sourceId": 98
+    },
+    {
+      "id": "n2-lg099",
+      "grammar": "～ばかりか",
+      "reading": "～ばかりか",
+      "meaning": "Không những... mà còn...",
+      "formation": "N／普通形 + ばかりか",
+      "priorityStars": 3,
+      "explanation": "～ばかりか biểu thị “không những... mà còn...”. Điểm quan trọng của mẫu này là: Không chỉ A mà còn cả B, thường B vượt mức mong đợi. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N／普通形 + ばかりか. So với ～だけでなく, cần chú ý: ～だけでなく trung tính; ～ばかりか thể hiện sự thêm vào đáng kể. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N／普通形 + ばかりか. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Không chỉ A mà còn cả B, thường B vượt mức mong đợi. Nghĩa thực tế: Không những... mà còn.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「彼は英語ばかりか、中国語も話せる。」 — Anh ấy không chỉ nói được tiếng Anh mà còn cả tiếng Trung. Hãy nhận diện vị trí 「～ばかりか」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～だけでなく",
+          "text": "～だけでなく trung tính; ～ばかりか thể hiện sự thêm vào đáng kể."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Không chỉ A mà còn cả B, thường B vượt mức mong đợi. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N／普通形 + ばかりか. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không lẫn với ～ばかり chỉ tần suất hoặc “toàn...”."
+        }
+      ],
+      "commonMistakes": [
+        "Không lẫn với ～ばかり chỉ tần suất hoặc “toàn...”.",
+        "Nhầm ～ばかりか với ～だけでなく. ～だけでなく trung tính; ～ばかりか thể hiện sự thêm vào đáng kể.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N／普通形 + ばかりか.",
+        "Chỉ nhớ nghĩa “Không những... mà còn...” mà bỏ qua sắc thái: Không chỉ A mà còn cả B, thường B vượt mức mong đợi.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～ばかりか."
+      ],
+      "discovery": {
+        "distractors": [
+          "Xét từ góc độ... thì...",
+          "Vì... (nguyên nhân tiêu cực)",
+          "Nói là... thì đúng hơn là..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "彼は英語ばかりか、中国語も話せる。",
+          "reading": "かれはえいごばかりか、ちゅうごくごもはなせる。",
+          "translation": "Anh ấy không chỉ nói được tiếng Anh mà còn cả tiếng Trung.",
+          "blank": "彼は英語____、中国語も話せる。",
+          "answer": "ばかりか",
+          "hint": "Chú ý nghĩa “Không những... mà còn...” và cách nối N／普通形 + ばかりか. Không chỉ A mà còn cả B, thường B vượt mức mong đợi.",
+          "reason": "Trong 「彼は英語ばかりか、中国語も話せる。」, cụm 「ばかりか」 thể hiện mẫu ～ばかりか. Không chỉ A mà còn cả B, thường B vượt mức mong đợi. Vì thế câu có nghĩa: Anh ấy không chỉ nói được tiếng Anh mà còn cả tiếng Trung. Dạng nối cần nhớ: N／普通形 + ばかりか.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không lẫn với ～ばかり chỉ tần suất hoặc “toàn...”. Đồng thời, ～だけでなく trung tính; ～ばかりか thể hiện sự thêm vào đáng kể. Câu này cần cấu trúc ～ばかりか ở vị trí đã bỏ trống.",
+          "chunks": [
+            "彼は英語ばかりか、",
+            "中国語も話せる。"
+          ]
+        },
+        {
+          "sentence": "彼は遅刻したばかりか、謝りもしなかった。",
+          "reading": "かれはちこくしたばかりか、あやまりもしなかった。",
+          "translation": "Anh ấy không chỉ đến trễ mà còn chẳng xin lỗi.",
+          "blank": "彼は遅刻した____、謝りもしなかった。",
+          "answer": "ばかりか",
+          "hint": "Chú ý nghĩa “Không những... mà còn...” và cách nối N／普通形 + ばかりか. Không chỉ A mà còn cả B, thường B vượt mức mong đợi.",
+          "reason": "Trong 「彼は遅刻したばかりか、謝りもしなかった。」, cụm 「ばかりか」 thể hiện mẫu ～ばかりか. Không chỉ A mà còn cả B, thường B vượt mức mong đợi. Vì thế câu có nghĩa: Anh ấy không chỉ đến trễ mà còn chẳng xin lỗi. Dạng nối cần nhớ: N／普通形 + ばかりか.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không lẫn với ～ばかり chỉ tần suất hoặc “toàn...”. Đồng thời, ～だけでなく trung tính; ～ばかりか thể hiện sự thêm vào đáng kể. Câu này cần cấu trúc ～ばかりか ở vị trí đã bỏ trống.",
+          "chunks": [
+            "彼は遅刻したばかりか、",
+            "謝りもしなかった。"
+          ]
+        }
+      ],
+      "sourceId": 99
+    },
+    {
+      "id": "n2-lg100",
+      "grammar": "～ばかりに",
+      "reading": "～ばかりに",
+      "meaning": "Chỉ vì... mà dẫn đến điều không hay",
+      "formation": "Vた／いA／なAな／Nである + ばかりに",
+      "priorityStars": 5,
+      "explanation": "～ばかりに biểu thị “chỉ vì... mà dẫn đến điều không hay”. Điểm quan trọng của mẫu này là: Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vた／いA／なAな／Nである + ばかりに. So với ～せいで, cần chú ý: ～せいで đổ nguyên nhân xấu; ～ばかりに nhấn mạnh điều đáng tiếc, chỉ vì một điểm. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vた／いA／なAな／Nである + ばかりに. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc. Nghĩa thực tế: Chỉ vì... mà dẫn đến điều không hay. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「一言余計なことを言ったばかりに、友達を怒らせた。」 — Chỉ vì nói thừa một câu mà tôi làm bạn nổi giận. Hãy nhận diện vị trí 「～ばかりに」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～せいで",
+          "text": "～せいで đổ nguyên nhân xấu; ～ばかりに nhấn mạnh điều đáng tiếc, chỉ vì một điểm."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vた／いA／なAな／Nである + ばかりに. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng cho kết quả tích cực đơn thuần."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng cho kết quả tích cực đơn thuần.",
+        "Nhầm ～ばかりに với ～せいで. ～せいで đổ nguyên nhân xấu; ～ばかりに nhấn mạnh điều đáng tiếc, chỉ vì một điểm.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vた／いA／なAな／Nである + ばかりに.",
+        "Chỉ nhớ nghĩa “Chỉ vì... mà dẫn đến điều không hay” mà bỏ qua sắc thái: Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～ばかりに."
+      ],
+      "discovery": {
+        "distractors": [
+          "Không phải cứ vì... mà...",
+          "Đúng là... nên quả nhiên...",
+          "Dù nói là... nhưng thực tế..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "一言余計なことを言ったばかりに、友達を怒らせた。",
+          "reading": "ひとことよけいなことをいったばかりに、ともだちをおこらせた。",
+          "translation": "Chỉ vì nói thừa một câu mà tôi làm bạn nổi giận.",
+          "blank": "一言余計なことを言った____、友達を怒らせた。",
+          "answer": "ばかりに",
+          "hint": "Chú ý nghĩa “Chỉ vì... mà dẫn đến điều không hay” và cách nối Vた／いA／なAな／Nである + ばかりに. Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc.",
+          "reason": "Trong 「一言余計なことを言ったばかりに、友達を怒らせた。」, cụm 「ばかりに」 thể hiện mẫu ～ばかりに. Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc. Vì thế câu có nghĩa: Chỉ vì nói thừa một câu mà tôi làm bạn nổi giận. Dạng nối cần nhớ: Vた／いA／なAな／Nである + ばかりに.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho kết quả tích cực đơn thuần. Đồng thời, ～せいで đổ nguyên nhân xấu; ～ばかりに nhấn mạnh điều đáng tiếc, chỉ vì một điểm. Câu này cần cấu trúc ～ばかりに ở vị trí đã bỏ trống.",
+          "chunks": [
+            "一言余計なことを言ったばかりに、",
+            "友達を怒らせた。"
+          ]
+        },
+        {
+          "sentence": "急いだばかりに、大事な書類を忘れた。",
+          "reading": "いそいだばかりに、だいじなしょるいをわすれた。",
+          "translation": "Chỉ vì vội vàng mà tôi quên giấy tờ quan trọng.",
+          "blank": "急いだ____、大事な書類を忘れた。",
+          "answer": "ばかりに",
+          "hint": "Chú ý nghĩa “Chỉ vì... mà dẫn đến điều không hay” và cách nối Vた／いA／なAな／Nである + ばかりに. Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc.",
+          "reason": "Trong 「急いだばかりに、大事な書類を忘れた。」, cụm 「ばかりに」 thể hiện mẫu ～ばかりに. Chỉ vì một nguyên nhân A mà gây ra hậu quả không mong muốn B; thường hối tiếc. Vì thế câu có nghĩa: Chỉ vì vội vàng mà tôi quên giấy tờ quan trọng. Dạng nối cần nhớ: Vた／いA／なAな／Nである + ばかりに.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho kết quả tích cực đơn thuần. Đồng thời, ～せいで đổ nguyên nhân xấu; ～ばかりに nhấn mạnh điều đáng tiếc, chỉ vì một điểm. Câu này cần cấu trúc ～ばかりに ở vị trí đã bỏ trống.",
+          "chunks": [
+            "急いだばかりに、",
+            "大事な書類を忘れた。"
+          ]
+        }
+      ],
+      "sourceId": 100
+    }
+  ]
+}
