@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n2-ch01-grammar",
+  "type": "grammar",
+  "title": "N2 · Kết quả, nghĩa vụ và xu hướng",
+  "items": [
+    {
+      "id": "n2-lg001",
+      "grammar": "～あげく（に）",
+      "reading": "～あげく（に）",
+      "meaning": "Sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn",
+      "formation": "Vた + あげく（に）／Nの + あげく（に）",
+      "priorityStars": 4,
+      "explanation": "～あげく（に） biểu thị “sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn”. Điểm quan trọng của mẫu này là: Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vた + あげく（に）／Nの + あげく（に）. So với ～末に, cần chú ý: ～末に có thể là kết quả tích cực hoặc tiêu cực; ～あげく thường gợi sự thất vọng. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vた + あげく（に）／Nの + あげく（に）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục. Nghĩa thực tế: Sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「長時間話し合ったあげく、結論は出なかった。」 — Sau khi bàn bạc rất lâu, cuối cùng vẫn không đưa ra được kết luận. Hãy nhận diện vị trí 「～あげく（に）」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～末に",
+          "text": "～末に có thể là kết quả tích cực hoặc tiêu cực; ～あげく thường gợi sự thất vọng."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vた + あげく（に）／Nの + あげく（に）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng cho hành động vừa xảy ra ngay lập tức hoặc kết quả đơn giản không có quá trình."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng cho hành động vừa xảy ra ngay lập tức hoặc kết quả đơn giản không có quá trình.",
+        "Nhầm ～あげく（に） với ～末に. ～末に có thể là kết quả tích cực hoặc tiêu cực; ～あげく thường gợi sự thất vọng.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vた + あげく（に）／Nの + あげく（に）.",
+        "Chỉ nhớ nghĩa “Sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn” mà bỏ qua sắc thái: Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～あげく（に）."
+      ],
+      "discovery": {
+        "distractors": [
+          "Một khi đã... thì...",
+          "Chính vì... nên càng...",
+          "Đúng như..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "長時間話し合ったあげく、結論は出なかった。",
+          "reading": "ちょうじかんはなしあったあげく、けつろんはでなかった。",
+          "translation": "Sau khi bàn bạc rất lâu, cuối cùng vẫn không đưa ra được kết luận.",
+          "blank": "長時間話し合った____、結論は出なかった。",
+          "answer": "あげく",
+          "hint": "Chú ý nghĩa “Sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn” và cách nối Vた + あげく（に）／Nの + あげく（に）. Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục.",
+          "reason": "Trong 「長時間話し合ったあげく、結論は出なかった。」, cụm 「あげく」 thể hiện mẫu ～あげく（に）. Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục. Vì thế câu có nghĩa: Sau khi bàn bạc rất lâu, cuối cùng vẫn không đưa ra được kết luận. Dạng nối cần nhớ: Vた + あげく（に）／Nの + あげく（に）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho hành động vừa xảy ra ngay lập tức hoặc kết quả đơn giản không có quá trình. Đồng thời, ～末に có thể là kết quả tích cực hoặc tiêu cực; ～あげく thường gợi sự thất vọng. Câu này cần cấu trúc ～あげく（に） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "長時間話し合ったあげく、",
+            "結論は出なかった。"
+          ]
+        },
+        {
+          "sentence": "いろいろ悩んだあげく、その計画をやめた。",
+          "reading": "いろいろなやんだあげく、そのけいかくをやめた。",
+          "translation": "Sau khi đắn đo đủ điều, cuối cùng tôi đã từ bỏ kế hoạch ấy.",
+          "blank": "いろいろ悩んだ____、その計画をやめた。",
+          "answer": "あげく",
+          "hint": "Chú ý nghĩa “Sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn” và cách nối Vた + あげく（に）／Nの + あげく（に）. Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục.",
+          "reason": "Trong 「いろいろ悩んだあげく、その計画をやめた。」, cụm 「あげく」 thể hiện mẫu ～あげく（に）. Nhiều lần cân nhắc, làm một việc trong thời gian dài rồi đi đến kết quả gây thất vọng; trọng tâm là quá trình dài và kết cục. Vì thế câu có nghĩa: Sau khi đắn đo đủ điều, cuối cùng tôi đã từ bỏ kế hoạch ấy. Dạng nối cần nhớ: Vた + あげく（に）／Nの + あげく（に）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho hành động vừa xảy ra ngay lập tức hoặc kết quả đơn giản không có quá trình. Đồng thời, ～末に có thể là kết quả tích cực hoặc tiêu cực; ～あげく thường gợi sự thất vọng. Câu này cần cấu trúc ～あげく（に） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "いろいろ悩んだあげく、",
+            "その計画をやめた。"
+          ]
+        }
+      ],
+      "sourceId": 1
+    },
+    {
+      "id": "n2-lg002",
+      "grammar": "～あまり",
+      "reading": "～あまり",
+      "meaning": "Vì quá... nên dẫn đến kết quả bất thường",
+      "formation": "Nの + あまり／Vる + あまり／なAな + あまり",
+      "priorityStars": 4,
+      "explanation": "～あまり biểu thị “vì quá... nên dẫn đến kết quả bất thường”. Điểm quan trọng của mẫu này là: Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Nの + あまり／Vる + あまり／なAな + あまり. So với ～すぎて, cần chú ý: ～すぎて nhấn mạnh mức độ quá nhiều nói chung; ～あまり hay dùng với cảm xúc hoặc tâm trạng. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Nの + あまり／Vる + あまり／なAな + あまり. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường. Nghĩa thực tế: Vì quá... nên dẫn đến kết quả bất thường. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「うれしさのあまり、涙が出た。」 — Vì quá vui nên tôi đã bật khóc. Hãy nhận diện vị trí 「～あまり」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～すぎて",
+          "text": "～すぎて nhấn mạnh mức độ quá nhiều nói chung; ～あまり hay dùng với cảm xúc hoặc tâm trạng."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Nの + あまり／Vる + あまり／なAな + あまり. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không hiểu あまり ở đây là “không... lắm” của あまり～ない."
+        }
+      ],
+      "commonMistakes": [
+        "Không hiểu あまり ở đây là “không... lắm” của あまり～ない.",
+        "Nhầm ～あまり với ～すぎて. ～すぎて nhấn mạnh mức độ quá nhiều nói chung; ～あまり hay dùng với cảm xúc hoặc tâm trạng.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Nの + あまり／Vる + あまり／なAな + あまり.",
+        "Chỉ nhớ nghĩa “Vì quá... nên dẫn đến kết quả bất thường” mà bỏ qua sắc thái: Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～あまり."
+      ],
+      "discovery": {
+        "distractors": [
+          "Kể từ... không còn...; chỉ có...",
+          "Ngay khi vừa... thì...",
+          "Nghe đâu, nghe nói..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "うれしさのあまり、涙が出た。",
+          "reading": "うれしさのあまり、なみだがでた。",
+          "translation": "Vì quá vui nên tôi đã bật khóc.",
+          "blank": "うれしさ____、涙が出た。",
+          "answer": "のあまり",
+          "hint": "Chú ý nghĩa “Vì quá... nên dẫn đến kết quả bất thường” và cách nối Nの + あまり／Vる + あまり／なAな + あまり. Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường.",
+          "reason": "Trong 「うれしさのあまり、涙が出た。」, cụm 「のあまり」 thể hiện mẫu ～あまり. Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường. Vì thế câu có nghĩa: Vì quá vui nên tôi đã bật khóc. Dạng nối cần nhớ: Nの + あまり／Vる + あまり／なAな + あまり.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không hiểu あまり ở đây là “không... lắm” của あまり～ない. Đồng thời, ～すぎて nhấn mạnh mức độ quá nhiều nói chung; ～あまり hay dùng với cảm xúc hoặc tâm trạng. Câu này cần cấu trúc ～あまり ở vị trí đã bỏ trống.",
+          "chunks": [
+            "うれしさのあまり、",
+            "涙が出た。"
+          ]
+        },
+        {
+          "sentence": "緊張のあまり、名前を忘れてしまった。",
+          "reading": "きんちょうのあまり、なまえをわすれてしまった。",
+          "translation": "Vì quá căng thẳng, tôi đã quên mất tên.",
+          "blank": "緊張____、名前を忘れてしまった。",
+          "answer": "のあまり",
+          "hint": "Chú ý nghĩa “Vì quá... nên dẫn đến kết quả bất thường” và cách nối Nの + あまり／Vる + あまり／なAな + あまり. Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường.",
+          "reason": "Trong 「緊張のあまり、名前を忘れてしまった。」, cụm 「のあまり」 thể hiện mẫu ～あまり. Một trạng thái hay cảm xúc mạnh tới mức dẫn tới phản ứng vượt khỏi bình thường. Vì thế câu có nghĩa: Vì quá căng thẳng, tôi đã quên mất tên. Dạng nối cần nhớ: Nの + あまり／Vる + あまり／なAな + あまり.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không hiểu あまり ở đây là “không... lắm” của あまり～ない. Đồng thời, ～すぎて nhấn mạnh mức độ quá nhiều nói chung; ～あまり hay dùng với cảm xúc hoặc tâm trạng. Câu này cần cấu trúc ～あまり ở vị trí đã bỏ trống.",
+          "chunks": [
+            "緊張のあまり、",
+            "名前を忘れてしまった。"
+          ]
+        }
+      ],
+      "sourceId": 2
+    },
+    {
+      "id": "n2-lg003",
+      "grammar": "～以上（は）",
+      "reading": "～いじょう（は）",
+      "meaning": "Một khi đã... thì phải / đương nhiên",
+      "formation": "V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）",
+      "priorityStars": 5,
+      "explanation": "～以上（は） biểu thị “một khi đã... thì phải / đương nhiên”. Điểm quan trọng của mẫu này là: Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）. So với ～からには, cần chú ý: ～からには gần nghĩa; ～以上は có giọng lập luận khách quan và trang trọng hơn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau. Nghĩa thực tế: Một khi đã... thì phải / đương nhiên. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「約束した以上、最後まで責任を持つべきだ。」 — Một khi đã hứa thì nên có trách nhiệm đến cùng. Hãy nhận diện vị trí 「～以上（は）」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～からには",
+          "text": "～からには gần nghĩa; ～以上は có giọng lập luận khách quan và trang trọng hơn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng 以上 như lượng “trở lên” khi mẫu đi với mệnh đề."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng 以上 như lượng “trở lên” khi mẫu đi với mệnh đề.",
+        "Nhầm ～以上（は） với ～からには. ～からには gần nghĩa; ～以上は có giọng lập luận khách quan và trang trọng hơn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）.",
+        "Chỉ nhớ nghĩa “Một khi đã... thì phải / đương nhiên” mà bỏ qua sắc thái: Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～以上（は）."
+      ],
+      "discovery": {
+        "distractors": [
+          "Dù... vậy mà... (chê trách)",
+          "Mỗi lần... lại...",
+          "Không những không... mà ngược lại..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "約束した以上、最後まで責任を持つべきだ。",
+          "reading": "やくそくしたいじょう、さいごまでせきにんをもつべきだ。",
+          "translation": "Một khi đã hứa thì nên có trách nhiệm đến cùng.",
+          "blank": "約束した____、最後まで責任を持つべきだ。",
+          "answer": "以上",
+          "hint": "Chú ý nghĩa “Một khi đã... thì phải / đương nhiên” và cách nối V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）. Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau.",
+          "reason": "Trong 「約束した以上、最後まで責任を持つべきだ。」, cụm 「以上」 thể hiện mẫu ～以上（は）. Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau. Vì thế câu có nghĩa: Một khi đã hứa thì nên có trách nhiệm đến cùng. Dạng nối cần nhớ: V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng 以上 như lượng “trở lên” khi mẫu đi với mệnh đề. Đồng thời, ～からには gần nghĩa; ～以上は có giọng lập luận khách quan và trang trọng hơn. Câu này cần cấu trúc ～以上（は） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "約束した以上、",
+            "最後まで責任を持つべきだ。"
+          ]
+        },
+        {
+          "sentence": "代表になった以上、責任を果たすつもりだ。",
+          "reading": "だいひょうになったいじょう、せきにんをはたすつもりだ。",
+          "translation": "Một khi đã làm đại diện, tôi định hoàn thành trách nhiệm.",
+          "blank": "代表になった____、責任を果たすつもりだ。",
+          "answer": "以上",
+          "hint": "Chú ý nghĩa “Một khi đã... thì phải / đương nhiên” và cách nối V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）. Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau.",
+          "reason": "Trong 「代表になった以上、責任を果たすつもりだ。」, cụm 「以上」 thể hiện mẫu ～以上（は）. Sự thật ở vế trước tạo trách nhiệm, quyết tâm hoặc kết luận đương nhiên ở vế sau. Vì thế câu có nghĩa: Một khi đã làm đại diện, tôi định hoàn thành trách nhiệm. Dạng nối cần nhớ: V普通形 + 以上（は）／Nである + 以上（は）／なAである + 以上（は）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng 以上 như lượng “trở lên” khi mẫu đi với mệnh đề. Đồng thời, ～からには gần nghĩa; ～以上は có giọng lập luận khách quan và trang trọng hơn. Câu này cần cấu trúc ～以上（は） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "代表になった以上、",
+            "責任を果たすつもりだ。"
+          ]
+        }
+      ],
+      "sourceId": 3
+    },
+    {
+      "id": "n2-lg004",
+      "grammar": "～一方（で）",
+      "reading": "～いっぽう（で）",
+      "meaning": "Một mặt... mặt khác...",
+      "formation": "V普通形／いA／なAな・である／Nである + 一方（で）",
+      "priorityStars": 4,
+      "explanation": "～一方（で） biểu thị “một mặt... mặt khác...”. Điểm quan trọng của mẫu này là: Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V普通形／いA／なAな・である／Nである + 一方（で）. So với ～反面, cần chú ý: ～反面 thiên về hai mặt trái ngược; ～一方で còn dùng cho hai sự việc đồng thời. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V普通形／いA／なAな・である／Nである + 一方（で）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề. Nghĩa thực tế: Một mặt... mặt khác.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「この仕事は大変な一方で、やりがいもある。」 — Công việc này tuy vất vả nhưng mặt khác cũng rất đáng làm. Hãy nhận diện vị trí 「～一方（で）」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～反面",
+          "text": "～反面 thiên về hai mặt trái ngược; ～一方で còn dùng cho hai sự việc đồng thời."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V普通形／いA／なAな・である／Nである + 一方（で）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nhầm 一方で (hai mặt) với 一方だ (xu hướng tiếp diễn)."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm 一方で (hai mặt) với 一方だ (xu hướng tiếp diễn).",
+        "Nhầm ～一方（で） với ～反面. ～反面 thiên về hai mặt trái ngược; ～一方で còn dùng cho hai sự việc đồng thời.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V普通形／いA／なAな・である／Nである + 一方（で）.",
+        "Chỉ nhớ nghĩa “Một mặt... mặt khác...” mà bỏ qua sắc thái: Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～一方（で）."
+      ],
+      "discovery": {
+        "distractors": [
+          "Thà... còn hơn...",
+          "Đầy, toàn những thứ không mong muốn",
+          "Không phải lúc để..., không còn tâm trí..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "この仕事は大変な一方で、やりがいもある。",
+          "reading": "このしごとはたいへんないっぽうで、やりがいもある。",
+          "translation": "Công việc này tuy vất vả nhưng mặt khác cũng rất đáng làm.",
+          "blank": "この仕事は大変な____、やりがいもある。",
+          "answer": "一方で",
+          "hint": "Chú ý nghĩa “Một mặt... mặt khác...” và cách nối V普通形／いA／なAな・である／Nである + 一方（で）. Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề.",
+          "reason": "Trong 「この仕事は大変な一方で、やりがいもある。」, cụm 「一方で」 thể hiện mẫu ～一方（で）. Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề. Vì thế câu có nghĩa: Công việc này tuy vất vả nhưng mặt khác cũng rất đáng làm. Dạng nối cần nhớ: V普通形／いA／なAな・である／Nである + 一方（で）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm 一方で (hai mặt) với 一方だ (xu hướng tiếp diễn). Đồng thời, ～反面 thiên về hai mặt trái ngược; ～一方で còn dùng cho hai sự việc đồng thời. Câu này cần cấu trúc ～一方（で） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "この仕事は大変な一方で、",
+            "やりがいもある。"
+          ]
+        },
+        {
+          "sentence": "都会は便利な一方で、生活費が高い。",
+          "reading": "とかいはべんりないっぽうで、せいかつひがたかい。",
+          "translation": "Thành phố tiện lợi nhưng mặt khác chi phí sinh hoạt cao.",
+          "blank": "都会は便利な____、生活費が高い。",
+          "answer": "一方で",
+          "hint": "Chú ý nghĩa “Một mặt... mặt khác...” và cách nối V普通形／いA／なAな・である／Nである + 一方（で）. Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề.",
+          "reason": "Trong 「都会は便利な一方で、生活費が高い。」, cụm 「一方で」 thể hiện mẫu ～一方（で）. Đặt hai mặt tương phản hoặc hai khía cạnh đồng thời của cùng vấn đề. Vì thế câu có nghĩa: Thành phố tiện lợi nhưng mặt khác chi phí sinh hoạt cao. Dạng nối cần nhớ: V普通形／いA／なAな・である／Nである + 一方（で）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm 一方で (hai mặt) với 一方だ (xu hướng tiếp diễn). Đồng thời, ～反面 thiên về hai mặt trái ngược; ～一方で còn dùng cho hai sự việc đồng thời. Câu này cần cấu trúc ～一方（で） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "都会は便利な一方で、",
+            "生活費が高い。"
+          ]
+        }
+      ],
+      "sourceId": 4
+    },
+    {
+      "id": "n2-lg005",
+      "grammar": "～一方だ",
+      "reading": "～いっぽうだ",
+      "meaning": "Càng ngày càng... theo một chiều hướng",
+      "formation": "V辞書形 + 一方だ",
+      "priorityStars": 4,
+      "explanation": "～一方だ biểu thị “càng ngày càng... theo một chiều hướng”. Điểm quan trọng của mẫu này là: Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形 + 一方だ. So với ～つつある, cần chú ý: ～つつある chỉ quá trình đang tiến triển; ～一方だ nhấn mạnh xu thế một chiều. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形 + 一方だ. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều. Nghĩa thực tế: Càng ngày càng... theo một chiều hướng. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「物価は上がる一方だ。」 — Giá cả cứ tiếp tục tăng mãi. Hãy nhận diện vị trí 「～一方だ」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～つつある",
+          "text": "～つつある chỉ quá trình đang tiến triển; ～一方だ nhấn mạnh xu thế một chiều."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形 + 一方だ. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nối trực tiếp tính từ hoặc dùng cho sự kiện chỉ xảy ra một lần."
+        }
+      ],
+      "commonMistakes": [
+        "Không nối trực tiếp tính từ hoặc dùng cho sự kiện chỉ xảy ra một lần.",
+        "Nhầm ～一方だ với ～つつある. ～つつある chỉ quá trình đang tiến triển; ～一方だ nhấn mạnh xu thế một chiều.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形 + 一方だ.",
+        "Chỉ nhớ nghĩa “Càng ngày càng... theo một chiều hướng” mà bỏ qua sắc thái: Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～一方だ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Có vẻ, trông có vẻ...",
+          "Tiện thể làm...",
+          "Suýt nữa thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "物価は上がる一方だ。",
+          "reading": "ぶっかはあがるいっぽうだ。",
+          "translation": "Giá cả cứ tiếp tục tăng mãi.",
+          "blank": "物価は上がる____。",
+          "answer": "一方だ",
+          "hint": "Chú ý nghĩa “Càng ngày càng... theo một chiều hướng” và cách nối V辞書形 + 一方だ. Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều.",
+          "reason": "Trong 「物価は上がる一方だ。」, cụm 「一方だ」 thể hiện mẫu ～一方だ. Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều. Vì thế câu có nghĩa: Giá cả cứ tiếp tục tăng mãi. Dạng nối cần nhớ: V辞書形 + 一方だ.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nối trực tiếp tính từ hoặc dùng cho sự kiện chỉ xảy ra một lần. Đồng thời, ～つつある chỉ quá trình đang tiến triển; ～一方だ nhấn mạnh xu thế một chiều. Câu này cần cấu trúc ～一方だ ở vị trí đã bỏ trống.",
+          "chunks": [
+            "物価は上がる一方だ。"
+          ]
+        },
+        {
+          "sentence": "利用者は減る一方だ。",
+          "reading": "りようしゃはへるいっぽうだ。",
+          "translation": "Số người sử dụng cứ tiếp tục giảm.",
+          "blank": "利用者は減る____。",
+          "answer": "一方だ",
+          "hint": "Chú ý nghĩa “Càng ngày càng... theo một chiều hướng” và cách nối V辞書形 + 一方だ. Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều.",
+          "reason": "Trong 「利用者は減る一方だ。」, cụm 「一方だ」 thể hiện mẫu ～一方だ. Một thay đổi liên tục diễn tiến theo một hướng, không có dấu hiệu đảo chiều. Vì thế câu có nghĩa: Số người sử dụng cứ tiếp tục giảm. Dạng nối cần nhớ: V辞書形 + 一方だ.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nối trực tiếp tính từ hoặc dùng cho sự kiện chỉ xảy ra một lần. Đồng thời, ～つつある chỉ quá trình đang tiến triển; ～一方だ nhấn mạnh xu thế một chiều. Câu này cần cấu trúc ～一方だ ở vị trí đã bỏ trống.",
+          "chunks": [
+            "利用者は減る一方だ。"
+          ]
+        }
+      ],
+      "sourceId": 5
+    },
+    {
+      "id": "n2-lg006",
+      "grammar": "～上（に）",
+      "reading": "～うえ（に）",
+      "meaning": "Không những... mà còn...",
+      "formation": "V普通形／いA／なAな／Nである + 上（に）",
+      "priorityStars": 3,
+      "explanation": "～上（に） biểu thị “không những... mà còn...”. Điểm quan trọng của mẫu này là: Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V普通形／いA／なAな／Nである + 上（に）. So với ～だけでなく, cần chú ý: ～だけでなく khá trung tính; ～上に nhấn mạnh đánh giá cộng dồn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V普通形／いA／なAな／Nである + 上（に）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực. Nghĩa thực tế: Không những... mà còn.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「この店は安い上に、料理もおいしい。」 — Quán này không những rẻ mà món ăn còn ngon. Hãy nhận diện vị trí 「～上（に）」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～だけでなく",
+          "text": "～だけでなく khá trung tính; ～上に nhấn mạnh đánh giá cộng dồn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V普通形／いA／なAな／Nである + 上（に）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không ghép hai nhận xét hoàn toàn đối lập mà không có quan hệ bổ sung."
+        }
+      ],
+      "commonMistakes": [
+        "Không ghép hai nhận xét hoàn toàn đối lập mà không có quan hệ bổ sung.",
+        "Nhầm ～上（に） với ～だけでなく. ～だけでなく khá trung tính; ～上に nhấn mạnh đánh giá cộng dồn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V普通形／いA／なAな／Nである + 上（に）.",
+        "Chỉ nhớ nghĩa “Không những... mà còn...” mà bỏ qua sắc thái: Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～上（に）."
+      ],
+      "discovery": {
+        "distractors": [
+          "Biết bao nhiêu... (cảm thán)",
+          "Chắc chắn không thể... (khẩu ngữ)",
+          "Cho dù... thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "この店は安い上に、料理もおいしい。",
+          "reading": "このみせはやすいうえに、りょうりもおいしい。",
+          "translation": "Quán này không những rẻ mà món ăn còn ngon.",
+          "blank": "この店は安い____、料理もおいしい。",
+          "answer": "上に",
+          "hint": "Chú ý nghĩa “Không những... mà còn...” và cách nối V普通形／いA／なAな／Nである + 上（に）. Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực.",
+          "reason": "Trong 「この店は安い上に、料理もおいしい。」, cụm 「上に」 thể hiện mẫu ～上（に）. Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực. Vì thế câu có nghĩa: Quán này không những rẻ mà món ăn còn ngon. Dạng nối cần nhớ: V普通形／いA／なAな／Nである + 上（に）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không ghép hai nhận xét hoàn toàn đối lập mà không có quan hệ bổ sung. Đồng thời, ～だけでなく khá trung tính; ～上に nhấn mạnh đánh giá cộng dồn. Câu này cần cấu trúc ～上（に） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "この店は安い上に、",
+            "料理もおいしい。"
+          ]
+        },
+        {
+          "sentence": "彼女は親切な上に、仕事も速い。",
+          "reading": "かのじょはしんせつなうえに、しごともはやい。",
+          "translation": "Cô ấy không chỉ tốt bụng mà còn làm việc nhanh.",
+          "blank": "彼女は親切な____、仕事も速い。",
+          "answer": "上に",
+          "hint": "Chú ý nghĩa “Không những... mà còn...” và cách nối V普通形／いA／なAな／Nである + 上（に）. Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực.",
+          "reason": "Trong 「彼女は親切な上に、仕事も速い。」, cụm 「上に」 thể hiện mẫu ～上（に）. Thông tin phía sau được thêm vào để củng cố đánh giá đã nói trước; hai đặc điểm thường cùng chiều tích cực hoặc tiêu cực. Vì thế câu có nghĩa: Cô ấy không chỉ tốt bụng mà còn làm việc nhanh. Dạng nối cần nhớ: V普通形／いA／なAな／Nである + 上（に）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không ghép hai nhận xét hoàn toàn đối lập mà không có quan hệ bổ sung. Đồng thời, ～だけでなく khá trung tính; ～上に nhấn mạnh đánh giá cộng dồn. Câu này cần cấu trúc ～上（に） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "彼女は親切な上に、",
+            "仕事も速い。"
+          ]
+        }
+      ],
+      "sourceId": 6
+    },
+    {
+      "id": "n2-lg007",
+      "grammar": "～上で（は）",
+      "reading": "～うえで（は）",
+      "meaning": "Trong việc... / khi tiến hành...",
+      "formation": "V辞書形／Nの + 上で（は）",
+      "priorityStars": 4,
+      "explanation": "～上で（は） biểu thị “trong việc... / khi tiến hành...”. Điểm quan trọng của mẫu này là: Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／Nの + 上で（は）. So với ～た上で, cần chú ý: Vた + 上で = sau khi làm rồi; Vる + 上で = khi/trong quá trình làm. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／Nの + 上で（は）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng. Nghĩa thực tế: Trong việc... / khi tiến hành.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「日本で働く上で、日本語の力は重要だ。」 — Khi làm việc ở Nhật, năng lực tiếng Nhật rất quan trọng. Hãy nhận diện vị trí 「～上で（は）」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～た上で",
+          "text": "Vた + 上で = sau khi làm rồi; Vる + 上で = khi/trong quá trình làm."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／Nの + 上で（は）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nhầm “làm rồi mới” với “khi làm” vì khác dạng chia."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm “làm rồi mới” với “khi làm” vì khác dạng chia.",
+        "Nhầm ～上で（は） với ～た上で. Vた + 上で = sau khi làm rồi; Vる + 上で = khi/trong quá trình làm.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／Nの + 上で（は）.",
+        "Chỉ nhớ nghĩa “Trong việc... / khi tiến hành...” mà bỏ qua sắc thái: Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～上で（は）."
+      ],
+      "discovery": {
+        "distractors": [
+          "Do..., từ việc... mà...",
+          "Vừa... vừa... (văn viết)",
+          "Cùng với...; đồng thời..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "日本で働く上で、日本語の力は重要だ。",
+          "reading": "にほんではたらくうえで、にほんごのちからはじゅうようだ。",
+          "translation": "Khi làm việc ở Nhật, năng lực tiếng Nhật rất quan trọng.",
+          "blank": "日本で働く____、日本語の力は重要だ。",
+          "answer": "上で",
+          "hint": "Chú ý nghĩa “Trong việc... / khi tiến hành...” và cách nối V辞書形／Nの + 上で（は）. Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng.",
+          "reason": "Trong 「日本で働く上で、日本語の力は重要だ。」, cụm 「上で」 thể hiện mẫu ～上で（は）. Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng. Vì thế câu có nghĩa: Khi làm việc ở Nhật, năng lực tiếng Nhật rất quan trọng. Dạng nối cần nhớ: V辞書形／Nの + 上で（は）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm “làm rồi mới” với “khi làm” vì khác dạng chia. Đồng thời, Vた + 上で = sau khi làm rồi; Vる + 上で = khi/trong quá trình làm. Câu này cần cấu trúc ～上で（は） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "日本で働く上で、",
+            "日本語の力は重要だ。"
+          ]
+        },
+        {
+          "sentence": "安全に作業する上で、確認が欠かせない。",
+          "reading": "あんぜんにさぎょうするうえで、かくにんがかかせない。",
+          "translation": "Để làm việc an toàn, việc kiểm tra là không thể thiếu.",
+          "blank": "安全に作業する____、確認が欠かせない。",
+          "answer": "上で",
+          "hint": "Chú ý nghĩa “Trong việc... / khi tiến hành...” và cách nối V辞書形／Nの + 上で（は）. Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng.",
+          "reason": "Trong 「安全に作業する上で、確認が欠かせない。」, cụm 「上で」 thể hiện mẫu ～上で（は）. Xét trong việc thực hiện một công việc hoặc trên phương diện nào đó, điều sau rất quan trọng. Vì thế câu có nghĩa: Để làm việc an toàn, việc kiểm tra là không thể thiếu. Dạng nối cần nhớ: V辞書形／Nの + 上で（は）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm “làm rồi mới” với “khi làm” vì khác dạng chia. Đồng thời, Vた + 上で = sau khi làm rồi; Vる + 上で = khi/trong quá trình làm. Câu này cần cấu trúc ～上で（は） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "安全に作業する上で、",
+            "確認が欠かせない。"
+          ]
+        }
+      ],
+      "sourceId": 7
+    },
+    {
+      "id": "n2-lg008",
+      "grammar": "～上は",
+      "reading": "～うえは",
+      "meaning": "Một khi đã... thì phải...",
+      "formation": "V辞書形／Vた + 上は",
+      "priorityStars": 4,
+      "explanation": "～上は biểu thị “một khi đã... thì phải...”. Điểm quan trọng của mẫu này là: Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／Vた + 上は. So với ～以上は, cần chú ý: ～以上（は） và ～からには gần nghĩa; ～上は trang trọng, mang quyết tâm mạnh. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／Vた + 上は. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng. Nghĩa thực tế: Một khi đã... thì phải.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「引き受けた上は、必ず完成させます。」 — Một khi đã nhận làm thì nhất định tôi sẽ hoàn thành. Hãy nhận diện vị trí 「～上は」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～以上は",
+          "text": "～以上（は） và ～からには gần nghĩa; ～上は trang trọng, mang quyết tâm mạnh."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／Vた + 上は. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng với dự định quá nhẹ mà không tạo nghĩa vụ hoặc quyết tâm."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng với dự định quá nhẹ mà không tạo nghĩa vụ hoặc quyết tâm.",
+        "Nhầm ～上は với ～以上は. ～以上（は） và ～からには gần nghĩa; ～上は trang trọng, mang quyết tâm mạnh.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／Vた + 上は.",
+        "Chỉ nhớ nghĩa “Một khi đã... thì phải...” mà bỏ qua sắc thái: Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～上は."
+      ],
+      "discovery": {
+        "distractors": [
+          "Vì là người có đặc điểm... nên chắc...",
+          "Đang dần... (quá trình biến đổi)",
+          "Không nhất thiết, không phải lúc nào cũng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "引き受けた上は、必ず完成させます。",
+          "reading": "ひきうけたうえは、かならずかんせいさせます。",
+          "translation": "Một khi đã nhận làm thì nhất định tôi sẽ hoàn thành.",
+          "blank": "引き受けた____、必ず完成させます。",
+          "answer": "上は",
+          "hint": "Chú ý nghĩa “Một khi đã... thì phải...” và cách nối V辞書形／Vた + 上は. Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng.",
+          "reason": "Trong 「引き受けた上は、必ず完成させます。」, cụm 「上は」 thể hiện mẫu ～上は. Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng. Vì thế câu có nghĩa: Một khi đã nhận làm thì nhất định tôi sẽ hoàn thành. Dạng nối cần nhớ: V辞書形／Vた + 上は.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng với dự định quá nhẹ mà không tạo nghĩa vụ hoặc quyết tâm. Đồng thời, ～以上（は） và ～からには gần nghĩa; ～上は trang trọng, mang quyết tâm mạnh. Câu này cần cấu trúc ～上は ở vị trí đã bỏ trống.",
+          "chunks": [
+            "引き受けた上は、",
+            "必ず完成させます。"
+          ]
+        },
+        {
+          "sentence": "始めた上は、最後までやり抜こう。",
+          "reading": "はじめたうえは、さいごまでやりぬこう。",
+          "translation": "Một khi đã bắt đầu thì hãy làm đến cùng.",
+          "blank": "始めた____、最後までやり抜こう。",
+          "answer": "上は",
+          "hint": "Chú ý nghĩa “Một khi đã... thì phải...” và cách nối V辞書形／Vた + 上は. Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng.",
+          "reason": "Trong 「始めた上は、最後までやり抜こう。」, cụm 「上は」 thể hiện mẫu ～上は. Một khi đã lựa chọn hoặc bước vào hoàn cảnh đó thì phải thực hiện trách nhiệm tương ứng. Vì thế câu có nghĩa: Một khi đã bắt đầu thì hãy làm đến cùng. Dạng nối cần nhớ: V辞書形／Vた + 上は.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng với dự định quá nhẹ mà không tạo nghĩa vụ hoặc quyết tâm. Đồng thời, ～以上（は） và ～からには gần nghĩa; ～上は trang trọng, mang quyết tâm mạnh. Câu này cần cấu trúc ～上は ở vị trí đã bỏ trống.",
+          "chunks": [
+            "始めた上は、",
+            "最後までやり抜こう。"
+          ]
+        }
+      ],
+      "sourceId": 8
+    },
+    {
+      "id": "n2-lg009",
+      "grammar": "～得る / ～得ない",
+      "reading": "～える / ～えない",
+      "meaning": "Có thể xảy ra / không thể xảy ra",
+      "formation": "Vます形 bỏ ます + 得る（える／うる）・得ない（えない）",
+      "priorityStars": 5,
+      "explanation": "～得る / ～得ない biểu thị “có thể xảy ra / không thể xảy ra”. Điểm quan trọng của mẫu này là: Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vます形 bỏ ます + 得る（える／うる）・得ない（えない）. So với ～ことができる, cần chú ý: ～ことができる nói về khả năng thực hiện; ～得る chỉ khả năng xảy ra. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vます形 bỏ ます + 得る（える／うる）・得ない（えない）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân. Nghĩa thực tế: Có thể xảy ra / không thể xảy ra. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「このような事故は誰にでも起こり得る。」 — Tai nạn như thế này có thể xảy ra với bất kỳ ai. Hãy nhận diện vị trí 「～得る / ～得ない」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～ことができる",
+          "text": "～ことができる nói về khả năng thực hiện; ～得る chỉ khả năng xảy ra."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vます形 bỏ ます + 得る（える／うる）・得ない（えない）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không đọc 得ない là うない; dạng phủ định là えない."
+        }
+      ],
+      "commonMistakes": [
+        "Không đọc 得ない là うない; dạng phủ định là えない.",
+        "Nhầm ～得る / ～得ない với ～ことができる. ～ことができる nói về khả năng thực hiện; ～得る chỉ khả năng xảy ra.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vます形 bỏ ます + 得る（える／うる）・得ない（えない）.",
+        "Chỉ nhớ nghĩa “Có thể xảy ra / không thể xảy ra” mà bỏ qua sắc thái: Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～得る / ～得ない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Không làm... mà vẫn...",
+          "Có vẻ... / dễ có tính...",
+          "Nếu không... thì không thể..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "このような事故は誰にでも起こり得る。",
+          "reading": "このようなじこはだれにでもおこりうる。",
+          "translation": "Tai nạn như thế này có thể xảy ra với bất kỳ ai.",
+          "blank": "このような事故は誰にでも起こり____。",
+          "answer": "得る",
+          "hint": "Chú ý nghĩa “Có thể xảy ra / không thể xảy ra” và cách nối Vます形 bỏ ます + 得る（える／うる）・得ない（えない）. Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân.",
+          "reason": "Trong 「このような事故は誰にでも起こり得る。」, cụm 「得る」 thể hiện mẫu ～得る / ～得ない. Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân. Vì thế câu có nghĩa: Tai nạn như thế này có thể xảy ra với bất kỳ ai. Dạng nối cần nhớ: Vます形 bỏ ます + 得る（える／うる）・得ない（えない）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không đọc 得ない là うない; dạng phủ định là えない. Đồng thời, ～ことができる nói về khả năng thực hiện; ～得る chỉ khả năng xảy ra. Câu này cần cấu trúc ～得る / ～得ない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "このような事故は誰にでも起こり得る。"
+          ]
+        },
+        {
+          "sentence": "予想外の問題が起こり得る。",
+          "reading": "よそうがいのもんだいがおこりうる。",
+          "translation": "Có thể phát sinh vấn đề ngoài dự kiến.",
+          "blank": "予想外の問題が起こり____。",
+          "answer": "得る",
+          "hint": "Chú ý nghĩa “Có thể xảy ra / không thể xảy ra” và cách nối Vます形 bỏ ます + 得る（える／うる）・得ない（えない）. Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân.",
+          "reason": "Trong 「予想外の問題が起こり得る。」, cụm 「得る」 thể hiện mẫu ～得る / ～得ない. Khả năng về mặt lý thuyết, logic hoặc tình huống; không biểu thị trực tiếp kỹ năng cá nhân. Vì thế câu có nghĩa: Có thể phát sinh vấn đề ngoài dự kiến. Dạng nối cần nhớ: Vます形 bỏ ます + 得る（える／うる）・得ない（えない）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không đọc 得ない là うない; dạng phủ định là えない. Đồng thời, ～ことができる nói về khả năng thực hiện; ～得る chỉ khả năng xảy ra. Câu này cần cấu trúc ～得る / ～得ない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "予想外の問題が起こり得る。"
+          ]
+        }
+      ],
+      "sourceId": 9
+    },
+    {
+      "id": "n2-lg010",
+      "grammar": "～おそれがある",
+      "reading": "～おそれがある",
+      "meaning": "Có nguy cơ xảy ra điều không tốt",
+      "formation": "V辞書形 + おそれがある／Nの + おそれがある",
+      "priorityStars": 5,
+      "explanation": "～おそれがある biểu thị “có nguy cơ xảy ra điều không tốt”. Điểm quan trọng của mẫu này là: Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形 + おそれがある／Nの + おそれがある. So với ～かねない, cần chú ý: ～かねない cũng cảnh báo nguy cơ; おそれがある trang trọng và khách quan hơn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形 + おそれがある／Nの + おそれがある. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo. Nghĩa thực tế: Có nguy cơ xảy ra điều không tốt. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「大雨で川があふれるおそれがある。」 — Có nguy cơ nước sông tràn bờ do mưa lớn. Hãy nhận diện vị trí 「～おそれがある」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～かねない",
+          "text": "～かねない cũng cảnh báo nguy cơ; おそれがある trang trọng và khách quan hơn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形 + おそれがある／Nの + おそれがある. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng cho khả năng đáng mừng trong văn cảnh trung tính."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng cho khả năng đáng mừng trong văn cảnh trung tính.",
+        "Nhầm ～おそれがある với ～かねない. ～かねない cũng cảnh báo nguy cơ; おそれがある trang trọng và khách quan hơn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形 + おそれがある／Nの + おそれがある.",
+        "Chỉ nhớ nghĩa “Có nguy cơ xảy ra điều không tốt” mà bỏ qua sắc thái: Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～おそれがある."
+      ],
+      "discovery": {
+        "distractors": [
+          "Điều... là... (nêu cảm xúc)",
+          "Kể từ khi... đến nay",
+          "Mặc dù... nhưng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "大雨で川があふれるおそれがある。",
+          "reading": "おおあめでかわがあふれるおそれがある。",
+          "translation": "Có nguy cơ nước sông tràn bờ do mưa lớn.",
+          "blank": "大雨で川があふれる____。",
+          "answer": "おそれがある",
+          "hint": "Chú ý nghĩa “Có nguy cơ xảy ra điều không tốt” và cách nối V辞書形 + おそれがある／Nの + おそれがある. Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo.",
+          "reason": "Trong 「大雨で川があふれるおそれがある。」, cụm 「おそれがある」 thể hiện mẫu ～おそれがある. Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo. Vì thế câu có nghĩa: Có nguy cơ nước sông tràn bờ do mưa lớn. Dạng nối cần nhớ: V辞書形 + おそれがある／Nの + おそれがある.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho khả năng đáng mừng trong văn cảnh trung tính. Đồng thời, ～かねない cũng cảnh báo nguy cơ; おそれがある trang trọng và khách quan hơn. Câu này cần cấu trúc ～おそれがある ở vị trí đã bỏ trống.",
+          "chunks": [
+            "大雨で川があふれるおそれがある。"
+          ]
+        },
+        {
+          "sentence": "強い風で電車が止まるおそれがある。",
+          "reading": "つよいかぜででんしゃがとまるおそれがある。",
+          "translation": "Gió mạnh có thể khiến tàu ngừng chạy.",
+          "blank": "強い風で電車が止まる____。",
+          "answer": "おそれがある",
+          "hint": "Chú ý nghĩa “Có nguy cơ xảy ra điều không tốt” và cách nối V辞書形 + おそれがある／Nの + おそれがある. Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo.",
+          "reason": "Trong 「強い風で電車が止まるおそれがある。」, cụm 「おそれがある」 thể hiện mẫu ～おそれがある. Cảnh báo khả năng xuất hiện một hậu quả bất lợi, đặc biệt trong tin tức và thông báo. Vì thế câu có nghĩa: Gió mạnh có thể khiến tàu ngừng chạy. Dạng nối cần nhớ: V辞書形 + おそれがある／Nの + おそれがある.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho khả năng đáng mừng trong văn cảnh trung tính. Đồng thời, ～かねない cũng cảnh báo nguy cơ; おそれがある trang trọng và khách quan hơn. Câu này cần cấu trúc ～おそれがある ở vị trí đã bỏ trống.",
+          "chunks": [
+            "強い風で電車が止まるおそれがある。"
+          ]
+        }
+      ],
+      "sourceId": 10
+    }
+  ]
+}
