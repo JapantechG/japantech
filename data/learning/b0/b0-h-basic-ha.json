@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-basic-ha",
+  "type": "kana",
+  "title": "Hàng H · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-h-basic-ha-01",
+      "character": "は",
+      "reading": "ha",
+      "meaning": "Âm ha",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng H",
+      "explanation": "Hiragana は được đọc là “ha” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn は, phát âm ha mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu はな từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm hi",
+          "Âm fu",
+          "Âm he"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "はな",
+          "reading": "ha · na",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "は",
+            "な"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là はな.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "は",
+          "blank": "____な"
+        }
+      ],
+      "sampleWord": "はな",
+      "sampleReading": "ha · na",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-basic-ha-02",
+      "character": "ひ",
+      "reading": "hi",
+      "meaning": "Âm hi",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng H",
+      "explanation": "Hiragana ひ được đọc là “hi” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ひ, phát âm hi mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ひと từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ha",
+          "Âm fu",
+          "Âm he"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ひと",
+          "reading": "hi · to",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ひ",
+            "と"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ひと.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ひ",
+          "blank": "____と"
+        }
+      ],
+      "sampleWord": "ひと",
+      "sampleReading": "hi · to",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-basic-ha-03",
+      "character": "ふ",
+      "reading": "fu",
+      "meaning": "Âm fu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng H",
+      "explanation": "Hiragana ふ được đọc là “fu” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ふ, phát âm fu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ふね từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ha",
+          "Âm hi",
+          "Âm he"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ふね",
+          "reading": "fu · ne",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ふ",
+            "ね"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ふね.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ふ",
+          "blank": "____ね"
+        }
+      ],
+      "sampleWord": "ふね",
+      "sampleReading": "fu · ne",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-h-basic-ha-04",
+      "character": "へ",
+      "reading": "he",
+      "meaning": "Âm he",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng H",
+      "explanation": "Hiragana へ được đọc là “he” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn へ, phát âm he mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu へや từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ha",
+          "Âm hi",
+          "Âm fu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "へや",
+          "reading": "he · ya",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "へ",
+            "や"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là へや.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "へ",
+          "blank": "____や"
+        }
+      ],
+      "sampleWord": "へや",
+      "sampleReading": "he · ya",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-h-basic-ha-05",
+      "character": "ほ",
+      "reading": "ho",
+      "meaning": "Âm ho",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng H",
+      "explanation": "Hiragana ほ được đọc là “ho” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ほ, phát âm ho mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ほし từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ha",
+          "Âm hi",
+          "Âm fu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ほし",
+          "reading": "ho · shi",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ほ",
+            "し"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ほし.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ほ",
+          "blank": "____し"
+        }
+      ],
+      "sampleWord": "ほし",
+      "sampleReading": "ho · shi",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}
