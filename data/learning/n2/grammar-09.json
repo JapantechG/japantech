@@ -1,0 +1,804 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n2-ch09-grammar",
+  "type": "grammar",
+  "title": "N2 · Tiến trình, bằng chứng và đánh giá",
+  "items": [
+    {
+      "id": "n2-lg081",
+      "grammar": "～に先立って",
+      "reading": "～にさきだって",
+      "meaning": "Trước khi một sự kiện quan trọng diễn ra",
+      "formation": "N + に先立って／に先立つ + N",
+      "priorityStars": 5,
+      "explanation": "～に先立って biểu thị “trước khi một sự kiện quan trọng diễn ra”. Điểm quan trọng của mẫu này là: Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + に先立って／に先立つ + N. So với ～前に, cần chú ý: ～前に chỉ thời gian; ～に先立って mang tính chính thức và thứ tự công việc. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + に先立って／に先立つ + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề. Nghĩa thực tế: Trước khi một sự kiện quan trọng diễn ra. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「工事に先立って、周辺の住民に説明した。」 — Trước khi thi công, chúng tôi đã giải thích cho cư dân quanh vùng. Hãy nhận diện vị trí 「～に先立って」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～前に",
+          "text": "～前に chỉ thời gian; ～に先立って mang tính chính thức và thứ tự công việc."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + に先立って／に先立つ + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không đảo thứ tự: thứ đứng trước に先立って là sự kiện diễn ra sau."
+        }
+      ],
+      "commonMistakes": [
+        "Không đảo thứ tự: thứ đứng trước に先立って là sự kiện diễn ra sau.",
+        "Nhầm ～に先立って với ～前に. ～前に chỉ thời gian; ～に先立って mang tính chính thức và thứ tự công việc.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + に先立って／に先立つ + N.",
+        "Chỉ nhớ nghĩa “Trước khi một sự kiện quan trọng diễn ra” mà bỏ qua sắc thái: Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～に先立って."
+      ],
+      "discovery": {
+        "distractors": [
+          "Chỉ vì... mà dẫn đến điều không hay",
+          "Một khi đã... thì...",
+          "Chính vì... nên càng..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "工事に先立って、周辺の住民に説明した。",
+          "reading": "こうじにさきだって、しゅうへんのじゅうみんにせつめいした。",
+          "translation": "Trước khi thi công, chúng tôi đã giải thích cho cư dân quanh vùng.",
+          "blank": "工事____、周辺の住民に説明した。",
+          "answer": "に先立って",
+          "hint": "Chú ý nghĩa “Trước khi một sự kiện quan trọng diễn ra” và cách nối N + に先立って／に先立つ + N. Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề.",
+          "reason": "Trong 「工事に先立って、周辺の住民に説明した。」, cụm 「に先立って」 thể hiện mẫu ～に先立って. Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề. Vì thế câu có nghĩa: Trước khi thi công, chúng tôi đã giải thích cho cư dân quanh vùng. Dạng nối cần nhớ: N + に先立って／に先立つ + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không đảo thứ tự: thứ đứng trước に先立って là sự kiện diễn ra sau. Đồng thời, ～前に chỉ thời gian; ～に先立って mang tính chính thức và thứ tự công việc. Câu này cần cấu trúc ～に先立って ở vị trí đã bỏ trống.",
+          "chunks": [
+            "工事に先立って、",
+            "周辺の住民に説明した。"
+          ]
+        },
+        {
+          "sentence": "開店に先立って、スタッフを研修した。",
+          "reading": "かいてんにさきだって、スタッフをけんしゅうした。",
+          "translation": "Trước khi mở cửa hàng, đã đào tạo nhân viên.",
+          "blank": "開店____、スタッフを研修した。",
+          "answer": "に先立って",
+          "hint": "Chú ý nghĩa “Trước khi một sự kiện quan trọng diễn ra” và cách nối N + に先立って／に先立つ + N. Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề.",
+          "reason": "Trong 「開店に先立って、スタッフを研修した。」, cụm 「に先立って」 thể hiện mẫu ～に先立って. Thực hiện việc A trước sự kiện lớn B để chuẩn bị hoặc tạo tiền đề. Vì thế câu có nghĩa: Trước khi mở cửa hàng, đã đào tạo nhân viên. Dạng nối cần nhớ: N + に先立って／に先立つ + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không đảo thứ tự: thứ đứng trước に先立って là sự kiện diễn ra sau. Đồng thời, ～前に chỉ thời gian; ～に先立って mang tính chính thức và thứ tự công việc. Câu này cần cấu trúc ～に先立って ở vị trí đã bỏ trống.",
+          "chunks": [
+            "開店に先立って、",
+            "スタッフを研修した。"
+          ]
+        }
+      ],
+      "sourceId": 81
+    },
+    {
+      "id": "n2-lg082",
+      "grammar": "～にしたがって",
+      "reading": "～にしたがって",
+      "meaning": "Càng... thì càng... / theo...",
+      "formation": "V辞書形／N + にしたがって",
+      "priorityStars": 5,
+      "explanation": "～にしたがって biểu thị “càng... thì càng... / theo...”. Điểm quan trọng của mẫu này là: Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／N + にしたがって. So với ～につれて, cần chú ý: ～につれて tương tự về diễn tiến; ～にしたがって cũng dùng “tuân theo”. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／N + にしたがって. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định. Nghĩa thực tế: Càng... thì càng... / theo.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「気温が上がるにしたがって、雪が解けていく。」 — Nhiệt độ càng tăng, tuyết càng tan. Hãy nhận diện vị trí 「～にしたがって」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～につれて",
+          "text": "～につれて tương tự về diễn tiến; ～にしたがって cũng dùng “tuân theo”."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／N + にしたがって. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không quên phân biệt “theo biến đổi” và “theo hướng dẫn” bằng ngữ cảnh."
+        }
+      ],
+      "commonMistakes": [
+        "Không quên phân biệt “theo biến đổi” và “theo hướng dẫn” bằng ngữ cảnh.",
+        "Nhầm ～にしたがって với ～につれて. ～につれて tương tự về diễn tiến; ～にしたがって cũng dùng “tuân theo”.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／N + にしたがって.",
+        "Chỉ nhớ nghĩa “Càng... thì càng... / theo...” mà bỏ qua sắc thái: Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～にしたがって."
+      ],
+      "discovery": {
+        "distractors": [
+          "Sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn",
+          "Kể từ... không còn...; chỉ có...",
+          "Ngay khi vừa... thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "気温が上がるにしたがって、雪が解けていく。",
+          "reading": "きおんがあがるにしたがって、ゆきがとけていく。",
+          "translation": "Nhiệt độ càng tăng, tuyết càng tan.",
+          "blank": "気温が上がる____、雪が解けていく。",
+          "answer": "にしたがって",
+          "hint": "Chú ý nghĩa “Càng... thì càng... / theo...” và cách nối V辞書形／N + にしたがって. Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định.",
+          "reason": "Trong 「気温が上がるにしたがって、雪が解けていく。」, cụm 「にしたがって」 thể hiện mẫu ～にしたがって. Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định. Vì thế câu có nghĩa: Nhiệt độ càng tăng, tuyết càng tan. Dạng nối cần nhớ: V辞書形／N + にしたがって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không quên phân biệt “theo biến đổi” và “theo hướng dẫn” bằng ngữ cảnh. Đồng thời, ～につれて tương tự về diễn tiến; ～にしたがって cũng dùng “tuân theo”. Câu này cần cấu trúc ～にしたがって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "気温が上がるにしたがって、",
+            "雪が解けていく。"
+          ]
+        },
+        {
+          "sentence": "時間がたつにしたがって、痛みが弱くなった。",
+          "reading": "じかんがたつにしたがって、いたみがよわくなった。",
+          "translation": "Cơn đau giảm dần theo thời gian.",
+          "blank": "時間がたつ____、痛みが弱くなった。",
+          "answer": "にしたがって",
+          "hint": "Chú ý nghĩa “Càng... thì càng... / theo...” và cách nối V辞書形／N + にしたがって. Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định.",
+          "reason": "Trong 「時間がたつにしたがって、痛みが弱くなった。」, cụm 「にしたがって」 thể hiện mẫu ～にしたがって. Khi mức độ A thay đổi, B cũng thay đổi tương ứng; có thể là làm theo quy tắc nếu N là quy định. Vì thế câu có nghĩa: Cơn đau giảm dần theo thời gian. Dạng nối cần nhớ: V辞書形／N + にしたがって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không quên phân biệt “theo biến đổi” và “theo hướng dẫn” bằng ngữ cảnh. Đồng thời, ～につれて tương tự về diễn tiến; ～にしたがって cũng dùng “tuân theo”. Câu này cần cấu trúc ～にしたがって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "時間がたつにしたがって、",
+            "痛みが弱くなった。"
+          ]
+        }
+      ],
+      "sourceId": 82
+    },
+    {
+      "id": "n2-lg083",
+      "grammar": "～にすぎない",
+      "reading": "～にすぎない",
+      "meaning": "Chỉ là..., không hơn...",
+      "formation": "N／普通形 + にすぎない",
+      "priorityStars": 4,
+      "explanation": "～にすぎない biểu thị “chỉ là..., không hơn...”. Điểm quan trọng của mẫu này là: Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N／普通形 + にすぎない. So với ～だけ, cần chú ý: ～だけ chỉ giới hạn trung tính; ～にすぎない thường giảm nhẹ đánh giá. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N／普通形 + にすぎない. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn. Nghĩa thực tế: Chỉ là..., không hơn.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「それは単なる噂にすぎない。」 — Đó chẳng qua chỉ là tin đồn. Hãy nhận diện vị trí 「～にすぎない」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～だけ",
+          "text": "～だけ chỉ giới hạn trung tính; ～にすぎない thường giảm nhẹ đánh giá."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N／普通形 + にすぎない. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không diễn giải thành đánh giá có quy mô lớn hoặc đặc biệt."
+        }
+      ],
+      "commonMistakes": [
+        "Không diễn giải thành đánh giá có quy mô lớn hoặc đặc biệt.",
+        "Nhầm ～にすぎない với ～だけ. ～だけ chỉ giới hạn trung tính; ～にすぎない thường giảm nhẹ đánh giá.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N／普通形 + にすぎない.",
+        "Chỉ nhớ nghĩa “Chỉ là..., không hơn...” mà bỏ qua sắc thái: Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～にすぎない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Vì quá... nên dẫn đến kết quả bất thường",
+          "Dù... vậy mà... (chê trách)",
+          "Mỗi lần... lại..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "それは単なる噂にすぎない。",
+          "reading": "それはたんなるうわさにすぎない。",
+          "translation": "Đó chẳng qua chỉ là tin đồn.",
+          "blank": "それは単なる噂____。",
+          "answer": "にすぎない",
+          "hint": "Chú ý nghĩa “Chỉ là..., không hơn...” và cách nối N／普通形 + にすぎない. Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn.",
+          "reason": "Trong 「それは単なる噂にすぎない。」, cụm 「にすぎない」 thể hiện mẫu ～にすぎない. Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn. Vì thế câu có nghĩa: Đó chẳng qua chỉ là tin đồn. Dạng nối cần nhớ: N／普通形 + にすぎない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không diễn giải thành đánh giá có quy mô lớn hoặc đặc biệt. Đồng thời, ～だけ chỉ giới hạn trung tính; ～にすぎない thường giảm nhẹ đánh giá. Câu này cần cấu trúc ～にすぎない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "それは単なる噂にすぎない。"
+          ]
+        },
+        {
+          "sentence": "私はただの学生にすぎない。",
+          "reading": "わたしはただのがくせいにすぎない。",
+          "translation": "Tôi chỉ là một sinh viên bình thường.",
+          "blank": "私はただの学生____。",
+          "answer": "にすぎない",
+          "hint": "Chú ý nghĩa “Chỉ là..., không hơn...” và cách nối N／普通形 + にすぎない. Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn.",
+          "reason": "Trong 「私はただの学生にすぎない。」, cụm 「にすぎない」 thể hiện mẫu ～にすぎない. Hạ thấp mức độ hoặc quy mô: chỉ là... mà thôi, không hơn. Vì thế câu có nghĩa: Tôi chỉ là một sinh viên bình thường. Dạng nối cần nhớ: N／普通形 + にすぎない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không diễn giải thành đánh giá có quy mô lớn hoặc đặc biệt. Đồng thời, ～だけ chỉ giới hạn trung tính; ～にすぎない thường giảm nhẹ đánh giá. Câu này cần cấu trúc ～にすぎない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "私はただの学生にすぎない。"
+          ]
+        }
+      ],
+      "sourceId": 83
+    },
+    {
+      "id": "n2-lg084",
+      "grammar": "～に相違ない",
+      "reading": "～にそういない",
+      "meaning": "Chắc chắn là... (văn viết, phán đoán)",
+      "formation": "普通形／N + に相違ない",
+      "priorityStars": 3,
+      "explanation": "～に相違ない biểu thị “chắc chắn là... (văn viết, phán đoán)”. Điểm quan trọng của mẫu này là: Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: 普通形／N + に相違ない. So với ～に決まっている, cần chú ý: ～に決まっている là quả quyết chủ quan; ～に相違ない thiên văn viết, lập luận. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "普通形／N + に相違ない. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng. Nghĩa thực tế: Chắc chắn là... (văn viết, phán đoán). Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「これだけ準備したのだから、成功するに相違ない。」 — Đã chuẩn bị kỹ đến vậy thì chắc chắn sẽ thành công. Hãy nhận diện vị trí 「～に相違ない」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～に決まっている",
+          "text": "～に決まっている là quả quyết chủ quan; ～に相違ない thiên văn viết, lập luận."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối 普通形／N + に相違ない. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không coi là xác nhận bằng chứng tuyệt đối; vẫn là phán đoán."
+        }
+      ],
+      "commonMistakes": [
+        "Không coi là xác nhận bằng chứng tuyệt đối; vẫn là phán đoán.",
+        "Nhầm ～に相違ない với ～に決まっている. ～に決まっている là quả quyết chủ quan; ～に相違ない thiên văn viết, lập luận.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: 普通形／N + に相違ない.",
+        "Chỉ nhớ nghĩa “Chắc chắn là... (văn viết, phán đoán)” mà bỏ qua sắc thái: Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～に相違ない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Một khi đã... thì phải / đương nhiên",
+          "Thà... còn hơn...",
+          "Đầy, toàn những thứ không mong muốn"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "これだけ準備したのだから、成功するに相違ない。",
+          "reading": "これだけじゅんびしたのだから、せいこうするにそういない。",
+          "translation": "Đã chuẩn bị kỹ đến vậy thì chắc chắn sẽ thành công.",
+          "blank": "これだけ準備したのだから、成功する____。",
+          "answer": "に相違ない",
+          "hint": "Chú ý nghĩa “Chắc chắn là... (văn viết, phán đoán)” và cách nối 普通形／N + に相違ない. Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng.",
+          "reason": "Trong 「これだけ準備したのだから、成功するに相違ない。」, cụm 「に相違ない」 thể hiện mẫu ～に相違ない. Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng. Vì thế câu có nghĩa: Đã chuẩn bị kỹ đến vậy thì chắc chắn sẽ thành công. Dạng nối cần nhớ: 普通形／N + に相違ない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không coi là xác nhận bằng chứng tuyệt đối; vẫn là phán đoán. Đồng thời, ～に決まっている là quả quyết chủ quan; ～に相違ない thiên văn viết, lập luận. Câu này cần cấu trúc ～に相違ない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "これだけ準備したのだから、",
+            "成功するに相違ない。"
+          ]
+        },
+        {
+          "sentence": "彼の話は事実に相違ない。",
+          "reading": "かれのはなしはじじつにそういない。",
+          "translation": "Lời anh ấy chắc hẳn là sự thật.",
+          "blank": "彼の話は事実____。",
+          "answer": "に相違ない",
+          "hint": "Chú ý nghĩa “Chắc chắn là... (văn viết, phán đoán)” và cách nối 普通形／N + に相違ない. Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng.",
+          "reason": "Trong 「彼の話は事実に相違ない。」, cụm 「に相違ない」 thể hiện mẫu ～に相違ない. Suy luận rằng điều gì chắc chắn đúng dựa trên dấu hiệu; trang trọng. Vì thế câu có nghĩa: Lời anh ấy chắc hẳn là sự thật. Dạng nối cần nhớ: 普通形／N + に相違ない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không coi là xác nhận bằng chứng tuyệt đối; vẫn là phán đoán. Đồng thời, ～に決まっている là quả quyết chủ quan; ～に相違ない thiên văn viết, lập luận. Câu này cần cấu trúc ～に相違ない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "彼の話は事実に相違ない。"
+          ]
+        }
+      ],
+      "sourceId": 84
+    },
+    {
+      "id": "n2-lg085",
+      "grammar": "～に沿って",
+      "reading": "～にそって",
+      "meaning": "Theo, dọc theo, phù hợp với...",
+      "formation": "N + に沿って／に沿った + N",
+      "priorityStars": 5,
+      "explanation": "～に沿って biểu thị “theo, dọc theo, phù hợp với...”. Điểm quan trọng của mẫu này là: Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + に沿って／に沿った + N. So với ～に基づいて, cần chú ý: ～に基づいて dựa trên căn cứ; ～に沿って chú trọng bám sát hướng dẫn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + に沿って／に沿った + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi. Nghĩa thực tế: Theo, dọc theo, phù hợp với.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「計画に沿って作業を進めてください。」 — Hãy tiến hành công việc theo đúng kế hoạch. Hãy nhận diện vị trí 「～に沿って」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～に基づいて",
+          "text": "～に基づいて dựa trên căn cứ; ～に沿って chú trọng bám sát hướng dẫn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + に沿って／に沿った + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng khi kết quả cố ý trái với kế hoạch."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng khi kết quả cố ý trái với kế hoạch.",
+        "Nhầm ～に沿って với ～に基づいて. ～に基づいて dựa trên căn cứ; ～に沿って chú trọng bám sát hướng dẫn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + に沿って／に沿った + N.",
+        "Chỉ nhớ nghĩa “Theo, dọc theo, phù hợp với...” mà bỏ qua sắc thái: Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～に沿って."
+      ],
+      "discovery": {
+        "distractors": [
+          "Một mặt... mặt khác...",
+          "Có vẻ, trông có vẻ...",
+          "Tiện thể làm..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "計画に沿って作業を進めてください。",
+          "reading": "けいかくにそってさぎょうをすすめてください。",
+          "translation": "Hãy tiến hành công việc theo đúng kế hoạch.",
+          "blank": "計画____作業を進めてください。",
+          "answer": "に沿って",
+          "hint": "Chú ý nghĩa “Theo, dọc theo, phù hợp với...” và cách nối N + に沿って／に沿った + N. Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi.",
+          "reason": "Trong 「計画に沿って作業を進めてください。」, cụm 「に沿って」 thể hiện mẫu ～に沿って. Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi. Vì thế câu có nghĩa: Hãy tiến hành công việc theo đúng kế hoạch. Dạng nối cần nhớ: N + に沿って／に沿った + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng khi kết quả cố ý trái với kế hoạch. Đồng thời, ～に基づいて dựa trên căn cứ; ～に沿って chú trọng bám sát hướng dẫn. Câu này cần cấu trúc ～に沿って ở vị trí đã bỏ trống.",
+          "chunks": [
+            "計画に沿って作業を進めてください。"
+          ]
+        },
+        {
+          "sentence": "手順書に沿って、点検を実施する。",
+          "reading": "てじゅんしょにそって、てんけんをじっしする。",
+          "translation": "Thực hiện kiểm tra theo hướng dẫn quy trình.",
+          "blank": "手順書____、点検を実施する。",
+          "answer": "に沿って",
+          "hint": "Chú ý nghĩa “Theo, dọc theo, phù hợp với...” và cách nối N + に沿って／に沿った + N. Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi.",
+          "reason": "Trong 「手順書に沿って、点検を実施する。」, cụm 「に沿って」 thể hiện mẫu ～に沿って. Thực hiện phù hợp với một định hướng, kế hoạch, chính sách hoặc đường đi. Vì thế câu có nghĩa: Thực hiện kiểm tra theo hướng dẫn quy trình. Dạng nối cần nhớ: N + に沿って／に沿った + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng khi kết quả cố ý trái với kế hoạch. Đồng thời, ～に基づいて dựa trên căn cứ; ～に沿って chú trọng bám sát hướng dẫn. Câu này cần cấu trúc ～に沿って ở vị trí đã bỏ trống.",
+          "chunks": [
+            "手順書に沿って、",
+            "点検を実施する。"
+          ]
+        }
+      ],
+      "sourceId": 85
+    },
+    {
+      "id": "n2-lg086",
+      "grammar": "～に対して",
+      "reading": "～にたいして",
+      "meaning": "Đối với... / trái ngược với...",
+      "formation": "N + に対して／に対する + N",
+      "priorityStars": 4,
+      "explanation": "～に対して biểu thị “đối với... / trái ngược với...”. Điểm quan trọng của mẫu này là: Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + に対して／に対する + N. So với ～について, cần chú ý: ～について là chủ đề; ～に対して là người/vật nhận tác động hoặc phía đối lập. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + に対して／に対する + N. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản. Nghĩa thực tế: Đối với... / trái ngược với.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「お客様に対して、丁寧に説明する。」 — Giải thích cẩn thận cho khách hàng. Hãy nhận diện vị trí 「～に対して」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～について",
+          "text": "～について là chủ đề; ～に対して là người/vật nhận tác động hoặc phía đối lập."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + に対して／に対する + N. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không mặc định に対して luôn mang nghĩa chống đối."
+        }
+      ],
+      "commonMistakes": [
+        "Không mặc định に対して luôn mang nghĩa chống đối.",
+        "Nhầm ～に対して với ～について. ～について là chủ đề; ～に対して là người/vật nhận tác động hoặc phía đối lập.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + に対して／に対する + N.",
+        "Chỉ nhớ nghĩa “Đối với... / trái ngược với...” mà bỏ qua sắc thái: Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～に対して."
+      ],
+      "discovery": {
+        "distractors": [
+          "Càng ngày càng... theo một chiều hướng",
+          "Biết bao nhiêu... (cảm thán)",
+          "Chắc chắn không thể... (khẩu ngữ)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "お客様に対して、丁寧に説明する。",
+          "reading": "おきゃくさまにたいして、ていねいにせつめいする。",
+          "translation": "Giải thích cẩn thận cho khách hàng.",
+          "blank": "お客様____、丁寧に説明する。",
+          "answer": "に対して",
+          "hint": "Chú ý nghĩa “Đối với... / trái ngược với...” và cách nối N + に対して／に対する + N. Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản.",
+          "reason": "Trong 「お客様に対して、丁寧に説明する。」, cụm 「に対して」 thể hiện mẫu ～に対して. Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản. Vì thế câu có nghĩa: Giải thích cẩn thận cho khách hàng. Dạng nối cần nhớ: N + に対して／に対する + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không mặc định に対して luôn mang nghĩa chống đối. Đồng thời, ～について là chủ đề; ～に対して là người/vật nhận tác động hoặc phía đối lập. Câu này cần cấu trúc ～に対して ở vị trí đã bỏ trống.",
+          "chunks": [
+            "お客様に対して、",
+            "丁寧に説明する。"
+          ]
+        },
+        {
+          "sentence": "質問に対して、丁寧に回答した。",
+          "reading": "しつもんにたいして、ていねいにかいとうした。",
+          "translation": "Tôi đã trả lời câu hỏi một cách cẩn thận.",
+          "blank": "質問____、丁寧に回答した。",
+          "answer": "に対して",
+          "hint": "Chú ý nghĩa “Đối với... / trái ngược với...” và cách nối N + に対して／に対する + N. Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản.",
+          "reason": "Trong 「質問に対して、丁寧に回答した。」, cụm 「に対して」 thể hiện mẫu ～に対して. Nêu đối tượng mà hành động, thái độ hướng tới; cũng có thể chỉ tương phản. Vì thế câu có nghĩa: Tôi đã trả lời câu hỏi một cách cẩn thận. Dạng nối cần nhớ: N + に対して／に対する + N.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không mặc định に対して luôn mang nghĩa chống đối. Đồng thời, ～について là chủ đề; ～に対して là người/vật nhận tác động hoặc phía đối lập. Câu này cần cấu trúc ～に対して ở vị trí đã bỏ trống.",
+          "chunks": [
+            "質問に対して、",
+            "丁寧に回答した。"
+          ]
+        }
+      ],
+      "sourceId": 86
+    },
+    {
+      "id": "n2-lg087",
+      "grammar": "～につき",
+      "reading": "～につき",
+      "meaning": "Vì... nên... (thông báo) / mỗi...",
+      "formation": "N + につき",
+      "priorityStars": 3,
+      "explanation": "～につき biểu thị “vì... nên... (thông báo) / mỗi...”. Điểm quan trọng của mẫu này là: Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + につき. So với ～ので, cần chú ý: ～ので là lý do thông thường; ～につき phổ biến trên biển báo, văn bản. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + につき. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng. Nghĩa thực tế: Vì... nên... (thông báo) / mỗi.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「工事中につき、通行できません。」 — Do đang thi công nên không thể đi qua. Hãy nhận diện vị trí 「～につき」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～ので",
+          "text": "～ので là lý do thông thường; ～につき phổ biến trên biển báo, văn bản."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + につき. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng tự nhiên trong hội thoại thân mật."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng tự nhiên trong hội thoại thân mật.",
+        "Nhầm ～につき với ～ので. ～ので là lý do thông thường; ～につき phổ biến trên biển báo, văn bản.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + につき.",
+        "Chỉ nhớ nghĩa “Vì... nên... (thông báo) / mỗi...” mà bỏ qua sắc thái: Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～につき."
+      ],
+      "discovery": {
+        "distractors": [
+          "Không những... mà còn...",
+          "Do..., từ việc... mà...",
+          "Vừa... vừa... (văn viết)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "工事中につき、通行できません。",
+          "reading": "こうじちゅうにつき、つうこうできません。",
+          "translation": "Do đang thi công nên không thể đi qua.",
+          "blank": "工事中____、通行できません。",
+          "answer": "につき",
+          "hint": "Chú ý nghĩa “Vì... nên... (thông báo) / mỗi...” và cách nối N + につき. Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng.",
+          "reason": "Trong 「工事中につき、通行できません。」, cụm 「につき」 thể hiện mẫu ～につき. Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng. Vì thế câu có nghĩa: Do đang thi công nên không thể đi qua. Dạng nối cần nhớ: N + につき.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng tự nhiên trong hội thoại thân mật. Đồng thời, ～ので là lý do thông thường; ～につき phổ biến trên biển báo, văn bản. Câu này cần cấu trúc ～につき ở vị trí đã bỏ trống.",
+          "chunks": [
+            "工事中につき、",
+            "通行できません。"
+          ]
+        },
+        {
+          "sentence": "本日休業につき、入れません。",
+          "reading": "ほんじつきゅうぎょうにつき、はいれません。",
+          "translation": "Hôm nay đóng cửa nên không được vào.",
+          "blank": "本日休業____、入れません。",
+          "answer": "につき",
+          "hint": "Chú ý nghĩa “Vì... nên... (thông báo) / mỗi...” và cách nối N + につき. Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng.",
+          "reason": "Trong 「本日休業につき、入れません。」, cụm 「につき」 thể hiện mẫu ～につき. Dùng thông báo công khai để nêu nguyên nhân hoặc điều kiện; giọng rất trang trọng. Vì thế câu có nghĩa: Hôm nay đóng cửa nên không được vào. Dạng nối cần nhớ: N + につき.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng tự nhiên trong hội thoại thân mật. Đồng thời, ～ので là lý do thông thường; ～につき phổ biến trên biển báo, văn bản. Câu này cần cấu trúc ～につき ở vị trí đã bỏ trống.",
+          "chunks": [
+            "本日休業につき、",
+            "入れません。"
+          ]
+        }
+      ],
+      "sourceId": 87
+    },
+    {
+      "id": "n2-lg088",
+      "grammar": "～につけ",
+      "reading": "～につけ",
+      "meaning": "Mỗi khi... lại... (gợi cảm xúc)",
+      "formation": "V辞書形 + につけ／N + につけ",
+      "priorityStars": 4,
+      "explanation": "～につけ biểu thị “mỗi khi... lại... (gợi cảm xúc)”. Điểm quan trọng của mẫu này là: Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形 + につけ／N + につけ. So với ～たびに, cần chú ý: ～たびに là mỗi lần nói chung; ～につけ thường gắn hồi tưởng/cảm xúc. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形 + につけ／N + につけ. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện. Nghĩa thực tế: Mỗi khi... lại... (gợi cảm xúc). Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「この曲を聞くにつけ、学生時代を思い出す。」 — Mỗi lần nghe bài này tôi lại nhớ thời sinh viên. Hãy nhận diện vị trí 「～につけ」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～たびに",
+          "text": "～たびに là mỗi lần nói chung; ～につけ thường gắn hồi tưởng/cảm xúc."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形 + につけ／N + につけ. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng cho quan hệ nhân quả kỹ thuật thuần túy."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng cho quan hệ nhân quả kỹ thuật thuần túy.",
+        "Nhầm ～につけ với ～たびに. ～たびに là mỗi lần nói chung; ～につけ thường gắn hồi tưởng/cảm xúc.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形 + につけ／N + につけ.",
+        "Chỉ nhớ nghĩa “Mỗi khi... lại... (gợi cảm xúc)” mà bỏ qua sắc thái: Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～につけ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Trong việc... / khi tiến hành...",
+          "Vì là người có đặc điểm... nên chắc...",
+          "Đang dần... (quá trình biến đổi)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "この曲を聞くにつけ、学生時代を思い出す。",
+          "reading": "このきょくをきくにつけ、がくせいじだいをおもいだす。",
+          "translation": "Mỗi lần nghe bài này tôi lại nhớ thời sinh viên.",
+          "blank": "この曲を聞く____、学生時代を思い出す。",
+          "answer": "につけ",
+          "hint": "Chú ý nghĩa “Mỗi khi... lại... (gợi cảm xúc)” và cách nối V辞書形 + につけ／N + につけ. Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện.",
+          "reason": "Trong 「この曲を聞くにつけ、学生時代を思い出す。」, cụm 「につけ」 thể hiện mẫu ～につけ. Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện. Vì thế câu có nghĩa: Mỗi lần nghe bài này tôi lại nhớ thời sinh viên. Dạng nối cần nhớ: V辞書形 + につけ／N + につけ.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho quan hệ nhân quả kỹ thuật thuần túy. Đồng thời, ～たびに là mỗi lần nói chung; ～につけ thường gắn hồi tưởng/cảm xúc. Câu này cần cấu trúc ～につけ ở vị trí đã bỏ trống.",
+          "chunks": [
+            "この曲を聞くにつけ、",
+            "学生時代を思い出す。"
+          ]
+        },
+        {
+          "sentence": "故郷を思うにつけ、母の顔が浮かぶ。",
+          "reading": "ふるさとをおもうにつけ、ははのかおがうかぶ。",
+          "translation": "Mỗi khi nghĩ về quê, tôi lại nhớ khuôn mặt mẹ.",
+          "blank": "故郷を思う____、母の顔が浮かぶ。",
+          "answer": "につけ",
+          "hint": "Chú ý nghĩa “Mỗi khi... lại... (gợi cảm xúc)” và cách nối V辞書形 + につけ／N + につけ. Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện.",
+          "reason": "Trong 「故郷を思うにつけ、母の顔が浮かぶ。」, cụm 「につけ」 thể hiện mẫu ～につけ. Mỗi khi trải nghiệm/tưởng tới sự vật A, cảm xúc B lại xuất hiện. Vì thế câu có nghĩa: Mỗi khi nghĩ về quê, tôi lại nhớ khuôn mặt mẹ. Dạng nối cần nhớ: V辞書形 + につけ／N + につけ.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng cho quan hệ nhân quả kỹ thuật thuần túy. Đồng thời, ～たびに là mỗi lần nói chung; ～につけ thường gắn hồi tưởng/cảm xúc. Câu này cần cấu trúc ～につけ ở vị trí đã bỏ trống.",
+          "chunks": [
+            "故郷を思うにつけ、",
+            "母の顔が浮かぶ。"
+          ]
+        }
+      ],
+      "sourceId": 88
+    },
+    {
+      "id": "n2-lg089",
+      "grammar": "～につれて",
+      "reading": "～につれて",
+      "meaning": "Cùng với sự thay đổi... thì...",
+      "formation": "V辞書形／N + につれて",
+      "priorityStars": 5,
+      "explanation": "～につれて biểu thị “cùng với sự thay đổi... thì...”. Điểm quan trọng của mẫu này là: A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／N + につれて. So với ～にしたがって, cần chú ý: ～にしたがって gần nghĩa; ～につれて thường diễn tiến tự nhiên, không chủ ý. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／N + につれて. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều. Nghĩa thực tế: Cùng với sự thay đổi... thì.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「日本語が上達するにつれて、会話が楽しくなった。」 — Tiếng Nhật càng tiến bộ, việc trò chuyện càng thú vị. Hãy nhận diện vị trí 「～につれて」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～にしたがって",
+          "text": "～にしたがって gần nghĩa; ～につれて thường diễn tiến tự nhiên, không chủ ý."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／N + につれて. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng để mô tả B hoàn toàn độc lập với biến chuyển A."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng để mô tả B hoàn toàn độc lập với biến chuyển A.",
+        "Nhầm ～につれて với ～にしたがって. ～にしたがって gần nghĩa; ～につれて thường diễn tiến tự nhiên, không chủ ý.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／N + につれて.",
+        "Chỉ nhớ nghĩa “Cùng với sự thay đổi... thì...” mà bỏ qua sắc thái: A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～につれて."
+      ],
+      "discovery": {
+        "distractors": [
+          "Một khi đã... thì phải...",
+          "Không làm... mà vẫn...",
+          "Có vẻ... / dễ có tính..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "日本語が上達するにつれて、会話が楽しくなった。",
+          "reading": "にほんごがじょうたつするにつれて、かいわがたのしくなった。",
+          "translation": "Tiếng Nhật càng tiến bộ, việc trò chuyện càng thú vị.",
+          "blank": "日本語が上達する____、会話が楽しくなった。",
+          "answer": "につれて",
+          "hint": "Chú ý nghĩa “Cùng với sự thay đổi... thì...” và cách nối V辞書形／N + につれて. A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều.",
+          "reason": "Trong 「日本語が上達するにつれて、会話が楽しくなった。」, cụm 「につれて」 thể hiện mẫu ～につれて. A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều. Vì thế câu có nghĩa: Tiếng Nhật càng tiến bộ, việc trò chuyện càng thú vị. Dạng nối cần nhớ: V辞書形／N + につれて.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng để mô tả B hoàn toàn độc lập với biến chuyển A. Đồng thời, ～にしたがって gần nghĩa; ～につれて thường diễn tiến tự nhiên, không chủ ý. Câu này cần cấu trúc ～につれて ở vị trí đã bỏ trống.",
+          "chunks": [
+            "日本語が上達するにつれて、",
+            "会話が楽しくなった。"
+          ]
+        },
+        {
+          "sentence": "練習を重ねるにつれて、自信がついた。",
+          "reading": "れんしゅうをかさねるにつれて、じしんがついた。",
+          "translation": "Càng luyện tập, tôi càng tự tin.",
+          "blank": "練習を重ねる____、自信がついた。",
+          "answer": "につれて",
+          "hint": "Chú ý nghĩa “Cùng với sự thay đổi... thì...” và cách nối V辞書形／N + につれて. A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều.",
+          "reason": "Trong 「練習を重ねるにつれて、自信がついた。」, cụm 「につれて」 thể hiện mẫu ～につれて. A thay đổi dần thì B cũng phát triển/biến đổi cùng chiều. Vì thế câu có nghĩa: Càng luyện tập, tôi càng tự tin. Dạng nối cần nhớ: V辞書形／N + につれて.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng để mô tả B hoàn toàn độc lập với biến chuyển A. Đồng thời, ～にしたがって gần nghĩa; ～につれて thường diễn tiến tự nhiên, không chủ ý. Câu này cần cấu trúc ～につれて ở vị trí đã bỏ trống.",
+          "chunks": [
+            "練習を重ねるにつれて、",
+            "自信がついた。"
+          ]
+        }
+      ],
+      "sourceId": 89
+    },
+    {
+      "id": "n2-lg090",
+      "grammar": "～にとって",
+      "reading": "～にとって",
+      "meaning": "Đối với... (đánh giá từ lập trường)",
+      "formation": "N + にとって",
+      "priorityStars": 3,
+      "explanation": "～にとって biểu thị “đối với... (đánh giá từ lập trường)”. Điểm quan trọng của mẫu này là: Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + にとって. So với ～からすると, cần chú ý: ～からすると là lập trường suy đoán; ～にとって là ý nghĩa/giá trị đối với ai. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + にとって. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá. Nghĩa thực tế: Đối với... (đánh giá từ lập trường). Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「私にとって、家族が一番大切だ。」 — Đối với tôi, gia đình là quan trọng nhất. Hãy nhận diện vị trí 「～にとって」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～からすると",
+          "text": "～からすると là lập trường suy đoán; ～にとって là ý nghĩa/giá trị đối với ai."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + にとって. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng để nói một hành động hướng tới đối tượng; khi đó cân nhắc に対して."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng để nói một hành động hướng tới đối tượng; khi đó cân nhắc に対して.",
+        "Nhầm ～にとって với ～からすると. ～からすると là lập trường suy đoán; ～にとって là ý nghĩa/giá trị đối với ai.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + にとって.",
+        "Chỉ nhớ nghĩa “Đối với... (đánh giá từ lập trường)” mà bỏ qua sắc thái: Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～にとって."
+      ],
+      "discovery": {
+        "distractors": [
+          "Có thể xảy ra / không thể xảy ra",
+          "Điều... là... (nêu cảm xúc)",
+          "Kể từ khi... đến nay"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "私にとって、家族が一番大切だ。",
+          "reading": "わたしにとって、かぞくがいちばんたいせつだ。",
+          "translation": "Đối với tôi, gia đình là quan trọng nhất.",
+          "blank": "私____、家族が一番大切だ。",
+          "answer": "にとって",
+          "hint": "Chú ý nghĩa “Đối với... (đánh giá từ lập trường)” và cách nối N + にとって. Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá.",
+          "reason": "Trong 「私にとって、家族が一番大切だ。」, cụm 「にとって」 thể hiện mẫu ～にとって. Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá. Vì thế câu có nghĩa: Đối với tôi, gia đình là quan trọng nhất. Dạng nối cần nhớ: N + にとって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng để nói một hành động hướng tới đối tượng; khi đó cân nhắc に対して. Đồng thời, ～からすると là lập trường suy đoán; ～にとって là ý nghĩa/giá trị đối với ai. Câu này cần cấu trúc ～にとって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "私にとって、",
+            "家族が一番大切だ。"
+          ]
+        },
+        {
+          "sentence": "子どもにとって、遊びも大切だ。",
+          "reading": "こどもにとって、あそびもたいせつだ。",
+          "translation": "Đối với trẻ nhỏ, vui chơi cũng quan trọng.",
+          "blank": "子ども____、遊びも大切だ。",
+          "answer": "にとって",
+          "hint": "Chú ý nghĩa “Đối với... (đánh giá từ lập trường)” và cách nối N + にとって. Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá.",
+          "reason": "Trong 「子どもにとって、遊びも大切だ。」, cụm 「にとって」 thể hiện mẫu ～にとって. Đứng từ lợi ích, giá trị hoặc trải nghiệm của một đối tượng để đánh giá. Vì thế câu có nghĩa: Đối với trẻ nhỏ, vui chơi cũng quan trọng. Dạng nối cần nhớ: N + にとって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng để nói một hành động hướng tới đối tượng; khi đó cân nhắc に対して. Đồng thời, ～からすると là lập trường suy đoán; ～にとって là ý nghĩa/giá trị đối với ai. Câu này cần cấu trúc ～にとって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "子どもにとって、",
+            "遊びも大切だ。"
+          ]
+        }
+      ],
+      "sourceId": 90
+    }
+  ]
+}
