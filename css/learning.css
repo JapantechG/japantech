@@ -1078,3 +1078,69 @@ button.kl-mini-card:not(:disabled):hover {
     #learningScreen .kl-mini-card > b,
     #learningScreen .kl-mini-card > strong { font-size: 14px; }
 }
+
+/* ==========================================================
+   BATLINGO LEARNING V6 — TAP BUILDER + CARD RARITY
+   Each star tier is cosmetic only; Firebase remains authoritative.
+========================================================== */
+#learningScreen .kl-builder{margin:14px 0 18px;display:grid;gap:11px}
+#learningScreen .kl-builder-prompt{font-size:17px;font-weight:850;color:#e4f2ff;margin:0}
+#learningScreen .kl-builder-translation{background:#243042;border:1px solid #627188;color:#fff2bf;border-radius:12px;padding:13px 15px;font-size:17px;line-height:1.65;text-align:center;font-weight:750}
+#learningScreen .kl-builder-context{background:#202f47;border-left:4px solid #7bbde8;padding:13px;border-radius:10px;font-size:clamp(17px,3vw,21px);line-height:1.7;overflow-wrap:anywhere}
+#learningScreen .kl-builder-label{font-size:13px;font-weight:800;color:#bcd4f0;letter-spacing:.3px}
+#learningScreen .kl-builder-answer,#learningScreen .kl-builder-tray{display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:9px;padding:13px;min-height:88px;border-radius:14px}
+#learningScreen .kl-builder-answer{background:#102d34;border:2px dashed #6cbea8}
+#learningScreen .kl-builder-tray{background:#182940;border:1px solid #526f92}
+#learningScreen .kl-builder-placeholder{color:#b1c1d2;font-size:14px;text-align:center}
+#learningScreen .kl-builder-tile{min-height:48px;max-width:100%;padding:10px 13px;border-radius:11px;border:1px solid #91b1d6;background:linear-gradient(155deg,#345b81,#294668);color:#fff;font-size:clamp(16px,2.7vw,19px);font-weight:750;line-height:1.5;white-space:normal;overflow-wrap:anywhere;box-shadow:0 3px 0 #10243a;touch-action:manipulation;transition:transform .12s,border-color .12s}
+#learningScreen .kl-builder-tile:not(:disabled):active{transform:translateY(2px);box-shadow:none}
+#learningScreen .kl-builder-tile.chosen{background:linear-gradient(150deg,#246e61,#1e514c);border-color:#67dfbf;box-shadow:0 2px 0 #10352e}
+#learningScreen .kl-builder-tile.chosen span{opacity:.65;margin-left:5px}
+#learningScreen .kl-builder-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+#learningScreen .kl-builder-tools button{min-width:0;padding:11px 5px;font-size:14px}
+#learningScreen .kl-builder-hint{border:1px solid #a78b59;background:#3a3123;color:#ffdf98;padding:11px 13px;border-radius:11px;font-size:15px}
+
+/* 0★ — uncollected / neutral; 1★ bronze; 2★ iron/silver;
+   3★ sapphire; 4★ amethyst; 5★ animated legendary gold. */
+#learningScreen .kl-quest-card[class*="kl-rarity-"],
+#learningScreen .kl-mini-card[class*="kl-rarity-"]{position:relative;isolation:isolate;background-clip:padding-box;transition:border-color .18s,box-shadow .18s,transform .18s}
+#learningScreen .kl-rarity-0{--rarity:#475569;--shine:rgba(100,116,139,.12);border-color:#475569!important}
+#learningScreen .kl-rarity-1{--rarity:#b77747;--shine:rgba(183,119,71,.15);border-color:#b77747!important;box-shadow:inset 0 0 16px rgba(183,119,71,.09)}
+#learningScreen .kl-rarity-2{--rarity:#a9becf;--shine:rgba(169,190,207,.15);border-color:#a9becf!important;box-shadow:inset 0 0 17px rgba(169,190,207,.09),0 0 7px rgba(169,190,207,.11)}
+#learningScreen .kl-rarity-3{--rarity:#54bafb;--shine:rgba(84,186,251,.18);border-color:#54bafb!important;box-shadow:inset 0 0 22px rgba(84,186,251,.12),0 0 13px rgba(84,186,251,.15)}
+#learningScreen .kl-rarity-4{--rarity:#c695ff;--shine:rgba(198,149,255,.22);border-color:#b881f5!important;box-shadow:inset 0 0 25px rgba(171,100,245,.15),0 0 18px rgba(170,95,250,.23)}
+#learningScreen .kl-rarity-5{--rarity:#ffce57;--shine:rgba(255,206,87,.26);border-color:#ffce57!important;box-shadow:inset 0 0 30px rgba(255,197,65,.18),0 0 20px rgba(255,193,70,.33),0 0 1px 1px rgba(255,229,142,.25)}
+#learningScreen .kl-quest-card.kl-rarity-3{background:linear-gradient(140deg,#172b48,#0b1b31 72%)}
+#learningScreen .kl-quest-card.kl-rarity-4{background:linear-gradient(145deg,#2a214a,#151a32 75%)}
+#learningScreen .kl-quest-card.kl-rarity-5{background:linear-gradient(145deg,#332b22,#182338 66%,#30251d)}
+#learningScreen .kl-mini-card.kl-rarity-3{background:linear-gradient(145deg,#1a365a,#13243e)}
+#learningScreen .kl-mini-card.kl-rarity-4{background:linear-gradient(145deg,#342451,#181f3b)}
+#learningScreen .kl-mini-card.kl-rarity-5{background:linear-gradient(145deg,#3c3022,#14243b 70%,#37281d)}
+#learningScreen .kl-rarity-4:before,#learningScreen .kl-rarity-5:before{content:"";position:absolute;inset:4px;border:1px solid var(--shine);border-radius:inherit;pointer-events:none;z-index:0}
+#learningScreen .kl-rarity-5:after{content:"✦";position:absolute;top:5px;right:9px;color:#ffdc75;font-size:17px;line-height:1;text-shadow:0 0 8px #ffcf75;pointer-events:none;z-index:1}
+#learningScreen .kl-mini-card.kl-rarity-5:after{font-size:12px;top:4px;right:5px}
+#learningScreen .kl-rarity-5 .kl-stars{color:#ffe18c;text-shadow:0 0 9px rgba(255,211,104,.55)}
+#learningScreen .kl-rarity-4 .kl-stars{color:#e5c4ff;text-shadow:0 0 8px rgba(203,161,255,.34)}
+#learningScreen .kl-rarity-3 .kl-stars{color:#a1dcff}
+/* Fix mini-card badge alignment across 1-3 line Japanese titles. */
+#learningScreen .kl-mini-card{min-height:183px;overflow:hidden}
+#learningScreen .kl-mini-card>.kl-card-logo{height:20px;flex:0 0 20px;z-index:2}
+#learningScreen .kl-mini-card>b{min-height:65px;flex:1 1 auto;overflow-wrap:anywhere;z-index:2}
+#learningScreen .kl-mini-card>.kl-stars{height:22px;flex:0 0 22px;margin-top:auto;z-index:2}
+#learningScreen .kl-mini-card:not(:disabled):hover{border-color:var(--rarity,#fbbf24)!important;transform:translateY(-2px)}
+@media(max-width:580px){
+ #learningScreen .kl-builder-tile{padding:9px 10px;min-height:45px}
+ #learningScreen .kl-builder-tools button{font-size:12px}
+ #learningScreen .kl-mini-card{min-height:176px}
+}
+@media(prefers-reduced-motion:reduce){#learningScreen .kl-builder-tile,#learningScreen .kl-mini-card{transition:none!important}}
+
+/* BATLINGO V6.1 - hint appears below tile tray, floating without reflow */
+#learningScreen .kl-builder-tools { grid-template-columns:repeat(2,minmax(0,1fr)); }
+#learningScreen .kl-builder-hint-anchor { position:relative; display:flex; justify-content:center; z-index:12; }
+#learningScreen .kl-builder-hint-toggle { width:min(100%,320px); border:1px solid #b79559; background:#453725; color:#ffe3a0; font-weight:800; }
+#learningScreen .kl-builder-hint-popup[hidden] { display:none !important; }
+#learningScreen .kl-builder-hint-popup { position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%); width:min(100%,400px); box-sizing:border-box; padding:16px 40px 13px 16px; border:1px solid #d4b36a; border-radius:14px; background:#30291d; color:#fff0c5; box-shadow:0 12px 32px rgba(0,0,0,.55); font-size:15px; line-height:1.65; text-align:left; z-index:30; }
+#learningScreen .kl-builder-hint-popup p { margin:6px 0 0; }
+#learningScreen .kl-builder-hint-close { position:absolute; right:9px; top:7px; width:30px; height:30px; border:0; border-radius:8px; background:#58452c; color:#fff; font-size:22px; line-height:1; cursor:pointer; }
+#learningScreen .kl-builder-hint-popup::before { content:""; position:absolute; top:-7px; left:calc(50% - 6px); width:12px; height:12px; transform:rotate(45deg); background:#30291d; border-left:1px solid #d4b36a; border-top:1px solid #d4b36a; }
