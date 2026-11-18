@@ -9,54 +9,59 @@
       "grammar": "～といい～といい",
       "reading": "～といい～といい",
       "meaning": "Cả N1, cả N2 đều... / Dù N1, dù N2 đều...",
-      "formation": "Cấu trúc: ～といい～といい (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Danh từ 1 + といい + danh từ 2 + といい",
       "priorityStars": 4,
-      "explanation": "Mẫu ～といい～といい diễn tả: Cả N1, cả N2 đều... / Dù N1, dù N2 đều.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Nêu hai khía cạnh tiêu biểu để nhận xét tổng thể về cùng một đối tượng. Người nói lấy A và B làm dẫn chứng, sau đó đưa ra đánh giá chung tích cực hoặc tiêu cực.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Cả N1, cả N2 đều... / Dù N1, dù N2 đều..."
+          "title": "Cấu trúc",
+          "text": "Đặt といい sau từng danh từ: 味といいサービスといい、申し分ない。 Hai khía cạnh được đánh giá cùng một hướng."
         },
         {
-          "title": "Mẫu",
-          "text": "～といい～といい"
+          "title": "Sắc thái",
+          "text": "Thường nhấn mạnh chất lượng, đặc điểm hoặc mức độ nổi bật; hợp cả khen lẫn chê."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～も～も chỉ liệt kê; ～といい～といい gắn hai mặt tiêu biểu với một đánh giá bao quát."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng để liệt kê hai hành động nối tiếp; cả hai phần trước といい nên là danh từ hoặc cụm danh từ.",
+        "Không cho rằng mẫu này chỉ dùng để khen: 最悪の店だった là đánh giá tiêu cực."
       ],
       "discovery": {
         "distractors": [
-          "Cho đến N... / Đến cả N...",
-          "Nếu là... thì còn được / Nếu là... thì còn đành, nhưng...",
-          "..., thế nên là... / Vì hoàn cảnh, lý do như vậy nên dẫn đến kết quả này"
+          "A và B là hai hành động xảy ra liên tiếp",
+          "Hai giả thiết trái ngược đều dẫn đến cùng kết quả",
+          "Chọn một trong hai phương án"
         ]
       },
       "examples": [
         {
           "sentence": "彼の仕事は質の高さといい速さといい、文句のつけようがない。",
-          "reading": "",
+          "reading": "かれのしごとはしつのたかさといいはやさといい、もんくのつけようがない。",
           "translation": "Công việc của anh ấy, cả về chất lượng lẫn tốc độ đều không có gì để chê.",
           "blank": "彼の仕事は質の高さ____速さといい、文句のつけようがない。",
           "answer": "といい",
-          "hint": "Mẫu mục tiêu: ～といい～といい",
-          "reason": "Trong câu này, といい thể hiện ý nghĩa: Cả N1, cả N2 đều... / Dù N1, dù N2 đều....",
-          "wrongReason": "Đối chiếu với mẫu ～といい～といい và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "質の高さと速さ là hai mặt của chất lượng công việc; đều xuất sắc nên tác giả kết luận không có gì để chê.",
+          "wrongReason": "Đây là cấu trúc nêu hai khía cạnh N1といいN2といい rồi đánh giá chung, không phải lựa chọn một trong hai. Trong câu này: 質の高さと速さ là hai mặt của chất lượng công việc; đều xuất sắc nên tác giả kết luận không có gì để chê.",
           "chunks": [
-            "彼の仕事は質の高さと",
-            "いい速さといい、",
+            "彼の仕事は",
+            "質の高さといい速さといい、",
             "文句のつけようがない。"
           ]
         },
         {
           "sentence": "このレストランは、料理の味といい、店員のサービスといい、最悪の店だった。",
-          "reading": "",
+          "reading": "このレストランは、りょうりのあじといい、てんいんのサービスといい、さいあくのみせだった。",
           "translation": "Nhà hàng này, cả hương vị món ăn lẫn cách phục vụ của nhân viên đều tệ, đúng là một nhà hàng tồi tệ.",
           "blank": "このレストランは、料理の味____、店員のサービスといい、最悪の店だった。",
           "answer": "といい",
-          "hint": "Mẫu mục tiêu: ～といい～といい",
-          "reason": "Trong câu này, といい thể hiện ý nghĩa: Cả N1, cả N2 đều... / Dù N1, dù N2 đều....",
-          "wrongReason": "Đối chiếu với mẫu ～といい～といい và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "料理の味 và 店員のサービス là hai điểm bị chê cùng lúc nên toàn bộ nhà hàng được đánh giá rất tệ.",
+          "wrongReason": "Đây là cấu trúc nêu hai khía cạnh N1といいN2といい rồi đánh giá chung, không phải lựa chọn một trong hai. Trong câu này: 料理の味 và 店員のサービス là hai điểm bị chê cùng lúc nên toàn bộ nhà hàng được đánh giá rất tệ.",
           "chunks": [
             "このレストランは、",
             "料理の味といい、",
@@ -66,13 +71,13 @@
         },
         {
           "sentence": "彼が作った新サービスは、アイデアといいクオリティといい、非の打ちどころがない。",
-          "reading": "",
+          "reading": "かれがつくったしんサービスは、アイデアといいクオリティといい、ひのうちどころがない。",
           "translation": "Dịch vụ mới mà anh ấy tạo ra, cả về ý tưởng lẫn chất lượng đều hoàn hảo, không có điểm nào để chê.",
           "blank": "彼が作った新サービスは、アイデア____クオリティといい、非の打ちどころがない。",
           "answer": "といい",
-          "hint": "Mẫu mục tiêu: ～といい～といい",
-          "reason": "Trong câu này, といい thể hiện ý nghĩa: Cả N1, cả N2 đều... / Dù N1, dù N2 đều....",
-          "wrongReason": "Đối chiếu với mẫu ～といい～といい và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "アイデア và クオリティ đều tốt, làm căn cứ cho nhận xét 非の打ちどころがない.",
+          "wrongReason": "Đây là cấu trúc nêu hai khía cạnh N1といいN2といい rồi đánh giá chung, không phải lựa chọn một trong hai. Trong câu này: アイデア và クオリティ đều tốt, làm căn cứ cho nhận xét 非の打ちどころがない.",
           "chunks": [
             "彼が作った新サービスは、",
             "アイデアといいクオリティといい、",
@@ -87,39 +92,44 @@
       "grammar": "～というか～というか",
       "reading": "～というか～というか",
       "meaning": "Không biết nên nói là... hay là...",
-      "formation": "Cấu trúc: ～というか～というか (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Từ hoặc cụm diễn đạt A + というか + B + というか",
       "priorityStars": 4,
-      "explanation": "Mẫu ～というか～というか diễn tả: Không biết nên nói là... hay là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Khi khó tìm từ diễn đạt chính xác, người nói đưa ra hai cách gọi hoặc nhận xét gần nhau, vừa cân nhắc vừa tự điều chỉnh cách nói. Không nhất thiết chọn một đáp án duy nhất.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Không biết nên nói là... hay là..."
+          "title": "Cấu trúc",
+          "text": "N / tính từ / mệnh đề + というか + N / tính từ / mệnh đề + というか."
         },
         {
-          "title": "Mẫu",
-          "text": "～というか～というか"
+          "title": "Sắc thái",
+          "text": "Thường là lời nhận xét mang tính chủ quan, do dự hoặc diễn đạt tinh tế, thấy ở hội thoại."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～といい～といい đánh giá hai phương diện; ～というか～というか tìm cách gọi phù hợp cho cùng một đối tượng."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu là đang đưa hai phương án để người nghe lựa chọn.",
+        "Không bỏ qua sắc thái do dự hoặc điều chỉnh lời nói của người nói."
       ],
       "discovery": {
         "distractors": [
-          "Nhất là N (thì lại càng...) / Đến cả N...",
-          "Nếu là... thì đã đành / Nếu là... thì còn là một nhẽ, nhưng...",
-          "Vì... / Do... / Bởi vì..."
+          "Nêu hai phương diện để khen hoặc chê đồng thời",
+          "Liệt kê hàng loạt phàn nàn với sắc thái khó chịu",
+          "Chỉ hai hành động xảy ra luân phiên"
         ]
       },
       "examples": [
         {
           "sentence": "犬のタローは私の友達というか、家族というか、子供のころからずっと一緒にいてくれる、大切な存在です。",
-          "reading": "",
+          "reading": "いぬのタローはわたしのともだちというか、かぞくというか、こどものころからずっといっしょにいてくれる、たいせつなそんざいです。",
           "translation": "Chú chó Taro, không biết nên gọi là bạn hay là gia đình, là một sự hiện diện rất quan trọng đã luôn ở bên tôi từ khi còn nhỏ.",
           "blank": "犬のタローは私の友達____、家族というか、子供のころからずっと一緒にいてくれる、大切な存在です。",
           "answer": "というか",
-          "hint": "Mẫu mục tiêu: ～というか～というか",
-          "reason": "Trong câu này, というか thể hiện ý nghĩa: Không biết nên nói là... hay là....",
-          "wrongReason": "Đối chiếu với mẫu ～というか～というか và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "友達 và 家族 đều chưa diễn tả hết mối quan hệ gần gũi với chú chó Taro; người nói đang tìm cách gọi phù hợp.",
+          "wrongReason": "Đây là lời tìm cách diễn đạt AというかBというか, không phải khẳng định hai đặc điểm đều được đánh giá đồng thời. Trong câu này: 友達 và 家族 đều chưa diễn tả hết mối quan hệ gần gũi với chú chó Taro; người nói đang tìm cách gọi phù hợp.",
           "chunks": [
             "犬のタローは私の友達というか、",
             "家族というか、",
@@ -129,13 +139,13 @@
         },
         {
           "sentence": "あの人は、世間知らずというか純粋というか、きっとご両親に大切にされて育ってきたんでしょうね。",
-          "reading": "",
+          "reading": "あのひとは、せけんしらずというかじゅんすいというか、きっとごりょうしんにたいせつにされてそだってきたんでしょうね。",
           "translation": "Người đó, không biết nên nói là thiếu hiểu biết về xã hội hay là ngây thơ, chắc hẳn đã được bố mẹ hết mực yêu thương và nuôi dưỡng.",
           "blank": "あの人は、世間知らず____純粋というか、きっとご両親に大切にされて育ってきたんでしょうね。",
           "answer": "というか",
-          "hint": "Mẫu mục tiêu: ～というか～というか",
-          "reason": "Trong câu này, というか thể hiện ý nghĩa: Không biết nên nói là... hay là....",
-          "wrongReason": "Đối chiếu với mẫu ～というか～というか và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "世間知らず và 純粋 là hai góc nhìn khác nhau về cùng một người, người nói không chắc từ nào thích hợp hơn.",
+          "wrongReason": "Đây là lời tìm cách diễn đạt AというかBというか, không phải khẳng định hai đặc điểm đều được đánh giá đồng thời. Trong câu này: 世間知らず và 純粋 là hai góc nhìn khác nhau về cùng một người, người nói không chắc từ nào thích hợp hơn.",
           "chunks": [
             "あの人は、",
             "世間知らずというか純粋というか、",
@@ -144,13 +154,13 @@
         },
         {
           "sentence": "日本人は礼儀正しいというか真面目というか、もっと私たちみたく、何でも楽しめばいいのにと思ってしまいます。",
-          "reading": "",
+          "reading": "にほんじんはれいぎただしいというかまじめというか、もっとわたしたちみたく、なんでもたのしめばいいのにとおもってしまいます。",
           "translation": "Người Nhật, không biết nên nói là quá lễ phép hay quá nghiêm túc, tôi cứ nghĩ rằng giá mà họ giống chúng tôi hơn và thoải mái tận hưởng mọi thứ thì tốt.",
           "blank": "日本人は礼儀正しい____真面目というか、もっと私たちみたく、何でも楽しめばいいのにと思ってしまいます。",
           "answer": "というか",
-          "hint": "Mẫu mục tiêu: ～というか～というか",
-          "reason": "Trong câu này, というか thể hiện ý nghĩa: Không biết nên nói là... hay là....",
-          "wrongReason": "Đối chiếu với mẫu ～というか～というか và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "礼儀正しい và 真面目 là hai nhận xét tương tự về người Nhật; người nói đang tìm cách diễn tả cảm nhận.",
+          "wrongReason": "Đây là lời tìm cách diễn đạt AというかBというか, không phải khẳng định hai đặc điểm đều được đánh giá đồng thời. Trong câu này: 礼儀正しい và 真面目 là hai nhận xét tương tự về người Nhật; người nói đang tìm cách diễn tả cảm nhận.",
           "chunks": [
             "日本人は礼儀正しいというか真面目というか、",
             "もっと私たちみたく、",
@@ -165,39 +175,44 @@
       "grammar": "～だの～だの",
       "reading": "～だの～だの",
       "meaning": "Nào là... nào là...",
-      "formation": "Cấu trúc: ～だの～だの (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Danh từ / tính từ / mệnh đề dạng thông thường + だの + … + だの",
       "priorityStars": 4,
-      "explanation": "Mẫu ～だの～だの diễn tả: Nào là... nào là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Liệt kê một số lời nói, lý do, đồ vật hoặc hành động theo kiểu “nào là A, nào là B”. Thường mang sắc thái phàn nàn, chê trách hoặc cho rằng những điều được liệt kê thật lỉnh kỉnh.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Nào là... nào là..."
+          "title": "Cấu trúc",
+          "text": "AだのBだの; có thể thêm と trước động từ nói năng như 文句を言う."
         },
         {
-          "title": "Mẫu",
-          "text": "～だの～だの"
+          "title": "Sắc thái",
+          "text": "Thiên về khẩu ngữ; người nói thường bày tỏ khó chịu, ngán ngẩm hoặc xem nhẹ việc liệt kê."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～や～など trung tính hơn, còn ～だの～だの thường biểu hiện cảm xúc không hài lòng."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng ～だの～だの như liệt kê trung tính trong văn bản công vụ.",
+        "Không hiểu だの ở đây là một câu khẳng định kết thúc bằng だ."
       ],
       "discovery": {
         "distractors": [
-          "Đáng để V / Đủ giá trị, chất lượng để V",
-          "Nếu không có... thì... / Không có... thì không thể...",
-          "Do N mà... / Vì có N mà..."
+          "Đưa hai ví dụ để khen ngợi nghiêm túc",
+          "Hai khả năng mà người nghe có thể chọn làm",
+          "Giải thích nguyên nhân chính của kết quả"
         ]
       },
       "examples": [
         {
           "sentence": "まずいだのきらいだのと彼氏は料理に文句ばかり言っている。",
-          "reading": "",
+          "reading": "まずいだのきらいだのとかれしはりょうりにもんくばかりいっている。",
           "translation": "Bạn trai tôi cứ nào là dở, nào là không thích, suốt ngày chỉ phàn nàn về đồ ăn.",
           "blank": "まずい____きらいだのと彼氏は料理に文句ばかり言っている。",
           "answer": "だの",
-          "hint": "Mẫu mục tiêu: ～だの～だの",
-          "reason": "Trong câu này, だの thể hiện ý nghĩa: Nào là... nào là....",
-          "wrongReason": "Đối chiếu với mẫu ～だの～だの và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "まずい và きらい là những lời chê liên tiếp của bạn trai; だの làm nổi bật sự khó chịu trước lời phàn nàn.",
+          "wrongReason": "だの liệt kê điều gây khó chịu, khác phép liệt kê trung tính ～や～など. Trong câu này: まずい và きらい là những lời chê liên tiếp của bạn trai; だの làm nổi bật sự khó chịu trước lời phàn nàn.",
           "chunks": [
             "まずいだのきらいだのと",
             "彼氏は料理に",
@@ -206,13 +221,13 @@
         },
         {
           "sentence": "私の母は、クッキーだのチョコレートだの、体に悪いものを息子に食べさせようとするので、困る。",
-          "reading": "",
+          "reading": "わたしのははは、クッキーだのチョコレートだの、からだにわるいものをむすこにたべさせようとするので、こまる。",
           "translation": "Mẹ tôi cứ cho con trai tôi ăn nào là bánh quy, nào là sô-cô-la và những thứ không tốt cho sức khỏe, khiến tôi rất phiền.",
           "blank": "私の母は、クッキー____チョコレートだの、体に悪いものを息子に食べさせようとするので、困る。",
           "answer": "だの",
-          "hint": "Mẫu mục tiêu: ～だの～だの",
-          "reason": "Trong câu này, だの thể hiện ý nghĩa: Nào là... nào là....",
-          "wrongReason": "Đối chiếu với mẫu ～だの～だの và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "クッキー và チョコレート chỉ là các ví dụ bị người nói than phiền vì không muốn cho con ăn quá nhiều đồ ngọt.",
+          "wrongReason": "だの liệt kê điều gây khó chịu, khác phép liệt kê trung tính ～や～など. Trong câu này: クッキー và チョコレート chỉ là các ví dụ bị người nói than phiền vì không muốn cho con ăn quá nhiều đồ ngọt.",
           "chunks": [
             "私の母は、",
             "クッキーだのチョコレートだの、",
@@ -222,15 +237,16 @@
         },
         {
           "sentence": "うちにいると母に買い物に頼まれるだの、掃除させられるだので、全然ゆっくりと休めないんです。",
-          "reading": "",
+          "reading": "うちにいるとははにかいものにたのまれるだの、そうじさせられるだので、ぜんぜんゆっくりとやすめないんです。",
           "translation": "Cứ ở nhà là tôi lại nào bị mẹ nhờ đi mua đồ, nào bị bắt dọn dẹp, nên hoàn toàn không thể thong thả nghỉ ngơi được.",
           "blank": "うちにいると母に買い物に頼まれる____、掃除させられるだので、全然ゆっくりと休めないんです。",
           "answer": "だの",
-          "hint": "Mẫu mục tiêu: ～だの～だの",
-          "reason": "Trong câu này, だの thể hiện ý nghĩa: Nào là... nào là....",
-          "wrongReason": "Đối chiếu với mẫu ～だの～だの và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "買い物に頼まれる và 掃除させられる là những việc bị sai khiến hết lần này tới lần khác, dẫn đến không thể nghỉ.",
+          "wrongReason": "だの liệt kê điều gây khó chịu, khác phép liệt kê trung tính ～や～など. Trong câu này: 買い物に頼まれる và 掃除させられる là những việc bị sai khiến hết lần này tới lần khác, dẫn đến không thể nghỉ.",
           "chunks": [
-            "うちにいると母に買い物に頼まれるだの、",
+            "うちにいると",
+            "母に買い物に頼まれるだの、",
             "掃除させられるだので、",
             "全然ゆっくりと休めないんです。"
           ]
@@ -243,54 +259,59 @@
       "grammar": "～なり～なり",
       "reading": "～なり～なり",
       "meaning": "Hoặc là... hoặc là...",
-      "formation": "Cấu trúc: ～なり～なり (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Động từ dạng từ điển / danh từ + なり + … + なり",
       "priorityStars": 4,
-      "explanation": "Mẫu ～なり～なり diễn tả: Hoặc là... hoặc là.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Đưa ra một số phương án ví dụ để người nghe chọn làm ít nhất một việc phù hợp. Mục đích thường là khuyên, gợi ý hoặc thúc giục hành động, không yêu cầu làm hết tất cả phương án.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Hoặc là... hoặc là..."
+          "title": "Cấu trúc",
+          "text": "V辞書形 + なり + V辞書形 + なり; N + なり + N + なり. Có thể liệt kê ba lựa chọn."
         },
         {
-          "title": "Mẫu",
-          "text": "～なり～なり"
+          "title": "Sắc thái",
+          "text": "Thường đi cùng lời khuyên, yêu cầu hoặc nhận xét “có nhiều cách để làm”."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～なり đơn lẻ sau động từ có nghĩa “vừa mới… liền…”; ～なり～なり là liệt kê các lựa chọn."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu hai hành động là chuỗi bắt buộc phải thực hiện theo thứ tự.",
+        "Không nhầm ～なり～なり với mẫu ～なり chỉ hành động ngay sau khi sự việc xảy ra."
       ],
       "discovery": {
         "distractors": [
-          "Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc)",
-          "(Nếu...) thì cùng lắm sẽ... / Chỉ cần... là được",
-          "Bất chấp N / Mặc kệ N"
+          "Vừa xảy ra A thì lập tức xảy ra B",
+          "A và B đều là mặt tiêu biểu được đánh giá",
+          "Liệt kê các lời phàn nàn đầy khó chịu"
         ]
       },
       "examples": [
         {
           "sentence": "売るなり捨てるなりあげるなりしないと、いつまで経っても部屋は片付かないよ。",
-          "reading": "",
+          "reading": "うるなりすてるなりあげるなりしないと、いつまでたってもへやはかたづかないよ。",
           "translation": "Nếu không làm gì đó như bán đi, vứt đi hoặc cho người khác thì dù bao lâu căn phòng cũng chẳng thể dọn gọn được đâu.",
           "blank": "売る____捨てるなりあげるなりしないと、いつまで経っても部屋は片付かないよ。",
           "answer": "なり",
-          "hint": "Mẫu mục tiêu: ～なり～なり",
-          "reason": "Trong câu này, なり thể hiện ý nghĩa: Hoặc là... hoặc là....",
-          "wrongReason": "Đối chiếu với mẫu ～なり～なり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "売る, 捨てる, あげる là các phương án xử lý đồ thừa; chỉ cần chọn cách phù hợp để dọn phòng.",
+          "wrongReason": "なり～なり gợi các lựa chọn có thể làm, không mang nghĩa “vừa mới… ngay lập tức”. Trong câu này: 売る, 捨てる, あげる là các phương án xử lý đồ thừa; chỉ cần chọn cách phù hợp để dọn phòng.",
           "chunks": [
-            "売るなり捨てるなり",
-            "あげるなりしないと、",
-            "いつまで経っても部屋は片付かないよ。"
+            "売るなり捨てるなりあげるなりしないと、",
+            "いつまで経っても",
+            "部屋は片付かないよ。"
           ]
         },
         {
           "sentence": "洗濯するなり掃除するなり、妻を手伝う方法はいくらでもあるだろう。",
-          "reading": "",
+          "reading": "せんたくするなりそうじするなり、つまをてつだうほうほうはいくらでもあるだろう。",
           "translation": "Hoặc giặt quần áo, hoặc dọn dẹp, có rất nhiều cách để giúp đỡ vợ mà.",
           "blank": "洗濯する____掃除するなり、妻を手伝う方法はいくらでもあるだろう。",
           "answer": "なり",
-          "hint": "Mẫu mục tiêu: ～なり～なり",
-          "reason": "Trong câu này, なり thể hiện ý nghĩa: Hoặc là... hoặc là....",
-          "wrongReason": "Đối chiếu với mẫu ～なり～なり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "洗濯する và 掃除する là hai ví dụ trong nhiều cách giúp vợ, không bắt buộc phải làm cả hai.",
+          "wrongReason": "なり～なり gợi các lựa chọn có thể làm, không mang nghĩa “vừa mới… ngay lập tức”. Trong câu này: 洗濯する và 掃除する là hai ví dụ trong nhiều cách giúp vợ, không bắt buộc phải làm cả hai.",
           "chunks": [
             "洗濯するなり掃除するなり、",
             "妻を手伝う方法は",
@@ -299,13 +320,13 @@
         },
         {
           "sentence": "誰かに協力をお願いするなり、相談するなり、方法は色々あっただろうに、なぜ手遅れになってから言うのか。",
-          "reading": "",
+          "reading": "だれかにきょうりょくをおねがいするなり、そうだんするなり、ほうほうはいろいろあっただろうに、なぜておくれになってからいうのか。",
           "translation": "Lẽ ra có nhiều cách như nhờ ai đó giúp đỡ hoặc bàn bạc với ai đó, vậy mà tại sao đến khi quá muộn rồi mới nói?",
           "blank": "誰かに協力をお願いする____、相談するなり、方法は色々あっただろうに、なぜ手遅れになってから言うのか。",
           "answer": "なり",
-          "hint": "Mẫu mục tiêu: ～なり～なり",
-          "reason": "Trong câu này, なり thể hiện ý nghĩa: Hoặc là... hoặc là....",
-          "wrongReason": "Đối chiếu với mẫu ～なり～なり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "お願いする và 相談する là hai hướng xử lý có thể làm trước khi quá muộn; câu nhấn mạnh lẽ ra có nhiều lựa chọn.",
+          "wrongReason": "なり～なり gợi các lựa chọn có thể làm, không mang nghĩa “vừa mới… ngay lập tức”. Trong câu này: お願いする và 相談する là hai hướng xử lý có thể làm trước khi quá muộn; câu nhấn mạnh lẽ ra có nhiều lựa chọn.",
           "chunks": [
             "誰かに協力をお願いするなり、",
             "相談するなり、",
@@ -321,54 +342,59 @@
       "grammar": "～んがため",
       "reading": "～んがため",
       "meaning": "Để mà... / Vì mục đích...",
-      "formation": "Động từ dạng ない bỏ ない + んがため（する → せんがため）",
+      "formation": "Động từ dạng ない bỏ ない + んがため（に）; する → せんがため（に）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～んがため diễn tả: Để mà... / Vì mục đích.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Diễn tả mục đích mạnh và có phần quyết liệt: “cốt để”, “nhằm bằng được”. Đây là cách nói cổ/trang trọng, thường gặp trong văn viết, văn học hoặc lời diễn đạt trang nghiêm.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Để mà... / Vì mục đích..."
+          "title": "Cấu trúc",
+          "text": "救わない → 救わんがために; 達成しない → 達成せんがために."
         },
         {
-          "title": "Mẫu",
-          "text": "～んがため"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh ý chí đạt mục đích, có thể dẫn tới hành động quá mức hoặc hy sinh."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～ために là cách nói thông thường; ～んがため（に） cứng, cổ và nhấn mạnh quyết tâm."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không nhầm ん ở đây với lối nói phủ định thông thường như 行かん (không đi).",
+        "Riêng する dùng せんがため; không viết しんがため."
       ],
       "discovery": {
         "distractors": [
-          "Xứng đáng... / Đủ để...",
-          "Nếu V thì là hết / Nếu V thì coi như xong",
-          "Buộc phải N"
+          "Như sắp làm A nhưng thực tế chưa làm",
+          "Đưa ra hai phương án thay thế nhau",
+          "Diễn tả hành động xảy ra ngay lập tức"
         ]
       },
       "examples": [
         {
           "sentence": "明日の朝までに企画案を完成させんがために、一人会社に残る。",
-          "reading": "",
+          "reading": "あしたのあさまでにきかくあんをかんせいさせんがために、ひとりかいしゃにのこる。",
           "translation": "Để hoàn thành bản kế hoạch trước sáng mai, tôi ở lại công ty một mình.",
           "blank": "明日の朝までに企画案を完成させ____に、一人会社に残る。",
           "answer": "んがため",
-          "hint": "Mẫu mục tiêu: ～んがため",
-          "reason": "Trong câu này, んがため thể hiện ý nghĩa: Để mà... / Vì mục đích....",
-          "wrongReason": "Đối chiếu với mẫu ～んがため và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "完成させんがために nêu mục tiêu phải hoàn thành đề án trước sáng mai, giải thích việc ở lại công ty một mình.",
+          "wrongReason": "んがため là mục đích mạnh, tạo từ gốc phủ định bỏ ない; không phải phủ định hành động. Trong câu này: 完成させんがために nêu mục tiêu phải hoàn thành đề án trước sáng mai, giải thích việc ở lại công ty một mình.",
           "chunks": [
-            "明日の朝までに企画案を",
-            "完成させんがために、",
+            "明日の朝までに",
+            "企画案を完成させんがために、",
             "一人会社に残る。"
           ]
         },
         {
           "sentence": "彼は社内で出世せんがため、同僚を陥れた。",
-          "reading": "",
+          "reading": "かれはしゃないでしゅっせせんがため、どうりょうをおとしいれた。",
           "translation": "Để thăng tiến trong công ty, anh ta đã hãm hại đồng nghiệp.",
           "blank": "彼は社内で出世せ____、同僚を陥れた。",
           "answer": "んがため",
-          "hint": "Mẫu mục tiêu: ～んがため",
-          "reason": "Trong câu này, んがため thể hiện ý nghĩa: Để mà... / Vì mục đích....",
-          "wrongReason": "Đối chiếu với mẫu ～んがため và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "出世せんがため diễn tả mục đích thăng tiến mạnh tới mức hãm hại đồng nghiệp.",
+          "wrongReason": "んがため là mục đích mạnh, tạo từ gốc phủ định bỏ ない; không phải phủ định hành động. Trong câu này: 出世せんがため diễn tả mục đích thăng tiến mạnh tới mức hãm hại đồng nghiệp.",
           "chunks": [
             "彼は社内で",
             "出世せんがため、",
@@ -377,13 +403,13 @@
         },
         {
           "sentence": "父は子を救わんがために、荒波に飛び込み、重症を負った。",
-          "reading": "",
+          "reading": "ちちはこをすくわんがために、あらなみにとびこみ、じゅうしょうをおった。",
           "translation": "Để cứu con, người cha đã lao xuống biển động và bị thương nặng.",
           "blank": "父は子を救わ____に、荒波に飛び込み、重症を負った。",
           "answer": "んがため",
-          "hint": "Mẫu mục tiêu: ～んがため",
-          "reason": "Trong câu này, んがため thể hiện ý nghĩa: Để mà... / Vì mục đích....",
-          "wrongReason": "Đối chiếu với mẫu ～んがため và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "救わんがために biểu thị quyết tâm cứu con, khiến người cha lao vào sóng lớn bất chấp nguy hiểm.",
+          "wrongReason": "んがため là mục đích mạnh, tạo từ gốc phủ định bỏ ない; không phải phủ định hành động. Trong câu này: 救わんがために biểu thị quyết tâm cứu con, khiến người cha lao vào sóng lớn bất chấp nguy hiểm.",
           "chunks": [
             "父は子を救わんがために、",
             "荒波に飛び込み、",
@@ -398,54 +424,59 @@
       "grammar": "～んばかり",
       "reading": "～んばかり",
       "meaning": "Như thể sắp V / Cứ như muốn V",
-      "formation": "Động từ dạng ない bỏ ない + んばかり（する → せんばかり）",
+      "formation": "Động từ dạng ない bỏ ない + んばかり（に／の）; する → せんばかり",
       "priorityStars": 4,
-      "explanation": "Mẫu ～んばかり diễn tả: Như thể sắp V / Cứ như muốn V. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Diễn tả dáng vẻ, cử chỉ hoặc trạng thái mạnh tới mức “như thể sắp làm A”, “cứ như muốn A”. Hành động A thường chỉ là cảm nhận, không khẳng định đã xảy ra.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Như thể sắp V / Cứ như muốn V"
+          "title": "Cấu trúc",
+          "text": "飛び上がらない → 飛び上がらんばかりに; 言わない → 言わんばかりの顔."
         },
         {
-          "title": "Mẫu",
-          "text": "～んばかり"
+          "title": "Sắc thái",
+          "text": "Miêu tả hình ảnh sống động, thường đi với 喜ぶ, 謝る, 顔, 勢い."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～んがため chỉ mục đích thật; ～んばかり nói ví von về dáng vẻ giống như sắp xảy ra."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu rằng hành động trước んばかり chắc chắn đã thực hiện.",
+        "Riêng する chuyển thành せんばかり, không viết しんばかり."
       ],
       "discovery": {
         "distractors": [
-          "Trái ngược với... / Khác với...",
-          "Đã đạt đến / Đã có thể đến mức...",
-          "Khởi đầu với N / Đầu tiên là N, sau đó..."
+          "Thực hiện hành động nhằm mục đích đạt A",
+          "Đưa hai lựa chọn để làm một trong hai",
+          "Không để ý tới hậu quả có thật"
         ]
       },
       "examples": [
         {
           "sentence": "土下座せんばかりに謝罪をしたが、妻は断固として許してはくれなかった。",
-          "reading": "",
+          "reading": "どげざせんばかりにしゃざいをしたが、つまはだんことしてゆるしてはくれなかった。",
           "translation": "Anh ấy xin lỗi đến mức như thể sắp quỳ rạp xuống đất, nhưng người vợ vẫn kiên quyết không tha thứ.",
           "blank": "土下座せ____に謝罪をしたが、妻は断固として許してはくれなかった。",
           "answer": "んばかり",
-          "hint": "Mẫu mục tiêu: ～んばかり",
-          "reason": "Trong câu này, んばかり thể hiện ý nghĩa: Như thể sắp V / Cứ như muốn V.",
-          "wrongReason": "Đối chiếu với mẫu ～んばかり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "土下座せんばかり diễn tả mức độ cúi đầu xin lỗi như thể sắp quỳ lạy, không khẳng định đã quỳ thật.",
+          "wrongReason": "んばかり diễn tả dáng vẻ “như thể sắp”, không phải hành động chắc chắn đã diễn ra. Trong câu này: 土下座せんばかり diễn tả mức độ cúi đầu xin lỗi như thể sắp quỳ lạy, không khẳng định đã quỳ thật.",
           "chunks": [
             "土下座せんばかりに謝罪をしたが、",
-            "妻は断固として許しては",
-            "くれなかった。"
+            "妻は断固として",
+            "許してはくれなかった。"
           ]
         },
         {
           "sentence": "娘は念願の志望校に合格し、飛び上がらんばかりに喜んでいた。",
-          "reading": "",
+          "reading": "むすめはねんがんのしぼうこうにごうかくし、とびあがらんばかりによろこんでいた。",
           "translation": "Con gái tôi đỗ vào ngôi trường mà nó hằng mong ước và vui mừng đến mức như thể sắp nhảy cẫng lên.",
           "blank": "娘は念願の志望校に合格し、飛び上がら____に喜んでいた。",
           "answer": "んばかり",
-          "hint": "Mẫu mục tiêu: ～んばかり",
-          "reason": "Trong câu này, んばかり thể hiện ý nghĩa: Như thể sắp V / Cứ như muốn V.",
-          "wrongReason": "Đối chiếu với mẫu ～んばかり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "飛び上がらんばかり diễn tả niềm vui lớn đến mức trông như sắp nhảy cẫng lên khi đỗ trường mong muốn.",
+          "wrongReason": "んばかり diễn tả dáng vẻ “như thể sắp”, không phải hành động chắc chắn đã diễn ra. Trong câu này: 飛び上がらんばかり diễn tả niềm vui lớn đến mức trông như sắp nhảy cẫng lên khi đỗ trường mong muốn.",
           "chunks": [
             "娘は念願の志望校に合格し、",
             "飛び上がらんばかりに",
@@ -454,17 +485,17 @@
         },
         {
           "sentence": "ボロボロのソファの前で、まるで「やばい、ばれてしまった」と言わんばかりの顔で犬が座っている。",
-          "reading": "",
+          "reading": "ボロボロのソファのまえで、まるで「やばい、ばれてしまった」といわんばかりのかおでいぬがすわっている。",
           "translation": "Trước chiếc ghế sofa rách nát, con chó ngồi đó với vẻ mặt cứ như muốn nói: \"Chết rồi, bị phát hiện mất rồi.\"",
           "blank": "ボロボロのソファの前で、まるで「やばい、ばれてしまった」と言わ____の顔で犬が座っている。",
           "answer": "んばかり",
-          "hint": "Mẫu mục tiêu: ～んばかり",
-          "reason": "Trong câu này, んばかり thể hiện ý nghĩa: Như thể sắp V / Cứ như muốn V.",
-          "wrongReason": "Đối chiếu với mẫu ～んばかり và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "言わんばかりの顔 diễn tả nét mặt con chó giống như muốn nói thành lời, dù chó không nói thật.",
+          "wrongReason": "んばかり diễn tả dáng vẻ “như thể sắp”, không phải hành động chắc chắn đã diễn ra. Trong câu này: 言わんばかりの顔 diễn tả nét mặt con chó giống như muốn nói thành lời, dù chó không nói thật.",
           "chunks": [
             "ボロボロのソファの前で、",
-            "まるで「やばい、",
-            "ばれてしまった」と言わんばかりの顔で犬が座っている。"
+            "まるで「やばい、ばれてしまった」と",
+            "言わんばかりの顔で犬が座っている。"
           ]
         }
       ],
@@ -475,39 +506,44 @@
       "grammar": "～を顧みず",
       "reading": "～をかえりみず",
       "meaning": "Bất chấp... / Không màng đến N",
-      "formation": "Cấu trúc: ～を顧みず (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Danh từ + を／も顧みず（に）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～を顧みず diễn tả: Bất chấp... / Không màng đến N. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Diễn tả việc làm gì mà không nghĩ tới, không quan tâm hoặc không đếm xỉa đến một điều đáng lẽ phải cân nhắc (an toàn, gia đình, thể diện, người khác). Tùy ngữ cảnh, hành động có thể được đánh giá tích cực hoặc tiêu cực.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Bất chấp... / Không màng đến N"
+          "title": "Cấu trúc",
+          "text": "危険を顧みず / 家庭を顧みず / 周囲の迷惑も顧みずに."
         },
         {
-          "title": "Mẫu",
-          "text": "～を顧みず"
+          "title": "Sắc thái",
+          "text": "Tập trung vào điều bị bỏ qua, có thể khen tinh thần hy sinh hoặc phê phán sự vô trách nhiệm."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～をものともせず nhấn vào vượt qua trở ngại một cách mạnh mẽ; ～を顧みず nhấn vào việc không quan tâm cân nhắc."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không mặc định mọi câu dùng ～を顧みず đều có nghĩa ca ngợi.",
+        "Chú ý cách đọc 顧みる là かえりみる, khác 振り返る."
       ],
       "discovery": {
         "distractors": [
-          "Đối với N thì... / Nếu xét từ lập trường của N thì...",
-          "Chính vì... / Trước mặt... nên",
-          "Thông qua N / Bằng N"
+          "Bất chấp trở ngại để giành thành công với sắc thái ca ngợi rõ",
+          "Hai mục đích được thực hiện cùng lúc",
+          "Diễn tả một quá trình trải qua nhiều giai đoạn"
         ]
       },
       "examples": [
         {
           "sentence": "彼女は自らを顧みず、他の人のためにボランティア活動をしている。",
-          "reading": "",
+          "reading": "かのじょはみずからをかえりみず、ほかのひとのためにボランティアかつどうをしている。",
           "translation": "Cô ấy không màng đến bản thân mình, tham gia hoạt động tình nguyện vì người khác.",
           "blank": "彼女は自ら____、他の人のためにボランティア活動をしている。",
           "answer": "を顧みず",
-          "hint": "Mẫu mục tiêu: ～を顧みず",
-          "reason": "Trong câu này, を顧みず thể hiện ý nghĩa: Bất chấp... / Không màng đến N.",
-          "wrongReason": "Đối chiếu với mẫu ～を顧みず và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "自らを顧みず cho thấy cô ấy không nghĩ đến lợi ích cá nhân khi làm tình nguyện vì người khác.",
+          "wrongReason": "顧みず nhấn vào việc không quan tâm điều đáng cân nhắc, không nhất thiết là vượt khó được khen ngợi. Trong câu này: 自らを顧みず cho thấy cô ấy không nghĩ đến lợi ích cá nhân khi làm tình nguyện vì người khác.",
           "chunks": [
             "彼女は自らを顧みず、",
             "他の人のために",
@@ -516,31 +552,31 @@
         },
         {
           "sentence": "隣の部屋の住人は、周りの迷惑も顧みずに夜遅くまでギターの練習をしている。",
-          "reading": "",
+          "reading": "となりのへやのじゅうにんは、まわりのめいわくもかえりみずによるおそくまでギターのれんしゅうをしている。",
           "translation": "Người ở phòng bên bất chấp việc gây phiền hà cho những người xung quanh, vẫn luyện guitar đến tận khuya.",
           "blank": "隣の部屋の住人は、周りの迷惑____に夜遅くまでギターの練習をしている。",
           "answer": "も顧みず",
-          "hint": "Mẫu mục tiêu: ～を顧みず",
-          "reason": "Trong câu này, も顧みず thể hiện ý nghĩa: Bất chấp... / Không màng đến N.",
-          "wrongReason": "Đối chiếu với mẫu ～を顧みず và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "周りの迷惑も顧みず nhấn mạnh hàng xóm không quan tâm sự phiền toái do tiếng đàn khuya gây ra.",
+          "wrongReason": "顧みず nhấn vào việc không quan tâm điều đáng cân nhắc, không nhất thiết là vượt khó được khen ngợi. Trong câu này: 周りの迷惑も顧みず nhấn mạnh hàng xóm không quan tâm sự phiền toái do tiếng đàn khuya gây ra.",
           "chunks": [
             "隣の部屋の住人は、",
-            "周りの迷惑も顧みずに夜遅くまで",
-            "ギターの練習をしている。"
+            "周りの迷惑も顧みずに",
+            "夜遅くまでギターの練習をしている。"
           ]
         },
         {
           "sentence": "昔は家庭を顧みずに仕事を優先する男性が多かったが、最近は家事や育児に参加する男性も多くなった。",
-          "reading": "",
+          "reading": "むかしはかていをかえりみずにしごとをゆうせんするだんせいがおおかったが、さいきんはかじやいくじにさんかするだんせいもおおくなった。",
           "translation": "Ngày trước có nhiều đàn ông không màng đến gia đình mà ưu tiên công việc, nhưng gần đây số đàn ông tham gia việc nhà và chăm sóc con cái cũng đã tăng lên.",
           "blank": "昔は家庭____に仕事を優先する男性が多かったが、最近は家事や育児に参加する男性も多くなった。",
           "answer": "を顧みず",
-          "hint": "Mẫu mục tiêu: ～を顧みず",
-          "reason": "Trong câu này, を顧みず thể hiện ý nghĩa: Bất chấp... / Không màng đến N.",
-          "wrongReason": "Đối chiếu với mẫu ～を顧みず và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "家庭を顧みず mô tả việc bỏ bê quan tâm gia đình để đặt công việc lên hàng đầu.",
+          "wrongReason": "顧みず nhấn vào việc không quan tâm điều đáng cân nhắc, không nhất thiết là vượt khó được khen ngợi. Trong câu này: 家庭を顧みず mô tả việc bỏ bê quan tâm gia đình để đặt công việc lên hàng đầu.",
           "chunks": [
-            "昔は家庭を顧みずに仕事を",
-            "優先する男性が多かったが、",
+            "昔は家庭を顧みずに",
+            "仕事を優先する男性が多かったが、",
             "最近は家事や育児に参加する男性も多くなった。"
           ]
         }
@@ -552,39 +588,44 @@
       "grammar": "～をものともせず（に）",
       "reading": "～をものともせず（に）",
       "meaning": "Bất chấp... / Vượt lên N",
-      "formation": "Cấu trúc: ～をものともせず（に） (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Danh từ chỉ trở ngại, khó khăn + をものともせず（に）",
       "priorityStars": 4,
-      "explanation": "Mẫu ～をものともせず（に） diễn tả: Bất chấp... / Vượt lên N. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Nhấn mạnh chủ thể không nao núng trước áp lực, khuyết tật, khó khăn hoặc nguy hiểm mà vẫn kiên trì hành động. Thường hàm ý khen ngợi nghị lực, tính mạnh mẽ hoặc ý chí vượt trở ngại.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Bất chấp... / Vượt lên N"
+          "title": "Cấu trúc",
+          "text": "圧力をものともせず / 障害をものともせずに / 災害をものともせず."
         },
         {
-          "title": "Mẫu",
-          "text": "～をものともせず（に）"
+          "title": "Sắc thái",
+          "text": "Cảm nhận tích cực: dù trở ngại rất lớn vẫn vững vàng làm việc."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～を顧みず nhấn vào không để tâm/không cân nhắc; ～をものともせず nhấn vào vượt qua khó khăn và không nhụt chí."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng cho một sự vật không phải trở ngại mà chỉ là đồ vật đi kèm.",
+        "Không bỏ qua sắc thái mạnh mẽ và thường mang tính đánh giá tích cực."
       ],
       "discovery": {
         "distractors": [
-          "Trong hoàn cảnh... / Ở tình huống...",
-          "Cả... nữa / Vì cũng...",
-          "Nốt (thời gian) / Sau (thời gian) sẽ... (kết thúc)"
+          "Không quan tâm hậu quả đối với người xung quanh",
+          "Một hành động có hai mục đích cùng lúc",
+          "Chỉ trình tự trải qua các bước trung gian"
         ]
       },
       "examples": [
         {
           "sentence": "大企業からの圧力をものともせず、その企業は新しいシステムを普及させた。",
-          "reading": "",
+          "reading": "だいきぎょうからのあつりょくをものともせず、そのきぎょうはあたらしいシステムをふきゅうさせた。",
           "translation": "Bất chấp áp lực từ các doanh nghiệp lớn, công ty đó đã phổ biến hệ thống mới.",
           "blank": "大企業からの圧力____、その企業は新しいシステムを普及させた。",
           "answer": "をものともせず",
-          "hint": "Mẫu mục tiêu: ～をものともせず（に）",
-          "reason": "Trong câu này, をものともせず thể hiện ý nghĩa: Bất chấp... / Vượt lên N.",
-          "wrongReason": "Đối chiếu với mẫu ～をものともせず（に） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "圧力をものともせず nhấn mạnh doanh nghiệp không khuất phục sức ép từ công ty lớn và vẫn phổ biến hệ thống mới.",
+          "wrongReason": "ものともせず nhấn mạnh vượt qua sức ép hoặc trở ngại, thường có sắc thái trân trọng. Trong câu này: 圧力をものともせず nhấn mạnh doanh nghiệp không khuất phục sức ép từ công ty lớn và vẫn phổ biến hệ thống mới.",
           "chunks": [
             "大企業からの圧力をものともせず、",
             "その企業は",
@@ -593,13 +634,13 @@
         },
         {
           "sentence": "彼は目の障害をものともせずに、大学に進学し、優秀な成績を収めた。",
-          "reading": "",
+          "reading": "かれはめのしょうがいをものともせずに、だいがくにしんがくし、ゆうしゅうなせいせきをおさめた。",
           "translation": "Bất chấp khiếm khuyết về thị lực, anh ấy đã học lên đại học và đạt được thành tích xuất sắc.",
           "blank": "彼は目の障害____に、大学に進学し、優秀な成績を収めた。",
           "answer": "をものともせず",
-          "hint": "Mẫu mục tiêu: ～をものともせず（に）",
-          "reason": "Trong câu này, をものともせず thể hiện ý nghĩa: Bất chấp... / Vượt lên N.",
-          "wrongReason": "Đối chiếu với mẫu ～をものともせず（に） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "目の障害をものともせず diễn tả việc anh ấy nỗ lực vượt trở ngại để học lên đại học và đạt thành tích.",
+          "wrongReason": "ものともせず nhấn mạnh vượt qua sức ép hoặc trở ngại, thường có sắc thái trân trọng. Trong câu này: 目の障害をものともせず diễn tả việc anh ấy nỗ lực vượt trở ngại để học lên đại học và đạt thành tích.",
           "chunks": [
             "彼は目の障害をものともせずに、",
             "大学に進学し、",
@@ -608,13 +649,13 @@
         },
         {
           "sentence": "この地域は、先月大きな台風が直撃したが、災害をものともせずに、逞しく生活する人々の姿に感動した。",
-          "reading": "",
+          "reading": "このちいきは、せんげつおおきなたいふうがちょくげきしたが、さいがいをものともせずに、たくましくせいかつするひとびとのすがたにかんどうした。",
           "translation": "Khu vực này tháng trước đã bị một cơn bão lớn đổ bộ trực tiếp, nhưng tôi rất xúc động trước hình ảnh những người dân vẫn kiên cường sống bất chấp thiên tai.",
           "blank": "この地域は、先月大きな台風が直撃したが、災害____に、逞しく生活する人々の姿に感動した。",
           "answer": "をものともせず",
-          "hint": "Mẫu mục tiêu: ～をものともせず（に）",
-          "reason": "Trong câu này, をものともせず thể hiện ý nghĩa: Bất chấp... / Vượt lên N.",
-          "wrongReason": "Đối chiếu với mẫu ～をものともせず（に） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "災害をものともせず nhấn mạnh tinh thần kiên cường của cư dân tiếp tục sinh sống sau bão lớn.",
+          "wrongReason": "ものともせず nhấn mạnh vượt qua sức ép hoặc trở ngại, thường có sắc thái trân trọng. Trong câu này: 災害をものともせず nhấn mạnh tinh thần kiên cường của cư dân tiếp tục sinh sống sau bão lớn.",
           "chunks": [
             "この地域は、",
             "先月大きな台風が直撃したが、",
@@ -630,54 +671,58 @@
       "grammar": "～を兼ねて",
       "reading": "～をかねて",
       "meaning": "Nhân tiện N... / N2 kết hợp cùng N1...",
-      "formation": "Cấu trúc: ～を兼ねて (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Danh từ + を／も兼ねて; AとBを兼ねる",
       "priorityStars": 4,
-      "explanation": "Mẫu ～を兼ねて diễn tả: Nhân tiện N... / N2 kết hợp cùng N1.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Một hoạt động đồng thời đảm nhận hai mục đích, vai trò hoặc công dụng. Thường dịch “kết hợp”, “tiện thể làm luôn”, nhưng hai mục đích đều là một phần của hành động chứ không chỉ trùng hợp ngẫu nhiên.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Nhân tiện N... / N2 kết hợp cùng N1..."
+          "title": "Cấu trúc",
+          "text": "掃除を兼ねて整理する / 運動も兼ねて買い物する / 趣味と実益を兼ねる."
         },
         {
-          "title": "Mẫu",
-          "text": "～を兼ねて"
+          "title": "Sắc thái",
+          "text": "Nhấn vào lợi ích kép hoặc sự kết hợp có chủ đích."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～ついでに chỉ tiện dịp làm thêm việc khác; ～を兼ねて nhấn rằng cùng một việc phục vụ nhiều mục đích."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu 兼ねる ở đây là 兼ねない trong mẫu ～かねない (có nguy cơ).",
+        "Không phải cứ hai việc nối tiếp là có thể dùng を兼ねて; cần có một hoạt động phục vụ hai mục đích."
       ],
       "discovery": {
         "distractors": [
-          "Ảnh hưởng tới N / Liên quan đến N",
-          "Giống như là... / Tựa như là...",
-          "N là lần cuối, sau đó..."
+          "Trải qua nhiều giai đoạn rồi đến kết quả",
+          "Bỏ qua khó khăn để kiên trì",
+          "Liệt kê hai lời phàn nàn"
         ]
       },
       "examples": [
         {
           "sentence": "部屋の掃除を兼ねて、不要な物を処分した。",
-          "reading": "",
+          "reading": "へやのそうじをかねて、ふようなものをしょぶんした。",
           "translation": "Nhân tiện dọn phòng, tôi đã xử lý những đồ không cần thiết.",
           "blank": "部屋の掃除____、不要な物を処分した。",
           "answer": "を兼ねて",
-          "hint": "Mẫu mục tiêu: ～を兼ねて",
-          "reason": "Trong câu này, を兼ねて thể hiện ý nghĩa: Nhân tiện N... / N2 kết hợp cùng N1....",
-          "wrongReason": "Đối chiếu với mẫu ～を兼ねて và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "掃除を兼ねて thể hiện việc xử lý đồ thừa đồng thời giúp hoàn thành mục đích dọn phòng.",
+          "wrongReason": "兼ねて là cùng một việc đảm nhiệm hai mục đích, không đơn thuần là tiện dịp tình cờ. Trong câu này: 掃除を兼ねて thể hiện việc xử lý đồ thừa đồng thời giúp hoàn thành mục đích dọn phòng.",
           "chunks": [
             "部屋の掃除を兼ねて、",
-            "不要な物を",
-            "処分した。"
+            "不要な物を処分した。"
           ]
         },
         {
           "sentence": "食後の運動も兼ねて、ちょっとコンビニまで買い物に行ってきます。",
-          "reading": "",
+          "reading": "しょくごのうんどうもかねて、ちょっとコンビニまでかいものにいってきます。",
           "translation": "Tôi sẽ ra cửa hàng tiện lợi mua chút đồ, vừa là để vận động sau bữa ăn.",
           "blank": "食後の運動____、ちょっとコンビニまで買い物に行ってきます。",
           "answer": "も兼ねて",
-          "hint": "Mẫu mục tiêu: ～を兼ねて",
-          "reason": "Trong câu này, も兼ねて thể hiện ý nghĩa: Nhân tiện N... / N2 kết hợp cùng N1....",
-          "wrongReason": "Đối chiếu với mẫu ～を兼ねて và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "買い物 đồng thời là vận động sau bữa ăn, vì vậy 運動も兼ねて nêu lợi ích kép của chuyến đi.",
+          "wrongReason": "兼ねて là cùng một việc đảm nhiệm hai mục đích, không đơn thuần là tiện dịp tình cờ. Trong câu này: 買い物 đồng thời là vận động sau bữa ăn, vì vậy 運動も兼ねて nêu lợi ích kép của chuyến đi.",
           "chunks": [
             "食後の運動も兼ねて、",
             "ちょっとコンビニまで",
@@ -686,13 +731,13 @@
         },
         {
           "sentence": "かばんやポーチを作って売っています。趣味と実益を兼ねているので、やりがいがありますよ。",
-          "reading": "",
+          "reading": "かばんやポーチをつくってうっています。しゅみとじつえきをかねているので、やりがいがありますよ。",
           "translation": "Tôi làm và bán túi xách, túi nhỏ. Vì vừa kết hợp sở thích vừa mang lại lợi ích thực tế nên tôi cảm thấy rất đáng làm.",
           "blank": "かばんやポーチを作って売っています。趣味と実益____いるので、やりがいがありますよ。",
           "answer": "を兼ねて",
-          "hint": "Mẫu mục tiêu: ～を兼ねて",
-          "reason": "Trong câu này, を兼ねて thể hiện ý nghĩa: Nhân tiện N... / N2 kết hợp cùng N1....",
-          "wrongReason": "Đối chiếu với mẫu ～を兼ねて và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "趣味と実益を兼ねている cho thấy công việc làm và bán túi vừa thỏa đam mê vừa có thu nhập.",
+          "wrongReason": "兼ねて là cùng một việc đảm nhiệm hai mục đích, không đơn thuần là tiện dịp tình cờ. Trong câu này: 趣味と実益を兼ねている cho thấy công việc làm và bán túi vừa thỏa đam mê vừa có thu nhập.",
           "chunks": [
             "かばんやポーチを作って売っています。",
             "趣味と実益を兼ねているので、",
@@ -707,39 +752,44 @@
       "grammar": "～を経て",
       "reading": "～をへて",
       "meaning": "Trải qua... / Thông qua...",
-      "formation": "Cấu trúc: ～を経て (xem vị trí kết hợp trong các câu ví dụ)",
+      "formation": "Danh từ chỉ quá trình, khoảng thời gian, giai đoạn hoặc tuyến đường + を経て",
       "priorityStars": 4,
-      "explanation": "Mẫu ～を経て diễn tả: Trải qua... / Thông qua.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "Diễn tả việc trải qua một chặng đường, thời gian, kinh nghiệm hay một số bước trung gian để đi đến tình trạng hoặc kết quả tiếp theo. Thường dùng trong văn viết, tin tức và ngữ cảnh công việc.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Trải qua... / Thông qua..."
+          "title": "Cấu trúc",
+          "text": "経験を経て成長する / 30年を経て完成する / 面接を経て採用される."
         },
         {
-          "title": "Mẫu",
-          "text": "～を経て"
+          "title": "Sắc thái",
+          "text": "Chú trọng quá trình, giai đoạn trung gian và kết quả sau quá trình đó."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～を通じて nhấn phương tiện hoặc khoảng thời gian liên tục; ～を経て nhấn các bước hoặc quãng thời gian đã đi qua."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không nhầm を経て với を通して ở mọi trường hợp: 面接を経て nhấn vào bước tuyển dụng trung gian.",
+        "Không dùng khi chỉ muốn nói “ngay lập tức” mà không có giai đoạn trải qua."
       ],
       "discovery": {
         "distractors": [
-          "Tùy vào N / Dựa vào N / Phụ thuộc vào N mà...",
-          "Tầm như... / Những thứ như...",
-          "Gần đến N1"
+          "Tiện thể làm hai mục đích trong một hoạt động",
+          "Không màng đến sự cản trở nào đó",
+          "Đưa ra hai cách gọi một đối tượng"
         ]
       },
       "examples": [
         {
           "sentence": "たくさんの出会いと別れを経て、人は成長するのだと、母から教えられた。",
-          "reading": "",
+          "reading": "たくさんのであいとわかれをへて、ひとはせいちょうするのだと、ははからおしえられた。",
           "translation": "Mẹ đã dạy tôi rằng con người trưởng thành thông qua việc trải qua nhiều cuộc gặp gỡ và chia ly.",
           "blank": "たくさんの出会いと別れ____、人は成長するのだと、母から教えられた。",
           "answer": "を経て",
-          "hint": "Mẫu mục tiêu: ～を経て",
-          "reason": "Trong câu này, を経て thể hiện ý nghĩa: Trải qua... / Thông qua....",
-          "wrongReason": "Đối chiếu với mẫu ～を経て và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "出会いと別れを経て mô tả các trải nghiệm tích lũy dẫn tới sự trưởng thành con người.",
+          "wrongReason": "経て diễn tả đi qua thời gian, kinh nghiệm hoặc giai đoạn trung gian để tới kết quả. Trong câu này: 出会いと別れを経て mô tả các trải nghiệm tích lũy dẫn tới sự trưởng thành con người.",
           "chunks": [
             "たくさんの出会いと別れを経て、",
             "人は成長するのだと、",
@@ -748,13 +798,13 @@
         },
         {
           "sentence": "この建物は、工事の開始から30年を経て、来年完成するそうだ。",
-          "reading": "",
+          "reading": "このたてものは、こうじのかいしからさんじゅうねんをへて、らいねんかんせいするそうだ。",
           "translation": "Nghe nói tòa nhà này sẽ hoàn thành vào năm sau, sau 30 năm kể từ khi bắt đầu thi công.",
           "blank": "この建物は、工事の開始から30年____、来年完成するそうだ。",
           "answer": "を経て",
-          "hint": "Mẫu mục tiêu: ～を経て",
-          "reason": "Trong câu này, を経て thể hiện ý nghĩa: Trải qua... / Thông qua....",
-          "wrongReason": "Đối chiếu với mẫu ～を経て và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "30年を経て nhấn mạnh quãng thời gian rất dài từ khi khởi công đến khi công trình hoàn thành.",
+          "wrongReason": "経て diễn tả đi qua thời gian, kinh nghiệm hoặc giai đoạn trung gian để tới kết quả. Trong câu này: 30年を経て nhấn mạnh quãng thời gian rất dài từ khi khởi công đến khi công trình hoàn thành.",
           "chunks": [
             "この建物は、",
             "工事の開始から30年を経て、",
@@ -763,13 +813,13 @@
         },
         {
           "sentence": "書類の記載や、数回にわたる面接を経て、今の会社に就職することができた。",
-          "reading": "",
+          "reading": "しょるいのきさいや、すうかいにわたるめんせつをへて、いまのかいしゃにしゅうしょくすることができた。",
           "translation": "Sau khi trải qua việc điền hồ sơ và nhiều vòng phỏng vấn, tôi đã có thể vào làm tại công ty hiện tại.",
           "blank": "書類の記載や、数回にわたる面接____、今の会社に就職することができた。",
           "answer": "を経て",
-          "hint": "Mẫu mục tiêu: ～を経て",
-          "reason": "Trong câu này, を経て thể hiện ý nghĩa: Trải qua... / Thông qua....",
-          "wrongReason": "Đối chiếu với mẫu ～を経て và đọc lại nghĩa tiếng Việt.",
+          "hint": "Nhận diện cấu trúc và sắc thái của mẫu trong ngữ cảnh; chú ý vị trí điền.",
+          "reason": "面接を経て nêu các bước trung gian trong quá trình tuyển dụng trước khi vào được công ty.",
+          "wrongReason": "経て diễn tả đi qua thời gian, kinh nghiệm hoặc giai đoạn trung gian để tới kết quả. Trong câu này: 面接を経て nêu các bước trung gian trong quá trình tuyển dụng trước khi vào được công ty.",
           "chunks": [
             "書類の記載や、",
             "数回にわたる面接を経て、",
