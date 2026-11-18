@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-basic-na",
+  "type": "kana",
+  "title": "Hàng N · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-h-basic-na-01",
+      "character": "な",
+      "reading": "na",
+      "meaning": "Âm na",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng N",
+      "explanation": "Hiragana な được đọc là “na” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn な, phát âm na mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu なつ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ni",
+          "Âm nu",
+          "Âm ne"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "なつ",
+          "reading": "na · tsu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "な",
+            "つ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là なつ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "な",
+          "blank": "____つ"
+        }
+      ],
+      "sampleWord": "なつ",
+      "sampleReading": "na · tsu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-basic-na-02",
+      "character": "に",
+      "reading": "ni",
+      "meaning": "Âm ni",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng N",
+      "explanation": "Hiragana に được đọc là “ni” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn に, phát âm ni mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu にく từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm nu",
+          "Âm ne"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "にく",
+          "reading": "ni · ku",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "に",
+            "く"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là にく.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "に",
+          "blank": "____く"
+        }
+      ],
+      "sampleWord": "にく",
+      "sampleReading": "ni · ku",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-basic-na-03",
+      "character": "ぬ",
+      "reading": "nu",
+      "meaning": "Âm nu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng N",
+      "explanation": "Hiragana ぬ được đọc là “nu” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ぬ, phát âm nu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ぬの từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm ni",
+          "Âm ne"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ぬの",
+          "reading": "nu · no",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ぬ",
+            "の"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ぬの.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ぬ",
+          "blank": "____の"
+        }
+      ],
+      "sampleWord": "ぬの",
+      "sampleReading": "nu · no",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-h-basic-na-04",
+      "character": "ね",
+      "reading": "ne",
+      "meaning": "Âm ne",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng N",
+      "explanation": "Hiragana ね được đọc là “ne” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ね, phát âm ne mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ねこ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm ni",
+          "Âm nu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ねこ",
+          "reading": "ne · ko",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ね",
+            "こ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ねこ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ね",
+          "blank": "____こ"
+        }
+      ],
+      "sampleWord": "ねこ",
+      "sampleReading": "ne · ko",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-h-basic-na-05",
+      "character": "の",
+      "reading": "no",
+      "meaning": "Âm no",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng N",
+      "explanation": "Hiragana の được đọc là “no” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn の, phát âm no mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu のり từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm ni",
+          "Âm nu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "のり",
+          "reading": "no · ri",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "の",
+            "り"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là のり.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "の",
+          "blank": "____り"
+        }
+      ],
+      "sampleWord": "のり",
+      "sampleReading": "no · ri",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}
