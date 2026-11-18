@@ -8,22 +8,31 @@
       "id": "n1-lg083",
       "grammar": "～を限りに",
       "reading": "～をかぎりに",
-      "meaning": "Hết... / Kể từ mốc N thì chấm dứt...",
-      "formation": "Cấu trúc: ～を限りに (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Lấy một thời điểm làm mốc cuối cùng; kể từ đó sẽ chấm dứt hoạt động hoặc quan hệ.",
+      "formation": "Danh từ chỉ thời điểm/giai đoạn + を限りに; biến thể 本日限りで／今回限りで.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～を限りに diễn tả: Hết... / Kể từ mốc N thì chấm dứt.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～を限りに xác định ranh giới kết thúc một hoạt động đang tiếp diễn. Thường gặp trong thông báo nghỉ việc, ngừng kinh doanh, kết thúc hợp tác. Sắc thái dứt khoát về việc sau mốc đó sẽ không tiếp tục nữa; không đơn thuần chỉ thời gian bắt đầu hoặc thời hạn thông thường.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Hết... / Kể từ mốc N thì chấm dứt..."
+          "title": "Cấu trúc",
+          "text": "今日・今月・今学期 + を限りに + hoạt động kết thúc; 本日限りで là biến thể không có を."
         },
         {
-          "title": "Mẫu",
-          "text": "～を限りに"
+          "title": "Sắc thái",
+          "text": "Trang trọng, hay có trong thông báo tổ chức, công sở hoặc lời tuyên bố chấm dứt."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～をもって cũng nêu mốc thời gian trong thông báo; ～を限りに đặc biệt làm nổi bật đây là lần cuối, từ sau đó không tiếp tục."
+        },
+        {
+          "title": "Biến thể ở câu 3",
+          "text": "本日限りで là dạng thay thế, không phải 本日を限りに; cần giữ đúng đáp án theo từng câu."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng を限りに để nói đơn thuần về một sự kiện bắt đầu từ hôm nay.",
+        "本日限りで không có trợ từ を; không chép máy móc を限りに vào câu này."
       ],
       "discovery": {
         "distractors": [
@@ -35,47 +44,44 @@
       "examples": [
         {
           "sentence": "今日を限りに、退職するので職場の人に挨拶をする。",
-          "reading": "",
+          "reading": "きょうをかぎりに、たいしょくするのでしょくばのひとにあいさつをする。",
           "translation": "Hôm nay là ngày cuối cùng tôi làm việc, nên tôi sẽ chào hỏi mọi người ở công ty trước khi nghỉ việc.",
           "blank": "今日____、退職するので職場の人に挨拶をする。",
           "answer": "を限りに",
-          "hint": "Mẫu mục tiêu: ～を限りに",
-          "reason": "Trong câu này, を限りに thể hiện ý nghĩa: Hết... / Kể từ mốc N thì chấm dứt....",
-          "wrongReason": "Đối chiếu với mẫu ～を限りに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～を限りに.",
+          "reason": "今日 là ngày làm việc cuối, sau hôm nay người nói nghỉ việc nên đi chào đồng nghiệp.",
+          "wrongReason": "Đáp án phù hợp là “を限りに”. 今日 là ngày làm việc cuối, sau hôm nay người nói nghỉ việc nên đi chào đồng nghiệp. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ thời điểm/giai đoạn + を限りに; biến thể 本日限りで／今回限りで.",
           "chunks": [
             "今日を限りに、",
-            "退職するので",
-            "職場の人に挨拶をする。"
+            "退職するので職場の人に挨拶をする。"
           ]
         },
         {
           "sentence": "家庭の都合で今学期を限りに、学校を辞める事にした。",
-          "reading": "",
+          "reading": "かていのつごうでこんがっきをかぎりに、がっこうをやめることにした。",
           "translation": "Vì hoàn cảnh gia đình, tôi đã quyết định sẽ nghỉ học sau khi kết thúc học kỳ này.",
           "blank": "家庭の都合で今学期____、学校を辞める事にした。",
           "answer": "を限りに",
-          "hint": "Mẫu mục tiêu: ～を限りに",
-          "reason": "Trong câu này, を限りに thể hiện ý nghĩa: Hết... / Kể từ mốc N thì chấm dứt....",
-          "wrongReason": "Đối chiếu với mẫu ～を限りに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～を限りに.",
+          "reason": "今学期 được xác định là học kỳ cuối trước khi thôi học vì lý do gia đình.",
+          "wrongReason": "Đáp án phù hợp là “を限りに”. 今学期 được xác định là học kỳ cuối trước khi thôi học vì lý do gia đình. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ thời điểm/giai đoạn + を限りに; biến thể 本日限りで／今回限りで.",
           "chunks": [
-            "家庭の都合で",
-            "今学期を限りに、",
+            "家庭の都合で今学期を限りに、",
             "学校を辞める事にした。"
           ]
         },
         {
           "sentence": "ここの店は、本日限りで閉店するとのことだ。",
-          "reading": "",
+          "reading": "ここのみせは、ほんじつかぎりでへいてんするとのことだ。",
           "translation": "Nghe nói cửa hàng này sẽ đóng cửa kể từ sau ngày hôm nay.",
           "blank": "ここの店は、本日____閉店するとのことだ。",
           "answer": "限りで",
-          "hint": "Mẫu mục tiêu: ～を限りに",
-          "reason": "Trong câu này, 限りで thể hiện ý nghĩa: Hết... / Kể từ mốc N thì chấm dứt....",
-          "wrongReason": "Đối chiếu với mẫu ～を限りに và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～を限りに.",
+          "reason": "本日限りで nhấn mạnh cửa hàng ngừng kinh doanh sau hôm nay; đây là biến thể của cách nói mốc kết thúc.",
+          "wrongReason": "Đáp án phù hợp là “限りで”. 本日限りで nhấn mạnh cửa hàng ngừng kinh doanh sau hôm nay; đây là biến thể của cách nói mốc kết thúc. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ thời điểm/giai đoạn + を限りに; biến thể 本日限りで／今回限りで.",
           "chunks": [
             "ここの店は、",
-            "本日限りで",
-            "閉店するとのことだ。"
+            "本日限りで閉店するとのことだ。"
           ]
         }
       ],
@@ -85,22 +91,27 @@
       "id": "n1-lg084",
       "grammar": "～に至る",
       "reading": "～にいたる",
-      "meaning": "Kết quả là... / Đi đến (hành động, trạng thái)...",
-      "formation": "Cấu trúc: ～に至る (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Sau một quá trình, cuối cùng đi đến kết quả, quyết định hoặc trạng thái nào đó.",
+      "formation": "Động từ thể từ điển + に至る／に至った; danh từ + に至る; Nに至るまで là một mẫu khác.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～に至る diễn tả: Kết quả là... / Đi đến (hành động, trạng thái).... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～に至る trình bày kết cục đạt tới sau khi sự việc phát triển qua nhiều giai đoạn hoặc nguyên nhân tích lũy. Hay dùng trong báo cáo, thời sự và văn viết để mô tả kết quả đáng kể hoặc nghiêm trọng. Có thể kết hợp 絶滅するに至る, 辞任するに至る hoặc 死に至る.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Kết quả là... / Đi đến (hành động, trạng thái)..."
+          "title": "Cấu trúc",
+          "text": "Vる + に至る; N + に至る. Dạng quá khứ に至った biểu thị kết cục đã xảy ra."
         },
         {
-          "title": "Mẫu",
-          "text": "～に至る"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh tiến trình dẫn tới kết quả, thường trang trọng hơn ～ことになった hoặc ～になった."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～に至る nói tới kết cục; ～に至るまで nêu phạm vi bao quát đến cả một đối tượng."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng ～に至る cho mọi sự kiện nhỏ xảy ra tức thời mà không có quá trình.",
+        "Không hiểu ～に至るまで là hoàn toàn giống ～に至る."
       ],
       "discovery": {
         "distractors": [
@@ -112,43 +123,41 @@
       "examples": [
         {
           "sentence": "この動物は毛皮のために数十年に渡って人間に殺されて、絶滅するに至った。",
-          "reading": "",
+          "reading": "このどうぶつはけがわのためにすうじゅうねんにわたってにんげんにころされて、ぜつめつするにいたった。",
           "translation": "Loài động vật này đã bị con người giết hại suốt hàng chục năm vì bộ lông, kết quả là đã đi đến tuyệt chủng.",
           "blank": "この動物は毛皮のために数十年に渡って人間に殺されて、絶滅する____。",
           "answer": "に至った",
-          "hint": "Mẫu mục tiêu: ～に至る",
-          "reason": "Trong câu này, に至った thể hiện ý nghĩa: Kết quả là... / Đi đến (hành động, trạng thái)....",
-          "wrongReason": "Đối chiếu với mẫu ～に至る và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至る.",
+          "reason": "Việc săn giết kéo dài nhiều thập kỷ dẫn đến kết quả tuyệt chủng.",
+          "wrongReason": "Đáp án phù hợp là “に至った”. Việc săn giết kéo dài nhiều thập kỷ dẫn đến kết quả tuyệt chủng. Hãy kiểm tra hình thức kết hợp: Động từ thể từ điển + に至る／に至った; danh từ + に至る; Nに至るまで là một mẫu khác.",
           "chunks": [
-            "この動物は毛皮のために",
-            "数十年に渡って人間に殺されて、",
+            "この動物は毛皮のために数十年に渡って人間に殺されて、",
             "絶滅するに至った。"
           ]
         },
         {
           "sentence": "A社長は発言が新聞に取り上げられたことで大きな問題になり、今月辞任するに至った。",
-          "reading": "",
+          "reading": "エーしゃちょうははつげんがしんぶんにとりあげられたことでおおきなもんだいになり、こんげつじにんするにいたった。",
           "translation": "Phát ngôn của giám đốc A bị báo chí đăng tải và trở thành một vấn đề lớn, kết quả là ông đã đi đến quyết định từ chức trong tháng này.",
           "blank": "A社長は発言が新聞に取り上げられたことで大きな問題になり、今月辞任する____。",
           "answer": "に至った",
-          "hint": "Mẫu mục tiêu: ～に至る",
-          "reason": "Trong câu này, に至った thể hiện ý nghĩa: Kết quả là... / Đi đến (hành động, trạng thái)....",
-          "wrongReason": "Đối chiếu với mẫu ～に至る và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至る.",
+          "reason": "Phát ngôn bị báo chí đăng tải, trở thành vấn đề lớn rồi cuối cùng dẫn đến quyết định từ chức.",
+          "wrongReason": "Đáp án phù hợp là “に至った”. Phát ngôn bị báo chí đăng tải, trở thành vấn đề lớn rồi cuối cùng dẫn đến quyết định từ chức. Hãy kiểm tra hình thức kết hợp: Động từ thể từ điển + に至る／に至った; danh từ + に至る; Nに至るまで là một mẫu khác.",
           "chunks": [
-            "A社長は発言が新聞に",
-            "取り上げられたことで大きな問題になり、",
+            "A社長は発言が新聞に取り上げられたことで大きな問題になり、",
             "今月辞任するに至った。"
           ]
         },
         {
           "sentence": "この病気は、体がだんだん動かなくなって、最終的に呼吸ができなくなり、死に至る病気だ。",
-          "reading": "",
+          "reading": "このびょうきは、からだがだんだんうごかなくなって、さいしゅうてきにこきゅうができなくなり、しにいたるびょうきだ。",
           "translation": "Căn bệnh này khiến cơ thể dần dần không thể cử động, cuối cùng không thể hô hấp và dẫn đến tử vong.",
           "blank": "この病気は、体がだんだん動かなくなって、最終的に呼吸ができなくなり、死____病気だ。",
           "answer": "に至る",
-          "hint": "Mẫu mục tiêu: ～に至る",
-          "reason": "Trong câu này, に至る thể hiện ý nghĩa: Kết quả là... / Đi đến (hành động, trạng thái)....",
-          "wrongReason": "Đối chiếu với mẫu ～に至る và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至る.",
+          "reason": "死に至る diễn tả hậu quả cuối cùng của quá trình bệnh tiến triển, không phải hành động tự phát.",
+          "wrongReason": "Đáp án phù hợp là “に至る”. 死に至る diễn tả hậu quả cuối cùng của quá trình bệnh tiến triển, không phải hành động tự phát. Hãy kiểm tra hình thức kết hợp: Động từ thể từ điển + に至る／に至った; danh từ + に至る; Nに至るまで là một mẫu khác.",
           "chunks": [
             "この病気は、",
             "体がだんだん動かなくなって、",
@@ -163,22 +172,27 @@
       "id": "n1-lg085",
       "grammar": "～に至るまで",
       "reading": "～にいたるまで",
-      "meaning": "Cho đến N... / Đến cả N...",
-      "formation": "Cấu trúc: ～に至るまで (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Cho đến cả N; phạm vi bao quát rộng tới cả đối tượng hoặc chi tiết ít ngờ tới.",
+      "formation": "Danh từ + に至るまで; thường đi với chuỗi liệt kê AからBに至るまで.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～に至るまで diễn tả: Cho đến N... / Đến cả N.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～に至るまで cho biết phạm vi không chỉ dừng ở những ví dụ tiêu biểu mà còn mở rộng tới một hạng mục cụ thể. Hạng mục sau mẫu thường được nêu như điểm cuối hoặc ví dụ nổi bật cho sự đầy đủ. Hay dùng trong văn viết, giới thiệu sản phẩm và mô tả phạm vi.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Cho đến N... / Đến cả N..."
+          "title": "Cấu trúc",
+          "text": "N + に至るまで; có thể liệt kê các hạng mục rồi kết lại ở một N nổi bật."
         },
         {
-          "title": "Mẫu",
-          "text": "～に至るまで"
+          "title": "Sắc thái",
+          "text": "Nhấn mạnh mức độ toàn diện: đến cả những chi tiết tưởng chừng nhỏ hoặc phạm vi rất xa cũng được bao gồm."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～まで chỉ giới hạn cơ bản; ～に至るまで mang sắc thái trang trọng và nhấn mạnh mức bao quát."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dịch thành “dẫn đến kết quả” như ～に至る.",
+        "Đảm bảo có phạm vi/chuỗi đối tượng để nhấn mạnh, tránh dùng vô cớ với một danh từ độc lập."
       ],
       "discovery": {
         "distractors": [
@@ -190,13 +204,13 @@
       "examples": [
         {
           "sentence": "彼女の大ファンなので、雑誌やネット記事、SNSの投稿に至るまで、すべての情報をくまなくチェックしている。",
-          "reading": "",
+          "reading": "かのじょのだいファンなので、ざっしやネットきじ、エスエヌエスのとうこうにいたるまで、すべてのじょうほうをくまなくチェックしている。",
           "translation": "Vì là một fan lớn của cô ấy nên từ tạp chí, bài viết trên mạng cho đến cả các bài đăng trên SNS, tôi đều kiểm tra kỹ mọi thông tin.",
           "blank": "彼女の大ファンなので、雑誌やネット記事、SNSの投稿____、すべての情報をくまなくチェックしている。",
           "answer": "に至るまで",
-          "hint": "Mẫu mục tiêu: ～に至るまで",
-          "reason": "Trong câu này, に至るまで thể hiện ý nghĩa: Cho đến N... / Đến cả N....",
-          "wrongReason": "Đối chiếu với mẫu ～に至るまで và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至るまで.",
+          "reason": "Người hâm mộ kiểm tra mọi loại thông tin, kể cả bài đăng SNS.",
+          "wrongReason": "Đáp án phù hợp là “に至るまで”. Người hâm mộ kiểm tra mọi loại thông tin, kể cả bài đăng SNS. Hãy kiểm tra hình thức kết hợp: Danh từ + に至るまで; thường đi với chuỗi liệt kê AからBに至るまで.",
           "chunks": [
             "彼女の大ファンなので、",
             "雑誌やネット記事、",
@@ -206,13 +220,13 @@
         },
         {
           "sentence": "このスーパーは、服や食料品、家具に至るまで生活に必要な物がなんでも揃っている。",
-          "reading": "",
+          "reading": "このスーパーは、ふくやしょくりょうひん、かぐにいたるまでせいかつにひつようなものがなんでもそろっている。",
           "translation": "Siêu thị này có đầy đủ mọi thứ cần thiết cho cuộc sống, từ quần áo, thực phẩm cho đến cả đồ nội thất.",
           "blank": "このスーパーは、服や食料品、家具____生活に必要な物がなんでも揃っている。",
           "answer": "に至るまで",
-          "hint": "Mẫu mục tiêu: ～に至るまで",
-          "reason": "Trong câu này, に至るまで thể hiện ý nghĩa: Cho đến N... / Đến cả N....",
-          "wrongReason": "Đối chiếu với mẫu ～に至るまで và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至るまで.",
+          "reason": "Hàng hóa được kể từ quần áo, thực phẩm đến đồ nội thất để nhấn mạnh sự đầy đủ.",
+          "wrongReason": "Đáp án phù hợp là “に至るまで”. Hàng hóa được kể từ quần áo, thực phẩm đến đồ nội thất để nhấn mạnh sự đầy đủ. Hãy kiểm tra hình thức kết hợp: Danh từ + に至るまで; thường đi với chuỗi liệt kê AからBに至るまで.",
           "chunks": [
             "このスーパーは、",
             "服や食料品、",
@@ -221,13 +235,13 @@
         },
         {
           "sentence": "新入社員の研修ではあいさつの仕方はもちろん、名刺交換の仕方や謝り方に至るまで、様々なことを叩きこまれる。",
-          "reading": "",
+          "reading": "しんにゅうしゃいんのけんしゅうではあいさつのしかたはもちろん、めいしこうかんのしかたやあやまりかたにいたるまで、さまざまなことをたたきこまれる。",
           "translation": "Trong khóa đào tạo nhân viên mới, không chỉ cách chào hỏi mà cho đến cả cách trao đổi danh thiếp và cách xin lỗi, họ đều được huấn luyện kỹ rất nhiều thứ.",
           "blank": "新入社員の研修ではあいさつの仕方はもちろん、名刺交換の仕方や謝り方____、様々なことを叩きこまれる。",
           "answer": "に至るまで",
-          "hint": "Mẫu mục tiêu: ～に至るまで",
-          "reason": "Trong câu này, に至るまで thể hiện ý nghĩa: Cho đến N... / Đến cả N....",
-          "wrongReason": "Đối chiếu với mẫu ～に至るまで và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至るまで.",
+          "reason": "Đào tạo nhân viên mới bao quát cả các chi tiết như cách đổi danh thiếp và xin lỗi.",
+          "wrongReason": "Đáp án phù hợp là “に至るまで”. Đào tạo nhân viên mới bao quát cả các chi tiết như cách đổi danh thiếp và xin lỗi. Hãy kiểm tra hình thức kết hợp: Danh từ + に至るまで; thường đi với chuỗi liệt kê AからBに至るまで.",
           "chunks": [
             "新入社員の研修ではあいさつの仕方はもちろん、",
             "名刺交換の仕方や謝り方に至るまで、",
@@ -241,22 +255,27 @@
       "id": "n1-lg086",
       "grammar": "～に至っては",
       "reading": "～にいたっては",
-      "meaning": "Nhất là N (thì lại càng...) / Đến cả N...",
-      "formation": "Cấu trúc: ～に至っては (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Riêng đến N thì còn nghiêm trọng hoặc nổi bật hơn; nói đến N thì lại càng...",
+      "formation": "Danh từ + に至っては + nhận xét nổi bật/đặc biệt.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～に至っては diễn tả: Nhất là N (thì lại càng...) / Đến cả N.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～に至っては đưa ra một trường hợp đặc biệt trong tập các trường hợp đã nêu và nhấn mạnh mức độ nổi bật của nó. Thường dùng khi tình trạng của N còn cực đoan hơn xu hướng chung, hay kèm sắc thái tiêu cực hoặc phê bình.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Nhất là N (thì lại càng...) / Đến cả N..."
+          "title": "Cấu trúc",
+          "text": "N + に至っては, sau đó nhận xét riêng về N. Trước đó thường có mô tả tình hình chung."
         },
         {
-          "title": "Mẫu",
-          "text": "～に至っては"
+          "title": "Sắc thái",
+          "text": "Tạo độ tăng cấp: tình hình đã đáng chú ý, riêng N còn đáng chú ý hơn."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～に至るまで nhấn phạm vi bao quát; ～に至っては tách một trường hợp ra để nhận xét mạnh."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không dùng に至っては như dấu hiệu chỉ phạm vi từ A đến B.",
+        "Vế sau cần thể hiện điểm nổi bật của N, không đơn thuần lặp y nguyên nhận xét chung."
       ],
       "discovery": {
         "distractors": [
@@ -268,46 +287,48 @@
       "examples": [
         {
           "sentence": "少子化で、入学希望者が集まらない大学が全国で増えている。地方の私立大学に至っては、半分以上が苦しい状況にあるという。",
-          "reading": "",
+          "reading": "しょうしかで、にゅうがくきぼうしゃがあつまらないだいがくがぜんこくでふえている。ちほうのしりつだいがくにいたっては、はんぶんいじょうがくるしいじょうきょうにあるという。",
           "translation": "Do tỷ lệ sinh giảm, số trường đại học không thu hút đủ người muốn nhập học đang tăng trên toàn quốc. Đặc biệt là các trường đại học tư ở địa phương thì nghe nói hơn một nửa đang ở trong tình trạng khó khăn.",
           "blank": "少子化で、入学希望者が集まらない大学が全国で増えている。地方の私立大学____、半分以上が苦しい状況にあるという。",
           "answer": "に至っては",
-          "hint": "Mẫu mục tiêu: ～に至っては",
-          "reason": "Trong câu này, に至っては thể hiện ý nghĩa: Nhất là N (thì lại càng...) / Đến cả N....",
-          "wrongReason": "Đối chiếu với mẫu ～に至っては và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至っては.",
+          "reason": "Trong bối cảnh đại học gặp khó tuyển sinh, đại học tư địa phương được tách ra là nhóm khó khăn đặc biệt.",
+          "wrongReason": "Đáp án phù hợp là “に至っては”. Trong bối cảnh đại học gặp khó tuyển sinh, đại học tư địa phương được tách ra là nhóm khó khăn đặc biệt. Hãy kiểm tra hình thức kết hợp: Danh từ + に至っては + nhận xét nổi bật/đặc biệt.",
           "chunks": [
             "少子化で、",
-            "入学希望者が集まらない大学が全国で増えている。地方の私立大学に至っては、",
+            "入学希望者が集まらない大学が全国で増えている。",
+            "地方の私立大学に至っては、",
             "半分以上が苦しい状況にあるという。"
           ]
         },
         {
           "sentence": "世の中、いい加減なことを主張する本が多い。この本に至っては、書いてあること全部が嘘だ。",
-          "reading": "",
+          "reading": "よのなか、いいかげんなことをしゅちょうするほんがおおい。このほんにいたっては、かいてあることぜんぶがうそだ。",
           "translation": "Trên đời có nhiều cuốn sách đưa ra những quan điểm thiếu căn cứ. Riêng cuốn sách này thì đến cả những gì được viết trong đó cũng toàn là dối trá.",
           "blank": "世の中、いい加減なことを主張する本が多い。この本____、書いてあること全部が嘘だ。",
           "answer": "に至っては",
-          "hint": "Mẫu mục tiêu: ～に至っては",
-          "reason": "Trong câu này, に至っては thể hiện ý nghĩa: Nhất là N (thì lại càng...) / Đến cả N....",
-          "wrongReason": "Đối chiếu với mẫu ～に至っては và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至っては.",
+          "reason": "Sau nhận xét nhiều sách thiếu căn cứ, người nói phê bình riêng cuốn sách này còn tệ hơn.",
+          "wrongReason": "Đáp án phù hợp là “に至っては”. Sau nhận xét nhiều sách thiếu căn cứ, người nói phê bình riêng cuốn sách này còn tệ hơn. Hãy kiểm tra hình thức kết hợp: Danh từ + に至っては + nhận xét nổi bật/đặc biệt.",
           "chunks": [
             "世の中、",
-            "いい加減なことを主張する本が多い。この本に至っては、",
+            "いい加減なことを主張する本が多い。",
+            "この本に至っては、",
             "書いてあること全部が嘘だ。"
           ]
         },
         {
           "sentence": "この路線は朝夕とても込んでいる。ラッシュアワーに至っては、ドアが開いても満員で一人も乗れないこともある。",
-          "reading": "",
+          "reading": "このろせんはあさゆうとてもこんでいる。ラッシュアワーにいたっては、ドアがひらいてもまんいんでひとりものれないこともある。",
           "translation": "Tuyến tàu này rất đông vào sáng và chiều. Nhất là vào giờ cao điểm thì có khi dù cửa tàu mở, tàu vẫn chật kín đến mức không một người nào có thể lên được.",
           "blank": "この路線は朝夕とても込んでいる。ラッシュアワー____、ドアが開いても満員で一人も乗れないこともある。",
           "answer": "に至っては",
-          "hint": "Mẫu mục tiêu: ～に至っては",
-          "reason": "Trong câu này, に至っては thể hiện ý nghĩa: Nhất là N (thì lại càng...) / Đến cả N....",
-          "wrongReason": "Đối chiếu với mẫu ～に至っては và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に至っては.",
+          "reason": "Từ tình trạng tàu đông sáng tối, giờ cao điểm được nêu là trường hợp cực đoan nhất.",
+          "wrongReason": "Đáp án phù hợp là “に至っては”. Từ tình trạng tàu đông sáng tối, giờ cao điểm được nêu là trường hợp cực đoan nhất. Hãy kiểm tra hình thức kết hợp: Danh từ + に至っては + nhận xét nổi bật/đặc biệt.",
           "chunks": [
-            "この路線は朝夕とても込んで",
-            "いる。ラッシュアワーに至っては、",
+            "この路線は朝夕とても込んでいる。",
+            "ラッシュアワーに至っては、",
             "ドアが開いても満員で一人も乗れないこともある。"
           ]
         }
@@ -318,22 +339,27 @@
       "id": "n1-lg087",
       "grammar": "～にたえる",
       "reading": "～にたえる",
-      "meaning": "Đáng để V / Đủ giá trị, chất lượng để V",
-      "formation": "Cấu trúc: ～にたえる (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Đáng để làm V; đủ chất lượng hoặc giá trị để được xem/đọc/đánh giá.",
+      "formation": "Động từ dạng từ điển + にたえる + danh từ; hay gặp 読むにたえる, 見るにたえる, 鑑賞するにたえる.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にたえる diễn tả: Đáng để V / Đủ giá trị, chất lượng để V. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～にたえる (耐える) đánh giá đối tượng có chất lượng đủ tốt để xứng đáng được thực hiện hành vi như đọc, xem, thưởng thức hoặc thẩm định. Thường dùng trong đánh giá tác phẩm và năng lực, có thể đi ở phủ định như ～にたえるレベルではない.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Đáng để V / Đủ giá trị, chất lượng để V"
+          "title": "Cấu trúc",
+          "text": "Vる + にたえる + N. Động từ nói về trải nghiệm hoặc đánh giá."
         },
         {
-          "title": "Mẫu",
-          "text": "～にたえる"
+          "title": "Sắc thái",
+          "text": "Mang tính nhận xét chất lượng, thường trang trọng hơn 値する／価値がある trong một số hoàn cảnh."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～に足る cũng nói “đủ đáng”, nhưng đặc biệt hay đi với 信頼・推薦・議論; ～にたえる thường dùng với 読む・見る・鑑賞する."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không đọc たえる thành たる; đó là một mẫu khác dù gần nghĩa.",
+        "Phủ định trong câu “～にたえるレベルではない” là đánh giá không đạt chuẩn, không nên hiểu にたえる có nghĩa phủ định."
       ],
       "discovery": {
         "distractors": [
@@ -345,46 +371,43 @@
       "examples": [
         {
           "sentence": "子供向けの絵本には、大人が読むにたえるものも多い。",
-          "reading": "",
+          "reading": "こどもむけのえほんには、おとながよむにたえるものもおおい。",
           "translation": "Trong số những cuốn sách tranh dành cho trẻ em, cũng có nhiều cuốn đáng để người lớn đọc.",
           "blank": "子供向けの絵本には、大人が読む____ものも多い。",
           "answer": "にたえる",
-          "hint": "Mẫu mục tiêu: ～にたえる",
-          "reason": "Trong câu này, にたえる thể hiện ý nghĩa: Đáng để V / Đủ giá trị, chất lượng để V.",
-          "wrongReason": "Đối chiếu với mẫu ～にたえる và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にたえる.",
+          "reason": "Một số sách tranh trẻ em có nội dung/chất lượng mà người lớn cũng thấy đáng đọc.",
+          "wrongReason": "Đáp án phù hợp là “にたえる”. Một số sách tranh trẻ em có nội dung/chất lượng mà người lớn cũng thấy đáng đọc. Hãy kiểm tra hình thức kết hợp: Động từ dạng từ điển + にたえる + danh từ; hay gặp 読むにたえる, 見るにたえる, 鑑賞するにたえる.",
           "chunks": [
             "子供向けの絵本には、",
-            "大人が読むに",
-            "たえるものも多い。"
+            "大人が読むにたえるものも多い。"
           ]
         },
         {
           "sentence": "彼の能力は、オリンピックの代表選手に推薦するにたえるレベルではない。",
-          "reading": "",
+          "reading": "かれののうりょくは、オリンピックのだいひょうせんしゅにすいせんするにたえるレベルではない。",
           "translation": "Năng lực của anh ấy chưa đạt đến mức đủ để có thể đề cử làm vận động viên đại diện tham dự Olympic.",
           "blank": "彼の能力は、オリンピックの代表選手に推薦する____レベルではない。",
           "answer": "にたえる",
-          "hint": "Mẫu mục tiêu: ～にたえる",
-          "reason": "Trong câu này, にたえる thể hiện ý nghĩa: Đáng để V / Đủ giá trị, chất lượng để V.",
-          "wrongReason": "Đối chiếu với mẫu ～にたえる và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にたえる.",
+          "reason": "Năng lực của vận động viên chưa đạt chuẩn xứng đáng để đề cử tham dự Olympic.",
+          "wrongReason": "Đáp án phù hợp là “にたえる”. Năng lực của vận động viên chưa đạt chuẩn xứng đáng để đề cử tham dự Olympic. Hãy kiểm tra hình thức kết hợp: Động từ dạng từ điển + にたえる + danh từ; hay gặp 読むにたえる, 見るにたえる, 鑑賞するにたえる.",
           "chunks": [
             "彼の能力は、",
-            "オリンピックの代表選手に",
-            "推薦するにたえるレベルではない。"
+            "オリンピックの代表選手に推薦するにたえるレベルではない。"
           ]
         },
         {
           "sentence": "この映画は無名の監督と俳優たちが作った自主制作映画だが、全国の映画館で鑑賞するにたえる映画だ。",
-          "reading": "",
+          "reading": "このえいがはむめいのかんとくとはいゆうたちがつくったじしゅせいさくえいがだが、ぜんこくのえいがかんでかんしょうするにたえるえいがだ。",
           "translation": "Bộ phim này là phim độc lập do một đạo diễn và các diễn viên vô danh thực hiện, nhưng có chất lượng xứng đáng để được trình chiếu và thưởng thức tại các rạp trên toàn quốc.",
           "blank": "この映画は無名の監督と俳優たちが作った自主制作映画だが、全国の映画館で鑑賞する____映画だ。",
           "answer": "にたえる",
-          "hint": "Mẫu mục tiêu: ～にたえる",
-          "reason": "Trong câu này, にたえる thể hiện ý nghĩa: Đáng để V / Đủ giá trị, chất lượng để V.",
-          "wrongReason": "Đối chiếu với mẫu ～にたえる và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にたえる.",
+          "reason": "Bộ phim độc lập được đánh giá đủ chất lượng để xem tại rạp trên toàn quốc.",
+          "wrongReason": "Đáp án phù hợp là “にたえる”. Bộ phim độc lập được đánh giá đủ chất lượng để xem tại rạp trên toàn quốc. Hãy kiểm tra hình thức kết hợp: Động từ dạng từ điển + にたえる + danh từ; hay gặp 読むにたえる, 見るにたえる, 鑑賞するにたえる.",
           "chunks": [
-            "この映画は無名の監督と俳優たちが",
-            "作った自主制作映画だが、",
+            "この映画は無名の監督と俳優たちが作った自主制作映画だが、",
             "全国の映画館で鑑賞するにたえる映画だ。"
           ]
         }
@@ -395,22 +418,27 @@
       "id": "n1-lg088",
       "grammar": "～にたえない",
       "reading": "～にたえない",
-      "meaning": "Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc)",
-      "formation": "Cấu trúc: ～にたえない (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Không chịu nổi/không đáng để xem nghe; hoặc không nén nổi một cảm xúc mạnh.",
+      "formation": "Vる + にたえない (見るにたえない／聞くにたえない); danh từ cảm xúc + にたえない (感謝の念にたえない／後悔の念にたえない); Nにはたえない.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にたえない diễn tả: Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc). Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～にたえない có hai cách dùng phải tách rõ: (1) không chịu nổi khi nhìn, nghe hoặc đánh giá một điều quá đau lòng/kém chất lượng; (2) cảm xúc dâng trào không thể kìm nén, đi với 感謝の念・後悔の念・同情など. Cách đọc たえない, khác với ～に足らない (không đủ/không đáng).",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc)"
+          "title": "Nghĩa 1 – không chịu nổi",
+          "text": "Vる + にたえない: 見るにたえない là quá đau lòng hoặc khó chấp nhận đến mức không đành lòng nhìn."
         },
         {
-          "title": "Mẫu",
-          "text": "～にたえない"
+          "title": "Nghĩa 2 – cảm xúc",
+          "text": "N cảm xúc + にたえない: 後悔の念にたえない = vô cùng hối hận, không nén nổi."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～にたえる là đánh giá đạt mức xứng đáng; ～にたえない đôi khi là phủ định chất lượng, nhưng cũng là thành ngữ diễn tả cảm xúc mạnh."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không mặc định tất cả ví dụ ～にたえない đều mang nghĩa “không đáng để xem”.",
+        "Phân biệt “撮影にはたえない” (không đạt chuẩn để quay) với “後悔の念にたえない” (không nén nổi hối hận)."
       ],
       "discovery": {
         "distractors": [
@@ -422,43 +450,41 @@
       "examples": [
         {
           "sentence": "スマートフォンのカメラは性能があまりよくないので、本格的な映像作品の撮影にはたえない。",
-          "reading": "",
+          "reading": "スマートフォンのカメラはせいのうがあまりよくないので、ほんかくてきなえいぞうさくひんのさつえいにはたえない。",
           "translation": "Camera của điện thoại thông minh có hiệu năng không được tốt lắm nên không đủ chất lượng để quay một tác phẩm hình ảnh chuyên nghiệp.",
           "blank": "スマートフォンのカメラは性能があまりよくないので、本格的な映像作品の撮影____。",
           "answer": "にはたえない",
-          "hint": "Mẫu mục tiêu: ～にたえない",
-          "reason": "Trong câu này, にはたえない thể hiện ý nghĩa: Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc).",
-          "wrongReason": "Đối chiếu với mẫu ～にたえない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にたえない.",
+          "reason": "Chất lượng camera không đáp ứng mức cần có cho việc quay tác phẩm chuyên nghiệp.",
+          "wrongReason": "Đáp án phù hợp là “にはたえない”. Chất lượng camera không đáp ứng mức cần có cho việc quay tác phẩm chuyên nghiệp. Hãy kiểm tra hình thức kết hợp: Vる + にたえない (見るにたえない／聞くにたえない); danh từ cảm xúc + にたえない (感謝の念にたえない／後悔の念にたえない); Nにはたえない.",
           "chunks": [
-            "スマートフォンのカメラは",
-            "性能があまりよくないので、",
+            "スマートフォンのカメラは性能があまりよくないので、",
             "本格的な映像作品の撮影にはたえない。"
           ]
         },
         {
           "sentence": "彼女のやけどの跡は痛々しく、見るにたえなかった。",
-          "reading": "",
+          "reading": "かのじょのやけどのあとはいたいたしく、みるにたえなかった。",
           "translation": "Vết bỏng của cô ấy trông rất đau đớn, đến mức tôi không thể chịu nổi khi nhìn vào.",
           "blank": "彼女のやけどの跡は痛々しく、見る____。",
           "answer": "にたえなかった",
-          "hint": "Mẫu mục tiêu: ～にたえない",
-          "reason": "Trong câu này, にたえなかった thể hiện ý nghĩa: Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc).",
-          "wrongReason": "Đối chiếu với mẫu ～にたえない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にたえない.",
+          "reason": "Vết bỏng quá đau lòng khiến người nhìn không đành lòng nhìn tiếp.",
+          "wrongReason": "Đáp án phù hợp là “にたえなかった”. Vết bỏng quá đau lòng khiến người nhìn không đành lòng nhìn tiếp. Hãy kiểm tra hình thức kết hợp: Vる + にたえない (見るにたえない／聞くにたえない); danh từ cảm xúc + にたえない (感謝の念にたえない／後悔の念にたえない); Nにはたえない.",
           "chunks": [
-            "彼女のやけどの跡は",
-            "痛々しく、",
+            "彼女のやけどの跡は痛々しく、",
             "見るにたえなかった。"
           ]
         },
         {
           "sentence": "あのとき声をかけていれば、彼は自殺しなかったかもしれないと思うと、後悔の念にたえない。",
-          "reading": "",
+          "reading": "あのときこえをかけていれば、かれはじさつしなかったかもしれないとおもうと、こうかいのねんにたえない。",
           "translation": "Khi nghĩ rằng nếu lúc đó tôi lên tiếng với anh ấy thì có lẽ anh ấy đã không tự sát, tôi không thể kìm nén được cảm giác hối hận.",
           "blank": "あのとき声をかけていれば、彼は自殺しなかったかもしれないと思うと、後悔の念____。",
           "answer": "にたえない",
-          "hint": "Mẫu mục tiêu: ～にたえない",
-          "reason": "Trong câu này, にたえない thể hiện ý nghĩa: Không đáng để... / Quá tệ đến mức không thể... / Không kìm nén được (cảm xúc).",
-          "wrongReason": "Đối chiếu với mẫu ～にたえない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にたえない.",
+          "reason": "後悔の念 là cảm xúc hối hận dâng trào, nên にたえない ở đây không có nghĩa “không đáng”.",
+          "wrongReason": "Đáp án phù hợp là “にたえない”. 後悔の念 là cảm xúc hối hận dâng trào, nên にたえない ở đây không có nghĩa “không đáng”. Hãy kiểm tra hình thức kết hợp: Vる + にたえない (見るにたえない／聞くにたえない); danh từ cảm xúc + にたえない (感謝の念にたえない／後悔の念にたえない); Nにはたえない.",
           "chunks": [
             "あのとき声をかけていれば、",
             "彼は自殺しなかったかもしれないと思うと、",
@@ -472,22 +498,31 @@
       "id": "n1-lg089",
       "grammar": "～に足る",
       "reading": "～にたる",
-      "meaning": "Xứng đáng... / Đủ để...",
-      "formation": "Cấu trúc: ～に足る (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Đủ đáng tin/đủ giá trị để làm; xứng đáng với một đánh giá hoặc hành động.",
+      "formation": "Danh từ thể hiện đánh giá + に足る + N (信頼に足る); động từ dạng từ điển + に足る + N (推薦するに足る); phủ định ～に足らない.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～に足る diễn tả: Xứng đáng... / Đủ để.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～に足る (たる) chỉ đạt được tiêu chuẩn hoặc giá trị đủ để xem xét, tin tưởng, ủng hộ hay thực hiện hành vi. Dạng phủ định ～に足らない nói không đủ mức đáng quan tâm. Đặc biệt 取るに足らない là cụm cố định mang nghĩa nhỏ nhặt, không đáng kể.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Xứng đáng... / Đủ để..."
+          "title": "Cấu trúc",
+          "text": "N + に足る／Vる + に足る. Âm đọc của 足る trong mẫu này là たる."
         },
         {
-          "title": "Mẫu",
-          "text": "～に足る"
+          "title": "Cách dùng",
+          "text": "Hay gặp 信頼に足る人, 論ずるに足る問題, 取るに足らないこと."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～にたえる (耐える) gần nghĩa nhưng khác Kanji và cách đọc; ～に足る dùng với tiêu chuẩn giá trị/độ đáng tin."
+        },
+        {
+          "title": "Dạng phủ định",
+          "text": "Ví dụ 3 dùng 取るに足らない, nghĩa là “không đáng kể”, không phải một cách nói khẳng định “xứng đáng”."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không đọc に足る thành にたえる; cách đọc là にたる.",
+        "取るに足らない có nghĩa “không đáng kể”, không dịch thành “đáng để lấy”."
       ],
       "discovery": {
         "distractors": [
@@ -499,46 +534,45 @@
       "examples": [
         {
           "sentence": "彼は話し方や人付き合いには配慮を怠らない、信頼に足る人だ。",
-          "reading": "",
+          "reading": "かれははなしかたやひとづきあいにははいりょをおこたらない、しんらいにたるひとだ。",
           "translation": "Anh ấy luôn chú ý đến cách nói chuyện và cách giao tiếp với mọi người, là một người đáng tin cậy.",
           "blank": "彼は話し方や人付き合いには配慮を怠らない、信頼____人だ。",
           "answer": "に足る",
-          "hint": "Mẫu mục tiêu: ～に足る",
-          "reason": "Trong câu này, に足る thể hiện ý nghĩa: Xứng đáng... / Đủ để....",
-          "wrongReason": "Đối chiếu với mẫu ～に足る và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に足る.",
+          "reason": "Cách ứng xử chu đáo làm cho người này xứng đáng để tin tưởng.",
+          "wrongReason": "Đáp án phù hợp là “に足る”. Cách ứng xử chu đáo làm cho người này xứng đáng để tin tưởng. Hãy kiểm tra hình thức kết hợp: Danh từ thể hiện đánh giá + に足る + N (信頼に足る); động từ dạng từ điển + に足る + N (推薦するに足る); phủ định ～に足らない.",
           "chunks": [
-            "彼は話し方や人付き合いに",
-            "は配慮を怠らない、",
+            "彼は話し方や人付き合いには配慮を怠らない、",
             "信頼に足る人だ。"
           ]
         },
         {
           "sentence": "今の世の中、応援するに足る政治家がなかなかいない。",
-          "reading": "",
+          "reading": "いまのよのなか、おうえんするにたるせいじかがなかなかいない。",
           "translation": "Trong xã hội hiện nay, rất khó tìm được một chính trị gia xứng đáng để ủng hộ.",
           "blank": "今の世の中、応援する____政治家がなかなかいない。",
           "answer": "に足る",
-          "hint": "Mẫu mục tiêu: ～に足る",
-          "reason": "Trong câu này, に足る thể hiện ý nghĩa: Xứng đáng... / Đủ để....",
-          "wrongReason": "Đối chiếu với mẫu ～に足る và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に足る.",
+          "reason": "Người nói thấy khó tìm được chính trị gia đủ đáng để ủng hộ.",
+          "wrongReason": "Đáp án phù hợp là “に足る”. Người nói thấy khó tìm được chính trị gia đủ đáng để ủng hộ. Hãy kiểm tra hình thức kết hợp: Danh từ thể hiện đánh giá + に足る + N (信頼に足る); động từ dạng từ điển + に足る + N (推薦するに足る); phủ định ～に足らない.",
           "chunks": [
             "今の世の中、",
-            "応援するに足る政治家が",
-            "なかなかいない。"
+            "応援するに足る政治家がなかなかいない。"
           ]
         },
         {
           "sentence": "彼にとって、私は取るに足らない存在だ。私がある日いなくなっても、彼は気づきもしないだろう。",
-          "reading": "",
+          "reading": "かれにとって、わたしはとるにたらないそんざいだ。わたしがあるひいなくなっても、かれはきづきもしないだろう。",
           "translation": "Đối với anh ấy, tôi chỉ là một sự tồn tại không đáng kể. Cho dù một ngày nào đó tôi biến mất, có lẽ anh ấy cũng chẳng nhận ra.",
           "blank": "彼にとって、私は取る____存在だ。私がある日いなくなっても、彼は気づきもしないだろう。",
           "answer": "に足らない",
-          "hint": "Mẫu mục tiêu: ～に足る",
-          "reason": "Trong câu này, に足らない thể hiện ý nghĩa: Xứng đáng... / Đủ để....",
-          "wrongReason": "Đối chiếu với mẫu ～に足る và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～に足る.",
+          "reason": "取るに足らない là thành ngữ chỉ một sự tồn tại không đáng kể; đây là dạng phủ định của 足る.",
+          "wrongReason": "Đáp án phù hợp là “に足らない”. 取るに足らない là thành ngữ chỉ một sự tồn tại không đáng kể; đây là dạng phủ định của 足る. Hãy kiểm tra hình thức kết hợp: Danh từ thể hiện đánh giá + に足る + N (信頼に足る); động từ dạng từ điển + に足る + N (推薦するに足る); phủ định ～に足らない.",
           "chunks": [
             "彼にとって、",
-            "私は取るに足らない存在だ。私がある日いなくなっても、",
+            "私は取るに足らない存在だ。",
+            "私がある日いなくなっても、",
             "彼は気づきもしないだろう。"
           ]
         }
@@ -549,22 +583,27 @@
       "id": "n1-lg090",
       "grammar": "～にひきかえ",
       "reading": "～にひきかえ",
-      "meaning": "Trái ngược với... / Khác với...",
-      "formation": "Cấu trúc: ～にひきかえ (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Trái ngược hẳn với N; trong khi A như vậy thì B lại khác biệt rõ rệt.",
+      "formation": "Danh từ + にひきかえ; mệnh đề + のにひきかえ; dạng Kanji に引き換え.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にひきかえ diễn tả: Trái ngược với... / Khác với.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～にひきかえ đặt hai đối tượng/trạng thái có điểm tương phản rõ rệt cạnh nhau để nhấn mạnh sự khác nhau. Thường mang đánh giá chủ quan, có thể tích cực hoặc tiêu cực. Lưu ý đây là nghĩa đối chiếu, khác với 引き換えに mang nghĩa đánh đổi/đổi lấy.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Trái ngược với... / Khác với..."
+          "title": "Cấu trúc",
+          "text": "N + にひきかえ / V・A + のにひきかえ. Có thể viết に引き換え."
         },
         {
-          "title": "Mẫu",
-          "text": "～にひきかえ"
+          "title": "Sắc thái",
+          "text": "Nhấn sự tương phản rất rõ giữa hai đối tượng hoặc hai tình huống."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～に対して đối chiếu khá trung tính; ～にひきかえ thường nhấn mạnh chênh lệch và đánh giá mạnh hơn."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không hiểu に引き換え trong các câu này là “đổi lấy”.",
+        "Với mệnh đề cần dạng のにひきかえ; không bỏ の tùy tiện."
       ],
       "discovery": {
         "distractors": [
@@ -576,47 +615,44 @@
       "examples": [
         {
           "sentence": "普段の孤独な生活にひきかえ、家族中が集まる元旦は賑やかで心から幸せだ。",
-          "reading": "",
+          "reading": "ふだんのこどくなせいかつにひきかえ、かぞくじゅうがあつまるがんたんはにぎやかでこころからしあわせだ。",
           "translation": "Trái ngược với cuộc sống cô độc thường ngày, ngày đầu năm khi cả gia đình tụ họp thật náo nhiệt và khiến tôi cảm thấy hạnh phúc từ tận đáy lòng.",
           "blank": "普段の孤独な生活____、家族中が集まる元旦は賑やかで心から幸せだ。",
           "answer": "にひきかえ",
-          "hint": "Mẫu mục tiêu: ～にひきかえ",
-          "reason": "Trong câu này, にひきかえ thể hiện ý nghĩa: Trái ngược với... / Khác với....",
-          "wrongReason": "Đối chiếu với mẫu ～にひきかえ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にひきかえ.",
+          "reason": "Cuộc sống cô đơn ngày thường được đem đối lập với ngày Tết có cả gia đình tụ họp.",
+          "wrongReason": "Đáp án phù hợp là “にひきかえ”. Cuộc sống cô đơn ngày thường được đem đối lập với ngày Tết có cả gia đình tụ họp. Hãy kiểm tra hình thức kết hợp: Danh từ + にひきかえ; mệnh đề + のにひきかえ; dạng Kanji に引き換え.",
           "chunks": [
             "普段の孤独な生活にひきかえ、",
-            "家族中が集まる元旦は",
-            "賑やかで心から幸せだ。"
+            "家族中が集まる元旦は賑やかで心から幸せだ。"
           ]
         },
         {
           "sentence": "姉があんなにお洒落なのに引き換え、妹は着るものに対してあまりこだわりがないようだ。",
-          "reading": "",
+          "reading": "あねがあんなにおしゃれなのにひきかえ、いもうとはきるものにたいしてあまりこだわりがないようだ。",
           "translation": "Trái ngược với người chị rất ăn diện, cô em gái dường như không quá cầu kỳ về quần áo mình mặc.",
           "blank": "姉があんなにお洒落なの____、妹は着るものに対してあまりこだわりがないようだ。",
           "answer": "に引き換え",
-          "hint": "Mẫu mục tiêu: ～にひきかえ",
-          "reason": "Trong câu này, に引き換え thể hiện ý nghĩa: Trái ngược với... / Khác với....",
-          "wrongReason": "Đối chiếu với mẫu ～にひきかえ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にひきかえ.",
+          "reason": "Người chị chăm chút trang phục được đem đối lập với em gái không cầu kỳ.",
+          "wrongReason": "Đáp án phù hợp là “に引き換え”. Người chị chăm chút trang phục được đem đối lập với em gái không cầu kỳ. Hãy kiểm tra hình thức kết hợp: Danh từ + にひきかえ; mệnh đề + のにひきかえ; dạng Kanji に引き換え.",
           "chunks": [
             "姉があんなにお洒落なのに引き換え、",
-            "妹は着るものに",
-            "対してあまりこだわりがないようだ。"
+            "妹は着るものに対してあまりこだわりがないようだ。"
           ]
         },
         {
           "sentence": "上の子が飽きっぽいのにひきかえ、下の子は一つのことをずっと続けるのが好きなようだ。",
-          "reading": "",
+          "reading": "うえのこがあきっぽいのにひきかえ、したのこはひとつのことをずっとつづけるのがすきなようだ。",
           "translation": "Trái ngược với đứa lớn nhanh chán, đứa nhỏ dường như thích kiên trì làm một việc trong thời gian dài.",
           "blank": "上の子が飽きっぽいの____、下の子は一つのことをずっと続けるのが好きなようだ。",
           "answer": "にひきかえ",
-          "hint": "Mẫu mục tiêu: ～にひきかえ",
-          "reason": "Trong câu này, にひきかえ thể hiện ý nghĩa: Trái ngược với... / Khác với....",
-          "wrongReason": "Đối chiếu với mẫu ～にひきかえ và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にひきかえ.",
+          "reason": "Đứa lớn hay chán khác hẳn đứa nhỏ thích theo đuổi một việc lâu dài.",
+          "wrongReason": "Đáp án phù hợp là “にひきかえ”. Đứa lớn hay chán khác hẳn đứa nhỏ thích theo đuổi một việc lâu dài. Hãy kiểm tra hình thức kết hợp: Danh từ + にひきかえ; mệnh đề + のにひきかえ; dạng Kanji に引き換え.",
           "chunks": [
             "上の子が飽きっぽいのにひきかえ、",
-            "下の子は一つのことをずっと",
-            "続けるのが好きなようだ。"
+            "下の子は一つのことをずっと続けるのが好きなようだ。"
           ]
         }
       ],
@@ -626,22 +662,31 @@
       "id": "n1-lg091",
       "grammar": "～にしたら／～にすれば",
       "reading": "～にしたら／～にすれば",
-      "meaning": "Đối với N thì... / Nếu xét từ lập trường của N thì...",
-      "formation": "Cấu trúc: ～にしたら／～にすれば (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Xét từ góc độ, vị trí hoặc cảm nhận của N thì...",
+      "formation": "Danh từ chỉ người/tập thể + にしたら／にすれば／にしてみたら; dạng gần nghĩa Nからしたら／Nからすれば.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にしたら／～にすれば diễn tả: Đối với N thì... / Nếu xét từ lập trường của N thì.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～にしたら／～にすれば đặt mình vào lập trường của người hoặc nhóm được nêu để suy đoán họ đánh giá sự việc thế nào. Người nói thường không hoàn toàn đứng ở vị trí N. Các biến thể ～にしてみたら và ～からしたら có sắc thái tương tự, nhưng không được nhầm với ～にしたら nghĩa điều kiện thông thường.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Đối với N thì... / Nếu xét từ lập trường của N thì..."
+          "title": "Cấu trúc",
+          "text": "N người/tập thể + にしたら／にすれば; biến thể にしてみたら, からしたら."
         },
         {
-          "title": "Mẫu",
-          "text": "～にしたら／～にすれば"
+          "title": "Sắc thái",
+          "text": "Nhìn tình huống từ góc nhìn của chủ thể khác để giải thích cảm nhận hoặc đánh giá."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～としては thể hiện vị trí/quan điểm của người nói hoặc tổ chức; ～にしたら thường nêu đánh giá giả định từ lập trường người khác."
+        },
+        {
+          "title": "Biến thể được dùng trong ví dụ",
+          "text": "Ba câu dùng lần lượt にしたら, にしてみたら, からしたら; cùng biểu thị góc nhìn nhưng không đồng nhất về hình thức."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không coi からしたら là lỗi; đó là biến thể cùng nhóm nghĩa “xét từ phía”.",
+        "Không dùng khi chỉ mô tả nguyên nhân vật lý không có góc nhìn/chủ thể đánh giá."
       ],
       "discovery": {
         "distractors": [
@@ -653,28 +698,27 @@
       "examples": [
         {
           "sentence": "子供たちにしたら、この話は難しすぎるかもしれない。",
-          "reading": "",
+          "reading": "こどもたちにしたら、このはなしはむずかしすぎるかもしれない。",
           "translation": "Đối với bọn trẻ thì câu chuyện này có lẽ quá khó.",
           "blank": "子供たち____、この話は難しすぎるかもしれない。",
           "answer": "にしたら",
-          "hint": "Mẫu mục tiêu: ～にしたら／～にすれば",
-          "reason": "Trong câu này, にしたら thể hiện ý nghĩa: Đối với N thì... / Nếu xét từ lập trường của N thì....",
-          "wrongReason": "Đối chiếu với mẫu ～にしたら／～にすれば và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にしたら／～にすれば.",
+          "reason": "Xét theo khả năng của trẻ em, câu chuyện bị đánh giá là quá khó.",
+          "wrongReason": "Đáp án phù hợp là “にしたら”. Xét theo khả năng của trẻ em, câu chuyện bị đánh giá là quá khó. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ người/tập thể + にしたら／にすれば／にしてみたら; dạng gần nghĩa Nからしたら／Nからすれば.",
           "chunks": [
             "子供たちにしたら、",
-            "この話は難しすぎるかも",
-            "しれない。"
+            "この話は難しすぎるかもしれない。"
           ]
         },
         {
           "sentence": "女性で背が高いのは、背が低くて満員電車で辛い思いをする私にしてみたら羨ましいものだが、背が高い人は高いなりの苦労があるそうだ。",
-          "reading": "",
+          "reading": "じょせいでせがたかいのは、せがひくてまんいんでんしゃでつらいおもいをするわたしにしてみたらうらやましいものだが、せがたかいひとはたかいなりのくろうがあるそうだ。",
           "translation": "Đối với tôi, một người thấp và thường gặp khó khăn trên những chuyến tàu đông người, phụ nữ cao ráo thật đáng ngưỡng mộ, nhưng nghe nói người cao cũng có những nỗi khổ riêng.",
           "blank": "女性で背が高いのは、背が低くて満員電車で辛い思いをする私____羨ましいものだが、背が高い人は高いなりの苦労があるそうだ。",
           "answer": "にしてみたら",
-          "hint": "Mẫu mục tiêu: ～にしたら／～にすれば",
-          "reason": "Trong câu này, にしてみたら thể hiện ý nghĩa: Đối với N thì... / Nếu xét từ lập trường của N thì....",
-          "wrongReason": "Đối chiếu với mẫu ～にしたら／～にすれば và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にしたら／～にすれば.",
+          "reason": "Từ góc nhìn của người thấp, thân hình cao là đáng ghen tị dù người cao cũng có khó khăn.",
+          "wrongReason": "Đáp án phù hợp là “にしてみたら”. Từ góc nhìn của người thấp, thân hình cao là đáng ghen tị dù người cao cũng có khó khăn. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ người/tập thể + にしたら／にすれば／にしてみたら; dạng gần nghĩa Nからしたら／Nからすれば.",
           "chunks": [
             "女性で背が高いのは、",
             "背が低くて満員電車で辛い思いをする私にしてみたら羨ましいものだが、",
@@ -683,16 +727,15 @@
         },
         {
           "sentence": "中国の学生は朝7時半から夜10時くらいまで勉強をするらしいが、日本人の学生からしたら考えられない。",
-          "reading": "",
+          "reading": "ちゅうごくのがくせいはあさしちじはんからよるじゅうじくらいまでべんきょうをするらしいが、にほんじんのがくせいからしたらかんがえられない。",
           "translation": "Nghe nói học sinh Trung Quốc học từ 7 giờ rưỡi sáng đến khoảng 10 giờ tối, nhưng xét từ góc độ học sinh Nhật Bản thì điều đó thật khó tưởng tượng.",
           "blank": "中国の学生は朝7時半から夜10時くらいまで勉強をするらしいが、日本人の学生____考えられない。",
           "answer": "からしたら",
-          "hint": "Mẫu mục tiêu: ～にしたら／～にすれば",
-          "reason": "Trong câu này, からしたら thể hiện ý nghĩa: Đối với N thì... / Nếu xét từ lập trường của N thì....",
-          "wrongReason": "Đối chiếu với mẫu ～にしたら／～にすれば và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にしたら／～にすれば.",
+          "reason": "Nhìn từ vị trí học sinh Nhật Bản, thời lượng học của học sinh Trung Quốc được đánh giá khó tưởng tượng.",
+          "wrongReason": "Đáp án phù hợp là “からしたら”. Nhìn từ vị trí học sinh Nhật Bản, thời lượng học của học sinh Trung Quốc được đánh giá khó tưởng tượng. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ người/tập thể + にしたら／にすれば／にしてみたら; dạng gần nghĩa Nからしたら／Nからすれば.",
           "chunks": [
-            "中国の学生は朝7時半から夜10時くらいまで",
-            "勉強をするらしいが、",
+            "中国の学生は朝7時半から夜10時くらいまで勉強をするらしいが、",
             "日本人の学生からしたら考えられない。"
           ]
         }
@@ -703,22 +746,27 @@
       "id": "n1-lg092",
       "grammar": "～にあって（は）",
       "reading": "～にあって（は）",
-      "meaning": "Trong hoàn cảnh... / Ở tình huống...",
-      "formation": "Cấu trúc: ～にあって（は） (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Ở trong hoàn cảnh, môi trường hoặc thời điểm đặc biệt; ngay cả trong hoàn cảnh ấy.",
+      "formation": "Danh từ chỉ tình huống/nơi chốn/thời điểm + にあって／にあっては／にあっても.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～にあって（は） diễn tả: Trong hoàn cảnh... / Ở tình huống.... Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～にあって biểu thị người hoặc sự vật đang ở một hoàn cảnh, môi trường hay giai đoạn được nhấn mạnh. Thường xuất hiện trong văn viết và nhận xét trang trọng. Dạng ～にあっては làm nổi bật hoàn cảnh đang xét, còn ～にあっても nêu sự đối lập “ngay cả trong hoàn cảnh đó”.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Trong hoàn cảnh... / Ở tình huống..."
+          "title": "Cấu trúc",
+          "text": "N hoàn cảnh + にあって; にあっては nhấn chủ đề hoàn cảnh; にあっても mang nhượng bộ."
         },
         {
-          "title": "Mẫu",
-          "text": "～にあって（は）"
+          "title": "Sắc thái",
+          "text": "Trang trọng hơn ～で／～にいるとき; thường dùng cho trạng thái khó khăn, cấp bách hoặc môi trường đặc biệt."
+        },
+        {
+          "title": "Phân biệt",
+          "text": "～において nói vị trí/tình huống khá trung tính; ～にあって tập trung vào đặc điểm hoàn cảnh và ảnh hưởng đến hành vi."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Không coi ～にあっては và ～にあっても hoàn toàn đồng nghĩa; は nhấn bối cảnh, も biểu thị nhượng bộ.",
+        "Không hiểu あって theo nghĩa đơn thuần “có/tồn tại” trong mẫu này."
       ],
       "discovery": {
         "distractors": [
@@ -730,47 +778,44 @@
       "examples": [
         {
           "sentence": "息子は家では甘えん坊だが、幼稚園にあっては他の子の良き兄役を買って出ているようだ。",
-          "reading": "",
+          "reading": "むすこはいえではあまえんぼうだが、ようちえんにあってはほかのこのよきあにやくをかってでているようだ。",
           "translation": "Con trai tôi ở nhà thì hay làm nũng, nhưng ở trường mẫu giáo dường như lại chủ động đảm nhận vai trò như một người anh tốt đối với những đứa trẻ khác.",
           "blank": "息子は家では甘えん坊だが、幼稚園____他の子の良き兄役を買って出ているようだ。",
           "answer": "にあっては",
-          "hint": "Mẫu mục tiêu: ～にあって（は）",
-          "reason": "Trong câu này, にあっては thể hiện ý nghĩa: Trong hoàn cảnh... / Ở tình huống....",
-          "wrongReason": "Đối chiếu với mẫu ～にあって（は） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にあって（は）.",
+          "reason": "Ở nhà trẻ làm nũng, nhưng trong môi trường mẫu giáo lại chủ động đóng vai anh lớn.",
+          "wrongReason": "Đáp án phù hợp là “にあっては”. Ở nhà trẻ làm nũng, nhưng trong môi trường mẫu giáo lại chủ động đóng vai anh lớn. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ tình huống/nơi chốn/thời điểm + にあって／にあっては／にあっても.",
           "chunks": [
             "息子は家では甘えん坊だが、",
-            "幼稚園にあっては他の子の良き兄役を",
-            "買って出ているようだ。"
+            "幼稚園にあっては他の子の良き兄役を買って出ているようだ。"
           ]
         },
         {
           "sentence": "彼女は普段はのん気な性格の持ち主だが、土壇場にあっては驚異的な行動力を見せる。",
-          "reading": "",
+          "reading": "かのじょはふだんはのんきなせいかくのもちぬしだが、どたんばにあってはきょういてきなこうどうりょくをみせる。",
           "translation": "Bình thường cô ấy là người khá vô tư, nhưng trong tình thế cấp bách lại thể hiện khả năng hành động đáng kinh ngạc.",
           "blank": "彼女は普段はのん気な性格の持ち主だが、土壇場____驚異的な行動力を見せる。",
           "answer": "にあっては",
-          "hint": "Mẫu mục tiêu: ～にあって（は）",
-          "reason": "Trong câu này, にあっては thể hiện ý nghĩa: Trong hoàn cảnh... / Ở tình huống....",
-          "wrongReason": "Đối chiếu với mẫu ～にあって（は） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にあって（は）.",
+          "reason": "Trong tình thế cấp bách, người bình thường vô tư lại thể hiện năng lực hành động nổi bật.",
+          "wrongReason": "Đáp án phù hợp là “にあっては”. Trong tình thế cấp bách, người bình thường vô tư lại thể hiện năng lực hành động nổi bật. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ tình huống/nơi chốn/thời điểm + にあって／にあっては／にあっても.",
           "chunks": [
             "彼女は普段はのん気な性格の持ち主だが、",
-            "土壇場にあっては",
-            "驚異的な行動力を見せる。"
+            "土壇場にあっては驚異的な行動力を見せる。"
           ]
         },
         {
           "sentence": "私たちの生活が苦しい時にあっても、政治家のやつらは旨い汁を吸っている。",
-          "reading": "",
+          "reading": "わたしたちのせいかつがくるしいときにあっても、せいじかのやつらはうまいしるをすっている。",
           "translation": "Ngay cả trong lúc cuộc sống của chúng ta khó khăn, đám chính trị gia vẫn đang hưởng lợi cho riêng mình.",
           "blank": "私たちの生活が苦しい時____、政治家のやつらは旨い汁を吸っている。",
           "answer": "にあっても",
-          "hint": "Mẫu mục tiêu: ～にあって（は）",
-          "reason": "Trong câu này, にあっても thể hiện ý nghĩa: Trong hoàn cảnh... / Ở tình huống....",
-          "wrongReason": "Đối chiếu với mẫu ～にあって（は） và đọc lại nghĩa tiếng Việt.",
+          "hint": "Quan sát ý nghĩa của vế trước và sau, chọn đúng biến thể của ～にあって（は）.",
+          "reason": "Dạng にあっても nhấn “ngay cả trong lúc dân chúng khó khăn”, đối lập với việc người khác vẫn hưởng lợi.",
+          "wrongReason": "Đáp án phù hợp là “にあっても”. Dạng にあっても nhấn “ngay cả trong lúc dân chúng khó khăn”, đối lập với việc người khác vẫn hưởng lợi. Hãy kiểm tra hình thức kết hợp: Danh từ chỉ tình huống/nơi chốn/thời điểm + にあって／にあっては／にあっても.",
           "chunks": [
             "私たちの生活が苦しい時にあっても、",
-            "政治家のやつらは",
-            "旨い汁を吸っている。"
+            "政治家のやつらは旨い汁を吸っている。"
           ]
         }
       ],
