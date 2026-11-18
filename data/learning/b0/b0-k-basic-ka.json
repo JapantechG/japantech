@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-basic-ka",
+  "type": "kana",
+  "title": "Hàng K · Katakana",
+  "alphabet": "katakana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-k-basic-ka-01",
+      "character": "カ",
+      "reading": "ka",
+      "meaning": "Âm ka",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng K",
+      "explanation": "Katakana カ được đọc là “ka” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn カ, phát âm ka mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu カメラ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ki",
+          "Âm ku",
+          "Âm ke"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "カメラ",
+          "reading": "ka · me · ra",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "カ",
+            "メ",
+            "ラ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là カメラ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "カ",
+          "blank": "____メラ"
+        }
+      ],
+      "sampleWord": "カメラ",
+      "sampleReading": "ka · me · ra",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-basic-ka-02",
+      "character": "キ",
+      "reading": "ki",
+      "meaning": "Âm ki",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng K",
+      "explanation": "Katakana キ được đọc là “ki” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn キ, phát âm ki mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu キス từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ka",
+          "Âm ku",
+          "Âm ke"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "キス",
+          "reading": "ki · su",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "キ",
+            "ス"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là キス.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "キ",
+          "blank": "____ス"
+        }
+      ],
+      "sampleWord": "キス",
+      "sampleReading": "ki · su",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-basic-ka-03",
+      "character": "ク",
+      "reading": "ku",
+      "meaning": "Âm ku",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng K",
+      "explanation": "Katakana ク được đọc là “ku” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ク, phát âm ku mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu クイズ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ka",
+          "Âm ki",
+          "Âm ke"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "クイズ",
+          "reading": "ku · i · zu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ク",
+            "イ",
+            "ズ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là クイズ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ク",
+          "blank": "____イズ"
+        }
+      ],
+      "sampleWord": "クイズ",
+      "sampleReading": "ku · i · zu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-k-basic-ka-04",
+      "character": "ケ",
+      "reading": "ke",
+      "meaning": "Âm ke",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng K",
+      "explanation": "Katakana ケ được đọc là “ke” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ケ, phát âm ke mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ケーキ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ka",
+          "Âm ki",
+          "Âm ku"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ケーキ",
+          "reading": "ke · (kéo dài) · ki",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ケ",
+            "ー",
+            "キ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ケーキ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ケ",
+          "blank": "____ーキ"
+        }
+      ],
+      "sampleWord": "ケーキ",
+      "sampleReading": "ke · (kéo dài) · ki",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-k-basic-ka-05",
+      "character": "コ",
+      "reading": "ko",
+      "meaning": "Âm ko",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng K",
+      "explanation": "Katakana コ được đọc là “ko” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn コ, phát âm ko mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu コーヒー từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ka",
+          "Âm ki",
+          "Âm ku"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "コーヒー",
+          "reading": "ko · (kéo dài) · hi · (kéo dài)",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "コ",
+            "ー",
+            "ヒ",
+            "ー"
+          ],
+          "hint": "Hãy ghép 4 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là コーヒー.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "コ",
+          "blank": "____ーヒー"
+        }
+      ],
+      "sampleWord": "コーヒー",
+      "sampleReading": "ko · (kéo dài) · hi · (kéo dài)",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}

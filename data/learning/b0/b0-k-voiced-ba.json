@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-voiced-ba",
+  "type": "kana",
+  "title": "Âm đục B · Katakana",
+  "alphabet": "katakana",
+  "stage": "voiced",
+  "items": [
+    {
+      "id": "b0-k-voiced-ba-01",
+      "character": "バ",
+      "reading": "ba",
+      "meaning": "Âm ba",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục B",
+      "explanation": "Katakana バ được đọc là “ba” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn バ, phát âm ba mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu バア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm bi",
+          "Âm bu",
+          "Âm be"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "バア",
+          "reading": "ba · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "バ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là バア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "バ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "バア",
+      "sampleReading": "ba · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-voiced-ba-02",
+      "character": "ビ",
+      "reading": "bi",
+      "meaning": "Âm bi",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục B",
+      "explanation": "Katakana ビ được đọc là “bi” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ビ, phát âm bi mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ビア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bu",
+          "Âm be"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ビア",
+          "reading": "bi · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ビ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ビア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ビ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ビア",
+      "sampleReading": "bi · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-voiced-ba-03",
+      "character": "ブ",
+      "reading": "bu",
+      "meaning": "Âm bu",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục B",
+      "explanation": "Katakana ブ được đọc là “bu” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ブ, phát âm bu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ブア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bi",
+          "Âm be"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ブア",
+          "reading": "bu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ブ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ブア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ブ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ブア",
+      "sampleReading": "bu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-k-voiced-ba-04",
+      "character": "ベ",
+      "reading": "be",
+      "meaning": "Âm be",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục B",
+      "explanation": "Katakana ベ được đọc là “be” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ベ, phát âm be mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ベア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bi",
+          "Âm bu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ベア",
+          "reading": "be · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ベ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ベア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ベ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ベア",
+      "sampleReading": "be · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-k-voiced-ba-05",
+      "character": "ボ",
+      "reading": "bo",
+      "meaning": "Âm bo",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục B",
+      "explanation": "Katakana ボ được đọc là “bo” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ボ, phát âm bo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ボア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bi",
+          "Âm bu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ボア",
+          "reading": "bo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ボ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ボア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ボ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ボア",
+      "sampleReading": "bo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 5
+    }
+  ]
+}

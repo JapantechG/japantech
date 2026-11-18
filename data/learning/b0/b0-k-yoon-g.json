@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-yoon-g",
+  "type": "kana",
+  "title": "Hàng GY · Katakana",
+  "alphabet": "katakana",
+  "stage": "yoon",
+  "items": [
+    {
+      "id": "b0-k-yoon-g-01",
+      "character": "ギャ",
+      "reading": "gya",
+      "meaning": "Âm gya",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng GY",
+      "explanation": "Katakana ギャ được đọc là “gya” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ギャ, phát âm gya mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ギャア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm gyu",
+          "Âm gyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ギャア",
+          "reading": "gya · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ギャ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ギャア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ギャ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ギャア",
+      "sampleReading": "gya · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-yoon-g-02",
+      "character": "ギュ",
+      "reading": "gyu",
+      "meaning": "Âm gyu",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng GY",
+      "explanation": "Katakana ギュ được đọc là “gyu” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ギュ, phát âm gyu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ギュア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm gya",
+          "Âm gyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ギュア",
+          "reading": "gyu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ギュ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ギュア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ギュ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ギュア",
+      "sampleReading": "gyu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-yoon-g-03",
+      "character": "ギョ",
+      "reading": "gyo",
+      "meaning": "Âm gyo",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng GY",
+      "explanation": "Katakana ギョ được đọc là “gyo” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ギョ, phát âm gyo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ギョア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm gya",
+          "Âm gyu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ギョア",
+          "reading": "gyo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ギョ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ギョア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ギョ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ギョア",
+      "sampleReading": "gyo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 3
+    }
+  ]
+}

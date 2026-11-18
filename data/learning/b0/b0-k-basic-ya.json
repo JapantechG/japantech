@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-basic-ya",
+  "type": "kana",
+  "title": "Hàng Y · Katakana",
+  "alphabet": "katakana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-k-basic-ya-01",
+      "character": "ヤ",
+      "reading": "ya",
+      "meaning": "Âm ya",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng Y",
+      "explanation": "Katakana ヤ được đọc là “ya” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヤ, phát âm ya mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヤード từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm yu",
+          "Âm yo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヤード",
+          "reading": "ya · (kéo dài) · do",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ヤ",
+            "ー",
+            "ド"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヤード.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヤ",
+          "blank": "____ード"
+        }
+      ],
+      "sampleWord": "ヤード",
+      "sampleReading": "ya · (kéo dài) · do",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-basic-ya-02",
+      "character": "ユ",
+      "reading": "yu",
+      "meaning": "Âm yu",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng Y",
+      "explanation": "Katakana ユ được đọc là “yu” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ユ, phát âm yu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ユーモア từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ya",
+          "Âm yo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ユーモア",
+          "reading": "yu · (kéo dài) · mo · a",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ユ",
+            "ー",
+            "モ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 4 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ユーモア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ユ",
+          "blank": "____ーモア"
+        }
+      ],
+      "sampleWord": "ユーモア",
+      "sampleReading": "yu · (kéo dài) · mo · a",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-basic-ya-03",
+      "character": "ヨ",
+      "reading": "yo",
+      "meaning": "Âm yo",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng Y",
+      "explanation": "Katakana ヨ được đọc là “yo” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヨ, phát âm yo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヨガ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ya",
+          "Âm yu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヨガ",
+          "reading": "yo · ga",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ヨ",
+            "ガ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヨガ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヨ",
+          "blank": "____ガ"
+        }
+      ],
+      "sampleWord": "ヨガ",
+      "sampleReading": "yo · ga",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 3
+    }
+  ]
+}

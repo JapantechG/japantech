@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-voiced-da",
+  "type": "kana",
+  "title": "Âm đục D · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "voiced",
+  "items": [
+    {
+      "id": "b0-h-voiced-da-01",
+      "character": "だ",
+      "reading": "da",
+      "meaning": "Âm da",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục D",
+      "explanation": "Hiragana だ được đọc là “da” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn だ, phát âm da mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu だあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ji",
+          "Âm zu",
+          "Âm de"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "だあ",
+          "reading": "da · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "だ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là だあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "だ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "だあ",
+      "sampleReading": "da · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-voiced-da-02",
+      "character": "ぢ",
+      "reading": "ji",
+      "meaning": "Âm ji",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục D",
+      "explanation": "Hiragana ぢ được đọc là “ji” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ぢ, phát âm ji mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ぢあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm zu",
+          "Âm de"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ぢあ",
+          "reading": "ji · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ぢ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ぢあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ぢ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ぢあ",
+      "sampleReading": "ji · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-voiced-da-03",
+      "character": "づ",
+      "reading": "zu",
+      "meaning": "Âm zu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục D",
+      "explanation": "Hiragana づ được đọc là “zu” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn づ, phát âm zu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu づあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm ji",
+          "Âm de"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "づあ",
+          "reading": "zu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "づ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là づあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "づ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "づあ",
+      "sampleReading": "zu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-h-voiced-da-04",
+      "character": "で",
+      "reading": "de",
+      "meaning": "Âm de",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục D",
+      "explanation": "Hiragana で được đọc là “de” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn で, phát âm de mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu であ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm ji",
+          "Âm zu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "であ",
+          "reading": "de · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "で",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là であ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "で",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "であ",
+      "sampleReading": "de · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-h-voiced-da-05",
+      "character": "ど",
+      "reading": "do",
+      "meaning": "Âm do",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục D",
+      "explanation": "Hiragana ど được đọc là “do” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ど, phát âm do mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu どあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm ji",
+          "Âm zu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "どあ",
+          "reading": "do · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ど",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là どあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ど",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "どあ",
+      "sampleReading": "do · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 5
+    }
+  ]
+}

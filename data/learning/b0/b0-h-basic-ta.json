@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-basic-ta",
+  "type": "kana",
+  "title": "Hàng T · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-h-basic-ta-01",
+      "character": "た",
+      "reading": "ta",
+      "meaning": "Âm ta",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng T",
+      "explanation": "Hiragana た được đọc là “ta” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn た, phát âm ta mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu たこ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm chi",
+          "Âm tsu",
+          "Âm te"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "たこ",
+          "reading": "ta · ko",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "た",
+            "こ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là たこ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "た",
+          "blank": "____こ"
+        }
+      ],
+      "sampleWord": "たこ",
+      "sampleReading": "ta · ko",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-basic-ta-02",
+      "character": "ち",
+      "reading": "chi",
+      "meaning": "Âm chi",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng T",
+      "explanation": "Hiragana ち được đọc là “chi” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ち, phát âm chi mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ちず từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm tsu",
+          "Âm te"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ちず",
+          "reading": "chi · zu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ち",
+            "ず"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ちず.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ち",
+          "blank": "____ず"
+        }
+      ],
+      "sampleWord": "ちず",
+      "sampleReading": "chi · zu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-basic-ta-03",
+      "character": "つ",
+      "reading": "tsu",
+      "meaning": "Âm tsu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng T",
+      "explanation": "Hiragana つ được đọc là “tsu” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn つ, phát âm tsu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu つき từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm chi",
+          "Âm te"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "つき",
+          "reading": "tsu · ki",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "つ",
+            "き"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là つき.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "つ",
+          "blank": "____き"
+        }
+      ],
+      "sampleWord": "つき",
+      "sampleReading": "tsu · ki",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-h-basic-ta-04",
+      "character": "て",
+      "reading": "te",
+      "meaning": "Âm te",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng T",
+      "explanation": "Hiragana て được đọc là “te” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn て, phát âm te mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu てがみ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm chi",
+          "Âm tsu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "てがみ",
+          "reading": "te · ga · mi",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "て",
+            "が",
+            "み"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là てがみ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "て",
+          "blank": "____がみ"
+        }
+      ],
+      "sampleWord": "てがみ",
+      "sampleReading": "te · ga · mi",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-h-basic-ta-05",
+      "character": "と",
+      "reading": "to",
+      "meaning": "Âm to",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng T",
+      "explanation": "Hiragana と được đọc là “to” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn と, phát âm to mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu とり từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm chi",
+          "Âm tsu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "とり",
+          "reading": "to · ri",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "と",
+            "り"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là とり.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "と",
+          "blank": "____り"
+        }
+      ],
+      "sampleWord": "とり",
+      "sampleReading": "to · ri",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-yoon-h",
+  "type": "kana",
+  "title": "Hàng HY · Katakana",
+  "alphabet": "katakana",
+  "stage": "yoon",
+  "items": [
+    {
+      "id": "b0-k-yoon-h-01",
+      "character": "ヒャ",
+      "reading": "hya",
+      "meaning": "Âm hya",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng HY",
+      "explanation": "Katakana ヒャ được đọc là “hya” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヒャ, phát âm hya mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヒャア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm hyu",
+          "Âm hyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヒャア",
+          "reading": "hya · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ヒャ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヒャア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヒャ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ヒャア",
+      "sampleReading": "hya · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-yoon-h-02",
+      "character": "ヒュ",
+      "reading": "hyu",
+      "meaning": "Âm hyu",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng HY",
+      "explanation": "Katakana ヒュ được đọc là “hyu” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヒュ, phát âm hyu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヒュア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm hya",
+          "Âm hyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヒュア",
+          "reading": "hyu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ヒュ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヒュア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヒュ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ヒュア",
+      "sampleReading": "hyu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-yoon-h-03",
+      "character": "ヒョ",
+      "reading": "hyo",
+      "meaning": "Âm hyo",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng HY",
+      "explanation": "Katakana ヒョ được đọc là “hyo” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヒョ, phát âm hyo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヒョア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm hya",
+          "Âm hyu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヒョア",
+          "reading": "hyo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ヒョ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヒョア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヒョ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ヒョア",
+      "sampleReading": "hyo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 3
+    }
+  ]
+}

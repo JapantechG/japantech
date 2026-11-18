@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-special-h-choon",
+  "type": "kana",
+  "title": "Quy tắc · う",
+  "alphabet": "special",
+  "stage": "special",
+  "items": [
+    {
+      "id": "b0-special-h-choon-01",
+      "character": "う",
+      "reading": "u (đôi khi kéo dài o)",
+      "meaning": "Quy tắc: u (đôi khi kéo dài o)",
+      "formation": "Quy tắc phát âm tiếng Nhật",
+      "priorityStars": 4,
+      "explanation": "Trong Hiragana, âm dài có thể viết bằng nguyên âm bổ sung như おとうさん; cách đọc theo từng từ.",
+      "usageDetails": [
+        {
+          "title": "Cách đọc",
+          "text": "Trong Hiragana, âm dài có thể viết bằng nguyên âm bổ sung như おとうさん; cách đọc theo từng từ."
+        },
+        {
+          "title": "Khi nào sử dụng",
+          "text": "Thực hành với おとうさん: Bố."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Đọc theo cả cụm từ, không tách từng ký tự một cách máy móc."
+        }
+      ],
+      "commonMistakes": [
+        "Nhầm chữ nhỏ với chữ lớn hoặc bỏ qua trường âm/trợ từ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm a",
+          "Âm i",
+          "Âm ka"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "おとうさん",
+          "reading": "o · to · u · sa · n",
+          "translation": "Bố",
+          "chunks": [
+            "お",
+            "と",
+            "う",
+            "さ",
+            "ん"
+          ],
+          "hint": "Ghép thành おとうさん theo số mảnh đã học.",
+          "reason": "Trong Hiragana, âm dài có thể viết bằng nguyên âm bổ sung như おとうさん; cách đọc theo từng từ.",
+          "wrongReason": "Trong Hiragana, âm dài có thể viết bằng nguyên âm bổ sung như おとうさん; cách đọc theo từng từ.",
+          "blank": "おと____さん",
+          "answer": "う"
+        }
+      ],
+      "sampleWord": "おとうさん",
+      "sampleMeaning": "Bố",
+      "sampleReading": "o · to · u · sa · n",
+      "sourceId": 4
+    }
+  ]
+}

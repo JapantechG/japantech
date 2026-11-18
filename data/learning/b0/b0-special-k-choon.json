@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-special-k-choon",
+  "type": "kana",
+  "title": "Quy tắc · ー",
+  "alphabet": "special",
+  "stage": "special",
+  "items": [
+    {
+      "id": "b0-special-k-choon-01",
+      "character": "ー",
+      "reading": "(kéo dài âm)",
+      "meaning": "Quy tắc: (kéo dài âm)",
+      "formation": "Quy tắc phát âm tiếng Nhật",
+      "priorityStars": 4,
+      "explanation": "Dấu ー kéo dài nguyên âm ngay trước, rất phổ biến trong Katakana.",
+      "usageDetails": [
+        {
+          "title": "Cách đọc",
+          "text": "Dấu ー kéo dài nguyên âm ngay trước, rất phổ biến trong Katakana."
+        },
+        {
+          "title": "Khi nào sử dụng",
+          "text": "Thực hành với コーヒー: Cà phê."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Đọc theo cả cụm từ, không tách từng ký tự một cách máy móc."
+        }
+      ],
+      "commonMistakes": [
+        "Nhầm chữ nhỏ với chữ lớn hoặc bỏ qua trường âm/trợ từ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm a",
+          "Âm i",
+          "Âm ka"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "コーヒー",
+          "reading": "ko · (kéo dài) · hi · (kéo dài)",
+          "translation": "Cà phê",
+          "chunks": [
+            "コ",
+            "ー",
+            "ヒ",
+            "ー"
+          ],
+          "hint": "Ghép thành コーヒー theo số mảnh đã học.",
+          "reason": "Dấu ー kéo dài nguyên âm ngay trước, rất phổ biến trong Katakana.",
+          "wrongReason": "Dấu ー kéo dài nguyên âm ngay trước, rất phổ biến trong Katakana.",
+          "blank": "コ____ヒー",
+          "answer": "ー"
+        }
+      ],
+      "sampleWord": "コーヒー",
+      "sampleMeaning": "Cà phê",
+      "sampleReading": "ko · (kéo dài) · hi · (kéo dài)",
+      "sourceId": 3
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-yoon-s",
+  "type": "kana",
+  "title": "Hàng SH · Katakana",
+  "alphabet": "katakana",
+  "stage": "yoon",
+  "items": [
+    {
+      "id": "b0-k-yoon-s-01",
+      "character": "シャ",
+      "reading": "sha",
+      "meaning": "Âm sha",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng SH",
+      "explanation": "Katakana シャ được đọc là “sha” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn シャ, phát âm sha mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu シャア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm shu",
+          "Âm sho",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "シャア",
+          "reading": "sha · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "シャ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là シャア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "シャ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "シャア",
+      "sampleReading": "sha · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-yoon-s-02",
+      "character": "シュ",
+      "reading": "shu",
+      "meaning": "Âm shu",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng SH",
+      "explanation": "Katakana シュ được đọc là “shu” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn シュ, phát âm shu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu シュア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm sha",
+          "Âm sho",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "シュア",
+          "reading": "shu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "シュ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là シュア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "シュ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "シュア",
+      "sampleReading": "shu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-yoon-s-03",
+      "character": "ショ",
+      "reading": "sho",
+      "meaning": "Âm sho",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng SH",
+      "explanation": "Katakana ショ được đọc là “sho” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ショ, phát âm sho mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ショア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm sha",
+          "Âm shu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ショア",
+          "reading": "sho · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ショ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ショア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ショ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ショア",
+      "sampleReading": "sho · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 3
+    }
+  ]
+}

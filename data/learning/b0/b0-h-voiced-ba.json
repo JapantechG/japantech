@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-voiced-ba",
+  "type": "kana",
+  "title": "Âm đục B · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "voiced",
+  "items": [
+    {
+      "id": "b0-h-voiced-ba-01",
+      "character": "ば",
+      "reading": "ba",
+      "meaning": "Âm ba",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục B",
+      "explanation": "Hiragana ば được đọc là “ba” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ば, phát âm ba mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ばあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm bi",
+          "Âm bu",
+          "Âm be"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ばあ",
+          "reading": "ba · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ば",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ばあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ば",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ばあ",
+      "sampleReading": "ba · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-voiced-ba-02",
+      "character": "び",
+      "reading": "bi",
+      "meaning": "Âm bi",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục B",
+      "explanation": "Hiragana び được đọc là “bi” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn び, phát âm bi mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu びあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bu",
+          "Âm be"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "びあ",
+          "reading": "bi · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "び",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là びあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "び",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "びあ",
+      "sampleReading": "bi · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-voiced-ba-03",
+      "character": "ぶ",
+      "reading": "bu",
+      "meaning": "Âm bu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục B",
+      "explanation": "Hiragana ぶ được đọc là “bu” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ぶ, phát âm bu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ぶあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bi",
+          "Âm be"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ぶあ",
+          "reading": "bu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ぶ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ぶあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ぶ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ぶあ",
+      "sampleReading": "bu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-h-voiced-ba-04",
+      "character": "べ",
+      "reading": "be",
+      "meaning": "Âm be",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục B",
+      "explanation": "Hiragana べ được đọc là “be” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn べ, phát âm be mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu べあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bi",
+          "Âm bu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "べあ",
+          "reading": "be · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "べ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là べあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "べ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "べあ",
+      "sampleReading": "be · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-h-voiced-ba-05",
+      "character": "ぼ",
+      "reading": "bo",
+      "meaning": "Âm bo",
+      "priorityStars": 3,
+      "formation": "Hiragana · Âm đục B",
+      "explanation": "Hiragana ぼ được đọc là “bo” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ぼ, phát âm bo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ぼあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ba",
+          "Âm bi",
+          "Âm bu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ぼあ",
+          "reading": "bo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ぼ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ぼあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ぼ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ぼあ",
+      "sampleReading": "bo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "voiced",
+      "sourceId": 5
+    }
+  ]
+}

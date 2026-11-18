@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-voiced-da",
+  "type": "kana",
+  "title": "Âm đục D · Katakana",
+  "alphabet": "katakana",
+  "stage": "voiced",
+  "items": [
+    {
+      "id": "b0-k-voiced-da-01",
+      "character": "ダ",
+      "reading": "da",
+      "meaning": "Âm da",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục D",
+      "explanation": "Katakana ダ được đọc là “da” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ダ, phát âm da mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ダア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ji",
+          "Âm zu",
+          "Âm de"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ダア",
+          "reading": "da · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ダ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ダア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ダ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ダア",
+      "sampleReading": "da · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-voiced-da-02",
+      "character": "ヂ",
+      "reading": "ji",
+      "meaning": "Âm ji",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục D",
+      "explanation": "Katakana ヂ được đọc là “ji” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヂ, phát âm ji mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヂア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm zu",
+          "Âm de"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヂア",
+          "reading": "ji · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ヂ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヂア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヂ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ヂア",
+      "sampleReading": "ji · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-voiced-da-03",
+      "character": "ヅ",
+      "reading": "zu",
+      "meaning": "Âm zu",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục D",
+      "explanation": "Katakana ヅ được đọc là “zu” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヅ, phát âm zu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/. ぢ/ヂ và づ/ヅ thường đọc gần giống じ/ジ và ず/ズ trong tiếng Nhật chuẩn, nhưng khác chính tả."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヅア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm ji",
+          "Âm de"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヅア",
+          "reading": "zu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ヅ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヅア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヅ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ヅア",
+      "sampleReading": "zu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-k-voiced-da-04",
+      "character": "デ",
+      "reading": "de",
+      "meaning": "Âm de",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục D",
+      "explanation": "Katakana デ được đọc là “de” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn デ, phát âm de mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu デア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm ji",
+          "Âm zu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "デア",
+          "reading": "de · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "デ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là デア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "デ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "デア",
+      "sampleReading": "de · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-k-voiced-da-05",
+      "character": "ド",
+      "reading": "do",
+      "meaning": "Âm do",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm đục D",
+      "explanation": "Katakana ド được đọc là “do” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ド, phát âm do mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ドア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm da",
+          "Âm ji",
+          "Âm zu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ドア",
+          "reading": "do · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ド",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ドア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ド",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ドア",
+      "sampleReading": "do · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 5
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-special-h-particle-o",
+  "type": "kana",
+  "title": "Quy tắc · を",
+  "alphabet": "special",
+  "stage": "special",
+  "items": [
+    {
+      "id": "b0-special-h-particle-o-01",
+      "character": "を",
+      "reading": "o khi là trợ từ",
+      "meaning": "Quy tắc: o khi là trợ từ",
+      "formation": "Quy tắc phát âm tiếng Nhật",
+      "priorityStars": 4,
+      "explanation": "を thường biểu thị tân ngữ và phát âm gần o.",
+      "usageDetails": [
+        {
+          "title": "Cách đọc",
+          "text": "を thường biểu thị tân ngữ và phát âm gần o."
+        },
+        {
+          "title": "Khi nào sử dụng",
+          "text": "Thực hành với ほんをよむ: Đọc sách."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Đọc theo cả cụm từ, không tách từng ký tự một cách máy móc."
+        }
+      ],
+      "commonMistakes": [
+        "Nhầm chữ nhỏ với chữ lớn hoặc bỏ qua trường âm/trợ từ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm a",
+          "Âm i",
+          "Âm ka"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ほんをよむ",
+          "reading": "ho · n · o/wo · yo · mu",
+          "translation": "Đọc sách",
+          "chunks": [
+            "ほ",
+            "ん",
+            "を",
+            "よ",
+            "む"
+          ],
+          "hint": "Ghép thành ほんをよむ theo số mảnh đã học.",
+          "reason": "を thường biểu thị tân ngữ và phát âm gần o.",
+          "wrongReason": "を thường biểu thị tân ngữ và phát âm gần o.",
+          "blank": "ほん____よむ",
+          "answer": "を"
+        }
+      ],
+      "sampleWord": "ほんをよむ",
+      "sampleMeaning": "Đọc sách",
+      "sampleReading": "ho · n · o/wo · yo · mu",
+      "sourceId": 7
+    }
+  ]
+}

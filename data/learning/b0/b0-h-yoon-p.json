@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-yoon-p",
+  "type": "kana",
+  "title": "Hàng PY · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "yoon",
+  "items": [
+    {
+      "id": "b0-h-yoon-p-01",
+      "character": "ぴゃ",
+      "reading": "pya",
+      "meaning": "Âm pya",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng PY",
+      "explanation": "Hiragana ぴゃ được đọc là “pya” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ぴゃ, phát âm pya mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ぴゃあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pyu",
+          "Âm pyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ぴゃあ",
+          "reading": "pya · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ぴゃ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ぴゃあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ぴゃ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ぴゃあ",
+      "sampleReading": "pya · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-yoon-p-02",
+      "character": "ぴゅ",
+      "reading": "pyu",
+      "meaning": "Âm pyu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng PY",
+      "explanation": "Hiragana ぴゅ được đọc là “pyu” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ぴゅ, phát âm pyu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ぴゅあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pya",
+          "Âm pyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ぴゅあ",
+          "reading": "pyu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ぴゅ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ぴゅあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ぴゅ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ぴゅあ",
+      "sampleReading": "pyu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-yoon-p-03",
+      "character": "ぴょ",
+      "reading": "pyo",
+      "meaning": "Âm pyo",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng PY",
+      "explanation": "Hiragana ぴょ được đọc là “pyo” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ぴょ, phát âm pyo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ぴょあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pya",
+          "Âm pyu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ぴょあ",
+          "reading": "pyo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ぴょ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ぴょあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ぴょ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ぴょあ",
+      "sampleReading": "pyo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 3
+    }
+  ]
+}

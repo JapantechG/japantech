@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-basic-ya",
+  "type": "kana",
+  "title": "Hàng Y · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-h-basic-ya-01",
+      "character": "や",
+      "reading": "ya",
+      "meaning": "Âm ya",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng Y",
+      "explanation": "Hiragana や được đọc là “ya” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn や, phát âm ya mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu やま từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm yu",
+          "Âm yo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "やま",
+          "reading": "ya · ma",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "や",
+            "ま"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là やま.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "や",
+          "blank": "____ま"
+        }
+      ],
+      "sampleWord": "やま",
+      "sampleReading": "ya · ma",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-basic-ya-02",
+      "character": "ゆ",
+      "reading": "yu",
+      "meaning": "Âm yu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng Y",
+      "explanation": "Hiragana ゆ được đọc là “yu” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ゆ, phát âm yu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ゆき từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ya",
+          "Âm yo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ゆき",
+          "reading": "yu · ki",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ゆ",
+            "き"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ゆき.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ゆ",
+          "blank": "____き"
+        }
+      ],
+      "sampleWord": "ゆき",
+      "sampleReading": "yu · ki",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-basic-ya-03",
+      "character": "よ",
+      "reading": "yo",
+      "meaning": "Âm yo",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng Y",
+      "explanation": "Hiragana よ được đọc là “yo” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn よ, phát âm yo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu よる từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ya",
+          "Âm yu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "よる",
+          "reading": "yo · ru",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "よ",
+            "る"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là よる.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "よ",
+          "blank": "____る"
+        }
+      ],
+      "sampleWord": "よる",
+      "sampleReading": "yo · ru",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 3
+    }
+  ]
+}

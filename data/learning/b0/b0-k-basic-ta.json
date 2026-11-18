@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-basic-ta",
+  "type": "kana",
+  "title": "Hàng T · Katakana",
+  "alphabet": "katakana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-k-basic-ta-01",
+      "character": "タ",
+      "reading": "ta",
+      "meaning": "Âm ta",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng T",
+      "explanation": "Katakana タ được đọc là “ta” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn タ, phát âm ta mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu タクシー từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm chi",
+          "Âm tsu",
+          "Âm te"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "タクシー",
+          "reading": "ta · ku · shi · (kéo dài)",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "タ",
+            "ク",
+            "シ",
+            "ー"
+          ],
+          "hint": "Hãy ghép 4 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là タクシー.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "タ",
+          "blank": "____クシー"
+        }
+      ],
+      "sampleWord": "タクシー",
+      "sampleReading": "ta · ku · shi · (kéo dài)",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-basic-ta-02",
+      "character": "チ",
+      "reading": "chi",
+      "meaning": "Âm chi",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng T",
+      "explanation": "Katakana チ được đọc là “chi” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn チ, phát âm chi mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu チーズ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm tsu",
+          "Âm te"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "チーズ",
+          "reading": "chi · (kéo dài) · zu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "チ",
+            "ー",
+            "ズ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là チーズ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "チ",
+          "blank": "____ーズ"
+        }
+      ],
+      "sampleWord": "チーズ",
+      "sampleReading": "chi · (kéo dài) · zu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-basic-ta-03",
+      "character": "ツ",
+      "reading": "tsu",
+      "meaning": "Âm tsu",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng T",
+      "explanation": "Katakana ツ được đọc là “tsu” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ツ, phát âm tsu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ツアー từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm chi",
+          "Âm te"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ツアー",
+          "reading": "tsu · a · (kéo dài)",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ツ",
+            "ア",
+            "ー"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ツアー.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ツ",
+          "blank": "____アー"
+        }
+      ],
+      "sampleWord": "ツアー",
+      "sampleReading": "tsu · a · (kéo dài)",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-k-basic-ta-04",
+      "character": "テ",
+      "reading": "te",
+      "meaning": "Âm te",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng T",
+      "explanation": "Katakana テ được đọc là “te” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn テ, phát âm te mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu テスト từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm chi",
+          "Âm tsu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "テスト",
+          "reading": "te · su · to",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "テ",
+            "ス",
+            "ト"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là テスト.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "テ",
+          "blank": "____スト"
+        }
+      ],
+      "sampleWord": "テスト",
+      "sampleReading": "te · su · to",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-k-basic-ta-05",
+      "character": "ト",
+      "reading": "to",
+      "meaning": "Âm to",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng T",
+      "explanation": "Katakana ト được đọc là “to” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ト, phát âm to mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu トマト từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ta",
+          "Âm chi",
+          "Âm tsu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "トマト",
+          "reading": "to · ma · to",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ト",
+            "マ",
+            "ト"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là トマト.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ト",
+          "blank": "____マト"
+        }
+      ],
+      "sampleWord": "トマト",
+      "sampleReading": "to · ma · to",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}

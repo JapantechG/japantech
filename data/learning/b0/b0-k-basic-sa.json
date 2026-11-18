@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-basic-sa",
+  "type": "kana",
+  "title": "Hàng S · Katakana",
+  "alphabet": "katakana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-k-basic-sa-01",
+      "character": "サ",
+      "reading": "sa",
+      "meaning": "Âm sa",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng S",
+      "explanation": "Katakana サ được đọc là “sa” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn サ, phát âm sa mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu サラダ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm shi",
+          "Âm su",
+          "Âm se"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "サラダ",
+          "reading": "sa · ra · da",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "サ",
+            "ラ",
+            "ダ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là サラダ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "サ",
+          "blank": "____ラダ"
+        }
+      ],
+      "sampleWord": "サラダ",
+      "sampleReading": "sa · ra · da",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-basic-sa-02",
+      "character": "シ",
+      "reading": "shi",
+      "meaning": "Âm shi",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng S",
+      "explanation": "Katakana シ được đọc là “shi” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn シ, phát âm shi mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu シャツ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm sa",
+          "Âm su",
+          "Âm se"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "シャツ",
+          "reading": "sha · tsu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "シャ",
+            "ツ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là シャツ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "シ",
+          "blank": "____ャツ"
+        }
+      ],
+      "sampleWord": "シャツ",
+      "sampleReading": "sha · tsu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-basic-sa-03",
+      "character": "ス",
+      "reading": "su",
+      "meaning": "Âm su",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng S",
+      "explanation": "Katakana ス được đọc là “su” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ス, phát âm su mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu スープ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm sa",
+          "Âm shi",
+          "Âm se"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "スープ",
+          "reading": "su · (kéo dài) · pu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ス",
+            "ー",
+            "プ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là スープ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ス",
+          "blank": "____ープ"
+        }
+      ],
+      "sampleWord": "スープ",
+      "sampleReading": "su · (kéo dài) · pu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-k-basic-sa-04",
+      "character": "セ",
+      "reading": "se",
+      "meaning": "Âm se",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng S",
+      "explanation": "Katakana セ được đọc là “se” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn セ, phát âm se mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu セーター từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm sa",
+          "Âm shi",
+          "Âm su"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "セーター",
+          "reading": "se · (kéo dài) · ta · (kéo dài)",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "セ",
+            "ー",
+            "タ",
+            "ー"
+          ],
+          "hint": "Hãy ghép 4 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là セーター.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "セ",
+          "blank": "____ーター"
+        }
+      ],
+      "sampleWord": "セーター",
+      "sampleReading": "se · (kéo dài) · ta · (kéo dài)",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-k-basic-sa-05",
+      "character": "ソ",
+      "reading": "so",
+      "meaning": "Âm so",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng S",
+      "explanation": "Katakana ソ được đọc là “so” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ソ, phát âm so mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ソファ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm sa",
+          "Âm shi",
+          "Âm su"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ソファ",
+          "reading": "so · fu · ァ",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ソ",
+            "フ",
+            "ァ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ソファ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ソ",
+          "blank": "____ファ"
+        }
+      ],
+      "sampleWord": "ソファ",
+      "sampleReading": "so · fu · ァ",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}

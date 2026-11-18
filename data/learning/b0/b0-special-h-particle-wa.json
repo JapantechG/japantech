@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-special-h-particle-wa",
+  "type": "kana",
+  "title": "Quy tắc · は",
+  "alphabet": "special",
+  "stage": "special",
+  "items": [
+    {
+      "id": "b0-special-h-particle-wa-01",
+      "character": "は",
+      "reading": "wa khi là trợ từ",
+      "meaning": "Quy tắc: wa khi là trợ từ",
+      "formation": "Quy tắc phát âm tiếng Nhật",
+      "priorityStars": 4,
+      "explanation": "は khi là trợ từ chủ đề đọc là wa; trong こんにちは cũng đọc wa.",
+      "usageDetails": [
+        {
+          "title": "Cách đọc",
+          "text": "は khi là trợ từ chủ đề đọc là wa; trong こんにちは cũng đọc wa."
+        },
+        {
+          "title": "Khi nào sử dụng",
+          "text": "Thực hành với こんにちは: Xin chào."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Đọc theo cả cụm từ, không tách từng ký tự một cách máy móc."
+        }
+      ],
+      "commonMistakes": [
+        "Nhầm chữ nhỏ với chữ lớn hoặc bỏ qua trường âm/trợ từ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm a",
+          "Âm i",
+          "Âm ka"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "こんにちは",
+          "reading": "ko · n · ni · chi · ha",
+          "translation": "Xin chào",
+          "chunks": [
+            "こ",
+            "ん",
+            "に",
+            "ち",
+            "は"
+          ],
+          "hint": "Ghép thành こんにちは theo số mảnh đã học.",
+          "reason": "は khi là trợ từ chủ đề đọc là wa; trong こんにちは cũng đọc wa.",
+          "wrongReason": "は khi là trợ từ chủ đề đọc là wa; trong こんにちは cũng đọc wa.",
+          "blank": "こんにち____",
+          "answer": "は"
+        }
+      ],
+      "sampleWord": "こんにちは",
+      "sampleMeaning": "Xin chào",
+      "sampleReading": "ko · n · ni · chi · ha",
+      "sourceId": 5
+    }
+  ]
+}

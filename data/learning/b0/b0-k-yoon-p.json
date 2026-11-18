@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-yoon-p",
+  "type": "kana",
+  "title": "Hàng PY · Katakana",
+  "alphabet": "katakana",
+  "stage": "yoon",
+  "items": [
+    {
+      "id": "b0-k-yoon-p-01",
+      "character": "ピャ",
+      "reading": "pya",
+      "meaning": "Âm pya",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng PY",
+      "explanation": "Katakana ピャ được đọc là “pya” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ピャ, phát âm pya mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ピャア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pyu",
+          "Âm pyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ピャア",
+          "reading": "pya · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ピャ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ピャア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ピャ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ピャア",
+      "sampleReading": "pya · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-yoon-p-02",
+      "character": "ピュ",
+      "reading": "pyu",
+      "meaning": "Âm pyu",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng PY",
+      "explanation": "Katakana ピュ được đọc là “pyu” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ピュ, phát âm pyu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ピュア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pya",
+          "Âm pyo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ピュア",
+          "reading": "pyu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ピュ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ピュア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ピュ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ピュア",
+      "sampleReading": "pyu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-yoon-p-03",
+      "character": "ピョ",
+      "reading": "pyo",
+      "meaning": "Âm pyo",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng PY",
+      "explanation": "Katakana ピョ được đọc là “pyo” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ピョ, phát âm pyo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ピョア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pya",
+          "Âm pyu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ピョア",
+          "reading": "pyo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ピョ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ピョア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ピョ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ピョア",
+      "sampleReading": "pyo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "yoon",
+      "sourceId": 3
+    }
+  ]
+}

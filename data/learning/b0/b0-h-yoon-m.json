@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-yoon-m",
+  "type": "kana",
+  "title": "Hàng MY · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "yoon",
+  "items": [
+    {
+      "id": "b0-h-yoon-m-01",
+      "character": "みゃ",
+      "reading": "mya",
+      "meaning": "Âm mya",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng MY",
+      "explanation": "Hiragana みゃ được đọc là “mya” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn みゃ, phát âm mya mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu みゃあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm myu",
+          "Âm myo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "みゃあ",
+          "reading": "mya · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "みゃ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là みゃあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "みゃ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "みゃあ",
+      "sampleReading": "mya · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-yoon-m-02",
+      "character": "みゅ",
+      "reading": "myu",
+      "meaning": "Âm myu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng MY",
+      "explanation": "Hiragana みゅ được đọc là “myu” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn みゅ, phát âm myu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu みゅあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm mya",
+          "Âm myo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "みゅあ",
+          "reading": "myu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "みゅ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là みゅあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "みゅ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "みゅあ",
+      "sampleReading": "myu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-yoon-m-03",
+      "character": "みょ",
+      "reading": "myo",
+      "meaning": "Âm myo",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng MY",
+      "explanation": "Hiragana みょ được đọc là “myo” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn みょ, phát âm myo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu みょあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm mya",
+          "Âm myu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "みょあ",
+          "reading": "myo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "みょ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là みょあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "みょ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "みょあ",
+      "sampleReading": "myo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 3
+    }
+  ]
+}

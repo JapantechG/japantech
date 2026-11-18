@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-basic-wa",
+  "type": "kana",
+  "title": "Hàng W và ん · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-h-basic-wa-01",
+      "character": "わ",
+      "reading": "wa",
+      "meaning": "Âm wa",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng W và ん",
+      "explanation": "Hiragana わ được đọc là “wa” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn わ, phát âm wa mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu わに từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm wo",
+          "Âm n",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "わに",
+          "reading": "wa · ni",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "わ",
+            "に"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là わに.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "わ",
+          "blank": "____に"
+        }
+      ],
+      "sampleWord": "わに",
+      "sampleReading": "wa · ni",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-basic-wa-02",
+      "character": "を",
+      "reading": "wo",
+      "meaning": "Âm wo",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng W và ん",
+      "explanation": "Hiragana を được đọc là “wo” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. Trong vai trò trợ từ, を thường đọc gần âm “o” dù Romaji viết wo. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn を, phát âm wo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. Trong vai trò trợ từ, を thường đọc gần âm “o” dù Romaji viết wo."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ほんをよむ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm wa",
+          "Âm n",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ほんをよむ",
+          "reading": "ho · n · o/wo · yo · mu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ほ",
+            "ん",
+            "を",
+            "よ",
+            "む"
+          ],
+          "hint": "Hãy ghép 5 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ほんをよむ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "を",
+          "blank": "ほん____よむ"
+        }
+      ],
+      "sampleWord": "ほんをよむ",
+      "sampleReading": "ho · n · o/wo · yo · mu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-basic-wa-03",
+      "character": "ん",
+      "reading": "n",
+      "meaning": "Âm n",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng W và ん",
+      "explanation": "Hiragana ん được đọc là “n” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. ん・ン là âm mũi, không phải nguyên âm độc lập; cách phát âm thay đổi theo âm đứng sau. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ん, phát âm n mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. ん・ン là âm mũi, không phải nguyên âm độc lập; cách phát âm thay đổi theo âm đứng sau."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ほん từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm wa",
+          "Âm wo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ほん",
+          "reading": "ho · n",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ほ",
+            "ん"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ほん.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ん",
+          "blank": "ほ____"
+        }
+      ],
+      "sampleWord": "ほん",
+      "sampleReading": "ho · n",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "hiragana",
+      "stage": "basic",
+      "sourceId": 3
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-voiced-pa",
+  "type": "kana",
+  "title": "Âm bật P · Katakana",
+  "alphabet": "katakana",
+  "stage": "voiced",
+  "items": [
+    {
+      "id": "b0-k-voiced-pa-01",
+      "character": "パ",
+      "reading": "pa",
+      "meaning": "Âm pa",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm bật P",
+      "explanation": "Katakana パ được đọc là “pa” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn パ, phát âm pa mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu パア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pi",
+          "Âm pu",
+          "Âm pe"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "パア",
+          "reading": "pa · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "パ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là パア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "パ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "パア",
+      "sampleReading": "pa · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-voiced-pa-02",
+      "character": "ピ",
+      "reading": "pi",
+      "meaning": "Âm pi",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm bật P",
+      "explanation": "Katakana ピ được đọc là “pi” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ピ, phát âm pi mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ピア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pa",
+          "Âm pu",
+          "Âm pe"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ピア",
+          "reading": "pi · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ピ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ピア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ピ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ピア",
+      "sampleReading": "pi · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-voiced-pa-03",
+      "character": "プ",
+      "reading": "pu",
+      "meaning": "Âm pu",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm bật P",
+      "explanation": "Katakana プ được đọc là “pu” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn プ, phát âm pu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu プア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pa",
+          "Âm pi",
+          "Âm pe"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "プア",
+          "reading": "pu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "プ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là プア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "プ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "プア",
+      "sampleReading": "pu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-k-voiced-pa-04",
+      "character": "ペ",
+      "reading": "pe",
+      "meaning": "Âm pe",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm bật P",
+      "explanation": "Katakana ペ được đọc là “pe” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ペ, phát âm pe mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ペア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pa",
+          "Âm pi",
+          "Âm pu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ペア",
+          "reading": "pe · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ペ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ペア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ペ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ペア",
+      "sampleReading": "pe · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-k-voiced-pa-05",
+      "character": "ポ",
+      "reading": "po",
+      "meaning": "Âm po",
+      "priorityStars": 3,
+      "formation": "Katakana · Âm bật P",
+      "explanation": "Katakana ポ được đọc là “po” theo cách viết Romaji. Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ポ, phát âm po mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Dấu ゛ tạo âm đục; dấu ゜ tạo âm bật /p/."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ポア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm pa",
+          "Âm pi",
+          "Âm pu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ポア",
+          "reading": "po · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ポ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ポア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ポ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ポア",
+      "sampleReading": "po · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "voiced",
+      "sourceId": 5
+    }
+  ]
+}

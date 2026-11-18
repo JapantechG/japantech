@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-special-k-small-vowels",
+  "type": "kana",
+  "title": "Quy tắc · ァ",
+  "alphabet": "special",
+  "stage": "special",
+  "items": [
+    {
+      "id": "b0-special-k-small-vowels-01",
+      "character": "ァ",
+      "reading": "a nhỏ",
+      "meaning": "Quy tắc: a nhỏ",
+      "formation": "Quy tắc phát âm tiếng Nhật",
+      "priorityStars": 4,
+      "explanation": "ァ・ィ・ゥ・ェ・ォ giúp biểu diễn âm của từ nước ngoài như ファ.",
+      "usageDetails": [
+        {
+          "title": "Cách đọc",
+          "text": "ァ・ィ・ゥ・ェ・ォ giúp biểu diễn âm của từ nước ngoài như ファ."
+        },
+        {
+          "title": "Khi nào sử dụng",
+          "text": "Thực hành với ファイル: Tệp tin."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Đọc theo cả cụm từ, không tách từng ký tự một cách máy móc."
+        }
+      ],
+      "commonMistakes": [
+        "Nhầm chữ nhỏ với chữ lớn hoặc bỏ qua trường âm/trợ từ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm a",
+          "Âm i",
+          "Âm ka"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ファイル",
+          "reading": "fu · ァ · i · ru",
+          "translation": "Tệp tin",
+          "chunks": [
+            "フ",
+            "ァ",
+            "イ",
+            "ル"
+          ],
+          "hint": "Ghép thành ファイル theo số mảnh đã học.",
+          "reason": "ァ・ィ・ゥ・ェ・ォ giúp biểu diễn âm của từ nước ngoài như ファ.",
+          "wrongReason": "ァ・ィ・ゥ・ェ・ォ giúp biểu diễn âm của từ nước ngoài như ファ.",
+          "blank": "フ____イル",
+          "answer": "ァ"
+        }
+      ],
+      "sampleWord": "ファイル",
+      "sampleMeaning": "Tệp tin",
+      "sampleReading": "fu · ァ · i · ru",
+      "sourceId": 8
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-h-yoon-t",
+  "type": "kana",
+  "title": "Hàng CH · Hiragana",
+  "alphabet": "hiragana",
+  "stage": "yoon",
+  "items": [
+    {
+      "id": "b0-h-yoon-t-01",
+      "character": "ちゃ",
+      "reading": "cha",
+      "meaning": "Âm cha",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng CH",
+      "explanation": "Hiragana ちゃ được đọc là “cha” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ちゃ, phát âm cha mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ちゃあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm chu",
+          "Âm cho",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ちゃあ",
+          "reading": "cha · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ちゃ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ちゃあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ちゃ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ちゃあ",
+      "sampleReading": "cha · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-h-yoon-t-02",
+      "character": "ちゅ",
+      "reading": "chu",
+      "meaning": "Âm chu",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng CH",
+      "explanation": "Hiragana ちゅ được đọc là “chu” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ちゅ, phát âm chu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ちゅあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm cha",
+          "Âm cho",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ちゅあ",
+          "reading": "chu · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ちゅ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ちゅあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ちゅ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ちゅあ",
+      "sampleReading": "chu · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-h-yoon-t-03",
+      "character": "ちょ",
+      "reading": "cho",
+      "meaning": "Âm cho",
+      "priorityStars": 3,
+      "formation": "Hiragana · Hàng CH",
+      "explanation": "Hiragana ちょ được đọc là “cho” theo cách viết Romaji. Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ちょ, phát âm cho mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Đọc thành một âm tiết với chữ ゃ・ゅ・ょ nhỏ, không đọc tách hai âm."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ちょあ từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm cha",
+          "Âm chu",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ちょあ",
+          "reading": "cho · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ちょ",
+            "あ"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ちょあ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ちょ",
+          "blank": "____あ"
+        }
+      ],
+      "sampleWord": "ちょあ",
+      "sampleReading": "cho · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "hiragana",
+      "stage": "yoon",
+      "sourceId": 3
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-special-k-sokuon",
+  "type": "kana",
+  "title": "Quy tắc · ッ",
+  "alphabet": "special",
+  "stage": "special",
+  "items": [
+    {
+      "id": "b0-special-k-sokuon-01",
+      "character": "ッ",
+      "reading": "(ngắt âm)",
+      "meaning": "Quy tắc: (ngắt âm)",
+      "formation": "Quy tắc phát âm tiếng Nhật",
+      "priorityStars": 4,
+      "explanation": "ッ nhỏ biểu thị nhịp ngắt trong từ Katakana, ví dụ バッグ (baggu).",
+      "usageDetails": [
+        {
+          "title": "Cách đọc",
+          "text": "ッ nhỏ biểu thị nhịp ngắt trong từ Katakana, ví dụ バッグ (baggu)."
+        },
+        {
+          "title": "Khi nào sử dụng",
+          "text": "Thực hành với バッグ: Cái túi."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Đọc theo cả cụm từ, không tách từng ký tự một cách máy móc."
+        }
+      ],
+      "commonMistakes": [
+        "Nhầm chữ nhỏ với chữ lớn hoặc bỏ qua trường âm/trợ từ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm a",
+          "Âm i",
+          "Âm ka"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "バッグ",
+          "reading": "ba · (ngắt) · gu",
+          "translation": "Cái túi",
+          "chunks": [
+            "バ",
+            "ッ",
+            "グ"
+          ],
+          "hint": "Ghép thành バッグ theo số mảnh đã học.",
+          "reason": "ッ nhỏ biểu thị nhịp ngắt trong từ Katakana, ví dụ バッグ (baggu).",
+          "wrongReason": "ッ nhỏ biểu thị nhịp ngắt trong từ Katakana, ví dụ バッグ (baggu).",
+          "blank": "バ____グ",
+          "answer": "ッ"
+        }
+      ],
+      "sampleWord": "バッグ",
+      "sampleMeaning": "Cái túi",
+      "sampleReading": "ba · (ngắt) · gu",
+      "sourceId": 2
+    }
+  ]
+}

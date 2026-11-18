@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "courseId": "b0",
+  "title": "Cơ bản tiếng Nhật",
+  "chapters": [
+    {
+      "id": "h-basic",
+      "title": "Giai đoạn 1 · Hiragana cơ bản",
+      "description": "Học 46 chữ Hiragana theo các hàng âm.",
+      "lessons": [
+        {
+          "id": "b0-h-basic-a",
+          "title": "Nguyên âm · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-a.json"
+        },
+        {
+          "id": "b0-h-basic-ka",
+          "title": "Hàng K · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-ka.json"
+        },
+        {
+          "id": "b0-h-basic-sa",
+          "title": "Hàng S · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-sa.json"
+        },
+        {
+          "id": "b0-h-basic-ta",
+          "title": "Hàng T · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-ta.json"
+        },
+        {
+          "id": "b0-h-basic-na",
+          "title": "Hàng N · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-na.json"
+        },
+        {
+          "id": "b0-h-basic-ha",
+          "title": "Hàng H · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-ha.json"
+        },
+        {
+          "id": "b0-h-basic-ma",
+          "title": "Hàng M · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-ma.json"
+        },
+        {
+          "id": "b0-h-basic-ya",
+          "title": "Hàng Y · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-ya.json"
+        },
+        {
+          "id": "b0-h-basic-ra",
+          "title": "Hàng R · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-ra.json"
+        },
+        {
+          "id": "b0-h-basic-wa",
+          "title": "Hàng W và ん · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-basic-wa.json"
+        }
+      ]
+    },
+    {
+      "id": "k-basic",
+      "title": "Giai đoạn 2 · Katakana cơ bản",
+      "description": "Học 46 chữ Katakana và cách dùng để viết từ mượn.",
+      "lessons": [
+        {
+          "id": "b0-k-basic-a",
+          "title": "Nguyên âm · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-a.json"
+        },
+        {
+          "id": "b0-k-basic-ka",
+          "title": "Hàng K · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-ka.json"
+        },
+        {
+          "id": "b0-k-basic-sa",
+          "title": "Hàng S · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-sa.json"
+        },
+        {
+          "id": "b0-k-basic-ta",
+          "title": "Hàng T · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-ta.json"
+        },
+        {
+          "id": "b0-k-basic-na",
+          "title": "Hàng N · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-na.json"
+        },
+        {
+          "id": "b0-k-basic-ha",
+          "title": "Hàng H · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-ha.json"
+        },
+        {
+          "id": "b0-k-basic-ma",
+          "title": "Hàng M · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-ma.json"
+        },
+        {
+          "id": "b0-k-basic-ya",
+          "title": "Hàng Y · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-ya.json"
+        },
+        {
+          "id": "b0-k-basic-ra",
+          "title": "Hàng R · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-ra.json"
+        },
+        {
+          "id": "b0-k-basic-wa",
+          "title": "Hàng W và ん · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-basic-wa.json"
+        }
+      ]
+    },
+    {
+      "id": "h-voiced",
+      "title": "Giai đoạn 3 · Hiragana âm đục và bật",
+      "description": "Học が・ざ・だ・ば・ぱ và các chữ cùng hàng.",
+      "lessons": [
+        {
+          "id": "b0-h-voiced-ga",
+          "title": "Âm đục G · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-voiced-ga.json"
+        },
+        {
+          "id": "b0-h-voiced-za",
+          "title": "Âm đục Z/J · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-voiced-za.json"
+        },
+        {
+          "id": "b0-h-voiced-da",
+          "title": "Âm đục D · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-voiced-da.json"
+        },
+        {
+          "id": "b0-h-voiced-ba",
+          "title": "Âm đục B · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-voiced-ba.json"
+        },
+        {
+          "id": "b0-h-voiced-pa",
+          "title": "Âm bật P · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-voiced-pa.json"
+        }
+      ]
+    },
+    {
+      "id": "k-voiced",
+      "title": "Giai đoạn 4 · Katakana âm đục và bật",
+      "description": "Học ガ・ザ・ダ・バ・パ và các chữ cùng hàng.",
+      "lessons": [
+        {
+          "id": "b0-k-voiced-ga",
+          "title": "Âm đục G · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-voiced-ga.json"
+        },
+        {
+          "id": "b0-k-voiced-za",
+          "title": "Âm đục Z/J · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-voiced-za.json"
+        },
+        {
+          "id": "b0-k-voiced-da",
+          "title": "Âm đục D · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-voiced-da.json"
+        },
+        {
+          "id": "b0-k-voiced-ba",
+          "title": "Âm đục B · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-voiced-ba.json"
+        },
+        {
+          "id": "b0-k-voiced-pa",
+          "title": "Âm bật P · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-voiced-pa.json"
+        }
+      ]
+    },
+    {
+      "id": "h-yoon",
+      "title": "Giai đoạn 5 · Hiragana âm ghép",
+      "description": "Học きゃ・しゅ・ちょ và các âm ghép với chữ nhỏ.",
+      "lessons": [
+        {
+          "id": "b0-h-yoon-k",
+          "title": "Hàng KY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-k.json"
+        },
+        {
+          "id": "b0-h-yoon-s",
+          "title": "Hàng SH · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-s.json"
+        },
+        {
+          "id": "b0-h-yoon-t",
+          "title": "Hàng CH · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-t.json"
+        },
+        {
+          "id": "b0-h-yoon-n",
+          "title": "Hàng NY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-n.json"
+        },
+        {
+          "id": "b0-h-yoon-h",
+          "title": "Hàng HY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-h.json"
+        },
+        {
+          "id": "b0-h-yoon-m",
+          "title": "Hàng MY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-m.json"
+        },
+        {
+          "id": "b0-h-yoon-r",
+          "title": "Hàng RY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-r.json"
+        },
+        {
+          "id": "b0-h-yoon-g",
+          "title": "Hàng GY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-g.json"
+        },
+        {
+          "id": "b0-h-yoon-j",
+          "title": "Hàng J · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-j.json"
+        },
+        {
+          "id": "b0-h-yoon-b",
+          "title": "Hàng BY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-b.json"
+        },
+        {
+          "id": "b0-h-yoon-p",
+          "title": "Hàng PY · Hiragana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-h-yoon-p.json"
+        }
+      ]
+    },
+    {
+      "id": "k-yoon",
+      "title": "Giai đoạn 6 · Katakana âm ghép",
+      "description": "Học キャ・シュ・チョ và các âm ghép với chữ nhỏ.",
+      "lessons": [
+        {
+          "id": "b0-k-yoon-k",
+          "title": "Hàng KY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-k.json"
+        },
+        {
+          "id": "b0-k-yoon-s",
+          "title": "Hàng SH · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-s.json"
+        },
+        {
+          "id": "b0-k-yoon-t",
+          "title": "Hàng CH · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-t.json"
+        },
+        {
+          "id": "b0-k-yoon-n",
+          "title": "Hàng NY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-n.json"
+        },
+        {
+          "id": "b0-k-yoon-h",
+          "title": "Hàng HY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-h.json"
+        },
+        {
+          "id": "b0-k-yoon-m",
+          "title": "Hàng MY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-m.json"
+        },
+        {
+          "id": "b0-k-yoon-r",
+          "title": "Hàng RY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-r.json"
+        },
+        {
+          "id": "b0-k-yoon-g",
+          "title": "Hàng GY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-g.json"
+        },
+        {
+          "id": "b0-k-yoon-j",
+          "title": "Hàng J · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-j.json"
+        },
+        {
+          "id": "b0-k-yoon-b",
+          "title": "Hàng BY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-b.json"
+        },
+        {
+          "id": "b0-k-yoon-p",
+          "title": "Hàng PY · Katakana",
+          "type": "kana",
+          "file": "data/learning/b0/b0-k-yoon-p.json"
+        }
+      ]
+    },
+    {
+      "id": "b0-special",
+      "title": "Giai đoạn 7 · Quy tắc đọc quan trọng",
+      "description": "Âm ngắt, âm dài, trợ từ đặc biệt và chữ nhỏ.",
+      "lessons": [
+        {
+          "id": "b0-special-h-sokuon",
+          "title": "Quy tắc · っ",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-h-sokuon.json"
+        },
+        {
+          "id": "b0-special-k-sokuon",
+          "title": "Quy tắc · ッ",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-k-sokuon.json"
+        },
+        {
+          "id": "b0-special-k-choon",
+          "title": "Quy tắc · ー",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-k-choon.json"
+        },
+        {
+          "id": "b0-special-h-choon",
+          "title": "Quy tắc · う",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-h-choon.json"
+        },
+        {
+          "id": "b0-special-h-particle-wa",
+          "title": "Quy tắc · は",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-h-particle-wa.json"
+        },
+        {
+          "id": "b0-special-h-particle-e",
+          "title": "Quy tắc · へ",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-h-particle-e.json"
+        },
+        {
+          "id": "b0-special-h-particle-o",
+          "title": "Quy tắc · を",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-h-particle-o.json"
+        },
+        {
+          "id": "b0-special-k-small-vowels",
+          "title": "Quy tắc · ァ",
+          "type": "kana",
+          "file": "data/learning/b0/b0-special-k-small-vowels.json"
+        }
+      ]
+    }
+  ]
+}

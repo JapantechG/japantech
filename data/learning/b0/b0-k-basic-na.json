@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-basic-na",
+  "type": "kana",
+  "title": "Hàng N · Katakana",
+  "alphabet": "katakana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-k-basic-na-01",
+      "character": "ナ",
+      "reading": "na",
+      "meaning": "Âm na",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng N",
+      "explanation": "Katakana ナ được đọc là “na” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ナ, phát âm na mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ナイフ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm ni",
+          "Âm nu",
+          "Âm ne"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ナイフ",
+          "reading": "na · i · fu",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ナ",
+            "イ",
+            "フ"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ナイフ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ナ",
+          "blank": "____イフ"
+        }
+      ],
+      "sampleWord": "ナイフ",
+      "sampleReading": "na · i · fu",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-basic-na-02",
+      "character": "ニ",
+      "reading": "ni",
+      "meaning": "Âm ni",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng N",
+      "explanation": "Katakana ニ được đọc là “ni” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ニ, phát âm ni mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ニュース từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm nu",
+          "Âm ne"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ニュース",
+          "reading": "nyu · (kéo dài) · su",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ニュ",
+            "ー",
+            "ス"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ニュース.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ニ",
+          "blank": "____ュース"
+        }
+      ],
+      "sampleWord": "ニュース",
+      "sampleReading": "nyu · (kéo dài) · su",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-basic-na-03",
+      "character": "ヌ",
+      "reading": "nu",
+      "meaning": "Âm nu",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng N",
+      "explanation": "Katakana ヌ được đọc là “nu” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヌ, phát âm nu mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヌードル từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm ni",
+          "Âm ne"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヌードル",
+          "reading": "nu · (kéo dài) · do · ru",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ヌ",
+            "ー",
+            "ド",
+            "ル"
+          ],
+          "hint": "Hãy ghép 4 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヌードル.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヌ",
+          "blank": "____ードル"
+        }
+      ],
+      "sampleWord": "ヌードル",
+      "sampleReading": "nu · (kéo dài) · do · ru",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 3
+    },
+    {
+      "id": "b0-k-basic-na-04",
+      "character": "ネ",
+      "reading": "ne",
+      "meaning": "Âm ne",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng N",
+      "explanation": "Katakana ネ được đọc là “ne” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ネ, phát âm ne mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ネクタイ từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm ni",
+          "Âm nu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ネクタイ",
+          "reading": "ne · ku · ta · i",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ネ",
+            "ク",
+            "タ",
+            "イ"
+          ],
+          "hint": "Hãy ghép 4 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ネクタイ.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ネ",
+          "blank": "____クタイ"
+        }
+      ],
+      "sampleWord": "ネクタイ",
+      "sampleReading": "ne · ku · ta · i",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 4
+    },
+    {
+      "id": "b0-k-basic-na-05",
+      "character": "ノ",
+      "reading": "no",
+      "meaning": "Âm no",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng N",
+      "explanation": "Katakana ノ được đọc là “no” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ノ, phát âm no mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ノート từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm na",
+          "Âm ni",
+          "Âm nu"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ノート",
+          "reading": "no · (kéo dài) · to",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ノ",
+            "ー",
+            "ト"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ノート.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ノ",
+          "blank": "____ート"
+        }
+      ],
+      "sampleWord": "ノート",
+      "sampleReading": "no · (kéo dài) · to",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 5
+    }
+  ]
+}

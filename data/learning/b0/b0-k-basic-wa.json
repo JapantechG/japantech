@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-k-basic-wa",
+  "type": "kana",
+  "title": "Hàng W và ん · Katakana",
+  "alphabet": "katakana",
+  "stage": "basic",
+  "items": [
+    {
+      "id": "b0-k-basic-wa-01",
+      "character": "ワ",
+      "reading": "wa",
+      "meaning": "Âm wa",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng W và ん",
+      "explanation": "Katakana ワ được đọc là “wa” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép.  Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ワ, phát âm wa mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ワイン từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm wo",
+          "Âm n",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ワイン",
+          "reading": "wa · i · n",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "ワ",
+            "イ",
+            "ン"
+          ],
+          "hint": "Hãy ghép 3 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ワイン.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ワ",
+          "blank": "____イン"
+        }
+      ],
+      "sampleWord": "ワイン",
+      "sampleReading": "wa · i · n",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 1
+    },
+    {
+      "id": "b0-k-basic-wa-02",
+      "character": "ヲ",
+      "reading": "wo",
+      "meaning": "Âm wo",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng W và ん",
+      "explanation": "Katakana ヲ được đọc là “wo” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. Trong vai trò trợ từ, を thường đọc gần âm “o” dù Romaji viết wo. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ヲ, phát âm wo mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. Trong vai trò trợ từ, を thường đọc gần âm “o” dù Romaji viết wo."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu ヲア từ những mảnh đã xáo trộn. Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm wa",
+          "Âm n",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "ヲア",
+          "reading": "o/wo · a",
+          "translation": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+          "chunks": [
+            "ヲ",
+            "ア"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là ヲア.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ヲ",
+          "blank": "____ア"
+        }
+      ],
+      "sampleWord": "ヲア",
+      "sampleReading": "o/wo · a",
+      "sampleMeaning": "Chuỗi âm để luyện ghép thứ tự, không phải từ vựng thực tế.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 2
+    },
+    {
+      "id": "b0-k-basic-wa-03",
+      "character": "ン",
+      "reading": "n",
+      "meaning": "Âm n",
+      "priorityStars": 3,
+      "formation": "Katakana · Hàng W và ん",
+      "explanation": "Katakana ン được đọc là “n” theo cách viết Romaji. Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. ん・ン là âm mũi, không phải nguyên âm độc lập; cách phát âm thay đổi theo âm đứng sau. Khi học hãy nhìn chữ, nghe phát âm, tự nói, rồi kiểm tra nhận diện không nhìn đáp án.",
+      "usageDetails": [
+        {
+          "title": "Nhận diện mặt chữ",
+          "text": "Nhìn ン, phát âm n mà không cần xem Romaji."
+        },
+        {
+          "title": "Cách phát âm",
+          "text": "Hãy nghe, nhận mặt chữ và đọc thành tiếng trước khi luyện ghép. ん・ン là âm mũi, không phải nguyên âm độc lập; cách phát âm thay đổi theo âm đứng sau."
+        },
+        {
+          "title": "Thực hành",
+          "text": "Ghép mẫu パン từ những mảnh đã xáo trộn. Từ/cụm ví dụ để luyện ghép Kana."
+        }
+      ],
+      "commonMistakes": [
+        "Chỉ nhớ Romaji nhưng không nhận diện được Kana khi thấy riêng lẻ.",
+        "Đọc nhanh quá dẫn đến nhầm âm gần giống hoặc bỏ qua chữ nhỏ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm wa",
+          "Âm wo",
+          "Âm a"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "パン",
+          "reading": "pa · n",
+          "translation": "Từ/cụm ví dụ để luyện ghép Kana.",
+          "chunks": [
+            "パ",
+            "ン"
+          ],
+          "hint": "Hãy ghép 2 mảnh theo thứ tự phát âm.",
+          "reason": "Trật tự đúng là パン.",
+          "wrongReason": "Kiểm tra thứ tự mảnh và các chữ nhỏ trước khi thử lại.",
+          "answer": "ン",
+          "blank": "パ____"
+        }
+      ],
+      "sampleWord": "パン",
+      "sampleReading": "pa · n",
+      "sampleMeaning": "Từ/cụm ví dụ để luyện ghép Kana.",
+      "alphabet": "katakana",
+      "stage": "basic",
+      "sourceId": 3
+    }
+  ]
+}

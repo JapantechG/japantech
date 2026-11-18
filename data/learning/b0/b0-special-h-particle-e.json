@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "b0-special-h-particle-e",
+  "type": "kana",
+  "title": "Quy tắc · へ",
+  "alphabet": "special",
+  "stage": "special",
+  "items": [
+    {
+      "id": "b0-special-h-particle-e-01",
+      "character": "へ",
+      "reading": "e khi là trợ từ",
+      "meaning": "Quy tắc: e khi là trợ từ",
+      "formation": "Quy tắc phát âm tiếng Nhật",
+      "priorityStars": 4,
+      "explanation": "へ khi là trợ từ chỉ hướng đọc gần e, không phải he.",
+      "usageDetails": [
+        {
+          "title": "Cách đọc",
+          "text": "へ khi là trợ từ chỉ hướng đọc gần e, không phải he."
+        },
+        {
+          "title": "Khi nào sử dụng",
+          "text": "Thực hành với とうきょうへ: Đến Tokyo."
+        },
+        {
+          "title": "Lưu ý",
+          "text": "Đọc theo cả cụm từ, không tách từng ký tự một cách máy móc."
+        }
+      ],
+      "commonMistakes": [
+        "Nhầm chữ nhỏ với chữ lớn hoặc bỏ qua trường âm/trợ từ."
+      ],
+      "discovery": {
+        "distractors": [
+          "Âm a",
+          "Âm i",
+          "Âm ka"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "とうきょうへ",
+          "reading": "to · u · kyo · u · he",
+          "translation": "Đến Tokyo",
+          "chunks": [
+            "と",
+            "う",
+            "きょ",
+            "う",
+            "へ"
+          ],
+          "hint": "Ghép thành とうきょうへ theo số mảnh đã học.",
+          "reason": "へ khi là trợ từ chỉ hướng đọc gần e, không phải he.",
+          "wrongReason": "へ khi là trợ từ chỉ hướng đọc gần e, không phải he.",
+          "blank": "とうきょう____",
+          "answer": "へ"
+        }
+      ],
+      "sampleWord": "とうきょうへ",
+      "sampleMeaning": "Đến Tokyo",
+      "sampleReading": "to · u · kyo · u · he",
+      "sourceId": 6
+    }
+  ]
+}
