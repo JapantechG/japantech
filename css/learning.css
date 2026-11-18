@@ -884,3 +884,197 @@ button.kl-mini-card:not(:disabled):hover {
 @keyframes klStarCenterV5{0%{opacity:0;transform:translate(-50%,-20%) scale(.6)}22%{opacity:1;transform:translate(-50%,-50%) scale(1.2)}66%{opacity:1;transform:translate(-50%,-65%) scale(1)}100%{opacity:0;transform:translate(-50%,-120%) scale(.9)}}
 @media(max-width:600px){#learningScreen .kl-stars-summary{justify-content:center}#learningScreen .kl-quest-card{padding:13px}#learningScreen .kl-vocab-word{font-size:48px}}
 @media(prefers-reduced-motion:reduce){#learningScreen #learningExpToast.kl-exp-show{animation:none;opacity:1;transform:translate(-50%,-50%)}}
+
+/* ==========================================================
+   BATLINGO LEARNING V5.1 — READABILITY + CARD ALIGNMENT
+   Add at the end of css/learning.css
+   ========================================================== */
+
+/* 1. Final / mastered cards: highlight centered Vietnamese meaning.
+   Also applies to review cards, without changing their HTML. */
+#learningScreen .kl-quest-card > .kl-giant + p:not(.kl-hv) {
+    max-width: 760px;
+    margin: 13px auto 20px;
+    padding: 15px 18px;
+    text-align: center;
+    font-size: clamp(19px, 3.3vw, 24px);
+    font-weight: 850;
+    line-height: 1.6;
+    color: #ffe6a4;
+    border: 1px solid rgba(251, 191, 36, .36);
+    border-radius: 14px;
+    background: linear-gradient(130deg, rgba(105, 74, 26, .32), rgba(40, 53, 75, .42));
+    overflow-wrap: anywhere;
+}
+/* Learning-stage meaning (vocabulary / grammar / kanji). */
+#learningScreen .kl-hv,
+#learningScreen .kl-vocab-meaning {
+    display: block;
+    max-width: 760px;
+    margin: 12px auto 19px;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: clamp(19px, 3.2vw, 23px);
+    font-weight: 850;
+    line-height: 1.55;
+    color: #ffe29a;
+    border-radius: 12px;
+    background: rgba(251, 191, 36, .09);
+}
+
+/* 2. Text legibility in explanations and example sentences. */
+#learningScreen .kl-quest-card > p,
+#learningScreen .kl-feedback,
+#learningScreen .kl-discovery-result,
+#learningScreen .kl-vocab-result {
+    font-size: 16px;
+    line-height: 1.8;
+}
+#learningScreen .kl-quest-card > ul {
+    padding-left: 23px;
+    line-height: 1.8;
+    font-size: 15.5px;
+}
+#learningScreen .kl-quest-card > ul li + li { margin-top: 7px; }
+#learningScreen .kl-quest-card > h3 {
+    font-size: 18px;
+    margin: 21px 0 11px;
+    color: #f8fafc;
+}
+#learningScreen .kl-evidence {
+    padding: 15px 16px;
+    margin: 11px 0;
+    gap: 7px;
+    font-size: 16px;
+    line-height: 1.75;
+    background: #20344d;
+    border: 1px solid #45617d;
+    border-left: 4px solid #75a6d8;
+    border-radius: 13px;
+}
+#learningScreen .kl-evidence > b,
+#learningScreen .kl-evidence .kl-audio-line > b,
+#learningScreen .kl-evidence .kl-example-audio-line > b {
+    font-size: clamp(16px, 2.7vw, 18px);
+    font-weight: 750;
+    line-height: 1.72;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+#learningScreen .kl-evidence small {
+    display: block;
+    font-size: clamp(14px, 2.4vw, 15.5px);
+    line-height: 1.75;
+    color: #e0e8f1;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+/* Gentle alternating colors distinguish adjoining explanation/example boxes. */
+#learningScreen .kl-evidence:nth-of-type(3n+1) {
+    background: #1b3548;
+    border-color: #3a7182;
+    border-left-color: #5ec5ba;
+}
+#learningScreen .kl-evidence:nth-of-type(3n+2) {
+    background: #302c43;
+    border-color: #615578;
+    border-left-color: #b4a4ed;
+}
+#learningScreen .kl-evidence:nth-of-type(3n) {
+    background: #343126;
+    border-color: #74613c;
+    border-left-color: #e4b96d;
+}
+/* Keep audio button visible without overlapping text. */
+#learningScreen .kl-evidence:has(> .kl-speak-btn),
+#learningScreen .kl-example-evidence { padding-right: 55px; }
+#learningScreen .kl-evidence .kl-speak-btn { flex-shrink: 0; }
+
+/* 3. Mini collection cards: top logo / middle content / bottom stars.
+   Title always occupies the same middle zone regardless of wrapping. */
+#learningScreen .kl-album,
+#learningScreen .kl-collection-grid {
+    align-items: stretch;
+    gap: 12px;
+}
+#learningScreen .kl-mini-card,
+#learningScreen button.kl-mini-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    min-height: 174px;
+    height: 100%;
+    padding: 13px 8px 11px;
+    gap: 8px;
+    text-align: center;
+}
+#learningScreen .kl-mini-card > .kl-card-logo {
+    display: inline-flex;
+    flex: 0 0 18px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    white-space: nowrap;
+}
+#learningScreen .kl-mini-card > .kl-card-image {
+    width: min(100%, 68px);
+    height: 44px;
+    aspect-ratio: auto;
+    margin: 0 auto;
+    flex: 0 0 44px;
+}
+#learningScreen .kl-mini-card > b,
+#learningScreen .kl-mini-card > strong {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    font-size: clamp(14px, 1.9vw, 16px);
+    font-weight: 800;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+#learningScreen .kl-mini-card > .kl-stars,
+#learningScreen .kl-mini-card > span:has(.kl-stars) {
+    display: flex;
+    flex: 0 0 20px;
+    align-items: center;
+    justify-content: center;
+    min-height: 20px;
+    width: 100%;
+    margin-top: auto;
+    white-space: nowrap;
+    line-height: 20px;
+    font-size: 12px;
+}
+#learningScreen .kl-mini-card .kl-stars {
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+@media (max-width: 580px) {
+    #learningScreen .kl-quest-card > .kl-giant + p:not(.kl-hv) {
+        padding: 12px;
+        font-size: 19px;
+    }
+    #learningScreen .kl-evidence { padding: 13px 12px; }
+    #learningScreen .kl-evidence:has(> .kl-speak-btn),
+    #learningScreen .kl-example-evidence { padding-right: 50px; }
+    #learningScreen .kl-mini-card,
+    #learningScreen button.kl-mini-card {
+        min-height: 168px;
+        padding: 11px 6px 9px;
+    }
+    #learningScreen .kl-mini-card > b,
+    #learningScreen .kl-mini-card > strong { font-size: 14px; }
+}
