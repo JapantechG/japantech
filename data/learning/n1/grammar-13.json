@@ -8,74 +8,93 @@
       "id": "n1-lg113",
       "grammar": "～ないではすまない",
       "reading": "～ないではすまない",
-      "meaning": "Nhất định / Chắc chắn phải... / Không... thì không xong",
-      "formation": "Cấu trúc: ～ないではすまない (xem vị trí kết hợp trong các câu ví dụ)",
+      "meaning": "Không thể không làm V; tình thế hoặc trách nhiệm buộc phải V, không làm thì không thể giải quyết/cho qua",
+      "formation": "Vない形 + では済まない（Vないではすまない）／Vない形 bỏ ない + ずには済まない. Ví dụ: 説明しないでは済まない・説明せずには済まない; 謝らないでは済まない・謝らずには済まない.",
       "priorityStars": 4,
-      "explanation": "Mẫu ～ないではすまない diễn tả: Nhất định / Chắc chắn phải... / Không... thì không xong. Xem các ví dụ để nhận ra ngữ cảnh và sắc thái sử dụng.",
+      "explanation": "～ないではすまない diễn tả tình huống mà người nói đánh giá là bắt buộc phải thực hiện một hành động vì trách nhiệm, quy tắc, hậu quả hoặc áp lực xã hội. Nếu không làm hành động đó thì sự việc không thể xem như đã giải quyết, không thể chấp nhận hoặc không thể cho qua. Đây không chỉ là dự định cá nhân: sự bắt buộc đến từ hoàn cảnh bên ngoài. 済まない có nghĩa là “không thể xong/không thể cho qua” trong ngữ cảnh này. Dạng ～ずにはすまない có nghĩa gần tương đương và mang sắc thái trang trọng hơn.",
       "usageDetails": [
         {
-          "title": "Ý nghĩa",
-          "text": "Nhất định / Chắc chắn phải... / Không... thì không xong"
+          "title": "Cấu trúc và chia động từ",
+          "text": "Động từ dạng ない + では済まない: 説明しないでは済まない (không thể không giải thích), 謝らないでは済まない (không thể không xin lỗi). Dạng gần nghĩa: Vない bỏ ない + ずには済まない (する → せずには済まない)."
         },
         {
-          "title": "Mẫu",
-          "text": "～ないではすまない"
+          "title": "Trách nhiệm và hậu quả",
+          "text": "Dùng khi phải giải thích, xin lỗi, bồi thường, xử lý hoặc chịu trách nhiệm vì nếu bỏ qua sẽ không thỏa đáng. Thường gặp trong công việc, tổ chức, nhà trường, pháp luật và quan hệ xã hội."
+        },
+        {
+          "title": "Cách hiểu phủ định kép",
+          "text": "Vないで (“không làm V”) + は済まない (“không thể cho qua/giải quyết được”) → không thể cứ không làm V; vì vậy phải V. Không dịch đơn giản là “không làm V”."
+        },
+        {
+          "title": "Phân biệt ～なければならない",
+          "text": "～なければならない nêu nghĩa vụ chung, có thể theo quy định hoặc mục tiêu cá nhân; ～ないではすまない nhấn mạnh nếu không làm thì hậu quả hoặc trách nhiệm sẽ không được giải quyết."
+        },
+        {
+          "title": "Phân biệt ～ないではいられない và ～ないで済む",
+          "text": "～ないではいられない = không thể kìm được hành động do cảm xúc/thôi thúc bên trong. ～ないで済む = có thể tránh phải làm V; mang nghĩa đối lập với ～ないではすまない."
+        },
+        {
+          "title": "Sắc thái và biến thể",
+          "text": "Có thể dùng ～ないでは済まないだろう khi suy đoán rằng hành động là khó tránh khỏi. Trong câu về kỷ luật, ai là người chịu trách nhiệm thực hiện hành động có thể được lược bỏ, cần đọc theo ngữ cảnh."
         }
       ],
       "commonMistakes": [
-        "Chú ý cấu trúc đứng trước và sắc thái của mẫu; không chỉ dựa vào một nghĩa tiếng Việt."
+        "Nhầm ～ないでは済まない (buộc phải làm vì trách nhiệm/hậu quả) với ～ないではいられない (không thể cưỡng lại cảm xúc).",
+        "Nhầm với ～ないで済む (không cần làm mà vẫn ổn), là nghĩa gần như đối lập.",
+        "Đọc phủ định kép thành “không cần làm” thay vì “không thể không làm”.",
+        "Bỏ qua chủ thể của hành động: trong ～処分しないでは済まない, người phải thực hiện việc xử lý có thể là công ty/ban quản lý, không nhất thiết là nhân viên bị xử lý.",
+        "Hiểu ～済まない trong cấu trúc này như lời xin lỗi すみません, thay vì ý “không thể giải quyết/cho qua”."
       ],
       "discovery": {
         "distractors": [
-          "N là lần cuối, sau đó...",
-          "Vừa mới V là lập tức...",
-          "Thì đã... rồi / Lẽ ra là..."
+          "Không cần làm V mà vẫn giải quyết được",
+          "Không thể kìm lòng nên tự nhiên làm V",
+          "Nếu làm V thì mọi việc coi như kết thúc"
         ]
       },
       "examples": [
         {
           "sentence": "学校内で起きた事故について、保護者には事故の経緯を説明しないではすまない。",
-          "reading": "",
+          "reading": "がっこうないでおきたじこについて、ほごしゃにはじこのけいいをせつめいしないではすまない。",
           "translation": "Về tai nạn xảy ra trong trường, nhất định phải giải thích cho phụ huynh về diễn biến của vụ tai nạn.",
           "blank": "学校内で起きた事故について、保護者には事故の経緯を説明し____。",
           "answer": "ないではすまない",
-          "hint": "Mẫu mục tiêu: ～ないではすまない",
-          "reason": "Trong câu này, ないではすまない thể hiện ý nghĩa: Nhất định / Chắc chắn phải... / Không... thì không xong.",
-          "wrongReason": "Đối chiếu với mẫu ～ないではすまない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Tai nạn trong trường làm phát sinh trách nhiệm thông báo và giải thích với phụ huynh; không thể bỏ qua việc đó.",
+          "reason": "学校内で起きた事故 là sự cố nhà trường phải có trách nhiệm giải trình. 保護者には事故の経緯を説明しないではすまない nhấn mạnh không thể để sự việc trôi qua mà không giải thích diễn biến cho phụ huynh.",
+          "wrongReason": "Nếu chỉ hiểu “không giải thích” thì sai chiều nghĩa. 説明しない + ではすまない tạo nghĩa “không giải thích thì không thể cho qua”, tức buộc phải giải thích; khác với 説明しないで済む (có thể không cần giải thích).",
           "chunks": [
             "学校内で起きた事故について、",
-            "保護者には事故の経緯を",
-            "説明しないではすまない。"
+            "保護者には",
+            "事故の経緯を説明しないではすまない。"
           ]
         },
         {
           "sentence": "会社の情報を盗んだ社員は、処分しないではすまないだろう。",
-          "reading": "",
+          "reading": "かいしゃのじょうほうをぬすんだしゃいんは、しょぶんしないではすまないだろう。",
           "translation": "Nhân viên đã đánh cắp thông tin của công ty chắc chắn sẽ phải bị xử lý kỷ luật.",
           "blank": "会社の情報を盗んだ社員は、処分し____だろう。",
           "answer": "ないではすまない",
-          "hint": "Mẫu mục tiêu: ～ないではすまない",
-          "reason": "Trong câu này, ないではすまない thể hiện ý nghĩa: Nhất định / Chắc chắn phải... / Không... thì không xong.",
-          "wrongReason": "Đối chiếu với mẫu ～ないではすまない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Hành vi đánh cắp thông tin công ty nghiêm trọng đến mức tổ chức khó có thể bỏ qua biện pháp kỷ luật.",
+          "reason": "Vì nhân viên đã đánh cắp thông tin công ty, phía có thẩm quyền không thể để vụ việc trôi qua mà không xử lý. だろう cho biết đây là dự đoán của người nói, không phải quyết định kỷ luật đã được xác nhận.",
+          "wrongReason": "処分しないではすまない không có nghĩa là “không phải xử lý” mà là “không xử lý thì không thể cho qua”. Chủ thể thực hiện 処分 được hiểu ngầm là công ty hoặc người có thẩm quyền; だろう thể hiện sự suy đoán.",
           "chunks": [
             "会社の情報を盗んだ社員は、",
-            "処分しないでは",
-            "すまないだろう。"
+            "処分しないではすまないだろう。"
           ]
         },
         {
           "sentence": "たくさんの人に迷惑をかけたんだから、みんなの前で土下座して謝らないではすまないだろう。",
-          "reading": "",
+          "reading": "たくさんのひとにめいわくをかけたんだから、みんなのまえでどげざしてあやまらないではすまないだろう。",
           "translation": "Vì đã gây phiền phức cho rất nhiều người nên chắc chắn phải quỳ xuống xin lỗi trước mặt mọi người.",
           "blank": "たくさんの人に迷惑をかけたんだから、みんなの前で土下座して謝ら____だろう。",
           "answer": "ないではすまない",
-          "hint": "Mẫu mục tiêu: ～ないではすまない",
-          "reason": "Trong câu này, ないではすまない thể hiện ý nghĩa: Nhất định / Chắc chắn phải... / Không... thì không xong.",
-          "wrongReason": "Đối chiếu với mẫu ～ないではすまない và đọc lại nghĩa tiếng Việt.",
+          "hint": "Đã gây phiền hà cho rất nhiều người, nên người nói cho rằng không thể bỏ qua trách nhiệm xin lỗi.",
+          "reason": "迷惑をかけたんだから nêu lý do: gây phiền hà cho nhiều người. 謝らないではすまないだろう diễn tả đánh giá rằng việc xin lỗi là điều khó tránh khỏi. 土下座して là cách xin lỗi rất mạnh được nêu trong chính ngữ cảnh câu, không phải yêu cầu chung của mẫu ngữ pháp.",
+          "wrongReason": "Mẫu ～ないではすまない nhấn mạnh trách nhiệm phải hành động, không phải cảm xúc thôi thúc. Trong câu này, hành động đó là 謝る; 土下座して nói về hình thức xin lỗi cụ thể, còn だろう thể hiện dự đoán.",
           "chunks": [
             "たくさんの人に迷惑をかけたんだから、",
-            "みんなの前で土下座して謝らないで",
-            "はすまないだろう。"
+            "みんなの前で土下座して",
+            "謝らないではすまないだろう。"
           ]
         }
       ],
