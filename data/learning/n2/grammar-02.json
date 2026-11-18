@@ -1,0 +1,804 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n2-ch02-grammar",
+  "type": "grammar",
+  "title": "N2 · Giới hạn, đánh giá và lý do",
+  "items": [
+    {
+      "id": "n2-lg011",
+      "grammar": "～かいがある",
+      "reading": "～かいがある",
+      "meaning": "Đáng công, có kết quả xứng đáng",
+      "formation": "Vた + かいがある／Vます形 bỏ ます + がいがある",
+      "priorityStars": 4,
+      "explanation": "～かいがある biểu thị “đáng công, có kết quả xứng đáng”. Điểm quan trọng của mẫu này là: Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vた + かいがある／Vます形 bỏ ます + がいがある. So với ～おかげで, cần chú ý: ～おかげで nêu nguyên nhân tích cực; ～かいがある nhấn mạnh công sức đáng giá. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vた + かいがある／Vます形 bỏ ます + がいがある. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành. Nghĩa thực tế: Đáng công, có kết quả xứng đáng. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「毎日練習したかいがあって、試合に勝てた。」 — Nhờ công luyện tập hằng ngày mà tôi đã thắng trận. Hãy nhận diện vị trí 「～かいがある」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～おかげで",
+          "text": "～おかげで nêu nguyên nhân tích cực; ～かいがある nhấn mạnh công sức đáng giá."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vた + かいがある／Vます形 bỏ ます + がいがある. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nhầm với ～がいがある là giá trị để làm, chưa chắc có kết quả."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm với ～がいがある là giá trị để làm, chưa chắc có kết quả.",
+        "Nhầm ～かいがある với ～おかげで. ～おかげで nêu nguyên nhân tích cực; ～かいがある nhấn mạnh công sức đáng giá.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vた + かいがある／Vます形 bỏ ます + がいがある.",
+        "Chỉ nhớ nghĩa “Đáng công, có kết quả xứng đáng” mà bỏ qua sắc thái: Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～かいがある."
+      ],
+      "discovery": {
+        "distractors": [
+          "Không cần phải...",
+          "Nếu chưa... thì không thể...",
+          "Nhân dịp, trước khi tiến hành việc quan trọng"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "毎日練習したかいがあって、試合に勝てた。",
+          "reading": "まいにちれんしゅうしたかいがあって、しあいにかてた。",
+          "translation": "Nhờ công luyện tập hằng ngày mà tôi đã thắng trận.",
+          "blank": "毎日練習した____、試合に勝てた。",
+          "answer": "かいがあって",
+          "hint": "Chú ý nghĩa “Đáng công, có kết quả xứng đáng” và cách nối Vた + かいがある／Vます形 bỏ ます + がいがある. Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành.",
+          "reason": "Trong 「毎日練習したかいがあって、試合に勝てた。」, cụm 「かいがあって」 thể hiện mẫu ～かいがある. Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành. Vì thế câu có nghĩa: Nhờ công luyện tập hằng ngày mà tôi đã thắng trận. Dạng nối cần nhớ: Vた + かいがある／Vます形 bỏ ます + がいがある.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm với ～がいがある là giá trị để làm, chưa chắc có kết quả. Đồng thời, ～おかげで nêu nguyên nhân tích cực; ～かいがある nhấn mạnh công sức đáng giá. Câu này cần cấu trúc ～かいがある ở vị trí đã bỏ trống.",
+          "chunks": [
+            "毎日練習したかいがあって、",
+            "試合に勝てた。"
+          ]
+        },
+        {
+          "sentence": "準備したかいがあって、発表は成功した。",
+          "reading": "じゅんびしたかいがあって、はっぴょうはせいこうした。",
+          "translation": "Nhờ công chuẩn bị mà bài thuyết trình đã thành công.",
+          "blank": "準備した____、発表は成功した。",
+          "answer": "かいがあって",
+          "hint": "Chú ý nghĩa “Đáng công, có kết quả xứng đáng” và cách nối Vた + かいがある／Vます形 bỏ ます + がいがある. Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành.",
+          "reason": "Trong 「準備したかいがあって、発表は成功した。」, cụm 「かいがあって」 thể hiện mẫu ～かいがある. Nỗ lực bỏ ra đã đem lại kết quả xứng đáng, nhìn lại quá trình đã hoàn thành. Vì thế câu có nghĩa: Nhờ công chuẩn bị mà bài thuyết trình đã thành công. Dạng nối cần nhớ: Vた + かいがある／Vます形 bỏ ます + がいがある.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm với ～がいがある là giá trị để làm, chưa chắc có kết quả. Đồng thời, ～おかげで nêu nguyên nhân tích cực; ～かいがある nhấn mạnh công sức đáng giá. Câu này cần cấu trúc ～かいがある ở vị trí đã bỏ trống.",
+          "chunks": [
+            "準備したかいがあって、",
+            "発表は成功した。"
+          ]
+        }
+      ],
+      "sourceId": 11
+    },
+    {
+      "id": "n2-lg012",
+      "grammar": "～がい",
+      "reading": "～がい",
+      "meaning": "Đáng để làm, có ý nghĩa khi làm",
+      "formation": "Vます形 bỏ ます + がいがある／N + がいがある",
+      "priorityStars": 3,
+      "explanation": "～がい biểu thị “đáng để làm, có ý nghĩa khi làm”. Điểm quan trọng của mẫu này là: Việc thực hiện hành động có giá trị, đáng để đầu tư công sức. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vます形 bỏ ます + がいがある／N + がいがある. So với ～かいがある, cần chú ý: ～かいがあった nói nỗ lực đã được đền đáp; ～がいがある nói tính đáng làm. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vます形 bỏ ます + がいがある／N + がいがある. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Việc thực hiện hành động có giá trị, đáng để đầu tư công sức. Nghĩa thực tế: Đáng để làm, có ý nghĩa khi làm. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「この仕事はやりがいがある。」 — Công việc này rất đáng làm. Hãy nhận diện vị trí 「～がい」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～かいがある",
+          "text": "～かいがあった nói nỗ lực đã được đền đáp; ～がいがある nói tính đáng làm."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Việc thực hiện hành động có giá trị, đáng để đầu tư công sức. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vます形 bỏ ます + がいがある／N + がいがある. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không gắn ～がい với mọi động từ mà không xét tính tự nhiên của tổ hợp."
+        }
+      ],
+      "commonMistakes": [
+        "Không gắn ～がい với mọi động từ mà không xét tính tự nhiên của tổ hợp.",
+        "Nhầm ～がい với ～かいがある. ～かいがあった nói nỗ lực đã được đền đáp; ～がいがある nói tính đáng làm.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vます形 bỏ ます + がいがある／N + がいがある.",
+        "Chỉ nhớ nghĩa “Đáng để làm, có ý nghĩa khi làm” mà bỏ qua sắc thái: Việc thực hiện hành động có giá trị, đáng để đầu tư công sức.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～がい."
+      ],
+      "discovery": {
+        "distractors": [
+          "Khi, vào dịp... (trang trọng)",
+          "Rất..., không chịu nổi",
+          "Tùy theo, tương ứng với..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "この仕事はやりがいがある。",
+          "reading": "このしごとはやりがいがある。",
+          "translation": "Công việc này rất đáng làm.",
+          "blank": "この仕事はやり____。",
+          "answer": "がいがある",
+          "hint": "Chú ý nghĩa “Đáng để làm, có ý nghĩa khi làm” và cách nối Vます形 bỏ ます + がいがある／N + がいがある. Việc thực hiện hành động có giá trị, đáng để đầu tư công sức.",
+          "reason": "Trong 「この仕事はやりがいがある。」, cụm 「がいがある」 thể hiện mẫu ～がい. Việc thực hiện hành động có giá trị, đáng để đầu tư công sức. Vì thế câu có nghĩa: Công việc này rất đáng làm. Dạng nối cần nhớ: Vます形 bỏ ます + がいがある／N + がいがある.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không gắn ～がい với mọi động từ mà không xét tính tự nhiên của tổ hợp. Đồng thời, ～かいがあった nói nỗ lực đã được đền đáp; ～がいがある nói tính đáng làm. Câu này cần cấu trúc ～がい ở vị trí đã bỏ trống.",
+          "chunks": [
+            "この仕事はやりがいがある。"
+          ]
+        },
+        {
+          "sentence": "新人を教えるのは教えがいがある。",
+          "reading": "しんじんをおしえるのはおしえがいがある。",
+          "translation": "Dạy nhân viên mới là việc rất đáng công.",
+          "blank": "新人を教えるのは教え____。",
+          "answer": "がいがある",
+          "hint": "Chú ý nghĩa “Đáng để làm, có ý nghĩa khi làm” và cách nối Vます形 bỏ ます + がいがある／N + がいがある. Việc thực hiện hành động có giá trị, đáng để đầu tư công sức.",
+          "reason": "Trong 「新人を教えるのは教えがいがある。」, cụm 「がいがある」 thể hiện mẫu ～がい. Việc thực hiện hành động có giá trị, đáng để đầu tư công sức. Vì thế câu có nghĩa: Dạy nhân viên mới là việc rất đáng công. Dạng nối cần nhớ: Vます形 bỏ ます + がいがある／N + がいがある.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không gắn ～がい với mọi động từ mà không xét tính tự nhiên của tổ hợp. Đồng thời, ～かいがあった nói nỗ lực đã được đền đáp; ～がいがある nói tính đáng làm. Câu này cần cấu trúc ～がい ở vị trí đã bỏ trống.",
+          "chunks": [
+            "新人を教えるのは教えがいがある。"
+          ]
+        }
+      ],
+      "sourceId": 12
+    },
+    {
+      "id": "n2-lg013",
+      "grammar": "～かぎり（は）",
+      "reading": "～かぎり（は）",
+      "meaning": "Chừng nào còn... thì...",
+      "formation": "V辞書形／Vている／いA／なAな／Nである + 限り（は）",
+      "priorityStars": 4,
+      "explanation": "～かぎり（は） biểu thị “chừng nào còn... thì...”. Điểm quan trọng của mẫu này là: Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／Vている／いA／なAな／Nである + 限り（は）. So với ～間は, cần chú ý: ～間は giới hạn thời gian đơn thuần; ～限りは mang điều kiện ràng buộc. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／Vている／いA／なAな／Nである + 限り（は）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng. Nghĩa thực tế: Chừng nào còn... thì.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「健康である限り、働き続けたい。」 — Chừng nào còn khỏe mạnh, tôi vẫn muốn tiếp tục làm việc. Hãy nhận diện vị trí 「～かぎり（は）」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～間は",
+          "text": "～間は giới hạn thời gian đơn thuần; ～限りは mang điều kiện ràng buộc."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／Vている／いA／なAな／Nである + 限り（は）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không lẫn với 限りでは mang nghĩa giới hạn thông tin quan sát."
+        }
+      ],
+      "commonMistakes": [
+        "Không lẫn với 限りでは mang nghĩa giới hạn thông tin quan sát.",
+        "Nhầm ～かぎり（は） với ～間は. ～間は giới hạn thời gian đơn thuần; ～限りは mang điều kiện ràng buộc.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／Vている／いA／なAな／Nである + 限り（は）.",
+        "Chỉ nhớ nghĩa “Chừng nào còn... thì...” mà bỏ qua sắc thái: Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～かぎり（は）."
+      ],
+      "discovery": {
+        "distractors": [
+          "Đang đúng lúc... thì...",
+          "Cực kỳ..., không chịu được",
+          "Bất kể, không phụ thuộc vào..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "健康である限り、働き続けたい。",
+          "reading": "けんこうであるかぎり、はたらきつづけたい。",
+          "translation": "Chừng nào còn khỏe mạnh, tôi vẫn muốn tiếp tục làm việc.",
+          "blank": "健康である____、働き続けたい。",
+          "answer": "限り",
+          "hint": "Chú ý nghĩa “Chừng nào còn... thì...” và cách nối V辞書形／Vている／いA／なAな／Nである + 限り（は）. Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng.",
+          "reason": "Trong 「健康である限り、働き続けたい。」, cụm 「限り」 thể hiện mẫu ～かぎり（は）. Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng. Vì thế câu có nghĩa: Chừng nào còn khỏe mạnh, tôi vẫn muốn tiếp tục làm việc. Dạng nối cần nhớ: V辞書形／Vている／いA／なAな／Nである + 限り（は）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không lẫn với 限りでは mang nghĩa giới hạn thông tin quan sát. Đồng thời, ～間は giới hạn thời gian đơn thuần; ～限りは mang điều kiện ràng buộc. Câu này cần cấu trúc ～かぎり（は） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "健康である限り、",
+            "働き続けたい。"
+          ]
+        },
+        {
+          "sentence": "時間がある限り、勉強を続けます。",
+          "reading": "じかんがあるかぎり、べんきょうをつづけます。",
+          "translation": "Chừng nào còn thời gian tôi sẽ tiếp tục học.",
+          "blank": "時間がある____、勉強を続けます。",
+          "answer": "限り",
+          "hint": "Chú ý nghĩa “Chừng nào còn... thì...” và cách nối V辞書形／Vている／いA／なAな／Nである + 限り（は）. Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng.",
+          "reason": "Trong 「時間がある限り、勉強を続けます。」, cụm 「限り」 thể hiện mẫu ～かぎり（は）. Điều kiện được duy trì trong suốt khoảng thời gian trạng thái phía trước còn đúng. Vì thế câu có nghĩa: Chừng nào còn thời gian tôi sẽ tiếp tục học. Dạng nối cần nhớ: V辞書形／Vている／いA／なAな／Nである + 限り（は）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không lẫn với 限りでは mang nghĩa giới hạn thông tin quan sát. Đồng thời, ～間は giới hạn thời gian đơn thuần; ～限りは mang điều kiện ràng buộc. Câu này cần cấu trúc ～かぎり（は） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "時間がある限り、",
+            "勉強を続けます。"
+          ]
+        }
+      ],
+      "sourceId": 13
+    },
+    {
+      "id": "n2-lg014",
+      "grammar": "～限りでは",
+      "reading": "～かぎりでは",
+      "meaning": "Trong phạm vi những gì biết, thấy, nghe",
+      "formation": "Vた + 限りでは／Nの + 限りでは",
+      "priorityStars": 4,
+      "explanation": "～限りでは biểu thị “trong phạm vi những gì biết, thấy, nghe”. Điểm quan trọng của mẫu này là: Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vた + 限りでは／Nの + 限りでは. So với ～によると, cần chú ý: ～によると dẫn nguồn; ～限りでは giới hạn trách nhiệm phát biểu theo hiểu biết của mình. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vた + 限りでは／Nの + 限りでは. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng. Nghĩa thực tế: Trong phạm vi những gì biết, thấy, nghe. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「私が調べた限りでは、問題は見つからなかった。」 — Trong phạm vi tôi đã kiểm tra thì không phát hiện vấn đề. Hãy nhận diện vị trí 「～限りでは」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～によると",
+          "text": "～によると dẫn nguồn; ～限りでは giới hạn trách nhiệm phát biểu theo hiểu biết của mình."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vた + 限りでは／Nの + 限りでは. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không khẳng định kết luận tuyệt đối khi đã dùng 限りでは."
+        }
+      ],
+      "commonMistakes": [
+        "Không khẳng định kết luận tuyệt đối khi đã dùng 限りでは.",
+        "Nhầm ～限りでは với ～によると. ～によると dẫn nguồn; ～限りでは giới hạn trách nhiệm phát biểu theo hiểu biết của mình.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vた + 限りでは／Nの + 限りでは.",
+        "Chỉ nhớ nghĩa “Trong phạm vi những gì biết, thấy, nghe” mà bỏ qua sắc thái: Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～限りでは."
+      ],
+      "discovery": {
+        "distractors": [
+          "Không còn cách nào khác ngoài...",
+          "Cứ cảm thấy... mãi, rất...",
+          "Đúng vào lúc... / riêng... thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "私が調べた限りでは、問題は見つからなかった。",
+          "reading": "わたしがしらべたかぎりでは、もんだいはみつからなかった。",
+          "translation": "Trong phạm vi tôi đã kiểm tra thì không phát hiện vấn đề.",
+          "blank": "私が調べた____、問題は見つからなかった。",
+          "answer": "限りでは",
+          "hint": "Chú ý nghĩa “Trong phạm vi những gì biết, thấy, nghe” và cách nối Vた + 限りでは／Nの + 限りでは. Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng.",
+          "reason": "Trong 「私が調べた限りでは、問題は見つからなかった。」, cụm 「限りでは」 thể hiện mẫu ～限りでは. Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng. Vì thế câu có nghĩa: Trong phạm vi tôi đã kiểm tra thì không phát hiện vấn đề. Dạng nối cần nhớ: Vた + 限りでは／Nの + 限りでは.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không khẳng định kết luận tuyệt đối khi đã dùng 限りでは. Đồng thời, ～によると dẫn nguồn; ～限りでは giới hạn trách nhiệm phát biểu theo hiểu biết của mình. Câu này cần cấu trúc ～限りでは ở vị trí đã bỏ trống.",
+          "chunks": [
+            "私が調べた限りでは、",
+            "問題は見つからなかった。"
+          ]
+        },
+        {
+          "sentence": "聞いた限りでは、予定に変更はない。",
+          "reading": "きいたかぎりでは、よていにへんこうはない。",
+          "translation": "Theo những gì tôi nghe được, kế hoạch không thay đổi.",
+          "blank": "聞いた____、予定に変更はない。",
+          "answer": "限りでは",
+          "hint": "Chú ý nghĩa “Trong phạm vi những gì biết, thấy, nghe” và cách nối Vた + 限りでは／Nの + 限りでは. Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng.",
+          "reason": "Trong 「聞いた限りでは、予定に変更はない。」, cụm 「限りでは」 thể hiện mẫu ～限りでは. Đánh giá dựa trên phạm vi thông tin mà người nói đã xem, nghe hoặc kiểm chứng. Vì thế câu có nghĩa: Theo những gì tôi nghe được, kế hoạch không thay đổi. Dạng nối cần nhớ: Vた + 限りでは／Nの + 限りでは.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không khẳng định kết luận tuyệt đối khi đã dùng 限りでは. Đồng thời, ～によると dẫn nguồn; ～限りでは giới hạn trách nhiệm phát biểu theo hiểu biết của mình. Câu này cần cấu trúc ～限りでは ở vị trí đã bỏ trống.",
+          "chunks": [
+            "聞いた限りでは、",
+            "予定に変更はない。"
+          ]
+        }
+      ],
+      "sourceId": 14
+    },
+    {
+      "id": "n2-lg015",
+      "grammar": "～かねない",
+      "reading": "～かねない",
+      "meaning": "Có nguy cơ, có thể dẫn đến điều xấu",
+      "formation": "Vます形 bỏ ます + かねない",
+      "priorityStars": 5,
+      "explanation": "～かねない biểu thị “có nguy cơ, có thể dẫn đến điều xấu”. Điểm quan trọng của mẫu này là: Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vます形 bỏ ます + かねない. So với ～おそれがある, cần chú ý: ～おそれがある gần nghĩa nhưng thường thiên văn bản chính thức. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vます形 bỏ ます + かねない. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo. Nghĩa thực tế: Có nguy cơ, có thể dẫn đến điều xấu. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「そんな運転をすると、事故を起こしかねない。」 — Lái xe như thế có thể gây tai nạn. Hãy nhận diện vị trí 「～かねない」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～おそれがある",
+          "text": "～おそれがある gần nghĩa nhưng thường thiên văn bản chính thức."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vます形 bỏ ます + かねない. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không hiểu かねない là “không thể”; trái lại là “có thể xảy ra”."
+        }
+      ],
+      "commonMistakes": [
+        "Không hiểu かねない là “không thể”; trái lại là “có thể xảy ra”.",
+        "Nhầm ～かねない với ～おそれがある. ～おそれがある gần nghĩa nhưng thường thiên văn bản chính thức.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vます形 bỏ ます + かねない.",
+        "Chỉ nhớ nghĩa “Có nguy cơ, có thể dẫn đến điều xấu” mà bỏ qua sắc thái: Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～かねない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Ngay sau khi... sẽ...",
+          "Chỉ sau khi... mới...",
+          "Không chỉ... mà cả..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "そんな運転をすると、事故を起こしかねない。",
+          "reading": "そんなうんてんをすると、じこをおこしかねない。",
+          "translation": "Lái xe như thế có thể gây tai nạn.",
+          "blank": "そんな運転をすると、事故を起こし____。",
+          "answer": "かねない",
+          "hint": "Chú ý nghĩa “Có nguy cơ, có thể dẫn đến điều xấu” và cách nối Vます形 bỏ ます + かねない. Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo.",
+          "reason": "Trong 「そんな運転をすると、事故を起こしかねない。」, cụm 「かねない」 thể hiện mẫu ～かねない. Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo. Vì thế câu có nghĩa: Lái xe như thế có thể gây tai nạn. Dạng nối cần nhớ: Vます形 bỏ ます + かねない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không hiểu かねない là “không thể”; trái lại là “có thể xảy ra”. Đồng thời, ～おそれがある gần nghĩa nhưng thường thiên văn bản chính thức. Câu này cần cấu trúc ～かねない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "そんな運転をすると、",
+            "事故を起こしかねない。"
+          ]
+        },
+        {
+          "sentence": "確認を怠ると、大きなミスにつながりかねない。",
+          "reading": "かくにんをおこたると、おおきなミスにつながりかねない。",
+          "translation": "Nếu lơ là kiểm tra, có thể dẫn tới lỗi lớn.",
+          "blank": "確認を怠ると、大きなミスにつながり____。",
+          "answer": "かねない",
+          "hint": "Chú ý nghĩa “Có nguy cơ, có thể dẫn đến điều xấu” và cách nối Vます形 bỏ ます + かねない. Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo.",
+          "reason": "Trong 「確認を怠ると、大きなミスにつながりかねない。」, cụm 「かねない」 thể hiện mẫu ～かねない. Một hành vi hoặc tình huống có thể dẫn tới kết quả xấu; nhấn mạnh cảnh báo. Vì thế câu có nghĩa: Nếu lơ là kiểm tra, có thể dẫn tới lỗi lớn. Dạng nối cần nhớ: Vます形 bỏ ます + かねない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không hiểu かねない là “không thể”; trái lại là “có thể xảy ra”. Đồng thời, ～おそれがある gần nghĩa nhưng thường thiên văn bản chính thức. Câu này cần cấu trúc ～かねない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "確認を怠ると、",
+            "大きなミスにつながりかねない。"
+          ]
+        }
+      ],
+      "sourceId": 15
+    },
+    {
+      "id": "n2-lg016",
+      "grammar": "～かねる",
+      "reading": "～かねる",
+      "meaning": "Khó có thể... (cách từ chối lịch sự)",
+      "formation": "Vます形 bỏ ます + かねる",
+      "priorityStars": 5,
+      "explanation": "～かねる biểu thị “khó có thể... (cách từ chối lịch sự)”. Điểm quan trọng của mẫu này là: Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vます形 bỏ ます + かねる. So với ～できない, cần chú ý: ～できない nói thẳng sự bất khả thi; ～かねる mềm và trang trọng hơn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vます形 bỏ ます + かねる. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự. Nghĩa thực tế: Khó có thể... (cách từ chối lịch sự). Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「そのご要望にはお応えしかねます。」 — Chúng tôi khó có thể đáp ứng yêu cầu đó. Hãy nhận diện vị trí 「～かねる」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～できない",
+          "text": "～できない nói thẳng sự bất khả thi; ～かねる mềm và trang trọng hơn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vます形 bỏ ます + かねる. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng かねる để nói đơn thuần thiếu kỹ năng như không biết bơi."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng かねる để nói đơn thuần thiếu kỹ năng như không biết bơi.",
+        "Nhầm ～かねる với ～できない. ～できない nói thẳng sự bất khả thi; ～かねる mềm và trang trọng hơn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vます形 bỏ ます + かねる.",
+        "Chỉ nhớ nghĩa “Khó có thể... (cách từ chối lịch sự)” mà bỏ qua sắc thái: Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～かねる."
+      ],
+      "discovery": {
+        "distractors": [
+          "Tùy thuộc vào...",
+          "Đến mức phải... để...",
+          "Về, liên quan đến..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "そのご要望にはお応えしかねます。",
+          "reading": "そのごようぼうにはおこたえしかねます。",
+          "translation": "Chúng tôi khó có thể đáp ứng yêu cầu đó.",
+          "blank": "そのご要望にはお応えし____。",
+          "answer": "かねます",
+          "hint": "Chú ý nghĩa “Khó có thể... (cách từ chối lịch sự)” và cách nối Vます形 bỏ ます + かねる. Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự.",
+          "reason": "Trong 「そのご要望にはお応えしかねます。」, cụm 「かねます」 thể hiện mẫu ～かねる. Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự. Vì thế câu có nghĩa: Chúng tôi khó có thể đáp ứng yêu cầu đó. Dạng nối cần nhớ: Vます形 bỏ ます + かねる.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng かねる để nói đơn thuần thiếu kỹ năng như không biết bơi. Đồng thời, ～できない nói thẳng sự bất khả thi; ～かねる mềm và trang trọng hơn. Câu này cần cấu trúc ～かねる ở vị trí đã bỏ trống.",
+          "chunks": [
+            "そのご要望にはお応えしかねます。"
+          ]
+        },
+        {
+          "sentence": "個人情報については、お答えしかねます。",
+          "reading": "こじんじょうほうについては、おこたえしかねます。",
+          "translation": "Chúng tôi khó có thể trả lời về thông tin cá nhân.",
+          "blank": "個人情報については、お答えし____。",
+          "answer": "かねます",
+          "hint": "Chú ý nghĩa “Khó có thể... (cách từ chối lịch sự)” và cách nối Vます形 bỏ ます + かねる. Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự.",
+          "reason": "Trong 「個人情報については、お答えしかねます。」, cụm 「かねます」 thể hiện mẫu ～かねる. Người nói khó chấp nhận, đáp ứng hoặc thực hiện yêu cầu; lối từ chối lịch sự. Vì thế câu có nghĩa: Chúng tôi khó có thể trả lời về thông tin cá nhân. Dạng nối cần nhớ: Vます形 bỏ ます + かねる.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng かねる để nói đơn thuần thiếu kỹ năng như không biết bơi. Đồng thời, ～できない nói thẳng sự bất khả thi; ～かねる mềm và trang trọng hơn. Câu này cần cấu trúc ～かねる ở vị trí đã bỏ trống.",
+          "chunks": [
+            "個人情報については、",
+            "お答えしかねます。"
+          ]
+        }
+      ],
+      "sourceId": 16
+    },
+    {
+      "id": "n2-lg017",
+      "grammar": "～からして",
+      "reading": "～からして",
+      "meaning": "Ngay từ... đã...; xét từ...",
+      "formation": "N + からして",
+      "priorityStars": 4,
+      "explanation": "～からして biểu thị “ngay từ... đã...; xét từ...”. Điểm quan trọng của mẫu này là: Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + からして. So với ～からすると, cần chú ý: ～からすると nêu góc nhìn phân tích; ～からして nhấn mạnh dấu hiệu ngay từ đầu. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + からして. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định. Nghĩa thực tế: Ngay từ... đã...; xét từ.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「彼は服装からして普通の人とは違う。」 — Ngay từ cách ăn mặc, anh ấy đã khác người bình thường. Hãy nhận diện vị trí 「～からして」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～からすると",
+          "text": "～からすると nêu góc nhìn phân tích; ～からして nhấn mạnh dấu hiệu ngay từ đầu."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + からして. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dịch cứng là “bắt đầu từ” trong mọi trường hợp."
+        }
+      ],
+      "commonMistakes": [
+        "Không dịch cứng là “bắt đầu từ” trong mọi trường hợp.",
+        "Nhầm ～からして với ～からすると. ～からすると nêu góc nhìn phân tích; ～からして nhấn mạnh dấu hiệu ngay từ đầu.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + からして.",
+        "Chỉ nhớ nghĩa “Ngay từ... đã...; xét từ...” mà bỏ qua sắc thái: Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～からして."
+      ],
+      "discovery": {
+        "distractors": [
+          "Sau một quá trình dài... cuối cùng...",
+          "Nghe nói... / có nghĩa là...",
+          "Chắc chắn là... (người nói tin chắc)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "彼は服装からして普通の人とは違う。",
+          "reading": "かれはふくそうからしてふつうのひととはちがう。",
+          "translation": "Ngay từ cách ăn mặc, anh ấy đã khác người bình thường.",
+          "blank": "彼は服装____普通の人とは違う。",
+          "answer": "からして",
+          "hint": "Chú ý nghĩa “Ngay từ... đã...; xét từ...” và cách nối N + からして. Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định.",
+          "reason": "Trong 「彼は服装からして普通の人とは違う。」, cụm 「からして」 thể hiện mẫu ～からして. Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định. Vì thế câu có nghĩa: Ngay từ cách ăn mặc, anh ấy đã khác người bình thường. Dạng nối cần nhớ: N + からして.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dịch cứng là “bắt đầu từ” trong mọi trường hợp. Đồng thời, ～からすると nêu góc nhìn phân tích; ～からして nhấn mạnh dấu hiệu ngay từ đầu. Câu này cần cấu trúc ～からして ở vị trí đã bỏ trống.",
+          "chunks": [
+            "彼は服装からして普通の人とは違う。"
+          ]
+        },
+        {
+          "sentence": "声からして、彼は疲れているようだ。",
+          "reading": "こえからして、かれはつかれているようだ。",
+          "translation": "Chỉ nghe giọng cũng thấy hình như anh ấy mệt.",
+          "blank": "声____、彼は疲れているようだ。",
+          "answer": "からして",
+          "hint": "Chú ý nghĩa “Ngay từ... đã...; xét từ...” và cách nối N + からして. Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định.",
+          "reason": "Trong 「声からして、彼は疲れているようだ。」, cụm 「からして」 thể hiện mẫu ～からして. Ngay đến một chi tiết tiêu biểu đã đủ để đánh giá; cũng có thể là căn cứ nhận định. Vì thế câu có nghĩa: Chỉ nghe giọng cũng thấy hình như anh ấy mệt. Dạng nối cần nhớ: N + からして.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dịch cứng là “bắt đầu từ” trong mọi trường hợp. Đồng thời, ～からすると nêu góc nhìn phân tích; ～からして nhấn mạnh dấu hiệu ngay từ đầu. Câu này cần cấu trúc ～からして ở vị trí đã bỏ trống.",
+          "chunks": [
+            "声からして、",
+            "彼は疲れているようだ。"
+          ]
+        }
+      ],
+      "sourceId": 17
+    },
+    {
+      "id": "n2-lg018",
+      "grammar": "～からすると / ～からすれば",
+      "reading": "～からすると / ～からすれば",
+      "meaning": "Xét từ góc độ... thì...",
+      "formation": "N + からすると／からすれば",
+      "priorityStars": 3,
+      "explanation": "～からすると / ～からすれば biểu thị “xét từ góc độ... thì...”. Điểm quan trọng của mẫu này là: Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + からすると／からすれば. So với ～にとって, cần chú ý: ～にとって nói giá trị/ý nghĩa đối với ai; ～からすると là góc nhìn để đánh giá. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + からすると／からすれば. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng. Nghĩa thực tế: Xét từ góc độ... thì.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「親からすると、子供の安全が一番大切だ。」 — Đối với cha mẹ, sự an toàn của con là quan trọng nhất. Hãy nhận diện vị trí 「～からすると / ～からすれば」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～にとって",
+          "text": "～にとって nói giá trị/ý nghĩa đối với ai; ～からすると là góc nhìn để đánh giá."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + からすると／からすれば. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nhầm góc độ phán đoán với nguyên nhân trực tiếp."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm góc độ phán đoán với nguyên nhân trực tiếp.",
+        "Nhầm ～からすると / ～からすれば với ～にとって. ～にとって nói giá trị/ý nghĩa đối với ai; ～からすると là góc nhìn để đánh giá.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + からすると／からすれば.",
+        "Chỉ nhớ nghĩa “Xét từ góc độ... thì...” mà bỏ qua sắc thái: Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～からすると / ～からすれば."
+      ],
+      "discovery": {
+        "distractors": [
+          "Không thể không... (cảm xúc thôi thúc)",
+          "Đúng là... (nhận xét mang tính khẳng định)",
+          "So với..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "親からすると、子供の安全が一番大切だ。",
+          "reading": "おやからすると、こどものあんぜんがいちばんたいせつだ。",
+          "translation": "Đối với cha mẹ, sự an toàn của con là quan trọng nhất.",
+          "blank": "親____、子供の安全が一番大切だ。",
+          "answer": "からすると",
+          "hint": "Chú ý nghĩa “Xét từ góc độ... thì...” và cách nối N + からすると／からすれば. Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng.",
+          "reason": "Trong 「親からすると、子供の安全が一番大切だ。」, cụm 「からすると」 thể hiện mẫu ～からすると / ～からすれば. Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng. Vì thế câu có nghĩa: Đối với cha mẹ, sự an toàn của con là quan trọng nhất. Dạng nối cần nhớ: N + からすると／からすれば.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm góc độ phán đoán với nguyên nhân trực tiếp. Đồng thời, ～にとって nói giá trị/ý nghĩa đối với ai; ～からすると là góc nhìn để đánh giá. Câu này cần cấu trúc ～からすると / ～からすれば ở vị trí đã bỏ trống.",
+          "chunks": [
+            "親からすると、",
+            "子供の安全が一番大切だ。"
+          ]
+        },
+        {
+          "sentence": "専門家からすれば、この結果は予想どおりだ。",
+          "reading": "せんもんかからすれば、このけっかはよそうどおりだ。",
+          "translation": "Theo góc nhìn chuyên gia, kết quả này đúng dự đoán.",
+          "blank": "専門家____、この結果は予想どおりだ。",
+          "answer": "からすれば",
+          "hint": "Chú ý nghĩa “Xét từ góc độ... thì...” và cách nối N + からすると／からすれば. Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng.",
+          "reason": "Trong 「専門家からすれば、この結果は予想どおりだ。」, cụm 「からすれば」 thể hiện mẫu ～からすると / ～からすれば. Đánh giá đứng trên lập trường của một người hoặc dựa theo bằng chứng. Vì thế câu có nghĩa: Theo góc nhìn chuyên gia, kết quả này đúng dự đoán. Dạng nối cần nhớ: N + からすると／からすれば.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm góc độ phán đoán với nguyên nhân trực tiếp. Đồng thời, ～にとって nói giá trị/ý nghĩa đối với ai; ～からすると là góc nhìn để đánh giá. Câu này cần cấu trúc ～からすると / ～からすれば ở vị trí đã bỏ trống.",
+          "chunks": [
+            "専門家からすれば、",
+            "この結果は予想どおりだ。"
+          ]
+        }
+      ],
+      "sourceId": 18
+    },
+    {
+      "id": "n2-lg019",
+      "grammar": "～からといって",
+      "reading": "～からといって",
+      "meaning": "Không phải cứ vì... mà...",
+      "formation": "V普通形／いA／なAだ／Nだ + からといって",
+      "priorityStars": 5,
+      "explanation": "～からといって biểu thị “không phải cứ vì... mà...”. Điểm quan trọng của mẫu này là: Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V普通形／いA／なAだ／Nだ + からといって. So với ～ので, cần chú ý: ～ので chỉ lý do; ～からといって phủ nhận rằng lý do đó đủ để suy ra kết luận. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V普通形／いA／なAだ／Nだ + からといって. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない. Nghĩa thực tế: Không phải cứ vì... mà.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「安いからといって、必要のない物を買うべきではない。」 — Không nên mua đồ không cần thiết chỉ vì nó rẻ. Hãy nhận diện vị trí 「～からといって」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～ので",
+          "text": "～ので chỉ lý do; ～からといって phủ nhận rằng lý do đó đủ để suy ra kết luận."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V普通形／いA／なAだ／Nだ + からといって. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không đặt ở cuối câu thiếu mệnh đề bác bỏ khi không có ngữ cảnh lược bỏ."
+        }
+      ],
+      "commonMistakes": [
+        "Không đặt ở cuối câu thiếu mệnh đề bác bỏ khi không có ngữ cảnh lược bỏ.",
+        "Nhầm ～からといって với ～ので. ～ので chỉ lý do; ～からといって phủ nhận rằng lý do đó đủ để suy ra kết luận.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V普通形／いA／なAだ／Nだ + からといって.",
+        "Chỉ nhớ nghĩa “Không phải cứ vì... mà...” mà bỏ qua sắc thái: Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～からといって."
+      ],
+      "discovery": {
+        "distractors": [
+          "Vì... (nguyên nhân tiêu cực)",
+          "Nói là... thì đúng hơn là...",
+          "Thêm vào..., ngoài... còn..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "安いからといって、必要のない物を買うべきではない。",
+          "reading": "やすいからといって、ひつようのないものをかうべきではない。",
+          "translation": "Không nên mua đồ không cần thiết chỉ vì nó rẻ.",
+          "blank": "安い____、必要のない物を買うべきではない。",
+          "answer": "からといって",
+          "hint": "Chú ý nghĩa “Không phải cứ vì... mà...” và cách nối V普通形／いA／なAだ／Nだ + からといって. Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない.",
+          "reason": "Trong 「安いからといって、必要のない物を買うべきではない。」, cụm 「からといって」 thể hiện mẫu ～からといって. Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない. Vì thế câu có nghĩa: Không nên mua đồ không cần thiết chỉ vì nó rẻ. Dạng nối cần nhớ: V普通形／いA／なAだ／Nだ + からといって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không đặt ở cuối câu thiếu mệnh đề bác bỏ khi không có ngữ cảnh lược bỏ. Đồng thời, ～ので chỉ lý do; ～からといって phủ nhận rằng lý do đó đủ để suy ra kết luận. Câu này cần cấu trúc ～からといって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "安いからといって、",
+            "必要のない物を買うべきではない。"
+          ]
+        },
+        {
+          "sentence": "有名だからといって、質が良いとは限らない。",
+          "reading": "ゆうめいだからといって、しつがよいとはかぎらない。",
+          "translation": "Không phải cứ nổi tiếng là chất lượng tốt.",
+          "blank": "有名だ____、質が良いとは限らない。",
+          "answer": "からといって",
+          "hint": "Chú ý nghĩa “Không phải cứ vì... mà...” và cách nối V普通形／いA／なAだ／Nだ + からといって. Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない.",
+          "reason": "Trong 「有名だからといって、質が良いとは限らない。」, cụm 「からといって」 thể hiện mẫu ～からといって. Bác bỏ kết luận vội vàng chỉ dựa trên một lý do; thường đi cùng ～わけではない, ～とは限らない, ～べきではない. Vì thế câu có nghĩa: Không phải cứ nổi tiếng là chất lượng tốt. Dạng nối cần nhớ: V普通形／いA／なAだ／Nだ + からといって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không đặt ở cuối câu thiếu mệnh đề bác bỏ khi không có ngữ cảnh lược bỏ. Đồng thời, ～ので chỉ lý do; ～からといって phủ nhận rằng lý do đó đủ để suy ra kết luận. Câu này cần cấu trúc ～からといって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "有名だからといって、",
+            "質が良いとは限らない。"
+          ]
+        }
+      ],
+      "sourceId": 19
+    },
+    {
+      "id": "n2-lg020",
+      "grammar": "～からには",
+      "reading": "～からには",
+      "meaning": "Một khi đã... thì...",
+      "formation": "V普通形／いA／なAである／Nである + からには",
+      "priorityStars": 5,
+      "explanation": "～からには biểu thị “một khi đã... thì...”. Điểm quan trọng của mẫu này là: Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V普通形／いA／なAである／Nである + からには. So với ～以上は, cần chú ý: ～以上は cùng nghĩa; ～からには thường gắn cam kết mạnh của người nói. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V普通形／いA／なAである／Nである + からには. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp. Nghĩa thực tế: Một khi đã... thì.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「試験を受けるからには、合格したい。」 — Một khi đã dự thi thì tôi muốn đỗ. Hãy nhận diện vị trí 「～からには」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～以上は",
+          "text": "～以上は cùng nghĩa; ～からには thường gắn cam kết mạnh của người nói."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V普通形／いA／なAである／Nである + からには. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng vế sau hoàn toàn tách khỏi trách nhiệm hay mục tiêu phía trước."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng vế sau hoàn toàn tách khỏi trách nhiệm hay mục tiêu phía trước.",
+        "Nhầm ～からには với ～以上は. ～以上は cùng nghĩa; ～からには thường gắn cam kết mạnh của người nói.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V普通形／いA／なAである／Nである + からには.",
+        "Chỉ nhớ nghĩa “Một khi đã... thì...” mà bỏ qua sắc thái: Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～からには."
+      ],
+      "discovery": {
+        "distractors": [
+          "Đúng là... nên quả nhiên...",
+          "Dù nói là... nhưng thực tế...",
+          "Đáp lại sự kỳ vọng / yêu cầu..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "試験を受けるからには、合格したい。",
+          "reading": "しけんをうけるからには、ごうかくしたい。",
+          "translation": "Một khi đã dự thi thì tôi muốn đỗ.",
+          "blank": "試験を受ける____、合格したい。",
+          "answer": "からには",
+          "hint": "Chú ý nghĩa “Một khi đã... thì...” và cách nối V普通形／いA／なAである／Nである + からには. Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp.",
+          "reason": "Trong 「試験を受けるからには、合格したい。」, cụm 「からには」 thể hiện mẫu ～からには. Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp. Vì thế câu có nghĩa: Một khi đã dự thi thì tôi muốn đỗ. Dạng nối cần nhớ: V普通形／いA／なAである／Nである + からには.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng vế sau hoàn toàn tách khỏi trách nhiệm hay mục tiêu phía trước. Đồng thời, ～以上は cùng nghĩa; ～からには thường gắn cam kết mạnh của người nói. Câu này cần cấu trúc ～からには ở vị trí đã bỏ trống.",
+          "chunks": [
+            "試験を受けるからには、",
+            "合格したい。"
+          ]
+        },
+        {
+          "sentence": "やるからには、全力を尽くしたい。",
+          "reading": "やるからには、ぜんりょくをつくしたい。",
+          "translation": "Một khi đã làm, tôi muốn dốc toàn lực.",
+          "blank": "やる____、全力を尽くしたい。",
+          "answer": "からには",
+          "hint": "Chú ý nghĩa “Một khi đã... thì...” và cách nối V普通形／いA／なAである／Nである + からには. Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp.",
+          "reason": "Trong 「やるからには、全力を尽くしたい。」, cụm 「からには」 thể hiện mẫu ～からには. Một khi đã quyết định hoặc ở trong hoàn cảnh đó thì quyết tâm/phải làm điều phù hợp. Vì thế câu có nghĩa: Một khi đã làm, tôi muốn dốc toàn lực. Dạng nối cần nhớ: V普通形／いA／なAである／Nである + からには.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng vế sau hoàn toàn tách khỏi trách nhiệm hay mục tiêu phía trước. Đồng thời, ～以上は cùng nghĩa; ～からには thường gắn cam kết mạnh của người nói. Câu này cần cấu trúc ～からには ở vị trí đã bỏ trống.",
+          "chunks": [
+            "やるからには、",
+            "全力を尽くしたい。"
+          ]
+        }
+      ],
+      "sourceId": 20
+    }
+  ]
+}
