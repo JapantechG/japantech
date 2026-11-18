@@ -1266,9 +1266,17 @@ function builderHTML(item,kind,currentPhase) {
            <div class="kl-builder-tools">
                <button type="button" class="learn-btn" id="klBuilderUndo" ${!b.chosen.length||busy?'disabled':''}>↶ Hoàn tác</button>
                <button type="button" class="learn-btn" id="klBuilderReset" ${!b.chosen.length||busy?'disabled':''}>↻ Làm lại</button>
-               <button type="button" class="learn-btn" id="klBuilderHint" ${busy?'disabled':''}>💡 Gợi ý</button>
            </div>
-           ${b.hintShown ? `<div class="kl-builder-hint">Mảnh tiếp theo bắt đầu bằng: <strong>${safe(Array.from(next)[0] || 'Đã hoàn tất')}</strong></div>` : ''}
+           <div class="kl-builder-hint-anchor">
+               <button type="button" class="learn-btn kl-builder-hint-toggle" id="klBuilderHint"
+                   aria-expanded="${b.hintShown ? 'true' : 'false'}"
+                   aria-controls="klBuilderHintPopup" ${busy?'disabled':''}>💡 Gợi ý</button>
+               <div id="klBuilderHintPopup" class="kl-builder-hint-popup" role="note" ${b.hintShown?'':'hidden'}>
+                   <button type="button" class="kl-builder-hint-close" id="klBuilderHintClose" aria-label="Đóng gợi ý">×</button>
+                   <strong>💡 Gợi ý</strong>
+                   <p>Mảnh tiếp theo bắt đầu bằng: <b>${safe(Array.from(next)[0] || 'Đã hoàn tất')}</b></p>
+               </div>
+           </div>
        </div>`;
 }
 
@@ -1299,11 +1307,21 @@ function bindBuilderEvents() {
         if (busy) return;
         builderState.chosen=[];builderState.hintShown=false;renderQuest();
     });
-    on('klBuilderHint',()=>{
-        if (busy) return;
-        // Correct next tile after the already selected prefix, never inject answers.
-        builderState.hintShown=true;renderQuest();
+    const hintButton = $('klBuilderHint');
+    const hintPopup = $('klBuilderHintPopup');
+    const closeHint = () => {
+        if (!hintPopup) return;
+        hintPopup.hidden = true;
+        builderState.hintShown = false;
+        hintButton?.setAttribute('aria-expanded', 'false');
+    };
+    on('klBuilderHint', () => {
+        if (busy || !hintPopup) return;
+        builderState.hintShown = !builderState.hintShown;
+        hintPopup.hidden = !builderState.hintShown;
+        hintButton?.setAttribute('aria-expanded', String(builderState.hintShown));
     });
+    on('klBuilderHintClose', closeHint);
 }
 
 function practiceHTML(item, kind) {
