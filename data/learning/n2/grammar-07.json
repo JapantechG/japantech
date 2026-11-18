@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n2-ch07-grammar",
+  "type": "grammar",
+  "title": "N2 · Phủ định, giả định và điều kiện",
+  "items": [
+    {
+      "id": "n2-lg061",
+      "grammar": "～とか",
+      "reading": "～とか",
+      "meaning": "Nghe đâu, nghe nói...",
+      "formation": "普通形 + とか",
+      "priorityStars": 4,
+      "explanation": "～とか biểu thị “nghe đâu, nghe nói...”. Điểm quan trọng của mẫu này là: Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: 普通形 + とか. So với ～そうだ, cần chú ý: ～そうだ là nghe nói; ～とか thể hiện độ mơ hồ và ít chắc chắn hơn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "普通形 + とか. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật. Nghĩa thực tế: Nghe đâu, nghe nói.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「田中さんは来月転勤するとか。」 — Nghe nói anh Tanaka sẽ chuyển công tác vào tháng sau. Hãy nhận diện vị trí 「～とか」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～そうだ",
+          "text": "～そうだ là nghe nói; ～とか thể hiện độ mơ hồ và ít chắc chắn hơn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối 普通形 + とか. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng như khẳng định tuyệt đối khi chưa kiểm chứng."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng như khẳng định tuyệt đối khi chưa kiểm chứng.",
+        "Nhầm ～とか với ～そうだ. ～そうだ là nghe nói; ～とか thể hiện độ mơ hồ và ít chắc chắn hơn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: 普通形 + とか.",
+        "Chỉ nhớ nghĩa “Nghe đâu, nghe nói...” mà bỏ qua sắc thái: Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～とか."
+      ],
+      "discovery": {
+        "distractors": [
+          "Khi, nhân dịp (trang trọng)",
+          "Chỉ vì... mà dẫn đến điều không hay",
+          "Một khi đã... thì..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "田中さんは来月転勤するとか。",
+          "reading": "たなかさんはらいげつてんきんするとか。",
+          "translation": "Nghe nói anh Tanaka sẽ chuyển công tác vào tháng sau.",
+          "blank": "田中さんは来月転勤する____。",
+          "answer": "とか",
+          "hint": "Chú ý nghĩa “Nghe đâu, nghe nói...” và cách nối 普通形 + とか. Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật.",
+          "reason": "Trong 「田中さんは来月転勤するとか。」, cụm 「とか」 thể hiện mẫu ～とか. Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật. Vì thế câu có nghĩa: Nghe nói anh Tanaka sẽ chuyển công tác vào tháng sau. Dạng nối cần nhớ: 普通形 + とか.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng như khẳng định tuyệt đối khi chưa kiểm chứng. Đồng thời, ～そうだ là nghe nói; ～とか thể hiện độ mơ hồ và ít chắc chắn hơn. Câu này cần cấu trúc ～とか ở vị trí đã bỏ trống.",
+          "chunks": [
+            "田中さんは来月転勤するとか。"
+          ]
+        },
+        {
+          "sentence": "明日は雪が降るとか。",
+          "reading": "あしたはゆきがふるとか。",
+          "translation": "Nghe nói ngày mai có tuyết.",
+          "blank": "明日は雪が降る____。",
+          "answer": "とか",
+          "hint": "Chú ý nghĩa “Nghe đâu, nghe nói...” và cách nối 普通形 + とか. Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật.",
+          "reason": "Trong 「明日は雪が降るとか。」, cụm 「とか」 thể hiện mẫu ～とか. Truyền đạt thông tin nghe được, nhưng chưa xác nhận; kiểu nói hơi thân mật. Vì thế câu có nghĩa: Nghe nói ngày mai có tuyết. Dạng nối cần nhớ: 普通形 + とか.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng như khẳng định tuyệt đối khi chưa kiểm chứng. Đồng thời, ～そうだ là nghe nói; ～とか thể hiện độ mơ hồ và ít chắc chắn hơn. Câu này cần cấu trúc ～とか ở vị trí đã bỏ trống.",
+          "chunks": [
+            "明日は雪が降るとか。"
+          ]
+        }
+      ],
+      "sourceId": 61
+    },
+    {
+      "id": "n2-lg062",
+      "grammar": "～どころか",
+      "reading": "～どころか",
+      "meaning": "Không những không... mà ngược lại...",
+      "formation": "V辞書形／N + どころか",
+      "priorityStars": 5,
+      "explanation": "～どころか biểu thị “không những không... mà ngược lại...”. Điểm quan trọng của mẫu này là: Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／N + どころか. So với ～ばかりか, cần chú ý: ～ばかりか chỉ thêm ngoài A; ～どころか thường đảo ngược nhận định A. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／N + どころか. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn. Nghĩa thực tế: Không những không... mà ngược lại.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「彼は謝るどころか、言い訳ばかりしていた。」 — Anh ta không những không xin lỗi mà còn toàn viện cớ. Hãy nhận diện vị trí 「～どころか」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～ばかりか",
+          "text": "～ばかりか chỉ thêm ngoài A; ～どころか thường đảo ngược nhận định A."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／N + どころか. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không bỏ mất độ tương phản mạnh giữa hai vế."
+        }
+      ],
+      "commonMistakes": [
+        "Không bỏ mất độ tương phản mạnh giữa hai vế.",
+        "Nhầm ～どころか với ～ばかりか. ～ばかりか chỉ thêm ngoài A; ～どころか thường đảo ngược nhận định A.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／N + どころか.",
+        "Chỉ nhớ nghĩa “Không những không... mà ngược lại...” mà bỏ qua sắc thái: Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～どころか."
+      ],
+      "discovery": {
+        "distractors": [
+          "Trước khi một sự kiện quan trọng diễn ra",
+          "Sau khi trải qua nhiều việc, cuối cùng lại có kết quả không mong muốn",
+          "Kể từ... không còn...; chỉ có..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "彼は謝るどころか、言い訳ばかりしていた。",
+          "reading": "かれはあやまるどころか、いいわけばかりしていた。",
+          "translation": "Anh ta không những không xin lỗi mà còn toàn viện cớ.",
+          "blank": "彼は謝る____、言い訳ばかりしていた。",
+          "answer": "どころか",
+          "hint": "Chú ý nghĩa “Không những không... mà ngược lại...” và cách nối V辞書形／N + どころか. Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn.",
+          "reason": "Trong 「彼は謝るどころか、言い訳ばかりしていた。」, cụm 「どころか」 thể hiện mẫu ～どころか. Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn. Vì thế câu có nghĩa: Anh ta không những không xin lỗi mà còn toàn viện cớ. Dạng nối cần nhớ: V辞書形／N + どころか.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không bỏ mất độ tương phản mạnh giữa hai vế. Đồng thời, ～ばかりか chỉ thêm ngoài A; ～どころか thường đảo ngược nhận định A. Câu này cần cấu trúc ～どころか ở vị trí đã bỏ trống.",
+          "chunks": [
+            "彼は謝るどころか、",
+            "言い訳ばかりしていた。"
+          ]
+        },
+        {
+          "sentence": "楽しいどころか、怖かった。",
+          "reading": "たのしいどころか、こわかった。",
+          "translation": "Chẳng vui chút nào, trái lại còn đáng sợ.",
+          "blank": "楽しい____、怖かった。",
+          "answer": "どころか",
+          "hint": "Chú ý nghĩa “Không những không... mà ngược lại...” và cách nối V辞書形／N + どころか. Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn.",
+          "reason": "Trong 「楽しいどころか、怖かった。」, cụm 「どころか」 thể hiện mẫu ～どころか. Không những không như kỳ vọng A mà thực tế B hoàn toàn trái ngược hoặc mạnh hơn. Vì thế câu có nghĩa: Chẳng vui chút nào, trái lại còn đáng sợ. Dạng nối cần nhớ: V辞書形／N + どころか.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không bỏ mất độ tương phản mạnh giữa hai vế. Đồng thời, ～ばかりか chỉ thêm ngoài A; ～どころか thường đảo ngược nhận định A. Câu này cần cấu trúc ～どころか ở vị trí đã bỏ trống.",
+          "chunks": [
+            "楽しいどころか、",
+            "怖かった。"
+          ]
+        }
+      ],
+      "sourceId": 62
+    },
+    {
+      "id": "n2-lg063",
+      "grammar": "～どころではない",
+      "reading": "～どころではない",
+      "meaning": "Không phải lúc để..., không còn tâm trí...",
+      "formation": "N + どころではない／V辞書形 + どころではない",
+      "priorityStars": 3,
+      "explanation": "～どころではない biểu thị “không phải lúc để..., không còn tâm trí...”. Điểm quan trọng của mẫu này là: Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: N + どころではない／V辞書形 + どころではない. So với ～場合ではない, cần chú ý: ～場合ではない cũng chỉ không phải lúc thích hợp; ～どころではない nhấn mạnh hoàn cảnh cản trở. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "N + どころではない／V辞書形 + どころではない. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A. Nghĩa thực tế: Không phải lúc để..., không còn tâm trí.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「仕事が忙しくて、旅行どころではない。」 — Công việc bận đến mức chẳng còn tâm trí đi du lịch. Hãy nhận diện vị trí 「～どころではない」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～場合ではない",
+          "text": "～場合ではない cũng chỉ không phải lúc thích hợp; ～どころではない nhấn mạnh hoàn cảnh cản trở."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối N + どころではない／V辞書形 + どころではない. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng với bối cảnh có đủ thời gian và điều kiện để làm A."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng với bối cảnh có đủ thời gian và điều kiện để làm A.",
+        "Nhầm ～どころではない với ～場合ではない. ～場合ではない cũng chỉ không phải lúc thích hợp; ～どころではない nhấn mạnh hoàn cảnh cản trở.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: N + どころではない／V辞書形 + どころではない.",
+        "Chỉ nhớ nghĩa “Không phải lúc để..., không còn tâm trí...” mà bỏ qua sắc thái: Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～どころではない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Càng... thì càng... / theo...",
+          "Vì quá... nên dẫn đến kết quả bất thường",
+          "Dù... vậy mà... (chê trách)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "仕事が忙しくて、旅行どころではない。",
+          "reading": "しごとがいそがしくて、りょこうどころではない。",
+          "translation": "Công việc bận đến mức chẳng còn tâm trí đi du lịch.",
+          "blank": "仕事が忙しくて、旅行____。",
+          "answer": "どころではない",
+          "hint": "Chú ý nghĩa “Không phải lúc để..., không còn tâm trí...” và cách nối N + どころではない／V辞書形 + どころではない. Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A.",
+          "reason": "Trong 「仕事が忙しくて、旅行どころではない。」, cụm 「どころではない」 thể hiện mẫu ～どころではない. Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A. Vì thế câu có nghĩa: Công việc bận đến mức chẳng còn tâm trí đi du lịch. Dạng nối cần nhớ: N + どころではない／V辞書形 + どころではない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng với bối cảnh có đủ thời gian và điều kiện để làm A. Đồng thời, ～場合ではない cũng chỉ không phải lúc thích hợp; ～どころではない nhấn mạnh hoàn cảnh cản trở. Câu này cần cấu trúc ～どころではない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "仕事が忙しくて、",
+            "旅行どころではない。"
+          ]
+        },
+        {
+          "sentence": "熱が高くて、運動どころではない。",
+          "reading": "ねつがたかくて、うんどうどころではない。",
+          "translation": "Sốt cao nên đâu còn tâm trí vận động.",
+          "blank": "熱が高くて、運動____。",
+          "answer": "どころではない",
+          "hint": "Chú ý nghĩa “Không phải lúc để..., không còn tâm trí...” và cách nối N + どころではない／V辞書形 + どころではない. Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A.",
+          "reason": "Trong 「熱が高くて、運動どころではない。」, cụm 「どころではない」 thể hiện mẫu ～どころではない. Hoàn cảnh quá bận, nghiêm trọng hoặc khó khăn nên không thể lo đến A. Vì thế câu có nghĩa: Sốt cao nên đâu còn tâm trí vận động. Dạng nối cần nhớ: N + どころではない／V辞書形 + どころではない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng với bối cảnh có đủ thời gian và điều kiện để làm A. Đồng thời, ～場合ではない cũng chỉ không phải lúc thích hợp; ～どころではない nhấn mạnh hoàn cảnh cản trở. Câu này cần cấu trúc ～どころではない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "熱が高くて、",
+            "運動どころではない。"
+          ]
+        }
+      ],
+      "sourceId": 63
+    },
+    {
+      "id": "n2-lg064",
+      "grammar": "～ところだった",
+      "reading": "～ところだった",
+      "meaning": "Suýt nữa thì...",
+      "formation": "V辞書形 + ところだった",
+      "priorityStars": 4,
+      "explanation": "～ところだった biểu thị “suýt nữa thì...”. Điểm quan trọng của mẫu này là: Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形 + ところだった. So với ～そうになった, cần chú ý: ～そうになった gần nghĩa; ～ところだった nhấn mạnh chỉ thiếu chút nữa. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形 + ところだった. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra. Nghĩa thực tế: Suýt nữa thì.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「もう少しで電車に乗り遅れるところだった。」 — Suýt nữa tôi đã lỡ tàu. Hãy nhận diện vị trí 「～ところだった」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～そうになった",
+          "text": "～そうになった gần nghĩa; ～ところだった nhấn mạnh chỉ thiếu chút nữa."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形 + ところだった. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng để khẳng định sự việc đã thực sự xảy ra."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng để khẳng định sự việc đã thực sự xảy ra.",
+        "Nhầm ～ところだった với ～そうになった. ～そうになった gần nghĩa; ～ところだった nhấn mạnh chỉ thiếu chút nữa.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形 + ところだった.",
+        "Chỉ nhớ nghĩa “Suýt nữa thì...” mà bỏ qua sắc thái: Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～ところだった."
+      ],
+      "discovery": {
+        "distractors": [
+          "Chỉ là..., không hơn...",
+          "Một khi đã... thì phải / đương nhiên",
+          "Thà... còn hơn..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "もう少しで電車に乗り遅れるところだった。",
+          "reading": "もうすこしででんしゃにのりおくれるところだった。",
+          "translation": "Suýt nữa tôi đã lỡ tàu.",
+          "blank": "もう少しで電車に乗り遅れる____。",
+          "answer": "ところだった",
+          "hint": "Chú ý nghĩa “Suýt nữa thì...” và cách nối V辞書形 + ところだった. Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra.",
+          "reason": "Trong 「もう少しで電車に乗り遅れるところだった。」, cụm 「ところだった」 thể hiện mẫu ～ところだった. Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra. Vì thế câu có nghĩa: Suýt nữa tôi đã lỡ tàu. Dạng nối cần nhớ: V辞書形 + ところだった.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng để khẳng định sự việc đã thực sự xảy ra. Đồng thời, ～そうになった gần nghĩa; ～ところだった nhấn mạnh chỉ thiếu chút nữa. Câu này cần cấu trúc ～ところだった ở vị trí đã bỏ trống.",
+          "chunks": [
+            "もう少しで電車に乗り遅れるところだった。"
+          ]
+        },
+        {
+          "sentence": "階段で転ぶところだった。",
+          "reading": "かいだんでころぶところだった。",
+          "translation": "Tôi suýt ngã ở cầu thang.",
+          "blank": "階段で転ぶ____。",
+          "answer": "ところだった",
+          "hint": "Chú ý nghĩa “Suýt nữa thì...” và cách nối V辞書形 + ところだった. Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra.",
+          "reason": "Trong 「階段で転ぶところだった。」, cụm 「ところだった」 thể hiện mẫu ～ところだった. Suýt xảy ra một việc, thường là sự cố, nhưng rốt cuộc không xảy ra. Vì thế câu có nghĩa: Tôi suýt ngã ở cầu thang. Dạng nối cần nhớ: V辞書形 + ところだった.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng để khẳng định sự việc đã thực sự xảy ra. Đồng thời, ～そうになった gần nghĩa; ～ところだった nhấn mạnh chỉ thiếu chút nữa. Câu này cần cấu trúc ～ところだった ở vị trí đã bỏ trống.",
+          "chunks": [
+            "階段で転ぶところだった。"
+          ]
+        }
+      ],
+      "sourceId": 64
+    },
+    {
+      "id": "n2-lg065",
+      "grammar": "～としても",
+      "reading": "～としても",
+      "meaning": "Cho dù... thì...",
+      "formation": "普通形 + としても",
+      "priorityStars": 4,
+      "explanation": "～としても biểu thị “cho dù... thì...”. Điểm quan trọng của mẫu này là: Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: 普通形 + としても. So với ～ても, cần chú ý: ～ても nêu nhượng bộ; ～としても giả định rõ nét hơn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "普通形 + としても. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi. Nghĩa thực tế: Cho dù... thì.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「失敗したとしても、もう一度挑戦したい。」 — Dù thất bại tôi vẫn muốn thử lại. Hãy nhận diện vị trí 「～としても」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～ても",
+          "text": "～ても nêu nhượng bộ; ～としても giả định rõ nét hơn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối 普通形 + としても. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không hiểu là trích dẫn quan điểm “với tư cách là”."
+        }
+      ],
+      "commonMistakes": [
+        "Không hiểu là trích dẫn quan điểm “với tư cách là”.",
+        "Nhầm ～としても với ～ても. ～ても nêu nhượng bộ; ～としても giả định rõ nét hơn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: 普通形 + としても.",
+        "Chỉ nhớ nghĩa “Cho dù... thì...” mà bỏ qua sắc thái: Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～としても."
+      ],
+      "discovery": {
+        "distractors": [
+          "Chắc chắn là... (văn viết, phán đoán)",
+          "Một mặt... mặt khác...",
+          "Có vẻ, trông có vẻ..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "失敗したとしても、もう一度挑戦したい。",
+          "reading": "しっぱいしたとしても、もういちどちょうせんしたい。",
+          "translation": "Dù thất bại tôi vẫn muốn thử lại.",
+          "blank": "失敗した____、もう一度挑戦したい。",
+          "answer": "としても",
+          "hint": "Chú ý nghĩa “Cho dù... thì...” và cách nối 普通形 + としても. Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi.",
+          "reason": "Trong 「失敗したとしても、もう一度挑戦したい。」, cụm 「としても」 thể hiện mẫu ～としても. Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi. Vì thế câu có nghĩa: Dù thất bại tôi vẫn muốn thử lại. Dạng nối cần nhớ: 普通形 + としても.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không hiểu là trích dẫn quan điểm “với tư cách là”. Đồng thời, ～ても nêu nhượng bộ; ～としても giả định rõ nét hơn. Câu này cần cấu trúc ～としても ở vị trí đã bỏ trống.",
+          "chunks": [
+            "失敗したとしても、",
+            "もう一度挑戦したい。"
+          ]
+        },
+        {
+          "sentence": "雨が降ったとしても、出発します。",
+          "reading": "あめがふったとしても、しゅっぱつします。",
+          "translation": "Dù giả sử trời mưa tôi vẫn xuất phát.",
+          "blank": "雨が降った____、出発します。",
+          "answer": "としても",
+          "hint": "Chú ý nghĩa “Cho dù... thì...” và cách nối 普通形 + としても. Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi.",
+          "reason": "Trong 「雨が降ったとしても、出発します。」, cụm 「としても」 thể hiện mẫu ～としても. Giả sử một điều bất lợi là đúng thì kết luận sau vẫn không đổi. Vì thế câu có nghĩa: Dù giả sử trời mưa tôi vẫn xuất phát. Dạng nối cần nhớ: 普通形 + としても.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không hiểu là trích dẫn quan điểm “với tư cách là”. Đồng thời, ～ても nêu nhượng bộ; ～としても giả định rõ nét hơn. Câu này cần cấu trúc ～としても ở vị trí đã bỏ trống.",
+          "chunks": [
+            "雨が降ったとしても、",
+            "出発します。"
+          ]
+        }
+      ],
+      "sourceId": 65
+    },
+    {
+      "id": "n2-lg066",
+      "grammar": "～とともに",
+      "reading": "～とともに",
+      "meaning": "Cùng với...; đồng thời...",
+      "formation": "V辞書形／N + とともに",
+      "priorityStars": 3,
+      "explanation": "～とともに biểu thị “cùng với...; đồng thời...”. Điểm quan trọng của mẫu này là: Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／N + とともに. So với ～につれて, cần chú ý: ～につれて nhấn mạnh biến đổi tỉ lệ; ～とともに phạm vi rộng hơn. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／N + とともに. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác. Nghĩa thực tế: Cùng với...; đồng thời.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「年齢を重ねるとともに、考え方も変わった。」 — Cùng với tuổi tác, cách suy nghĩ cũng thay đổi. Hãy nhận diện vị trí 「～とともに」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～につれて",
+          "text": "～につれて nhấn mạnh biến đổi tỉ lệ; ～とともに phạm vi rộng hơn."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／N + とともに. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không chỉ hiểu とともに là đi cùng người."
+        }
+      ],
+      "commonMistakes": [
+        "Không chỉ hiểu とともに là đi cùng người.",
+        "Nhầm ～とともに với ～につれて. ～につれて nhấn mạnh biến đổi tỉ lệ; ～とともに phạm vi rộng hơn.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／N + とともに.",
+        "Chỉ nhớ nghĩa “Cùng với...; đồng thời...” mà bỏ qua sắc thái: Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～とともに."
+      ],
+      "discovery": {
+        "distractors": [
+          "Theo, dọc theo, phù hợp với...",
+          "Càng ngày càng... theo một chiều hướng",
+          "Biết bao nhiêu... (cảm thán)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "年齢を重ねるとともに、考え方も変わった。",
+          "reading": "ねんれいをかさねるとともに、かんがえかたもかわった。",
+          "translation": "Cùng với tuổi tác, cách suy nghĩ cũng thay đổi.",
+          "blank": "年齢を重ねる____、考え方も変わった。",
+          "answer": "とともに",
+          "hint": "Chú ý nghĩa “Cùng với...; đồng thời...” và cách nối V辞書形／N + とともに. Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác.",
+          "reason": "Trong 「年齢を重ねるとともに、考え方も変わった。」, cụm 「とともに」 thể hiện mẫu ～とともに. Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác. Vì thế câu có nghĩa: Cùng với tuổi tác, cách suy nghĩ cũng thay đổi. Dạng nối cần nhớ: V辞書形／N + とともに.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không chỉ hiểu とともに là đi cùng người. Đồng thời, ～につれて nhấn mạnh biến đổi tỉ lệ; ～とともに phạm vi rộng hơn. Câu này cần cấu trúc ～とともに ở vị trí đã bỏ trống.",
+          "chunks": [
+            "年齢を重ねるとともに、",
+            "考え方も変わった。"
+          ]
+        },
+        {
+          "sentence": "季節の変化とともに、服装も変わる。",
+          "reading": "きせつのへんかとともに、ふくそうもかわる。",
+          "translation": "Trang phục cũng thay đổi cùng sự chuyển mùa.",
+          "blank": "季節の変化____、服装も変わる。",
+          "answer": "とともに",
+          "hint": "Chú ý nghĩa “Cùng với...; đồng thời...” và cách nối V辞書形／N + とともに. Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác.",
+          "reason": "Trong 「季節の変化とともに、服装も変わる。」, cụm 「とともに」 thể hiện mẫu ～とともに. Hai sự việc đồng hành hoặc thay đổi cùng nhau; cũng có nghĩa cùng với người khác. Vì thế câu có nghĩa: Trang phục cũng thay đổi cùng sự chuyển mùa. Dạng nối cần nhớ: V辞書形／N + とともに.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không chỉ hiểu とともに là đi cùng người. Đồng thời, ～につれて nhấn mạnh biến đổi tỉ lệ; ～とともに phạm vi rộng hơn. Câu này cần cấu trúc ～とともに ở vị trí đã bỏ trống.",
+          "chunks": [
+            "季節の変化とともに、",
+            "服装も変わる。"
+          ]
+        }
+      ],
+      "sourceId": 66
+    },
+    {
+      "id": "n2-lg067",
+      "grammar": "～とは限らない",
+      "reading": "～とはかぎらない",
+      "meaning": "Không nhất thiết, không phải lúc nào cũng...",
+      "formation": "普通形 + とは限らない",
+      "priorityStars": 5,
+      "explanation": "～とは限らない biểu thị “không nhất thiết, không phải lúc nào cũng...”. Điểm quan trọng của mẫu này là: Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: 普通形 + とは限らない. So với ～わけではない, cần chú ý: ～わけではない phủ định đánh giá; ～とは限らない bác bỏ quy luật tuyệt đối. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "普通形 + とは限らない. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế. Nghĩa thực tế: Không nhất thiết, không phải lúc nào cũng.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「高い商品が必ずしも良いとは限らない。」 — Hàng đắt chưa chắc đã tốt. Hãy nhận diện vị trí 「～とは限らない」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～わけではない",
+          "text": "～わけではない phủ định đánh giá; ～とは限らない bác bỏ quy luật tuyệt đối."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối 普通形 + とは限らない. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dịch thành “chắc chắn là không”; nó vẫn thừa nhận có trường hợp đúng."
+        }
+      ],
+      "commonMistakes": [
+        "Không dịch thành “chắc chắn là không”; nó vẫn thừa nhận có trường hợp đúng.",
+        "Nhầm ～とは限らない với ～わけではない. ～わけではない phủ định đánh giá; ～とは限らない bác bỏ quy luật tuyệt đối.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: 普通形 + とは限らない.",
+        "Chỉ nhớ nghĩa “Không nhất thiết, không phải lúc nào cũng...” mà bỏ qua sắc thái: Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～とは限らない."
+      ],
+      "discovery": {
+        "distractors": [
+          "Đối với... / trái ngược với...",
+          "Không những... mà còn...",
+          "Do..., từ việc... mà..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "高い商品が必ずしも良いとは限らない。",
+          "reading": "たかいしょうひんがかならずしもよいとはかぎらない。",
+          "translation": "Hàng đắt chưa chắc đã tốt.",
+          "blank": "高い商品が必ずしも良い____。",
+          "answer": "とは限らない",
+          "hint": "Chú ý nghĩa “Không nhất thiết, không phải lúc nào cũng...” và cách nối 普通形 + とは限らない. Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế.",
+          "reason": "Trong 「高い商品が必ずしも良いとは限らない。」, cụm 「とは限らない」 thể hiện mẫu ～とは限らない. Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế. Vì thế câu có nghĩa: Hàng đắt chưa chắc đã tốt. Dạng nối cần nhớ: 普通形 + とは限らない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dịch thành “chắc chắn là không”; nó vẫn thừa nhận có trường hợp đúng. Đồng thời, ～わけではない phủ định đánh giá; ～とは限らない bác bỏ quy luật tuyệt đối. Câu này cần cấu trúc ～とは限らない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "高い商品が必ずしも良いとは限らない。"
+          ]
+        },
+        {
+          "sentence": "便利な道具が必ずしも安全とは限らない。",
+          "reading": "べんりなどうぐがかならずしもあんぜんとはかぎらない。",
+          "translation": "Dụng cụ tiện lợi chưa chắc đã an toàn.",
+          "blank": "便利な道具が必ずしも安全____。",
+          "answer": "とは限らない",
+          "hint": "Chú ý nghĩa “Không nhất thiết, không phải lúc nào cũng...” và cách nối 普通形 + とは限らない. Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế.",
+          "reason": "Trong 「便利な道具が必ずしも安全とは限らない。」, cụm 「とは限らない」 thể hiện mẫu ～とは限らない. Bác bỏ tính tất yếu: không thể khẳng định rằng mọi trường hợp đều như thế. Vì thế câu có nghĩa: Dụng cụ tiện lợi chưa chắc đã an toàn. Dạng nối cần nhớ: 普通形 + とは限らない.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dịch thành “chắc chắn là không”; nó vẫn thừa nhận có trường hợp đúng. Đồng thời, ～わけではない phủ định đánh giá; ～とは限らない bác bỏ quy luật tuyệt đối. Câu này cần cấu trúc ～とは限らない ở vị trí đã bỏ trống.",
+          "chunks": [
+            "便利な道具が必ずしも安全とは限らない。"
+          ]
+        }
+      ],
+      "sourceId": 67
+    },
+    {
+      "id": "n2-lg068",
+      "grammar": "～ないことには",
+      "reading": "～ないことには",
+      "meaning": "Nếu không... thì không thể...",
+      "formation": "Vない形 + ことには",
+      "priorityStars": 4,
+      "explanation": "～ないことには biểu thị “nếu không... thì không thể...”. Điểm quan trọng của mẫu này là: Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vない形 + ことには. So với ～てからでないと, cần chú ý: ～てからでないと gần nghĩa nhưng nhấn mạnh thứ tự; ～ないことには thường nhấn mạnh điều kiện để nhận định. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vない形 + ことには. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B. Nghĩa thực tế: Nếu không... thì không thể.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「本人に聞いてみないことには、理由はわからない。」 — Nếu chưa hỏi chính người ấy thì không biết lý do. Hãy nhận diện vị trí 「～ないことには」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～てからでないと",
+          "text": "～てからでないと gần nghĩa nhưng nhấn mạnh thứ tự; ～ないことには thường nhấn mạnh điều kiện để nhận định."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vない形 + ことには. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không quên vế sau thường phủ định khả năng/tri thức."
+        }
+      ],
+      "commonMistakes": [
+        "Không quên vế sau thường phủ định khả năng/tri thức.",
+        "Nhầm ～ないことには với ～てからでないと. ～てからでないと gần nghĩa nhưng nhấn mạnh thứ tự; ～ないことには thường nhấn mạnh điều kiện để nhận định.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vない形 + ことには.",
+        "Chỉ nhớ nghĩa “Nếu không... thì không thể...” mà bỏ qua sắc thái: Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～ないことには."
+      ],
+      "discovery": {
+        "distractors": [
+          "Vì... nên... (thông báo) / mỗi...",
+          "Trong việc... / khi tiến hành...",
+          "Vì là người có đặc điểm... nên chắc..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "本人に聞いてみないことには、理由はわからない。",
+          "reading": "ほんにんにきいてみないことには、りゆうはわからない。",
+          "translation": "Nếu chưa hỏi chính người ấy thì không biết lý do.",
+          "blank": "本人に聞いてみ____、理由はわからない。",
+          "answer": "ないことには",
+          "hint": "Chú ý nghĩa “Nếu không... thì không thể...” và cách nối Vない形 + ことには. Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B.",
+          "reason": "Trong 「本人に聞いてみないことには、理由はわからない。」, cụm 「ないことには」 thể hiện mẫu ～ないことには. Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B. Vì thế câu có nghĩa: Nếu chưa hỏi chính người ấy thì không biết lý do. Dạng nối cần nhớ: Vない形 + ことには.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không quên vế sau thường phủ định khả năng/tri thức. Đồng thời, ～てからでないと gần nghĩa nhưng nhấn mạnh thứ tự; ～ないことには thường nhấn mạnh điều kiện để nhận định. Câu này cần cấu trúc ～ないことには ở vị trí đã bỏ trống.",
+          "chunks": [
+            "本人に聞いてみないことには、",
+            "理由はわからない。"
+          ]
+        },
+        {
+          "sentence": "調べないことには、何とも言えない。",
+          "reading": "しらべないことには、なんともいえない。",
+          "translation": "Chưa kiểm tra thì không thể nói gì được.",
+          "blank": "調べ____、何とも言えない。",
+          "answer": "ないことには",
+          "hint": "Chú ý nghĩa “Nếu không... thì không thể...” và cách nối Vない形 + ことには. Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B.",
+          "reason": "Trong 「調べないことには、何とも言えない。」, cụm 「ないことには」 thể hiện mẫu ～ないことには. Nếu chưa làm A thì không thể đưa ra kết luận hoặc làm B. Vì thế câu có nghĩa: Chưa kiểm tra thì không thể nói gì được. Dạng nối cần nhớ: Vない形 + ことには.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không quên vế sau thường phủ định khả năng/tri thức. Đồng thời, ～てからでないと gần nghĩa nhưng nhấn mạnh thứ tự; ～ないことには thường nhấn mạnh điều kiện để nhận định. Câu này cần cấu trúc ～ないことには ở vị trí đã bỏ trống.",
+          "chunks": [
+            "調べないことには、",
+            "何とも言えない。"
+          ]
+        }
+      ],
+      "sourceId": 68
+    },
+    {
+      "id": "n2-lg069",
+      "grammar": "～ながら（も）",
+      "reading": "～ながら（も）",
+      "meaning": "Mặc dù... nhưng...",
+      "formation": "Vます形 bỏ ます／いAい／なA／N + ながら（も）",
+      "priorityStars": 3,
+      "explanation": "～ながら（も） biểu thị “mặc dù... nhưng...”. Điểm quan trọng của mẫu này là: Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: Vます形 bỏ ます／いAい／なA／N + ながら（も）. So với ～のに, cần chú ý: ～のに thể hiện đối lập thông thường; ～ながらも trang trọng và nhấn mạnh nghịch lý. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "Vます形 bỏ ます／いAい／なA／N + ながら（も）. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán. Nghĩa thực tế: Mặc dù... nhưng.... Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「小さいながらも、設備の整った工場だ。」 — Tuy nhỏ nhưng đây là nhà máy có trang thiết bị đầy đủ. Hãy nhận diện vị trí 「～ながら（も）」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～のに",
+          "text": "～のに thể hiện đối lập thông thường; ～ながらも trang trọng và nhấn mạnh nghịch lý."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối Vます形 bỏ ます／いAい／なA／N + ながら（も）. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không nhầm với Vます形 + ながら chỉ hai hành động đồng thời."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm với Vます形 + ながら chỉ hai hành động đồng thời.",
+        "Nhầm ～ながら（も） với ～のに. ～のに thể hiện đối lập thông thường; ～ながらも trang trọng và nhấn mạnh nghịch lý.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: Vます形 bỏ ます／いAい／なA／N + ながら（も）.",
+        "Chỉ nhớ nghĩa “Mặc dù... nhưng...” mà bỏ qua sắc thái: Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～ながら（も）."
+      ],
+      "discovery": {
+        "distractors": [
+          "Mỗi khi... lại... (gợi cảm xúc)",
+          "Một khi đã... thì phải...",
+          "Không làm... mà vẫn..."
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "小さいながらも、設備の整った工場だ。",
+          "reading": "ちいさいながらも、せつびのととのったこうじょうだ。",
+          "translation": "Tuy nhỏ nhưng đây là nhà máy có trang thiết bị đầy đủ.",
+          "blank": "小さい____、設備の整った工場だ。",
+          "answer": "ながらも",
+          "hint": "Chú ý nghĩa “Mặc dù... nhưng...” và cách nối Vます形 bỏ ます／いAい／なA／N + ながら（も）. Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán.",
+          "reason": "Trong 「小さいながらも、設備の整った工場だ。」, cụm 「ながらも」 thể hiện mẫu ～ながら（も）. Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán. Vì thế câu có nghĩa: Tuy nhỏ nhưng đây là nhà máy có trang thiết bị đầy đủ. Dạng nối cần nhớ: Vます形 bỏ ます／いAい／なA／N + ながら（も）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm với Vます形 + ながら chỉ hai hành động đồng thời. Đồng thời, ～のに thể hiện đối lập thông thường; ～ながらも trang trọng và nhấn mạnh nghịch lý. Câu này cần cấu trúc ～ながら（も） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "小さいながらも、",
+            "設備の整った工場だ。"
+          ]
+        },
+        {
+          "sentence": "経験は浅いながらも、よく頑張っている。",
+          "reading": "けいけんはあさいながらも、よくがんばっている。",
+          "translation": "Dù kinh nghiệm còn ít, anh ấy vẫn rất cố gắng.",
+          "blank": "経験は浅い____、よく頑張っている。",
+          "answer": "ながらも",
+          "hint": "Chú ý nghĩa “Mặc dù... nhưng...” và cách nối Vます形 bỏ ます／いAい／なA／N + ながら（も）. Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán.",
+          "reason": "Trong 「経験は浅いながらも、よく頑張っている。」, cụm 「ながらも」 thể hiện mẫu ～ながら（も）. Thừa nhận điều kiện A nhưng nêu kết quả B trái với điều thường dự đoán. Vì thế câu có nghĩa: Dù kinh nghiệm còn ít, anh ấy vẫn rất cố gắng. Dạng nối cần nhớ: Vます形 bỏ ます／いAい／なA／N + ながら（も）.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không nhầm với Vます形 + ながら chỉ hai hành động đồng thời. Đồng thời, ～のに thể hiện đối lập thông thường; ～ながらも trang trọng và nhấn mạnh nghịch lý. Câu này cần cấu trúc ～ながら（も） ở vị trí đã bỏ trống.",
+          "chunks": [
+            "経験は浅いながらも、",
+            "よく頑張っている。"
+          ]
+        }
+      ],
+      "sourceId": 69
+    },
+    {
+      "id": "n2-lg070",
+      "grammar": "～にあたって",
+      "reading": "～にあたって",
+      "meaning": "Nhân dịp, trước khi tiến hành việc quan trọng",
+      "formation": "V辞書形／N + にあたって",
+      "priorityStars": 5,
+      "explanation": "～にあたって biểu thị “nhân dịp, trước khi tiến hành việc quan trọng”. Điểm quan trọng của mẫu này là: Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý. Khi đọc câu, cần tìm chính xác thành phần đứng trước cấu trúc và xác định quan hệ logic với vế còn lại; không nên dịch máy móc từng từ. Cách nối chuẩn: V辞書形／N + にあたって. So với ～に際して, cần chú ý: ～際に là “khi”; ～にあたって nhấn mạnh sự khởi đầu mang tính nghi thức. Trong bài tập, trước hết xác định yếu tố quyết định ý nghĩa (mức độ, kết quả, điều kiện, thời điểm hoặc thái độ của người nói), rồi mới chọn đáp án. Chính sắc thái này giúp phân biệt các mẫu N2 có nghĩa tiếng Việt gần giống nhau.",
+      "usageDetails": [
+        {
+          "title": "Cấu trúc và cách chia",
+          "text": "V辞書形／N + にあたって. Lưu ý đối chiếu loại từ ngay trước ngữ pháp; không tự thay V辞書形, Vた形 hay Vます形 khi mẫu đòi một dạng cụ thể."
+        },
+        {
+          "title": "Ý nghĩa cốt lõi và sắc thái",
+          "text": "Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý. Nghĩa thực tế: Nhân dịp, trước khi tiến hành việc quan trọng. Điểm nhấn không chỉ nằm ở bản dịch mà còn ở đánh giá hoặc hoàn cảnh của người nói."
+        },
+        {
+          "title": "Phân tích ví dụ trong tài liệu nguồn",
+          "text": "「入学にあたって、必要な書類を提出してください。」 — Trước khi nhập học, hãy nộp các giấy tờ cần thiết. Hãy nhận diện vị trí 「～にあたって」, thành phần đứng trước và kết quả/đánh giá ở sau để thấy vì sao cách dùng tự nhiên trong câu này."
+        },
+        {
+          "title": "Phân biệt với ～に際して",
+          "text": "～際に là “khi”; ～にあたって nhấn mạnh sự khởi đầu mang tính nghi thức."
+        },
+        {
+          "title": "Ngữ cảnh sử dụng và thực hành",
+          "text": "Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý. Khi thay đổi chủ ngữ hoặc bối cảnh, phải giữ đúng quan hệ ý nghĩa và cách nối V辞書形／N + にあたって. Ví dụ trong bài tập thứ hai cho thấy cách vận dụng trong câu độc lập."
+        },
+        {
+          "title": "Điểm cần tránh",
+          "text": "Không dùng tùy tiện cho các việc nhỏ lặp lại hằng ngày."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng tùy tiện cho các việc nhỏ lặp lại hằng ngày.",
+        "Nhầm ～にあたって với ～に際して. ～際に là “khi”; ～にあたって nhấn mạnh sự khởi đầu mang tính nghi thức.",
+        "Dùng sai cách nối. Cấu trúc của mẫu này là: V辞書形／N + にあたって.",
+        "Chỉ nhớ nghĩa “Nhân dịp, trước khi tiến hành việc quan trọng” mà bỏ qua sắc thái: Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý.",
+        "Đọc câu ví dụ như một bản dịch từ vựng rời rạc, không xác định mệnh đề chính và vai trò của ～にあたって."
+      ],
+      "discovery": {
+        "distractors": [
+          "Cùng với sự thay đổi... thì...",
+          "Có thể xảy ra / không thể xảy ra",
+          "Điều... là... (nêu cảm xúc)"
+        ]
+      },
+      "examples": [
+        {
+          "sentence": "入学にあたって、必要な書類を提出してください。",
+          "reading": "にゅうがくにあたって、ひつようなしょるいをていしゅつしてください。",
+          "translation": "Trước khi nhập học, hãy nộp các giấy tờ cần thiết.",
+          "blank": "入学____、必要な書類を提出してください。",
+          "answer": "にあたって",
+          "hint": "Chú ý nghĩa “Nhân dịp, trước khi tiến hành việc quan trọng” và cách nối V辞書形／N + にあたって. Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý.",
+          "reason": "Trong 「入学にあたって、必要な書類を提出してください。」, cụm 「にあたって」 thể hiện mẫu ～にあたって. Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý. Vì thế câu có nghĩa: Trước khi nhập học, hãy nộp các giấy tờ cần thiết. Dạng nối cần nhớ: V辞書形／N + にあたって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng tùy tiện cho các việc nhỏ lặp lại hằng ngày. Đồng thời, ～際に là “khi”; ～にあたって nhấn mạnh sự khởi đầu mang tính nghi thức. Câu này cần cấu trúc ～にあたって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "入学にあたって、",
+            "必要な書類を提出してください。"
+          ]
+        },
+        {
+          "sentence": "就職にあたって、目標を決めた。",
+          "reading": "しゅうしょくにあたって、もくひょうをきめた。",
+          "translation": "Nhân dịp đi làm, tôi đặt ra mục tiêu.",
+          "blank": "就職____、目標を決めた。",
+          "answer": "にあたって",
+          "hint": "Chú ý nghĩa “Nhân dịp, trước khi tiến hành việc quan trọng” và cách nối V辞書形／N + にあたって. Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý.",
+          "reason": "Trong 「就職にあたって、目標を決めた。」, cụm 「にあたって」 thể hiện mẫu ～にあたって. Vào dịp bắt đầu sự kiện quan trọng, nêu chuẩn bị, thái độ hoặc lưu ý. Vì thế câu có nghĩa: Nhân dịp đi làm, tôi đặt ra mục tiêu. Dạng nối cần nhớ: V辞書形／N + にあたって.",
+          "wrongReason": "Không thể chỉ chọn theo nghĩa tiếng Việt bề mặt. Không dùng tùy tiện cho các việc nhỏ lặp lại hằng ngày. Đồng thời, ～際に là “khi”; ～にあたって nhấn mạnh sự khởi đầu mang tính nghi thức. Câu này cần cấu trúc ～にあたって ở vị trí đã bỏ trống.",
+          "chunks": [
+            "就職にあたって、",
+            "目標を決めた。"
+          ]
+        }
+      ],
+      "sourceId": 70
+    }
+  ]
+}
