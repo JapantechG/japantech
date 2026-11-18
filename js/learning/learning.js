@@ -274,21 +274,18 @@ function learningStarStats() {
 
 function render(title, html) {
 
-    if ($("learningTitle")) {
-        $("learningTitle").textContent = title;
+    // Thanh điều hướng cố định: thống nhất với giao diện học và ưu tiên tiếng Việt.
+    const header = document.querySelector("#learningScreen .learn-head");
+    const heading = $("learningTitle");
+    const back = $("learningBackBtn");
+    if (heading) heading.textContent = title;
+    if (header) header.classList.add("kl-app-header");
+    if (back) {
+        back.classList.add("kl-app-home-btn");
+        back.innerHTML = '<span aria-hidden="true">⌂</span><span>Trang chủ</span>';
+        back.setAttribute("aria-label", "Về trang chủ BATLINGO");
     }
-
-    if (root()) {
-        const stats = learningStarStats();
-        const activeLevel = course?.id || "n5";
-        const levelStars = stats.levels[activeLevel] || 0;
-        root().innerHTML = `
-            <div class="kl-stars-summary" aria-label="Learning stars">
-                <span>${safe(activeLevel.toUpperCase())}: <strong>${levelStars} ★</strong></span>
-                <span>ACCOUNT: <strong>${stats.totalStars} ★</strong></span>
-            </div>
-        ` + html;
-    }
+    if (root()) root().innerHTML = html;
 
     bindAudio();
     bindCardImages();
@@ -343,7 +340,7 @@ function expToast(value) {
 
 function showError(error) {
 
-    render("LEARNING", `
+    render("Học tiếng Nhật", `
         <div class="learn-card">
             <h3>Có lỗi xảy ra</h3>
             <p>${safe(error.message || error)}</p>
@@ -508,7 +505,7 @@ export async function openLearning() {
     $("learningScreen")?.classList.remove("hidden");
 
     render(
-        "LEARNING",
+        "Học tiếng Nhật",
         `<div class="learn-card">
             Đang tải tiến độ Firebase...
         </div>`
@@ -538,11 +535,11 @@ export function closeLearning() {
 ========================================== */
 
 const LEVEL_UI = {
-    n5: { label: "BEGINNER", subtitle: "Bước đầu tiếng Nhật", tag: "NỀN TẢNG", color: "mint", icon: "🌱" },
-    n4: { label: "ELEMENTARY", subtitle: "Mở rộng nền tảng", tag: "SƠ CẤP", color: "sky", icon: "🍃" },
-    n3: { label: "INTERMEDIATE", subtitle: "Giao tiếp và ứng dụng", tag: "TRUNG CẤP", color: "blue", icon: "🌊" },
-    n2: { label: "UPPER INTERMEDIATE", subtitle: "Diễn đạt tự nhiên", tag: "CAO CẤP", color: "violet", icon: "⚡" },
-    n1: { label: "ADVANCED", subtitle: "Chinh phục JLPT N1", tag: "CHUYÊN SÂU", color: "gold", icon: "👑" }
+    n5: { label: "NHẬP MÔN", subtitle: "Bước đầu tiếng Nhật", tag: "NỀN TẢNG", color: "mint", icon: "🌱" },
+    n4: { label: "SƠ CẤP", subtitle: "Mở rộng nền tảng", tag: "SƠ CẤP", color: "sky", icon: "🍃" },
+    n3: { label: "TRUNG CẤP", subtitle: "Giao tiếp và ứng dụng", tag: "TRUNG CẤP", color: "blue", icon: "🌊" },
+    n2: { label: "TRUNG CAO CẤP", subtitle: "Diễn đạt tự nhiên", tag: "CAO CẤP", color: "violet", icon: "⚡" },
+    n1: { label: "NÂNG CAO", subtitle: "Chinh phục JLPT N1", tag: "CHUYÊN SÂU", color: "gold", icon: "👑" }
 };
 
 function courseStarCount(courseId) {
@@ -564,7 +561,7 @@ function courseCardHTML(c) {
     const level = String(c.id || "").toLowerCase();
     const ui = LEVEL_UI[level] || {label:"JLPT",subtitle:"Tiếng Nhật",tag:"JLPT",color:"blue",icon:"📖"};
     const unlocked = Boolean(c.available && c.manifest);
-    const count = courseStarCount(level);
+    // Tổng sao chỉ hiển thị trong dashboard chính.
     return `
         <button type="button" class="kl-level-card kl-level-${safe(ui.color)} ${unlocked ? "is-open" : "is-locked"}"
             data-course="${safe(c.id)}" ${unlocked ? "" : "disabled"}
@@ -577,8 +574,8 @@ function courseCardHTML(c) {
                     <span class="kl-level-en">${safe(ui.label)}</span>
                     <span class="kl-level-description">${safe(c.description || ui.subtitle)}</span></span>
             </span>
-            <span class="kl-level-bottom"><span>★ ${count.toLocaleString("vi-VN")} sao đã thu thập</span>
-                <span class="kl-level-cta">${unlocked ? "Khám phá lộ trình  ›" : "Chưa khả dụng"}</span></span>
+            <span class="kl-level-bottom"><span>${safe(ui.tag)}</span>
+                <span class="kl-level-cta">${unlocked ? "Xem lộ trình ›" : "Chưa khả dụng"}</span></span>
         </button>`;
 }
 
@@ -589,15 +586,19 @@ async function showCourses() {
         const data = await getJSON("data/learning/courses.json");
         courses = data.courses || [];
         const openCount = courses.filter(c => c.available && c.manifest).length;
-        render("LEARNING", `
+        render("Học tiếng Nhật", `
             <section class="kl-home-hero">
-                <div class="kl-home-eyebrow">BATLINGO · LEARNING JOURNEY</div>
+                <div class="kl-home-eyebrow">BATLINGO · HÀNH TRÌNH HỌC TẬP</div>
                 <h2>Chinh phục tiếng Nhật <span>theo cách của bạn.</span></h2>
                 <p>Chọn cấp độ, học kiến thức mới, ghép đáp án và sưu tập thẻ từ 1★ đến 5★.</p>
-                <div class="kl-home-stats">
-                    <span><strong>05</strong><small>CẤP JLPT</small></span>
-                    <span><strong>${openCount.toString().padStart(2,"0")}</strong><small>ĐANG MỞ</small></span>
-                    <span><strong>${learningStarStats().totalStars.toLocaleString("vi-VN")}</strong><small>SAO ĐÃ NHẬN</small></span>
+                <div class="kl-home-dashboard" aria-label="Bảng tổng quan học tập">
+                    <div class="kl-dashboard-total"><span class="kl-dashboard-emblem" aria-hidden="true">★</span>
+                        <div><span class="kl-dashboard-caption">TỔNG SAO ĐÃ ĐẠT</span>
+                        <strong>${learningStarStats().totalStars.toLocaleString("vi-VN")} <small>★</small></strong>
+                        <span class="kl-dashboard-description">Tổng số sao của tất cả cấp độ N5–N1</span></div>
+                    </div>
+                    <div class="kl-dashboard-side"><span><b>${courses.length}</b> cấp độ JLPT</span>
+                        <span><b>${openCount}</b> cấp đang mở</span></div>
                 </div>
             </section>
             <div class="kl-section-heading"><div><div class="kl-section-eyebrow">01 / KHÓA HỌC</div>
@@ -662,24 +663,24 @@ async function showChapters(courseId) {
                     </button>`;
                 }).join("")}</div>
                 <div class="kl-chapter-test-row">
-                    <div><strong>🏆 Chapter Test</strong><span>${passed ? "Đã vượt qua bài kiểm tra chương" : availableTest ? "Đã đủ điều kiện tham gia" : "Hoàn thành tất cả bài học với ít nhất 3★ để mở"}</span></div>
+                    <div><strong>🏆 Kiểm tra chương</strong><span>${passed ? "Đã vượt qua bài kiểm tra chương" : availableTest ? "Đã đủ điều kiện tham gia" : "Hoàn thành tất cả bài học với ít nhất 3★ để mở"}</span></div>
                     <button type="button" class="learn-btn ${availableTest ? "primary" : ""} kl-chapter-test" data-test="${safe(ch.id)}"
-                        ${availableTest ? "" : "disabled"}>${passed ? "Làm lại Test" : "Vào bài Test"} ›</button>
+                        ${availableTest ? "" : "disabled"}>${passed ? "Làm lại bài kiểm tra" : "Bắt đầu kiểm tra"} ›</button>
                 </div>
             </section>`;
         }).join("");
         render(course.title, `
-            <div class="kl-path-toolbar"><button class="learn-btn" id="klToCourses">← Tất cả cấp độ</button>
+            <div class="kl-path-toolbar"><button class="learn-btn kl-back-action" id="klToCourses"><span aria-hidden="true">←</span> Chọn cấp độ</button>
                 <span class="kl-path-current">${safe(course.title)} · ${safe(ui.tag)}</span></div>
             <section class="kl-path-hero kl-level-${safe(ui.color)}">
                 <div class="kl-path-hero-icon">${ui.icon}</div>
                 <div class="kl-path-hero-copy"><div class="kl-home-eyebrow">LỘ TRÌNH JLPT</div>
                     <h2>${safe(course.title)}</h2><p>${safe(course.description || ui.subtitle)}</p>
-                    <div class="kl-path-metrics"><span><b>${chapters.length}</b> chương</span><span><b>${readyLessons}/${totalLessons}</b> bài đạt 3★</span><span><b>★ ${courseStarCount(course.id).toLocaleString("vi-VN")}</b> sao</span></div></div>
+                    <div class="kl-path-metrics"><span><b>${chapters.length}</b> chương</span><span><b>${readyLessons}/${totalLessons}</b> bài đạt 3★</span></div></div>
                 <div class="kl-path-ring" style="--percent:${percent}"><span><strong>${percent}%</strong><small>TIẾN ĐỘ</small></span></div>
             </section>
             <div class="kl-section-heading"><div><div class="kl-section-eyebrow">02 / LỘ TRÌNH HỌC</div>
-                <h3>Chương và bài học</h3><p>Học theo thứ tự để mở khóa bài tiếp theo và Chapter Test.</p></div></div>
+                <h3>Chương và bài học</h3><p>Học theo thứ tự để mở khóa bài tiếp theo và kiểm tra chương.</p></div></div>
             <div class="kl-path-list">${sections || '<div class="learn-card">Chưa có chương học.</div>'}</div>
         `);
         on("klToCourses",showCourses);
@@ -974,7 +975,7 @@ function learnHTML(item, kind) {
 
     let html = `
         <div class="kl-stage-label">
-            📖 LEARN — Học sau khi suy luận
+            📖 TÌM HIỂU · Giải thích kiến thức
         </div>
 
         ${cardImageHTML(item, kind)}
@@ -1467,7 +1468,7 @@ function knowledgeCard(
 
 /* =========================================================
    VOCABULARY V5: RECOGNIZE -> 1★ -> 2★ -> 3★ -> 4★
-   5★ is granted ONLY after Chapter Test.
+   5★ is granted ONLY after kiểm tra chương.
 ========================================================= */
 
 function vocabShuffle(array) {
@@ -1517,9 +1518,9 @@ function vocabBuilt() {
 }
 
 function vocabStageName() {
-    return ({recognize:"NHẬN DIỆN · KHÔNG SAO", meaning:"CHỌN NGHĨA · 1★",
+    return ({recognize:"LÀM QUEN · CHƯA NHẬN SAO", meaning:"CHỌN NGHĨA · 1★",
         listening:"NGHE & HIỂU · 2★", hiragana:"GHÉP HIRAGANA · 3★",
-        sentence:"ĐIỀN TỪ VÀO CÂU · 4★", complete:"HOÀN THÀNH · CHỜ TEST 5★"})[phase] || "VOCABULARY";
+        sentence:"ĐIỀN TỪ VÀO CÂU · 4★", complete:"HOÀN THÀNH · CHỜ TEST 5★"})[phase] || "TỪ VỰNG";
 }
 
 function renderVocabularyQuest(item) {
@@ -1559,7 +1560,7 @@ function renderVocabularyQuest(item) {
             <div class="kl-vocab-reading">${safe(item.reading)}</div>
             <div class="kl-vocab-meaning">${safe(item.meaning)}</div></div>
             ${exampleHTML(item.example)}
-            <p class="learn-muted">${currentStars===5?'🏆 MASTER CARD 5★':'Đã đạt 4★. Chỉ Chapter Test mới mở khóa 5★.'}</p>
+            <p class="learn-muted">${currentStars===5?'🏆 THẺ THÀNH THẠO 5★':'Đã đạt 4★. Chỉ kiểm tra chương mới mở khóa 5★.'}</p>
             <div class="learn-actions"><button class="learn-btn" id="klVocabReplay">↺ Học lại (không cộng sao)</button></div>`;
     }
     if (opts.length) {
@@ -1582,7 +1583,7 @@ function renderVocabularyQuest(item) {
     }
     render(lesson.title, `
         <div class="learn-row kl-quest-toolbar"><button id="klPath" class="learn-btn">← Lộ trình</button>
-            <button id="klCollection" class="learn-btn">▦ Collection</button>
+            <button id="klCollection" class="learn-btn">▦ Bộ sưu tập</button>
             <span class="learn-muted">Thẻ ${itemIndex+1}/${lessonData.items.length}</span></div>
         <section class="kl-quest-card kl-type-vocabulary ${cardTier(item.id)}">
             <div class="learn-row kl-card-topline">${logo()} ${stars(currentStars)}</div>
@@ -1691,7 +1692,7 @@ let html = `
         <button
             id="klCollection"
             class="learn-btn">
-            ▦ Collection
+            ▦ Bộ sưu tập
         </button>
 
         <span class="learn-muted">
@@ -1723,7 +1724,7 @@ if (phase === "discover") {
 
     html += `
         <div class="kl-stage-label">
-            🔍 DISCOVER · Khám phá kiến thức
+            🔍 KHÁM PHÁ · Nhận biết kiến thức
         </div>
 
         <p class="learn-muted">
@@ -1890,7 +1891,7 @@ if (phase === "discover") {
 
     html += `
         <div class="kl-stage-label">
-            🎯 PRACTICE · 3★
+            🎯 LUYỆN TẬP · 3★
         </div>
 
         ${
@@ -1955,7 +1956,7 @@ if (phase === "discover") {
 
     html += `
         <div class="kl-stage-label">
-            🧩 REVERSE CHALLENGE · 4★
+            🧩 GHÉP VẬN DỤNG · 4★
         </div>
 
         ${
@@ -2021,8 +2022,8 @@ if (phase === "discover") {
             <div class="kl-stage-label">
                 ${
                     s === 5
-                        ? "🏆 MASTER CARD 5★"
-                        : "✓ Đạt 4★ · Chờ Chapter Test"
+                        ? "🏆 THẺ THÀNH THẠO 5★"
+                        : "✓ Đạt 4★ · Chờ kiểm tra chương"
                 }
             </div>
 
@@ -2032,7 +2033,7 @@ if (phase === "discover") {
                 ${
                     s === 5
                         ? "Thẻ đã hoàn thiện!"
-                        : "Đạt 5★ khi trả lời đúng thẻ trong Chapter Test."
+                        : "Đạt 5★ khi trả lời đúng thẻ trong kiểm tra chương."
                 }
             </p>
         `;
@@ -2063,7 +2064,7 @@ if (phase === "discover") {
                 ${
                     itemIndex === lessonData.items.length - 1
                         ? "Kết thúc"
-                        : "Next →"
+                        : "Tiếp →"
                 }
             </button>
 
@@ -2247,7 +2248,7 @@ if (phase === "discover") {
             if (correct) {
                 if (!(await earn(item,4))) return;
                 feedback = "";
-                reverseResult = {correct:true, message:"Đã đạt 4★. Chapter Test sẽ mở khóa 5★!"};
+                reverseResult = {correct:true, message:"Đã đạt 4★. kiểm tra chương sẽ mở khóa 5★!"};
             } else {
                 builderState.attempts++;
                 reverseResult = {correct:false, message:
@@ -2364,7 +2365,7 @@ async function completeLesson() {
                 <button
                     id="klReview"
                     class="learn-btn">
-                    Review thẻ bài
+                    Ôn tập thẻ
                 </button>
 
             </div>
@@ -2418,7 +2419,7 @@ function renderReview(autoRead = false) {
     if (!item) {
 
         render(
-            "CARD REVIEW",
+            "Ôn tập thẻ",
             `<div class="learn-card">
                 Chưa có thẻ để ôn.
             </div>`
@@ -2430,11 +2431,11 @@ function renderReview(autoRead = false) {
     const showHint =
         preferences.autoHint || manualHint;
 
-    render("CARD REVIEW", `
+    render("Ôn tập thẻ", `
         <div class="kl-review-options">
 
             <label>
-                🔊 Auto Speak
+                🔊 Tự động đọc
                 <input
                     id="klAutoSpeak"
                     type="checkbox"
@@ -2442,7 +2443,7 @@ function renderReview(autoRead = false) {
             </label>
 
             <label>
-                💡 Auto Hint
+                💡 Tự hiện gợi ý
                 <input
                     id="klAutoHint"
                     type="checkbox"
@@ -2469,8 +2470,8 @@ function renderReview(autoRead = false) {
                             class="learn-btn">
                             ${
                                 manualHint
-                                    ? "Ẩn Hint"
-                                    : "💡 Hiện Hint"
+                                    ? "Ẩn gợi ý"
+                                    : "💡 Hiện gợi ý"
                             }
                         </button>
                     `
@@ -2489,7 +2490,7 @@ function renderReview(autoRead = false) {
                 id="klReviewPrev"
                 class="learn-btn"
                 ${reviewIndex === 0 ? "disabled" : ""}>
-                ← Previous
+                ← Trước
             </button>
 
             <button
@@ -2498,14 +2499,14 @@ function renderReview(autoRead = false) {
                 ${
                     reviewIndex === reviewItems.length - 1
                         ? "Hoàn thành"
-                        : "Next →"
+                        : "Tiếp →"
                 }
             </button>
 
             <button
                 id="klReviewExit"
                 class="learn-btn">
-                Đóng Review
+                Đóng ôn tập
             </button>
 
         </div>
@@ -2601,7 +2602,7 @@ function openCollection(returnTo = "quest") {
         item => rating(item.id) > 0
     ).length;
 
-    render("MY COLLECTION", `
+    render("Bộ sưu tập thẻ", `
 
         <div class="learn-row kl-quest-toolbar">
 
@@ -2753,7 +2754,7 @@ function openCardDetail(
         `;
     }
 
-    render("KNOWLEDGE CARD", `
+    render("Chi tiết thẻ", `
 
         <div class="learn-row kl-quest-toolbar">
 
@@ -2764,7 +2765,7 @@ function openCardDetail(
             </button>
 
             <span class="learn-muted">
-                ${safe(lesson?.title || "Collection")}
+                ${safe(lesson?.title || "Bộ sưu tập")}
             </span>
 
         </div>
@@ -2886,7 +2887,7 @@ function renderTest() {
 
     const options = optionList(item, kind, pool);
 
-    render("CHAPTER TEST", `
+    render("Kiểm tra chương", `
         
 
         <div class="kl-quest-card ${cardTier(item.id)}">
@@ -2947,7 +2948,7 @@ function renderTest() {
                 <button
                     id="klTestExit"
                     class="learn-btn">
-                    Thoát Test
+                    Thoát bài kiểm tra
                 </button>
 
                 <button
@@ -3024,7 +3025,7 @@ async function finishTest() {
     const passed = score >= 70;
 
     render(
-        "KẾT QUẢ CHƯƠNG",
+        "Kết quả chương",
         `<div class="learn-card">
             Đang lưu kết quả...
         </div>`
@@ -3045,7 +3046,7 @@ async function finishTest() {
                 !userData?.learning?.tests?.[chapter.id]?.passed
             ) {
                 throw Error(
-                    "Không lưu được Chapter Test"
+                    "Không lưu được kiểm tra chương"
                 );
             }
 
@@ -3066,7 +3067,7 @@ async function finishTest() {
             }
         }
 
-        render("KẾT QUẢ CHƯƠNG", `
+        render("Kết quả chương", `
 
             <div class="learn-card">
 
@@ -3092,7 +3093,7 @@ async function finishTest() {
                     <button
                         id="klRetryTest"
                         class="learn-btn">
-                        Làm lại Test
+                        Làm lại bài kiểm tra
                     </button>
 
                     <button
