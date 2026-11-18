@@ -533,178 +533,163 @@ export function closeLearning() {
 }
 
 /* ==========================================
-   COURSE SELECTION
+   LEARNING V6.2 — COURSE HOME & CHAPTER PATH
+   Cosmetic/navigation UI only. Firebase remains authoritative.
 ========================================== */
 
+const LEVEL_UI = {
+    n5: { label: "BEGINNER", subtitle: "Bước đầu tiếng Nhật", tag: "NỀN TẢNG", color: "mint", icon: "🌱" },
+    n4: { label: "ELEMENTARY", subtitle: "Mở rộng nền tảng", tag: "SƠ CẤP", color: "sky", icon: "🍃" },
+    n3: { label: "INTERMEDIATE", subtitle: "Giao tiếp và ứng dụng", tag: "TRUNG CẤP", color: "blue", icon: "🌊" },
+    n2: { label: "UPPER INTERMEDIATE", subtitle: "Diễn đạt tự nhiên", tag: "CAO CẤP", color: "violet", icon: "⚡" },
+    n1: { label: "ADVANCED", subtitle: "Chinh phục JLPT N1", tag: "CHUYÊN SÂU", color: "gold", icon: "👑" }
+};
+
+function courseStarCount(courseId) {
+    return Object.entries(userData?.learning?.cards || {}).reduce((sum, [id, value]) => {
+        if (!id.startsWith(courseId + "-")) return sum;
+        return sum + Math.max(0, Math.min(5, Number(value?.stars) || 0));
+    }, 0);
+}
+
+function lessonIcon(type) {
+    return ({ vocabulary:"📚", kanji:"🈶", grammar:"🧩" })[type] || "📖";
+}
+
+function lessonTypeName(type) {
+    return ({ vocabulary:"TỪ VỰNG", kanji:"KANJI", grammar:"NGỮ PHÁP" })[type] || "BÀI HỌC";
+}
+
+function courseCardHTML(c) {
+    const level = String(c.id || "").toLowerCase();
+    const ui = LEVEL_UI[level] || {label:"JLPT",subtitle:"Tiếng Nhật",tag:"JLPT",color:"blue",icon:"📖"};
+    const unlocked = Boolean(c.available && c.manifest);
+    const count = courseStarCount(level);
+    return `
+        <button type="button" class="kl-level-card kl-level-${safe(ui.color)} ${unlocked ? "is-open" : "is-locked"}"
+            data-course="${safe(c.id)}" ${unlocked ? "" : "disabled"}
+            aria-label="${safe(c.title)}. ${unlocked ? "Mở khóa" : "Chưa mở khóa"}">
+            <span class="kl-level-top"><span class="kl-level-tag">${safe(ui.tag)}</span>
+                <span class="kl-level-status">${unlocked ? "● ĐANG MỞ" : "🔒 SẮP RA MẮT"}</span></span>
+            <span class="kl-level-content">
+                <span class="kl-level-emblem" aria-hidden="true">${ui.icon}</span>
+                <span class="kl-level-copy"><span class="kl-level-title">${safe(c.title)}</span>
+                    <span class="kl-level-en">${safe(ui.label)}</span>
+                    <span class="kl-level-description">${safe(c.description || ui.subtitle)}</span></span>
+            </span>
+            <span class="kl-level-bottom"><span>★ ${count.toLocaleString("vi-VN")} sao đã thu thập</span>
+                <span class="kl-level-cta">${unlocked ? "Khám phá lộ trình  ›" : "Chưa khả dụng"}</span></span>
+        </button>`;
+}
+
 async function showCourses() {
-
     stopLearningSpeech();
-
+    course = null;
     try {
-
-        const data = await getJSON(
-            "data/learning/courses.json"
-        );
-
+        const data = await getJSON("data/learning/courses.json");
         courses = data.courses || [];
-
+        const openCount = courses.filter(c => c.available && c.manifest).length;
         render("LEARNING", `
-            
-
-            <div class="learn-grid">
-                ${courses.map(c => `
-                    <button
-                        class="learn-course"
-                        data-course="${safe(c.id)}"
-                        ${c.available ? "" : "disabled"}>
-                        <strong>${safe(c.title)}</strong>
-                        <span>${safe(c.description)}</span>
-                    </button>
-                `).join("")}
-            </div>
+            <section class="kl-home-hero">
+                <div class="kl-home-eyebrow">BATLINGO · LEARNING JOURNEY</div>
+                <h2>Chinh phục tiếng Nhật <span>theo cách của bạn.</span></h2>
+                <p>Chọn cấp độ, học kiến thức mới, ghép đáp án và sưu tập thẻ từ 1★ đến 5★.</p>
+                <div class="kl-home-stats">
+                    <span><strong>05</strong><small>CẤP JLPT</small></span>
+                    <span><strong>${openCount.toString().padStart(2,"0")}</strong><small>ĐANG MỞ</small></span>
+                    <span><strong>${learningStarStats().totalStars.toLocaleString("vi-VN")}</strong><small>SAO ĐÃ NHẬN</small></span>
+                </div>
+            </section>
+            <div class="kl-section-heading"><div><div class="kl-section-eyebrow">01 / KHÓA HỌC</div>
+                <h3>Chọn cấp độ JLPT</h3><p>Các cấp chưa phát hành vẫn hiển thị để bạn theo dõi lộ trình.</p></div></div>
+            <div class="kl-level-grid">${courses.map(courseCardHTML).join("")}</div>
+            <div class="kl-home-note">✦ Mỗi thẻ được nâng cấp viền theo số sao. Thành tích được đồng bộ từ tiến độ học.</div>
         `);
-
-        root().querySelectorAll("[data-course]").forEach(button => {
-            button.onclick = () => {
-                showChapters(button.dataset.course);
-            };
+        root()?.querySelectorAll("[data-course]").forEach(button => {
+            button.onclick = () => showChapters(button.dataset.course);
         });
-
-    } catch (error) {
-        showError(error);
-    }
+    } catch (error) { showError(error); }
 }
 
 /* ==========================================
-   CHAPTER / LESSON PATH
+   CHAPTER / LESSON PATH — new layout, same unlock logic
 ========================================== */
 
 async function showChapters(courseId) {
-
     stopLearningSpeech();
-
     course = courses.find(c => c.id === courseId);
-
-    if (!course) return;
-
-    render(
-        course.title,
-        `<div class="learn-card">Đang tải lộ trình...</div>`
-    );
-
+    if (!course || !course.available || !course.manifest) return;
+    render(course.title, `<div class="learn-card">Đang tải lộ trình...</div>`);
     try {
-
         manifest = await getJSON(course.manifest);
-
-        let html = `
-            <button class="learn-btn" id="klToCourses">
-                ← Khóa học
-            </button>
-
-            
-        `;
-
-        for (
-            let i = 0;
-            i < manifest.chapters.length;
-            i++
-        ) {
-
-            const ch = manifest.chapters[i];
-
-            const previousChapter =
-                manifest.chapters[i - 1];
-
-            const locked = i > 0 &&
-                !userData.learning?.tests?.[
-                    previousChapter.id
-                ]?.passed;
-
+        const chapters = manifest.chapters || [];
+        const overview = [];
+        for (let i = 0; i < chapters.length; i++) {
+            const ch = chapters[i];
+            const previous = chapters[i - 1];
+            const locked = i > 0 && !userData?.learning?.tests?.[previous.id]?.passed;
             const ready = await readyMap(ch);
-
-            html += `
-                <section class="learn-card">
-
-                    <h2>
-                        ${safe(ch.title)}
-                        ${locked ? "🔒" : ""}
-                    </h2>
-
-                    <p class="learn-muted">
-                        ${safe(ch.description)}
-                    </p>
-
-                    <div class="learn-grid">
-            `;
-
-            ch.lessons.forEach((l, j) => {
-
-                const restricted =
-                    locked || (j > 0 && !ready[j - 1]);
-
-                html += `
-                    <button
-                        class="learn-course"
-                        data-lesson="${safe(l.id)}"
-                        ${restricted ? "disabled" : ""}>
-
-                        <strong>${safe(l.title)}</strong>
-
-                        <small>
-                            ${
-                                ready[j]
-                                    ? "✓ Đã đạt 3★"
-                                    : restricted
-                                        ? "🔒 Chưa đủ sao"
-                                        : "Mở bài →"
-                            }
-                        </small>
-                    </button>
-                `;
-            });
-
-            html += `
-                    </div>
-
-                    <button
-                        class="learn-btn kl-chapter-test"
-                        data-test="${safe(ch.id)}"
-                        ${
-                            locked || !ready.every(Boolean)
-                                ? "disabled"
-                                : ""
-                        }>
-                        🏆 Test chương
-                        ${
-                            userData.learning?.tests?.[ch.id]?.passed
-                                ? "✓"
-                                : ""
-                        }
-                    </button>
-
-                </section>
-            `;
+            overview.push({ch,locked,ready,passed:Boolean(userData?.learning?.tests?.[ch.id]?.passed)});
         }
-
-        render(course.title, html);
-
-        on("klToCourses", showCourses);
-
-        root().querySelectorAll("[data-lesson]").forEach(button => {
-            button.onclick = () => {
-                openLesson(button.dataset.lesson);
-            };
+        const totalLessons = chapters.reduce((n,ch)=>n + (ch.lessons?.length || 0),0);
+        const readyLessons = overview.reduce((n,x)=>n + x.ready.filter(Boolean).length,0);
+        const percent = totalLessons ? Math.round(readyLessons / totalLessons * 100) : 0;
+        const ui = LEVEL_UI[course.id] || LEVEL_UI.n5;
+        const sections = overview.map(({ch,locked,ready,passed},i)=>{
+            const lessons = ch.lessons || [];
+            const completed = ready.filter(Boolean).length;
+            const availableTest = !locked && ready.length>0 && ready.every(Boolean);
+            return `
+            <section class="kl-path-chapter ${locked ? "is-locked" : ""}">
+                <div class="kl-chapter-header">
+                    <div class="kl-chapter-index">${String(i+1).padStart(2,"0")}</div>
+                    <div class="kl-chapter-copy"><div class="kl-chapter-overline">CHƯƠNG ${i+1} ${locked ? "· CHƯA MỞ" : passed ? "· ĐÃ HOÀN THÀNH" : "· ĐANG HỌC"}</div>
+                        <h3>${safe(ch.title)}</h3><p>${safe(ch.description || "")}</p></div>
+                    <div class="kl-chapter-counter"><strong>${completed}/${lessons.length}</strong><span>BÀI ĐỦ 3★</span></div>
+                </div>
+                <div class="kl-path-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${lessons.length ? Math.round(completed/lessons.length*100) : 0}">
+                    <span style="width:${lessons.length ? Math.round(completed/lessons.length*100) : 0}%"></span>
+                </div>
+                <div class="kl-lesson-grid">${lessons.map((l,j)=>{
+                    const restricted = locked || (j>0 && !ready[j-1]);
+                    const type = l.type || "vocabulary";
+                    return `<button type="button" class="kl-lesson-card kl-lesson-${safe(type)} ${ready[j] ? "is-ready" : ""}"
+                        data-lesson="${safe(l.id)}" ${restricted ? "disabled" : ""}>
+                        <span class="kl-lesson-icon" aria-hidden="true">${lessonIcon(type)}</span>
+                        <span class="kl-lesson-main"><small>${lessonTypeName(type)} · BÀI ${j+1}</small>
+                            <strong>${safe(l.title)}</strong><em>${ready[j] ? "Đủ 3★ · Sẵn sàng" : restricted ? "🔒 Mở sau bài trước" : "Chạm để bắt đầu học"}</em></span>
+                        <span class="kl-lesson-arrow">${restricted ? "🔒" : ready[j] ? "✓" : "›"}</span>
+                    </button>`;
+                }).join("")}</div>
+                <div class="kl-chapter-test-row">
+                    <div><strong>🏆 Chapter Test</strong><span>${passed ? "Đã vượt qua bài kiểm tra chương" : availableTest ? "Đã đủ điều kiện tham gia" : "Hoàn thành tất cả bài học với ít nhất 3★ để mở"}</span></div>
+                    <button type="button" class="learn-btn ${availableTest ? "primary" : ""} kl-chapter-test" data-test="${safe(ch.id)}"
+                        ${availableTest ? "" : "disabled"}>${passed ? "Làm lại Test" : "Vào bài Test"} ›</button>
+                </div>
+            </section>`;
+        }).join("");
+        render(course.title, `
+            <div class="kl-path-toolbar"><button class="learn-btn" id="klToCourses">← Tất cả cấp độ</button>
+                <span class="kl-path-current">${safe(course.title)} · ${safe(ui.tag)}</span></div>
+            <section class="kl-path-hero kl-level-${safe(ui.color)}">
+                <div class="kl-path-hero-icon">${ui.icon}</div>
+                <div class="kl-path-hero-copy"><div class="kl-home-eyebrow">LỘ TRÌNH JLPT</div>
+                    <h2>${safe(course.title)}</h2><p>${safe(course.description || ui.subtitle)}</p>
+                    <div class="kl-path-metrics"><span><b>${chapters.length}</b> chương</span><span><b>${readyLessons}/${totalLessons}</b> bài đạt 3★</span><span><b>★ ${courseStarCount(course.id).toLocaleString("vi-VN")}</b> sao</span></div></div>
+                <div class="kl-path-ring" style="--percent:${percent}"><span><strong>${percent}%</strong><small>TIẾN ĐỘ</small></span></div>
+            </section>
+            <div class="kl-section-heading"><div><div class="kl-section-eyebrow">02 / LỘ TRÌNH HỌC</div>
+                <h3>Chương và bài học</h3><p>Học theo thứ tự để mở khóa bài tiếp theo và Chapter Test.</p></div></div>
+            <div class="kl-path-list">${sections || '<div class="learn-card">Chưa có chương học.</div>'}</div>
+        `);
+        on("klToCourses",showCourses);
+        root()?.querySelectorAll("[data-lesson]").forEach(button=>{
+            button.onclick=()=>openLesson(button.dataset.lesson);
         });
-
-        root().querySelectorAll("[data-test]").forEach(button => {
-            button.onclick = () => {
-                openTest(button.dataset.test);
-            };
+        root()?.querySelectorAll("[data-test]").forEach(button=>{
+            button.onclick=()=>openTest(button.dataset.test);
         });
-
-    } catch (error) {
-        showError(error);
-    }
+    } catch(error) { showError(error); }
 }
 
 /* ==========================================
