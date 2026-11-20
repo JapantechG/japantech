@@ -1,0 +1,968 @@
+{
+  "schemaVersion": 1,
+  "courseId": "n1",
+  "chapters": [
+    {
+      "id": "n1-ch01",
+      "title": "N1 · Xã hội và công việc",
+      "description": "Tư duy qua ví dụ nâng cao",
+      "lessons": [
+        {
+          "id": "n1-ch01-vocab",
+          "type": "vocabulary",
+          "title": "01 · Vocabulary",
+          "file": "data/learning/n1/vocabulary-01.json"
+        },
+        {
+          "id": "n1-ch01-kanji",
+          "type": "kanji",
+          "title": "02 · Kanji",
+          "file": "data/learning/n1/kanji-01.json"
+        },
+        {
+          "id": "n1-ch01-grammar",
+          "type": "grammar",
+          "title": "03 · Grammar",
+          "file": "data/learning/n1/grammar-01.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-01.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-02.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-03.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-04.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-05.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-06.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-07.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-08.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-01-09.json"
+        },
+        {
+          "id": "n1-ch01-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (8 từ)",
+          "file": "data/learning/n1/vocabulary-01-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch02",
+      "title": "N1 · Ngữ pháp mở rộng 01",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch02-grammar",
+          "type": "grammar",
+          "title": "Grammar 01",
+          "file": "data/learning/n1/grammar-02.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-01.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-02.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-03.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-04.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-05.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-06.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-07.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-08.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-02-09.json"
+        },
+        {
+          "id": "n1-ch02-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (8 từ)",
+          "file": "data/learning/n1/vocabulary-02-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch03",
+      "title": "N1 · Ngữ pháp mở rộng 02",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch03-grammar",
+          "type": "grammar",
+          "title": "Grammar 02",
+          "file": "data/learning/n1/grammar-03.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-01.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-02.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-03.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-04.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-05.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-06.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-07.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-08.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-03-09.json"
+        },
+        {
+          "id": "n1-ch03-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (8 từ)",
+          "file": "data/learning/n1/vocabulary-03-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch04",
+      "title": "N1 · Ngữ pháp mở rộng 03",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch04-grammar",
+          "type": "grammar",
+          "title": "Grammar 03",
+          "file": "data/learning/n1/grammar-04.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-01.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-02.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-03.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-04.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-05.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-06.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-07.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-08.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-04-09.json"
+        },
+        {
+          "id": "n1-ch04-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (8 từ)",
+          "file": "data/learning/n1/vocabulary-04-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch05",
+      "title": "N1 · Ngữ pháp mở rộng 04",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch05-grammar",
+          "type": "grammar",
+          "title": "Grammar 04",
+          "file": "data/learning/n1/grammar-05.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-01.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-02.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-03.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-04.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-05.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-06.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-07.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-08.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-05-09.json"
+        },
+        {
+          "id": "n1-ch05-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (8 từ)",
+          "file": "data/learning/n1/vocabulary-05-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch06",
+      "title": "N1 · Ngữ pháp mở rộng 05",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch06-grammar",
+          "type": "grammar",
+          "title": "Grammar 05",
+          "file": "data/learning/n1/grammar-06.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-01.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-02.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-03.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-04.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-05.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-06.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-07.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-08.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-06-09.json"
+        },
+        {
+          "id": "n1-ch06-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (8 từ)",
+          "file": "data/learning/n1/vocabulary-06-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch07",
+      "title": "N1 · Ngữ pháp mở rộng 06",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch07-grammar",
+          "type": "grammar",
+          "title": "Grammar 06",
+          "file": "data/learning/n1/grammar-07.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-01.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-02.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-03.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-04.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-05.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-06.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-07.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-08.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-07-09.json"
+        },
+        {
+          "id": "n1-ch07-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (7 từ)",
+          "file": "data/learning/n1/vocabulary-07-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch08",
+      "title": "N1 · Ngữ pháp mở rộng 07",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch08-grammar",
+          "type": "grammar",
+          "title": "Grammar 07",
+          "file": "data/learning/n1/grammar-08.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-01.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-02.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-03.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-04.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-05.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-06.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-07.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-08.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-08-09.json"
+        },
+        {
+          "id": "n1-ch08-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (7 từ)",
+          "file": "data/learning/n1/vocabulary-08-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch09",
+      "title": "N1 · Ngữ pháp mở rộng 08",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch09-grammar",
+          "type": "grammar",
+          "title": "Grammar 08",
+          "file": "data/learning/n1/grammar-09.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-01.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-02.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-03.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-04.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-05.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-06.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-07.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-08.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-09-09.json"
+        },
+        {
+          "id": "n1-ch09-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (7 từ)",
+          "file": "data/learning/n1/vocabulary-09-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch10",
+      "title": "N1 · Ngữ pháp mở rộng 09",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch10-grammar",
+          "type": "grammar",
+          "title": "Grammar 09",
+          "file": "data/learning/n1/grammar-10.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-01.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-02.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-03.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-04.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-05.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-06.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-07.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-08.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-10-09.json"
+        },
+        {
+          "id": "n1-ch10-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (7 từ)",
+          "file": "data/learning/n1/vocabulary-10-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch11",
+      "title": "N1 · Ngữ pháp mở rộng 10",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch11-grammar",
+          "type": "grammar",
+          "title": "Grammar 10",
+          "file": "data/learning/n1/grammar-11.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-01.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-02.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-03.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-04.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-05.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-06.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-07.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-08.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-11-09.json"
+        },
+        {
+          "id": "n1-ch11-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (7 từ)",
+          "file": "data/learning/n1/vocabulary-11-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch12",
+      "title": "N1 · Ngữ pháp mở rộng 11",
+      "description": "10 mẫu ngữ pháp N1",
+      "lessons": [
+        {
+          "id": "n1-ch12-grammar",
+          "type": "grammar",
+          "title": "Grammar 11",
+          "file": "data/learning/n1/grammar-12.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-01.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-02.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-03.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-04.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-05.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-06.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-07.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-08.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-12-09.json"
+        },
+        {
+          "id": "n1-ch12-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (7 từ)",
+          "file": "data/learning/n1/vocabulary-12-10.json"
+        }
+      ]
+    },
+    {
+      "id": "n1-ch13",
+      "title": "N1 · Ngữ pháp mở rộng 12",
+      "description": "Mẫu ngữ pháp N1 còn lại",
+      "lessons": [
+        {
+          "id": "n1-ch13-grammar",
+          "type": "grammar",
+          "title": "Grammar 12",
+          "file": "data/learning/n1/grammar-13.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-01",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 01 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-01.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-02",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 02 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-02.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-03",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 03 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-03.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-04",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 04 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-04.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-05",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 05 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-05.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-06",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 06 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-06.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-07",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 07 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-07.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-08",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 08 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-08.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-09",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 09 (15 từ)",
+          "file": "data/learning/n1/vocabulary-13-09.json"
+        },
+        {
+          "id": "n1-ch13-vocab-source-10",
+          "type": "vocabulary",
+          "title": "Từ vựng · Bài 10 (7 từ)",
+          "file": "data/learning/n1/vocabulary-13-10.json"
+        }
+      ]
+    }
+  ],
+  "descriptionNote": "Giữ nguyên 13 chương và các bài học hiện có; gói này chỉ chứa chapters.json và các JSON từ vựng mới."
+}
