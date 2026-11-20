@@ -1,0 +1,841 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch01-vocab-source-01",
+  "type": "vocabulary",
+  "title": "Từ vựng N1 · Chương 01 · Phần 01",
+  "items": [
+    {
+      "id": "n1-vocab-source-0001",
+      "sourceId": 1,
+      "word": "身内",
+      "reading": "みうち",
+      "sourceWord": "身内",
+      "hanViet": "",
+      "meaning": "họ hàng, người nhà, người thân",
+      "explanation": "身内（みうち）— họ hàng, người nhà, người thân. Chỉ người thuộc phạm vi gia đình hoặc phe mình. Trong môi trường công việc, 身内 có thể mang nghĩa người trong nhóm, phía nội bộ. Ví dụ kết hợp: 身内の者; 身内に相談する. Điểm dễ nhầm: 肉親 nhấn mạnh quan hệ huyết thống, còn 身内 có phạm vi linh hoạt hơn.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chỉ người thuộc phạm vi gia đình hoặc phe mình. Trong môi trường công việc, 身内 có thể mang nghĩa người trong nhóm, phía nội bộ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. họ hàng, người nhà, người thân"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "身内の者; 身内に相談する"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "肉親 nhấn mạnh quan hệ huyết thống, còn 身内 có phạm vi linh hoạt hơn."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 身内に相談してから決めます。 — Tôi sẽ bàn bạc với người nhà rồi mới quyết định."
+        }
+      ],
+      "commonMistakes": [
+        "肉親 nhấn mạnh quan hệ huyết thống, còn 身内 có phạm vi linh hoạt hơn.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "身内に相談してから決めます。",
+        "reading": "みうちにそうだんしてからきめます。",
+        "translation": "Tôi sẽ bàn bạc với người nhà rồi mới quyết định.",
+        "blank": "____に相談してから決めます。",
+        "answer": "身内",
+        "hint": "みうち",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "身内",
+          "に相談してから決めます。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0002",
+      "sourceId": 2,
+      "word": "肉親",
+      "reading": "にくしん",
+      "sourceWord": "肉親",
+      "hanViet": "",
+      "meaning": "người thân ruột thịt, người có quan hệ máu mủ",
+      "explanation": "肉親（にくしん）— người thân ruột thịt, người có quan hệ máu mủ. Nhấn mạnh quan hệ huyết thống, thường dùng khi nói đến cha mẹ, con cái và người thân ruột thịt. Ví dụ kết hợp: 肉親との再会; 肉親を捜す. Điểm dễ nhầm: Không đồng nhất hoàn toàn với 身内 (người trong nhà/người phe mình).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Nhấn mạnh quan hệ huyết thống, thường dùng khi nói đến cha mẹ, con cái và người thân ruột thịt."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. người thân ruột thịt, người có quan hệ máu mủ"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "肉親との再会; 肉親を捜す"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không đồng nhất hoàn toàn với 身内 (người trong nhà/người phe mình)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 肉親との再会を喜んだ。 — Anh ấy vui mừng khi gặp lại người thân ruột thịt."
+        }
+      ],
+      "commonMistakes": [
+        "Không đồng nhất hoàn toàn với 身内 (người trong nhà/người phe mình).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "肉親との再会を喜んだ。",
+        "reading": "にくしんとのさいかいをよろこんだ。",
+        "translation": "Anh ấy vui mừng khi gặp lại người thân ruột thịt.",
+        "blank": "____との再会を喜んだ。",
+        "answer": "肉親",
+        "hint": "にくしん",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "肉親",
+          "との再会を喜んだ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0003",
+      "sourceId": 3,
+      "word": "配偶者",
+      "reading": "はいぐうしゃ",
+      "sourceWord": "配偶者",
+      "hanViet": "",
+      "meaning": "người phối ngẫu, vợ hoặc chồng",
+      "explanation": "配偶者（はいぐうしゃ）— người phối ngẫu, vợ hoặc chồng. Cách nói trung tính và trang trọng về người vợ hoặc người chồng, thường gặp trên hồ sơ và pháp luật. Ví dụ kết hợp: 配偶者控除; 配偶者の有無. Điểm dễ nhầm: Không nên dùng thay cho 妻 hoặc 夫 trong mọi hội thoại đời thường.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cách nói trung tính và trang trọng về người vợ hoặc người chồng, thường gặp trên hồ sơ và pháp luật."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. người phối ngẫu, vợ hoặc chồng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ, hành chính. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "配偶者控除; 配偶者の有無"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không nên dùng thay cho 妻 hoặc 夫 trong mọi hội thoại đời thường."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 配偶者の同意が必要です。 — Cần có sự đồng ý của vợ hoặc chồng."
+        }
+      ],
+      "commonMistakes": [
+        "Không nên dùng thay cho 妻 hoặc 夫 trong mọi hội thoại đời thường.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "配偶者の同意が必要です。",
+        "reading": "はいぐうしゃのどういがひつようです。",
+        "translation": "Cần có sự đồng ý của vợ hoặc chồng.",
+        "blank": "____の同意が必要です。",
+        "answer": "配偶者",
+        "hint": "はいぐうしゃ",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "配偶者",
+          "の同意が必要です。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0004",
+      "sourceId": 4,
+      "word": "家系",
+      "reading": "かけい",
+      "sourceWord": "家系",
+      "hanViet": "",
+      "meaning": "dòng họ, dòng dõi gia đình",
+      "explanation": "家系（かけい）— dòng họ, dòng dõi gia đình. Chỉ dòng họ và mối liên hệ giữa các thế hệ; có thể dùng khi nói về xuất thân, lịch sử gia đình hoặc bệnh có yếu tố di truyền. Ví dụ kết hợp: 家系をたどる; 家系図. Điểm dễ nhầm: Phân biệt 家庭 (gia đình/môi trường sống) và 家計 (kinh tế gia đình).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chỉ dòng họ và mối liên hệ giữa các thế hệ; có thể dùng khi nói về xuất thân, lịch sử gia đình hoặc bệnh có yếu tố di truyền."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. dòng họ, dòng dõi gia đình"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "家系をたどる; 家系図"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Phân biệt 家庭 (gia đình/môi trường sống) và 家計 (kinh tế gia đình)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 彼は古い家系の出身だ。 — Anh ấy xuất thân từ một dòng họ lâu đời."
+        }
+      ],
+      "commonMistakes": [
+        "Phân biệt 家庭 (gia đình/môi trường sống) và 家計 (kinh tế gia đình).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "彼は古い家系の出身だ。",
+        "reading": "かれはふるいかけいのしゅっしんだ。",
+        "translation": "Anh ấy xuất thân từ một dòng họ lâu đời.",
+        "blank": "彼は古い____の出身だ。",
+        "answer": "家系",
+        "hint": "かけい",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "彼は古い",
+          "家系",
+          "の出身だ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0005",
+      "sourceId": 5,
+      "word": "お袋",
+      "reading": "おふくろ",
+      "sourceWord": "お袋",
+      "hanViet": "",
+      "meaning": "mẹ, mẹ mình",
+      "explanation": "お袋（おふくろ）— mẹ, mẹ mình. Cách người nói gọi mẹ mình trong hội thoại thân mật, đặc biệt thường gặp trong lời nói của nam giới. Ví dụ kết hợp: うちのお袋. Điểm dễ nhầm: Không dùng để gọi trực tiếp mẹ của người khác trong ngữ cảnh lịch sự.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cách người nói gọi mẹ mình trong hội thoại thân mật, đặc biệt thường gặp trong lời nói của nam giới."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. mẹ, mẹ mình"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ, thân mật. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "うちのお袋"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không dùng để gọi trực tiếp mẹ của người khác trong ngữ cảnh lịch sự."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: お袋に久しぶりに電話した。 — Lâu rồi tôi mới gọi điện cho mẹ."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng để gọi trực tiếp mẹ của người khác trong ngữ cảnh lịch sự.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "お袋に久しぶりに電話した。",
+        "reading": "おふくろにひさしぶりにでんわした。",
+        "translation": "Lâu rồi tôi mới gọi điện cho mẹ.",
+        "blank": "____に久しぶりに電話した。",
+        "answer": "お袋",
+        "hint": "おふくろ",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "お袋",
+          "に久しぶりに電話した。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0006",
+      "sourceId": 6,
+      "word": "親父",
+      "reading": "おやじ",
+      "sourceWord": "親父",
+      "hanViet": "",
+      "meaning": "bố, bố mình",
+      "explanation": "親父（おやじ）— bố, bố mình. Cách gọi bố mình khá suồng sã; tùy ngữ cảnh cũng có thể chỉ một người đàn ông lớn tuổi. Ví dụ kết hợp: うちの親父. Điểm dễ nhầm: Văn phong không phù hợp với văn bản hành chính hoặc phát biểu trang trọng.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cách gọi bố mình khá suồng sã; tùy ngữ cảnh cũng có thể chỉ một người đàn ông lớn tuổi."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. bố, bố mình"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ, thân mật. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "うちの親父"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Văn phong không phù hợp với văn bản hành chính hoặc phát biểu trang trọng."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 親父は毎朝早く起きる。 — Bố tôi dậy sớm mỗi sáng."
+        }
+      ],
+      "commonMistakes": [
+        "Văn phong không phù hợp với văn bản hành chính hoặc phát biểu trang trọng.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "親父は毎朝早く起きる。",
+        "reading": "おやじはまいあさはやくおきる。",
+        "translation": "Bố tôi dậy sớm mỗi sáng.",
+        "blank": "____は毎朝早く起きる。",
+        "answer": "親父",
+        "hint": "おやじ",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "親父",
+          "は毎朝早く起きる。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0007",
+      "sourceId": 7,
+      "word": "寄越す",
+      "reading": "よこす",
+      "sourceWord": "寄越す",
+      "hanViet": "",
+      "meaning": "gửi đến, chuyển đến, cử đến",
+      "explanation": "寄越す（よこす）— gửi đến, chuyển đến, cử đến. Chỉ hành động gửi, đưa hoặc phái một vật/người về phía người nói; trong lời nói trực tiếp có thể nghe khá mạnh. Ví dụ kết hợp: 手紙を寄越す; 人を寄越す. Điểm dễ nhầm: Phân biệt 送る (gửi đi nói chung) và 寄越す (gửi đến phía người nói).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chỉ hành động gửi, đưa hoặc phái một vật/người về phía người nói; trong lời nói trực tiếp có thể nghe khá mạnh."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. gửi đến, chuyển đến, cử đến"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "手紙を寄越す; 人を寄越す"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Phân biệt 送る (gửi đi nói chung) và 寄越す (gửi đến phía người nói)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Phân biệt 送る (gửi đi nói chung) và 寄越す (gửi đến phía người nói).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「寄越す」の意味を辞書で確認した。",
+        "reading": "「よこす」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “寄越す”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "寄越す",
+        "hint": "よこす",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "寄越す",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0008",
+      "sourceId": 8,
+      "word": "女房",
+      "reading": "にょうぼう",
+      "sourceWord": "女房",
+      "hanViet": "",
+      "meaning": "vợ mình",
+      "explanation": "女房（にょうぼう）— vợ mình. Cách gọi vợ mình khá đời thường, nghe truyền thống; mức độ phù hợp phụ thuộc quan hệ và người nghe. Ví dụ kết hợp: うちの女房. Điểm dễ nhầm: Trong giao tiếp lịch sự có thể dùng 妻.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cách gọi vợ mình khá đời thường, nghe truyền thống; mức độ phù hợp phụ thuộc quan hệ và người nghe."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. vợ mình"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ, khẩu ngữ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "うちの女房"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Trong giao tiếp lịch sự có thể dùng 妻."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 女房と旅行の計画を立てた。 — Tôi đã lên kế hoạch du lịch với vợ."
+        }
+      ],
+      "commonMistakes": [
+        "Trong giao tiếp lịch sự có thể dùng 妻.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "女房と旅行の計画を立てた。",
+        "reading": "にょうぼうとりょこうのけいかくをたてた。",
+        "translation": "Tôi đã lên kế hoạch du lịch với vợ.",
+        "blank": "____と旅行の計画を立てた。",
+        "answer": "女房",
+        "hint": "にょうぼう",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "女房",
+          "と旅行の計画を立てた。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0009",
+      "sourceId": 9,
+      "word": "亭主",
+      "reading": "ていしゅ",
+      "sourceWord": "亭主",
+      "hanViet": "",
+      "meaning": "chồng mình",
+      "explanation": "亭主（ていしゅ）— chồng mình. Chỉ người chồng, thường dùng trong ngữ cảnh gia đình và cách nói khá truyền thống. Ví dụ kết hợp: うちの亭主. Điểm dễ nhầm: Không phải từ trung tính cho mọi loại văn bản; 夫 trang trọng hơn.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chỉ người chồng, thường dùng trong ngữ cảnh gia đình và cách nói khá truyền thống."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. chồng mình"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ, khẩu ngữ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "うちの亭主"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không phải từ trung tính cho mọi loại văn bản; 夫 trang trọng hơn."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 亭主が夕食を作ってくれた。 — Chồng tôi đã nấu bữa tối."
+        }
+      ],
+      "commonMistakes": [
+        "Không phải từ trung tính cho mọi loại văn bản; 夫 trang trọng hơn.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "亭主が夕食を作ってくれた。",
+        "reading": "ていしゅがゆうしょくをつくってくれた。",
+        "translation": "Chồng tôi đã nấu bữa tối.",
+        "blank": "____が夕食を作ってくれた。",
+        "answer": "亭主",
+        "hint": "ていしゅ",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "亭主",
+          "が夕食を作ってくれた。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0010",
+      "sourceId": 10,
+      "word": "温もり",
+      "reading": "ぬくもり",
+      "sourceWord": "温もり",
+      "hanViet": "",
+      "meaning": "sự ấm áp, hơi ấm",
+      "explanation": "温もり（ぬくもり）— sự ấm áp, hơi ấm. Các nghĩa “sự ấm áp, hơi ấm” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Ví dụ ngữ cảnh: 木の温もりを感じる部屋だ。 — Đây là căn phòng mang lại cảm giác ấm áp của gỗ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “sự ấm áp, hơi ấm” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. sự ấm áp, hơi ấm"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 木の温もりを感じる部屋だ。 — Đây là căn phòng mang lại cảm giác ấm áp của gỗ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "木の温もりを感じる部屋だ。",
+        "reading": "きのぬくもりをかんじるへやだ。",
+        "translation": "Đây là căn phòng mang lại cảm giác ấm áp của gỗ.",
+        "blank": "木の____を感じる部屋だ。",
+        "answer": "温もり",
+        "hint": "ぬくもり",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "木の",
+          "温もり",
+          "を感じる部屋だ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0011",
+      "sourceId": 11,
+      "word": "授かる",
+      "reading": "さずかる",
+      "sourceWord": "授かる",
+      "hanViet": "",
+      "meaning": "được ban cho, được trời phú",
+      "explanation": "授かる（さずかる）— được ban cho, được trời phú. Diễn tả việc được trao tặng một thứ quý giá, một năng lực, con cái hoặc ân huệ. Mang sắc thái biết ơn, may mắn. Ví dụ kết hợp: 子どもを授かる; 才能を授かる. Điểm dễ nhầm: Khác 貰う vốn chỉ nhận một vật thông thường.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Diễn tả việc được trao tặng một thứ quý giá, một năng lực, con cái hoặc ân huệ. Mang sắc thái biết ơn, may mắn."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. được ban cho, được trời phú"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "子どもを授かる; 才能を授かる"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 貰う vốn chỉ nhận một vật thông thường."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 貰う vốn chỉ nhận một vật thông thường.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「授かる」という表現を見かけた。",
+        "reading": "ぶんしょうで「さずかる」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “授かる” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "授かる",
+        "hint": "さずかる",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "授かる",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0012",
+      "sourceId": 12,
+      "word": "名付ける",
+      "reading": "なづける",
+      "sourceWord": "名付ける",
+      "hanViet": "",
+      "meaning": "đặt tên",
+      "explanation": "名付ける（なづける）— đặt tên. Đặt tên cho người, vật, tác phẩm hoặc hiện tượng; thường đi với mẫu ～を～と名付ける. Ví dụ kết hợp: 子どもを花子と名付ける. Điểm dễ nhầm: Không nhầm với 名乗る (xưng tên).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Đặt tên cho người, vật, tác phẩm hoặc hiện tượng; thường đi với mẫu ～を～と名付ける."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. đặt tên"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 2. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "子どもを花子と名付ける"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không nhầm với 名乗る (xưng tên)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 子どもに「光」と名付ける。 — Đặt tên đứa trẻ là Hikari."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm với 名乗る (xưng tên).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "子どもに「光」と名付ける。",
+        "reading": "こどもに「ひかり」となづける。",
+        "translation": "Đặt tên đứa trẻ là Hikari.",
+        "blank": "子どもに「光」と____。",
+        "answer": "名付ける",
+        "hint": "なづける",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "子どもに「光」と",
+          "名付ける",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0013",
+      "sourceId": 13,
+      "word": "すやすや",
+      "reading": "すやすや",
+      "sourceWord": "すやすや",
+      "hanViet": "",
+      "meaning": "ngủ ngon, ngủ say một cách yên bình",
+      "explanation": "すやすや（すやすや）— ngủ ngon, ngủ say một cách yên bình. Diễn tả dáng ngủ ngon, đều và yên bình; thường đi với 眠る・寝る. Ví dụ kết hợp: すやすや眠る. Điểm dễ nhầm: Không chỉ dùng để nói ngủ nhiều; trọng tâm là trạng thái yên ổn.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Diễn tả dáng ngủ ngon, đều và yên bình; thường đi với 眠る・寝る."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. ngủ ngon, ngủ say một cách yên bình"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Phó từ tượng thái. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "すやすや眠る"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không chỉ dùng để nói ngủ nhiều; trọng tâm là trạng thái yên ổn."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 赤ちゃんがすやすや眠っている。 — Em bé đang ngủ ngon lành."
+        }
+      ],
+      "commonMistakes": [
+        "Không chỉ dùng để nói ngủ nhiều; trọng tâm là trạng thái yên ổn.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "赤ちゃんがすやすや眠っている。",
+        "reading": "あかちゃんがすやすやねむっている。",
+        "translation": "Em bé đang ngủ ngon lành.",
+        "blank": "赤ちゃんが____眠っている。",
+        "answer": "すやすや",
+        "hint": "すやすや",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "赤ちゃんが",
+          "すやすや",
+          "眠っている。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0014",
+      "sourceId": 14,
+      "word": "しぐさ",
+      "reading": "しぐさ",
+      "sourceWord": "しぐさ",
+      "hanViet": "",
+      "meaning": "cử chỉ, điệu bộ",
+      "explanation": "しぐさ（しぐさ）— cử chỉ, điệu bộ. Cử động hoặc hành vi nhỏ thể hiện cảm xúc, thói quen, tính cách. Ví dụ kết hợp: 何気ないしぐさ. Điểm dễ nhầm: Khác 動作 mang nghĩa động tác/cử động kỹ thuật hoặc trung tính.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cử động hoặc hành vi nhỏ thể hiện cảm xúc, thói quen, tính cách."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. cử chỉ, điệu bộ"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "何気ないしぐさ"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 動作 mang nghĩa động tác/cử động kỹ thuật hoặc trung tính."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: そのしぐさがとてもかわいい。 — Cử chỉ ấy rất đáng yêu."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 動作 mang nghĩa động tác/cử động kỹ thuật hoặc trung tính.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "そのしぐさがとてもかわいい。",
+        "reading": "そのしぐさがとてもかわいい。",
+        "translation": "Cử chỉ ấy rất đáng yêu.",
+        "blank": "その____がとてもかわいい。",
+        "answer": "しぐさ",
+        "hint": "しぐさ",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "その",
+          "しぐさ",
+          "がとてもかわいい。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0015",
+      "sourceId": 15,
+      "word": "愛しい",
+      "reading": "いとしい",
+      "sourceWord": "愛しい",
+      "hanViet": "",
+      "meaning": "đáng yêu, yêu thương, thương mến",
+      "explanation": "愛しい（いとしい）— đáng yêu, yêu thương, thương mến. Diễn tả tình yêu thương sâu sắc, trân quý đối với người hoặc sinh vật. Ví dụ kết hợp: 愛しい子ども. Điểm dễ nhầm: Không hoàn toàn tương đương かわいい, vốn nhấn mạnh đáng yêu ở bề ngoài.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Diễn tả tình yêu thương sâu sắc, trân quý đối với người hoặc sinh vật."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. đáng yêu, yêu thương, thương mến"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Tính từ い. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "愛しい子ども"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không hoàn toàn tương đương かわいい, vốn nhấn mạnh đáng yêu ở bề ngoài."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 離れていても家族が愛しい。 — Dù xa cách, tôi vẫn thấy gia đình thật đáng thương yêu."
+        }
+      ],
+      "commonMistakes": [
+        "Không hoàn toàn tương đương かわいい, vốn nhấn mạnh đáng yêu ở bề ngoài.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "離れていても家族が愛しい。",
+        "reading": "はなれていてもかぞくがいとしい。",
+        "translation": "Dù xa cách, tôi vẫn thấy gia đình thật đáng thương yêu.",
+        "blank": "離れていても家族が____。",
+        "answer": "愛しい",
+        "hint": "いとしい",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "離れていても家族が",
+          "愛しい",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    }
+  ]
+}
