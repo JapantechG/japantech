@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch13-vocab-source-10",
+  "type": "vocabulary",
+  "title": "Từ vựng N1 · Chương 13 · Phần 10",
+  "items": [
+    {
+      "id": "n1-vocab-source-1846",
+      "sourceId": 1846,
+      "word": "飛ぶ",
+      "reading": "とぶ",
+      "sourceWord": "飛ぶ",
+      "hanViet": "",
+      "meaning": "bay; bay đến; lan truyền; nhảy, bỏ qua",
+      "explanation": "飛ぶ（とぶ）— bay; bay đến; lan truyền; nhảy, bỏ qua. Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. bay | 2. bay đến | 3. lan truyền | 4. nhảy, bỏ qua"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ hoặc cụm biểu đạt (xác định qua câu). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「飛ぶ」という表現を見かけた。",
+        "reading": "ぶんしょうで「とぶ」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “飛ぶ” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "飛ぶ",
+        "hint": "とぶ",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "飛ぶ",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1847",
+      "sourceId": 1847,
+      "word": "抜く",
+      "reading": "ぬく",
+      "sourceWord": "抜く",
+      "hanViet": "",
+      "meaning": "nhổ; xả; bỏ qua; vượt qua",
+      "explanation": "抜く（ぬく）— nhổ; xả; bỏ qua; vượt qua. Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. nhổ | 2. xả | 3. bỏ qua | 4. vượt qua"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ hoặc cụm biểu đạt (xác định qua câu). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「抜く」の意味を辞書で確認した。",
+        "reading": "「ぬく」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “抜く”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "抜く",
+        "hint": "ぬく",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "抜く",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1848",
+      "sourceId": 1848,
+      "word": "乗る",
+      "reading": "のる",
+      "sourceWord": "乗る",
+      "hanViet": "",
+      "meaning": "leo lên; đi, lên phương tiện; tư vấn, lắng nghe; tự mãn, quá đà",
+      "explanation": "乗る（のる）— leo lên; đi, lên phương tiện; tư vấn, lắng nghe; tự mãn, quá đà. Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. leo lên | 2. đi, lên phương tiện | 3. tư vấn, lắng nghe | 4. tự mãn, quá đà"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ hoặc cụm biểu đạt (xác định qua câu). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "今日は「乗る」という言葉を覚えた。",
+        "reading": "きょうは「のる」ということばをおぼえた。",
+        "translation": "Hôm nay tôi đã ghi nhớ từ “乗る”.",
+        "blank": "今日は「____」という言葉を覚えた。",
+        "answer": "乗る",
+        "hint": "のる",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "今日は「",
+          "乗る",
+          "」という言葉を覚えた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1849",
+      "sourceId": 1849,
+      "word": "弾む",
+      "reading": "はずむ",
+      "sourceWord": "弾む",
+      "hanViet": "",
+      "meaning": "nảy; rôm rả, sôi nổi; thở hổn hển; trả hậu hĩnh",
+      "explanation": "弾む（はずむ）— nảy; rôm rả, sôi nổi; thở hổn hển; trả hậu hĩnh. Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. nảy | 2. rôm rả, sôi nổi | 3. thở hổn hển | 4. trả hậu hĩnh"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ hoặc cụm biểu đạt (xác định qua câu). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「弾む」の使い方を質問した。",
+        "reading": "せんせいに「はずむ」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “弾む”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "弾む",
+        "hint": "はずむ",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "弾む",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1850",
+      "sourceId": 1850,
+      "word": "控える",
+      "reading": "ひかえる",
+      "sourceWord": "控える",
+      "hanViet": "",
+      "meaning": "kiêng, hạn chế; sắp đến; ghi chép",
+      "explanation": "控える（ひかえる）— kiêng, hạn chế; sắp đến; ghi chép. Có thể là kiềm chế/giảm bớt, ghi chú hoặc ở ngay trước một sự kiện sắp diễn ra. Ví dụ kết hợp: 飲酒を控える; 試験を控える. Điểm dễ nhầm: Không học một nghĩa duy nhất: mẫu đi kèm thay đổi theo từng nghĩa.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Có thể là kiềm chế/giảm bớt, ghi chú hoặc ở ngay trước một sự kiện sắp diễn ra."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. kiêng, hạn chế | 2. sắp đến | 3. ghi chép"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 2. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "飲酒を控える; 試験を控える"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không học một nghĩa duy nhất: mẫu đi kèm thay đổi theo từng nghĩa."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Không học một nghĩa duy nhất: mẫu đi kèm thay đổi theo từng nghĩa.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「控える」という言葉の発音を練習した。",
+        "reading": "「ひかえる」ということばのはつおんをれんしゅうした。",
+        "translation": "Tôi đã luyện phát âm từ “控える”.",
+        "blank": "「____」という言葉の発音を練習した。",
+        "answer": "控える",
+        "hint": "ひかえる",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "控える",
+          "」という言葉の発音を練習した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1851",
+      "sourceId": 1851,
+      "word": "引く",
+      "reading": "ひく",
+      "sourceWord": "引く",
+      "hanViet": "",
+      "meaning": "kéo; thu hút; tra; rút; trừ; phết; thừa hưởng",
+      "explanation": "引く（ひく）— kéo; thu hút; tra; rút; trừ; phết; thừa hưởng. Từ nhiều nghĩa: kéo, tra cứu, trừ, rút/giảm, thừa hưởng, dẫn dắt đường nét. Ví dụ kết hợp: 辞書を引く; 線を引く; 風邪を引く. Điểm dễ nhầm: Đặc biệt 風邪を引く = bị cảm, không phải kéo.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Từ nhiều nghĩa: kéo, tra cứu, trừ, rút/giảm, thừa hưởng, dẫn dắt đường nét."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. kéo | 2. thu hút | 3. tra | 4. rút | 5. trừ | 6. phết | 7. thừa hưởng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "辞書を引く; 線を引く; 風邪を引く"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đặc biệt 風邪を引く = bị cảm, không phải kéo."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đặc biệt 風邪を引く = bị cảm, không phải kéo.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「引く」という表現を見かけた。",
+        "reading": "ぶんしょうで「ひく」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “引く” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "引く",
+        "hint": "ひく",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "引く",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1852",
+      "sourceId": 1852,
+      "word": "回す",
+      "reading": "まわす",
+      "sourceWord": "回す",
+      "hanViet": "",
+      "meaning": "xoay, bật; dành cho; chuyển tiếp; để lại sau",
+      "explanation": "回す（まわす）— xoay, bật; dành cho; chuyển tiếp; để lại sau. Xoay/quay vật, chuyển tiếp cho người khác hoặc phân bổ nguồn lực sang việc khác. Ví dụ kết hợp: ハンドルを回す; 書類を回す. Điểm dễ nhầm: Khác 回る (tự quay), 回す là ngoại động từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Xoay/quay vật, chuyển tiếp cho người khác hoặc phân bổ nguồn lực sang việc khác."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. xoay, bật | 2. dành cho | 3. chuyển tiếp | 4. để lại sau"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "ハンドルを回す; 書類を回す"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 回る (tự quay), 回す là ngoại động từ."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 回る (tự quay), 回す là ngoại động từ.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「回す」の意味を辞書で確認した。",
+        "reading": "「まわす」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “回す”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "回す",
+        "hint": "まわす",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "回す",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    }
+  ]
+}
