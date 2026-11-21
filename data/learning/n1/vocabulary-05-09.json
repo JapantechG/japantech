@@ -1,0 +1,848 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch05-vocab-source-09",
+  "type": "vocabulary",
+  "title": "Từ vựng N1 · Chương 05 · Phần 09",
+  "items": [
+    {
+      "id": "n1-vocab-source-0693",
+      "sourceId": 693,
+      "word": "もってこい",
+      "reading": "もってこい",
+      "sourceWord": "もってこい",
+      "hanViet": "",
+      "meaning": "lý tưởng, rất thích hợp, hoàn toàn phù hợp",
+      "explanation": "もってこい（もってこい）— lý tưởng, rất thích hợp, hoàn toàn phù hợp. Có sắc thái nhấn mạnh mức độ. Cần xem danh từ/tính từ/động từ được bổ nghĩa để tránh hiểu thành một hành động riêng biệt. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Có sắc thái nhấn mạnh mức độ. Cần xem danh từ/tính từ/động từ được bổ nghĩa để tránh hiểu thành một hành động riêng biệt."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. lý tưởng, rất thích hợp, hoàn toàn phù hợp"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Tính từ い hoặc cách diễn đạt kết thúc bằng い (tùy từ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "今日は「もってこい」という言葉を覚えた。",
+        "reading": "きょうは「もってこい」ということばをおぼえた。",
+        "translation": "Hôm nay tôi đã ghi nhớ từ “もってこい”.",
+        "blank": "今日は「____」という言葉を覚えた。",
+        "answer": "もってこい",
+        "hint": "もってこい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "今日は「",
+          "もってこい",
+          "」という言葉を覚えた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0694",
+      "sourceId": 694,
+      "word": "点々と",
+      "reading": "てんてんと",
+      "sourceWord": "点々と",
+      "hanViet": "",
+      "meaning": "rải rác, đây đó",
+      "explanation": "点々と（てんてんと）— rải rác, đây đó. Các nghĩa “rải rác, đây đó” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “rải rác, đây đó” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. rải rác, đây đó"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「点々と」の使い方を質問した。",
+        "reading": "せんせいに「てんてんと」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “点々と”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "点々と",
+        "hint": "てんてんと",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "点々と",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0695",
+      "sourceId": 695,
+      "word": "待ち望む",
+      "reading": "まちのぞむ",
+      "sourceWord": "待ち望む",
+      "hanViet": "",
+      "meaning": "mong đợi, trông mong",
+      "explanation": "待ち望む（まちのぞむ）— mong đợi, trông mong. Các nghĩa “mong đợi, trông mong” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “mong đợi, trông mong” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. mong đợi, trông mong"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ hoặc cụm biểu đạt (xác định qua câu). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「待ち望む」という言葉の発音を練習した。",
+        "reading": "「まちのぞむ」ということばのはつおんをれんしゅうした。",
+        "translation": "Tôi đã luyện phát âm từ “待ち望む”.",
+        "blank": "「____」という言葉の発音を練習した。",
+        "answer": "待ち望む",
+        "hint": "まちのぞむ",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "待ち望む",
+          "」という言葉の発音を練習した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0696",
+      "sourceId": 696,
+      "word": "存続",
+      "reading": "そんぞく",
+      "sourceWord": "存続（する）",
+      "hanViet": "",
+      "meaning": "tiếp tục tồn tại, duy trì",
+      "explanation": "存続（そんぞく）— tiếp tục tồn tại, duy trì. Cần xác định đối tượng được chuyển giao là tài sản, kinh nghiệm, nhiệm vụ hay truyền thống, vì tiếng Nhật thường phân biệt những hoạt động này. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cần xác định đối tượng được chuyển giao là tài sản, kinh nghiệm, nhiệm vụ hay truyền thống, vì tiếng Nhật thường phân biệt những hoạt động này."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. tiếp tục tồn tại, duy trì"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「存続」という表現を見かけた。",
+        "reading": "ぶんしょうで「そんぞく」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “存続” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "存続",
+        "hint": "そんぞく",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "存続",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0697",
+      "sourceId": 697,
+      "word": "若干",
+      "reading": "じゃっかん",
+      "sourceWord": "若干",
+      "hanViet": "",
+      "meaning": "một chút, đôi chút; một vài",
+      "explanation": "若干（じゃっかん）— một chút, đôi chút; một vài. Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Đây là từ nhiều nghĩa. Trong nguồn, các nhóm nghĩa được phân cách bằng dấu chấm phẩy; phải xác định nhóm nghĩa qua từ đi kèm và chủ thể của câu. Không thay thế các nghĩa cho nhau một cách máy móc."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. một chút, đôi chút | 2. một vài"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「若干」の意味を辞書で確認した。",
+        "reading": "「じゃっかん」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “若干”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "若干",
+        "hint": "じゃっかん",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "若干",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0698",
+      "sourceId": 698,
+      "word": "追放",
+      "reading": "ついほう",
+      "sourceWord": "追放（する）",
+      "hanViet": "",
+      "meaning": "trục xuất, đuổi đi, loại bỏ",
+      "explanation": "追放（ついほう）— trục xuất, đuổi đi, loại bỏ. Các nghĩa “trục xuất, đuổi đi, loại bỏ” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “trục xuất, đuổi đi, loại bỏ” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. trục xuất, đuổi đi, loại bỏ"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "今日は「追放」という言葉を覚えた。",
+        "reading": "きょうは「ついほう」ということばをおぼえた。",
+        "translation": "Hôm nay tôi đã ghi nhớ từ “追放”.",
+        "blank": "今日は「____」という言葉を覚えた。",
+        "answer": "追放",
+        "hint": "ついほう",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "今日は「",
+          "追放",
+          "」という言葉を覚えた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0699",
+      "sourceId": 699,
+      "word": "公的な",
+      "reading": "こうてきな",
+      "sourceWord": "公的な",
+      "hanViet": "",
+      "meaning": "mang tính công cộng, chính thức",
+      "explanation": "公的な（こうてきな）— mang tính công cộng, chính thức. Các nghĩa “mang tính công cộng, chính thức” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “mang tính công cộng, chính thức” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. mang tính công cộng, chính thức"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Tính từ な / dạng bổ nghĩa (kiểm tra theo ngữ cảnh). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「公的な」の使い方を質問した。",
+        "reading": "せんせいに「こうてきな」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “公的な”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "公的な",
+        "hint": "こうてきな",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "公的な",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0700",
+      "sourceId": 700,
+      "word": "公用",
+      "reading": "こうよう",
+      "sourceWord": "公用",
+      "hanViet": "",
+      "meaning": "việc công, công vụ",
+      "explanation": "公用（こうよう）— việc công, công vụ. Các nghĩa “việc công, công vụ” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “việc công, công vụ” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. việc công, công vụ"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「公用」という言葉の発音を練習した。",
+        "reading": "「こうよう」ということばのはつおんをれんしゅうした。",
+        "translation": "Tôi đã luyện phát âm từ “公用”.",
+        "blank": "「____」という言葉の発音を練習した。",
+        "answer": "公用",
+        "hint": "こうよう",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "公用",
+          "」という言葉の発音を練習した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0701",
+      "sourceId": 701,
+      "word": "条例",
+      "reading": "じょうれい",
+      "sourceWord": "条例",
+      "hanViet": "",
+      "meaning": "điều lệ, quy định của chính quyền địa phương",
+      "explanation": "条例（じょうれい）— điều lệ, quy định của chính quyền địa phương. Các nghĩa “điều lệ, quy định của chính quyền địa phương” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “điều lệ, quy định của chính quyền địa phương” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. điều lệ, quy định của chính quyền địa phương"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「条例」という表現を見かけた。",
+        "reading": "ぶんしょうで「じょうれい」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “条例” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "条例",
+        "hint": "じょうれい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "条例",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0702",
+      "sourceId": 702,
+      "word": "現行",
+      "reading": "げんこう",
+      "sourceWord": "現行",
+      "hanViet": "",
+      "meaning": "hiện hành, đang được áp dụng",
+      "explanation": "現行（げんこう）— hiện hành, đang được áp dụng. Các nghĩa “hiện hành, đang được áp dụng” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “hiện hành, đang được áp dụng” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. hiện hành, đang được áp dụng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「現行」の意味を辞書で確認した。",
+        "reading": "「げんこう」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “現行”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "現行",
+        "hint": "げんこう",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "現行",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0703",
+      "sourceId": 703,
+      "word": "事例",
+      "reading": "じれい",
+      "sourceWord": "事例",
+      "hanViet": "",
+      "meaning": "trường hợp, sự việc, ví dụ thực tế",
+      "explanation": "事例（じれい）— trường hợp, sự việc, ví dụ thực tế. Các nghĩa “trường hợp, sự việc, ví dụ thực tế” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “trường hợp, sự việc, ví dụ thực tế” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. trường hợp, sự việc, ví dụ thực tế"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "今日は「事例」という言葉を覚えた。",
+        "reading": "きょうは「じれい」ということばをおぼえた。",
+        "translation": "Hôm nay tôi đã ghi nhớ từ “事例”.",
+        "blank": "今日は「____」という言葉を覚えた。",
+        "answer": "事例",
+        "hint": "じれい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "今日は「",
+          "事例",
+          "」という言葉を覚えた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0704",
+      "sourceId": 704,
+      "word": "実情",
+      "reading": "じつじょう",
+      "sourceWord": "実情",
+      "hanViet": "",
+      "meaning": "tình hình thực tế, thực trạng",
+      "explanation": "実情（じつじょう）— tình hình thực tế, thực trạng. Các nghĩa “tình hình thực tế, thực trạng” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “tình hình thực tế, thực trạng” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. tình hình thực tế, thực trạng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「実情」の使い方を質問した。",
+        "reading": "せんせいに「じつじょう」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “実情”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "実情",
+        "hint": "じつじょう",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "実情",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0705",
+      "sourceId": 705,
+      "word": "立候補",
+      "reading": "りっこうほ",
+      "sourceWord": "立候補（する）",
+      "hanViet": "",
+      "meaning": "ứng cử, ra ứng cử",
+      "explanation": "立候補（りっこうほ）— ứng cử, ra ứng cử. Các nghĩa “ứng cử, ra ứng cử” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “ứng cử, ra ứng cử” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. ứng cử, ra ứng cử"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「立候補」という言葉の発音を練習した。",
+        "reading": "「りっこうほ」ということばのはつおんをれんしゅうした。",
+        "translation": "Tôi đã luyện phát âm từ “立候補”.",
+        "blank": "「____」という言葉の発音を練習した。",
+        "answer": "立候補",
+        "hint": "りっこうほ",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "立候補",
+          "」という言葉の発音を練習した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0706",
+      "sourceId": 706,
+      "word": "申請",
+      "reading": "しんせい",
+      "sourceWord": "申請（する）",
+      "hanViet": "",
+      "meaning": "nộp đơn, xin phép, làm thủ tục đăng ký",
+      "explanation": "申請（しんせい）— nộp đơn, xin phép, làm thủ tục đăng ký. Các nghĩa “nộp đơn, xin phép, làm thủ tục đăng ký” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “nộp đơn, xin phép, làm thủ tục đăng ký” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. nộp đơn, xin phép, làm thủ tục đăng ký"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「申請」という表現を見かけた。",
+        "reading": "ぶんしょうで「しんせい」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “申請” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "申請",
+        "hint": "しんせい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "申請",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0707",
+      "sourceId": 707,
+      "word": "該当",
+      "reading": "がいとう",
+      "sourceWord": "該当（する）",
+      "hanViet": "",
+      "meaning": "thuộc diện, tương ứng, phù hợp",
+      "explanation": "該当（がいとう）— thuộc diện, tương ứng, phù hợp. Các nghĩa “thuộc diện, tương ứng, phù hợp” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “thuộc diện, tương ứng, phù hợp” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. thuộc diện, tương ứng, phù hợp"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「該当」の意味を辞書で確認した。",
+        "reading": "「がいとう」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “該当”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "該当",
+        "hint": "がいとう",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "該当",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    }
+  ]
+}

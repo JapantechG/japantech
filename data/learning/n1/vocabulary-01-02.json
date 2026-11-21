@@ -1,0 +1,848 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch01-vocab-source-02",
+  "type": "vocabulary",
+  "title": "Từ vựng N1 · Chương 01 · Phần 02",
+  "items": [
+    {
+      "id": "n1-vocab-source-0016",
+      "sourceId": 16,
+      "word": "懐く",
+      "reading": "なつく",
+      "sourceWord": "懐く",
+      "hanViet": "",
+      "meaning": "quấn quýt, trở nên thân thiết",
+      "explanation": "懐く（なつく）— quấn quýt, trở nên thân thiết. Chỉ việc một đứa trẻ hoặc động vật trở nên thân thiết và tin tưởng một người. Ví dụ kết hợp: 子どもが先生に懐く. Điểm dễ nhầm: Phân biệt 慣れる (quen với) và 懐く (quấn quýt, gắn bó).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chỉ việc một đứa trẻ hoặc động vật trở nên thân thiết và tin tưởng một người."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. quấn quýt, trở nên thân thiết"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "子どもが先生に懐く"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Phân biệt 慣れる (quen với) và 懐く (quấn quýt, gắn bó)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: その犬はすぐに人に懐く。 — Con chó ấy nhanh chóng quấn quýt với người."
+        }
+      ],
+      "commonMistakes": [
+        "Phân biệt 慣れる (quen với) và 懐く (quấn quýt, gắn bó).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "その犬はすぐに人に懐く。",
+        "reading": "そのいぬはすぐにひとになつく。",
+        "translation": "Con chó ấy nhanh chóng quấn quýt với người.",
+        "blank": "その犬はすぐに人に____。",
+        "answer": "懐く",
+        "hint": "なつく",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "その犬はすぐに人に",
+          "懐く",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0017",
+      "sourceId": 17,
+      "word": "ねだる",
+      "reading": "ねだる",
+      "sourceWord": "ねだる",
+      "hanViet": "",
+      "meaning": "nài nỉ, vòi vĩnh, xin xỏ",
+      "explanation": "ねだる（ねだる）— nài nỉ, vòi vĩnh, xin xỏ. Xin xỏ, nài nỉ liên tục để được người khác đáp ứng một thứ mình muốn. Ví dụ kết hợp: 親におもちゃをねだる. Điểm dễ nhầm: Không dùng như 頼む trong lời nhờ vả công việc bình thường.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Xin xỏ, nài nỉ liên tục để được người khác đáp ứng một thứ mình muốn."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. nài nỉ, vòi vĩnh, xin xỏ"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "親におもちゃをねだる"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không dùng như 頼む trong lời nhờ vả công việc bình thường."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 子どもが新しいおもちゃをねだる。 — Đứa trẻ vòi mua đồ chơi mới."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng như 頼む trong lời nhờ vả công việc bình thường.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "子どもが新しいおもちゃをねだる。",
+        "reading": "こどもがあたらしいおもちゃをねだる。",
+        "translation": "Đứa trẻ vòi mua đồ chơi mới.",
+        "blank": "子どもが新しいおもちゃを____。",
+        "answer": "ねだる",
+        "hint": "ねだる",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "子どもが新しいおもちゃを",
+          "ねだる",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0018",
+      "sourceId": 18,
+      "word": "すねる",
+      "reading": "すねる",
+      "sourceWord": "すねる",
+      "hanViet": "",
+      "meaning": "hờn dỗi, giận dỗi",
+      "explanation": "すねる（すねる）— hờn dỗi, giận dỗi. Hờn dỗi vì bất mãn, cảm thấy bị đối xử không công bằng hoặc không được quan tâm. Ví dụ kết hợp: 注意されてすねる. Điểm dễ nhầm: Khác 怒る là biểu lộ cơn giận trực tiếp.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Hờn dỗi vì bất mãn, cảm thấy bị đối xử không công bằng hoặc không được quan tâm."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. hờn dỗi, giận dỗi"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 2. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "注意されてすねる"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 怒る là biểu lộ cơn giận trực tiếp."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 弟は注意されるとすぐすねる。 — Em trai tôi cứ bị nhắc nhở là lại dỗi."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 怒る là biểu lộ cơn giận trực tiếp.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "弟は注意されるとすぐすねる。",
+        "reading": "おとうとはちゅういされるとすぐすねる。",
+        "translation": "Em trai tôi cứ bị nhắc nhở là lại dỗi.",
+        "blank": "弟は注意されるとすぐ____。",
+        "answer": "すねる",
+        "hint": "すねる",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "弟は注意されるとすぐ",
+          "すねる",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0019",
+      "sourceId": 19,
+      "word": "指図する",
+      "reading": "さしずする",
+      "sourceWord": "指図する",
+      "hanViet": "",
+      "meaning": "ra lệnh, sai bảo, chỉ thị",
+      "explanation": "指図する（さしずする）— ra lệnh, sai bảo, chỉ thị. Sai bảo hoặc ra chỉ thị cho người khác; nhiều tình huống mang sắc thái khó chịu do bị can thiệp. Ví dụ kết hợp: あれこれ指図する. Điểm dễ nhầm: Khác 指示する thường trung tính và phù hợp trong công việc.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Sai bảo hoặc ra chỉ thị cho người khác; nhiều tình huống mang sắc thái khó chịu do bị can thiệp."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. ra lệnh, sai bảo, chỉ thị"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "あれこれ指図する"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 指示する thường trung tính và phù hợp trong công việc."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 人に細かく指図するのはよくない。 — Không nên ra lệnh quá chi li cho người khác."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 指示する thường trung tính và phù hợp trong công việc.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "人に細かく指図するのはよくない。",
+        "reading": "ひとにこまかくさしずするのはよくない。",
+        "translation": "Không nên ra lệnh quá chi li cho người khác.",
+        "blank": "人に細かく____のはよくない。",
+        "answer": "指図する",
+        "hint": "さしずする",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "人に細かく",
+          "指図する",
+          "のはよくない。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0020",
+      "sourceId": 20,
+      "word": "横取りする",
+      "reading": "よこどりする",
+      "sourceWord": "横取りする",
+      "hanViet": "",
+      "meaning": "cướp lấy, giành lấy, chiếm đoạt",
+      "explanation": "横取りする（よこどりする）— cướp lấy, giành lấy, chiếm đoạt. Giành lấy thứ đáng lẽ thuộc người khác; thường mang hàm ý thiếu công bằng. Ví dụ kết hợp: 手柄を横取りする. Điểm dễ nhầm: Khác 受け取る (nhận) vốn không mang nghĩa chiếm đoạt.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Giành lấy thứ đáng lẽ thuộc người khác; thường mang hàm ý thiếu công bằng."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. cướp lấy, giành lấy, chiếm đoạt"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "手柄を横取りする"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 受け取る (nhận) vốn không mang nghĩa chiếm đoạt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 友達の手柄を横取りする。 — Cướp công của bạn bè."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 受け取る (nhận) vốn không mang nghĩa chiếm đoạt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "友達の手柄を横取りする。",
+        "reading": "ともだちのてがらをよこどりする。",
+        "translation": "Cướp công của bạn bè.",
+        "blank": "友達の手柄を____。",
+        "answer": "横取りする",
+        "hint": "よこどりする",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "友達の手柄を",
+          "横取りする",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0021",
+      "sourceId": 21,
+      "word": "反発する",
+      "reading": "はんぱつする",
+      "sourceWord": "反発する",
+      "hanViet": "",
+      "meaning": "phản đối, chống đối, phản kháng",
+      "explanation": "反発する（はんぱつする）— phản đối, chống đối, phản kháng. Chống lại một ý kiến, áp lực hoặc sự can thiệp; cũng có nghĩa bật nảy/phản lực trong văn cảnh vật lý. Ví dụ kết hợp: 親に反発する; 強く反発する. Điểm dễ nhầm: Phải xác định văn cảnh để phân biệt phản kháng với phản lực vật lý.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chống lại một ý kiến, áp lực hoặc sự can thiệp; cũng có nghĩa bật nảy/phản lực trong văn cảnh vật lý."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. phản đối, chống đối, phản kháng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "親に反発する; 強く反発する"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Phải xác định văn cảnh để phân biệt phản kháng với phản lực vật lý."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 新しい規則に反発する人もいる。 — Cũng có người phản đối quy định mới."
+        }
+      ],
+      "commonMistakes": [
+        "Phải xác định văn cảnh để phân biệt phản kháng với phản lực vật lý.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "新しい規則に反発する人もいる。",
+        "reading": "あたらしいきそくにはんぱつするひともいる。",
+        "translation": "Cũng có người phản đối quy định mới.",
+        "blank": "新しい規則に____人もいる。",
+        "answer": "反発する",
+        "hint": "はんぱつする",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "新しい規則に",
+          "反発する",
+          "人もいる。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0022",
+      "sourceId": 22,
+      "word": "家出する",
+      "reading": "いえでする",
+      "sourceWord": "家出する",
+      "hanViet": "",
+      "meaning": "bỏ nhà ra đi",
+      "explanation": "家出する（いえでする）— bỏ nhà ra đi. Rời khỏi nhà do bất hòa hoặc tình trạng cá nhân, thường không có sự đồng thuận từ gia đình. Ví dụ kết hợp: 家出した子ども. Điểm dễ nhầm: Không đồng nghĩa với 引っ越す (chuyển chỗ ở).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Rời khỏi nhà do bất hòa hoặc tình trạng cá nhân, thường không có sự đồng thuận từ gia đình."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. bỏ nhà ra đi"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "家出した子ども"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không đồng nghĩa với 引っ越す (chuyển chỗ ở)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: けんかのあとで家出する。 — Bỏ nhà đi sau một trận cãi nhau."
+        }
+      ],
+      "commonMistakes": [
+        "Không đồng nghĩa với 引っ越す (chuyển chỗ ở).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "けんかのあとで家出する。",
+        "reading": "けんかのあとでいえでする。",
+        "translation": "Bỏ nhà đi sau một trận cãi nhau.",
+        "blank": "けんかのあとで____。",
+        "answer": "家出する",
+        "hint": "いえでする",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "けんかのあとで",
+          "家出する",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0023",
+      "sourceId": 23,
+      "word": "ぎくしゃくする",
+      "reading": "ぎくしゃくする",
+      "sourceWord": "ぎくしゃくする",
+      "hanViet": "",
+      "meaning": "trở nên gượng gạo, căng thẳng, trục trặc",
+      "explanation": "ぎくしゃくする（ぎくしゃくする）— trở nên gượng gạo, căng thẳng, trục trặc. Chỉ quan hệ hoặc cử động thiếu tự nhiên, không trơn tru, gượng gạo. Ví dụ kết hợp: 関係がぎくしゃくする. Điểm dễ nhầm: Không dùng đơn giản như 喧嘩する: có thể chưa cãi nhau mà vẫn gượng gạo.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chỉ quan hệ hoặc cử động thiếu tự nhiên, không trơn tru, gượng gạo."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. trở nên gượng gạo, căng thẳng, trục trặc"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する, tượng thái. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "関係がぎくしゃくする"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không dùng đơn giản như 喧嘩する: có thể chưa cãi nhau mà vẫn gượng gạo."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 二人の関係がぎくしゃくする。 — Quan hệ giữa hai người trở nên gượng gạo."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng đơn giản như 喧嘩する: có thể chưa cãi nhau mà vẫn gượng gạo.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "二人の関係がぎくしゃくする。",
+        "reading": "ふたりのかんけいがぎくしゃくする。",
+        "translation": "Quan hệ giữa hai người trở nên gượng gạo.",
+        "blank": "二人の関係が____。",
+        "answer": "ぎくしゃくする",
+        "hint": "ぎくしゃくする",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "二人の関係が",
+          "ぎくしゃくする",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0024",
+      "sourceId": 24,
+      "word": "言い返す",
+      "reading": "いいかえす",
+      "sourceWord": "言い返す",
+      "hanViet": "",
+      "meaning": "cãi lại, nói lại",
+      "explanation": "言い返す（いいかえす）— cãi lại, nói lại. Trả lời lại hoặc cãi lại ngay lời người khác, nhất là khi bị phê bình, chất vấn. Ví dụ kết hợp: 親に言い返す. Điểm dễ nhầm: Khác 返事する vốn chỉ đáp lời trung tính.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Trả lời lại hoặc cãi lại ngay lời người khác, nhất là khi bị phê bình, chất vấn."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. cãi lại, nói lại"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "親に言い返す"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 返事する vốn chỉ đáp lời trung tính."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 母に注意されて言い返す。 — Bị mẹ nhắc nhở rồi cãi lại."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 返事する vốn chỉ đáp lời trung tính.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "母に注意されて言い返す。",
+        "reading": "ははにちゅういされていいかえす。",
+        "translation": "Bị mẹ nhắc nhở rồi cãi lại.",
+        "blank": "母に注意されて____。",
+        "answer": "言い返す",
+        "hint": "いいかえす",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "母に注意されて",
+          "言い返す",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0025",
+      "sourceId": 25,
+      "word": "言い張る",
+      "reading": "いいはる",
+      "sourceWord": "言い張る",
+      "hanViet": "",
+      "meaning": "khăng khăng quả quyết, nhất quyết cho rằng",
+      "explanation": "言い張る（いいはる）— khăng khăng quả quyết, nhất quyết cho rằng. Cố chấp khẳng định quan điểm của mình dù bị phản bác hoặc chưa có chứng cứ. Ví dụ kết hợp: 無実だと言い張る. Điểm dễ nhầm: Khác 言い切る là khẳng định dứt khoát, không nhất thiết cố chấp.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cố chấp khẳng định quan điểm của mình dù bị phản bác hoặc chưa có chứng cứ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. khăng khăng quả quyết, nhất quyết cho rằng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "無実だと言い張る"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 言い切る là khẳng định dứt khoát, không nhất thiết cố chấp."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 彼は自分が正しいと言い張る。 — Anh ấy khăng khăng nói mình đúng."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 言い切る là khẳng định dứt khoát, không nhất thiết cố chấp.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "彼は自分が正しいと言い張る。",
+        "reading": "かれはじぶんがただしいといいはる。",
+        "translation": "Anh ấy khăng khăng nói mình đúng.",
+        "blank": "彼は自分が正しいと____。",
+        "answer": "言い張る",
+        "hint": "いいはる",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "彼は自分が正しいと",
+          "言い張る",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0026",
+      "sourceId": 26,
+      "word": "門限",
+      "reading": "もんげん",
+      "sourceWord": "門限",
+      "hanViet": "",
+      "meaning": "giờ giới hạn phải về nhà, giờ đóng cửa",
+      "explanation": "門限（もんげん）— giờ giới hạn phải về nhà, giờ đóng cửa. Giờ quy định phải về nhà/ký túc xá; cũng có thể là giờ khóa cổng của một cơ sở. Ví dụ kết hợp: 門限を守る; 門限に遅れる. Điểm dễ nhầm: Không nhầm 営業時間 (giờ kinh doanh).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Giờ quy định phải về nhà/ký túc xá; cũng có thể là giờ khóa cổng của một cơ sở."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. giờ giới hạn phải về nhà, giờ đóng cửa"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "門限を守る; 門限に遅れる"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không nhầm 営業時間 (giờ kinh doanh)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: うちの門限は午後十時だ。 — Giờ phải về nhà của gia đình tôi là 10 giờ tối."
+        }
+      ],
+      "commonMistakes": [
+        "Không nhầm 営業時間 (giờ kinh doanh).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "うちの門限は午後十時だ。",
+        "reading": "うちのもんげんはごごじゅうじだ。",
+        "translation": "Giờ phải về nhà của gia đình tôi là 10 giờ tối.",
+        "blank": "うちの____は午後十時だ。",
+        "answer": "門限",
+        "hint": "もんげん",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "うちの",
+          "門限",
+          "は午後十時だ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0027",
+      "sourceId": 27,
+      "word": "さんざん",
+      "reading": "さんざん",
+      "sourceWord": "さんざん",
+      "hanViet": "",
+      "meaning": "thậm tệ, tệ hại, thảm hại",
+      "explanation": "さんざん（さんざん）— thậm tệ, tệ hại, thảm hại. Các nghĩa “thậm tệ, tệ hại, thảm hại” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Ví dụ ngữ cảnh: 昨日は先生にさんざん叱られた。 — Hôm qua tôi bị thầy mắng rất thậm tệ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “thậm tệ, tệ hại, thảm hại” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. thậm tệ, tệ hại, thảm hại"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 昨日は先生にさんざん叱られた。 — Hôm qua tôi bị thầy mắng rất thậm tệ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "昨日は先生にさんざん叱られた。",
+        "reading": "きのうはせんせいにさんざんしかられた。",
+        "translation": "Hôm qua tôi bị thầy mắng rất thậm tệ.",
+        "blank": "昨日は先生に____叱られた。",
+        "answer": "さんざん",
+        "hint": "さんざん",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "昨日は先生に",
+          "さんざん",
+          "叱られた。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0028",
+      "sourceId": 28,
+      "word": "省みる",
+      "reading": "かえりみる",
+      "sourceWord": "省みる",
+      "hanViet": "",
+      "meaning": "nhìn lại, suy ngẫm lại, tự xét lại",
+      "explanation": "省みる（かえりみる）— nhìn lại, suy ngẫm lại, tự xét lại. Nhìn lại bản thân, suy xét hành vi, hậu quả hoặc nguyên nhân. Ví dụ kết hợp: 自らの行いを省みる. Điểm dễ nhầm: Khác 顧みる thường là ngoái nhìn, quan tâm hoặc nhìn lại quá khứ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Nhìn lại bản thân, suy xét hành vi, hậu quả hoặc nguyên nhân."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. nhìn lại, suy ngẫm lại, tự xét lại"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 2. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "自らの行いを省みる"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 顧みる thường là ngoái nhìn, quan tâm hoặc nhìn lại quá khứ."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 自分の行動を省みる。 — Nhìn lại hành động của bản thân."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 顧みる thường là ngoái nhìn, quan tâm hoặc nhìn lại quá khứ.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "自分の行動を省みる。",
+        "reading": "じぶんのこうどうをかえりみる。",
+        "translation": "Nhìn lại hành động của bản thân.",
+        "blank": "自分の行動を____。",
+        "answer": "省みる",
+        "hint": "かえりみる",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "自分の行動を",
+          "省みる",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0029",
+      "sourceId": 29,
+      "word": "さも",
+      "reading": "さも",
+      "sourceWord": "さも",
+      "hanViet": "",
+      "meaning": "như thể, cứ như là",
+      "explanation": "さも（さも）— như thể, cứ như là. Thuộc nhóm diễn đạt suy đoán/miêu tả ấn tượng. Cần quan sát dấu hiệu trước và sau cụm từ để phân biệt nhận định của người nói với sự thật khách quan. Ví dụ ngữ cảnh: 彼はさも当然のように話した。 — Anh ta nói như thể đó là chuyện đương nhiên.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Thuộc nhóm diễn đạt suy đoán/miêu tả ấn tượng. Cần quan sát dấu hiệu trước và sau cụm từ để phân biệt nhận định của người nói với sự thật khách quan."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. như thể, cứ như là"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 彼はさも当然のように話した。 — Anh ta nói như thể đó là chuyện đương nhiên."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "彼はさも当然のように話した。",
+        "reading": "かれはさもとうぜんのようにはなした。",
+        "translation": "Anh ta nói như thể đó là chuyện đương nhiên.",
+        "blank": "彼は____当然のように話した。",
+        "answer": "さも",
+        "hint": "さも",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "彼は",
+          "さも",
+          "当然のように話した。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0030",
+      "sourceId": 30,
+      "word": "やまやま",
+      "reading": "やまやま",
+      "sourceWord": "やまやま",
+      "hanViet": "",
+      "meaning": "rất muốn, tha thiết muốn làm điều gì",
+      "explanation": "やまやま（やまやま）— rất muốn, tha thiết muốn làm điều gì. Diễn tả rất muốn làm gì đó nhưng hoàn cảnh khiến không thể thực hiện. Ví dụ kết hợp: 行きたいのはやまやまだが…. Điểm dễ nhầm: Thường đi cùng ～たいのはやまやまだが／けれど; đừng hiểu là nhiều núi.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Diễn tả rất muốn làm gì đó nhưng hoàn cảnh khiến không thể thực hiện."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. rất muốn, tha thiết muốn làm điều gì"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ nhấn mạnh trong mẫu câu. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "行きたいのはやまやまだが…"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Thường đi cùng ～たいのはやまやまだが／けれど; đừng hiểu là nhiều núi."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 行きたいのはやまやまだが、時間がない。 — Tôi rất muốn đi nhưng không có thời gian."
+        }
+      ],
+      "commonMistakes": [
+        "Thường đi cùng ～たいのはやまやまだが／けれど; đừng hiểu là nhiều núi.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "行きたいのはやまやまだが、時間がない。",
+        "reading": "いきたいのはやまやまだが、じかんがない。",
+        "translation": "Tôi rất muốn đi nhưng không có thời gian.",
+        "blank": "行きたいのは____だが、時間がない。",
+        "answer": "やまやま",
+        "hint": "やまやま",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "行きたいのは",
+          "やまやま",
+          "だが、時間がない。"
+        ],
+        "exampleType": "context"
+      }
+    }
+  ]
+}

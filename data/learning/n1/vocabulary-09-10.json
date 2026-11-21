@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch09-vocab-source-10",
+  "type": "vocabulary",
+  "title": "Từ vựng N1 · Chương 09 · Phần 10",
+  "items": [
+    {
+      "id": "n1-vocab-source-1278",
+      "sourceId": 1278,
+      "word": "浸水",
+      "reading": "しんすい",
+      "sourceWord": "浸水（する）",
+      "hanViet": "",
+      "meaning": "ngập nước, bị nước tràn vào",
+      "explanation": "浸水（しんすい）— ngập nước, bị nước tràn vào. Các nghĩa “ngập nước, bị nước tràn vào” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “ngập nước, bị nước tràn vào” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. ngập nước, bị nước tràn vào"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "今日は「浸水」という言葉を覚えた。",
+        "reading": "きょうは「しんすい」ということばをおぼえた。",
+        "translation": "Hôm nay tôi đã ghi nhớ từ “浸水”.",
+        "blank": "今日は「____」という言葉を覚えた。",
+        "answer": "浸水",
+        "hint": "しんすい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "今日は「",
+          "浸水",
+          "」という言葉を覚えた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1279",
+      "sourceId": 1279,
+      "word": "雪崩",
+      "reading": "なだれ",
+      "sourceWord": "雪崩",
+      "hanViet": "",
+      "meaning": "tuyết lở",
+      "explanation": "雪崩（なだれ）— tuyết lở. Các nghĩa “tuyết lở” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “tuyết lở” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. tuyết lở"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「雪崩」の使い方を質問した。",
+        "reading": "せんせいに「なだれ」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “雪崩”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "雪崩",
+        "hint": "なだれ",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "雪崩",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1280",
+      "sourceId": 1280,
+      "word": "噴火",
+      "reading": "ふんか",
+      "sourceWord": "噴火（する）",
+      "hanViet": "",
+      "meaning": "phun trào núi lửa",
+      "explanation": "噴火（ふんか）— phun trào núi lửa. Các nghĩa “phun trào núi lửa” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “phun trào núi lửa” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. phun trào núi lửa"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「噴火」という言葉の発音を練習した。",
+        "reading": "「ふんか」ということばのはつおんをれんしゅうした。",
+        "translation": "Tôi đã luyện phát âm từ “噴火”.",
+        "blank": "「____」という言葉の発音を練習した。",
+        "answer": "噴火",
+        "hint": "ふんか",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "噴火",
+          "」という言葉の発音を練習した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1281",
+      "sourceId": 1281,
+      "word": "災い",
+      "reading": "わざわい",
+      "sourceWord": "災い",
+      "hanViet": "",
+      "meaning": "tai họa, tai ương",
+      "explanation": "災い（わざわい）— tai họa, tai ương. Các nghĩa “tai họa, tai ương” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “tai họa, tai ương” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. tai họa, tai ương"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Tính từ い hoặc cách diễn đạt kết thúc bằng い (tùy từ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「災い」という表現を見かけた。",
+        "reading": "ぶんしょうで「わざわい」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “災い” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "災い",
+        "hint": "わざわい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "災い",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1282",
+      "sourceId": 1282,
+      "word": "被災",
+      "reading": "ひさい",
+      "sourceWord": "被災（する）",
+      "hanViet": "",
+      "meaning": "chịu thiệt hại do thiên tai, bị ảnh hưởng bởi thảm họa",
+      "explanation": "被災（ひさい）— chịu thiệt hại do thiên tai, bị ảnh hưởng bởi thảm họa. Các nghĩa “chịu thiệt hại do thiên tai, bị ảnh hưởng bởi thảm họa” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “chịu thiệt hại do thiên tai, bị ảnh hưởng bởi thảm họa” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. chịu thiệt hại do thiên tai, bị ảnh hưởng bởi thảm họa"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「被災」の意味を辞書で確認した。",
+        "reading": "「ひさい」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “被災”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "被災",
+        "hint": "ひさい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "被災",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1283",
+      "sourceId": 1283,
+      "word": "損害",
+      "reading": "そんがい",
+      "sourceWord": "損害",
+      "hanViet": "",
+      "meaning": "thiệt hại, tổn thất",
+      "explanation": "損害（そんがい）— thiệt hại, tổn thất. Các nghĩa “thiệt hại, tổn thất” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “thiệt hại, tổn thất” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. thiệt hại, tổn thất"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "今日は「損害」という言葉を覚えた。",
+        "reading": "きょうは「そんがい」ということばをおぼえた。",
+        "translation": "Hôm nay tôi đã ghi nhớ từ “損害”.",
+        "blank": "今日は「____」という言葉を覚えた。",
+        "answer": "損害",
+        "hint": "そんがい",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "今日は「",
+          "損害",
+          "」という言葉を覚えた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-1284",
+      "sourceId": 1284,
+      "word": "異変",
+      "reading": "いへん",
+      "sourceWord": "異変",
+      "hanViet": "",
+      "meaning": "biến cố bất thường, điều bất thường",
+      "explanation": "異変（いへん）— biến cố bất thường, điều bất thường. Các nghĩa “biến cố bất thường, điều bất thường” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “biến cố bất thường, điều bất thường” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. biến cố bất thường, điều bất thường"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「異変」の使い方を質問した。",
+        "reading": "せんせいに「いへん」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “異変”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "異変",
+        "hint": "いへん",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "異変",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    }
+  ]
+}

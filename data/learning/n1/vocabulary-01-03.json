@@ -1,0 +1,848 @@
+{
+  "schemaVersion": 1,
+  "lessonId": "n1-ch01-vocab-source-03",
+  "type": "vocabulary",
+  "title": "Từ vựng N1 · Chương 01 · Phần 03",
+  "items": [
+    {
+      "id": "n1-vocab-source-0031",
+      "sourceId": 31,
+      "word": "再婚する",
+      "reading": "さいこんする",
+      "sourceWord": "再婚する",
+      "hanViet": "",
+      "meaning": "tái hôn, kết hôn lần nữa",
+      "explanation": "再婚する（さいこんする）— tái hôn, kết hôn lần nữa. Các nghĩa “tái hôn, kết hôn lần nữa” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “tái hôn, kết hôn lần nữa” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. tái hôn, kết hôn lần nữa"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する. Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「再婚する」という表現を見かけた。",
+        "reading": "ぶんしょうで「さいこんする」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “再婚する” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "再婚する",
+        "hint": "さいこんする",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "再婚する",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0032",
+      "sourceId": 32,
+      "word": "健在",
+      "reading": "けんざい",
+      "sourceWord": "健在",
+      "hanViet": "",
+      "meaning": "vẫn khỏe mạnh, vẫn còn sống và hoạt động",
+      "explanation": "健在（けんざい）— vẫn khỏe mạnh, vẫn còn sống và hoạt động. Dùng cho người còn sống và khỏe; đôi khi chỉ khả năng, truyền thống hoặc sức ảnh hưởng vẫn còn. Ví dụ kết hợp: 両親は健在だ. Điểm dễ nhầm: Có thể nghe trang trọng hơn 元気だ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Dùng cho người còn sống và khỏe; đôi khi chỉ khả năng, truyền thống hoặc sức ảnh hưởng vẫn còn."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. vẫn khỏe mạnh, vẫn còn sống và hoạt động"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ/tính từ な. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "両親は健在だ"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Có thể nghe trang trọng hơn 元気だ."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 祖父は今も健在だ。 — Ông tôi hiện vẫn khỏe mạnh."
+        }
+      ],
+      "commonMistakes": [
+        "Có thể nghe trang trọng hơn 元気だ.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "祖父は今も健在だ。",
+        "reading": "そふはいまもけんざいだ。",
+        "translation": "Ông tôi hiện vẫn khỏe mạnh.",
+        "blank": "祖父は今も____だ。",
+        "answer": "健在",
+        "hint": "けんざい",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "祖父は今も",
+          "健在",
+          "だ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0033",
+      "sourceId": 33,
+      "word": "いたわる",
+      "reading": "いたわる",
+      "sourceWord": "いたわる",
+      "hanViet": "",
+      "meaning": "quan tâm, chăm sóc, đối xử ân cần",
+      "explanation": "いたわる（いたわる）— quan tâm, chăm sóc, đối xử ân cần. Quan tâm đến người bị mệt, đau hoặc đang chịu khó khăn; đối xử nhẹ nhàng và thấu hiểu. Ví dụ kết hợp: 体をいたわる; 高齢者をいたわる. Điểm dễ nhầm: Không chỉ mang nghĩa chữa trị như 治療する.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Quan tâm đến người bị mệt, đau hoặc đang chịu khó khăn; đối xử nhẹ nhàng và thấu hiểu."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. quan tâm, chăm sóc, đối xử ân cần"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "体をいたわる; 高齢者をいたわる"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không chỉ mang nghĩa chữa trị như 治療する."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 高齢者をいたわる気持ちが大切だ。 — Điều quan trọng là tấm lòng quan tâm người cao tuổi."
+        }
+      ],
+      "commonMistakes": [
+        "Không chỉ mang nghĩa chữa trị như 治療する.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "高齢者をいたわる気持ちが大切だ。",
+        "reading": "こうれいしゃをいたわるきもちがたいせつだ。",
+        "translation": "Điều quan trọng là tấm lòng quan tâm người cao tuổi.",
+        "blank": "高齢者を____気持ちが大切だ。",
+        "answer": "いたわる",
+        "hint": "いたわる",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "高齢者を",
+          "いたわる",
+          "気持ちが大切だ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0034",
+      "sourceId": 34,
+      "word": "他界する",
+      "reading": "たかいする",
+      "sourceWord": "他界する",
+      "hanViet": "",
+      "meaning": "qua đời, từ trần",
+      "explanation": "他界する（たかいする）— qua đời, từ trần. Cách nói lịch sự, tránh trực tiếp từ 死ぬ khi nói về người qua đời. Ví dụ kết hợp: 祖父が他界した. Điểm dễ nhầm: Không áp dụng tùy tiện cho sự vật hay lỗi máy.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Cách nói lịch sự, tránh trực tiếp từ 死ぬ khi nói về người qua đời."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. qua đời, từ trần"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する, uyển ngữ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "祖父が他界した"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không áp dụng tùy tiện cho sự vật hay lỗi máy."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Không áp dụng tùy tiện cho sự vật hay lỗi máy.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「他界する」の使い方を質問した。",
+        "reading": "せんせいに「たかいする」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “他界する”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "他界する",
+        "hint": "たかいする",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "他界する",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0035",
+      "sourceId": 35,
+      "word": "受け継ぐ",
+      "reading": "うけつぐ",
+      "sourceWord": "受け継ぐ",
+      "hanViet": "",
+      "meaning": "kế thừa, tiếp nhận và truyền lại",
+      "explanation": "受け継ぐ（うけつぐ）— kế thừa, tiếp nhận và truyền lại. Tiếp nhận và duy trì điều được thế hệ trước hoặc người đi trước truyền lại: truyền thống, kỹ thuật, tài sản. Ví dụ kết hợp: 技術を受け継ぐ. Điểm dễ nhầm: Khác 引き継ぐ thường nhấn mạnh bàn giao công việc và trách nhiệm.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Tiếp nhận và duy trì điều được thế hệ trước hoặc người đi trước truyền lại: truyền thống, kỹ thuật, tài sản."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. kế thừa, tiếp nhận và truyền lại"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ nhóm 1. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "技術を受け継ぐ"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Khác 引き継ぐ thường nhấn mạnh bàn giao công việc và trách nhiệm."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 父の技術を受け継ぐ。 — Kế thừa kỹ thuật của cha."
+        }
+      ],
+      "commonMistakes": [
+        "Khác 引き継ぐ thường nhấn mạnh bàn giao công việc và trách nhiệm.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "父の技術を受け継ぐ。",
+        "reading": "ちちのぎじゅつをうけつぐ。",
+        "translation": "Kế thừa kỹ thuật của cha.",
+        "blank": "父の技術を____。",
+        "answer": "受け継ぐ",
+        "hint": "うけつぐ",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "父の技術を",
+          "受け継ぐ",
+          "。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0036",
+      "sourceId": 36,
+      "word": "遺産",
+      "reading": "いさん",
+      "sourceWord": "遺産",
+      "hanViet": "",
+      "meaning": "di sản, tài sản thừa kế",
+      "explanation": "遺産（いさん）— di sản, tài sản thừa kế. Tài sản còn lại của người đã mất; cũng có nghĩa di sản văn hóa, tinh thần của quá khứ. Ví dụ kết hợp: 遺産を相続する; 文化遺産. Điểm dễ nhầm: Không dùng chỉ tài sản hiện có nói chung.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Tài sản còn lại của người đã mất; cũng có nghĩa di sản văn hóa, tinh thần của quá khứ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. di sản, tài sản thừa kế"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Danh từ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "遺産を相続する; 文化遺産"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không dùng chỉ tài sản hiện có nói chung."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 兄弟で遺産について話し合った。 — Anh chị em đã thảo luận về di sản."
+        }
+      ],
+      "commonMistakes": [
+        "Không dùng chỉ tài sản hiện có nói chung.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "兄弟で遺産について話し合った。",
+        "reading": "きょうだいでいさんについてはなしあった。",
+        "translation": "Anh chị em đã thảo luận về di sản.",
+        "blank": "兄弟で____について話し合った。",
+        "answer": "遺産",
+        "hint": "いさん",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "兄弟で",
+          "遺産",
+          "について話し合った。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0037",
+      "sourceId": 37,
+      "word": "かけがえのない",
+      "reading": "かけがえのない",
+      "sourceWord": "かけがえのない",
+      "hanViet": "",
+      "meaning": "vô giá, không thể thay thế",
+      "explanation": "かけがえのない（かけがえのない）— vô giá, không thể thay thế. Không có vật/người khác thay thế được; thường dùng cho thời gian, sinh mạng, quan hệ và giá trị tinh thần. Ví dụ kết hợp: かけがえのない存在. Điểm dễ nhầm: Không đồng nhất với 高価な (đắt tiền).",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Không có vật/người khác thay thế được; thường dùng cho thời gian, sinh mạng, quan hệ và giá trị tinh thần."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. vô giá, không thể thay thế"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Cụm tính từ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "かけがえのない存在"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Không đồng nhất với 高価な (đắt tiền)."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 家族はかけがえのない存在だ。 — Gia đình là sự hiện diện không thể thay thế."
+        }
+      ],
+      "commonMistakes": [
+        "Không đồng nhất với 高価な (đắt tiền).",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "家族はかけがえのない存在だ。",
+        "reading": "かぞくはかけがえのないそんざいだ。",
+        "translation": "Gia đình là sự hiện diện không thể thay thế.",
+        "blank": "家族は____存在だ。",
+        "answer": "かけがえのない",
+        "hint": "かけがえのない",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "家族は",
+          "かけがえのない",
+          "存在だ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0038",
+      "sourceId": 38,
+      "word": "気が置けない",
+      "reading": "きがおけない",
+      "sourceWord": "気が置けない",
+      "hanViet": "",
+      "meaning": "thân mật, thoải mái, không cần khách sáo",
+      "explanation": "気が置けない（きがおけない）— thân mật, thoải mái, không cần khách sáo. Chỉ quan hệ thân thiết, có thể thoải mái nói chuyện mà không cần giữ kẽ. Ví dụ kết hợp: 気が置けない友人. Điểm dễ nhầm: Bẫy JLPT: KHÔNG có nghĩa là phải đề phòng hoặc không yên tâm.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Chỉ quan hệ thân thiết, có thể thoải mái nói chuyện mà không cần giữ kẽ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. thân mật, thoải mái, không cần khách sáo"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Thành ngữ. Lưu ý hình thức từ khi chia hoặc kết hợp với trợ từ."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "気が置けない友人"
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Bẫy JLPT: KHÔNG có nghĩa là phải đề phòng hoặc không yên tâm."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 彼とは気が置けない仲だ。 — Tôi và anh ấy thân thiết đến mức không cần khách sáo."
+        }
+      ],
+      "commonMistakes": [
+        "Bẫy JLPT: KHÔNG có nghĩa là phải đề phòng hoặc không yên tâm.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "彼とは気が置けない仲だ。",
+        "reading": "かれとはきがおけないなかだ。",
+        "translation": "Tôi và anh ấy thân thiết đến mức không cần khách sáo.",
+        "blank": "彼とは____仲だ。",
+        "answer": "気が置けない",
+        "hint": "きがおけない",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "彼とは",
+          "気が置けない",
+          "仲だ。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0039",
+      "sourceId": 39,
+      "word": "気心",
+      "reading": "きごころ",
+      "sourceWord": "気心",
+      "hanViet": "",
+      "meaning": "tính tình, tâm tính, tính khí",
+      "explanation": "気心（きごころ）— tính tình, tâm tính, tính khí. Các nghĩa “tính tình, tâm tính, tính khí” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Ví dụ ngữ cảnh: 長い付き合いで気心が知れている。 — Quen biết lâu nên đã hiểu tính tình nhau.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “tính tình, tâm tính, tính khí” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. tính tình, tâm tính, tính khí"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Ví dụ ngữ cảnh: 長い付き合いで気心が知れている。 — Quen biết lâu nên đã hiểu tính tình nhau."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "長い付き合いで気心が知れている。",
+        "reading": "ながいつきあいできごころがしれている。",
+        "translation": "Quen biết lâu nên đã hiểu tính tình nhau.",
+        "blank": "長い付き合いで____が知れている。",
+        "answer": "気心",
+        "hint": "きごころ",
+        "reason": "Câu ví dụ có ngữ cảnh, chú ý quan hệ của từ với thành phần trước và sau.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "長い付き合いで",
+          "気心",
+          "が知れている。"
+        ],
+        "exampleType": "context"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0040",
+      "sourceId": 40,
+      "word": "打ち明ける",
+      "reading": "うちあける",
+      "sourceWord": "打ち明ける",
+      "hanViet": "",
+      "meaning": "tâm sự, thổ lộ, thú nhận, mở lòng",
+      "explanation": "打ち明ける（うちあける）— tâm sự, thổ lộ, thú nhận, mở lòng. Các nghĩa “tâm sự, thổ lộ, thú nhận, mở lòng” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “tâm sự, thổ lộ, thú nhận, mở lòng” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. tâm sự, thổ lộ, thú nhận, mở lòng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ hoặc cụm biểu đạt (xác định qua câu). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「打ち明ける」という言葉の発音を練習した。",
+        "reading": "「うちあける」ということばのはつおんをれんしゅうした。",
+        "translation": "Tôi đã luyện phát âm từ “打ち明ける”.",
+        "blank": "「____」という言葉の発音を練習した。",
+        "answer": "打ち明ける",
+        "hint": "うちあける",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "打ち明ける",
+          "」という言葉の発音を練習した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0041",
+      "sourceId": 41,
+      "word": "察する",
+      "reading": "さっする",
+      "sourceWord": "察する",
+      "hanViet": "",
+      "meaning": "nhận ra, suy đoán, cảm nhận, thấu hiểu",
+      "explanation": "察する（さっする）— nhận ra, suy đoán, cảm nhận, thấu hiểu. Các nghĩa “nhận ra, suy đoán, cảm nhận, thấu hiểu” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “nhận ra, suy đoán, cảm nhận, thấu hiểu” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. nhận ra, suy đoán, cảm nhận, thấu hiểu"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Động từ する. Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "文章で「察する」という表現を見かけた。",
+        "reading": "ぶんしょうで「さっする」というひょうげんをみかけた。",
+        "translation": "Tôi đã bắt gặp cách diễn đạt “察する” trong một đoạn văn.",
+        "blank": "文章で「____」という表現を見かけた。",
+        "answer": "察する",
+        "hint": "さっする",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "文章で「",
+          "察する",
+          "」という表現を見かけた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0042",
+      "sourceId": 42,
+      "word": "同い年",
+      "reading": "おないどし",
+      "sourceWord": "同い年",
+      "hanViet": "",
+      "meaning": "cùng tuổi, đồng tuổi",
+      "explanation": "同い年（おないどし）— cùng tuổi, đồng tuổi. Các nghĩa “cùng tuổi, đồng tuổi” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “cùng tuổi, đồng tuổi” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. cùng tuổi, đồng tuổi"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「同い年」の意味を辞書で確認した。",
+        "reading": "「おないどし」のいみをじしょでかくにんした。",
+        "translation": "Tôi đã tra từ điển để xác nhận nghĩa của “同い年”.",
+        "blank": "「____」の意味を辞書で確認した。",
+        "answer": "同い年",
+        "hint": "おないどし",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "同い年",
+          "」の意味を辞書で確認した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0043",
+      "sourceId": 43,
+      "word": "連中",
+      "reading": "れんちゅう",
+      "sourceWord": "連中",
+      "hanViet": "",
+      "meaning": "bọn, đám, nhóm người",
+      "explanation": "連中（れんちゅう）— bọn, đám, nhóm người. Các nghĩa “bọn, đám, nhóm người” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “bọn, đám, nhóm người” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. bọn, đám, nhóm người"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "今日は「連中」という言葉を覚えた。",
+        "reading": "きょうは「れんちゅう」ということばをおぼえた。",
+        "translation": "Hôm nay tôi đã ghi nhớ từ “連中”.",
+        "blank": "今日は「____」という言葉を覚えた。",
+        "answer": "連中",
+        "hint": "れんちゅう",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "今日は「",
+          "連中",
+          "」という言葉を覚えた。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0044",
+      "sourceId": 44,
+      "word": "呼び捨て",
+      "reading": "よびすて",
+      "sourceWord": "呼び捨て",
+      "hanViet": "",
+      "meaning": "gọi tên trống không, gọi tên không kèm kính xưng",
+      "explanation": "呼び捨て（よびすて）— gọi tên trống không, gọi tên không kèm kính xưng. Lưu ý sắc thái trang trọng hoặc thể hiện thái độ đối với người nghe; không nên thay bằng từ thân mật trong hoàn cảnh cần lịch sự. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Lưu ý sắc thái trang trọng hoặc thể hiện thái độ đối với người nghe; không nên thay bằng từ thân mật trong hoàn cảnh cần lịch sự."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. gọi tên trống không, gọi tên không kèm kính xưng"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "先生に「呼び捨て」の使い方を質問した。",
+        "reading": "せんせいに「よびすて」のつかいかたをしつもんした。",
+        "translation": "Tôi đã hỏi giáo viên về cách dùng “呼び捨て”.",
+        "blank": "先生に「____」の使い方を質問した。",
+        "answer": "呼び捨て",
+        "hint": "よびすて",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "先生に「",
+          "呼び捨て",
+          "」の使い方を質問した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    },
+    {
+      "id": "n1-vocab-source-0045",
+      "sourceId": 45,
+      "word": "身の上",
+      "reading": "みのうえ",
+      "sourceWord": "身の上",
+      "hanViet": "",
+      "meaning": "hoàn cảnh, số phận, thân thế",
+      "explanation": "身の上（みのうえ）— hoàn cảnh, số phận, thân thế. Các nghĩa “hoàn cảnh, số phận, thân thế” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ. Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ.",
+      "usageDetails": [
+        {
+          "title": "Nghĩa chính và sắc thái",
+          "text": "Các nghĩa “hoàn cảnh, số phận, thân thế” là phần dịch từ nguồn. Khi dùng trong câu cần xác định vai trò của từ (chủ ngữ, đối tượng, trạng thái hoặc hành động) và quan hệ với các từ xung quanh, không dịch tách rời từng chữ."
+        },
+        {
+          "title": "Nhóm nghĩa trong nguồn",
+          "text": "1. hoàn cảnh, số phận, thân thế"
+        },
+        {
+          "title": "Loại từ và lưu ý ngữ pháp",
+          "text": "Từ vựng N1 (loại từ cần xác nhận bằng ví dụ). Phân loại tự động mang tính định hướng; nên xác nhận với ví dụ thực tế trước khi áp dụng."
+        },
+        {
+          "title": "Kết hợp từ / Mẫu dùng",
+          "text": "Quan sát trợ từ và cụm đứng trước/sau từ trong câu thật; nguồn hiện chưa cung cấp kết hợp từ cố định đã kiểm chứng."
+        },
+        {
+          "title": "Phân biệt và lỗi dễ gặp",
+          "text": "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt."
+        },
+        {
+          "title": "Câu ví dụ và mức độ kiểm chứng",
+          "text": "Dữ liệu hiện tại chỉ có câu luyện đọc mặt chữ, chưa có ví dụ ngữ cảnh thực tế đã biên soạn; không dùng câu luyện đọc làm bằng chứng về cấu trúc/cách kết hợp từ."
+        }
+      ],
+      "commonMistakes": [
+        "Đừng suy ra rằng từ này có thể thay thế mọi từ tiếng Nhật khác có cùng một bản dịch tiếng Việt.",
+        "Nếu chỉ có câu luyện đọc, hãy tra ví dụ ngữ cảnh thực tế trước khi dùng từ trong hội thoại hoặc bài viết."
+      ],
+      "example": {
+        "sentence": "「身の上」という言葉の発音を練習した。",
+        "reading": "「みのうえ」ということばのはつおんをれんしゅうした。",
+        "translation": "Tôi đã luyện phát âm từ “身の上”.",
+        "blank": "「____」という言葉の発音を練習した。",
+        "answer": "身の上",
+        "hint": "みのうえ",
+        "reason": "Bài luyện nhận diện mặt chữ và cách đọc. Chưa phải ví dụ dùng từ trong ngữ cảnh thực tế.",
+        "wrongReason": "Hãy xem lại mặt chữ, cách đọc và thứ tự cụm trong câu.",
+        "chunks": [
+          "「",
+          "身の上",
+          "」という言葉の発音を練習した。"
+        ],
+        "exampleType": "reading_drill"
+      }
+    }
+  ]
+}
